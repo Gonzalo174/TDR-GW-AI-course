@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Entorno / editores
+.env
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Salidas temporales
+*.log
+tmp/

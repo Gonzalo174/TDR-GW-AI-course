@@ -1,0 +1,132 @@
+{
+  "generado": "2026-09-08T13:55:01",
+  "script": "/data1/TDR-2025/TDR_v7/GW-AI-course/acondicionarDB/acondicionar.py",
+  "db_entrada": "/data1/TDR-2025/TDR_v7/gon3/DB",
+  "db_salida": "/home/ggiordano/TDR/GW-AI-course/TDR-GW-AI-course/DB",
+  "semilla": 20260908,
+  "escala_peso": 100,
+  "faltante": -1,
+  "criterio_recorte": "componentes conexas de 01_edges_clusters_fingerprint sin ningun cluster con bioactividad positive -> eliminadas; la capa de subestructura se filtra al conjunto resultante",
+  "recorte": {
+    "nodos_grafo": 2261893,
+    "componentes_totales": 694187,
+    "componentes_conservadas": 74275,
+    "clusters_fp_totales": 2261893,
+    "clusters_fp_conservados": 769637,
+    "compuestos_totales": 2396103,
+    "compuestos_conservados": 831175,
+    "clusters_fp_con_positiva": 133456
+  },
+  "diccionarios": {
+    "compuesto": 831175,
+    "cluster_fingerprint": 769637,
+    "cluster_subestructura": 788537,
+    "blanco": 399880,
+    "especie": 30,
+    "taxon": 30,
+    "interpro": 36924,
+    "interpro_tipo": 8,
+    "orthomcl": 76157,
+    "activity_tag": 4,
+    "origen": 3
+  },
+  "tablas": [
+    {
+      "tabla": "00_specie_target.csv",
+      "filas": 399353,
+      "columnas": [
+        "target_id",
+        "sp_id",
+        "taxon_id"
+      ],
+      "MB": 4.8
+    },
+    {
+      "tabla": "01_clusters_fingerprint.csv",
+      "filas": 831175,
+      "columnas": [
+        "drug",
+        "cluster_id"
+      ],
+      "MB": 11.4
+    },
+    {
+      "tabla": "01_edges_clusters_fingerprint.part*.csv.gz",
+      "filas": 36152622,
+      "columnas": [
+        "clusID1",
+        "clusID2",
+        "weight"
+      ],
+      "MB": 172.4,
+      "partes": 2,
+      "MB_por_parte": [
+        86.5,
+        85.9
+      ]
+    },
+    {
+      "tabla": "02_clusters_subestructure.csv",
+      "filas": 831175,
+      "columnas": [
+        "drug",
+        "cluster_id"
+      ],
+      "MB": 11.4
+    },
+    {
+      "tabla": "02_edges_clusters_subestructure.csv",
+      "filas": 440,
+      "columnas": [
+        "from",
+        "to",
+        "weight"
+      ],
+      "MB": 0.0
+    },
+    {
+      "tabla": "03_bioactivities_target_compound.csv",
+      "filas": 1983780,
+      "columnas": [
+        "drug_id",
+        "target_id",
+        "activity_tag",
+        "year",
+        "cluster_consistent",
+        "origen"
+      ],
+      "MB": 46.0
+    },
+    {
+      "tabla": "03_bioactivities_organism_compound.csv",
+      "filas": 263128,
+      "columnas": [
+        "drug_id",
+        "sp_id",
+        "activity_tag",
+        "publication_year",
+        "cluster_consistent"
+      ],
+      "MB": 4.6
+    },
+    {
+      "tabla": "04a_interpro.csv",
+      "filas": 1169991,
+      "columnas": [
+        "target_id",
+        "ann",
+        "type"
+      ],
+      "MB": 16.9
+    },
+    {
+      "tabla": "04b_orthomcl.csv",
+      "filas": 358286,
+      "columnas": [
+        "target_id",
+        "ann"
+      ],
+      "MB": 4.5
+    }
+  ]
+}
