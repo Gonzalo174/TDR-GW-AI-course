@@ -93,7 +93,10 @@ def get_druggable_targets(
         a["w"] = 1
         aux = "all"
         if sp_out is not None:
-            aux += "_sp_out_" + "_".join(sp_out)
+            # map(str, ...): los codigos de especie son enteros en esta base.
+            # Unico cambio a este modulo en el port; arma la clave del dict de
+            # salida y no interviene en ningun calculo.
+            aux += "_sp_out_" + "_".join(map(str, sp_out))
         if sp_out_kfold < 1:
             aux += f"_sp_out_kfold_{sp_out_kfold}"
         lres[aux] = a.groupby("target_id", as_index=False)["w"].sum()

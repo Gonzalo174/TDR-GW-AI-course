@@ -41,15 +41,23 @@ import pandas as pd
 # Rutas (README §1.8): cero literales de path dentro de los notebooks
 # ---------------------------------------------------------------------------
 
-V4 = Path("/home/ggiordano/TDR/TDR_2026_v4")
-DB = Path("/data1/TDR-2025/TDR_v7/gon3/DB")   # entrada; no se reescribe en v4
-RAW = Path("/data1/TDR-2025/TDR_v7/raw_data")
-GON4 = V4 / "gon4"                            # -> /data1/TDR-2025/TDR_v7/gon4
+# Todo cuelga de la raiz del repositorio, deducida de la ubicacion de este
+# archivo: el repo se clona en cualquier lado y nada hay que reconfigurar.
+RAIZ = Path(__file__).resolve().parents[1]
+V4 = RAIZ                                     # nombre historico, mismo directorio
+DB = RAIZ / "DB"                              # la base codificada; no se reescribe
+SALIDAS = RAIZ / "resultados"                 # salidas de los notebooks
+GON4 = SALIDAS                                # nombre historico de `SALIDAS`
 
-# Historico de v3: se conserva como control (README §1.3), ninguna notebook de
-# v4 lo lee como insumo.
-HISTORICO = Path("/data1/TDR-2025/TDR_v7/gon3/resultados")
-CONTROL_V5 = HISTORICO / "genoma_completo_v5"
+# Control independiente: los optimos por especie de la corrida v5, calculados
+# con la metrica ya corregida (README §1.3). Se versionan en el repo.
+CONTROL_V5 = RAIZ / "control" / "genoma_completo_v5"
+
+# Datos crudos (.tsv de InterProScan, tabla de subestructuras): NO se publican,
+# son la base real. Las dos funciones que los leen -`nombres_ipr` y
+# `analiceDB.cargar_subestructuras_crudas`- quedan indisponibles en un clon.
+# Con una copia local se puede apuntar a ella: export TDR_RAW=/ruta/raw_data
+RAW = Path(os.environ.get("TDR_RAW", RAIZ / "raw_data_ausente"))
 
 CARPETAS = ["createDB", "analiceDB", "genome_prioritization", "huerfanas"]
 
@@ -62,14 +70,14 @@ import nucleo as nf  # noqa: E402  (el modelo; ver comun/nucleo.py, congelado)
 
 
 def out(carpeta):
-    """Salidas del analisis `carpeta`: gon4/<carpeta>_out/ (la crea si no esta).
+    """Salidas del analisis `carpeta`: resultados/<carpeta>_out/ (la crea si no esta).
 
-    Es el unico punto del arbol que escribe fuera de `gon4`, y no escribe nada:
-    solo crea el directorio. Las salidas nunca van a `gon3/` ni al home.
+    Es el unico punto del arbol que decide donde se escribe, y no escribe nada:
+    solo crea el directorio. Todo queda dentro del repositorio.
     """
     if carpeta not in CARPETAS:
         raise ValueError(f"carpeta desconocida: {carpeta!r} (esperaba una de {CARPETAS})")
-    d = GON4 / f"{carpeta}_out"
+    d = SALIDAS / f"{carpeta}_out"
     (d / "figuras").mkdir(parents=True, exist_ok=True)
     return d
 
@@ -78,37 +86,94 @@ def out(carpeta):
 # Metadatos de especies
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Codigos de la base
+# ---------------------------------------------------------------------------
+# La base de este repositorio esta codificada: toda columna es un entero, y los
+# diccionarios que traducen esos enteros a la notacion original (UniProt,
+# InterPro, OrthoMCL, ids de compuesto, nombres de especie) son privados y no se
+# publican. Las constantes de abajo son las unicas equivalencias necesarias para
+# leer el modelo, y estan escritas a mano justamente para no tener que publicar
+# ningun diccionario.
+#
+# Cuidado al portar codigo de versiones anteriores: alli los filtros se escribian
+# contra strings ("positive", "Domain"). Contra esta base esa comparacion no
+# falla, devuelve cero filas en silencio.
+
+# --- activity_tag ---
+TAG_POSITIVE = 2       # se seleccionan las bioactividades positivas
+TAG_NEGATIVE = 3       # bioactividades negativas
+TAG_INDETERMINATE = 1  # medicion sin umbral de corte que la defina
+TAG_INCONSISTENT = 0   # el mismo par compuesto-blanco medido con signos opuestos
+
+# --- type, en 04a_interpro ---
+IPR_DOMAIN = 5         # se selecciona el tipo Domain: la unidad funcional que
+                       # usa el modelo. Los otros tipos de InterPro (Family,
+                       # Homologous_superfamily, Active_site, Binding_site,
+                       # Conserved_site, PTM, Repeat) no entran.
+
+# --- origen, en 03_bioactivities_target_compound ---
+ORIGEN_BIOLIP = 1
+ORIGEN_CHEMBL = 2
+ORIGEN_AMBOS = 0
+
+# --- valores especiales ---
+FALTANTE = -1          # todo faltante de la base, en cualquier columna
+SP_BIOACTIVE = 14      # pseudo-especie: agrupa los blancos sin especie asignada
+                       # que provienen del conjunto bioactivo. No es un organismo
+                       # y queda fuera de toda cuenta por especie.
+ESCALA_PESO = 100      # los pesos de las aristas van escalados x100 (0.82 -> 82)
+
+
+# ---------------------------------------------------------------------------
+# Las 16 especies del modelo
+# ---------------------------------------------------------------------------
+# Se identifican por su codigo, no por su nombre: la correspondencia
+# codigo -> especie vive en los diccionarios privados. Lo que si se publica es
+# el tipo de organismo, porque el modelo lo usa —contrasta parasitos contra no
+# parasitos, y procariotas contra eucariotas— y porque sin el las figuras por
+# grupo no se pueden leer.
+#
+# Advertencia de anonimato: tres de las 16 son la unica especie de su
+# combinacion (grupo, parasito), asi que para ellas el par identifica al
+# organismo. Es una consecuencia aceptada de publicar el grupo.
+
 SPECIES = {
-    "hsap": ("Homo sapiens",               "Mamíferos",     "Eucariota", False),
-    "mmus": ("Mus musculus",               "Mamíferos",     "Eucariota", False),
-    "atha": ("Arabidopsis thaliana",       "Plantas",       "Eucariota", False),
-    "osat": ("Oryza sativa",               "Plantas",       "Eucariota", False),
-    "scer": ("Saccharomyces cerevisiae",   "Hongos",        "Eucariota", False),
-    "calb": ("Candida albicans",           "Hongos",        "Eucariota", True),
-    "ecol": ("Escherichia coli",           "Bacterias",     "Procariota", True),
-    "mtub": ("Mycobacterium tuberculosis", "Bacterias",     "Procariota", True),
-    "sao":  ("Staphylococcus aureus",      "Bacterias",     "Procariota", True),
-    "pfal": ("Plasmodium falciparum",      "Protozoos",     "Eucariota", True),
-    "lmaj": ("Leishmania major",           "Protozoos",     "Eucariota", True),
-    "tbrt": ("Trypanosoma brucei",         "Protozoos",     "Eucariota", True),
-    "tcr":  ("Trypanosoma cruzi",          "Protozoos",     "Eucariota", True),
-    "cele": ("Caenorhabditis elegans",     "Invertebrados", "Eucariota", False),
-    "dmel": ("Drosophila melanogaster",    "Invertebrados", "Eucariota", False),
-    "ddis": ("Dictyostelium discoideum",   "Amebozoos",     "Eucariota", False),
+    # codigo: (grupo, reino, parasito)
+     0: ("Bacterias",     "Procariota", True),
+     1: ("Bacterias",     "Procariota", True),
+     3: ("Mamiferos",     "Eucariota",  False),
+     4: ("Protozoos",     "Eucariota",  True),
+     5: ("Bacterias",     "Procariota", True),
+     9: ("Invertebrados", "Eucariota",  False),
+    10: ("Hongos",        "Eucariota",  False),
+    15: ("Protozoos",     "Eucariota",  True),
+    17: ("Invertebrados", "Eucariota",  False),
+    18: ("Mamiferos",     "Eucariota",  False),
+    21: ("Plantas",       "Eucariota",  False),
+    22: ("Amebozoos",     "Eucariota",  False),
+    23: ("Protozoos",     "Eucariota",  True),
+    25: ("Hongos",        "Eucariota",  True),
+    26: ("Protozoos",     "Eucariota",  True),
+    28: ("Plantas",       "Eucariota",  False),
 }
 ESPECIES_16 = list(SPECIES)
-KINETOPLASTIDOS = ["tcr", "tbrt", "lmaj"]
 
-NOMBRE_CORTO = {
-    "tcr": "T. cruzi", "tbrt": "T. brucei", "lmaj": "L. major", "pfal": "P. falciparum",
-    "atha": "A. thaliana", "cele": "C. elegans", "ddis": "D. discoideum",
-    "calb": "C. albicans", "osat": "O. sativa", "dmel": "D. melanogaster",
-    "mmus": "M. musculus", "hsap": "H. sapiens", "sao": "S. aureus",
-    "ecol": "E. coli", "mtub": "M. tuberculosis", "scer": "S. cerevisiae",
-}
+# Kinetoplastidos: el clado de interes del proyecto, tres de los protozoos
+# parasitos. Se los trata como grupo en varias figuras.
+KINETOPLASTIDOS = [4, 15, 23]
+
+# La especie sobre la que se aplica el modelo en `huerfanas/04`: un protozoo
+# parasito, agente de una enfermedad desatendida. Se la nombra por su codigo.
+SP_FOCO = 26
+
+# Etiqueta para ejes y tablas: el codigo, y entre parentesis el tipo de
+# organismo, que es lo que hace legible la figura.
+NOMBRE_CORTO = {c: f"sp{c:02d} ({g}{', parasito' if par else ''})"
+                for c, (g, _r, par) in SPECIES.items()}
 
 META = pd.DataFrame(
-    [{"sp": k, "nombre": v[0], "grupo": v[1], "reino": v[2], "parasito": v[3]}
+    [{"sp": k, "nombre": NOMBRE_CORTO[k], "grupo": v[0], "reino": v[1], "parasito": v[2]}
      for k, v in SPECIES.items()])
 
 
@@ -143,17 +208,21 @@ class Datos:
         """Especies con mas de `minimo` blancos druggables: las 16 del modelo."""
         a = self.st[self.st["target_id"].isin(self.posdt["target_id"].unique())]
         a = a.groupby("sp_id")["target_id"].nunique().reset_index(name="N")
-        a = a[(a["N"] > minimo) & a["sp_id"].notna() & (a["sp_id"] != "bioactive")]
+        # se excluye la pseudo-especie: agrupa blancos sin organismo asignado
+        a = a[(a["N"] > minimo) & a["sp_id"].notna() & (a["sp_id"] != SP_BIOACTIVE)]
         return a.sort_values("N", ascending=False)["sp_id"].tolist()
 
 
 def cargar_db(anotaciones=True, quimica=False, fenotipo=False,
-              cluster_consistent=True, verbose=True) -> Datos:
+              cluster_consistent=True, escalar_peso=True, verbose=True) -> Datos:
     """Carga las tablas de `DB/` (README: la base no se regenera en v4).
 
     anotaciones : capa 3 (InterPro tipo Domain + OrthoMCL) unida a la especie.
-    quimica     : capa de compuestos (clusters + aristas). `01_edges_*` pesa 941 MB,
-                  por eso esta apagada salvo pedido explicito.
+    quimica     : capa de compuestos (clusters + aristas). `01_edges_*` son
+                  36 152 622 aristas repartidas en dos `.gz`, por eso esta
+                  apagada salvo pedido explicito. Ver `leer_aristas`.
+    escalar_peso : devuelve `weight` en [0,1] como en las versiones anteriores.
+                  En la base va como entero x100.
     fenotipo    : bioactividades compuesto-organismo.
     cluster_consistent : filtra los positivos/negativos inconsistentes a nivel
                   cluster. `huerfanas/` lo usa (como `orphan_drugs_v4.ipynb`);
@@ -170,28 +239,44 @@ def cargar_db(anotaciones=True, quimica=False, fenotipo=False,
 
     log("· 03_bioactivities_target_compound")
     d.bioact = pd.read_csv(DB / "03_bioactivities_target_compound.csv")
-    pos = d.bioact["activity_tag"] == "positive"
-    neg = d.bioact["activity_tag"] == "negative"
+    # se seleccionan las bioactividades positivas (y las negativas, que son el
+    # contraste); `activity_tag` es un entero, ver TAG_* arriba
+    pos = d.bioact["activity_tag"] == TAG_POSITIVE
+    neg = d.bioact["activity_tag"] == TAG_NEGATIVE
     if cluster_consistent:
-        pos &= d.bioact["cluster_consistent"]
-        neg &= d.bioact["cluster_consistent"]
+        # `cluster_consistent` es 0/1 en la base: se castea a bool para que el
+        # `&` sea una conjuncion logica y no un and de bits
+        cc = d.bioact["cluster_consistent"].astype(bool)
+        pos &= cc
+        neg &= cc
     d.posdt = d.bioact[pos].copy()
     d.negdt = d.bioact[neg].copy()
 
     if anotaciones:
         log("· 04a_interpro / 04b_orthomcl")
         ip = pd.read_csv(DB / "04a_interpro.csv")
-        ip = ip[ip["type"] == "Domain"].drop_duplicates()
+        # se seleccionan las anotaciones de tipo Domain
+        ip = ip[ip["type"] == IPR_DOMAIN].drop_duplicates()
         og = pd.read_csv(DB / "04b_orthomcl.csv")
-        d.sta = (pd.concat([ip[["target_id", "ann"]].assign(db="ip"),
-                            og[og["ann"] != "-1"].assign(db="omcl")], ignore_index=True)
+        # Los dos vocabularios se codificaron por separado, cada uno arrancando
+        # en 0: el entero 100 es a la vez un dominio InterPro y un grupo de
+        # ortologia distintos (los 14 083 codigos de dominio caen dentro del
+        # rango de OrthoMCL). Concatenarlos crudos fusionaria anotaciones que no
+        # tienen nada que ver. El prefijo las vuelve a separar y ademas repone lo
+        # que `nucleo.get_annot_druggability_pv` necesita: alli el test de Fisher
+        # se corre por vocabulario y elige las filas con `ann.startswith("IP")`
+        # y `("OG")`.
+        ip = ip[["target_id", "ann"]].assign(ann=lambda x: "IP" + x["ann"].astype(str), db="ip")
+        og = og[og["ann"] != FALTANTE]   # se descartan los blancos sin ortologia
+        og = og[["target_id", "ann"]].assign(ann=lambda x: "OG" + x["ann"].astype(str), db="omcl")
+        d.sta = (pd.concat([ip, og], ignore_index=True)
                  .merge(d.st[["target_id", "sp_id"]], on="target_id"))
 
     if quimica:
         log("· 01/02 clusters y aristas quimicas (pesado)")
         d.tclus = pd.read_csv(DB / "01_clusters_fingerprint.csv")
         d.sclus = pd.read_csv(DB / "02_clusters_subestructure.csv")
-        d.ddt = pd.read_csv(DB / "01_edges_clusters_fingerprint.csv")
+        d.ddt = leer_aristas(escalar=escalar_peso)
         d.dds = pd.read_csv(DB / "02_edges_clusters_subestructure.csv").set_index("from", drop=False)
 
     if fenotipo:
@@ -202,10 +287,29 @@ def cargar_db(anotaciones=True, quimica=False, fenotipo=False,
     return d
 
 
+def leer_aristas(escalar=True):
+    """La capa de aristas cluster-cluster de fingerprint, reconstruida.
+
+    Va partida en `01_edges_clusters_fingerprint.part00.csv.gz` y `.part01...`
+    porque GitHub rechaza archivos de mas de 100 MB pero no limita su cantidad:
+    partirla publica las 36 152 622 aristas completas en lugar de recortarlas
+    por umbral de peso. Leerla es concatenar los trozos.
+
+    `escalar=True` devuelve `weight` en [0,1]; en la base va como entero x100.
+    """
+    partes = sorted(DB.glob("01_edges_clusters_fingerprint.part*.csv.gz"))
+    if not partes:
+        raise FileNotFoundError(f"sin partes de 01_edges_clusters_fingerprint en {DB}")
+    e = pd.concat([pd.read_csv(x) for x in partes], ignore_index=True)
+    if escalar:
+        e["weight"] = e["weight"] / ESCALA_PESO
+    return e
+
+
 def fechas_db():
     """Fecha de modificacion de cada tabla de `DB/`, para el `meta.json` (§1.4)."""
     return {p.name: datetime.fromtimestamp(p.stat().st_mtime).strftime("%Y-%m-%d")
-            for p in sorted(DB.glob("*.csv"))}
+            for p in sorted(list(DB.glob("*.csv")) + list(DB.glob("*.csv.gz")))}
 
 
 # ---------------------------------------------------------------------------
@@ -288,6 +392,11 @@ def bootstrap_auc01(y_true, score, n_boot=2000, fpr_max=FPR_MAX, rseed=0):
 def semilla_global(posdt, st, sp_out=None, peso_uniforme=True):
     """Vector semilla de druggables (todas las drogas), opcionalmente removiendo
     la evidencia de una especie (validacion leave-one-species-out)."""
+    # `nucleo` envuelve `sp_out` en lista solo si es str, que era el caso cuando
+    # las especies se nombraban con un codigo de texto. Ahora son enteros y hay que
+    # envolverlos aca: un int suelto revienta en el `isin` de get_druggable_targets.
+    if sp_out is not None and not isinstance(sp_out, (list, tuple, set, np.ndarray)):
+        sp_out = [sp_out]
     drg = nf.get_druggable_targets(posdt=posdt, st=st, sp_out=sp_out)
     seed = list(drg.values())[0].copy()
     if peso_uniforme:
@@ -488,6 +597,12 @@ def nombres_ipr(refrescar=False):
 
     Los .tsv de `raw_data/targets/` traen el accession IPR en la columna 12 y su
     descripcion en la 13. Se cachea en `comun/datos_derivados/ipr_nombres.csv`.
+
+    ATENCION: el cache esta indexado por identificador de InterPro (IPR000719),
+    mientras que la columna `ann` de esta base es un entero codificado. Traducir
+    de uno al otro exige `mapa_interpro`, que es privado: en un clon del
+    repositorio esta funcion no puede nombrar los dominios de un resultado.
+    Ver la decision abierta 1 de PLAN.md.
     """
     CACHE.mkdir(parents=True, exist_ok=True)
     cache = CACHE / "ipr_nombres.csv"

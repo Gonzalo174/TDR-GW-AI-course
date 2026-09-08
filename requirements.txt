@@ -1,0 +1,9 @@
+# Versiones con las que corre el análisis (python 3.12.2).
+# La máquina de origen tiene glibc 2.27, que limita pyarrow a <=15 y arrastra un
+# downgrade de numpy: por eso la base va en csv.gz y no en parquet.
+pandas==2.2.3
+numpy==2.2.2
+scipy==1.15.1
+scikit-learn==1.6.1
+matplotlib==3.10.0
+statsmodels==0.14.6

@@ -12,7 +12,7 @@ import pandas as pd
 import tdr as C
 
 HAY_DB = (C.DB / "00_specie_target.csv").exists()
-SP = "calb"      # especie chica: el test corre rápido
+SP = 25          # un hongo parásito, especie chica: el test corre rápido
 
 
 @unittest.skipUnless(HAY_DB, "DB/ no disponible")

@@ -2,7 +2,7 @@
 funciones_huerfanas.py — pseudohuerfanas, cobertura de semilla y desorfanizacion.
 
 Es `tdr-graph/orphan_drugs_v4.ipynb` mas `reproducir_v6/{cobertura_semilla,
-desorfanizacion_global, inferencia_directa_indirecta, aplicacion_pfal}` desarmados
+desorfanizacion_global, inferencia_directa_indirecta, aplicacion_especie}` desarmados
 en funciones. El ciclo que las combina vive en la celda de corrida de cada
 notebook (README §1.2).
 
@@ -250,8 +250,9 @@ def cobertura_por_palanca(datos, palanca, muestra, umbral=0.8, mapa_kegg=None,
             # respaldo: los druggables de la especie contra la que el compuesto
             # tiene actividad fenotipica positiva
             org = datos.bioact_org
+            # se seleccionan las bioactividades fenotípicas positivas
             sp_fen = org.loc[(org["drug_id"] == cid) &
-                             (org["activity_tag"] == "positive"), "sp_id"].unique()
+                             (org["activity_tag"] == tdr.TAG_POSITIVE), "sp_id"].unique()
             if len(sp_fen):
                 respaldo = pd.DataFrame({"target_id": np.concatenate(
                     [datos.druggables_de(s) for s in sp_fen]), "w": 1.0})
@@ -305,8 +306,11 @@ def r_g_estrella(curva, desde=50, k_sigma=3.0, ventana=5):
                                  "k_sigma": k_sigma, "desde": desde}])
 
 
-def embudo_pfal(datos, sp="pfal"):
-    """Embudo de compuestos huérfanos con actividad fenotípica contra *P. falciparum*.
+def embudo_especie(datos, sp=None):
+    """Embudo de compuestos huérfanos con actividad fenotípica contra `sp`.
+
+    `sp=None` usa `tdr.SP_FOCO`: el protozoo parásito sobre el que se aplica el
+    modelo, identificado por su código.
 
       paso 1  compuestos con bioactividad fenotípica positiva contra `sp`
       paso 2  de esos, los que NO tienen ningún enlace de bioactividad a un
@@ -318,10 +322,12 @@ def embudo_pfal(datos, sp="pfal"):
     """
     if datos.bioact_org is None:
         raise ValueError("hace falta cargar_db(fenotipo=True)")
+    sp = tdr.SP_FOCO if sp is None else sp
 
     org = datos.bioact_org
     col_sp = "sp_id" if "sp_id" in org.columns else "organism_id"
-    activos = set(org.loc[(org[col_sp] == sp) & (org["activity_tag"] == "positive"),
+    # se seleccionan las bioactividades fenotípicas positivas contra `sp`
+    activos = set(org.loc[(org[col_sp] == sp) & (org["activity_tag"] == tdr.TAG_POSITIVE),
                           "drug_id"].unique())
     con_blanco = set(datos.bioact["drug_id"].unique())
     huerfanos = activos - con_blanco

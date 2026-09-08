@@ -17,3 +17,33 @@ y esquema de cada tabla) está en `DB/meta.json`.
 
 `01_edges_clusters_fingerprint` está partido en dos archivos `.gz`
 (`part00`, `part01`) que deben concatenarse para reconstruir la tabla completa.
+
+## Cómo correr los análisis
+
+```bash
+pip install -r requirements.txt
+python3 -m unittest discover -s comun/tests -p "test_*.py"   # 35 tests, ~12 s
+```
+
+Los notebooks se corren en este orden, y cada uno escribe en
+`resultados/<carpeta>_out/` junto con su `NN_meta.json` de procedencia:
+
+| orden | carpeta | qué hace |
+|---|---|---|
+| 1 | `analiceDB/` | descriptivos de la base y de la red (3 notebooks) |
+| 2 | `genome_prioritization/` | barrido de parámetros y elección del óptimo (2) |
+| 3 | `huerfanas/` | pseudohuérfanas, cobertura de semilla, desorfanización (4) |
+
+La celda 1 de cada notebook agrega `comun/` al path; no hace falta configurar
+nada más, porque todas las rutas se derivan de la ubicación del repositorio.
+
+## Sobre los códigos de la base
+
+`DB/` está codificada: toda columna es un entero y los diccionarios que traducen
+esos enteros a la notación original son privados. Las equivalencias que el
+modelo necesita están escritas en `comun/tdr.py` (`TAG_POSITIVE`, `IPR_DOMAIN`,
+`SPECIES`, …), con el comentario de qué selecciona cada una.
+
+Las especies se identifican por código, no por nombre; lo que sí se publica es
+el tipo de organismo (grupo, reino, si es parásito), porque el modelo lo usa y
+sin él las figuras por grupo no se leen.

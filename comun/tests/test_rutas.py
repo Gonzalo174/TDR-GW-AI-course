@@ -1,9 +1,9 @@
 """Convenciones de rutas y de numeracion (README §1.8 y §1.9).
 
-Las dos reglas que sostienen el arbol de v4 y que es facil violar sin darse
-cuenta: todas las salidas se resuelven contra el symlink `gon4` (nunca `gon3/`
-ni el home), y todo archivo generado arranca con el numero del notebook que lo
-escribio. Estos tests no crean directorios ni escriben nada en `gon4`.
+Las dos reglas que sostienen el arbol y que es facil violar sin darse cuenta:
+todas las rutas se resuelven contra la raiz del repositorio (ningun path
+absoluto de la maquina donde se escribio el codigo), y todo archivo generado
+arranca con el numero del notebook que lo escribio.
 """
 import sys, pathlib, unittest
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))   # comun/
@@ -13,17 +13,28 @@ import tdr as C
 
 class TestRutas(unittest.TestCase):
 
-    def test_gon4_apunta_a_data1(self):
-        """El symlink `gon4` tiene que resolver a /data1: los resultados pesados
-        no viven en el home."""
-        self.assertTrue(C.GON4.is_symlink() or C.GON4.exists(),
-                        f"falta el symlink {C.GON4}")
-        self.assertTrue(str(C.GON4.resolve()).startswith("/data1"),
-                        f"{C.GON4} resuelve a {C.GON4.resolve()}, no a /data1")
+    def test_todo_cuelga_del_repositorio(self):
+        """Nada de rutas absolutas de la maquina de origen: un clon tiene que
+        funcionar sin reconfigurar nada."""
+        for nombre in ("DB", "SALIDAS", "CONTROL_V5"):
+            ruta = getattr(C, nombre)
+            self.assertTrue(str(ruta).startswith(str(C.RAIZ)),
+                            f"{nombre} = {ruta} cae fuera de {C.RAIZ}")
 
-    def test_db_es_entrada_y_no_esta_bajo_gon4(self):
-        """`DB/` es de solo lectura en v4: ninguna salida puede caer ahi."""
-        self.assertNotIn(str(C.GON4.resolve()), str(C.DB))
+    def test_la_base_esta_y_esta_completa(self):
+        """Las tablas de `DB/`, incluidas las dos partes de la capa de aristas."""
+        self.assertTrue(C.DB.is_dir(), f"falta {C.DB}")
+        for t in ("00_specie_target.csv", "03_bioactivities_target_compound.csv",
+                  "04a_interpro.csv", "04b_orthomcl.csv", "meta.json"):
+            self.assertTrue((C.DB / t).exists(), f"falta DB/{t}")
+        partes = sorted(C.DB.glob("01_edges_clusters_fingerprint.part*.csv.gz"))
+        self.assertEqual(len(partes), 2, f"esperaba 2 partes de aristas, hay {len(partes)}")
+
+    def test_db_es_entrada_y_no_recibe_salidas(self):
+        """`DB/` es de solo lectura: ninguna salida puede caer ahi."""
+        self.assertNotIn(str(C.DB), str(C.SALIDAS))
+        for c in ("analiceDB", "genome_prioritization", "huerfanas"):
+            self.assertNotIn(str(C.DB), str(C.out(c)))
 
     def test_out_solo_acepta_las_cuatro_carpetas(self):
         """Un typo en el nombre crearia una carpeta `_out` huerfana en gon4."""

@@ -1,5 +1,9 @@
 # Plan de trabajo — proyecto final GW-AI
 
+> **Estado al 2026-09-08.** Las fases 1 y 2 están hechas: `comun/tdr.py` corre
+> contra la base codificada, las 35 pruebas de `comun/tests/` pasan y
+> `resultados/` está creada. Lo que sigue es la fase 3, correr los notebooks.
+
 Este documento tiene dos partes. La **A** es el inventario de lo que hay que
 tocar para que los análisis de `TDR_2026_v4` corran sobre la DB codificada de
 este repositorio. La **B** es el plan para completar el proyecto final según
@@ -60,22 +64,29 @@ notebooks) va primero y no último.
 | 4 | `ann != "-1"` (faltante de OrthoMCL) | `cargar_db` | `comun/tdr.py` |
 | 5 | `sp_id != "bioactive"` | `especies_con_druggables` | `comun/tdr.py` |
 
-Los cinco se resuelven con los diccionarios chicos que ya existen en
-`acondicionarDB/mapeos/` y que **no filtran nada privado**:
+**Resuelto (2026-09-08).** No se publicó ningún diccionario. Las equivalencias
+que el modelo necesita —y solo esas— quedaron escritas a mano en `comun/tdr.py`,
+cada una con el comentario de qué selecciona:
 
-`mapa_activity_tag.csv` (4 filas), `mapa_interpro_tipo.csv` (8),
-`mapa_origen.csv` (3), `mapa_especie.csv` (30), `mapa_taxon.csv` (30).
+```python
+TAG_POSITIVE = 2       # se seleccionan las bioactividades positivas
+IPR_DOMAIN   = 5       # se selecciona el tipo Domain
+SP_BIOACTIVE = 14      # pseudo-especie, fuera de toda cuenta por especie
+FALTANTE     = -1
+ESCALA_PESO  = 100     # los pesos van escalados x100
+```
 
-Son etiquetas categóricas públicas: nombres de especie y tipos de InterPro. Lo
-que hay que seguir sin publicar son los grandes —`mapa_blanco` (UniProt),
-`mapa_compuesto`, `mapa_cluster_*`, `mapa_interpro`, `mapa_orthomcl`—, porque la
-combinación de dominios InterPro de una proteína sí permitiría re-identificarla.
+Las especies se identifican por código. Lo que sí se publica es el **tipo de
+organismo** (grupo, reino, parásito), en `SPECIES`, porque el modelo lo usa y sin
+él las figuras por grupo no se leen. `SP_FOCO = 26` nombra por código el
+protozoo parásito de `huerfanas/04`.
 
-**Propuesta:** copiar los cinco chicos a `DB/mapeos/` y que `comun/tdr.py` los
-cargue, de modo que el código siga escribiéndose con `"positive"` y `'pfal'` y
-la traducción a entero ocurra en un solo lugar. Alternativa descartada:
-reescribir los 41 literales a enteros desnudos, que deja los notebooks
-ilegibles y sin forma de verificar que 2 es *positive*.
+Los diccionarios grandes —`mapa_blanco` (UniProt), `mapa_compuesto`,
+`mapa_cluster_*`, `mapa_interpro`, `mapa_orthomcl`— siguen privados.
+
+**Fuga aceptada:** tres de las 16 especies son la única de su combinación
+(grupo, parásito), así que para ellas el par identifica al organismo. Es la
+consecuencia de publicar el grupo, y está anotada en el código.
 
 ### A.3 Verificado: la DB nueva conserva las 16 especies del modelo
 
@@ -129,6 +140,37 @@ Era `True`/`False`, ahora es `1`/`0` int64. En pandas 2.2.3 el `pos &= cc` de
 `cargar_db` **no** falla con enteros, lo cual es peor que si fallara: conviene
 castear a bool explícitamente en la carga.
 
+### A.8 Los dos vocabularios de anotación se pisan
+
+Lo encontró `comun/tests/test_integridad.py` al correrlo por primera vez contra
+la base nueva: 6 enlaces proteína-categoría duplicados donde no debía haber
+ninguno. La causa resultó más grave que el síntoma.
+
+InterPro y OrthoMCL se codificaron **por separado, cada uno arrancando en 0**.
+Medido: los 14 083 códigos de dominio InterPro caen todos dentro del rango de
+OrthoMCL (0–76 156). El entero 100 es a la vez un dominio y un grupo de
+ortología que no tienen nada que ver, y `cargar_db` los concatenaba en la misma
+columna `ann`.
+
+El daño no es sólo el duplicado. `nucleo.get_annot_druggability_pv` corre el
+test de Fisher **por vocabulario**, y elige las filas de cada uno con
+`ann.str.startswith("IP")` y `("OG")`. Sobre enteros eso no selecciona nada, y
+sobre códigos fusionados el conteo de proteínas por categoría queda mal de raíz.
+
+**Arreglado** reponiendo el prefijo en la carga (`"IP" + código`, `"OG" + código`).
+Restaura la semántica original exactamente y deja `nucleo.py` sin tocar. Hay un
+test nuevo, `test_los_dos_vocabularios_no_se_pisan`, que lo vigila.
+
+### A.9 Un cambio a `nucleo.py`, el módulo congelado
+
+`get_druggable_targets` arma la clave de su diccionario de salida con
+`"_".join(sp_out)`, que sobre códigos enteros lanza `TypeError`. Se cambió por
+`"_".join(map(str, sp_out))`: arma un nombre, no interviene en ningún cálculo.
+Es la única línea modificada del modelo y está comentada como tal.
+
+El envoltorio `tdr.semilla_global` absorbe el resto: `nucleo` envolvía `sp_out`
+en lista sólo si era `str`, cosa que dejó de cumplirse.
+
 ### A.7 Lo que cambia de resultado, y por qué está bien
 
 El recorte de la base (componentes conexas sin ningún cluster con bioactividad
@@ -148,7 +190,7 @@ La consigna pide cuatro cosas: **provenance** de cada resultado, **checks**
 detrás de cada figura, una **página HTML** y un **PDF** para presentar, y un
 repositorio que **un agente pueda reproducir sin haber hablado con nadie**.
 
-### Fase 1 — Reproducibilidad de la infraestructura
+### Fase 1 — Reproducibilidad de la infraestructura ✅
 
 1. `comun/rutas.py`: raíz derivada del archivo, cero paths absolutos.
 2. `DB/mapeos/` con los cinco diccionarios chicos + `comun/codigos.py` que
@@ -159,9 +201,18 @@ repositorio que **un agente pueda reproducir sin haber hablado con nadie**.
    la restricción de glibc 2.27 que impide pyarrow >15, ya documentada).
 5. Copiar `CONTROL_V5` (196 KB) a `control/`.
 
-**Entregable:** `import tdr; tdr.cargar_db()` funciona desde un clon limpio.
+**Hecho.** `RAIZ = Path(__file__).resolve().parents[1]` y todo cuelga de ahí;
+`DB` apunta al `DB/` del repo; `out()` escribe en `resultados/<carpeta>_out/`,
+ya creada y versionada; `leer_aristas()` concatena los `.gz` y desescala el peso;
+`RAW` quedó como ruta opcional por `TDR_RAW` (los crudos no se publican);
+`requirements.txt` fija las versiones; `control/genoma_completo_v5/` copiado con
+los archivos renombrados a código (venían como `pfal.csv`).
 
-### Fase 2 — Tests que atrapen la falla silenciosa
+Verificado de punta a punta: `cargar_db()` da **248 457** positivos y **101 885**
+negativos, `especies_con_druggables()` devuelve exactamente **16**, y
+`leer_aristas()` reconstruye **36 152 622** aristas con `weight` en [0.81, 0.99].
+
+### Fase 2 — Tests que atrapen la falla silenciosa ✅
 
 Adaptar las 5 suites de `comun/tests/` y agregar las que faltan para el port:
 
@@ -171,7 +222,14 @@ Adaptar las 5 suites de `comun/tests/` y agregar las que faltan para el port:
 - toda columna de `DB/` es entera (invariante que declara `acondicionarDB`);
 - las métricas (`pauc_normalizada`, `mcclish`) contra valores de referencia.
 
-**Entregable:** `pytest` verde, y rojo si alguien rompe la traducción de códigos.
+**Hecho.** `python3 -m unittest discover -s comun/tests -p "test_*.py"`: **35
+tests, todos en verde** (2 salteados: la capa química, que se activa con
+`TDR_TESTS_QUIMICA=1`). Cuatro son nuevos y cubren justamente lo que el port
+puede romper en silencio: `test_el_filtro_de_positivos_no_quedo_vacio`,
+`test_la_base_es_entera`, `test_los_dos_vocabularios_no_se_pisan` y
+`test_la_base_esta_y_esta_completa`.
+
+La primera corrida encontró 6 fallas reales, entre ellas la de A.8.
 
 ### Fase 3 — Correr los 9 notebooks y comparar contra el oráculo
 
@@ -225,7 +283,13 @@ Fase 1 ──> Fase 2 ──> Fase 3 ──> Fase 4 ──> Fase 5 ──> Fase 
 
 1. **`nombres_ipr()`**: sin `mapa_interpro` no hay descripción legible de los
    dominios. ¿Se elimina la función, o se publica el cache reindexado por código?
-   Afecta a `huerfanas/04` (familias de *P. falciparum*), que hoy nombra dominios.
+   Afecta a `huerfanas/04`, que hoy nombra los dominios de las familias que
+   propone. Por ahora la función quedó con la advertencia en el docstring.
+4. **`paper/`**: el informe de v4 nombra las especies en el texto, en las figuras
+   y en los nombres de archivo (`01_pfal.csv`, `01_calb_pseudohuerfanas.csv`).
+   Si el criterio de no identificar especies vale para todo el repositorio, hay
+   que renombrarlos y reescribir el `.tex`; si vale sólo para el código y los
+   datos, `paper/` queda como está.
 2. **Alcance**: ¿el proyecto final son los tres análisis completos, o uno solo
    hecho a fondo? La consigna valora "many components" pero también pide
    evidencia suficiente para defender cada resultado.
