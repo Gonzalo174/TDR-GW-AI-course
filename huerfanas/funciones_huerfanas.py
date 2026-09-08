@@ -59,6 +59,11 @@ def construir_pseudohuerfanas(datos, verbose=True):
         raise ValueError("hace falta cargar_db(quimica=True)")
 
     posdt_sp = datos.posdt.merge(datos.st[["target_id", "sp_id"]], on="target_id", how="left")
+    # El merge `left` mete NaN y con eso `sp_id` pasa a float: los codigos de
+    # especie tienen que volver a ser enteros o terminan en los nombres de
+    # archivo como `01_26.0_pseudohuerfanas.csv`.
+    posdt_sp = posdt_sp[posdt_sp["sp_id"].notna()].copy()
+    posdt_sp["sp_id"] = posdt_sp["sp_id"].astype("int64")
     hits = (posdt_sp.groupby(["drug_id", "sp_id"]).target_id.count()
             .reset_index().rename(columns={"target_id": "N"})
             .merge(datos.tclus, left_on="drug_id", right_on="drug", how="left"))
@@ -74,7 +79,10 @@ def construir_pseudohuerfanas(datos, verbose=True):
                                               "p1": "p2", "p2": "p1"})])
     cid_edge_pos = set(ee.loc[ee["p2"], "clusID1"].unique())
 
-    k1 = hits[(hits["N"] == 1) & (hits["sp_id"] != "bioactive")].copy()
+    # Se excluye la pseudo-especie: agrupa blancos sin organismo asignado y no
+    # es un genoma. Ojo al portar: aca decia `!= "bioactive"`, que contra los
+    # codigos enteros de esta base es siempre verdadero y la dejaba entrar.
+    k1 = hits[(hits["N"] == 1) & (hits["sp_id"] != tdr.SP_BIOACTIVE)].copy()
     n_esp = hits.groupby("cluster_id").sp_id.nunique()
     cid_multi = set(n_esp[n_esp > 1].index)
 

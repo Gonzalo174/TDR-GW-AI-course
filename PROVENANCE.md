@@ -104,9 +104,25 @@ calculados en una corrida independiente con la métrica ya corregida.
 
 **El oráculo** (`oraculo_v4/` y `verificacion/10_equivalencia.ipynb`). Las mismas
 tablas calculadas antes del recorte y de la codificación. La comparación explota
-una asimetría: `analiceDB/` describe las componentes conexas y el recorte **debe**
-moverlo; `genome_prioritization/` y `huerfanas/` trabajan sobre anotaciones y
-druggables y **no** deberían moverse.
+una asimetría, y el criterio es uno solo: **si el análisis toca la capa química,
+el recorte lo mueve; si no la toca, no lo mueve**. El recorte elimina compuestos,
+es decir nodos y aristas de esa capa; no toca proteínas ni anotaciones.
+
+| análisis | carga | esperado |
+|---|---|---|
+| `genome_prioritization/` | `cargar_db(anotaciones=True)`, sin química | **estable** |
+| `analiceDB/` | describe la base entera, componentes incluidas | cambia |
+| `huerfanas/` | `quimica=True`; su notebook 03 lee las salidas del 01 | cambia |
+
+Una corrección al criterio que había escrito antes: agrupé `huerfanas/` con
+`genome_prioritization/` como «no debería moverse», y está mal. `huerfanas/`
+construye la semilla desde el vecindario químico de cada droga, así que el
+recorte la mueve necesariamente. Lo que se ve al comparar confirma la corrección
+y la explica: el conjunto evaluado es **idéntico** (7 782 pseudohuérfanas en los
+dos lados), pero la distribución por tipo de semilla se corre, porque el filtro
+de promiscuidad pasó de descartar 30 compuestos (11.98 % de las aristas) a 7
+(1.6 %) — 23 de esos 30 no sobrevivieron al recorte. Menos aristas descartadas,
+más drogas con semilla no nula.
 
 ## 6. Lo que no se puede reproducir desde este repositorio
 

@@ -185,20 +185,36 @@ integridad de las tablas, ausencia de fuga en la validación cruzada, las
 métricas contra valores de referencia, las rutas y el entorno.
 
 \textbf{El control externo.} Los óptimos por organismo se contrastan contra los
-de una corrida independiente anterior, versionada en el repositorio.
+de una corrida independiente anterior, versionada en el repositorio. Los
+parámetros óptimos coinciden en los \NEspeciesOpt\ organismos y la diferencia
+máxima de AUC01 es \emph{exactamente} cero: la reproducción sobre la base
+codificada no movió un solo dígito del control.
 
 \textbf{El oráculo.} Las mismas tablas calculadas antes del recorte y de la
 codificación. La comparación es informativa por una asimetría: el recorte
 \emph{debe} mover los descriptivos de la base, y \emph{no debe} mover la
-priorización, que trabaja sobre anotaciones y blancos conocidos. De
-\NComparadas\ columnas comparadas, \NIdenticas\ resultan idénticas,
-\NExplicadas\ cambian de forma explicada por el recorte y \NDiscrepancias\
-quedan como discrepancia.
+priorización, que no la toca. De \NComparadas\ columnas comparadas,
+\NIdenticas\ resultan idénticas, \NExplicadas\ cambian de forma explicada por
+el recorte y \NDiscrepancias\ quedan como discrepancia.
+
+El corte cae donde tiene que caer: en \texttt{genome\_prioritization} las 149
+columnas comparadas son idénticas y ninguna cambia, mientras que en
+\texttt{huerfanas}, que construye la semilla desde el vecindario químico, 83 de
+177 se mueven. La diferencia se explica sin apelar a nada externo: el conjunto
+evaluado es el mismo --- 7\,782 pseudohuérfanas de los dos lados --- pero el filtro
+de promiscuidad pasó de descartar 30 compuestos a \NPromiscuos, porque 23 de
+aquellos 30 no sobrevivieron al recorte, y con menos aristas descartadas más
+drogas consiguen semilla.
+
+Una corrección que conviene dejar escrita: al diseñar esta comparación agrupé
+\texttt{huerfanas} con \texttt{genome\_prioritization} entre lo que «no debería
+moverse». Era incorrecto, y la corrida lo mostró. El criterio correcto es uno
+solo: si el análisis toca la capa química, el recorte lo mueve.
 
 \subsection*{Lo que casi sale mal}
 
-Dos errores merecen quedar escritos, porque ninguno de los dos se encontró
-leyendo el código.
+Cuatro errores merecen quedar escritos, porque ninguno se encontró leyendo el
+código: los encontraron las pruebas o la inspección de las salidas.
 
 La base codificada guarda el tag de actividad como el entero \(2\), mientras el
 código heredado filtraba por el texto \texttt{"positive"}. Esa comparación no
@@ -212,8 +228,21 @@ dentro del rango de los \NOrthoMCL\ grupos de ortología. Concatenarlos habría
 fusionado anotaciones sin relación alguna, y el test de Fisher habría contado
 proteínas de dos vocabularios distintos como si fueran de uno.
 
-Los dos los encontraron las pruebas la primera vez que se corrieron contra la
-base nueva. Es la razón de que las pruebas vayan antes que los resultados.
+El tercero y el cuarto son el mismo patrón otra vez, y aparecieron ya con los
+notebooks corriendo. Un filtro escrito como \texttt{sp\_id != "bioactive"}
+compara un entero contra un texto y por lo tanto es siempre verdadero: la
+pseudo-especie que agrupa blancos sin organismo asignado nunca se excluía, y
+aportaba 67\,587 falsas pseudohuérfanas sobre un total de 127\,840 --- el 53\,\%
+del conjunto. Y las relaciones de subestructura leídas de los datos crudos
+entraban sin recodificar, de modo que no cruzaban contra la base y el filtro de
+promiscuidad descartaba 30 compuestos falsos en lugar de \NPromiscuos\
+verdaderos.
+
+Los cuatro comparten la misma forma: una columna que pasó a ser un entero
+codificado, comparada contra el texto que solía contener. Ninguno lanza una
+excepción; todos devuelven un conjunto vacío o equivocado y dejan que el
+análisis siga. Es la razón de que las pruebas vayan antes que los resultados, y
+de que los números se lean de las tablas en vez de escribirse a mano.
 
 \section{Procedencia y límites}
 

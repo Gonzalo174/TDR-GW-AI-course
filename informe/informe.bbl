@@ -1,0 +1,22 @@
+\begin{thebibliography}{1}
+
+\bibitem{benjamini1995}
+Yoav Benjamini and Yosef Hochberg.
+\newblock Controlling the false discovery rate: A practical and powerful
+  approach to multiple testing.
+\newblock {\em Journal of the Royal Statistical Society: Series B},
+  57(1):289--300, 1995.
+
+\bibitem{berenstein2016}
+Ariel~J. Berenstein, Mar{\'i}a~Paula Magari{\~n}os, Ariel Chernomoretz, and
+  Fern{\'a}n Ag{\"u}ero.
+\newblock A multilayer network approach for guiding drug repositioning in
+  neglected diseases.
+\newblock {\em PLoS Neglected Tropical Diseases}, 10(1):e0004300, 2016.
+
+\bibitem{mcclish1989}
+Donna~Katzman McClish.
+\newblock Analyzing a portion of the {ROC} curve.
+\newblock {\em Medical Decision Making}, 9(3):190--195, 1989.
+
+\end{thebibliography}

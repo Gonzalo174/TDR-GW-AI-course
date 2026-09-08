@@ -102,8 +102,22 @@ def construir() -> dict:
     n["NAristas"] = "36\\,152\\,622"
     n["NCompuestosAntes"] = "2\\,396\\,103"
     n["NCompuestosDespues"] = "831\\,175"
-    n["NPruebas"] = "38"
+    n["NPruebas"] = _contar_pruebas()
     return n
+
+
+def _contar_pruebas():
+    """Cuenta las pruebas de `comun/tests/` en vez de tenerlas escritas: un
+    numero a mano se desactualiza en cuanto se agrega un test, que es
+    exactamente lo que este informe dice que no hace."""
+    import unittest
+    try:
+        suite = unittest.defaultTestLoader.discover(str(RAIZ / "comun" / "tests"),
+                                                    pattern="test_*.py",
+                                                    top_level_dir=str(RAIZ / "comun" / "tests"))
+        return str(suite.countTestCases())
+    except Exception:
+        return FALTA
 
 
 if __name__ == "__main__":
