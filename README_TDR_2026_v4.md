@@ -162,7 +162,7 @@ notebooks (`01_`, `02_`, …) y **se propaga a todo lo que generan**:
 
 ```
 genome_prioritization/01_barrido_parametros.ipynb
-  -> gon4/genome_prioritization_out/01_atha.csv … 01_tcr.csv
+  -> gon4/genome_prioritization_out/01_sp21.csv … 01_sp4.csv
   -> gon4/genome_prioritization_out/01_meta.json
 genome_prioritization/02_optimo_y_consistencia.ipynb
   -> gon4/genome_prioritization_out/02_optimos_por_especie.csv
@@ -214,7 +214,7 @@ TDR_2026_v4/
     ├── 01_pseudohuerfanas.ipynb
     ├── 02_cobertura_semilla.ipynb
     ├── 03_desorfanizacion_global.ipynb
-    ├── 04_aplicacion_pfal.ipynb
+    ├── 04_aplicacion_sp26.ipynb
     └── funciones_huerfanas.py
 ```
 
@@ -237,7 +237,7 @@ gon4/
 │   └── figuras/  01_f01_*, 02_f01_*, …
 └── huerfanas_out/
     ├── 01_<especie>_pseudohuerfanas.csv, 01_meta.json
-    ├── 02_cobertura_*.csv, 03_ranking_global.csv, 04_pfal_*.csv
+    ├── 02_cobertura_*.csv, 03_ranking_global.csv, 04_sp26_*.csv
     └── figuras/  01_f01_*, …
 ```
 
@@ -357,7 +357,7 @@ Lo dejaría para después de que el barrido y las huérfanas estén cerrados.
 | `01_pseudohuerfanas.ipynb` | construcción de las k=1, grupos 0–3, `frank` por especie, clasificación de semilla (nula / no informativa / informativa) | `tdr-graph/orphan_drugs_v4.ipynb` |
 | `02_cobertura_semilla.ipynb` | el cuello de botella: 61 % semilla nula. Umbral de similitud química, KEGG como tercera fuente, capa fenotípica de respaldo | `reproducir_v6/cobertura_semilla/` |
 | `03_desorfanizacion_global.ipynb` | ranking global, `r*G`, distribución de `rSS`, partición directa/indirecta | `reproducir_v6/desorfanizacion_global/` + `inferencia_directa_indirecta/` |
-| `04_aplicacion_pfal.ipynb` | embudo de compuestos huérfanos activos contra *P. falciparum* y casos de estudio | `reproducir_v6/aplicacion_pfal/` |
+| `04_aplicacion_sp26.ipynb` | embudo de compuestos huérfanos activos contra *la especie foco* y casos de estudio | `reproducir_v6/aplicacion_sp26/` |
 
 `01` y `02` son el corazón: mientras el 61 % de las pseudohuérfanas tenga semilla
 nula, ninguna reponderación mueve el número (las iteraciones it0–it3 dieron

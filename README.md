@@ -21,8 +21,10 @@ y esquema de cada tabla) está en `DB/meta.json`.
 ## Cómo correr los análisis
 
 ```bash
+conda create -n TDR_GW python=3.12
+conda activate TDR_GW
 pip install -r requirements.txt
-python3 -m unittest discover -s comun/tests -p "test_*.py"   # 35 tests, ~12 s
+python -m unittest discover -s comun/tests -p "test_*.py"    # 35 tests, ~14 s
 ```
 
 Los notebooks se corren en este orden, y cada uno escribe en
@@ -44,6 +46,21 @@ esos enteros a la notación original son privados. Las equivalencias que el
 modelo necesita están escritas en `comun/tdr.py` (`TAG_POSITIVE`, `IPR_DOMAIN`,
 `SPECIES`, …), con el comentario de qué selecciona cada una.
 
-Las especies se identifican por código, no por nombre; lo que sí se publica es
-el tipo de organismo (grupo, reino, si es parásito), porque el modelo lo usa y
-sin él las figuras por grupo no se leen.
+Las especies se identifican por código, no por nombre. **El nombre de la especie
+no aparece en ninguna parte del repositorio**: ni en el código, ni en los datos,
+ni en los nombres de archivo, ni en la documentación. Lo que sí se publica es el
+tipo de organismo (grupo, reino, si es parásito), porque el modelo lo usa y sin
+él las figuras por grupo no se leen. Tres de las 16 son la única de su
+combinación (grupo, parásito), lo que para ellas equivale a identificarlas: está
+anotado en `comun/tdr.py`.
+
+## Estructura
+
+| carpeta | qué es |
+|---|---|
+| `DB/` | la base codificada; sólo enteros |
+| `comun/` | `tdr.py` (rutas, carga, métricas, figuras), `nucleo.py` (el modelo), `tests/` |
+| `analiceDB/`, `genome_prioritization/`, `huerfanas/` | los tres análisis, 9 notebooks |
+| `resultados/` | salidas de las corridas (el contenido no se versiona) |
+| `control/` | óptimos por especie de una corrida independiente, para contrastar |
+| `oraculo_v4/` | las mismas tablas calculadas antes del recorte y de la codificación |

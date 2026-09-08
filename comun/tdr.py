@@ -588,41 +588,27 @@ def guardar(fig, nombre, carpeta, png=True):
 # Nombres de anotaciones (para leer los rankings priorizados)
 # ---------------------------------------------------------------------------
 
-CACHE = V4 / "comun" / "datos_derivados"
 PATRON_QUINASA = r"kinase|kinasa"
 
 
 def nombres_ipr(refrescar=False):
-    """Diccionario IPR -> descripcion, extraido de las salidas de InterProScan.
+    """Diccionario de anotacion -> descripcion legible. NO disponible en el repo.
 
-    Los .tsv de `raw_data/targets/` traen el accession IPR en la columna 12 y su
-    descripcion en la 13. Se cachea en `comun/datos_derivados/ipr_nombres.csv`.
+    Las descripciones salen de los .tsv de InterProScan de `raw_data/targets/`,
+    que son la base real y no se publican, y vienen indexadas por el accession
+    de InterPro (un accession `IPR……`), mientras que la columna `ann` de esta base es un
+    entero codificado. Ligar uno con otro exige `mapa_interpro`, que es privado.
 
-    ATENCION: el cache esta indexado por identificador de InterPro (IPR000719),
-    mientras que la columna `ann` de esta base es un entero codificado. Traducir
-    de uno al otro exige `mapa_interpro`, que es privado: en un clon del
-    repositorio esta funcion no puede nombrar los dominios de un resultado.
-    Ver la decision abierta 1 de PLAN.md.
+    Consecuencia: en un clon del repositorio los dominios de un resultado se
+    identifican por su codigo y no se pueden nombrar. Es la decision abierta 1
+    de PLAN.md.
+
+    Con una copia local de los crudos y del mapeo se puede reconstruir:
+    `export TDR_RAW=/ruta/raw_data` y pasar `mapeo` con el diccionario privado.
     """
-    CACHE.mkdir(parents=True, exist_ok=True)
-    cache = CACHE / "ipr_nombres.csv"
-    if cache.exists() and not refrescar:
-        d = pd.read_csv(cache)
-        return dict(zip(d["ann"], d["nombre"]))
-
-    import csv
-    fuentes = list((RAW / "targets" / "interpro").glob("*.tsv"))
-    fuentes += list((RAW / "targets" / "raw_target_data").glob("*.tsv"))
-    nombres = {}
-    for f in fuentes:
-        with open(f, newline="", errors="replace") as fh:
-            for row in csv.reader(fh, delimiter="\t"):
-                if len(row) > 12 and row[11].startswith("IPR"):
-                    nombres.setdefault(row[11], row[12])
-    if not nombres:
-        raise FileNotFoundError(f"sin .tsv de InterProScan bajo {RAW / 'targets'}")
-    pd.DataFrame({"ann": list(nombres), "nombre": list(nombres.values())}).to_csv(cache, index=False)
-    return nombres
+    raise NotImplementedError(
+        "nombres_ipr() necesita raw_data/ y mapa_interpro, que no se publican; "
+        "ver la decision abierta 1 de PLAN.md")
 
 
 def anotar_targets(target_ids, sta, ipr=None, max_ann=3):

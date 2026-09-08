@@ -1,0 +1,49 @@
+{
+  "notebook": "02_optimo_y_consistencia.ipynb",
+  "nb": "02",
+  "fecha": "2026-09-07 12:32",
+  "params": {
+    "alpha": [
+      0,
+      0.3,
+      0.6,
+      0.9,
+      1.2
+    ],
+    "beta": [
+      0,
+      0.5,
+      1.0,
+      1.5
+    ],
+    "lambda_": [
+      0.0,
+      0.5,
+      1.0,
+      null
+    ],
+    "gamma": [
+      0.8,
+      1.0,
+      1.2
+    ]
+  },
+  "n_core": null,
+  "tablas_db": {
+    "00_specie_target.csv": "2026-06-05",
+    "00_specie_target_full.csv": "2026-06-05",
+    "01_clusters_fingerprint.csv": "2026-05-13",
+    "01_deleted_compounds.csv": "2026-05-13",
+    "01_edges_clusters_fingerprint.csv": "2026-05-13",
+    "02_clusters_subestructure.csv": "2026-05-13",
+    "02_edges_clusters_subestructure.csv": "2026-05-13",
+    "03_bioactivities_organism_compound.csv": "2026-06-04",
+    "03_bioactivities_target_compound.csv": "2026-08-07",
+    "04a_interpro.csv": "2026-06-10",
+    "04b_orthomcl.csv": "2026-08-25"
+  },
+  "python": "3.12.2",
+  "pandas": "2.2.3",
+  "especie_detalle": "sp26",
+  "barrido_nb": "01"
+}

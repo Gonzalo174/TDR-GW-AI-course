@@ -555,7 +555,7 @@ def fig_inferencia(df, plt):
 
 
 def fig_embudo(embudo, plt):
-    """Compuestos que sobreviven a cada paso del embudo de P. falciparum."""
+    """Compuestos que sobreviven a cada paso del embudo de la especie foco."""
     fig, ax = plt.subplots(figsize=(6, 3), tight_layout=True)
     ax.barh(range(len(embudo)), embudo["n"], color=tdr.ORD[:len(embudo)])
     ax.set_yticks(range(len(embudo)))

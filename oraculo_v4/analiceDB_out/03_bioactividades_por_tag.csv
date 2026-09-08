@@ -1,0 +1,9 @@
+activity_tag,cluster_consistent,n,pct
+indeterminate,True,3128054,88.68882582614852
+positive,True,248457,7.044430690227017
+negative,True,144461,4.095861665965882
+inconsistent,True,5827,0.1652112745141124
+negative,False,91,0.0025800971307335
+positive,False,88,0.0024950389835664
+indeterminate,False,19,0.0005387015987245
+inconsistent,False,2,5.6705431444692784e-05

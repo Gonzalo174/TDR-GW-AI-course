@@ -25,20 +25,25 @@ De `TDR_2026_v4`, excluyendo `createDB/` (la base no se regenera acá):
 | `comun/` | `tdr.py` (rutas, carga, métricas, figuras), `nucleo.py` (el modelo, congelado), `tests/` (5 suites) | 1053 |
 | `analiceDB/` | 3 notebooks: dimensiones de la red, capas y conectividad, calidad de bioactividades | 331 |
 | `genome_prioritization/` | 2 notebooks: barrido de parámetros, óptimo y consistencia | 374 |
-| `huerfanas/` | 4 notebooks: pseudohuérfanas, cobertura de semilla, desorfanización global, aplicación a *P. falciparum* | 562 |
+| `huerfanas/` | 4 notebooks: pseudohuérfanas, cobertura de semilla, desorfanización global, aplicación a la especie foco | 562 |
 | `paper/` | `informe.tex`, `refs.bib`, figuras y tablas ya generadas por v4 | — |
 
 No se copió `bibliografia/` (PDFs de artículos de terceros) ni los diccionarios
 de `acondicionarDB/mapeos/`.
 
-**Las salidas de v4 en `paper/datos/` son el oráculo del port.** Son 40 tablas
-CSV producidas por estos mismos notebooks contra la base sin codificar. Cualquier
-resultado nuevo se compara contra ellas; ahí está la evidencia que pide la
-consigna.
+**Las salidas de v4, hoy en `oraculo_v4/`, son el oráculo del port.** Son las
+tablas producidas por estos mismos notebooks contra la base sin codificar y sin
+recorte. Cualquier resultado nuevo se compara contra ellas; ahí está la
+evidencia que pide la consigna.
+
+Al traerlas se las anonimizó: 9 096 filas de `target_id` pasaron de accession a
+código, más 1 328 celdas y 35 nombres de archivo con códigos de especie. El
+informe y las figuras de esa versión **no** se publican: llevan los nombres de
+las especies en el cuerpo del texto y rasterizados dentro de las imágenes.
 
 ### A.1 El problema central: la DB nueva es toda enteros
 
-    VIEJA  target_id=A0A504X1N1  sp_id=ldon  activity_tag=positive  type=Domain
+    VIEJA  target_id=<accession>  sp_id=<codigo de texto>  activity_tag=positive  type=Domain
     NUEVA  target_id=89920       sp_id=19    activity_tag=2         type=5
 
 Esto no rompe con una excepción: **rompe en silencio**. Medido sobre
@@ -60,9 +65,9 @@ notebooks) va primero y no último.
 |---|---|---|---|
 | 1 | `"positive"` / `"negative"` / `"indeterminate"` / `"inconsistent"` | filtros de bioactividad | `comun/tdr.py`, `huerfanas/funciones_huerfanas.py`, `comun/tests/test_integridad.py`, `analiceDB/03_*.ipynb` |
 | 2 | `type == "Domain"` (y `Homologous_superfamily`) | filtro de InterPro en `cargar_db` | `comun/tdr.py` |
-| 3 | códigos de especie `'pfal'`, `'hsap'`, `'tcr'`… (41 apariciones) | `SPECIES`, `NOMBRE_CORTO`, selección de especie en notebooks | `comun/tdr.py` + 6 notebooks |
+| 3 | códigos de especie como texto (41 apariciones) | `SPECIES`, `NOMBRE_CORTO`, selección de especie en notebooks | `comun/tdr.py` + 6 notebooks |
 | 4 | `ann != "-1"` (faltante de OrthoMCL) | `cargar_db` | `comun/tdr.py` |
-| 5 | `sp_id != "bioactive"` | `especies_con_druggables` | `comun/tdr.py` |
+| 5 | `sp_id != "sp14"` | `especies_con_druggables` | `comun/tdr.py` |
 
 **Resuelto (2026-09-08).** No se publicó ningún diccionario. Las equivalencias
 que el modelo necesita —y solo esas— quedaron escritas a mano en `comun/tdr.py`,
@@ -92,10 +97,10 @@ consecuencia de publicar el grupo, y está anotada en el código.
 
 ```
 30 especies en 00_specie_target (la base trae 30; el modelo usa 16)
-17 con más de 10 druggables  =  las 16 del modelo + el pseudo-sp "bioactive" (código 14)
+17 con más de 10 druggables  =  las 16 del modelo + el pseudo-sp "sp14" (código 14)
 ```
 
-`especies_con_druggables()` excluye `bioactive` por nombre, así que con enteros
+`especies_con_druggables()` excluye `sp14` por nombre, así que con enteros
 ese filtro deja de funcionar y devolvería 17. Es el punto 5 de la tabla A.2.
 La buena noticia es que **las 16 especies sobreviven al recorte**: el conjunto
 del modelo no cambia y las comparaciones contra `paper/datos/` son legítimas.
@@ -195,7 +200,7 @@ repositorio que **un agente pueda reproducir sin haber hablado con nadie**.
 1. `comun/rutas.py`: raíz derivada del archivo, cero paths absolutos.
 2. `DB/mapeos/` con los cinco diccionarios chicos + `comun/codigos.py` que
    traduce en un solo lugar (A.2).
-3. `cargar_db()` adaptado: tags, tipos, `-1`, `bioactive`, `cluster_consistent`
+3. `cargar_db()` adaptado: tags, tipos, `-1`, `sp14`, `cluster_consistent`
    a bool, y `leer_aristas()` que concatena los `.gz` y reescala el peso (A.5).
 4. `requirements.txt` con versiones exactas (hoy: pandas 2.2.3, python 3.x, y
    la restricción de glibc 2.27 que impide pyarrow >15, ya documentada).
@@ -206,7 +211,7 @@ repositorio que **un agente pueda reproducir sin haber hablado con nadie**.
 ya creada y versionada; `leer_aristas()` concatena los `.gz` y desescala el peso;
 `RAW` quedó como ruta opcional por `TDR_RAW` (los crudos no se publican);
 `requirements.txt` fija las versiones; `control/genoma_completo_v5/` copiado con
-los archivos renombrados a código (venían como `pfal.csv`).
+los archivos renombrados a código (venían como `sp26.csv`).
 
 Verificado de punta a punta: `cargar_db()` da **248 457** positivos y **101 885**
 negativos, `especies_con_druggables()` devuelve exactamente **16**, y
@@ -217,7 +222,7 @@ negativos, `especies_con_druggables()` devuelve exactamente **16**, y
 Adaptar las 5 suites de `comun/tests/` y agregar las que faltan para el port:
 
 - `posdt` no vacío y con el conteo exacto **248 457** (medido en A.1);
-- 16 especies con druggables, sin `bioactive`;
+- 16 especies con druggables, sin `sp14`;
 - la tabla de aristas concatenada tiene **36 152 622** filas (`DB/meta.json`);
 - toda columna de `DB/` es entera (invariante que declara `acondicionarDB`);
 - las métricas (`pauc_normalizada`, `mcclish`) contra valores de referencia.
@@ -282,11 +287,12 @@ Fase 1 ──> Fase 2 ──> Fase 3 ──> Fase 4 ──> Fase 5 ──> Fase 
 ### Decisiones abiertas
 
 1. **`nombres_ipr()`**: sin `mapa_interpro` no hay descripción legible de los
-   dominios. ¿Se elimina la función, o se publica el cache reindexado por código?
-   Afecta a `huerfanas/04`, que hoy nombra los dominios de las familias que
-   propone. Por ahora la función quedó con la advertencia en el docstring.
+   dominios, y el cache que había (`comun/datos_derivados/ipr_nombres.csv`)
+   además nombraba organismos en las descripciones, así que se eliminó. La
+   función quedó lanzando `NotImplementedError` con la explicación. Falta
+   decidir si `huerfanas/04` presenta las familias sólo por código.
 4. **`paper/`**: el informe de v4 nombra las especies en el texto, en las figuras
-   y en los nombres de archivo (`01_pfal.csv`, `01_calb_pseudohuerfanas.csv`).
+   y en los nombres de archivo (`01_sp26.csv`, `01_sp25_pseudohuerfanas.csv`).
    Si el criterio de no identificar especies vale para todo el repositorio, hay
    que renombrarlos y reescribir el `.tex`; si vale sólo para el código y los
    datos, `paper/` queda como está.

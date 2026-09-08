@@ -1,0 +1,50 @@
+drug_id,especie,semilla,target_id,n_semilla,score,rank,frank,rG,rSS,clase,n_targets
+41764,sp22,nula,135396,0,,,,,,sin semilla,
+91350,sp22,no informativa,165952,4,0.0,6561.0,0.5012988997555012,184694.5,6561.0,indirecta,13088.0
+91356,sp22,nula,165952,0,,,,,,sin semilla,
+91357,sp22,nula,165952,0,,,,,,sin semilla,
+91358,sp22,no informativa,165952,16,0.0,6580.5,0.5027888141809291,187417.5,6580.5,indirecta,13088.0
+91604,sp22,nula,56867,0,,,,,,sin semilla,
+91680,sp22,no informativa,172986,358,0.0,7056.5,0.5391580073349633,203415.5,7056.5,indirecta,13088.0
+92304,sp22,nula,165952,0,,,,,,sin semilla,
+92510,sp22,nula,135396,0,,,,,,sin semilla,
+92587,sp22,nula,135396,0,,,,,,sin semilla,
+99805,sp22,no informativa,233877,26,0.0,6554.0,0.5007640586797066,185328.5,6554.0,indirecta,13088.0
+119275,sp22,nula,6314,0,,,,,,sin semilla,
+132459,sp22,no informativa,262096,11,0.0,6585.0,0.5031326405867971,185568.0,6585.0,indirecta,13088.0
+450804,sp22,no informativa,165952,6,0.0,6640.5,0.5073731662591687,186405.0,6640.5,indirecta,13088.0
+508226,sp22,nula,165952,0,,,,,,sin semilla,
+508229,sp22,nula,165952,0,,,,,,sin semilla,
+690813,sp22,nula,85285,0,,,,,,sin semilla,
+775225,sp22,no informativa,85285,5,0.0,6547.5,0.5002674205378973,186234.5,6547.5,indirecta,13088.0
+925997,sp22,nula,135396,0,,,,,,sin semilla,
+943084,sp22,nula,7973,0,,,,,,sin semilla,
+955819,sp22,nula,14919,0,,,,,,sin semilla,
+970988,sp22,no informativa,6314,2,0.0,6545.0,0.5000764058679706,184271.0,6545.0,indirecta,13088.0
+1421078,sp22,no informativa,146326,18,0.0,6630.0,0.5065709046454768,187009.5,6630.0,indirecta,13088.0
+1495131,sp22,nula,135396,0,,,,,,sin semilla,
+1505654,sp22,nula,135396,0,,,,,,sin semilla,
+1515224,sp22,nula,85285,0,,,,,,sin semilla,
+1594529,sp22,no informativa,264540,4,0.0,6698.5,0.511804706601467,190153.0,6698.5,indirecta,13088.0
+1663411,sp22,no informativa,146326,61,0.0,6567.5,0.5017955378973105,185376.5,6567.5,indirecta,13088.0
+1859939,sp22,informativa,262096,41,0.0023142857142857,47.5,0.0036292787286063,2084.5,47.5,indirecta,13088.0
+1902169,sp22,nula,135396,0,,,,,,sin semilla,
+2346397,sp22,nula,172986,0,,,,,,sin semilla,
+2375472,sp22,nula,165952,0,,,,,,sin semilla,
+2376114,sp22,nula,135396,0,,,,,,sin semilla,
+2381120,sp22,nula,135396,0,,,,,,sin semilla,
+2381139,sp22,informativa,165952,13,0.0075512057177528,23.0,0.0017573349633251,230.5,23.0,directa,13088.0
+2381347,sp22,informativa,165952,3,0.0060053115362404,7.0,0.0005348410757946,109.5,7.0,directa,13088.0
+2381535,sp22,nula,135396,0,,,,,,sin semilla,
+2381965,sp22,informativa,227381,1477,0.0126582278481012,320.0,0.0244498777506112,15472.0,320.0,indirecta,13088.0
+2383980,sp22,nula,135396,0,,,,,,sin semilla,
+2384712,sp22,nula,135396,0,,,,,,sin semilla,
+2385747,sp22,nula,14919,0,,,,,,sin semilla,
+2387988,sp22,nula,165952,0,,,,,,sin semilla,
+2389434,sp22,nula,165952,0,,,,,,sin semilla,
+2391408,sp22,nula,14919,0,,,,,,sin semilla,
+2391549,sp22,nula,135396,0,,,,,,sin semilla,
+2391860,sp22,nula,165952,0,,,,,,sin semilla,
+2394213,sp22,nula,135396,0,,,,,,sin semilla,
+2395265,sp22,nula,6314,0,,,,,,sin semilla,
+2396009,sp22,nula,132165,0,,,,,,sin semilla,
