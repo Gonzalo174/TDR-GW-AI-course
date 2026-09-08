@@ -331,7 +331,10 @@ def fig_grilla_beta(barrido, plt):
     fig, axes = plt.subplots(1, 4, figsize=(11, 3), sharey=True, tight_layout=True)
     for ax, col in zip(axes, ["alpha", "beta", "lambda_", "gamma"]):
         datos = barrido.copy()
-        datos[col] = datos[col].astype(str)   # "nan" = hibrido, es una categoria mas
+        # "nan" = modo hibrido, es una categoria mas. Se escribe a mano porque
+        # `astype(str)` conserva el faltante en pandas 3 en vez de convertirlo a
+        # la cadena "nan", y entonces `sorted` compara str contra float.
+        datos[col] = datos[col].map(lambda v: "nan" if pd.isna(v) else str(v))
         orden = sorted(datos[col].unique())
         ax.boxplot([datos.loc[datos[col] == v, "AUC01"].dropna() for v in orden],
                    showfliers=False)

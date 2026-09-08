@@ -60,6 +60,9 @@ Todas verificables en el código, con el comentario al lado.
 | 3.5 | Las rutas se derivan de la raíz del repositorio, buscando hacia arriba la carpeta que contiene `DB/` | la consigna pide que el repositorio lo pueda reproducir alguien que nunca habló con nosotros. **Descartado:** una variable de entorno, que es una cosa más que puede faltar |
 | 3.6 | `nombres_ipr()` lanza `NotImplementedError` | nombrar un dominio exige `mapa_interpro`, que es privado. Se prefiere fallar diciendo por qué antes que devolver códigos disfrazados de nombres |
 | 3.7 | Los outputs guardados de los notebooks se limpiaron antes de correr | traían los resultados de la versión anterior, calculados sobre otra base: dejarlos mezclaría dos corridas en un mismo archivo |
+| 3.8 | El faltante de `lambda_` (que marca el modo híbrido) se rotula `"nan"` a mano, no con `astype(str)` | en pandas 3 `astype(str)` **conserva** el faltante en vez de convertirlo a la cadena `"nan"`, y entonces `sorted` compara `str` contra `float` y matplotlib rechaza el valor. Se escribe explícito, que funciona igual en pandas 2 y 3 |
+| 3.9 | La columna de especie que sale del nombre de archivo se convierte a entero cuando son todos dígitos | antes los códigos eran texto y la comparación funcionaba por accidente; con códigos numéricos, `especie == SP_FOCO` comparaba `"26"` contra `26` y no encontraba nada |
+| 3.10 | `cargar_subestructuras_crudas` recodifica los ids de `raw_data/` a los códigos de `DB/` | sin eso las salidas no cruzan contra `datos.bioact` y el conjunto llega vacío a `huerfanas/` sin error: los compuestos promiscuos pasaban de 7 a 30 falsos |
 
 ## 4. Qué es código propio y qué es librería
 

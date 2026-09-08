@@ -643,7 +643,13 @@ def cargar_csvs(salidas, nb, patron="*", columna="especie"):
         raise FileNotFoundError(
             f"no hay {nb}_{patron}.csv en {salidas}: correr la celda de corrida primero")
     partes = [pd.read_csv(f).assign(**{columna: f.stem[len(nb) + 1:]}) for f in archivos]
-    return pd.concat(partes, ignore_index=True)
+    out = pd.concat(partes, ignore_index=True)
+    # El sufijo sale del nombre del archivo y por lo tanto es texto. Cuando son
+    # codigos de especie hay que devolverlos enteros: si no, `especie == SP_FOCO`
+    # compara "26" contra 26, no encuentra nada y el notebook aborta.
+    if out[columna].str.fullmatch(r"-?\d+").all():
+        out[columna] = out[columna].astype("int64")
+    return out
 
 
 # ---------------------------------------------------------------------------

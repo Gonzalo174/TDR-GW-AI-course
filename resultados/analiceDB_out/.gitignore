@@ -1,3 +1,7 @@
 *
 !.gitignore
 !figuras/
+# Excepcion: `huerfanas/` necesita esta tabla y producirla exige `raw_data/`,
+# que no se publica (ver PROVENANCE.md §6). Se versiona ya calculada, igual que
+# se versiona `DB/` en vez del pipeline que la genera.
+!03_compuestos_promiscuos.csv

@@ -58,9 +58,24 @@ anotado en `comun/tdr.py`.
 
 | carpeta | qué es |
 |---|---|
+| `index.html` | **la página de presentación**, generada desde las tablas |
+| `informe/informe.pdf` | **el informe**, con sus números generados desde las tablas |
+| `PROVENANCE.md` | de dónde viene cada resultado y qué alternativa se descartó |
 | `DB/` | la base codificada; sólo enteros |
 | `comun/` | `tdr.py` (rutas, carga, métricas, figuras), `nucleo.py` (el modelo), `tests/` |
 | `analiceDB/`, `genome_prioritization/`, `huerfanas/` | los tres análisis, 9 notebooks |
+| `verificacion/` | la comparación contra el oráculo |
 | `resultados/` | salidas de las corridas (el contenido no se versiona) |
 | `control/` | óptimos por especie de una corrida independiente, para contrastar |
 | `oraculo_v4/` | las mismas tablas calculadas antes del recorte y de la codificación |
+
+## Regenerar los entregables
+
+```bash
+python informe/numeros.py          # los números del informe, desde las tablas
+make -C informe                    # -> informe/informe.pdf
+python informe/generar_pagina.py   # -> index.html
+```
+
+Ninguno de los dos entregables tiene un número escrito a mano: los dos se
+arman leyendo `resultados/`.
