@@ -8,7 +8,8 @@ y para entonces la corrida ya se perdió. Este test recorre TODOS los `import` d
 import ast, json, pathlib, sys, importlib, unittest
 
 RAIZ = pathlib.Path(__file__).resolve().parents[2]
-LOCALES = {"tdr", "nucleo", "funciones_analice", "funciones_genome", "funciones_huerfanas"}
+LOCALES = {"tdr", "nucleo", "funciones_analice", "funciones_genome",
+           "funciones_huerfanas", "funciones_verificacion"}
 
 
 def _sin_magics(src):
@@ -49,7 +50,7 @@ class TestEntorno(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.imports, cls.ilegibles = imports_del_repo()
-        for d in ("comun", "analiceDB", "genome_prioritization", "huerfanas"):
+        for d in ("comun", "analiceDB", "genome_prioritization", "huerfanas", "verificacion"):
             if str(RAIZ / d) not in sys.path:
                 sys.path.insert(0, str(RAIZ / d))
 

@@ -181,13 +181,22 @@ def conectividad_entre_especies(datos, por="anotaciones"):
     return m
 
 
-def cargar_subestructuras_crudas(raw=None):
+def cargar_subestructuras_crudas(raw=None, mapeo=None):
     """Relaciones de subestructura crudas + pesos moleculares, mapeadas a `drug_id`.
 
     Lee `raw_data/subestructures_chembl35_biolip.txt` (1 065 346 relaciones) y
-    `raw_data/compounds/compound_data.csv`. Es la unica entrada de v4 que no sale
-    de `DB/`: la capa de subestructuras guardada ya esta clusterizada y no
-    conserva el conteo de superestructuras por molecula.
+    `raw_data/compounds/compound_data.csv`. Es la unica entrada que no sale de
+    `DB/`: la capa de subestructuras guardada ya esta clusterizada y no conserva
+    el conteo de superestructuras por molecula.
+
+    Los crudos traen los identificadores originales, mientras que `DB/` los tiene
+    codificados. Sin traducir, cualquier cruce contra `datos.bioact` da vacio sin
+    lanzar nada. Por eso se recodifican aca, con `mapa_compuesto`: se busca en
+    `mapeo`, o en la variable de entorno TDR_MAPEOS. Si no esta, se avisa y se
+    devuelven los ids originales, que solo sirven para mirar los crudos.
+
+    Ni los crudos ni los mapeos se publican: en un clon del repositorio esta
+    funcion no corre, y las salidas de `analiceDB/03` vienen ya calculadas.
     """
     raw = Path(raw) if raw else tdr.RAW
     sub_p = raw / "subestructures_chembl35_biolip.txt"
@@ -214,7 +223,29 @@ def cargar_subestructuras_crudas(raw=None):
     sub = sub.dropna(subset=["padre", "hijo"])
     sub = sub[sub["padre"] != sub["hijo"]]
     sub[["padre", "hijo"]] = sub[["padre", "hijo"]].astype("int64")
+
+    mc = _mapa_compuesto(mapeo)
+    if mc is not None:
+        for col in ("padre", "hijo"):
+            sub[col] = sub[col].map(mc).fillna(tdr.FALTANTE).astype("int64")
+        sub = sub[(sub["padre"] != tdr.FALTANTE) & (sub["hijo"] != tdr.FALTANTE)]
+        comp["drug_id"] = comp["drug_id"].map(mc).fillna(tdr.FALTANTE).astype("int64")
+        comp = comp[comp["drug_id"] != tdr.FALTANTE]
+    else:
+        print("AVISO: sin mapa_compuesto; los drug_id quedan en la notacion "
+              "original y NO cruzan contra DB/ (ver TDR_MAPEOS)", flush=True)
     return sub, comp
+
+
+def _mapa_compuesto(mapeo=None):
+    """{id original -> codigo} de `mapa_compuesto.csv`, o None si no esta."""
+    import os
+    d = Path(mapeo) if mapeo else Path(os.environ.get("TDR_MAPEOS", "/no-existe"))
+    f = d / "mapa_compuesto.csv"
+    if not f.exists():
+        return None
+    m = pd.read_csv(f)
+    return dict(zip(m["original"].astype("int64"), m["codigo"].astype("int64")))
 
 
 def curva_filtrado(por_compuesto, sub, umbrales=(10, 50, 100, 500), mw_grilla=None):

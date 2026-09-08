@@ -1,0 +1,118 @@
+# Procedencia
+
+De dónde viene cada resultado de este repositorio: qué archivo y qué función lo
+produjo, qué entró, qué se escribió acá y qué se llamó de una librería, y qué
+alternativa defendible se descartó en cada bifurcación.
+
+El criterio para incluir algo acá es que tenga una alternativa razonable. Lo que
+no tiene alternativa es implementación, y se lee en el código.
+
+---
+
+## 1. La cadena de datos
+
+```
+base real (privada)                    este repositorio
+/data1/.../gon3/DB                     DB/
+  UniProt, InterPro, OrthoMCL,   ──►     solo enteros, 260 MB
+  ids internos, 2 396 103                831 175 compuestos
+  compuestos
+        │                                     │
+        │  acondicionarDB/acondicionar.py     │  comun/tdr.py::cargar_db
+        │  (fuera de este repo)               ▼
+        │                              analiceDB/ genome_prioritization/ huerfanas/
+        ▼                                     │
+  mapeos/ (privado, no se publica)            ▼
+                                       resultados/<analisis>_out/
+                                         tablas + figuras + NN_meta.json
+                                              │
+                                              ▼
+                                       verificacion/10_equivalencia.ipynb
+                                         contra oraculo_v4/
+```
+
+Cada corrida deja un `NN_meta.json` al lado de sus tablas con la fecha, el
+notebook de origen, los parámetros, la fecha de cada tabla de `DB/` y las
+versiones de python y pandas. Lo escribe `tdr.escribir_meta`.
+
+## 2. Decisiones sobre los datos
+
+Las tomó `acondicionarDB/` antes de este repositorio; se documentan porque
+condicionan todo lo que sigue.
+
+| decisión | qué se hizo | alternativa descartada |
+|---|---|---|
+| **recorte** | se eliminan las componentes conexas del grafo cluster–cluster de fingerprint que no contienen ningún cluster con bioactividad `positive`: 2 396 103 → 831 175 compuestos (34.7 %). Los 135 576 con bioactividad positiva sobreviven todos | publicar la base entera: 941 MB de aristas, inviable en un repositorio |
+| **codificación** | toda notación propia pasa a entero consecutivo asignado en orden aleatorio con semilla fija (20260908), para que el orden de los códigos no filtre el de los identificadores | publicar los identificadores reales, que es lo que se quiere evitar |
+| **empaquetado** | la tabla de aristas va partida en dos `.csv.gz` de 86.5 y 85.9 MB, con las 36 152 622 aristas completas | subir el umbral de peso hasta que entre en un archivo: cuesta compuestos (a umbral 83 se pierden 144 369) |
+| **peso** | entero ×100 (0.82 → 82); se descarta `weight_error`, vacía en el 78 % de las aristas y con máximo 0.005, que escalado ×100 redondea a 0 | conservarla: no llevaba información |
+
+## 3. Decisiones del port
+
+Todas verificables en el código, con el comentario al lado.
+
+| # | decisión | por qué, y qué se descartó |
+|---|---|---|
+| 3.1 | Los códigos que el modelo necesita se escriben a mano en `comun/tdr.py` (`TAG_POSITIVE = 2`, `IPR_DOMAIN = 5`, …) | **descartado:** publicar los diccionarios de `mapeos/`, que es justamente lo que la codificación evita. Escribir cinco constantes cuesta menos que publicar 400 000 filas de correspondencias |
+| 3.2 | Las especies se identifican por código; se publica el tipo de organismo (grupo, reino, parásito) en `SPECIES` | el modelo contrasta parásitos contra no parásitos y procariotas contra eucariotas: sin esa columna las figuras por grupo no se leen. **Costo aceptado:** tres de las 16 son la única de su combinación, y para ellas el par identifica al organismo |
+| 3.3 | Al concatenar InterPro y OrthoMCL se repone un prefijo (`IP…`, `OG…`) | los dos vocabularios se codificaron por separado desde 0 y sus códigos se pisan: los 14 083 dominios caen dentro del rango de OrthoMCL. **Descartado:** desplazar OrthoMCL por un offset, que arregla la colisión pero no repone lo que `nucleo.get_annot_druggability_pv` necesita, que es distinguirlos por prefijo |
+| 3.4 | `nucleo.py` se modifica en **una** línea: `"_".join(map(str, sp_out))` | arma la clave de un diccionario de salida, no interviene en ningún cálculo. **Descartado:** convertir los códigos a texto en toda la cadena, que reintroduce el problema que la codificación resuelve |
+| 3.5 | Las rutas se derivan de la raíz del repositorio, buscando hacia arriba la carpeta que contiene `DB/` | la consigna pide que el repositorio lo pueda reproducir alguien que nunca habló con nosotros. **Descartado:** una variable de entorno, que es una cosa más que puede faltar |
+| 3.6 | `nombres_ipr()` lanza `NotImplementedError` | nombrar un dominio exige `mapa_interpro`, que es privado. Se prefiere fallar diciendo por qué antes que devolver códigos disfrazados de nombres |
+| 3.7 | Los outputs guardados de los notebooks se limpiaron antes de correr | traían los resultados de la versión anterior, calculados sobre otra base: dejarlos mezclaría dos corridas en un mismo archivo |
+
+## 4. Qué es código propio y qué es librería
+
+| pieza | de dónde sale |
+|---|---|
+| modelo de propagación (`nds`, `get_druggable_targets`, `rs`) | `comun/nucleo.py`, propio, congelado salvo 3.4 |
+| test exacto de Fisher | `scipy.stats.fisher_exact` |
+| corrección por comparaciones múltiples | `statsmodels`, método `fdr_bh` |
+| ROC y AUC | `sklearn.metrics.roc_curve`, `auc`, `roc_auc_score` |
+| **pAUC normalizada y corrección de McClish** | `comun/tdr.py`, propio. `sklearn` no trae pAUC parcial con interpolación en el borde |
+| bootstrap de AUC01 | `comun/tdr.py`, propio, 2 000 remuestreos con `numpy.random.default_rng` |
+| componentes conexas del grafo químico | `networkx` |
+| paralelización | `comun/tdr.py::paralelizar`, sobre `concurrent.futures` con contexto `fork` |
+
+Dos detalles del código propio que tienen alternativa y por eso se explican:
+
+**pAUC con interpolación en el borde** (`tdr.pauc_normalizada`). Se agrega el
+punto exacto `(fpr_max, tpr(fpr_max))` antes de integrar. Truncar en el último
+punto con `fpr <= fpr_max`, que es lo directo, **subestima** la pAUC.
+
+**Corrección de McClish** (`tdr.mcclish`). Reescala la pAUC normalizada para que
+azar dé 0.5 y clasificador perfecto 1.0, que es lo que hace comparable el número
+entre especies con distinta proporción de positivos.
+
+## 5. Cómo se verifica cada resultado
+
+Tres niveles, del más barato al más caro.
+
+**Las pruebas** (`comun/tests/`, 38, corren en ~15 s). Integridad de las tablas,
+ausencia de fuga en el leave-one-species-out, métricas contra valores de
+referencia, rutas, y el entorno. Cuatro son específicas del port y cubren lo que
+puede romperse en silencio: que el filtro de positivos no quede vacío, que la
+base sea entera, que los dos vocabularios no se pisen y que la base esté
+completa.
+
+**El control externo** (`control/genoma_completo_v5/`). Óptimos por especie
+calculados en una corrida independiente con la métrica ya corregida.
+`genome_prioritization/02` los contrasta contra los propios.
+
+**El oráculo** (`oraculo_v4/` y `verificacion/10_equivalencia.ipynb`). Las mismas
+tablas calculadas antes del recorte y de la codificación. La comparación explota
+una asimetría: `analiceDB/` describe las componentes conexas y el recorte **debe**
+moverlo; `genome_prioritization/` y `huerfanas/` trabajan sobre anotaciones y
+druggables y **no** deberían moverse.
+
+## 6. Lo que no se puede reproducir desde este repositorio
+
+Se dice explícitamente, porque un repositorio que calla sus límites no es
+verificable:
+
+- **la base misma**: `acondicionarDB/` lee la base real, que no se publica. Lo
+  que sí se publica es su salida y el registro de cómo se produjo;
+- **los nombres de las anotaciones** (3.6);
+- **la identidad de las especies**: por diseño;
+- **`analiceDB/cargar_subestructuras_crudas`**: lee `raw_data/`, que no se
+  publica. Se puede apuntar a una copia local con `TDR_RAW`.

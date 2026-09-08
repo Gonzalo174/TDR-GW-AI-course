@@ -106,6 +106,11 @@ TAG_NEGATIVE = 3       # bioactividades negativas
 TAG_INDETERMINATE = 1  # medicion sin umbral de corte que la defina
 TAG_INCONSISTENT = 0   # el mismo par compuesto-blanco medido con signos opuestos
 
+# Etiquetas legibles de los tags, para ejes y tablas. Que un tag sea "positivo"
+# no identifica nada: es la semantica del modelo, no notacion propia.
+TAG_NOMBRE = {TAG_POSITIVE: "positivo", TAG_NEGATIVE: "negativo",
+              TAG_INDETERMINATE: "indeterminado", TAG_INCONSISTENT: "inconsistente"}
+
 # --- type, en 04a_interpro ---
 IPR_DOMAIN = 5         # se selecciona el tipo Domain: la unidad funcional que
                        # usa el modelo. Los otros tipos de InterPro (Family,
