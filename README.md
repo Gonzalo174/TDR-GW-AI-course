@@ -24,7 +24,7 @@ y esquema de cada tabla) está en `DB/meta.json`.
 conda create -n TDR_GW python=3.12
 conda activate TDR_GW
 pip install -r requirements.txt
-python -m unittest discover -s comun/tests -p "test_*.py"    # 35 tests, ~14 s
+python -m unittest discover -s comun/tests -p "test_*.py"    # 38 tests, ~15 s
 ```
 
 Los notebooks se corren en este orden, y cada uno escribe en
