@@ -1,0 +1,50 @@
+drug_id,especie,semilla,target_id,n_semilla,score,rank,frank,rG,rSS,clase,n_targets
+41764,ddis,nula,P22887,0,,,,,,sin semilla,
+91350,ddis,no informativa,P08799,4,0.0,6561.0,0.5012988997555012,184694.5,6561.0,indirecta,13088.0
+91356,ddis,nula,P08799,0,,,,,,sin semilla,
+91357,ddis,nula,P08799,0,,,,,,sin semilla,
+91358,ddis,no informativa,P08799,16,0.0,6580.5,0.5027888141809291,187417.5,6580.5,indirecta,13088.0
+91604,ddis,nula,Q54BW5,0,,,,,,sin semilla,
+91680,ddis,no informativa,O96759,358,0.0,7056.5,0.5391580073349633,203415.5,7056.5,indirecta,13088.0
+92304,ddis,nula,P08799,0,,,,,,sin semilla,
+92510,ddis,nula,P22887,0,,,,,,sin semilla,
+92587,ddis,nula,P22887,0,,,,,,sin semilla,
+99805,ddis,no informativa,Q9U1M8,26,0.0,6554.0,0.5007640586797066,185328.5,6554.0,indirecta,13088.0
+119275,ddis,nula,P20425,0,,,,,,sin semilla,
+132459,ddis,no informativa,P42527,11,0.0,6585.0,0.5031326405867971,185568.0,6585.0,indirecta,13088.0
+450804,ddis,no informativa,P08799,6,0.0,6640.5,0.5073731662591687,186405.0,6640.5,indirecta,13088.0
+508226,ddis,nula,P08799,0,,,,,,sin semilla,
+508229,ddis,nula,P08799,0,,,,,,sin semilla,
+690813,ddis,nula,Q6XHB2,0,,,,,,sin semilla,
+775225,ddis,no informativa,Q6XHB2,5,0.0,6547.5,0.5002674205378973,186234.5,6547.5,indirecta,13088.0
+925997,ddis,nula,P22887,0,,,,,,sin semilla,
+943084,ddis,nula,P54651,0,,,,,,sin semilla,
+955819,ddis,nula,Q54XS1,0,,,,,,sin semilla,
+970988,ddis,no informativa,P20425,2,0.0,6545.0,0.5000764058679706,184271.0,6545.0,indirecta,13088.0
+1421078,ddis,no informativa,P42530,18,0.0,6630.0,0.5065709046454768,187009.5,6630.0,indirecta,13088.0
+1495131,ddis,nula,P22887,0,,,,,,sin semilla,
+1505654,ddis,nula,P22887,0,,,,,,sin semilla,
+1515224,ddis,nula,Q6XHB2,0,,,,,,sin semilla,
+1594529,ddis,no informativa,Q54S83,4,0.0,6698.5,0.511804706601467,190153.0,6698.5,indirecta,13088.0
+1663411,ddis,no informativa,P42530,61,0.0,6567.5,0.5017955378973105,185376.5,6567.5,indirecta,13088.0
+1859939,ddis,informativa,P42527,41,0.0023142857142857145,47.5,0.0036292787286063568,2084.5,47.5,indirecta,13088.0
+1902169,ddis,nula,P22887,0,,,,,,sin semilla,
+2346397,ddis,nula,O96759,0,,,,,,sin semilla,
+2375472,ddis,nula,P08799,0,,,,,,sin semilla,
+2376114,ddis,nula,P22887,0,,,,,,sin semilla,
+2381120,ddis,nula,P22887,0,,,,,,sin semilla,
+2381139,ddis,informativa,P08799,13,0.007551205717752847,23.0,0.0017573349633251834,230.5,23.0,directa,13088.0
+2381347,ddis,informativa,P08799,3,0.006005311536240498,7.0,0.000534841075794621,109.5,7.0,directa,13088.0
+2381535,ddis,nula,P22887,0,,,,,,sin semilla,
+2381965,ddis,informativa,Q6TMK4,1477,0.012658227848101266,320.0,0.02444987775061125,15472.0,320.0,indirecta,13088.0
+2383980,ddis,nula,P22887,0,,,,,,sin semilla,
+2384712,ddis,nula,P22887,0,,,,,,sin semilla,
+2385747,ddis,nula,Q54XS1,0,,,,,,sin semilla,
+2387988,ddis,nula,P08799,0,,,,,,sin semilla,
+2389434,ddis,nula,P08799,0,,,,,,sin semilla,
+2391408,ddis,nula,Q54XS1,0,,,,,,sin semilla,
+2391549,ddis,nula,P22887,0,,,,,,sin semilla,
+2391860,ddis,nula,P08799,0,,,,,,sin semilla,
+2394213,ddis,nula,P22887,0,,,,,,sin semilla,
+2395265,ddis,nula,P20425,0,,,,,,sin semilla,
+2396009,ddis,nula,Q556V8,0,,,,,,sin semilla,

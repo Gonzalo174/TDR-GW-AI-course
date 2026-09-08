@@ -1,0 +1,1313 @@
+drug_id,especie,semilla,target_id,n_semilla,score,rank,frank,rG,rSS,clase,n_targets,archivo,grupo
+41987,atha,no informativa,P93836,2,0.0,10860.5,0.500161186331399,184323.5,10860.5,indirecta,21714.0,atha_pseudohuerfanas,2
+72963,atha,no informativa,Q9ZST4,6,0.0,10867.5,0.5004835589941973,184475.0,10867.5,indirecta,21714.0,atha_pseudohuerfanas,2
+73082,atha,no informativa,Q9C8E7,3,0.0,10859.0,0.5000921064750852,184397.5,10859.0,indirecta,21714.0,atha_pseudohuerfanas,2
+90805,atha,no informativa,Q96301,2,0.0,10874.0,0.5007829050382242,184347.5,10874.0,indirecta,21714.0,atha_pseudohuerfanas,2
+90905,atha,no informativa,P17597,71,0.0,11531.5,0.5310629087224832,193377.5,11531.5,indirecta,21714.0,atha_pseudohuerfanas,2
+91041,atha,no informativa,Q56YA5,20,0.0,11522.5,0.5306484295845998,193493.5,11522.5,indirecta,21714.0,atha_pseudohuerfanas,2
+91776,atha,informativa,P93031,9,0.0026881720430107,23.5,0.001082251082251,230.5,23.5,indirecta,21714.0,atha_pseudohuerfanas,2
+91787,atha,informativa,Q8RX87,1517,0.0666666666666666,327.0,0.0150594086764299,4783.5,327.0,directa,21714.0,atha_pseudohuerfanas,2
+92044,atha,no informativa,P93025,2,0.0,10857.5,0.5000230266187713,184277.5,10857.5,indirecta,21714.0,atha_pseudohuerfanas,2
+92082,atha,no informativa,Q84KJ5,7,0.0,10973.5,0.5053652021737128,186636.0,10973.5,indirecta,21714.0,atha_pseudohuerfanas,2
+92592,atha,no informativa,P17597,9,0.0,11067.0,0.5096711798839458,188930.0,11067.0,indirecta,21714.0,atha_pseudohuerfanas,3
+94736,atha,informativa,Q9ZVN4,3,0.0118287740628166,9.0,0.0004144791378833,61.0,9.0,directa,21714.0,atha_pseudohuerfanas,2
+94913,atha,informativa,Q9ZVN4,6,0.0118287740628166,11.0,0.0005065856129685,127.0,11.0,directa,21714.0,atha_pseudohuerfanas,0
+237875,atha,no informativa,Q8L3X9,3,0.0,11021.5,0.5075757575757576,186629.0,11021.5,indirecta,21714.0,atha_pseudohuerfanas,2
+270198,atha,no informativa,P93836,3,0.0,11033.5,0.5081283964262687,186250.5,11033.5,indirecta,21714.0,atha_pseudohuerfanas,2
+362400,atha,no informativa,Q9C6B8,3,0.0,10878.0,0.5009671179883946,185340.5,10878.0,indirecta,21714.0,atha_pseudohuerfanas,2
+378750,atha,no informativa,Q94BU8,2,0.0,10980.5,0.5056875748365111,185264.5,10980.5,indirecta,21714.0,atha_pseudohuerfanas,2
+464562,atha,no informativa,Q94BU8,3,0.0,10980.5,0.5056875748365111,187152.5,10980.5,indirecta,21714.0,atha_pseudohuerfanas,0
+476380,atha,no informativa,P46422,4,0.0,11114.0,0.511835682048448,187256.0,11114.0,indirecta,21714.0,atha_pseudohuerfanas,3
+643475,atha,no informativa,Q9SWS1,2,0.0,10872.5,0.5007138251819103,184554.0,10872.5,indirecta,21714.0,atha_pseudohuerfanas,2
+730732,atha,informativa,Q96323,17,0.0861830223878459,1.0,4.6053237542599246e-05,9.0,1.0,directa,21714.0,atha_pseudohuerfanas,0
+800331,atha,no informativa,P17597,5,0.0,10937.5,0.5037072856221793,184821.5,10937.5,indirecta,21714.0,atha_pseudohuerfanas,0
+807292,atha,no informativa,Q9LZX6,3,0.0,10935.0,0.5035921525283228,185917.0,10935.0,indirecta,21714.0,atha_pseudohuerfanas,0
+813641,atha,no informativa,Q9ZUY6,15,0.0,10882.0,0.501151330938565,187317.5,10882.0,indirecta,21714.0,atha_pseudohuerfanas,2
+826545,atha,informativa,Q93YN9,10,0.1176470588235294,2.0,9.210647508519848e-05,13.0,2.0,directa,21714.0,atha_pseudohuerfanas,0
+857389,atha,no informativa,O23722,3,0.0,10877.0,0.500921064750852,184996.5,10877.0,indirecta,21714.0,atha_pseudohuerfanas,2
+923381,atha,informativa,Q7Y231,2,0.4770620726159657,1.0,4.6053237542599246e-05,3.5,1.0,directa,21714.0,atha_pseudohuerfanas,2
+933398,atha,informativa,Q9FVQ6,3,0.1123697131535877,4.5,0.0002072395689416,9.5,4.5,directa,21714.0,atha_pseudohuerfanas,2
+939471,atha,no informativa,Q84VW9,6,0.0,10860.5,0.500161186331399,186286.0,10860.5,indirecta,21714.0,atha_pseudohuerfanas,2
+941934,atha,no informativa,P23686,8,0.0,10967.0,0.5050658561296859,185930.0,10967.0,indirecta,21714.0,atha_pseudohuerfanas,2
+1146614,atha,no informativa,Q05609,13,0.0,11280.0,0.5194805194805194,191882.0,11280.0,indirecta,21714.0,atha_pseudohuerfanas,3
+1361387,atha,no informativa,Q94BU8,6,0.0,10878.0,0.5009671179883946,185388.5,10878.0,indirecta,21714.0,atha_pseudohuerfanas,2
+1503782,atha,informativa,Q7Y231,13,0.375,1.0,4.6053237542599246e-05,2.5,1.0,directa,21714.0,atha_pseudohuerfanas,2
+1571436,atha,no informativa,Q93ZG9,13,0.0,11284.5,0.5196877590494612,189561.0,11284.5,indirecta,21714.0,atha_pseudohuerfanas,2
+1718403,atha,informativa,Q96242,4,0.1111111111111111,1.5,6.907985631389887e-05,5.0,1.5,indirecta,21714.0,atha_pseudohuerfanas,2
+1859939,atha,no informativa,Q94BU8,41,0.0,11679.0,0.5378557612600166,195711.5,11679.0,indirecta,21714.0,atha_pseudohuerfanas,2
+2129937,atha,informativa,Q9FVQ6,2,0.0749131421023918,4.5,0.0002072395689416,9.5,4.5,directa,21714.0,atha_pseudohuerfanas,0
+2273128,atha,no informativa,Q9SJQ9,3,0.0,10867.0,0.500460532375426,184473.0,10867.0,indirecta,21714.0,atha_pseudohuerfanas,2
+2318687,atha,no informativa,Q93ZN9,6,0.0,10917.5,0.5027862208713273,186972.5,10917.5,indirecta,21714.0,atha_pseudohuerfanas,2
+2332379,atha,no informativa,A1A6H3,36,0.0,11221.0,0.5167633784655061,187201.0,11221.0,indirecta,21714.0,atha_pseudohuerfanas,2
+2342085,atha,informativa,Q96323,10,0.0861830223878459,1.0,4.6053237542599246e-05,2.0,1.0,directa,21714.0,atha_pseudohuerfanas,2
+2367516,atha,no informativa,O22822,9,0.0,10916.5,0.5027401676337847,186931.0,10916.5,indirecta,21714.0,atha_pseudohuerfanas,2
+2368004,atha,no informativa,Q96323,3,0.0,10904.5,0.5021875287832734,184911.5,10904.5,indirecta,21714.0,atha_pseudohuerfanas,2
+2369137,atha,no informativa,P93836,2,0.0,10921.5,0.5029704338214976,185577.0,10921.5,indirecta,21714.0,atha_pseudohuerfanas,2
+2377362,atha,informativa,O23346,3,0.2142857142857142,1.5,6.907985631389887e-05,6.0,1.5,directa,21714.0,atha_pseudohuerfanas,2
+2377516,atha,informativa,O23346,2,0.1428571428571428,1.5,6.907985631389887e-05,6.0,1.5,directa,21714.0,atha_pseudohuerfanas,2
+2377545,atha,informativa,Q93YN9,22,0.0588235294117647,2.0,9.210647508519848e-05,53.0,2.0,directa,21714.0,atha_pseudohuerfanas,3
+2377616,atha,no informativa,Q8L940,5,0.0,10864.5,0.5003453992815695,184372.5,10864.5,indirecta,21714.0,atha_pseudohuerfanas,3
+2379073,atha,no informativa,Q9C8G5,7,0.0,10871.0,0.5006447453255964,184394.0,10871.0,indirecta,21714.0,atha_pseudohuerfanas,3
+2381076,atha,informativa,Q9SSM7,16,0.3793103448275862,7.5,0.0003453992815694,15.0,7.5,directa,21714.0,atha_pseudohuerfanas,0
+2381400,atha,no informativa,Q9SCL7,8,0.0,11376.0,0.523901630284609,189480.5,11376.0,indirecta,21714.0,atha_pseudohuerfanas,3
+2382388,atha,no informativa,Q96329,6,0.0,10859.0,0.5000921064750852,184402.0,10859.0,indirecta,21714.0,atha_pseudohuerfanas,3
+2382636,atha,no informativa,Q9C6B3,4,0.0,10876.5,0.5008980381320807,184497.0,10876.5,indirecta,21714.0,atha_pseudohuerfanas,3
+2382652,atha,no informativa,Q9C8G5,4,0.0,10859.0,0.5000921064750852,184319.5,10859.0,indirecta,21714.0,atha_pseudohuerfanas,3
+2386501,atha,informativa,O23346,2,0.1428571428571428,1.5,6.907985631389887e-05,6.0,1.5,directa,21714.0,atha_pseudohuerfanas,2
+2386872,atha,informativa,O23346,2,0.0714285714285714,1.5,6.907985631389887e-05,6.0,1.5,directa,21714.0,atha_pseudohuerfanas,2
+2387773,atha,informativa,Q93YN9,24,0.1176470588235294,2.0,9.210647508519848e-05,19.0,2.0,directa,21714.0,atha_pseudohuerfanas,3
+2387953,atha,informativa,Q93YN9,77,0.1176470588235294,2.0,9.210647508519848e-05,53.0,2.0,directa,21714.0,atha_pseudohuerfanas,3
+2388808,atha,informativa,Q8W453,127,0.003227259213153,379.0,0.0174541770286451,7300.5,379.0,indirecta,21714.0,atha_pseudohuerfanas,3
+2389431,atha,informativa,Q9LFT6,3,0.0135957066189624,15.5,0.0007138251819102,44.0,15.5,directa,21714.0,atha_pseudohuerfanas,2
+2389622,atha,informativa,Q9LFT6,2,0.0271914132379248,10.5,0.0004835589941972,20.0,10.5,directa,21714.0,atha_pseudohuerfanas,2
+2391374,atha,informativa,Q93ZN9,8,0.0033707865168539,24.5,0.0011283043197936,302.5,24.5,indirecta,21714.0,atha_pseudohuerfanas,3
+2391701,atha,no informativa,Q8GXC6,4,0.0,10880.5,0.5010822510822511,185863.0,10880.5,indirecta,21714.0,atha_pseudohuerfanas,3
+2392214,atha,informativa,Q39128,4,0.000413029661908,73.0,0.0033618863406097,1387.5,73.0,indirecta,21714.0,atha_pseudohuerfanas,3
+2395295,atha,informativa,Q94JS0,99,0.0144338200708407,36.5,0.0016809431703048,742.0,36.5,indirecta,21714.0,atha_pseudohuerfanas,3
+2397626,atha,no informativa,Q9SWH5,132,0.0,11577.0,0.5331583310306715,193864.0,11577.0,indirecta,21714.0,atha_pseudohuerfanas,3
+2398426,atha,informativa,Q9LFG2,2,0.1666666666666666,1.0,4.6053237542599246e-05,6.5,1.0,directa,21714.0,atha_pseudohuerfanas,2
+2398427,atha,informativa,Q9LFG2,2,0.1666666666666666,1.0,4.6053237542599246e-05,6.5,1.0,directa,21714.0,atha_pseudohuerfanas,2
+19546,calb,no informativa,P29717,10,0.0,3025.0,0.5008278145695364,184693.0,3025.0,indirecta,6040.0,calb_pseudohuerfanas,2
+83211,calb,no informativa,Q8NJN3,4,0.0,3025.0,0.5008278145695364,184441.0,3025.0,indirecta,6040.0,calb_pseudohuerfanas,2
+91680,calb,no informativa,A0A1D8PJF9,358,0.0,3174.5,0.5255794701986755,196112.5,3174.5,indirecta,6040.0,calb_pseudohuerfanas,2
+92182,calb,no informativa,P29717,3,0.0,3021.0,0.5001655629139072,187465.0,3021.0,indirecta,6040.0,calb_pseudohuerfanas,2
+92592,calb,no informativa,A0A1D8PJF9,9,0.0,3074.0,0.5089403973509934,188930.0,3074.0,indirecta,6040.0,calb_pseudohuerfanas,3
+92652,calb,no informativa,Q92410,3,0.0,3029.5,0.5015728476821192,184744.0,3029.5,indirecta,6040.0,calb_pseudohuerfanas,2
+161110,calb,no informativa,Q9URB4,12,0.0,3072.5,0.5086920529801324,186678.0,3072.5,indirecta,6040.0,calb_pseudohuerfanas,2
+195427,calb,no informativa,P82610,12,0.0,3057.0,0.5061258278145695,189731.0,3057.0,indirecta,6040.0,calb_pseudohuerfanas,3
+244355,calb,no informativa,Q9HGT6,2,0.0,3024.5,0.5007450331125828,184680.0,3024.5,indirecta,6040.0,calb_pseudohuerfanas,2
+275643,calb,no informativa,Q5A7N4,7,0.0,3080.0,0.5099337748344371,189509.0,3080.0,indirecta,6040.0,calb_pseudohuerfanas,2
+279042,calb,no informativa,Q5A7N4,2,0.0,3033.0,0.5021523178807947,185326.5,3033.0,indirecta,6040.0,calb_pseudohuerfanas,3
+349359,calb,no informativa,P29717,23,0.0,3047.0,0.5044701986754967,185997.0,3047.0,indirecta,6040.0,calb_pseudohuerfanas,2
+414353,calb,no informativa,Q5A7N4,11,0.0,3063.5,0.5072019867549669,190163.5,3063.5,indirecta,6040.0,calb_pseudohuerfanas,3
+438039,calb,informativa,P29717,1309,0.0748807539931726,27.0,0.0044701986754966,2718.5,27.0,indirecta,6040.0,calb_pseudohuerfanas,2
+557350,calb,no informativa,P10613,5,0.0,3074.5,0.509023178807947,186997.5,3074.5,indirecta,6040.0,calb_pseudohuerfanas,2
+655569,calb,no informativa,A0A1D8PF45,4,0.0,3058.5,0.5063741721854305,186617.0,3058.5,indirecta,6040.0,calb_pseudohuerfanas,3
+918213,calb,no informativa,P46598,6,0.0,3087.5,0.5111754966887417,187925.0,3087.5,indirecta,6040.0,calb_pseudohuerfanas,2
+924218,calb,informativa,P53704,42,0.0077160201973938,14.0,0.0023178807947019,795.0,14.0,indirecta,6040.0,calb_pseudohuerfanas,2
+1227391,calb,no informativa,P30418,3,0.0,3029.0,0.5014900662251656,184822.5,3029.0,indirecta,6040.0,calb_pseudohuerfanas,0
+1362991,calb,no informativa,Q92410,21,0.0,3034.5,0.5024006622516556,184899.5,3034.5,indirecta,6040.0,calb_pseudohuerfanas,3
+1402249,calb,informativa,P53704,29,0.0042658927517768,14.0,0.0023178807947019,843.0,14.0,indirecta,6040.0,calb_pseudohuerfanas,2
+1573337,calb,no informativa,P46598,9,0.0,3090.0,0.5115894039735099,188490.5,3090.0,indirecta,6040.0,calb_pseudohuerfanas,2
+1620550,calb,no informativa,P82610,6,0.0,3029.0,0.5014900662251656,184620.5,3029.0,indirecta,6040.0,calb_pseudohuerfanas,2
+1620866,calb,no informativa,Q5AI14,1167,0.0,3338.0,0.5526490066225166,210304.0,3338.0,indirecta,6040.0,calb_pseudohuerfanas,2
+1750574,calb,informativa,P0C8L0,59,0.0661065600177442,4.0,0.0006622516556291,230.0,4.0,indirecta,6040.0,calb_pseudohuerfanas,2
+2279062,calb,no informativa,Q59TS4,7,0.0,3027.0,0.501158940397351,184539.0,3027.0,indirecta,6040.0,calb_pseudohuerfanas,2
+2367516,calb,no informativa,P82610,9,0.0,3036.5,0.5027317880794702,186931.0,3036.5,indirecta,6040.0,calb_pseudohuerfanas,2
+2377616,calb,informativa,Q5A3V6,5,0.25,1.0,0.0001655629139072,4.5,1.0,indirecta,6040.0,calb_pseudohuerfanas,3
+2383297,calb,no informativa,Q59UP8,2,0.0,3020.5,0.5000827814569536,184583.5,3020.5,indirecta,6040.0,calb_pseudohuerfanas,3
+2384937,calb,no informativa,Q92410,31,0.0,3034.0,0.502317880794702,184980.0,3034.0,indirecta,6040.0,calb_pseudohuerfanas,3
+2389141,calb,informativa,P53704,5,0.0112983670833738,2.0,0.0003311258278145,55.0,2.0,indirecta,6040.0,calb_pseudohuerfanas,1
+2389641,calb,no informativa,P30418,32,0.0,3099.5,0.5131622516556291,188034.5,3099.5,indirecta,6040.0,calb_pseudohuerfanas,3
+2646,cele,no informativa,G5EF15,5,0.0,13947.0,0.5085505925250684,184970.0,13947.0,indirecta,27425.0,cele_pseudohuerfanas,2
+36102,cele,no informativa,P52011,15,0.0,13761.5,0.5017866909753874,184822.5,13761.5,indirecta,27425.0,cele_pseudohuerfanas,2
+73040,cele,no informativa,Q9XUB2,21,0.0,13992.5,0.5102096627164996,187601.0,13992.5,indirecta,27425.0,cele_pseudohuerfanas,3
+73292,cele,no informativa,Q9XUB2,3,0.0,13988.0,0.510045578851413,186283.0,13988.0,indirecta,27425.0,cele_pseudohuerfanas,2
+83211,cele,no informativa,Q17427,4,0.0,13719.0,0.5002370100273473,184441.0,13719.0,indirecta,27425.0,cele_pseudohuerfanas,2
+90805,cele,no informativa,Q18014,2,0.0,13717.0,0.5001640838650866,184347.5,13717.0,indirecta,27425.0,cele_pseudohuerfanas,2
+117208,cele,no informativa,G5EF15,3,0.0,13966.0,0.5092433910665451,184958.0,13966.0,indirecta,27425.0,cele_pseudohuerfanas,3
+119853,cele,no informativa,Q9XUB2,2,0.0,13729.0,0.5006016408386509,184650.0,13729.0,indirecta,27425.0,cele_pseudohuerfanas,2
+124856,cele,no informativa,Q9XUB2,24,0.0,13730.0,0.5006381039197813,184669.5,13730.0,indirecta,27425.0,cele_pseudohuerfanas,1
+129615,cele,no informativa,Q17339,3,0.0,13764.5,0.5018960802187785,185041.5,13764.5,indirecta,27425.0,cele_pseudohuerfanas,2
+132459,cele,no informativa,Q9U2M7,11,0.0,13850.5,0.5050319051959891,185568.0,13850.5,indirecta,27425.0,cele_pseudohuerfanas,3
+137196,cele,no informativa,Q9XUB2,3,0.0,13993.0,0.5102278942570647,186550.5,13993.0,indirecta,27425.0,cele_pseudohuerfanas,3
+165274,cele,no informativa,G5EF15,3,0.0,13781.5,0.5025159525979945,185281.0,13781.5,indirecta,27425.0,cele_pseudohuerfanas,2
+166887,cele,no informativa,Q9XUB2,3,0.0,13734.5,0.5008021877848678,184766.0,13734.5,indirecta,27425.0,cele_pseudohuerfanas,1
+180954,cele,informativa,Q9XUB2,841,0.0,15912.0,0.5802005469462169,216483.5,15912.0,indirecta,27425.0,cele_pseudohuerfanas,2
+183549,cele,no informativa,Q9XUB2,8,0.0,14236.5,0.5191066545123063,187201.0,14236.5,indirecta,27425.0,cele_pseudohuerfanas,3
+188754,cele,informativa,G5EF15,2,8.719094618168197e-05,10.5,0.0003828623518687,66.5,10.5,directa,27425.0,cele_pseudohuerfanas,1
+197111,cele,no informativa,Q9XUB2,11,0.0,13782.5,0.5025524156791249,185455.0,13782.5,indirecta,27425.0,cele_pseudohuerfanas,0
+209743,cele,no informativa,Q17339,2,0.0,13992.5,0.5102096627164996,186503.5,13992.5,indirecta,27425.0,cele_pseudohuerfanas,2
+216864,cele,no informativa,Q9XUB2,2,0.0,13788.0,0.5027529626253419,186190.0,13788.0,indirecta,27425.0,cele_pseudohuerfanas,0
+220633,cele,no informativa,Q9XUB2,4,0.0,13808.0,0.503482224247949,186523.0,13808.0,indirecta,27425.0,cele_pseudohuerfanas,3
+220728,cele,no informativa,G5EF15,23,0.0,13915.0,0.507383773928897,188114.0,13915.0,indirecta,27425.0,cele_pseudohuerfanas,2
+222929,cele,no informativa,Q9XUB2,5,0.0,13989.5,0.5101002734731085,186300.5,13989.5,indirecta,27425.0,cele_pseudohuerfanas,1
+224683,cele,no informativa,Q9XUB2,2,0.0,13755.5,0.5015679124886053,184903.5,13755.5,indirecta,27425.0,cele_pseudohuerfanas,1
+227887,cele,no informativa,G5EF15,2,0.0,13787.5,0.5027347310847766,186194.0,13787.5,indirecta,27425.0,cele_pseudohuerfanas,1
+236517,cele,no informativa,G5EF15,2,0.0,13801.5,0.5032452142206016,186520.5,13801.5,indirecta,27425.0,cele_pseudohuerfanas,2
+236721,cele,no informativa,Q9XUB2,3,0.0,13830.0,0.5042844120328168,186829.0,13830.0,indirecta,27425.0,cele_pseudohuerfanas,0
+239856,cele,no informativa,Q9XUB2,4,0.0,13859.0,0.5053418413855971,187776.0,13859.0,indirecta,27425.0,cele_pseudohuerfanas,3
+240545,cele,no informativa,Q9XUB2,3,0.0,14021.5,0.5112670920692799,186944.0,14021.5,indirecta,27425.0,cele_pseudohuerfanas,3
+248160,cele,no informativa,G5EF15,2,0.0,13828.5,0.5042297174111212,186798.5,13828.5,indirecta,27425.0,cele_pseudohuerfanas,0
+248320,cele,no informativa,G5EF15,3,0.0,14053.5,0.5124339106654512,188106.0,14053.5,indirecta,27425.0,cele_pseudohuerfanas,1
+248855,cele,no informativa,Q9XUB2,3,0.0,13802.5,0.503281677301732,186565.5,13802.5,indirecta,27425.0,cele_pseudohuerfanas,3
+250436,cele,no informativa,G5EF15,3,0.0,13734.0,0.5007839562443026,184620.0,13734.0,indirecta,27425.0,cele_pseudohuerfanas,0
+252389,cele,no informativa,Q9XUB2,3,0.0,13800.0,0.5031905195989061,185649.5,13800.0,indirecta,27425.0,cele_pseudohuerfanas,1
+259022,cele,no informativa,Q9XUB2,4,0.0,13832.0,0.5043573381950774,186013.5,13832.0,indirecta,27425.0,cele_pseudohuerfanas,2
+259952,cele,no informativa,G5EF15,2,0.0,14006.5,0.5107201458523245,186583.0,14006.5,indirecta,27425.0,cele_pseudohuerfanas,1
+270069,cele,no informativa,G5EF15,5,0.0,14093.5,0.5138924339106654,187940.0,14093.5,indirecta,27425.0,cele_pseudohuerfanas,3
+270414,cele,no informativa,G5EF15,2,0.0,13797.0,0.503081130355515,185577.0,13797.0,indirecta,27425.0,cele_pseudohuerfanas,0
+271168,cele,no informativa,Q9XUB2,17,0.0,14258.0,0.5198906107566089,189723.5,14258.0,indirecta,27425.0,cele_pseudohuerfanas,3
+278234,cele,no informativa,G5EF15,5,0.0,14023.5,0.5113400182315405,187020.5,14023.5,indirecta,27425.0,cele_pseudohuerfanas,0
+282011,cele,informativa,G5EF15,4,3.792806158903165e-05,17.5,0.0006381039197812,170.5,17.5,indirecta,27425.0,cele_pseudohuerfanas,3
+284728,cele,no informativa,G5EF15,5,0.0,13841.0,0.5046855059252506,186282.5,13841.0,indirecta,27425.0,cele_pseudohuerfanas,0
+287107,cele,no informativa,Q9XUB2,2,0.0,13729.0,0.5006016408386509,184660.5,13729.0,indirecta,27425.0,cele_pseudohuerfanas,3
+290256,cele,no informativa,Q22993,3,0.0,13775.0,0.5022789425706472,185238.5,13775.0,indirecta,27425.0,cele_pseudohuerfanas,2
+291096,cele,no informativa,Q17339,2,0.0,13737.5,0.5009115770282588,184620.0,13737.5,indirecta,27425.0,cele_pseudohuerfanas,1
+300886,cele,no informativa,G5EF15,3,0.0,13741.0,0.5010391978122152,184657.5,13741.0,indirecta,27425.0,cele_pseudohuerfanas,2
+301980,cele,no informativa,Q9XUB2,2,0.0,13933.5,0.5080583409298086,184725.0,13933.5,indirecta,27425.0,cele_pseudohuerfanas,0
+304104,cele,no informativa,Q9XUB2,5,0.0,13716.5,0.5001458523245215,184373.0,13716.5,indirecta,27425.0,cele_pseudohuerfanas,3
+305272,cele,no informativa,Q9XUB2,6,0.0,14291.0,0.5210938924339107,188793.5,14291.0,indirecta,27425.0,cele_pseudohuerfanas,2
+309726,cele,no informativa,Q9XUB2,6,0.0,13983.5,0.5098814949863263,185463.0,13983.5,indirecta,27425.0,cele_pseudohuerfanas,1
+311802,cele,no informativa,Q9XUB2,2,0.0,13975.5,0.5095897903372835,185326.5,13975.5,indirecta,27425.0,cele_pseudohuerfanas,3
+315179,cele,no informativa,Q9XUB2,7,0.0,13839.5,0.5046308113035551,187093.0,13839.5,indirecta,27425.0,cele_pseudohuerfanas,2
+326077,cele,no informativa,Q9XUB2,10,0.0,13833.0,0.5043938012762078,186676.0,13833.0,indirecta,27425.0,cele_pseudohuerfanas,2
+326919,cele,no informativa,Q9XUB2,3,0.0,14090.5,0.5137830446672744,187017.5,14090.5,indirecta,27425.0,cele_pseudohuerfanas,3
+344791,cele,no informativa,G5EF15,4,0.0,14005.5,0.5106836827711941,186216.0,14005.5,indirecta,27425.0,cele_pseudohuerfanas,1
+345803,cele,informativa,Q17339,9,0.0004685039891657,28.0,0.0010209662716499,308.0,28.0,directa,27425.0,cele_pseudohuerfanas,2
+346537,cele,no informativa,Q9XUB2,58,0.0,14764.5,0.538359161349134,194158.0,14764.5,indirecta,27425.0,cele_pseudohuerfanas,3
+348962,cele,no informativa,G5EF15,2,0.0,13728.5,0.5005834092980856,184662.5,13728.5,indirecta,27425.0,cele_pseudohuerfanas,3
+349342,cele,no informativa,Q9XUB2,4,0.0,13963.0,0.509134001823154,184970.5,13963.0,indirecta,27425.0,cele_pseudohuerfanas,2
+359462,cele,no informativa,Q17339,2,0.0,13798.0,0.5031175934366454,184723.5,13798.0,indirecta,27425.0,cele_pseudohuerfanas,1
+361577,cele,no informativa,G5EF15,2,0.0,13977.5,0.5096627164995442,186142.5,13977.5,indirecta,27425.0,cele_pseudohuerfanas,0
+361719,cele,no informativa,Q9XUB2,5,0.0,13811.0,0.5035916134913401,185747.5,13811.0,indirecta,27425.0,cele_pseudohuerfanas,2
+365428,cele,informativa,Q09596,10,5.203929403318067e-05,72.5,0.0026435733819507,1148.0,72.5,indirecta,27425.0,cele_pseudohuerfanas,2
+366165,cele,no informativa,G5EF15,4,0.0,13807.5,0.5034639927073837,186522.5,13807.5,indirecta,27425.0,cele_pseudohuerfanas,2
+367863,cele,no informativa,Q9XUB2,10,0.0,14285.0,0.5208751139471285,188074.0,14285.0,indirecta,27425.0,cele_pseudohuerfanas,3
+368298,cele,no informativa,Q9XUB2,8,0.0,14383.5,0.5244667274384686,189322.5,14383.5,indirecta,27425.0,cele_pseudohuerfanas,1
+368381,cele,no informativa,Q9XUB2,6,0.0,14028.5,0.5115223336371924,186943.0,14028.5,indirecta,27425.0,cele_pseudohuerfanas,3
+372114,cele,no informativa,Q17339,2,0.0,13980.0,0.5097538742023701,186189.0,13980.0,indirecta,27425.0,cele_pseudohuerfanas,0
+375851,cele,no informativa,Q9XUB2,3,0.0,13935.5,0.5081312670920692,184743.0,13935.5,indirecta,27425.0,cele_pseudohuerfanas,3
+386556,cele,no informativa,Q9XUB2,2,0.0,13713.0,0.5000182315405651,184277.5,13713.0,indirecta,27425.0,cele_pseudohuerfanas,2
+387028,cele,no informativa,G5EF15,4,0.0,14045.0,0.5121239744758432,187153.0,14045.0,indirecta,27425.0,cele_pseudohuerfanas,2
+388671,cele,no informativa,Q9XUB2,2,0.0,13737.5,0.5009115770282588,184620.0,13737.5,indirecta,27425.0,cele_pseudohuerfanas,1
+388781,cele,no informativa,Q9XUB2,9,0.0,14177.5,0.5169553327256153,189922.0,14177.5,indirecta,27425.0,cele_pseudohuerfanas,2
+389573,cele,no informativa,Q17339,2,0.0,13934.0,0.5080765724703737,184712.5,13934.0,indirecta,27425.0,cele_pseudohuerfanas,0
+389742,cele,no informativa,Q9XUB2,6,0.0,14121.5,0.5149134001823154,188337.0,14121.5,indirecta,27425.0,cele_pseudohuerfanas,1
+393268,cele,no informativa,G5EF15,3,0.0,13774.5,0.5022607110300821,185191.5,13774.5,indirecta,27425.0,cele_pseudohuerfanas,3
+396872,cele,no informativa,Q17339,3,0.0,13978.0,0.5096809480401094,185388.5,13978.0,indirecta,27425.0,cele_pseudohuerfanas,0
+400272,cele,no informativa,Q9XUB2,2,0.0,13992.5,0.5102096627164996,186503.5,13992.5,indirecta,27425.0,cele_pseudohuerfanas,1
+401384,cele,no informativa,Q9XUB2,14,0.0,14077.0,0.5132907930720146,188217.5,14077.0,indirecta,27425.0,cele_pseudohuerfanas,0
+408075,cele,no informativa,Q9XUB2,3,0.0,13981.5,0.5098085688240657,186245.5,13981.5,indirecta,27425.0,cele_pseudohuerfanas,1
+410635,cele,no informativa,Q9XUB2,2,0.0,13723.0,0.5003828623518687,184389.5,13723.0,indirecta,27425.0,cele_pseudohuerfanas,3
+417292,cele,informativa,G5EF15,9,8.719094618168197e-05,134.5,0.0049042844120328,1776.5,134.5,directa,27425.0,cele_pseudohuerfanas,3
+429677,cele,informativa,G5EF15,3,3.6620197396306425e-05,23.5,0.0008568824065633,220.5,23.5,directa,27425.0,cele_pseudohuerfanas,1
+431951,cele,no informativa,Q9XUB2,5,0.0,13730.5,0.5006563354603464,184693.5,13730.5,indirecta,27425.0,cele_pseudohuerfanas,0
+433155,cele,no informativa,G5EF15,5,0.0,14037.0,0.5118322698268004,187215.5,14037.0,indirecta,27425.0,cele_pseudohuerfanas,3
+433803,cele,no informativa,G5EF15,7,0.0,13814.5,0.5037192342752963,186610.0,13814.5,indirecta,27425.0,cele_pseudohuerfanas,3
+434806,cele,no informativa,Q9XUB2,3,0.0,13772.0,0.5021695533272561,185295.0,13772.0,indirecta,27425.0,cele_pseudohuerfanas,3
+436599,cele,no informativa,Q9XUB2,3,0.0,13771.0,0.5021330902461258,185311.5,13771.0,indirecta,27425.0,cele_pseudohuerfanas,3
+437998,cele,informativa,Q9GYI0,9,0.0001699389852982,50.0,0.0018231540565177,457.5,50.0,indirecta,27425.0,cele_pseudohuerfanas,2
+447742,cele,no informativa,P42573,9,0.0,14021.0,0.5112488605287147,186668.5,14021.0,indirecta,27425.0,cele_pseudohuerfanas,0
+450804,cele,no informativa,Q9XUB2,6,0.0,14034.0,0.5117228805834093,186405.0,14034.0,indirecta,27425.0,cele_pseudohuerfanas,2
+742627,cele,no informativa,Q9XUB2,4,0.0,13882.0,0.5061804922515952,187586.5,13882.0,indirecta,27425.0,cele_pseudohuerfanas,2
+960377,cele,no informativa,Q9XUB2,8,0.0,13893.5,0.5065998176845944,187280.5,13893.5,indirecta,27425.0,cele_pseudohuerfanas,3
+963187,cele,informativa,Q9N384,1366,0.0138748181628444,43.5,0.0015861440291704,3169.0,43.5,indirecta,27425.0,cele_pseudohuerfanas,3
+1017270,cele,no informativa,Q9XUB2,4,0.0,14200.0,0.5177757520510483,186629.0,14200.0,indirecta,27425.0,cele_pseudohuerfanas,3
+1018712,cele,no informativa,G5EF15,2,0.0,13952.0,0.5087329079307201,184966.0,13952.0,indirecta,27425.0,cele_pseudohuerfanas,2
+1019650,cele,no informativa,Q9XUB2,10,0.0,13840.0,0.5046490428441204,186202.0,13840.0,indirecta,27425.0,cele_pseudohuerfanas,2
+1021304,cele,no informativa,G5EF15,2,0.0,13934.5,0.5080948040109389,184708.5,13934.5,indirecta,27425.0,cele_pseudohuerfanas,3
+1023526,cele,no informativa,G5EF15,4,0.0,14024.5,0.5113764813126709,186102.0,14024.5,indirecta,27425.0,cele_pseudohuerfanas,3
+1025302,cele,no informativa,G5EF15,4,0.0,13818.5,0.5038650865998177,186583.5,13818.5,indirecta,27425.0,cele_pseudohuerfanas,2
+1025601,cele,no informativa,Q9XUB2,7,0.0,14052.0,0.5123792160437557,187337.0,14052.0,indirecta,27425.0,cele_pseudohuerfanas,2
+1025645,cele,no informativa,Q9XUB2,2,0.0,13758.5,0.5016773017319963,184972.0,13758.5,indirecta,27425.0,cele_pseudohuerfanas,2
+1026332,cele,no informativa,Q9XUB2,2,0.0,13975.5,0.5095897903372835,185326.5,13975.5,indirecta,27425.0,cele_pseudohuerfanas,2
+1032188,cele,no informativa,G5EF15,4,0.0,13993.0,0.5102278942570647,185582.5,13993.0,indirecta,27425.0,cele_pseudohuerfanas,2
+1282450,cele,informativa,Q9N5Z3,1262,0.0006976598896783,589.5,0.0214949863263445,14152.5,589.5,indirecta,27425.0,cele_pseudohuerfanas,2
+1292507,cele,no informativa,G5EF15,2,0.0,13714.5,0.5000729261622607,184314.5,13714.5,indirecta,27425.0,cele_pseudohuerfanas,3
+1473968,cele,no informativa,Q10905,2,0.0,13770.5,0.5021148587055606,185264.5,13770.5,indirecta,27425.0,cele_pseudohuerfanas,0
+1501753,cele,no informativa,Q9XUB2,2,0.0,13818.5,0.5038650865998177,185614.0,13818.5,indirecta,27425.0,cele_pseudohuerfanas,3
+2195369,cele,no informativa,Q9XUB2,13,0.0,13913.5,0.5073290793072015,186694.0,13913.5,indirecta,27425.0,cele_pseudohuerfanas,2
+2273128,cele,no informativa,P52011,3,0.0,13727.0,0.5005287146763902,184473.0,13727.0,indirecta,27425.0,cele_pseudohuerfanas,2
+2374632,cele,no informativa,P34712,3,0.0,13726.5,0.500510483135825,184532.5,13726.5,indirecta,27425.0,cele_pseudohuerfanas,2
+2374883,cele,no informativa,Q17427,7,0.0,13715.5,0.5001093892433911,184401.5,13715.5,indirecta,27425.0,cele_pseudohuerfanas,2
+2378148,cele,no informativa,Q9GZC8,15,0.0,13946.0,0.508514129443938,187894.5,13946.0,indirecta,27425.0,cele_pseudohuerfanas,3
+2386902,cele,no informativa,P34413,2,0.0,13721.0,0.5003099361896081,184394.5,13721.0,indirecta,27425.0,cele_pseudohuerfanas,2
+2391524,cele,no informativa,Q9XWJ1,24,0.0,13851.0,0.5050501367365542,187241.0,13851.0,indirecta,27425.0,cele_pseudohuerfanas,2
+91350,ddis,no informativa,P08799,4,0.0,6561.0,0.5012988997555012,184694.5,6561.0,indirecta,13088.0,ddis_pseudohuerfanas,0
+91358,ddis,no informativa,P08799,16,0.0,6580.5,0.5027888141809291,187417.5,6580.5,indirecta,13088.0,ddis_pseudohuerfanas,0
+91680,ddis,no informativa,O96759,358,0.0,7056.5,0.5391580073349633,203415.5,7056.5,indirecta,13088.0,ddis_pseudohuerfanas,2
+99805,ddis,no informativa,Q9U1M8,26,0.0,6554.0,0.5007640586797066,185328.5,6554.0,indirecta,13088.0,ddis_pseudohuerfanas,3
+132459,ddis,no informativa,P42527,11,0.0,6585.0,0.5031326405867971,185568.0,6585.0,indirecta,13088.0,ddis_pseudohuerfanas,3
+450804,ddis,no informativa,P08799,6,0.0,6640.5,0.5073731662591687,186405.0,6640.5,indirecta,13088.0,ddis_pseudohuerfanas,2
+775225,ddis,no informativa,Q6XHB2,5,0.0,6547.5,0.5002674205378973,186234.5,6547.5,indirecta,13088.0,ddis_pseudohuerfanas,0
+970988,ddis,no informativa,P20425,2,0.0,6545.0,0.5000764058679706,184271.0,6545.0,indirecta,13088.0,ddis_pseudohuerfanas,2
+1421078,ddis,no informativa,P42530,18,0.0,6630.0,0.5065709046454768,187009.5,6630.0,indirecta,13088.0,ddis_pseudohuerfanas,2
+1594529,ddis,no informativa,Q54S83,4,0.0,6698.5,0.511804706601467,190153.0,6698.5,indirecta,13088.0,ddis_pseudohuerfanas,2
+1663411,ddis,no informativa,P42530,61,0.0,6567.5,0.5017955378973105,185376.5,6567.5,indirecta,13088.0,ddis_pseudohuerfanas,2
+1859939,ddis,informativa,P42527,41,0.0023142857142857,47.5,0.0036292787286063,2084.5,47.5,indirecta,13088.0,ddis_pseudohuerfanas,2
+2381139,ddis,informativa,P08799,13,0.0075512057177528,23.0,0.0017573349633251,230.5,23.0,directa,13088.0,ddis_pseudohuerfanas,3
+2381347,ddis,informativa,P08799,3,0.0060053115362404,7.0,0.0005348410757946,109.5,7.0,directa,13088.0,ddis_pseudohuerfanas,3
+2381965,ddis,informativa,Q6TMK4,1477,0.0126582278481012,320.0,0.0244498777506112,15472.0,320.0,indirecta,13088.0,ddis_pseudohuerfanas,3
+73315,dmel,no informativa,Q7K4Y6,2,0.0,5354.0,0.5006077606358111,184370.5,5354.0,indirecta,10695.0,dmel_pseudohuerfanas,3
+83283,dmel,informativa,Q24451,6,0.1886866091863306,1.0,9.350163627863488e-05,1.0,1.0,directa,10695.0,dmel_pseudohuerfanas,2
+83361,dmel,no informativa,Q24451,6,0.0,5397.5,0.5046750818139317,186369.5,5397.5,indirecta,10695.0,dmel_pseudohuerfanas,2
+91881,dmel,no informativa,Q95TS5,5,0.0,5356.0,0.5007947639083684,184433.0,5356.0,indirecta,10695.0,dmel_pseudohuerfanas,3
+91963,dmel,no informativa,Q10714,3,0.0,5418.5,0.5066386161757831,186351.0,5418.5,indirecta,10695.0,dmel_pseudohuerfanas,2
+92254,dmel,no informativa,Q24451,10,0.0,5492.0,0.5135109864422628,188097.0,5492.0,indirecta,10695.0,dmel_pseudohuerfanas,2
+92470,dmel,no informativa,Q9W138,357,0.0,6002.0,0.5611968209443665,203388.5,6002.0,indirecta,10695.0,dmel_pseudohuerfanas,2
+92783,dmel,no informativa,Q7K4Y6,3,0.0,5361.0,0.5012622720897616,184746.5,5361.0,indirecta,10695.0,dmel_pseudohuerfanas,0
+174416,dmel,informativa,Q7K4Y6,14,0.0082644628099173,22.5,0.0021037868162692,467.0,22.5,indirecta,10695.0,dmel_pseudohuerfanas,3
+378990,dmel,no informativa,Q7K4Y6,2,0.0,5411.5,0.5059841047218326,186171.0,5411.5,indirecta,10695.0,dmel_pseudohuerfanas,0
+382863,dmel,informativa,Q10714,10,0.0256410256410256,5.5,0.0005142589995324,182.0,5.5,indirecta,10695.0,dmel_pseudohuerfanas,2
+431047,dmel,no informativa,Q7K4Y6,7,0.0,5393.5,0.5043010752688172,185164.0,5393.5,indirecta,10695.0,dmel_pseudohuerfanas,0
+484678,dmel,no informativa,P54623,5,0.0,5445.0,0.5091164095371669,187167.0,5445.0,indirecta,10695.0,dmel_pseudohuerfanas,2
+736192,dmel,no informativa,Q24451,2,0.0,5365.5,0.5016830294530155,184371.5,5365.5,indirecta,10695.0,dmel_pseudohuerfanas,2
+764151,dmel,no informativa,Q7K4Y6,356,0.0,6001.0,0.5611033193080879,203344.5,6001.0,indirecta,10695.0,dmel_pseudohuerfanas,0
+795139,dmel,no informativa,Q9VUL1,3,0.0,5369.0,0.5020102851799907,184741.0,5369.0,indirecta,10695.0,dmel_pseudohuerfanas,2
+943800,dmel,no informativa,Q9VIH7,4,0.0,5492.5,0.5135577372604021,187633.5,5492.5,indirecta,10695.0,dmel_pseudohuerfanas,2
+1090003,dmel,no informativa,Q94521,3,0.0,5427.0,0.5074333800841515,186569.5,5427.0,indirecta,10695.0,dmel_pseudohuerfanas,0
+1336428,dmel,no informativa,Q7K4Y6,8,0.0,5477.0,0.5121084618980832,188085.0,5477.0,indirecta,10695.0,dmel_pseudohuerfanas,2
+1506122,dmel,no informativa,Q7K4Y6,2,0.0,5356.0,0.5007947639083684,184353.0,5356.0,indirecta,10695.0,dmel_pseudohuerfanas,0
+1517256,dmel,no informativa,Q9VPE2,3,0.0,5370.0,0.5021037868162693,184671.5,5370.0,indirecta,10695.0,dmel_pseudohuerfanas,2
+1565983,dmel,no informativa,Q24451,66,0.0,5388.5,0.503833567087424,185420.5,5388.5,indirecta,10695.0,dmel_pseudohuerfanas,0
+1651691,dmel,no informativa,Q24451,33,0.0,5416.0,0.5064048620850865,187012.0,5416.0,indirecta,10695.0,dmel_pseudohuerfanas,3
+1659827,dmel,informativa,Q9VBZ9,77,0.0315628815628815,10.0,0.0009350163627863,479.5,10.0,indirecta,10695.0,dmel_pseudohuerfanas,2
+2298872,dmel,informativa,Q10714,2,0.0512820512820512,3.5,0.0003272557269752,20.0,3.5,directa,10695.0,dmel_pseudohuerfanas,2
+2299100,dmel,informativa,Q10714,2,0.0512820512820512,3.5,0.0003272557269752,20.0,3.5,directa,10695.0,dmel_pseudohuerfanas,2
+2363214,dmel,no informativa,Q9VU77,2,0.0,5375.5,0.5026180458158018,184938.0,5375.5,indirecta,10695.0,dmel_pseudohuerfanas,0
+2367516,dmel,no informativa,Q9VUL1,9,0.0,5410.0,0.5058438522674147,186931.0,5410.0,indirecta,10695.0,dmel_pseudohuerfanas,2
+2370009,dmel,no informativa,Q9W197,4,0.0,5356.0,0.5007947639083684,184455.0,5356.0,indirecta,10695.0,dmel_pseudohuerfanas,2
+2381400,dmel,no informativa,P16568,8,0.0,5589.5,0.5226273959794296,189480.5,5589.5,indirecta,10695.0,dmel_pseudohuerfanas,3
+2381965,dmel,informativa,P07140,1477,0.0136388997954165,599.0,0.0560074801309022,14878.5,599.0,directa,10695.0,dmel_pseudohuerfanas,3
+2383297,dmel,no informativa,Q7K4Y6,2,0.0,5359.5,0.5011220196353436,184583.5,5359.5,indirecta,10695.0,dmel_pseudohuerfanas,3
+2385163,dmel,informativa,Q24451,7,0.1886866091863306,1.0,9.350163627863488e-05,6.0,1.0,directa,10695.0,dmel_pseudohuerfanas,2
+2387950,dmel,no informativa,Q24451,5,0.0,5352.0,0.5004207573632539,184398.0,5352.0,indirecta,10695.0,dmel_pseudohuerfanas,2
+2388100,dmel,informativa,Q9VRD9,2,0.0067432278666862,2.0,0.0001870032725572,73.0,2.0,indirecta,10695.0,dmel_pseudohuerfanas,3
+2389430,dmel,no informativa,Q24451,5,0.0,5380.5,0.5030855539971949,184983.5,5380.5,indirecta,10695.0,dmel_pseudohuerfanas,3
+2393822,dmel,informativa,Q24451,2,0.1886866091863306,1.0,9.350163627863488e-05,1.0,1.0,directa,10695.0,dmel_pseudohuerfanas,2
+2395297,dmel,informativa,Q9VXK7,94,0.1203225806451613,6.5,0.0006077606358111,265.0,6.5,directa,10695.0,dmel_pseudohuerfanas,3
+263,ecol,no informativa,P0A927,5,0.0,2281.5,0.5033090668431502,186172.0,2281.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+27480,ecol,no informativa,P0AEK4,5,0.0,2277.5,0.5024266490183101,184743.5,2277.5,indirecta,4533.0,ecol_pseudohuerfanas,0
+33561,ecol,no informativa,P00722,33,0.0,2280.0,0.5029781601588352,187018.0,2280.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+36514,ecol,no informativa,P00811,10,0.0,2271.0,0.500992720052945,186968.0,2271.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+39159,ecol,informativa,P0AEX9,57,0.0074626865671641,10.0,0.0022060445621001,583.5,10.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+39285,ecol,informativa,P02925,156,0.0483091787439613,15.0,0.0033090668431502,554.0,15.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+42271,ecol,no informativa,P21889,2,0.0,2269.0,0.500551511140525,184269.5,2269.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+42284,ecol,no informativa,P0AGJ9,7,0.0,2268.5,0.50044120891242,185035.5,2268.5,indirecta,4533.0,ecol_pseudohuerfanas,1
+72912,ecol,no informativa,P00811,359,0.0,2416.5,0.5330906684315023,196092.5,2416.5,indirecta,4533.0,ecol_pseudohuerfanas,1
+73126,ecol,no informativa,P00811,4,0.0,2327.0,0.5133465696007059,186194.0,2327.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+73411,ecol,no informativa,P0CE47,4,0.0,2268.5,0.50044120891242,184876.0,2268.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+73416,ecol,informativa,P0ABQ4,2,0.0298690671031096,1.0,0.00022060445621,13.5,1.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+76412,ecol,no informativa,P37001,13,0.0,2285.5,0.5041914846679902,187223.5,2285.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+80314,ecol,no informativa,P0A6C1,4,0.0,2267.0,0.500110302228105,184969.0,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+83506,ecol,no informativa,P28307,2,0.0,2268.0,0.500330906684315,184585.0,2268.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+87550,ecol,no informativa,P00811,4,0.0,2278.0,0.5025369512464152,185561.0,2278.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+91603,ecol,no informativa,P0ACU2,2,0.0,2267.0,0.500110302228105,187109.5,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+91667,ecol,no informativa,P05804,13,0.0,2288.0,0.5047429958085153,186048.0,2288.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+92303,ecol,no informativa,P0ACB2,6,0.0,2287.0,0.5045223913523054,184604.0,2287.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+92457,ecol,no informativa,P04825,839,0.0,2649.5,0.5844915067284359,215064.5,2649.5,indirecta,4533.0,ecol_pseudohuerfanas,0
+92552,ecol,no informativa,P08200,4,0.0,2268.5,0.50044120891242,185263.0,2268.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+92652,ecol,no informativa,P13482,3,0.0,2267.0,0.500110302228105,184744.0,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+92705,ecol,no informativa,P0A8P1,152,0.0,2426.0,0.5351864107654974,196575.0,2426.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+103370,ecol,no informativa,P05042,42,0.0,2356.5,0.5198544010589013,186224.0,2356.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+116593,ecol,no informativa,P0AEY8,10,0.0,2285.5,0.5041914846679902,187441.5,2285.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+135581,ecol,no informativa,P10903,62,0.0,2287.5,0.5046326935804103,185396.0,2287.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+144673,ecol,no informativa,P00811,2,0.0,2267.5,0.50022060445621,184454.0,2267.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+199379,ecol,no informativa,P00811,4,0.0,2274.5,0.5017648356496801,186031.0,2274.5,indirecta,4533.0,ecol_pseudohuerfanas,0
+211858,ecol,no informativa,P21645,2,0.0,2267.5,0.50022060445621,186177.0,2267.5,indirecta,4533.0,ecol_pseudohuerfanas,0
+258923,ecol,no informativa,P00811,4,0.0,2267.0,0.500110302228105,184577.5,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,1
+269982,ecol,no informativa,P00811,5,0.0,2326.5,0.513236267372601,188686.5,2326.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+275643,ecol,no informativa,P00811,7,0.0,2332.5,0.514559894109861,189509.0,2332.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+282492,ecol,no informativa,P00811,3,0.0,2269.5,0.50066181336863,184743.0,2269.5,indirecta,4533.0,ecol_pseudohuerfanas,0
+287531,ecol,no informativa,P0A988,3,0.0,2269.5,0.50066181336863,184319.5,2269.5,indirecta,4533.0,ecol_pseudohuerfanas,0
+302500,ecol,no informativa,P00811,2,0.0,2326.5,0.513236267372601,186798.5,2326.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+311508,ecol,no informativa,P00811,5,0.0,2279.0,0.5027575557026251,187490.5,2279.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+312211,ecol,no informativa,P0A6C1,10,0.0,2270.5,0.5008824178248401,184917.5,2270.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+313924,ecol,informativa,P00811,10,0.0188279857397504,2.5,0.000551511140525,117.5,2.5,directa,4533.0,ecol_pseudohuerfanas,3
+321394,ecol,no informativa,P00811,2,0.0,2269.0,0.500551511140525,184285.0,2269.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+336733,ecol,no informativa,P00811,5,0.0,2267.5,0.50022060445621,187366.0,2267.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+346510,ecol,no informativa,P00954,5,0.0,2332.0,0.514449591881756,187874.5,2332.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+346632,ecol,no informativa,P00811,5,0.0,2272.0,0.5012133245091551,184629.5,2272.0,indirecta,4533.0,ecol_pseudohuerfanas,1
+358617,ecol,no informativa,P00811,4,0.0,2326.5,0.513236267372601,187221.5,2326.5,indirecta,4533.0,ecol_pseudohuerfanas,0
+362364,ecol,no informativa,P00811,14,0.0,2352.5,0.5189719832340614,191216.0,2352.5,indirecta,4533.0,ecol_pseudohuerfanas,1
+375825,ecol,no informativa,P00811,7,0.0,2283.0,0.5036399735274653,186717.5,2283.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+378750,ecol,no informativa,P33022,2,0.0,2277.0,0.5023163467902052,185264.5,2277.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+400574,ecol,no informativa,P00811,4,0.0,2332.0,0.514449591881756,188120.0,2332.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+401573,ecol,no informativa,P00811,6,0.0,2343.0,0.5168762409000662,188362.5,2343.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+401880,ecol,no informativa,P00811,2,0.0,2267.0,0.500110302228105,184913.0,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+415382,ecol,no informativa,P00811,2,0.0,2279.0,0.5027575557026251,184646.0,2279.0,indirecta,4533.0,ecol_pseudohuerfanas,1
+451614,ecol,no informativa,P0A8W0,179,0.0,2336.5,0.5154423119347011,190253.5,2336.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+461266,ecol,no informativa,P76558,3,0.0,2326.5,0.513236267372601,186629.5,2326.5,indirecta,4533.0,ecol_pseudohuerfanas,1
+461275,ecol,no informativa,P76558,6,0.0,2267.0,0.500110302228105,186815.0,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,1
+494543,ecol,no informativa,P00811,4,0.0,2326.5,0.513236267372601,188835.0,2326.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+540983,ecol,no informativa,P05804,13,0.0,2280.0,0.5029781601588352,187734.5,2280.0,indirecta,4533.0,ecol_pseudohuerfanas,1
+569726,ecol,no informativa,P0ABP8,2,0.0,2270.5,0.5008824178248401,184384.0,2270.5,indirecta,4533.0,ecol_pseudohuerfanas,0
+638578,ecol,informativa,P09099,4,0.0032184515692896,5.0,0.00110302228105,85.5,5.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+640285,ecol,informativa,P08191,34,0.0034122607975785,19.5,0.0043017868960953,869.0,19.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+646095,ecol,no informativa,P0A988,10,0.0,2337.5,0.5156629163909111,188441.0,2337.5,indirecta,4533.0,ecol_pseudohuerfanas,0
+668429,ecol,no informativa,P38489,3,0.0,2267.0,0.500110302228105,185664.5,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+797076,ecol,no informativa,P31224,5,0.0,2271.0,0.500992720052945,184670.0,2271.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+799674,ecol,no informativa,P0AEG4,7,0.0,2277.0,0.5023163467902052,185108.0,2277.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+813641,ecol,no informativa,P77398,15,0.0,2287.5,0.5046326935804103,187317.5,2287.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+848500,ecol,no informativa,P75906,12,0.0,2299.5,0.5072799470549305,186173.5,2299.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+862373,ecol,no informativa,P62617,2,0.0,2269.0,0.500551511140525,184708.5,2269.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+885471,ecol,no informativa,P07650,2,0.0,2268.0,0.500330906684315,184585.0,2268.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+896938,ecol,no informativa,P0A9M5,10,0.0,2269.0,0.500551511140525,187184.5,2269.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+924218,ecol,no informativa,P0A993,42,0.0,2311.0,0.5098168983013457,185643.0,2311.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+930613,ecol,no informativa,P00811,3,0.0,2267.0,0.500110302228105,184748.0,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+941934,ecol,no informativa,P0AF12,8,0.0,2270.5,0.5008824178248401,185930.0,2270.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+944399,ecol,no informativa,P0AEH1,6,0.0,2282.0,0.5034193690712553,185971.5,2282.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+955181,ecol,no informativa,P0A8M3,10,0.0,2338.0,0.5157732186190161,187839.5,2338.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+956272,ecol,no informativa,P04825,2,0.0,2269.0,0.500551511140525,184620.5,2269.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+967253,ecol,no informativa,P0AES6,2,0.0,2269.0,0.500551511140525,184324.5,2269.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+1001401,ecol,informativa,P08202,17,0.0777370784002667,3.0,0.00066181336863,44.5,3.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+1002636,ecol,no informativa,P31224,13,0.0,2339.5,0.5161041253033312,188213.0,2339.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+1008566,ecol,no informativa,P0ACJ8,2,0.0,2267.0,0.500110302228105,186142.5,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+1046485,ecol,no informativa,P0A988,10,0.0,2345.0,0.5173174498124862,188508.5,2345.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+1077789,ecol,no informativa,P00811,2,0.0,2267.0,0.500110302228105,184928.0,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+1077791,ecol,no informativa,P00811,3,0.0,2267.0,0.500110302228105,184974.5,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+1246471,ecol,informativa,P0AF12,6,0.1026861611696701,1.0,0.00022060445621,13.0,1.0,directa,4533.0,ecol_pseudohuerfanas,0
+1383720,ecol,no informativa,P08191,16,0.0,2280.0,0.5029781601588352,187593.0,2280.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+1392117,ecol,no informativa,P26281,3,0.0,2267.5,0.50022060445621,184454.0,2267.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+1505330,ecol,informativa,P0AF12,2,0.0323019381162869,1.0,0.00022060445621,24.0,1.0,directa,4533.0,ecol_pseudohuerfanas,2
+1525636,ecol,no informativa,P0A6I6,9,0.0,2267.5,0.50022060445621,184592.5,2267.5,indirecta,4533.0,ecol_pseudohuerfanas,0
+1626712,ecol,no informativa,P0AE18,8,0.0,2269.5,0.50066181336863,186495.5,2269.5,indirecta,4533.0,ecol_pseudohuerfanas,0
+1651557,ecol,no informativa,P22939,5,0.0,2290.0,0.5051842047209354,187742.0,2290.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+1676631,ecol,no informativa,P31224,13,0.0,2284.5,0.5039708802117803,187116.0,2284.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+1821118,ecol,no informativa,P00956,2,0.0,2267.0,0.500110302228105,184273.0,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+1829804,ecol,no informativa,P02920,23,0.0,2290.0,0.5051842047209354,186020.5,2290.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+1891597,ecol,no informativa,P60472,3,0.0,2332.0,0.514449591881756,187464.0,2332.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+1921350,ecol,no informativa,P0AEG4,3,0.0,2267.5,0.50022060445621,186175.0,2267.5,indirecta,4533.0,ecol_pseudohuerfanas,0
+2136661,ecol,informativa,P0AEK4,2,0.05,1.0,0.00022060445621,20.5,1.0,directa,4533.0,ecol_pseudohuerfanas,2
+2210432,ecol,no informativa,P17117,3,0.0,2326.5,0.513236267372601,186629.5,2326.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+2252826,ecol,no informativa,P0A9A6,2,0.0,2267.5,0.50022060445621,184264.5,2267.5,indirecta,4533.0,ecol_pseudohuerfanas,1
+2335640,ecol,informativa,P02924,301,0.1721835653359841,3.0,0.00066181336863,146.0,3.0,directa,4533.0,ecol_pseudohuerfanas,2
+2338023,ecol,informativa,P00811,8,0.0188279857397504,1.5,0.000330906684315,48.5,1.5,directa,4533.0,ecol_pseudohuerfanas,2
+2343595,ecol,no informativa,P19926,19,0.0,2285.5,0.5041914846679902,184753.5,2285.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+2351531,ecol,no informativa,P41052,158,0.0,2472.0,0.5453342157511581,192115.0,2472.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+2375022,ecol,no informativa,P21645,13,0.0,2268.5,0.50044120891242,184468.5,2268.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+2375563,ecol,no informativa,P00722,5,0.0,2268.0,0.500330906684315,184388.5,2268.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+2375604,ecol,no informativa,P00722,29,0.0,2277.5,0.5024266490183101,184999.5,2277.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+2376198,ecol,no informativa,P04825,80,0.0,2358.0,0.5201853077432164,190270.0,2358.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+2376233,ecol,no informativa,P76077,22,0.0,2286.5,0.5044120891242003,184858.5,2286.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+2376315,ecol,no informativa,P0AEE5,2,0.0,2327.0,0.5133465696007059,186160.0,2327.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2376608,ecol,no informativa,P0A924,8,0.0,2329.0,0.513787778513126,186731.0,2329.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2377631,ecol,no informativa,P27302,17,0.0,2274.5,0.5017648356496801,184413.0,2274.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+2377813,ecol,no informativa,P02919,3,0.0,2268.5,0.50044120891242,184381.0,2268.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+2378148,ecol,no informativa,P23930,15,0.0,2330.5,0.514118685197441,187894.5,2330.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+2378472,ecol,informativa,P0ABN1,7,0.1039914927814649,1.0,0.00022060445621,4.0,1.0,directa,4533.0,ecol_pseudohuerfanas,3
+2378489,ecol,informativa,P0ABN1,3,0.1039914927814649,1.0,0.00022060445621,3.0,1.0,directa,4533.0,ecol_pseudohuerfanas,3
+2379368,ecol,no informativa,P31224,2,0.0,2326.5,0.513236267372601,186447.5,2326.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+2379486,ecol,informativa,P0A6A8,19,0.0085034013605442,3.0,0.00066181336863,250.5,3.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2381397,ecol,informativa,P02924,165,0.1721835653359841,5.0,0.00110302228105,196.0,5.0,directa,4533.0,ecol_pseudohuerfanas,3
+2381713,ecol,informativa,P32138,3,0.0204439681183867,1.5,0.000330906684315,97.5,1.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+2381794,ecol,no informativa,P16684,7,0.0,2278.0,0.5025369512464152,184390.0,2278.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+2382312,ecol,no informativa,P62617,2,0.0,2267.0,0.500110302228105,184271.0,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+2382630,ecol,no informativa,P77455,29,0.0,2336.0,0.5153320097065961,186908.5,2336.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2382636,ecol,no informativa,P77455,4,0.0,2277.0,0.5023163467902052,184497.0,2277.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2382811,ecol,no informativa,P0AEB2,2,0.0,2271.0,0.500992720052945,184378.5,2271.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2382879,ecol,no informativa,P14900,11,0.0,2271.0,0.500992720052945,187859.0,2271.0,indirecta,4533.0,ecol_pseudohuerfanas,0
+2383426,ecol,no informativa,P09373,9,0.0,2274.0,0.5016545334215751,184432.5,2274.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2385109,ecol,no informativa,P0A6D3,2,0.0,2267.0,0.500110302228105,184796.5,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2385230,ecol,no informativa,P06971,2,0.0,2273.5,0.5015442311934701,184558.5,2273.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+2385277,ecol,no informativa,P06971,2,0.0,2271.0,0.500992720052945,184272.5,2271.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+2385381,ecol,no informativa,P00722,5,0.0,2269.5,0.50066181336863,184770.0,2269.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+2388519,ecol,no informativa,P0A6L4,13,0.0,2280.5,0.5030884623869403,184628.0,2280.5,indirecta,4533.0,ecol_pseudohuerfanas,2
+2388563,ecol,informativa,P52045,2,0.0666666666666666,1.5,0.000330906684315,9.0,1.5,directa,4533.0,ecol_pseudohuerfanas,3
+2388969,ecol,no informativa,P39304,11,0.0,2346.0,0.5175380542686963,187706.5,2346.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2389553,ecol,informativa,P0AAI5,2,0.0170968737145207,2.0,0.00044120891242,18.5,2.0,directa,4533.0,ecol_pseudohuerfanas,1
+2389925,ecol,informativa,P0AC16,2,0.0492230223844069,1.5,0.000330906684315,8.0,1.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+2390224,ecol,informativa,P0AEK4,2,0.05,1.0,0.00022060445621,20.5,1.0,directa,4533.0,ecol_pseudohuerfanas,2
+2391246,ecol,no informativa,P06971,30,0.0,2299.0,0.5071696448268255,187018.0,2299.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2391310,ecol,no informativa,P00509,3,0.0,2273.5,0.5015442311934701,184410.0,2273.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+2391314,ecol,informativa,P00509,11,0.0226145889067237,8.5,0.0018751378777851,122.0,8.5,directa,4533.0,ecol_pseudohuerfanas,3
+2391540,ecol,informativa,P06986,12,0.0056179775280898,14.0,0.0030884623869402,376.0,14.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2392171,ecol,informativa,P02931,79,0.4560185185185185,5.5,0.001213324509155,37.0,5.5,directa,4533.0,ecol_pseudohuerfanas,3
+2392706,ecol,no informativa,P0AEX9,280,0.0,2412.0,0.5320979483785573,198170.5,2412.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+2393732,ecol,informativa,P52045,2,0.0666666666666666,1.5,0.000330906684315,9.0,1.5,directa,4533.0,ecol_pseudohuerfanas,3
+2394049,ecol,informativa,P22188,2,0.0422619047619047,1.0,0.00022060445621,3.0,1.0,directa,4533.0,ecol_pseudohuerfanas,2
+2394087,ecol,no informativa,P27833,2,0.0,2267.0,0.500110302228105,184264.0,2267.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2395255,ecol,no informativa,P77781,8,0.0,2275.5,0.5019854401058902,184675.5,2275.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+2397619,ecol,informativa,P0AES2,3,0.0097123998114097,7.0,0.0015442311934701,104.5,7.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+2397626,ecol,informativa,P0ACI3,132,0.0063490180407179,47.0,0.0103684094418707,1686.5,47.0,indirecta,4533.0,ecol_pseudohuerfanas,3
+2398350,ecol,no informativa,P0AAC0,3,0.0,2272.0,0.5012133245091551,184284.0,2272.0,indirecta,4533.0,ecol_pseudohuerfanas,2
+2398617,ecol,no informativa,P0A8D6,4,0.0,2267.5,0.50022060445621,184320.0,2267.5,indirecta,4533.0,ecol_pseudohuerfanas,3
+14539,hsap,no informativa,O14965,2,0.0,8151.5,0.5000613459296975,184285.0,8151.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+29415,hsap,no informativa,O75604,20,0.0,8530.5,0.5233114532850746,187241.5,8530.5,indirecta,16301.0,hsap_pseudohuerfanas,2
+30852,hsap,no informativa,P56817,2,0.0,8194.5,0.5026992209066928,185036.5,8194.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+70712,hsap,no informativa,P0DMS8,11,0.0,8331.5,0.5111036132752592,188363.0,8331.5,indirecta,16301.0,hsap_pseudohuerfanas,2
+111540,hsap,no informativa,Q7L0J3,2,0.0,8221.5,0.5043555610085271,185577.0,8221.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+119945,hsap,informativa,Q96QE3,3,0.0398860485060013,5.5,0.0003374026133366,120.5,5.5,directa,16301.0,hsap_pseudohuerfanas,2
+120267,hsap,no informativa,Q9UIF8,2,0.0,8276.5,0.5077295871418931,187358.5,8276.5,indirecta,16301.0,hsap_pseudohuerfanas,2
+121762,hsap,informativa,Q96QE3,27,0.0383525850272852,93.0,0.0057051714618735,1820.0,93.0,directa,16301.0,hsap_pseudohuerfanas,1
+131968,hsap,no informativa,Q9NUW8,5,0.0,8193.5,0.5026378749769953,185422.5,8193.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+133683,hsap,no informativa,P16473,2,0.0,8161.5,0.5006748052266732,184533.0,8161.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+135747,hsap,informativa,P15428,3,0.1203858530857692,1.0,6.134592969756457e-05,35.0,1.0,indirecta,16301.0,hsap_pseudohuerfanas,3
+137170,hsap,no informativa,P15428,2,0.0,8154.0,0.5002147107539415,184273.0,8154.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+158576,hsap,no informativa,Q96QE3,2,0.0,8160.0,0.5005827863321268,184708.5,8160.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+162130,hsap,no informativa,P16473,3,0.0,8183.0,0.5019937427151708,185014.5,8183.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+173427,hsap,informativa,O75030,5,0.235516419427582,2.0,0.0001226918593951,3.5,2.0,directa,16301.0,hsap_pseudohuerfanas,2
+181197,hsap,no informativa,P51151,8,0.0,8226.0,0.5046316176921661,185770.5,8226.0,indirecta,16301.0,hsap_pseudohuerfanas,2
+183405,hsap,no informativa,P49146,3,0.0,8161.5,0.5006748052266732,184400.0,8161.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+185237,hsap,no informativa,P15428,2,0.0,8207.0,0.5034660450279124,185264.5,8207.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+193288,hsap,informativa,P15428,2,0.1011241165920461,1.0,6.134592969756457e-05,39.0,1.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+197418,hsap,no informativa,Q9UIF8,2,0.0,8158.5,0.5004907674375805,184653.0,8158.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+200171,hsap,informativa,P15428,5,0.0987163995303307,8.0,0.0004907674375805,75.0,8.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+200713,hsap,no informativa,Q96QE3,3,0.0,8176.5,0.5015949941721367,184725.5,8176.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+201759,hsap,informativa,Q96QE3,3,0.0331054202599811,7.5,0.0004600944727317,157.5,7.5,directa,16301.0,hsap_pseudohuerfanas,1
+201900,hsap,no informativa,P15428,2,0.0,8387.0,0.514508312373474,186271.5,8387.0,indirecta,16301.0,hsap_pseudohuerfanas,3
+203064,hsap,no informativa,B2RXH2,2,0.0,8380.5,0.5141095638304398,186428.5,8380.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+206637,hsap,no informativa,O75030,4,0.0,8258.0,0.5065946874424881,185791.5,8258.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+207443,hsap,informativa,P15428,6,0.1998405161223768,3.0,0.0001840377890926,47.0,3.0,directa,16301.0,hsap_pseudohuerfanas,0
+212045,hsap,no informativa,Q96QE3,3,0.0,8431.5,0.5172382062450156,187079.5,8431.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+215591,hsap,informativa,P16473,14,0.2815911711149393,4.5,0.000276056683639,88.0,4.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+220921,hsap,informativa,Q9UIF8,2,0.2554325622434314,1.5,9.201889454634684e-05,5.0,1.5,directa,16301.0,hsap_pseudohuerfanas,1
+224057,hsap,no informativa,Q9UIF8,3,0.0,8483.5,0.520428194589289,188482.0,8483.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+226814,hsap,no informativa,Q9Y5X4,2,0.0,8157.5,0.5004294215078829,184646.0,8157.5,indirecta,16301.0,hsap_pseudohuerfanas,2
+228306,hsap,informativa,Q96QE3,6,0.0698005848855023,19.5,0.0011962456291025,224.5,19.5,directa,16301.0,hsap_pseudohuerfanas,3
+232530,hsap,informativa,Q96QE3,6,0.0347008622002211,106.5,0.0065333415127906,779.5,106.5,directa,16301.0,hsap_pseudohuerfanas,0
+234171,hsap,no informativa,Q9UIF8,2,0.0,8212.0,0.5037727746764002,186190.0,8212.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+234800,hsap,no informativa,Q16637,5,0.0,8158.0,0.5004600944727318,184690.0,8158.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+237035,hsap,no informativa,Q9UIF8,7,0.0,8306.0,0.5095392920679713,188011.0,8306.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+237097,hsap,informativa,Q96QE3,2,0.0705983058556223,4.5,0.000276056683639,133.5,4.5,directa,16301.0,hsap_pseudohuerfanas,1
+245260,hsap,no informativa,Q9UIF8,3,0.0,8175.0,0.5015029752775904,185034.5,8175.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+245590,hsap,no informativa,Q16637,3,0.0,8203.5,0.503251334273971,184970.5,8203.5,indirecta,16301.0,hsap_pseudohuerfanas,2
+246236,hsap,no informativa,P06746,5,0.0,8517.0,0.5224832832341574,189472.5,8517.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+247778,hsap,no informativa,Q96QE3,2,0.0,8158.0,0.5004600944727318,184575.0,8158.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+248130,hsap,informativa,P15428,6,0.0999202580611884,10.0,0.0006134592969756,144.0,10.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+255205,hsap,no informativa,Q9UIF8,5,0.0,8389.5,0.5146616771977179,186990.0,8389.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+258451,hsap,no informativa,Q9UIF8,3,0.0,8233.5,0.5050917121648979,185682.5,8233.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+261125,hsap,no informativa,O75030,4,0.0,8270.0,0.507330838598859,187132.5,8270.0,indirecta,16301.0,hsap_pseudohuerfanas,3
+262026,hsap,no informativa,O15118,2,0.0,8151.5,0.5000613459296975,184289.0,8151.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+262133,hsap,no informativa,P06746,4,0.0,8457.0,0.5188025274523035,188802.0,8457.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+262222,hsap,no informativa,Q9UIF8,2,0.0,8221.5,0.5043555610085271,185577.0,8221.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+266154,hsap,no informativa,P16473,2,0.0,8154.5,0.5002453837187902,184313.0,8154.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+268160,hsap,no informativa,Q96QE3,6,0.0,8407.5,0.5157659039322741,187554.0,8407.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+273671,hsap,no informativa,Q9UIF8,5,0.0,8316.0,0.510152751364947,187414.0,8316.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+274618,hsap,no informativa,Q16637,2,0.0,8422.0,0.5166554199128888,186575.0,8422.0,indirecta,16301.0,hsap_pseudohuerfanas,3
+277045,hsap,no informativa,O15118,12,0.0,8509.5,0.5220231887614257,188067.5,8509.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+280007,hsap,no informativa,P15428,4,0.0,8215.5,0.5039874854303417,186241.0,8215.5,indirecta,16301.0,hsap_pseudohuerfanas,2
+283016,hsap,no informativa,O15118,5,0.0,8513.0,0.5222378995153671,189386.5,8513.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+284350,hsap,no informativa,Q9NUW8,3,0.0,8383.5,0.5142936016195325,186475.5,8383.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+286624,hsap,no informativa,P06746,5,0.0,8258.0,0.5065946874424881,185791.5,8258.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+299184,hsap,no informativa,Q9UIF8,3,0.0,8218.0,0.5041408502545857,186545.0,8218.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+307216,hsap,no informativa,Q9UIF8,2,0.0,8383.5,0.5142936016195325,186566.0,8383.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+307292,hsap,no informativa,Q9UIF8,6,0.0,8315.5,0.5101220784000982,188337.0,8315.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+309194,hsap,no informativa,Q16637,2,0.0,8159.5,0.5005521133672781,184678.0,8159.5,indirecta,16301.0,hsap_pseudohuerfanas,3
+309367,hsap,no informativa,Q16637,8,0.0,8289.5,0.5085270842279614,187418.5,8289.5,indirecta,16301.0,hsap_pseudohuerfanas,3
+310352,hsap,no informativa,P51151,6,0.0,8224.5,0.5045395987976198,185336.5,8224.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+312470,hsap,no informativa,Q16637,2,0.0,8163.5,0.5007974970860684,184903.5,8163.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+313847,hsap,no informativa,Q16637,4,0.0,8502.5,0.5215937672535427,188540.5,8502.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+316208,hsap,no informativa,P06746,4,0.0,8246.5,0.5058892092509661,186013.5,8246.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+316226,hsap,no informativa,Q9UIF8,2,0.0,8165.5,0.5009201889454634,185039.0,8165.5,indirecta,16301.0,hsap_pseudohuerfanas,2
+317418,hsap,no informativa,P15428,2,0.0,8229.0,0.5048156554812588,185785.5,8229.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+323675,hsap,no informativa,P55789,3,0.0,8389.5,0.5146616771977179,186927.0,8389.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+324176,hsap,no informativa,P51151,3,0.0,8207.5,0.5034967179927612,184960.0,8207.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+325483,hsap,informativa,Q96QE3,7,0.0690028639153823,21.5,0.0013189374884976,253.5,21.5,directa,16301.0,hsap_pseudohuerfanas,0
+331692,hsap,informativa,P15428,3,0.097512540999473,1.0,6.134592969756457e-05,35.0,1.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+333091,hsap,no informativa,P15428,3,0.0,8160.0,0.5005827863321268,184718.0,8160.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+333802,hsap,no informativa,Q16637,2,0.0,8381.5,0.5141709097601375,186430.5,8381.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+335359,hsap,no informativa,Q9UIF8,6,0.0,8187.0,0.5022391264339611,185148.0,8187.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+335915,hsap,no informativa,Q9NUW8,5,0.0,8216.5,0.5040488313600393,185786.5,8216.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+335973,hsap,no informativa,P06746,3,0.0,8233.5,0.5050917121648979,185682.5,8233.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+339250,hsap,informativa,P16473,7,0.0770957579534442,10.5,0.0006441322618244,139.0,10.5,directa,16301.0,hsap_pseudohuerfanas,1
+343657,hsap,informativa,Q9UIF8,3,0.1388220446975171,1.5,9.201889454634684e-05,5.0,1.5,directa,16301.0,hsap_pseudohuerfanas,2
+343747,hsap,no informativa,Q96QE3,4,0.0,8401.0,0.5153671553892399,187139.5,8401.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+356211,hsap,no informativa,Q9UIF8,4,0.0,8294.0,0.5088031409116005,187586.5,8294.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+356427,hsap,informativa,P15428,6,0.1986366575915191,1.0,6.134592969756457e-05,35.0,1.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+358322,hsap,informativa,P06746,4,0.1464494380070948,1.0,6.134592969756457e-05,2.5,1.0,directa,16301.0,hsap_pseudohuerfanas,1
+359460,hsap,no informativa,Q9UIF8,5,0.0,8236.0,0.5052450769891418,186974.0,8236.0,indirecta,16301.0,hsap_pseudohuerfanas,2
+363322,hsap,no informativa,P15428,4,0.0,8153.0,0.5001533648242439,184277.5,8153.0,indirecta,16301.0,hsap_pseudohuerfanas,2
+364219,hsap,informativa,Q16637,8,0.2496116386152161,2.5,0.0001533648242439,5.5,2.5,directa,16301.0,hsap_pseudohuerfanas,0
+364873,hsap,no informativa,P15428,20,0.0,8568.5,0.525642598613582,190889.5,8568.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+372216,hsap,no informativa,Q16637,6,0.0,8352.5,0.512391877798908,188874.0,8352.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+381538,hsap,no informativa,P16473,2,0.0,8200.0,0.5030366235200294,184752.5,8200.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+382075,hsap,no informativa,Q96QE3,8,0.0,8491.5,0.5209189620268695,188825.5,8491.5,indirecta,16301.0,hsap_pseudohuerfanas,3
+384349,hsap,no informativa,Q96QE3,2,0.0,8160.0,0.5005827863321268,184708.5,8160.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+384744,hsap,informativa,Q9UIF8,2,0.3581608753195942,1.5,9.201889454634684e-05,5.0,1.5,directa,16301.0,hsap_pseudohuerfanas,2
+389740,hsap,no informativa,Q96QE3,6,0.0,8478.5,0.5201214649408011,188391.0,8478.5,indirecta,16301.0,hsap_pseudohuerfanas,3
+389930,hsap,no informativa,P15428,4,0.0,8300.0,0.5091712164897859,185692.0,8300.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+395503,hsap,no informativa,Q6P988,4,0.0,8210.5,0.5036807557818539,185561.5,8210.5,indirecta,16301.0,hsap_pseudohuerfanas,2
+395760,hsap,no informativa,Q9UIF8,5,0.0,8246.5,0.5058892092509661,186013.5,8246.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+396708,hsap,no informativa,Q9UIF8,2,0.0,8165.5,0.5009201889454634,185039.0,8165.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+397427,hsap,no informativa,Q8TDD5,2,0.0,8157.5,0.5004294215078829,184646.0,8157.5,indirecta,16301.0,hsap_pseudohuerfanas,3
+401398,hsap,no informativa,P16473,2,0.0,8209.5,0.5036194098521564,185326.5,8209.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+401845,hsap,no informativa,Q96QE3,2,0.0,8221.5,0.5043555610085271,185577.0,8221.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+404346,hsap,no informativa,P15428,3,0.0,8258.5,0.506625360407337,186110.5,8258.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+406304,hsap,no informativa,Q96QE3,2,0.0,8207.0,0.5034660450279124,185264.5,8207.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+407083,hsap,no informativa,P16473,6,0.0,8275.0,0.5076375682473467,187007.5,8275.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+408892,hsap,no informativa,O15296,2,0.0,8165.5,0.5009201889454634,185039.0,8165.5,indirecta,16301.0,hsap_pseudohuerfanas,3
+411376,hsap,no informativa,P15428,4,0.0,8297.0,0.5089871787006932,187883.5,8297.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+412093,hsap,no informativa,P55789,4,0.0,8213.0,0.5038341206060978,185385.5,8213.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+413126,hsap,no informativa,Q96QE3,11,0.0,8451.0,0.5184344518741182,187401.0,8451.0,indirecta,16301.0,hsap_pseudohuerfanas,3
+414139,hsap,no informativa,O75030,4,0.0,8467.0,0.5194159867492791,187278.0,8467.0,indirecta,16301.0,hsap_pseudohuerfanas,3
+416423,hsap,no informativa,O75030,5,0.0,8228.5,0.50478498251641,186003.0,8228.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+421253,hsap,informativa,Q9UIF8,3,0.3526079935316935,2.5,0.0001533648242439,74.0,2.5,directa,16301.0,hsap_pseudohuerfanas,1
+430256,hsap,no informativa,P06746,2,0.0,8213.0,0.5038341206060978,186184.0,8213.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+431726,hsap,no informativa,B2RXH2,4,0.0,8234.0,0.5051223851297466,185751.0,8234.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+436220,hsap,no informativa,P15428,2,0.0,8157.5,0.5004294215078829,184542.5,8157.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+459520,hsap,no informativa,O60218,3,0.0,8166.0,0.5009508619103122,185073.5,8166.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+469995,hsap,informativa,Q96QE3,2,0.0339031412301011,8.5,0.0005214404024292,103.5,8.5,directa,16301.0,hsap_pseudohuerfanas,1
+471180,hsap,informativa,Q9UIF8,4,0.1207751788868398,1.5,9.201889454634684e-05,7.0,1.5,directa,16301.0,hsap_pseudohuerfanas,1
+476519,hsap,no informativa,P55789,2,0.0,8164.5,0.5008588430157659,184416.0,8164.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+477449,hsap,no informativa,Q9UIF8,7,0.0,8208.5,0.5035580639224587,185783.0,8208.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+478006,hsap,no informativa,P55789,2,0.0,8235.0,0.5051837310594443,185195.5,8235.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+479559,hsap,no informativa,P55789,3,0.0,8443.0,0.5179436844365376,188469.0,8443.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+479988,hsap,no informativa,Q96QE3,2,0.0,8163.0,0.5007668241212195,184723.0,8163.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+482324,hsap,informativa,Q96QE3,1,0.0398860485060013,3.5,0.0002147107539414,64.5,3.5,directa,16301.0,hsap_pseudohuerfanas,1
+499809,hsap,no informativa,Q9UIF8,2,0.0,8155.0,0.5002760566836391,184384.0,8155.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+499921,hsap,no informativa,Q9HC29,4,0.0,8210.5,0.5036807557818539,185391.5,8210.5,indirecta,16301.0,hsap_pseudohuerfanas,2
+530013,hsap,informativa,Q2TB90,2,1.1971232341676414,2.5,0.0001533648242439,42.5,2.5,indirecta,16301.0,hsap_pseudohuerfanas,2
+655736,hsap,no informativa,P06746,2,0.0,8220.0,0.5042635421139807,186583.0,8220.0,indirecta,16301.0,hsap_pseudohuerfanas,3
+775197,hsap,no informativa,Q02127,3,0.0,8214.5,0.5039261395006441,186224.0,8214.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+968374,hsap,no informativa,P48449,2,0.0,8379.0,0.5140175449358935,186174.5,8379.0,indirecta,16301.0,hsap_pseudohuerfanas,2
+1017393,hsap,no informativa,Q9UIF8,3,0.0,8210.5,0.5036807557818539,185032.0,8210.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+1019955,hsap,no informativa,P15428,3,0.0,8202.0,0.5031593153794246,184958.5,8202.0,indirecta,16301.0,hsap_pseudohuerfanas,2
+1022419,hsap,informativa,Q96QE3,6,0.0347008622002211,15.5,0.0009508619103122,183.5,15.5,directa,16301.0,hsap_pseudohuerfanas,0
+1022760,hsap,no informativa,P06746,2,0.0,8158.5,0.5004907674375805,184653.0,8158.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+1022859,hsap,informativa,P15428,4,0.238363989109823,1.0,6.134592969756457e-05,35.0,1.0,directa,16301.0,hsap_pseudohuerfanas,3
+1023648,hsap,no informativa,P15428,3,0.0,8182.5,0.501963069750322,184993.5,8182.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+1023858,hsap,informativa,Q9UIF8,2,0.1388220446975171,1.5,9.201889454634684e-05,18.0,1.5,directa,16301.0,hsap_pseudohuerfanas,3
+1024657,hsap,no informativa,P06746,2,0.0,8176.5,0.5015949941721367,184527.5,8176.5,indirecta,16301.0,hsap_pseudohuerfanas,1
+1025262,hsap,no informativa,P15428,4,0.0,8219.0,0.5042021961842832,185329.5,8219.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+1029623,hsap,no informativa,Q9UIF8,3,0.0,8241.0,0.5055518066376296,185891.0,8241.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+1031827,hsap,informativa,O15118,4,0.1105942616348875,3.5,0.0002147107539414,22.0,3.5,directa,16301.0,hsap_pseudohuerfanas,0
+1034662,hsap,no informativa,P15428,2,0.0,8220.0,0.5042635421139807,186583.0,8220.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+1035603,hsap,no informativa,Q96QE3,16,0.0,8413.5,0.5161339795104595,187417.5,8413.5,indirecta,16301.0,hsap_pseudohuerfanas,3
+1040592,hsap,no informativa,Q9UIF8,2,0.0,8152.5,0.5001226918593952,184308.5,8152.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+1070619,hsap,no informativa,P00734,2,0.0,8160.0,0.5005827863321268,184708.5,8160.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+1279630,hsap,informativa,Q9UIF8,5,0.1388220446975171,3.5,0.0002147107539414,22.0,3.5,directa,16301.0,hsap_pseudohuerfanas,3
+1359318,hsap,no informativa,Q9H8M2,10,0.0,8555.0,0.5248144285626649,189295.0,8555.0,indirecta,16301.0,hsap_pseudohuerfanas,0
+1366240,hsap,no informativa,O95271,6,0.0,8345.5,0.5119624562910251,188342.5,8345.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+1504984,hsap,no informativa,Q9UIF8,5,0.0,8423.5,0.5167474388074351,191299.0,8423.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+1588910,hsap,informativa,O95398,4,0.1101099089671414,6.5,0.0003987485430341,32.5,6.5,directa,16301.0,hsap_pseudohuerfanas,0
+1604025,hsap,informativa,P02489,5,0.3112974448957895,7.0,0.0004294215078829,28.5,7.0,directa,16301.0,hsap_pseudohuerfanas,3
+1616417,hsap,no informativa,P68400,2,0.0,8201.5,0.5031286424145758,184938.0,8201.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+1681505,hsap,no informativa,Q9NYL2,2,0.0,8210.0,0.5036500828170051,184873.0,8210.0,indirecta,16301.0,hsap_pseudohuerfanas,3
+1826608,hsap,no informativa,Q96QE3,2,0.0,8161.5,0.5006748052266732,184454.0,8161.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+2085278,hsap,no informativa,Q99757,3,0.0,8383.5,0.5142936016195325,186627.5,8383.5,indirecta,16301.0,hsap_pseudohuerfanas,0
+2132773,hsap,no informativa,O00418,2,0.0,8356.0,0.5126065885528496,189252.0,8356.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+2212778,hsap,no informativa,P17752,9,0.0,8344.0,0.5118704373964788,188346.5,8344.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+2376209,hsap,no informativa,Q13043,4,0.0,8172.5,0.5013496104533465,184779.0,8172.5,indirecta,16301.0,hsap_pseudohuerfanas,2
+2376308,hsap,informativa,P29016,4,0.1100703837806863,4.0,0.0002453837187902,75.0,4.0,indirecta,16301.0,hsap_pseudohuerfanas,1
+2386681,hsap,no informativa,P35247,7,0.0,8501.0,0.5215017483589964,187256.0,8501.0,indirecta,16301.0,hsap_pseudohuerfanas,3
+73416,lmaj,no informativa,Q01782,2,0.0,3283.0,0.5001523461304083,184318.5,3283.0,indirecta,6564.0,lmaj_pseudohuerfanas,2
+73656,lmaj,no informativa,Q01782,2,0.0,3290.0,0.5012187690432663,184555.0,3290.0,indirecta,6564.0,lmaj_pseudohuerfanas,2
+195427,lmaj,no informativa,Q01782,12,0.0,3356.0,0.5112736136502133,190852.5,3356.0,indirecta,6564.0,lmaj_pseudohuerfanas,3
+244355,lmaj,no informativa,Q4QHU1,2,0.0,3286.5,0.5006855575868373,184680.0,3286.5,indirecta,6564.0,lmaj_pseudohuerfanas,2
+438065,lmaj,no informativa,Q4QEW7,2,0.0,3287.5,0.5008379037172456,186791.5,3287.5,indirecta,6564.0,lmaj_pseudohuerfanas,0
+439361,lmaj,no informativa,Q01782,2,0.0,3366.0,0.5127970749542962,189059.0,3366.0,indirecta,6564.0,lmaj_pseudohuerfanas,2
+450804,lmaj,no informativa,Q4QDU3,6,0.0,3312.5,0.5046465569774528,186405.0,3312.5,indirecta,6564.0,lmaj_pseudohuerfanas,2
+964137,lmaj,no informativa,Q4QDU3,5,0.0,3284.5,0.5003808653260208,184852.5,3284.5,indirecta,6564.0,lmaj_pseudohuerfanas,2
+1362991,lmaj,no informativa,Q4QDU3,21,0.0,3289.0,0.501066422912858,184899.5,3289.0,indirecta,6564.0,lmaj_pseudohuerfanas,3
+1517256,lmaj,no informativa,Q01782,3,0.0,3288.5,0.5009902498476538,184671.5,3288.5,indirecta,6564.0,lmaj_pseudohuerfanas,2
+1620550,lmaj,no informativa,Q4QCD2,6,0.0,3288.5,0.5009902498476538,184620.5,3288.5,indirecta,6564.0,lmaj_pseudohuerfanas,2
+1859939,lmaj,informativa,Q4Q124,41,0.0025760840510266,6.0,0.0009140767824497,397.5,6.0,indirecta,6564.0,lmaj_pseudohuerfanas,2
+2360545,lmaj,no informativa,Q4Q6F6,3,0.0,3282.5,0.5000761730652041,184672.0,3282.5,indirecta,6564.0,lmaj_pseudohuerfanas,2
+2363292,lmaj,no informativa,Q4Q090,6,0.0,3289.0,0.501066422912858,185113.5,3289.0,indirecta,6564.0,lmaj_pseudohuerfanas,2
+2389274,lmaj,no informativa,Q4Q6K7,3,0.0,3288.0,0.5009140767824497,184960.0,3288.0,indirecta,6564.0,lmaj_pseudohuerfanas,2
+2389641,lmaj,no informativa,Q4Q5S8,32,0.0,3367.0,0.5129494210847044,188034.5,3367.0,indirecta,6564.0,lmaj_pseudohuerfanas,3
+2391524,lmaj,no informativa,Q4QCD2,24,0.0,3373.0,0.5138634978671541,188187.0,3373.0,indirecta,6564.0,lmaj_pseudohuerfanas,2
+945,mmus,no informativa,Q923J1,4,0.0,9166.5,0.5040692878746219,185420.0,9166.5,indirecta,18185.0,mmus_pseudohuerfanas,1
+2909,mmus,no informativa,Q8VCH6,2,0.0,9094.5,0.5001099807533682,184348.5,9094.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+3007,mmus,no informativa,P26262,14,0.0,10027.0,0.5513885070112731,189458.5,10027.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+4181,mmus,no informativa,P15209,12,0.0,10015.5,0.5507561176794061,189297.0,10015.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+11225,mmus,no informativa,P31750,3,0.0,9207.5,0.5063238933186692,187481.0,9207.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+33561,mmus,no informativa,P54818,33,0.0,9919.5,0.5454770415177344,187018.0,9919.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+37532,mmus,informativa,Q01237,7,0.0072086837002351,11.5,0.0006323893318669,122.5,11.5,indirecta,18185.0,mmus_pseudohuerfanas,0
+46024,mmus,no informativa,P29477,3,0.0,9939.0,0.546549353863074,188047.5,9939.0,indirecta,18185.0,mmus_pseudohuerfanas,0
+52488,mmus,no informativa,P35639,2,0.0,9093.0,0.500027495188342,184254.5,9093.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+62795,mmus,informativa,P23979,8,0.0009365162868028,59.5,0.0032719274127027,1129.0,59.5,indirecta,18185.0,mmus_pseudohuerfanas,0
+72980,mmus,no informativa,Q8K424,10,0.0,9939.5,0.546576849051416,187184.5,9939.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+73114,mmus,no informativa,Q99JA4,4,0.0,9168.5,0.5041792686279901,185744.0,9168.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+73392,mmus,informativa,Q8K0C4,10,0.025,1.0,5.499037668408029e-05,49.0,1.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+73437,mmus,no informativa,P23979,7,0.0,9226.0,0.5073412152873247,186251.0,9226.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+80314,mmus,no informativa,Q07440,4,0.0,9137.5,0.5024745669507836,184969.0,9137.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+81714,mmus,no informativa,O08914,45,0.0,9312.0,0.5120703876821556,188461.5,9312.0,indirecta,18185.0,mmus_pseudohuerfanas,0
+86858,mmus,no informativa,P29477,14,0.0,9142.0,0.5027220236458619,184563.5,9142.0,indirecta,18185.0,mmus_pseudohuerfanas,0
+86977,mmus,no informativa,Q8R2Y0,4,0.0,9168.5,0.5041792686279901,186342.5,9168.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+90805,mmus,no informativa,Q91ZW2,2,0.0,9096.0,0.5001924663183943,184347.5,9096.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+91243,mmus,informativa,Q8BGN3,294,0.0272518500936255,130.5,0.0071762441572724,1376.0,130.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+91281,mmus,informativa,Q3UPF5,40,0.013822093853483,18.0,0.0009898267803134,333.0,18.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+91621,mmus,no informativa,P06745,21,0.0,10438.0,0.57398955182843,190148.0,10438.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+92165,mmus,no informativa,P20917,25,0.0,9121.0,0.5015672257354963,184757.5,9121.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+92592,mmus,no informativa,Q8JZL3,9,0.0,10012.0,0.5505636513610118,188930.0,10012.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+92614,mmus,no informativa,Q9DCX8,2,0.0,9118.0,0.5014022546054441,184822.0,9118.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+99657,mmus,no informativa,Q923J1,4,0.0,9170.5,0.5042892493813582,185689.0,9170.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+100535,mmus,no informativa,P35639,3,0.0,9111.0,0.5010173219686554,184714.0,9111.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+100625,mmus,no informativa,P97481,16,0.0,9948.5,0.5470717624415727,187456.0,9948.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+113027,mmus,no informativa,P54818,9,0.0,9952.5,0.547291723948309,187200.0,9952.5,indirecta,18185.0,mmus_pseudohuerfanas,0
+120427,mmus,no informativa,P35639,2,0.0,9160.5,0.5037393456145175,185966.0,9160.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+129630,mmus,no informativa,P35639,7,0.0,9245.0,0.5083860324443222,188074.0,9245.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+136750,mmus,no informativa,P35639,8,0.0,9171.0,0.5043167445697003,185444.5,9171.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+143168,mmus,no informativa,Q05BA5,5,0.0,9124.0,0.5017321968655485,184601.5,9124.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+152399,mmus,no informativa,Q61009,3,0.0,9159.5,0.5036843552378334,185682.5,9159.5,indirecta,18185.0,mmus_pseudohuerfanas,1
+175903,mmus,no informativa,Q8VCH6,2,0.0,9154.0,0.503381908166071,186172.0,9154.0,indirecta,18185.0,mmus_pseudohuerfanas,1
+176098,mmus,informativa,P35639,3,0.1648821421169349,1.0,5.499037668408029e-05,2.0,1.0,directa,18185.0,mmus_pseudohuerfanas,3
+203674,mmus,no informativa,P35639,2,0.0,9154.0,0.503381908166071,186194.0,9154.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+206296,mmus,no informativa,P35639,2,0.0,9164.0,0.5039318119329117,186447.5,9164.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+207276,mmus,no informativa,Q61009,7,0.0,9299.5,0.5113830079736046,189162.0,9299.5,indirecta,18185.0,mmus_pseudohuerfanas,0
+210660,mmus,no informativa,P35639,2,0.0,9100.5,0.5004399230134726,184646.0,9100.5,indirecta,18185.0,mmus_pseudohuerfanas,1
+210815,mmus,no informativa,P35639,5,0.0,9118.0,0.5014022546054441,184844.0,9118.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+221396,mmus,no informativa,P35639,3,0.0,9176.5,0.5046191916414627,186944.0,9176.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+237427,mmus,no informativa,Q07440,7,0.0,9278.0,0.5102007148748969,187778.0,9278.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+239287,mmus,no informativa,P35639,3,0.0,9120.5,0.5015397305471543,184966.0,9120.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+242090,mmus,no informativa,P35639,4,0.0,9153.5,0.5033544129777289,185600.0,9153.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+246162,mmus,no informativa,P35639,10,0.0,9299.0,0.5113555127852626,189040.0,9299.0,indirecta,18185.0,mmus_pseudohuerfanas,1
+246590,mmus,no informativa,Q61009,4,0.0,9940.5,0.5466318394281001,188112.5,9940.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+250445,mmus,no informativa,P35639,2,0.0,9096.5,0.5002199615067363,184362.5,9096.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+256577,mmus,no informativa,Q07440,3,0.0,9891.0,0.5439098157822381,186465.0,9891.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+257884,mmus,no informativa,P35639,6,0.0,9229.5,0.507533681605719,187613.0,9229.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+267789,mmus,no informativa,P35639,2,0.0,9099.5,0.5003849326367885,184352.5,9099.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+269982,mmus,no informativa,P35639,5,0.0,9991.5,0.5494363486389882,188686.5,9991.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+270197,mmus,no informativa,Q9Z2X8,3,0.0,9109.5,0.5009348364036293,184450.5,9109.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+273456,mmus,informativa,P35639,9,0.1648821421169349,1.0,5.499037668408029e-05,2.0,1.0,directa,18185.0,mmus_pseudohuerfanas,3
+273825,mmus,informativa,Q923J1,30,0.0002140497895134,369.5,0.0203189441847676,6039.0,369.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+274095,mmus,no informativa,P35639,2,0.0,9124.5,0.5017596920538906,184809.0,9124.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+276225,mmus,no informativa,P35639,2,0.0,9094.0,0.5000824855650261,184298.5,9094.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+279191,mmus,informativa,P10605,7,0.0015423439313917,35.0,0.0019246631839428,832.0,35.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+280281,mmus,no informativa,P35639,2,0.0,9120.5,0.5015397305471543,184966.0,9120.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+286112,mmus,informativa,P35639,7,6.5164153949457145e-06,184.5,0.0101457244982128,5683.0,184.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+290905,mmus,no informativa,P35639,2,0.0,9939.0,0.546549353863074,188047.5,9939.0,indirecta,18185.0,mmus_pseudohuerfanas,0
+298627,mmus,no informativa,P35639,6,0.0,9889.5,0.543827330217212,186413.0,9889.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+302097,mmus,no informativa,P09411,3,0.0,9109.5,0.5009348364036293,184450.5,9109.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+310775,mmus,informativa,Q07440,11,0.0527091788240537,6.0,0.0003299422601044,22.5,6.0,directa,18185.0,mmus_pseudohuerfanas,0
+313018,mmus,no informativa,P35639,2,0.0,9096.5,0.5002199615067363,184332.0,9096.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+321396,mmus,no informativa,P35639,7,0.0,9352.0,0.5142700027495188,188504.0,9352.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+324453,mmus,informativa,Q9CWS0,4,0.0909090909090909,1.5,8.248556502612044e-05,6.0,1.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+328748,mmus,no informativa,P35639,2,0.0,9156.0,0.5034918889194391,186205.5,9156.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+332254,mmus,no informativa,Q07440,4,0.0,9161.0,0.5037668408028595,185269.0,9161.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+338664,mmus,no informativa,P35639,2,0.0,9149.5,0.5031344514709926,184950.5,9149.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+339581,mmus,no informativa,P35639,8,0.0,9263.5,0.5094033544129777,188314.0,9263.5,indirecta,18185.0,mmus_pseudohuerfanas,1
+342416,mmus,no informativa,P35639,8,0.0,9225.5,0.5073137200989827,188220.5,9225.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+342761,mmus,no informativa,P35639,4,0.0,9956.5,0.5475116854550454,188505.5,9956.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+354695,mmus,no informativa,P35639,3,0.0,9207.5,0.5063238933186692,187481.0,9207.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+360645,mmus,no informativa,Q61009,2,0.0,9147.0,0.5029969755292824,184934.0,9147.0,indirecta,18185.0,mmus_pseudohuerfanas,1
+363037,mmus,no informativa,Q07440,8,0.0,9235.5,0.5078636238658235,187598.0,9235.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+363322,mmus,no informativa,Q3TCH7,4,0.0,9095.0,0.5001374759417102,184277.5,9095.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+367244,mmus,no informativa,P35639,3,0.0,9939.0,0.546549353863074,188047.5,9939.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+370516,mmus,informativa,Q07440,11,0.0527091788240537,3.0,0.0001649711300522,4.5,3.0,directa,18185.0,mmus_pseudohuerfanas,3
+372275,mmus,no informativa,P35639,4,0.0,9209.5,0.5064338740720374,186342.5,9209.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+378220,mmus,no informativa,P35639,8,0.0,9255.5,0.5089634313995051,188440.0,9255.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+378684,mmus,no informativa,P35639,6,0.0,9941.0,0.5466593346164421,188176.5,9941.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+383975,mmus,no informativa,P35639,8,0.0,9288.0,0.5107506186417377,187639.0,9288.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+387088,mmus,no informativa,P35639,3,0.0,9939.0,0.546549353863074,188047.5,9939.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+390467,mmus,no informativa,Q61009,6,0.0,9171.5,0.5043442397580423,185651.5,9171.5,indirecta,18185.0,mmus_pseudohuerfanas,0
+395931,mmus,no informativa,P54818,20,0.0,9183.0,0.5049766290899093,185933.5,9183.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+401438,mmus,no informativa,P35639,2,0.0,9147.5,0.5030244707176245,185577.0,9147.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+401920,mmus,no informativa,P35639,4,0.0,9163.5,0.5039043167445697,185398.5,9163.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+409551,mmus,no informativa,Q61009,2,0.0,9153.5,0.5033544129777289,185264.5,9153.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+412770,mmus,informativa,Q07440,10,0.0527091788240537,3.0,0.0001649711300522,4.5,3.0,directa,18185.0,mmus_pseudohuerfanas,3
+423764,mmus,no informativa,Q99KR7,4,0.0,9096.5,0.5002199615067363,184317.0,9096.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+427239,mmus,no informativa,P35639,7,0.0,9244.0,0.5083310420676381,187667.0,9244.0,indirecta,18185.0,mmus_pseudohuerfanas,0
+427719,mmus,no informativa,P35639,3,0.0,9170.0,0.5042617541930162,185687.5,9170.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+432078,mmus,no informativa,P35639,4,0.0,9946.5,0.5469617816882045,188441.0,9946.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+435086,mmus,no informativa,P35639,4,0.0,9163.0,0.5038768215562277,185147.0,9163.0,indirecta,18185.0,mmus_pseudohuerfanas,0
+437763,mmus,no informativa,P35639,3,0.0,9939.0,0.546549353863074,188047.5,9939.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+465532,mmus,no informativa,Q8VEF1,4,0.0,9156.5,0.5035193841077812,185047.0,9156.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+476380,mmus,no informativa,P18654,4,0.0,9223.0,0.5071762441572725,187256.0,9223.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+483439,mmus,no informativa,Q61009,4,0.0,9163.5,0.5039043167445697,185398.5,9163.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+508208,mmus,no informativa,Q4ACU6,3,0.0,9178.5,0.504729172394831,186052.5,9178.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+511484,mmus,no informativa,Q05769,6,0.0,9149.5,0.5031344514709926,184865.0,9149.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+546476,mmus,no informativa,P54818,16,0.0,9102.5,0.5005499037668408,184630.0,9102.5,indirecta,18185.0,mmus_pseudohuerfanas,0
+565016,mmus,no informativa,P31750,1,0.0,9109.5,0.5009348364036293,184678.0,9109.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+607078,mmus,informativa,Q05769,6,0.0496472378922517,2.0,0.0001099807533681,28.0,2.0,directa,18185.0,mmus_pseudohuerfanas,2
+613449,mmus,no informativa,Q04519,35,0.0,9391.0,0.516414627440198,190390.0,9391.0,indirecta,18185.0,mmus_pseudohuerfanas,0
+643475,mmus,no informativa,Q9Z2J0,2,0.0,9100.5,0.5004399230134726,184554.0,9100.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+643708,mmus,informativa,Q91WR5,26,0.0158045977011494,44.5,0.0024470717624415,369.5,44.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+658762,mmus,no informativa,Q07440,76,0.0,9272.0,0.5098707726147924,186547.5,9272.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+723726,mmus,informativa,P63137,13,0.0023391776530826,41.0,0.0022546054440472,554.5,41.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+727665,mmus,no informativa,P29477,2,0.0,9093.5,0.5000549903766841,184309.0,9093.5,indirecta,18185.0,mmus_pseudohuerfanas,1
+734827,mmus,no informativa,Q923J1,5,0.0,9894.5,0.5441022821006324,186523.5,9894.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+920243,mmus,no informativa,Q62226,4,0.0,9215.5,0.5067638163321418,187205.5,9215.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+921835,mmus,no informativa,Q01705,8,0.0,9293.5,0.5110530657135002,188110.5,9293.5,indirecta,18185.0,mmus_pseudohuerfanas,0
+934907,mmus,no informativa,Q01237,5,0.0,9206.5,0.5062689029419851,185481.5,9206.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+948059,mmus,no informativa,Q8C6L5,5,0.0,9157.0,0.5035468792961232,185679.0,9157.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+956272,mmus,no informativa,Q9D1A2,2,0.0,9110.5,0.5009898267803135,184620.5,9110.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+964137,mmus,no informativa,Q9QWW1,5,0.0,9174.5,0.5045092108880945,184852.5,9174.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+990782,mmus,no informativa,Q9R1P3,5,0.0,9912.5,0.5450921088809458,186641.5,9912.5,indirecta,18185.0,mmus_pseudohuerfanas,1
+1017273,mmus,no informativa,P35639,2,0.0,9120.5,0.5015397305471543,184966.0,9120.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+1017961,mmus,no informativa,P35639,6,0.0,9220.5,0.5070387682155623,186696.0,9220.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+1018870,mmus,no informativa,P35639,2,0.0,9116.0,0.5012922738520759,184800.5,9116.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+1020382,mmus,no informativa,Q08874,3,0.0,9100.5,0.5004399230134726,184357.5,9100.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+1021837,mmus,no informativa,P35639,3,0.0,9117.0,0.50134726422876,185069.5,9117.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+1032135,mmus,no informativa,P35639,2,0.0,9110.5,0.5009898267803135,184712.5,9110.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+1034564,mmus,no informativa,P35639,6,0.0,9181.5,0.5048941435248832,187064.5,9181.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+1146614,mmus,no informativa,Q9ERK0,13,0.0,10128.0,0.5569425350563652,191882.0,10128.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+1157321,mmus,no informativa,Q64374,8,0.0,9909.0,0.5448996425625515,186798.5,9909.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+1222846,mmus,informativa,Q8CHT0,4,0.0209754270070418,1.0,5.499037668408029e-05,27.0,1.0,directa,18185.0,mmus_pseudohuerfanas,2
+1317418,mmus,no informativa,Q61846,2,0.0,9122.5,0.5016497113005224,184821.5,9122.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+1362991,mmus,no informativa,Q3U4G3,21,0.0,9115.0,0.5012372834753918,184899.5,9115.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+1374129,mmus,no informativa,P56818,2,0.0,9095.5,0.5001649711300522,184359.0,9095.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+1392642,mmus,no informativa,Q9Z2X8,2,0.0,9110.0,0.5009623315919715,184350.0,9110.0,indirecta,18185.0,mmus_pseudohuerfanas,0
+1395069,mmus,no informativa,Q8BJ56,2,0.0,9163.0,0.5038768215562277,186249.0,9163.0,indirecta,18185.0,mmus_pseudohuerfanas,0
+1399614,mmus,no informativa,P29477,11,0.0,9978.0,0.5486939785537531,187966.0,9978.0,indirecta,18185.0,mmus_pseudohuerfanas,0
+1402249,mmus,informativa,Q9ES89,29,0.0140382168079262,31.0,0.0017047016772064,289.5,31.0,directa,18185.0,mmus_pseudohuerfanas,2
+1485251,mmus,no informativa,Q91ZR5,19,0.0,10477.0,0.5761341765191091,190240.0,10477.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+1525779,mmus,no informativa,O55234,4,0.0,9170.0,0.5042617541930162,184956.0,9170.0,indirecta,18185.0,mmus_pseudohuerfanas,1
+1620550,mmus,no informativa,Q8CBB9,6,0.0,9104.5,0.5006598845202089,184620.5,9104.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+1656553,mmus,informativa,Q05769,4,0.0248236189461258,1.0,5.499037668408029e-05,11.0,1.0,directa,18185.0,mmus_pseudohuerfanas,2
+1675068,mmus,no informativa,Q9EQY0,6,0.0,9121.5,0.5015947209238383,185069.0,9121.5,indirecta,18185.0,mmus_pseudohuerfanas,1
+1679670,mmus,no informativa,Q9EQQ9,2,0.0,9124.5,0.5017596920538906,184809.0,9124.5,indirecta,18185.0,mmus_pseudohuerfanas,0
+1681505,mmus,no informativa,Q9ESL4,2,0.0,9154.0,0.503381908166071,184873.0,9154.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+1683546,mmus,no informativa,P30204,841,0.0,11652.0,0.6407478691229035,216505.5,11652.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+1693168,mmus,no informativa,Q9EPK8,2,0.0,9104.5,0.5006598845202089,184450.5,9104.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+1695723,mmus,no informativa,Q3TCH7,14,0.0,9181.5,0.5048941435248832,186899.5,9181.5,indirecta,18185.0,mmus_pseudohuerfanas,1
+1726608,mmus,no informativa,P51141,3,0.0,9115.5,0.5012647786637339,184777.0,9115.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+1741418,mmus,no informativa,Q9JHI9,7,0.0,10007.5,0.5503161946659335,189065.5,10007.5,indirecta,18185.0,mmus_pseudohuerfanas,1
+1756458,mmus,informativa,P0C7A3,2,1.0,1.0,5.499037668408029e-05,1.5,1.0,directa,18185.0,mmus_pseudohuerfanas,3
+2077660,mmus,no informativa,Q01237,4,0.0,9182.5,0.5049491339015673,186591.5,9182.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+2146436,mmus,informativa,Q9Z2X8,9,0.1045494173350903,6.0,0.0003299422601044,19.0,6.0,directa,18185.0,mmus_pseudohuerfanas,0
+2156238,mmus,no informativa,Q3UHJ0,4,0.0,9110.0,0.5009623315919715,184526.5,9110.0,indirecta,18185.0,mmus_pseudohuerfanas,0
+2162104,mmus,no informativa,Q8K424,6,0.0,9114.5,0.5012097882870498,184515.0,9114.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+2212437,mmus,no informativa,Q9JIP4,7,0.0,9252.0,0.5087709650811109,188375.5,9252.0,indirecta,18185.0,mmus_pseudohuerfanas,1
+2261508,mmus,no informativa,Q01237,5,0.0,9285.0,0.5105856475116854,186263.5,9285.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+2286581,mmus,informativa,Q8C7D2,4,0.0772704532929344,1.0,5.499037668408029e-05,19.5,1.0,directa,18185.0,mmus_pseudohuerfanas,0
+2294517,mmus,no informativa,Q01237,14,0.0,9255.0,0.5089359362111631,185627.5,9255.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+2328369,mmus,no informativa,P97793,4,0.0,9224.0,0.5072312345339566,187336.0,9224.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+2329189,mmus,no informativa,P05132,2,0.0,9107.5,0.5008248556502612,184502.5,9107.5,indirecta,18185.0,mmus_pseudohuerfanas,2
+2357375,mmus,no informativa,Q05769,7,0.0,9922.0,0.5456145174594446,186871.0,9922.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+2366833,mmus,no informativa,Q91WR5,2,0.0,9153.0,0.5033269177893869,186169.0,9153.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+2370009,mmus,no informativa,P56389,4,0.0,9110.0,0.5009623315919715,184455.0,9110.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+2371120,mmus,no informativa,Q64374,5,0.0,9094.0,0.5000824855650261,184281.0,9094.0,indirecta,18185.0,mmus_pseudohuerfanas,2
+2375557,mmus,informativa,Q9R194,4,0.0249339747217506,1.5,8.248556502612044e-05,13.5,1.5,indirecta,18185.0,mmus_pseudohuerfanas,0
+2375796,mmus,no informativa,E9Q9W7,5,0.0,9148.0,0.5030519659059665,184787.5,9148.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+2381400,mmus,no informativa,P29477,8,0.0,9187.0,0.5051965905966456,185100.0,9187.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+2381965,mmus,informativa,O35405,1477,0.0122637573744617,805.0,0.0442672532306846,12536.0,805.0,directa,18185.0,mmus_pseudohuerfanas,3
+2382630,mmus,no informativa,P19096,29,0.0,9184.0,0.5050316194665934,186908.5,9184.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+2383297,mmus,no informativa,P04918,2,0.0,9108.5,0.5008798460269452,184583.5,9108.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+2384371,mmus,no informativa,O35298,5,0.0,9093.0,0.500027495188342,184343.5,9093.0,indirecta,18185.0,mmus_pseudohuerfanas,1
+2384938,mmus,no informativa,P06745,2,0.0,9159.5,0.5036843552378334,186282.0,9159.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+2385686,mmus,informativa,P97784,4,0.0249339747217506,1.5,8.248556502612044e-05,13.5,1.5,indirecta,18185.0,mmus_pseudohuerfanas,0
+2386468,mmus,no informativa,P97438,14,0.0,9317.5,0.512372834753918,187799.0,9317.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+2388506,mmus,no informativa,O88188,29,0.0,9347.5,0.5140225460544404,187962.0,9347.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+2388536,mmus,no informativa,Q9D1N4,9,0.0,9460.0,0.5202089634313996,186212.0,9460.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+2388761,mmus,no informativa,P21447,10,0.0,9195.5,0.5056640087984603,184727.5,9195.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+2389157,mmus,no informativa,Q9DBB5,3,0.0,9124.0,0.5017321968655485,184985.0,9124.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+2389965,mmus,no informativa,O35310,15,0.0,9120.0,0.5015122353588122,185059.0,9120.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+2391153,mmus,no informativa,P33242,31,0.0,9159.0,0.5036568600494913,185331.5,9159.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+2391275,mmus,no informativa,Q9QWY8,2,0.0,9102.5,0.5005499037668408,184420.5,9102.5,indirecta,18185.0,mmus_pseudohuerfanas,3
+2393204,mmus,no informativa,P50405,5,0.0,9093.0,0.500027495188342,184322.5,9093.0,indirecta,18185.0,mmus_pseudohuerfanas,3
+2395015,mmus,informativa,Q9ES89,64,0.0140382168079262,32.0,0.0017596920538905,574.5,32.0,directa,18185.0,mmus_pseudohuerfanas,3
+2395461,mmus,informativa,Q8CHT0,11,0.022033310314436,4.0,0.0002199615067363,129.0,4.0,directa,18185.0,mmus_pseudohuerfanas,2
+1903,mtub,no informativa,P9WID5,9,0.0,2074.5,0.5093297323839922,188830.5,2074.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+8512,mtub,informativa,O53512,61,0.1538461538461538,2.0,0.0004910385465259,75.0,2.0,directa,4073.0,mtub_pseudohuerfanas,2
+20015,mtub,no informativa,P9WFX5,170,0.0,2174.0,0.5337589000736558,194137.0,2174.0,indirecta,4073.0,mtub_pseudohuerfanas,0
+29265,mtub,no informativa,P9WHE9,2,0.0,2037.0,0.5001227596366314,186564.0,2037.0,indirecta,4073.0,mtub_pseudohuerfanas,1
+36102,mtub,no informativa,P9WNY5,15,0.0,2044.5,0.5019641541861036,184822.5,2044.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+37733,mtub,no informativa,P9WKD3,10,0.0,2042.0,0.5013503560029462,186456.0,2042.0,indirecta,4073.0,mtub_pseudohuerfanas,0
+41528,mtub,no informativa,P9WFU3,2,0.0,2047.5,0.5027007120058925,184503.5,2047.5,indirecta,4073.0,mtub_pseudohuerfanas,0
+41994,mtub,no informativa,I6Y9J2,2,0.0,2037.0,0.5001227596366314,186148.0,2037.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+56291,mtub,no informativa,Q79FX6,8,0.0,2077.5,0.510066290203781,187130.0,2077.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+73184,mtub,no informativa,P9WFK7,5,0.0,2073.0,0.5089614534740977,188692.0,2073.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+87573,mtub,no informativa,P9WP31,8,0.0,2039.5,0.5007365578197889,185182.0,2039.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+91610,mtub,no informativa,P9WG73,3,0.0,2037.5,0.500245519273263,186316.0,2037.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+91756,mtub,no informativa,P9WMW9,22,0.0,2058.5,0.5054014240117849,185743.0,2058.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+103370,mtub,no informativa,P9WLL7,42,0.0,2084.5,0.5117849251166217,186224.0,2084.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+120043,mtub,no informativa,P9WMN3,3,0.0,2037.0,0.5001227596366314,185664.5,2037.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+137196,mtub,no informativa,P9WMN3,3,0.0,2049.0,0.5030689909157869,186550.5,2049.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+145045,mtub,no informativa,P9WMN3,3,0.0,2040.0,0.5008593174564203,184423.0,2040.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+195427,mtub,informativa,P9WNX1,12,0.0053191489361702,1.0,0.0002455192732629,322.5,1.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+207191,mtub,no informativa,P9WMN3,3,0.0,2038.0,0.5003682789098944,184943.5,2038.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+209340,mtub,informativa,P9WMN3,7,0.0848839269891901,1.0,0.0002455192732629,1.0,1.0,directa,4073.0,mtub_pseudohuerfanas,3
+209571,mtub,no informativa,P9WMN3,16,0.0,2055.5,0.504664866191996,186960.0,2055.5,indirecta,4073.0,mtub_pseudohuerfanas,3
+211621,mtub,no informativa,P9WMN3,6,0.0,2047.0,0.502577952369261,186538.0,2047.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+244011,mtub,no informativa,P9WMN3,6,0.0,2073.0,0.5089614534740977,189216.0,2073.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+247249,mtub,no informativa,P9WMN3,4,0.0,2073.0,0.5089614534740977,187267.5,2073.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+248564,mtub,no informativa,P9WMN3,5,0.0,2046.5,0.5024551927326295,185162.0,2046.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+276840,mtub,no informativa,P9WMN3,4,0.0,2047.0,0.502577952369261,185452.0,2047.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+280537,mtub,no informativa,P9WMN3,4,0.0,2047.5,0.5027007120058925,185398.5,2047.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+323190,mtub,no informativa,P9WMN3,7,0.0,2045.0,0.5020869138227351,186996.0,2045.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+361719,mtub,no informativa,P9WMN3,5,0.0,2044.5,0.5019641541861036,185747.5,2044.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+383719,mtub,no informativa,P9WMN3,6,0.0,2042.5,0.5014731156395777,185623.0,2042.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+387779,mtub,no informativa,P9WMN3,14,0.0,2053.0,0.5040510680088387,188564.0,2053.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+396834,mtub,informativa,P9WMN3,7,0.0848839269891901,1.0,0.0002455192732629,1.0,1.0,directa,4073.0,mtub_pseudohuerfanas,3
+406888,mtub,no informativa,P9WMN3,3,0.0,2040.5,0.5009820770930518,186253.0,2040.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+410155,mtub,no informativa,I6X8D2,2,0.0,2037.0,0.5001227596366314,184903.5,2037.0,indirecta,4073.0,mtub_pseudohuerfanas,0
+438039,mtub,no informativa,I6Y9J2,1309,0.0,2368.5,0.5815123987232997,217559.5,2368.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+441469,mtub,no informativa,P9WNL7,8,0.0,2037.5,0.500245519273263,185765.5,2037.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+450804,mtub,no informativa,O53872,6,0.0,2064.0,0.5067517800147312,186405.0,2064.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+452005,mtub,no informativa,P9WN95,3,0.0,2073.5,0.5090842131107292,186478.0,2073.5,indirecta,4073.0,mtub_pseudohuerfanas,1
+484678,mtub,no informativa,P9WQD9,5,0.0,2075.5,0.5095752516572551,187167.0,2075.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+509282,mtub,no informativa,P9WNY5,3,0.0,2038.0,0.5003682789098944,184435.0,2038.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+509286,mtub,no informativa,P9WKK7,12,0.0,2083.5,0.5115394058433587,190641.5,2083.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+549249,mtub,informativa,P9WJF1,4,0.0230856252568987,2.0,0.0004910385465259,9.5,2.0,directa,4073.0,mtub_pseudohuerfanas,3
+549875,mtub,no informativa,P9WPX7,2,0.0,2072.5,0.5088386938374663,186798.5,2072.5,indirecta,4073.0,mtub_pseudohuerfanas,3
+552656,mtub,no informativa,P9WK17,2,0.0,2046.5,0.5024551927326295,185039.0,2046.5,indirecta,4073.0,mtub_pseudohuerfanas,0
+918783,mtub,no informativa,P9WFK7,4,0.0,2037.0,0.5001227596366314,184471.0,2037.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+948059,mtub,no informativa,P9WHQ9,5,0.0,2043.5,0.5017186349128406,185679.0,2043.5,indirecta,4073.0,mtub_pseudohuerfanas,3
+951106,mtub,no informativa,P9WMN3,6,0.0,2074.0,0.5092069727473607,186716.5,2074.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+955693,mtub,informativa,O53512,89,0.2307692307692307,2.0,0.0004910385465259,63.0,2.0,directa,4073.0,mtub_pseudohuerfanas,2
+975404,mtub,no informativa,O53871,2,0.0,2037.0,0.5001227596366314,185292.0,2037.0,indirecta,4073.0,mtub_pseudohuerfanas,0
+1008566,mtub,no informativa,O05581,2,0.0,2037.0,0.5001227596366314,186142.5,2037.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+1019855,mtub,no informativa,P9WMN3,2,0.0,2046.5,0.5024551927326295,185264.5,2046.5,indirecta,4073.0,mtub_pseudohuerfanas,3
+1022998,mtub,no informativa,P9WMN3,4,0.0,2072.5,0.5088386938374663,187221.5,2072.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+1057330,mtub,no informativa,P9WMN3,11,0.0,2059.0,0.5055241836484164,186798.5,2059.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+1098246,mtub,no informativa,P9WJF1,2,0.0,2050.5,0.5034372698256813,184576.0,2050.5,indirecta,4073.0,mtub_pseudohuerfanas,1
+1121808,mtub,no informativa,P9WMN3,10,0.0,2044.0,0.5018413945494722,184635.5,2044.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+1380285,mtub,informativa,O53512,70,0.0769230769230769,2.0,0.0004910385465259,61.0,2.0,directa,4073.0,mtub_pseudohuerfanas,3
+1385717,mtub,no informativa,P9WPP7,6,0.0,2058.5,0.5054014240117849,187598.0,2058.5,indirecta,4073.0,mtub_pseudohuerfanas,0
+1404814,mtub,no informativa,P9WID5,3,0.0,2037.0,0.5001227596366314,186190.0,2037.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+1506130,mtub,no informativa,P9WGR1,2,0.0,2038.0,0.5003682789098944,184294.5,2038.0,indirecta,4073.0,mtub_pseudohuerfanas,0
+1516483,mtub,no informativa,P9WMC1,3,0.0,2039.0,0.5006137981831574,185257.5,2039.0,indirecta,4073.0,mtub_pseudohuerfanas,0
+1581949,mtub,no informativa,P9WMN3,3,0.0,2037.0,0.5001227596366314,184320.5,2037.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+1602339,mtub,no informativa,P9WGR1,17,0.0,2040.5,0.5009820770930518,189747.0,2040.5,indirecta,4073.0,mtub_pseudohuerfanas,0
+1620550,mtub,no informativa,P9WK91,6,0.0,2048.0,0.502823471642524,184620.5,2048.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+1635385,mtub,no informativa,P9WGR1,2,0.0,2076.5,0.509820770930518,186309.0,2076.5,indirecta,4073.0,mtub_pseudohuerfanas,0
+1638864,mtub,no informativa,P9WG45,3,0.0,2037.5,0.500245519273263,184300.5,2037.5,indirecta,4073.0,mtub_pseudohuerfanas,0
+1669799,mtub,no informativa,O53623,2,0.0,2049.0,0.5030689909157869,184662.5,2049.0,indirecta,4073.0,mtub_pseudohuerfanas,0
+1698970,mtub,informativa,P9WJF1,5,0.0461712505137975,2.0,0.0004910385465259,9.5,2.0,directa,4073.0,mtub_pseudohuerfanas,3
+1708522,mtub,no informativa,P9WID5,6,0.0,2049.0,0.5030689909157869,187857.5,2049.0,indirecta,4073.0,mtub_pseudohuerfanas,0
+1763349,mtub,no informativa,P9WID5,17,0.0,2043.0,0.5015958752762092,190086.5,2043.0,indirecta,4073.0,mtub_pseudohuerfanas,0
+1859939,mtub,no informativa,P9WID5,41,0.0,2093.0,0.5138718389393567,190542.5,2093.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+1981834,mtub,no informativa,P9WI81,2,0.0,2039.5,0.5007365578197889,184461.5,2039.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+2147183,mtub,no informativa,P9WPZ9,2,0.0,2072.5,0.5088386938374663,186188.5,2072.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+2169694,mtub,no informativa,O53728,2,0.0,2072.5,0.5088386938374663,186750.5,2072.5,indirecta,4073.0,mtub_pseudohuerfanas,0
+2207006,mtub,no informativa,O53343,7,0.0,2100.0,0.5155904738521974,189545.5,2100.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+2279062,mtub,informativa,O53512,7,0.0769230769230769,1.0,0.0002455192732629,20.0,1.0,directa,4073.0,mtub_pseudohuerfanas,2
+2282812,mtub,no informativa,P9WKD3,8,0.0,2050.5,0.5034372698256813,184966.0,2050.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+2332379,mtub,no informativa,P71913,36,0.0,2041.0,0.5011048367296833,185599.0,2041.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+2367058,mtub,informativa,O53512,2,0.0769230769230769,1.0,0.0002455192732629,7.0,1.0,directa,4073.0,mtub_pseudohuerfanas,2
+2370009,mtub,no informativa,P9WPQ5,4,0.0,2038.5,0.5004910385465259,184455.0,2038.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+2375261,mtub,informativa,P9WQ47,2,0.0052518973406541,10.5,0.0025779523692609,63.5,10.5,indirecta,4073.0,mtub_pseudohuerfanas,3
+2375678,mtub,no informativa,I6Y8F7,2,0.0,2037.0,0.5001227596366314,184344.5,2037.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+2375796,mtub,no informativa,I6X8D2,5,0.0,2048.5,0.5029462312791554,184787.5,2048.5,indirecta,4073.0,mtub_pseudohuerfanas,3
+2376367,mtub,informativa,P9WHQ9,3,0.0544910179640718,1.0,0.0002455192732629,17.5,1.0,directa,4073.0,mtub_pseudohuerfanas,3
+2376580,mtub,no informativa,P71968,2,0.0,2040.5,0.5009820770930518,184310.0,2040.5,indirecta,4073.0,mtub_pseudohuerfanas,3
+2377151,mtub,no informativa,P9WK17,2,0.0,2044.0,0.5018413945494722,184571.0,2044.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+2378037,mtub,informativa,P9WLL7,10,0.0552001576574392,8.0,0.0019641541861036,21.0,8.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+2378110,mtub,no informativa,P9WK17,5,0.0,2094.5,0.5142401178492512,187236.5,2094.5,indirecta,4073.0,mtub_pseudohuerfanas,0
+2381466,mtub,no informativa,P9WJV5,21,0.0,2078.0,0.5101890498404125,186288.0,2078.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+2382636,mtub,no informativa,P96202,4,0.0,2067.0,0.50748833783452,184497.0,2067.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+2384937,mtub,no informativa,P9WKE5,31,0.0,2045.5,0.5022096734593665,184980.0,2045.5,indirecta,4073.0,mtub_pseudohuerfanas,3
+2385889,mtub,no informativa,P9WMN1,5,0.0,2038.0,0.5003682789098944,185029.0,2038.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+2385907,mtub,informativa,P9WNX1,2,0.0221325507459036,1.0,0.0002455192732629,16.0,1.0,directa,4073.0,mtub_pseudohuerfanas,3
+2386106,mtub,no informativa,P9WNY5,2,0.0,2058.5,0.5054014240117849,184613.0,2058.5,indirecta,4073.0,mtub_pseudohuerfanas,2
+2386330,mtub,informativa,P9WNX1,2,0.0221325507459036,1.0,0.0002455192732629,16.0,1.0,directa,4073.0,mtub_pseudohuerfanas,3
+2386872,mtub,informativa,P9WML9,2,0.0714285714285714,1.0,0.0002455192732629,6.0,1.0,indirecta,4073.0,mtub_pseudohuerfanas,2
+2389625,mtub,informativa,I6Y9J2,10,0.2396751231394228,3.0,0.0007365578197888,4.0,3.0,directa,4073.0,mtub_pseudohuerfanas,3
+2391376,mtub,no informativa,P9WFR5,5,0.0,2037.0,0.5001227596366314,186001.5,2037.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+2391511,mtub,no informativa,P9WPA5,3,0.0,2069.0,0.507979376381046,184693.5,2069.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+2392598,mtub,no informativa,P9WKE5,9,0.0,2073.5,0.5090842131107292,188430.5,2073.5,indirecta,4073.0,mtub_pseudohuerfanas,3
+2394483,mtub,informativa,P9WK11,2,0.0781326263341129,1.0,0.0002455192732629,1.0,1.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+2395015,mtub,informativa,P9WN67,64,0.0047169811320754,31.0,0.0076110974711514,1173.0,31.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+2395785,mtub,no informativa,P9WPP3,2,0.0,2037.0,0.5001227596366314,184746.5,2037.0,indirecta,4073.0,mtub_pseudohuerfanas,3
+35691,osat,no informativa,Q0D9S3,7,0.0,11184.5,0.5081092131564601,188370.5,11184.5,indirecta,22012.0,osat_pseudohuerfanas,2
+86764,osat,no informativa,Q0JF02,12,0.0,11047.5,0.50188533527167,184658.5,11047.5,indirecta,22012.0,osat_pseudohuerfanas,3
+91738,osat,no informativa,A0A0P0XII1,84,0.0,11390.0,0.5174450299836453,193614.0,11390.0,indirecta,22012.0,osat_pseudohuerfanas,2
+91787,osat,informativa,Q9FXT4,1517,0.0691660822523893,240.5,0.0109258586225695,3449.5,240.5,indirecta,22012.0,osat_pseudohuerfanas,2
+244355,osat,no informativa,Q0JA29,2,0.0,11016.5,0.5004770125386153,184680.0,11016.5,indirecta,22012.0,osat_pseudohuerfanas,2
+353607,osat,no informativa,Q653V4,9,0.0,11025.5,0.500885880428857,187143.0,11025.5,indirecta,22012.0,osat_pseudohuerfanas,2
+365428,osat,informativa,Q65XA0,10,0.0009005477301587,119.0,0.0054061421043067,1330.0,119.0,indirecta,22012.0,osat_pseudohuerfanas,2
+531040,osat,informativa,Q653V4,40,0.04044187243731,12.5,0.0005678720697801,178.5,12.5,indirecta,22012.0,osat_pseudohuerfanas,3
+963187,osat,informativa,Q306J3,1366,0.1367967326340563,81.5,0.0037025258949663,1728.0,81.5,indirecta,22012.0,osat_pseudohuerfanas,3
+1282450,osat,informativa,Q0JMY8,1262,0.0647797310305142,220.5,0.0100172633109213,3225.0,220.5,indirecta,22012.0,osat_pseudohuerfanas,2
+1908147,osat,informativa,Q652L6,27,0.0080073899191602,24.0,0.0010903143739778,444.0,24.0,directa,22012.0,osat_pseudohuerfanas,2
+2376608,osat,no informativa,Q5ICN3,8,0.0,11142.5,0.5062011630019989,186731.0,11142.5,indirecta,22012.0,osat_pseudohuerfanas,3
+2385163,osat,no informativa,Q75I93,7,0.0,11009.0,0.5001362892967472,184387.0,11009.0,indirecta,22012.0,osat_pseudohuerfanas,2
+2391518,osat,no informativa,Q942P9,3,0.0,11020.0,0.5006360167181537,184961.5,11020.0,indirecta,22012.0,osat_pseudohuerfanas,3
+44602,pfal,no informativa,Q8I5R7,3,0.0,2749.5,0.5003639672429482,184439.0,2749.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+73214,pfal,no informativa,Q8I2J3,5,0.0,2755.5,0.5014558689717925,184881.5,2755.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+91611,pfal,no informativa,Q8IBS5,3,0.0,2750.0,0.5004549590536852,186316.0,2750.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+92306,pfal,no informativa,Q8IEE9,377,0.0,2875.5,0.5232939035486807,197332.5,2875.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+92470,pfal,no informativa,Q8IEL9,357,0.0,2860.0,0.5204731574158326,196085.5,2860.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+92592,pfal,no informativa,C6KSV3,9,0.0,2798.5,0.5092811646951775,188930.0,2798.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+115904,pfal,no informativa,Q8I2J3,12,0.0,2754.0,0.5011828935395815,184662.5,2754.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+115947,pfal,no informativa,Q8IL11,2,0.0,2749.0,0.500272975432211,184296.0,2749.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+119824,pfal,no informativa,O96935,358,0.0,2860.0,0.5204731574158326,196085.5,2860.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+122020,pfal,no informativa,Q8IL11,9,0.0,2749.5,0.5003639672429482,186745.0,2749.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+130149,pfal,no informativa,Q8IL11,3,0.0,2756.0,0.5015468607825295,186797.0,2756.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+141366,pfal,informativa,O96935,4,0.0218329747978341,1.0,0.000181983621474,6.5,1.0,directa,5495.0,pfal_pseudohuerfanas,3
+143860,pfal,no informativa,Q8IL11,4,0.0,2752.5,0.5009099181073703,184601.0,2752.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+149214,pfal,no informativa,O96935,10,0.0,2752.0,0.5008189262966333,185327.5,2752.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+156628,pfal,no informativa,Q8I1R6,8,0.0,2789.5,0.5076433121019108,185889.5,2789.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+160025,pfal,no informativa,Q8IL11,27,0.0,2771.5,0.5043676069153776,185964.0,2771.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+161418,pfal,no informativa,Q8IL11,2,0.0,2765.0,0.5031847133757962,185577.0,2765.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+164064,pfal,no informativa,O96935,3,0.0,2765.0,0.5031847133757962,186000.5,2765.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+166042,pfal,no informativa,Q8IL11,9,0.0,2750.5,0.5005459508644222,186568.0,2750.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+168187,pfal,no informativa,Q8IL11,2,0.0,2748.0,0.500090991810737,186177.0,2748.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+169968,pfal,no informativa,O96935,5,0.0,2788.5,0.5074613284804368,186555.5,2788.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+184522,pfal,no informativa,Q8IL11,13,0.0,2849.5,0.5185623293903548,189929.0,2849.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+186032,pfal,no informativa,Q8IL11,7,0.0,2751.0,0.5006369426751592,187100.0,2751.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+191876,pfal,no informativa,Q8IL11,2,0.0,2784.0,0.5066424021838034,185577.0,2784.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+194735,pfal,no informativa,Q8IL11,5,0.0,2751.5,0.5007279344858963,184970.0,2751.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+201111,pfal,no informativa,Q8I2J3,2,0.0,2781.5,0.5061874431301183,186583.0,2781.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+201288,pfal,no informativa,O96935,2,0.0,2748.5,0.500181983621474,184708.5,2748.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+202242,pfal,no informativa,Q8IL11,5,0.0,2799.5,0.5094631483166515,188006.0,2799.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+203395,pfal,no informativa,O96935,2,0.0,2757.0,0.5017288444040037,184996.5,2757.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+207447,pfal,no informativa,O96935,3,0.0,2798.5,0.5092811646951775,187481.0,2798.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+211084,pfal,no informativa,O96935,2,0.0,2761.5,0.5025477707006369,185264.5,2761.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+211980,pfal,no informativa,Q8IL11,2,0.0,2748.0,0.500090991810737,184329.5,2748.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+217984,pfal,no informativa,O96935,3,0.0,2788.0,0.5073703366696998,186525.0,2788.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+225141,pfal,no informativa,Q8IL11,2,0.0,2787.0,0.5071883530482256,186520.5,2787.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+226506,pfal,no informativa,O96935,16,0.0,2838.0,0.5164695177434031,189196.5,2838.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+227639,pfal,no informativa,O96935,5,0.0,2751.5,0.5007279344858963,184911.5,2751.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+237055,pfal,no informativa,O96935,6,0.0,2795.5,0.5087352138307553,187658.0,2795.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+237353,pfal,no informativa,O96935,2,0.0,2748.5,0.500181983621474,184713.5,2748.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+238902,pfal,no informativa,O96935,2,0.0,2750.0,0.5004549590536852,184332.5,2750.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+240692,pfal,no informativa,Q8IL11,4,0.0,2765.0,0.5031847133757962,185040.0,2765.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+240925,pfal,no informativa,Q8IL11,4,0.0,2790.0,0.5077343039126478,187252.0,2790.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+243742,pfal,no informativa,O96935,3,0.0,2781.5,0.5061874431301183,187017.5,2781.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+244920,pfal,no informativa,O96935,2,0.0,2756.0,0.5015468607825295,186791.5,2756.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+245009,pfal,no informativa,Q8IL11,5,0.0,2759.0,0.5020928116469517,185394.5,2759.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+249341,pfal,no informativa,O96935,3,0.0,2761.5,0.5025477707006369,187152.5,2761.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+250783,pfal,no informativa,Q8IL11,3,0.0,2765.0,0.5031847133757962,186000.5,2765.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+252631,pfal,informativa,Q8I2J3,2,0.0024141092160443,1.0,0.000181983621474,92.5,1.0,directa,5495.0,pfal_pseudohuerfanas,3
+258198,pfal,no informativa,Q8IL11,4,0.0,2748.0,0.500090991810737,186598.5,2748.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+260810,pfal,no informativa,Q8IL11,2,0.0,2781.5,0.5061874431301183,188047.5,2781.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+264281,pfal,no informativa,Q8I2J3,3,0.0,2756.0,0.5015468607825295,184966.0,2756.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+264318,pfal,no informativa,O96935,12,0.0,2803.5,0.5101910828025478,188833.5,2803.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+264477,pfal,no informativa,O96935,5,0.0,2757.5,0.5018198362147407,185730.0,2757.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+267760,pfal,informativa,O96935,2,0.0218329747978341,1.0,0.000181983621474,6.5,1.0,directa,5495.0,pfal_pseudohuerfanas,2
+268607,pfal,no informativa,O96935,5,0.0,2788.5,0.5074613284804368,188535.5,2788.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+270652,pfal,no informativa,O96935,2,0.0,2756.0,0.5015468607825295,184623.0,2756.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+272862,pfal,no informativa,O96935,2,0.0,2781.5,0.5061874431301183,186194.0,2781.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+273040,pfal,no informativa,Q8IL11,2,0.0,2764.5,0.5030937215650592,187342.5,2764.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+274985,pfal,no informativa,O96935,8,0.0,2818.5,0.5129208371246587,189280.0,2818.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+275888,pfal,no informativa,Q8I2J3,3,0.0,2782.5,0.5063694267515924,186265.0,2782.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+276569,pfal,no informativa,Q8IL11,2,0.0,2748.0,0.500090991810737,184678.0,2748.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+279974,pfal,no informativa,O96935,2,0.0,2753.5,0.5010919017288444,184983.0,2753.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+281093,pfal,no informativa,O96935,5,0.0,2764.0,0.5030027297543221,187112.0,2764.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+281535,pfal,no informativa,Q8IL11,10,0.0,2823.0,0.5137397634212921,188302.5,2823.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+283070,pfal,no informativa,Q8IL11,2,0.0,2782.0,0.5062784349408553,186228.0,2782.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+283838,pfal,no informativa,Q8IL11,11,0.0,2781.5,0.5061874431301183,187155.5,2781.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+285814,pfal,no informativa,O96935,4,0.0,2804.5,0.5103730664240218,187699.0,2804.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+287922,pfal,no informativa,Q8IL11,4,0.0,2764.0,0.5030027297543221,185649.0,2764.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+290256,pfal,no informativa,Q8IM71,3,0.0,2764.5,0.5030937215650592,185238.5,2764.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+290376,pfal,no informativa,O96935,2,0.0,2749.0,0.500272975432211,184353.5,2749.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+291512,pfal,no informativa,Q8IL11,4,0.0,2761.0,0.5024567788898999,185350.0,2761.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+300873,pfal,no informativa,O96935,5,0.0,2769.5,0.5040036396724294,187475.0,2769.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+302173,pfal,no informativa,Q8IL11,2,0.0,2765.0,0.5031847133757962,185577.0,2765.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+304089,pfal,no informativa,Q8I2J3,3,0.0,2782.0,0.5062784349408553,186224.5,2782.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+305075,pfal,no informativa,Q8IL11,5,0.0,2784.5,0.5067333939945405,186664.5,2784.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+306824,pfal,no informativa,Q8IL11,2,0.0,2754.0,0.5011828935395815,184646.0,2754.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+308612,pfal,no informativa,Q8IL11,2,0.0,2756.5,0.5016378525932667,184934.0,2756.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+309634,pfal,no informativa,Q8IL11,5,0.0,2795.5,0.5087352138307553,187607.0,2795.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+311610,pfal,no informativa,Q8IL11,3,0.0,2748.0,0.500090991810737,184745.0,2748.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+312314,pfal,no informativa,Q8I2J3,2,0.0,2748.5,0.500181983621474,184746.5,2748.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+312865,pfal,no informativa,O96935,3,0.0,2781.5,0.5061874431301183,186194.0,2781.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+312894,pfal,no informativa,Q8IL11,2,0.0,2756.5,0.5016378525932667,184950.5,2756.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+313018,pfal,no informativa,Q8IL11,2,0.0,2749.0,0.500272975432211,184332.0,2749.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+313340,pfal,no informativa,Q8IL11,2,0.0,2765.0,0.5031847133757962,185577.0,2765.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+315346,pfal,no informativa,Q8IL11,3,0.0,2750.0,0.5004549590536852,184357.0,2750.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+316726,pfal,no informativa,O96935,2,0.0,2756.0,0.5015468607825295,184938.0,2756.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+318478,pfal,no informativa,Q8IL11,2,0.0,2749.5,0.5003639672429482,184420.0,2749.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+320291,pfal,no informativa,O96935,2,0.0,2748.0,0.500090991810737,186177.0,2748.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+322920,pfal,no informativa,O96935,2,0.0,2748.5,0.500181983621474,184708.5,2748.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+324851,pfal,informativa,O96935,3,0.0218329747978341,1.0,0.000181983621474,29.5,1.0,directa,5495.0,pfal_pseudohuerfanas,2
+326428,pfal,no informativa,O96935,2,0.0,2754.0,0.5011828935395815,184646.0,2754.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+326603,pfal,no informativa,Q8IL11,3,0.0,2754.0,0.5011828935395815,186532.0,2754.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+326605,pfal,no informativa,Q8IL11,3,0.0,2748.5,0.500181983621474,184643.0,2748.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+327317,pfal,no informativa,Q8IL11,2,0.0,2764.0,0.5030027297543221,185191.5,2764.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+328022,pfal,no informativa,Q8IL11,7,0.0,2814.5,0.5121929026387625,187819.0,2814.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+330738,pfal,no informativa,O96935,3,0.0,2756.0,0.5015468607825295,185361.0,2756.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+332601,pfal,no informativa,O96935,2,0.0,2782.0,0.5062784349408553,186190.0,2782.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+338640,pfal,no informativa,Q8IL11,2,0.0,2748.0,0.500090991810737,185112.5,2748.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+340107,pfal,no informativa,Q8IL11,2,0.0,2782.5,0.5063694267515924,186265.0,2782.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+341306,pfal,no informativa,O96935,2,0.0,2748.0,0.500090991810737,186564.0,2748.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+343567,pfal,no informativa,Q8IL11,4,0.0,2784.0,0.5066424021838034,186268.0,2784.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+344005,pfal,no informativa,Q8IL11,4,0.0,2750.0,0.5004549590536852,186493.5,2750.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+345582,pfal,no informativa,O96935,3,0.0,2795.0,0.5086442220200182,187159.5,2795.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+346386,pfal,no informativa,Q8IL11,4,0.0,2769.0,0.5039126478616924,186008.5,2769.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+351487,pfal,no informativa,O96935,2,0.0,2748.0,0.500090991810737,184712.5,2748.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+352597,pfal,no informativa,Q8IL11,10,0.0,2795.5,0.5087352138307553,187998.0,2795.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+358671,pfal,no informativa,O96935,9,0.0,2791.0,0.5079162875341219,189712.5,2791.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+358886,pfal,no informativa,Q8I2J3,3,0.0,2766.0,0.5033666969972702,185682.5,2766.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+359348,pfal,no informativa,Q8IL11,7,0.0,2763.5,0.5029117379435851,185520.5,2763.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+359472,pfal,no informativa,Q8IL11,4,0.0,2748.0,0.500090991810737,186790.0,2748.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+362707,pfal,no informativa,Q8IL11,2,0.0,2756.0,0.5015468607825295,184542.5,2756.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+366404,pfal,no informativa,Q8I2J3,2,0.0,2789.5,0.5076433121019108,186798.5,2789.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+366919,pfal,no informativa,Q8IL11,4,0.0,2761.5,0.5025477707006369,185722.0,2761.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+367187,pfal,no informativa,Q8IL11,2,0.0,2756.0,0.5015468607825295,186433.5,2756.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+367244,pfal,no informativa,Q8IL11,3,0.0,2781.5,0.5061874431301183,188047.5,2781.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+368574,pfal,no informativa,Q8IL11,2,0.0,2761.5,0.5025477707006369,185264.5,2761.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+369536,pfal,no informativa,O96935,3,0.0,2764.0,0.5030027297543221,185626.0,2764.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+372215,pfal,no informativa,O96935,5,0.0,2751.0,0.5006369426751592,184821.5,2751.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+372816,pfal,no informativa,Q8IL11,2,0.0,2753.5,0.5010919017288444,184650.0,2753.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+373421,pfal,no informativa,O96935,35,0.0,2811.0,0.5115559599636033,188975.5,2811.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+378341,pfal,no informativa,Q8IL11,2,0.0,2756.0,0.5015468607825295,185326.5,2756.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+380794,pfal,no informativa,Q8IL11,6,0.0,2766.5,0.5034576888080072,186114.5,2766.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+383000,pfal,no informativa,Q8IL11,5,0.0,2806.0,0.510646041856233,187917.5,2806.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+383719,pfal,no informativa,O96935,6,0.0,2765.5,0.5032757051865332,185623.0,2765.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+387599,pfal,no informativa,O96935,2,0.0,2782.5,0.5063694267515924,186265.0,2782.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+389549,pfal,no informativa,Q8IL11,14,0.0,2750.0,0.5004549590536852,186715.5,2750.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+391783,pfal,no informativa,O96935,2,0.0,2765.0,0.5031847133757962,185577.0,2765.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+392643,pfal,no informativa,O96935,5,0.0,2767.5,0.5036396724294814,186139.5,2767.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+392879,pfal,no informativa,Q8IL11,2,0.0,2748.5,0.500181983621474,184319.5,2748.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+394467,pfal,no informativa,O96935,2,0.0,2750.5,0.5005459508644222,184764.5,2750.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+395471,pfal,no informativa,Q8IL11,7,0.0,2757.0,0.5017288444040037,186941.5,2757.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+399500,pfal,no informativa,O96935,5,0.0,2781.5,0.5061874431301183,188505.5,2781.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+404002,pfal,no informativa,O96935,3,0.0,2748.5,0.500181983621474,186624.0,2748.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+404103,pfal,no informativa,Q8I2J3,9,0.0,2806.5,0.51073703366697,190295.5,2806.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+404934,pfal,no informativa,Q8IL11,6,0.0,2763.5,0.5029117379435851,185859.5,2763.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+406888,pfal,no informativa,O96935,3,0.0,2748.5,0.500181983621474,186253.0,2748.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+407599,pfal,no informativa,Q8IL11,6,0.0,2762.5,0.502729754322111,187286.0,2762.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+411451,pfal,no informativa,O96935,6,0.0,2799.5,0.5094631483166515,189894.0,2799.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+420937,pfal,no informativa,Q8IL11,3,0.0,2756.5,0.5016378525932667,185301.5,2756.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+421603,pfal,no informativa,Q8IL11,3,0.0,2795.0,0.5086442220200182,187159.5,2795.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+422531,pfal,no informativa,Q8IL11,3,0.0,2757.0,0.5017288444040037,184959.0,2757.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+423757,pfal,no informativa,O96935,2,0.0,2751.0,0.5006369426751592,184313.0,2751.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+429228,pfal,no informativa,Q8I2J3,3,0.0,2781.5,0.5061874431301183,186583.0,2781.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+429314,pfal,no informativa,O96935,14,0.0,2831.5,0.5152866242038217,191095.5,2831.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+430099,pfal,no informativa,Q8IL11,6,0.0,2805.0,0.5104640582347588,190123.5,2805.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+435090,pfal,no informativa,Q8IL11,2,0.0,2757.5,0.5018198362147407,185007.0,2757.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+435337,pfal,informativa,O96935,8,0.0218329747978341,1.0,0.000181983621474,48.5,1.0,directa,5495.0,pfal_pseudohuerfanas,3
+436432,pfal,no informativa,Q8IL11,3,0.0,2749.0,0.500272975432211,184336.0,2749.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+655137,pfal,no informativa,Q8IL11,3,0.0,2785.0,0.5068243858052776,186847.0,2785.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+657991,pfal,no informativa,Q8IL11,2,0.0,2749.0,0.500272975432211,184336.0,2749.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+667596,pfal,no informativa,O96935,7,0.0,2790.0,0.5077343039126478,186763.0,2790.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+841089,pfal,no informativa,O96935,3,0.0,2787.0,0.5071883530482256,186520.5,2787.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+918783,pfal,no informativa,Q76NL8,4,0.0,2753.0,0.5010009099181074,184471.0,2753.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+941934,pfal,no informativa,Q8II73,8,0.0,2759.0,0.5020928116469517,185930.0,2759.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+949233,pfal,no informativa,Q8IIS0,75,0.0,2801.5,0.5098271155595996,191472.0,2801.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+1017241,pfal,no informativa,O96935,2,0.0,2756.0,0.5015468607825295,184903.5,2756.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+1018384,pfal,no informativa,O96935,2,0.0,2756.0,0.5015468607825295,184878.0,2756.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+1018478,pfal,no informativa,O96935,4,0.0,2789.0,0.5075523202911738,187535.5,2789.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+1019100,pfal,no informativa,O96935,29,0.0,2852.0,0.51901728844404,192655.5,2852.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+1019153,pfal,no informativa,O96935,3,0.0,2751.0,0.5006369426751592,184755.0,2751.0,indirecta,5495.0,pfal_pseudohuerfanas,1
+1019501,pfal,no informativa,Q8IL11,2,0.0,2749.5,0.5003639672429482,184394.0,2749.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+1019955,pfal,no informativa,O96935,3,0.0,2757.0,0.5017288444040037,184958.5,2757.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+1021872,pfal,no informativa,O96935,3,0.0,2757.5,0.5018198362147407,184673.5,2757.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+1022477,pfal,no informativa,Q8IL11,3,0.0,2799.0,0.5093721565059145,187464.0,2799.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+1022724,pfal,no informativa,Q8IL11,2,0.0,2748.5,0.500181983621474,184319.5,2748.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+1023608,pfal,no informativa,O96935,2,0.0,2781.5,0.5061874431301183,186194.0,2781.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+1024166,pfal,no informativa,Q8I2J3,3,0.0,2748.5,0.500181983621474,184731.5,2748.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+1024282,pfal,no informativa,Q8IL11,3,0.0,2799.0,0.5093721565059145,187464.0,2799.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+1025168,pfal,no informativa,Q8IL11,4,0.0,2805.0,0.5104640582347588,187812.0,2805.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+1026375,pfal,no informativa,Q8IL11,6,0.0,2800.0,0.5095541401273885,188035.5,2800.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+1026395,pfal,no informativa,Q8IL11,5,0.0,2757.5,0.5018198362147407,185500.5,2757.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+1032832,pfal,no informativa,O96935,3,0.0,2755.5,0.5014558689717925,184667.0,2755.5,indirecta,5495.0,pfal_pseudohuerfanas,1
+1034835,pfal,no informativa,Q8IL11,4,0.0,2748.0,0.500090991810737,184277.5,2748.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+1456858,pfal,no informativa,Q8I6V3,2,0.0,2756.0,0.5015468607825295,186511.0,2756.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+1517256,pfal,informativa,Q8I1R6,3,0.0053191489361702,1.0,0.000181983621474,60.5,1.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+1711531,pfal,informativa,Q8IDJ8,8,0.0103430492508452,1.0,0.000181983621474,123.0,1.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+2195369,pfal,informativa,Q8I2J3,13,0.0024141092160443,5.0,0.0009099181073703,368.5,5.0,directa,5495.0,pfal_pseudohuerfanas,2
+2311457,pfal,no informativa,Q8I2J3,18,0.0,2793.5,0.5083712465878071,186774.0,2793.5,indirecta,5495.0,pfal_pseudohuerfanas,2
+2375180,pfal,no informativa,O96935,2,0.0,2748.5,0.500181983621474,186189.5,2748.5,indirecta,5495.0,pfal_pseudohuerfanas,0
+2379427,pfal,no informativa,O96935,3,0.0,2787.0,0.5071883530482256,186520.5,2787.0,indirecta,5495.0,pfal_pseudohuerfanas,0
+2385889,pfal,no informativa,Q8IDJ8,5,0.0,2757.5,0.5018198362147407,185029.0,2757.5,indirecta,5495.0,pfal_pseudohuerfanas,3
+2388996,pfal,no informativa,Q8IDJ8,8,0.0,2751.0,0.5006369426751592,184552.0,2751.0,indirecta,5495.0,pfal_pseudohuerfanas,2
+2391635,pfal,no informativa,Q8IEU1,9,0.0,2784.0,0.5066424021838034,186970.0,2784.0,indirecta,5495.0,pfal_pseudohuerfanas,3
+39285,sao,no informativa,Q2G1A5,156,0.0,1121.5,0.5128029263831733,188311.5,1121.5,indirecta,2187.0,sao_pseudohuerfanas,2
+83211,sao,no informativa,O52582,4,0.0,1097.5,0.5018289894833105,184441.0,1097.5,indirecta,2187.0,sao_pseudohuerfanas,2
+92135,sao,informativa,Q2FZK7,17,0.2353663512969609,5.0,0.002286236854138,45.5,5.0,indirecta,2187.0,sao_pseudohuerfanas,2
+244355,sao,no informativa,Q2FWH3,2,0.0,1097.0,0.5016003657978967,184680.0,1097.0,indirecta,2187.0,sao_pseudohuerfanas,2
+398886,sao,no informativa,Q2G1L5,21,0.0,1143.0,0.522633744855967,190596.0,1143.0,indirecta,2187.0,sao_pseudohuerfanas,3
+795139,sao,no informativa,Q2G1C0,3,0.0,1098.0,0.5020576131687243,184741.0,1098.0,indirecta,2187.0,sao_pseudohuerfanas,2
+857690,sao,informativa,O06446,9,0.0006693694871521,33.5,0.0153177869227251,5066.5,33.5,indirecta,2187.0,sao_pseudohuerfanas,3
+1357778,sao,no informativa,Q2G0N1,15,0.0,1102.0,0.5038866026520348,188505.0,1102.0,indirecta,2187.0,sao_pseudohuerfanas,2
+1594529,sao,no informativa,Q2FXG9,4,0.0,1101.0,0.5034293552812071,186862.5,1101.0,indirecta,2187.0,sao_pseudohuerfanas,2
+1620550,sao,no informativa,P69848,6,0.0,1103.5,0.5045724737082762,184620.5,1103.5,indirecta,2187.0,sao_pseudohuerfanas,2
+2391524,sao,no informativa,P69848,24,0.0,1122.5,0.5132601737540009,187241.0,1122.5,indirecta,2187.0,sao_pseudohuerfanas,2
+1806,scer,no informativa,P87108,9,0.0,3078.5,0.505251928442475,185862.0,3078.5,indirecta,6093.0,scer_pseudohuerfanas,2
+8512,scer,informativa,P32449,61,3.5,4.0,0.0006564910553093,60.5,4.0,indirecta,6093.0,scer_pseudohuerfanas,2
+25867,scer,no informativa,P00044,3,0.0,3047.0,0.5000820613819137,186145.5,3047.0,indirecta,6093.0,scer_pseudohuerfanas,2
+32843,scer,no informativa,P53051,11,0.0,3103.5,0.5093549975381585,187567.0,3103.5,indirecta,6093.0,scer_pseudohuerfanas,0
+73082,scer,no informativa,P43616,3,0.0,3049.5,0.500492368291482,184397.5,3049.5,indirecta,6093.0,scer_pseudohuerfanas,2
+90940,scer,no informativa,P00431,6,0.0,3049.5,0.500492368291482,184841.5,3049.5,indirecta,6093.0,scer_pseudohuerfanas,0
+91220,scer,no informativa,P30656,2,0.0,3047.0,0.5000820613819137,184343.0,3047.0,indirecta,6093.0,scer_pseudohuerfanas,2
+91603,scer,no informativa,Q12178,2,0.0,3047.0,0.5000820613819137,187109.5,3047.0,indirecta,6093.0,scer_pseudohuerfanas,2
+91621,scer,no informativa,P23254,21,0.0,3099.0,0.5086164451009355,190148.0,3099.0,indirecta,6093.0,scer_pseudohuerfanas,2
+94736,scer,informativa,Q99321,3,1.3340743729122284,1.0,0.0001641227638273,19.5,1.0,directa,6093.0,scer_pseudohuerfanas,2
+115959,scer,no informativa,P87108,7,0.0,3116.5,0.511488593467914,188163.0,3116.5,indirecta,6093.0,scer_pseudohuerfanas,1
+118632,scer,no informativa,P87108,18,0.0,3053.0,0.5010667979648777,184556.5,3053.0,indirecta,6093.0,scer_pseudohuerfanas,3
+147472,scer,no informativa,P87108,322,0.0,3198.5,0.5249466601017562,194644.0,3198.5,indirecta,6093.0,scer_pseudohuerfanas,3
+155606,scer,no informativa,P32897,2,0.0,3061.0,0.5023797800754964,185326.5,3061.0,indirecta,6093.0,scer_pseudohuerfanas,3
+155624,scer,no informativa,P87108,2,0.0,3047.0,0.5000820613819137,184290.5,3047.0,indirecta,6093.0,scer_pseudohuerfanas,3
+166838,scer,no informativa,P38169,4,0.0,3061.0,0.5023797800754964,185925.0,3061.0,indirecta,6093.0,scer_pseudohuerfanas,2
+168563,scer,no informativa,P32897,19,0.0,3073.0,0.5043492532414245,190506.5,3073.0,indirecta,6093.0,scer_pseudohuerfanas,3
+178853,scer,no informativa,P87108,3,0.0,3048.0,0.5002461841457411,185393.5,3048.0,indirecta,6093.0,scer_pseudohuerfanas,0
+184873,scer,no informativa,P47154,3,0.0,3088.0,0.5068110946988347,185510.0,3088.0,indirecta,6093.0,scer_pseudohuerfanas,3
+190241,scer,no informativa,P87108,4,0.0,3089.0,0.506975217462662,188532.5,3089.0,indirecta,6093.0,scer_pseudohuerfanas,2
+195053,scer,no informativa,P00431,2,0.0,3089.0,0.506975217462662,186194.0,3089.0,indirecta,6093.0,scer_pseudohuerfanas,2
+196964,scer,no informativa,P0CX82,2,0.0,3087.5,0.5067290333169211,185527.5,3087.5,indirecta,6093.0,scer_pseudohuerfanas,3
+200936,scer,no informativa,P87108,3,0.0,3063.5,0.5027900869850648,185371.5,3063.5,indirecta,6093.0,scer_pseudohuerfanas,0
+200958,scer,no informativa,P87108,2,0.0,3089.0,0.506975217462662,186194.0,3089.0,indirecta,6093.0,scer_pseudohuerfanas,3
+203428,scer,no informativa,Q03530,2,0.0,3070.0,0.5038568849499425,185264.5,3070.0,indirecta,6093.0,scer_pseudohuerfanas,1
+218835,scer,no informativa,P87108,9,0.0,3113.5,0.510996225176432,187321.5,3113.5,indirecta,6093.0,scer_pseudohuerfanas,2
+220617,scer,no informativa,P87108,7,0.0,3117.5,0.5116527162317414,188371.5,3117.5,indirecta,6093.0,scer_pseudohuerfanas,2
+232244,scer,no informativa,Q03530,4,0.0,3055.0,0.5013950434925324,186570.5,3055.0,indirecta,6093.0,scer_pseudohuerfanas,1
+233926,scer,no informativa,P47154,4,0.0,3053.5,0.5011488593467914,186929.5,3053.5,indirecta,6093.0,scer_pseudohuerfanas,3
+239099,scer,no informativa,P87108,4,0.0,3053.5,0.5011488593467914,185226.5,3053.5,indirecta,6093.0,scer_pseudohuerfanas,1
+243622,scer,no informativa,P87108,5,0.0,3104.5,0.5095191203019859,186920.5,3104.5,indirecta,6093.0,scer_pseudohuerfanas,3
+244701,scer,no informativa,P87108,8,0.0,3117.5,0.5116527162317414,188371.5,3117.5,indirecta,6093.0,scer_pseudohuerfanas,0
+249942,scer,no informativa,P87108,4,0.0,3061.0,0.5023797800754964,185403.0,3061.0,indirecta,6093.0,scer_pseudohuerfanas,1
+251121,scer,no informativa,P0CX82,3,0.0,3048.0,0.5002461841457411,184380.0,3048.0,indirecta,6093.0,scer_pseudohuerfanas,3
+259766,scer,no informativa,P32897,6,0.0,3117.5,0.5116527162317414,187952.0,3117.5,indirecta,6093.0,scer_pseudohuerfanas,3
+260778,scer,informativa,P87108,3,0.0522236383476653,24.5,0.0040210077137699,964.5,24.5,directa,6093.0,scer_pseudohuerfanas,2
+260872,scer,no informativa,P87108,3,0.0,3112.5,0.5108321024126047,187481.0,3112.5,indirecta,6093.0,scer_pseudohuerfanas,0
+263157,scer,no informativa,P87108,2,0.0,3062.5,0.5026259642212375,184934.0,3062.5,indirecta,6093.0,scer_pseudohuerfanas,0
+264226,scer,no informativa,P87108,3,0.0,3061.0,0.5023797800754964,185336.0,3061.0,indirecta,6093.0,scer_pseudohuerfanas,0
+269266,scer,no informativa,Q03530,3,0.0,3056.0,0.5015591662563598,185101.0,3056.0,indirecta,6093.0,scer_pseudohuerfanas,3
+270198,scer,no informativa,P00163,3,0.0,3092.5,0.5075496471360578,186250.5,3092.5,indirecta,6093.0,scer_pseudohuerfanas,2
+279707,scer,no informativa,P87108,2,0.0,3048.5,0.5003282455276546,184708.5,3048.5,indirecta,6093.0,scer_pseudohuerfanas,1
+283414,scer,no informativa,Q03530,11,0.0,3155.0,0.5178073198752667,189039.0,3155.0,indirecta,6093.0,scer_pseudohuerfanas,2
+284900,scer,no informativa,Q03530,3,0.0,3051.5,0.5008206138191367,184418.5,3051.5,indirecta,6093.0,scer_pseudohuerfanas,2
+288814,scer,no informativa,P32897,6,0.0,3090.5,0.5072214016084031,186727.0,3090.5,indirecta,6093.0,scer_pseudohuerfanas,3
+292597,scer,no informativa,P87108,2,0.0,3062.0,0.5025439028393238,184950.5,3062.0,indirecta,6093.0,scer_pseudohuerfanas,2
+296640,scer,no informativa,Q03530,3,0.0,3063.0,0.5027080256031512,184994.5,3063.0,indirecta,6093.0,scer_pseudohuerfanas,1
+298405,scer,no informativa,P87108,3,0.0,3102.5,0.5091908747743312,186833.0,3102.5,indirecta,6093.0,scer_pseudohuerfanas,0
+300950,scer,no informativa,P32897,2,0.0,3047.5,0.5001641227638274,185112.5,3047.5,indirecta,6093.0,scer_pseudohuerfanas,3
+301094,scer,informativa,P87108,2,0.0522236383476653,15.5,0.0025439028393238,552.5,15.5,directa,6093.0,scer_pseudohuerfanas,2
+303489,scer,no informativa,P87108,2,0.0,3048.0,0.5002461841457411,184715.5,3048.0,indirecta,6093.0,scer_pseudohuerfanas,3
+304854,scer,no informativa,P87108,2,0.0,3069.0,0.5036927621861153,185560.0,3069.0,indirecta,6093.0,scer_pseudohuerfanas,0
+306668,scer,no informativa,P87108,6,0.0,3117.5,0.5116527162317414,187952.0,3117.5,indirecta,6093.0,scer_pseudohuerfanas,3
+307347,scer,informativa,P32897,3,0.066620417330782,2.0,0.0003282455276546,833.5,2.0,directa,6093.0,scer_pseudohuerfanas,2
+307381,scer,no informativa,P87108,6,0.0,3092.0,0.5074675857541441,189071.0,3092.0,indirecta,6093.0,scer_pseudohuerfanas,0
+310122,scer,no informativa,P87108,5,0.0,3061.0,0.5023797800754964,184855.5,3061.0,indirecta,6093.0,scer_pseudohuerfanas,1
+315296,scer,no informativa,P87108,4,0.0,3064.5,0.5029542097488922,185451.5,3064.5,indirecta,6093.0,scer_pseudohuerfanas,0
+319674,scer,no informativa,P87108,2,0.0,3061.0,0.5023797800754964,184913.0,3061.0,indirecta,6093.0,scer_pseudohuerfanas,1
+320613,scer,no informativa,P87108,10,0.0,3114.0,0.5110782865583456,189829.5,3114.0,indirecta,6093.0,scer_pseudohuerfanas,1
+321225,scer,no informativa,Q03530,4,0.0,3102.5,0.5091908747743312,186161.0,3102.5,indirecta,6093.0,scer_pseudohuerfanas,2
+321825,scer,no informativa,P87108,3,0.0,3089.0,0.506975217462662,186233.0,3089.0,indirecta,6093.0,scer_pseudohuerfanas,3
+324804,scer,no informativa,P87108,3,0.0,3112.5,0.5108321024126047,187481.0,3112.5,indirecta,6093.0,scer_pseudohuerfanas,3
+325185,scer,no informativa,P32897,3,0.0,3100.5,0.5088626292466765,186536.5,3100.5,indirecta,6093.0,scer_pseudohuerfanas,3
+330052,scer,no informativa,P32897,9,0.0,3071.5,0.5041030690956836,187708.5,3071.5,indirecta,6093.0,scer_pseudohuerfanas,2
+336087,scer,no informativa,P32897,4,0.0,3061.0,0.5023797800754964,185404.5,3061.0,indirecta,6093.0,scer_pseudohuerfanas,0
+336201,scer,no informativa,P32897,5,0.0,3065.0,0.5030362711308058,185072.5,3065.0,indirecta,6093.0,scer_pseudohuerfanas,1
+337176,scer,no informativa,P87108,2,0.0,3070.5,0.5039389463318562,185577.0,3070.5,indirecta,6093.0,scer_pseudohuerfanas,2
+338955,scer,no informativa,Q03530,2,0.0,3048.5,0.5003282455276546,184321.5,3048.5,indirecta,6093.0,scer_pseudohuerfanas,2
+341476,scer,no informativa,P32897,2,0.0,3048.5,0.5003282455276546,184710.5,3048.5,indirecta,6093.0,scer_pseudohuerfanas,0
+342662,scer,no informativa,P87108,5,0.0,3058.0,0.5018874117840144,186907.5,3058.0,indirecta,6093.0,scer_pseudohuerfanas,2
+344673,scer,no informativa,Q03530,4,0.0,3075.5,0.504759560150993,186013.5,3075.5,indirecta,6093.0,scer_pseudohuerfanas,0
+345686,scer,no informativa,Q03530,10,0.0,3128.5,0.5134580666338421,188851.0,3128.5,indirecta,6093.0,scer_pseudohuerfanas,3
+349456,scer,no informativa,Q03530,4,0.0,3072.5,0.504267191859511,185398.5,3072.5,indirecta,6093.0,scer_pseudohuerfanas,3
+349612,scer,no informativa,P87108,2,0.0,3070.5,0.5039389463318562,185577.0,3070.5,indirecta,6093.0,scer_pseudohuerfanas,0
+352451,scer,no informativa,P87108,2,0.0,3061.0,0.5023797800754964,184913.0,3061.0,indirecta,6093.0,scer_pseudohuerfanas,3
+353478,scer,no informativa,P87108,2,0.0,3056.0,0.5015591662563598,184650.0,3056.0,indirecta,6093.0,scer_pseudohuerfanas,2
+354478,scer,no informativa,P32897,2,0.0,3071.5,0.5041030690956836,185499.5,3071.5,indirecta,6093.0,scer_pseudohuerfanas,3
+354970,scer,no informativa,Q03530,2,0.0,3047.0,0.5000820613819137,186430.5,3047.0,indirecta,6093.0,scer_pseudohuerfanas,2
+355354,scer,no informativa,P87108,3,0.0,3089.0,0.506975217462662,186232.5,3089.0,indirecta,6093.0,scer_pseudohuerfanas,3
+355374,scer,no informativa,Q03530,6,0.0,3059.5,0.5021335959297555,185247.0,3059.5,indirecta,6093.0,scer_pseudohuerfanas,0
+355884,scer,no informativa,P32897,5,0.0,3092.0,0.5074675857541441,186330.0,3092.0,indirecta,6093.0,scer_pseudohuerfanas,2
+359119,scer,no informativa,P87108,4,0.0,3103.5,0.5093549975381585,186879.0,3103.5,indirecta,6093.0,scer_pseudohuerfanas,2
+362846,scer,no informativa,P87108,5,0.0,3058.5,0.5019694731659281,185218.0,3058.5,indirecta,6093.0,scer_pseudohuerfanas,3
+365931,scer,no informativa,Q03530,3,0.0,3057.5,0.5018053504021007,184934.0,3057.5,indirecta,6093.0,scer_pseudohuerfanas,1
+366401,scer,no informativa,P87108,2,0.0,3047.5,0.5001641227638274,184608.5,3047.5,indirecta,6093.0,scer_pseudohuerfanas,2
+368507,scer,no informativa,P32897,2,0.0,3047.0,0.5000820613819137,186430.5,3047.0,indirecta,6093.0,scer_pseudohuerfanas,2
+370431,scer,no informativa,P87108,2,0.0,3047.0,0.5000820613819137,186430.5,3047.0,indirecta,6093.0,scer_pseudohuerfanas,0
+371704,scer,no informativa,Q03530,3,0.0,3102.5,0.5091908747743312,186798.5,3102.5,indirecta,6093.0,scer_pseudohuerfanas,1
+371894,scer,no informativa,P87108,2,0.0,3048.5,0.5003282455276546,184708.5,3048.5,indirecta,6093.0,scer_pseudohuerfanas,2
+373200,scer,no informativa,P47154,3,0.0,3048.5,0.5003282455276546,186207.5,3048.5,indirecta,6093.0,scer_pseudohuerfanas,3
+383963,scer,no informativa,Q03530,2,0.0,3089.0,0.506975217462662,186183.0,3089.0,indirecta,6093.0,scer_pseudohuerfanas,3
+385277,scer,no informativa,P87108,3,0.0,3050.0,0.5005744296733957,184786.5,3050.0,indirecta,6093.0,scer_pseudohuerfanas,0
+386447,scer,no informativa,P47154,2,0.0,3088.0,0.5068110946988347,185510.0,3088.0,indirecta,6093.0,scer_pseudohuerfanas,3
+390792,scer,no informativa,P32897,3,0.0,3061.0,0.5023797800754964,185234.0,3061.0,indirecta,6093.0,scer_pseudohuerfanas,2
+391384,scer,no informativa,P32897,2,0.0,3061.0,0.5023797800754964,186791.5,3061.0,indirecta,6093.0,scer_pseudohuerfanas,3
+391831,scer,no informativa,P32897,2,0.0,3049.5,0.500492368291482,184809.0,3049.5,indirecta,6093.0,scer_pseudohuerfanas,1
+396564,scer,no informativa,P32897,5,0.0,3071.5,0.5041030690956836,185754.5,3071.5,indirecta,6093.0,scer_pseudohuerfanas,1
+396747,scer,no informativa,P87108,2,0.0,3048.5,0.5003282455276546,184319.5,3048.5,indirecta,6093.0,scer_pseudohuerfanas,2
+399474,scer,no informativa,P08679,4,0.0,3061.0,0.5023797800754964,187214.5,3061.0,indirecta,6093.0,scer_pseudohuerfanas,3
+400271,scer,no informativa,P87108,2,0.0,3047.5,0.5001641227638274,184371.5,3047.5,indirecta,6093.0,scer_pseudohuerfanas,2
+403175,scer,no informativa,P87108,5,0.0,3104.0,0.5094370589200722,187540.0,3104.0,indirecta,6093.0,scer_pseudohuerfanas,3
+403338,scer,no informativa,P87108,2,0.0,3061.5,0.5024618414574101,184915.0,3061.5,indirecta,6093.0,scer_pseudohuerfanas,0
+405758,scer,no informativa,P32897,5,0.0,3072.5,0.504267191859511,185343.0,3072.5,indirecta,6093.0,scer_pseudohuerfanas,3
+407456,scer,no informativa,Q03530,4,0.0,3090.0,0.5071393402264894,188379.5,3090.0,indirecta,6093.0,scer_pseudohuerfanas,2
+411219,scer,no informativa,P87108,6,0.0,3095.5,0.5080420154275398,186969.5,3095.5,indirecta,6093.0,scer_pseudohuerfanas,3
+413072,scer,no informativa,P87108,2,0.0,3052.0,0.5009026752010504,184620.0,3052.0,indirecta,6093.0,scer_pseudohuerfanas,2
+413820,scer,no informativa,Q03530,2,0.0,3057.0,0.5017232890201871,184662.5,3057.0,indirecta,6093.0,scer_pseudohuerfanas,1
+417866,scer,no informativa,Q03530,4,0.0,3112.5,0.5108321024126047,187586.5,3112.5,indirecta,6093.0,scer_pseudohuerfanas,2
+418890,scer,no informativa,P0CX82,4,0.0,3091.5,0.5073855243722304,188130.5,3091.5,indirecta,6093.0,scer_pseudohuerfanas,3
+425260,scer,no informativa,P32897,4,0.0,3080.5,0.5055801739701297,185985.0,3080.5,indirecta,6093.0,scer_pseudohuerfanas,1
+425607,scer,no informativa,P87108,17,0.0,3101.5,0.5090267520105038,187013.5,3101.5,indirecta,6093.0,scer_pseudohuerfanas,2
+427157,scer,no informativa,P87108,3,0.0,3112.5,0.5108321024126047,187481.0,3112.5,indirecta,6093.0,scer_pseudohuerfanas,2
+428203,scer,no informativa,Q03530,2,0.0,3098.0,0.5084523223371081,186520.5,3098.0,indirecta,6093.0,scer_pseudohuerfanas,2
+428393,scer,no informativa,P87108,4,0.0,3117.5,0.5116527162317414,187812.0,3117.5,indirecta,6093.0,scer_pseudohuerfanas,3
+431575,scer,informativa,P87108,2,0.0433456198285622,1.5,0.000246184145741,854.5,1.5,directa,6093.0,scer_pseudohuerfanas,3
+465532,scer,no informativa,P35844,4,0.0,3063.5,0.5027900869850648,185047.0,3063.5,indirecta,6093.0,scer_pseudohuerfanas,2
+466429,scer,no informativa,Q03530,8,0.0,3095.5,0.5080420154275398,186718.5,3095.5,indirecta,6093.0,scer_pseudohuerfanas,1
+467457,scer,no informativa,P32897,3,0.0,3052.0,0.5009026752010504,184725.5,3052.0,indirecta,6093.0,scer_pseudohuerfanas,1
+468222,scer,no informativa,P47154,2,0.0,3057.5,0.5018053504021007,184646.0,3057.5,indirecta,6093.0,scer_pseudohuerfanas,0
+468287,scer,no informativa,Q03530,4,0.0,3059.0,0.5020515345478418,184749.0,3059.0,indirecta,6093.0,scer_pseudohuerfanas,0
+477428,scer,no informativa,P87108,5,0.0,3062.5,0.5026259642212375,185401.0,3062.5,indirecta,6093.0,scer_pseudohuerfanas,0
+478979,scer,no informativa,P32897,3,0.0,3063.5,0.5027900869850648,185037.5,3063.5,indirecta,6093.0,scer_pseudohuerfanas,0
+483879,scer,no informativa,Q03530,2,0.0,3047.0,0.5000820613819137,186430.5,3047.0,indirecta,6093.0,scer_pseudohuerfanas,3
+484678,scer,no informativa,P47077,5,0.0,3103.5,0.5093549975381585,187167.0,3103.5,indirecta,6093.0,scer_pseudohuerfanas,2
+485900,scer,no informativa,Q03530,2,0.0,3047.0,0.5000820613819137,186177.0,3047.0,indirecta,6093.0,scer_pseudohuerfanas,2
+487088,scer,no informativa,Q03530,2,0.0,3047.0,0.5000820613819137,184552.0,3047.0,indirecta,6093.0,scer_pseudohuerfanas,0
+557350,scer,no informativa,P10614,5,0.0,3106.5,0.5098473658296405,186997.5,3106.5,indirecta,6093.0,scer_pseudohuerfanas,2
+640285,scer,no informativa,P27809,34,0.0,3050.0,0.5005744296733957,185187.0,3050.0,indirecta,6093.0,scer_pseudohuerfanas,3
+646324,scer,no informativa,P32357,3,0.0,3062.0,0.5025439028393238,184960.0,3062.0,indirecta,6093.0,scer_pseudohuerfanas,0
+647963,scer,no informativa,P87108,2,0.0,3050.0,0.5005744296733957,184573.5,3050.0,indirecta,6093.0,scer_pseudohuerfanas,3
+655583,scer,no informativa,P32357,2,0.0,3056.0,0.5015591662563598,185039.0,3056.0,indirecta,6093.0,scer_pseudohuerfanas,0
+848500,scer,no informativa,P27472,12,0.0,3097.5,0.5083702609551944,186173.5,3097.5,indirecta,6093.0,scer_pseudohuerfanas,3
+924218,scer,no informativa,Q03161,42,0.0,3083.5,0.5060725422616117,185643.0,3083.5,indirecta,6093.0,scer_pseudohuerfanas,2
+939471,scer,no informativa,P27616,6,0.0,3051.5,0.5008206138191367,186286.0,3051.5,indirecta,6093.0,scer_pseudohuerfanas,2
+955181,scer,no informativa,P40969,10,0.0,3118.0,0.511734777613655,187839.5,3118.0,indirecta,6093.0,scer_pseudohuerfanas,2
+956272,scer,no informativa,Q10740,2,0.0,3055.5,0.5014771048744461,184620.5,3055.5,indirecta,6093.0,scer_pseudohuerfanas,3
+1008566,scer,no informativa,P07278,2,0.0,3047.0,0.5000820613819137,186142.5,3047.0,indirecta,6093.0,scer_pseudohuerfanas,2
+1018477,scer,no informativa,P87108,5,0.0,3093.5,0.5077137698998851,186747.0,3093.5,indirecta,6093.0,scer_pseudohuerfanas,1
+1019407,scer,no informativa,P32897,3,0.0,3062.5,0.5026259642212375,185027.0,3062.5,indirecta,6093.0,scer_pseudohuerfanas,1
+1022744,scer,no informativa,P32897,3,0.0,3061.0,0.5023797800754964,185395.0,3061.0,indirecta,6093.0,scer_pseudohuerfanas,2
+1027999,scer,no informativa,P0CX82,4,0.0,3064.0,0.5028721483669785,185068.0,3064.0,indirecta,6093.0,scer_pseudohuerfanas,2
+1124316,scer,no informativa,P22108,6,0.0,3057.0,0.5017232890201871,184825.0,3057.0,indirecta,6093.0,scer_pseudohuerfanas,2
+1126191,scer,no informativa,P53051,4,0.0,3089.0,0.506975217462662,186617.5,3089.0,indirecta,6093.0,scer_pseudohuerfanas,0
+1211447,scer,no informativa,P00359,2,0.0,3047.0,0.5000820613819137,184302.5,3047.0,indirecta,6093.0,scer_pseudohuerfanas,2
+1214450,scer,no informativa,Q03034,5,0.0,3048.5,0.5003282455276546,185271.5,3048.5,indirecta,6093.0,scer_pseudohuerfanas,0
+1402249,scer,no informativa,P08004,29,0.0,3095.0,0.5079599540456261,186095.0,3095.0,indirecta,6093.0,scer_pseudohuerfanas,2
+1499950,scer,no informativa,P47154,3,0.0,3050.0,0.5005744296733957,184572.0,3050.0,indirecta,6093.0,scer_pseudohuerfanas,3
+1522786,scer,informativa,P32352,5,1.0,1.0,0.0001641227638273,18.5,1.0,directa,6093.0,scer_pseudohuerfanas,1
+1573337,scer,no informativa,P02829,9,0.0,3123.0,0.5125553914327917,188490.5,3123.0,indirecta,6093.0,scer_pseudohuerfanas,2
+1651691,scer,no informativa,P32906,33,0.0,3057.5,0.5018053504021007,187012.0,3057.5,indirecta,6093.0,scer_pseudohuerfanas,3
+1651976,scer,no informativa,Q12051,2,0.0,3047.0,0.5000820613819137,186190.0,3047.0,indirecta,6093.0,scer_pseudohuerfanas,2
+1655044,scer,no informativa,P87108,4,0.0,3058.5,0.5019694731659281,186581.0,3058.5,indirecta,6093.0,scer_pseudohuerfanas,2
+1659827,scer,no informativa,P27472,77,0.0,3086.5,0.5065649105530937,186714.5,3086.5,indirecta,6093.0,scer_pseudohuerfanas,2
+1683363,scer,informativa,P07267,2,0.8052460257829788,4.0,0.0006564910553093,39.5,4.0,directa,6093.0,scer_pseudohuerfanas,3
+1684396,scer,informativa,P07267,2,0.8052460257829788,4.0,0.0006564910553093,39.5,4.0,directa,6093.0,scer_pseudohuerfanas,3
+1758702,scer,no informativa,P07267,2,0.0,3089.0,0.506975217462662,186583.0,3089.0,indirecta,6093.0,scer_pseudohuerfanas,2
+1763785,scer,informativa,P07267,2,0.8052460257829788,4.0,0.0006564910553093,39.5,4.0,directa,6093.0,scer_pseudohuerfanas,3
+1859939,scer,informativa,Q03656,41,0.0,3114.5,0.5111603479402593,190542.5,3114.5,indirecta,6093.0,scer_pseudohuerfanas,2
+2022990,scer,no informativa,P35844,2,0.0,3048.5,0.5003282455276546,184327.0,3048.5,indirecta,6093.0,scer_pseudohuerfanas,0
+2367058,scer,no informativa,P32178,2,0.0,3048.0,0.5002461841457411,184276.0,3048.0,indirecta,6093.0,scer_pseudohuerfanas,2
+2371120,scer,no informativa,Q04299,5,0.0,3048.0,0.5002461841457411,184281.0,3048.0,indirecta,6093.0,scer_pseudohuerfanas,2
+2374453,scer,no informativa,Q06151,138,0.0,3255.0,0.534219596258001,193795.0,3255.0,indirecta,6093.0,scer_pseudohuerfanas,3
+2374883,scer,no informativa,P43577,7,0.0,3049.0,0.5004103069095683,184401.5,3049.0,indirecta,6093.0,scer_pseudohuerfanas,2
+2377008,scer,informativa,P28321,1,0.0007416123689777,2.0,0.0003282455276546,95.0,2.0,indirecta,6093.0,scer_pseudohuerfanas,2
+2377398,scer,informativa,Q99321,20,1.2756661778987242,10.0,0.0016412276382734,499.5,10.0,indirecta,6093.0,scer_pseudohuerfanas,3
+2377516,scer,informativa,P06633,2,2.0,1.0,0.0001641227638273,6.0,1.0,indirecta,6093.0,scer_pseudohuerfanas,2
+2379946,scer,no informativa,P06779,4,0.0,3051.0,0.5007385524372231,185307.0,3051.0,indirecta,6093.0,scer_pseudohuerfanas,3
+2380086,scer,no informativa,P28496,41,0.0,3119.0,0.5118989003774823,187986.0,3119.0,indirecta,6093.0,scer_pseudohuerfanas,3
+2381394,scer,informativa,P0CH08,70,0.0002567160125163,148.5,0.0243722304283604,8422.0,148.5,indirecta,6093.0,scer_pseudohuerfanas,3
+2381466,scer,no informativa,P38631,21,0.0,3089.0,0.506975217462662,186288.0,3089.0,indirecta,6093.0,scer_pseudohuerfanas,3
+2382388,scer,no informativa,Q05871,6,0.0,3047.0,0.5000820613819137,184402.0,3047.0,indirecta,6093.0,scer_pseudohuerfanas,3
+2384074,scer,informativa,P32582,3,1.0,6.0,0.000984736582964,168.5,6.0,indirecta,6093.0,scer_pseudohuerfanas,3
+2384937,scer,no informativa,P27472,31,0.0,3064.5,0.5029542097488922,184980.0,3064.5,indirecta,6093.0,scer_pseudohuerfanas,3
+2385246,scer,no informativa,P14743,6,0.0,3103.5,0.5093549975381585,187328.0,3103.5,indirecta,6093.0,scer_pseudohuerfanas,3
+2386291,scer,no informativa,P40485,12,0.0,3052.0,0.5009026752010504,186847.0,3052.0,indirecta,6093.0,scer_pseudohuerfanas,3
+2387953,scer,informativa,P33334,77,0.1610250756354251,86.0,0.0141145576891514,5949.5,86.0,directa,6093.0,scer_pseudohuerfanas,3
+2388756,scer,no informativa,Q12001,2,0.0,3048.0,0.5002461841457411,184398.0,3048.0,indirecta,6093.0,scer_pseudohuerfanas,2
+2389342,scer,informativa,P30822,2,0.0324210200182936,8.0,0.0013129821106187,596.0,8.0,directa,6093.0,scer_pseudohuerfanas,1
+2389641,scer,no informativa,P14743,32,0.0,3120.5,0.5121450845232234,188034.5,3120.5,indirecta,6093.0,scer_pseudohuerfanas,3
+2390910,scer,informativa,Q12178,2,0.2868777763859649,2.0,0.0003282455276546,44.5,2.0,directa,6093.0,scer_pseudohuerfanas,2
+2391814,scer,no informativa,P39524,3,0.0,3047.5,0.5001641227638274,184794.5,3047.5,indirecta,6093.0,scer_pseudohuerfanas,3
+2393225,scer,no informativa,Q99321,3,0.0,3047.0,0.5000820613819137,184276.5,3047.0,indirecta,6093.0,scer_pseudohuerfanas,3
+2394511,scer,no informativa,P32561,7,0.0,3082.5,0.5059084194977843,185069.0,3082.5,indirecta,6093.0,scer_pseudohuerfanas,2
+2395293,scer,no informativa,P32340,96,0.0,3059.0,0.5020515345478418,185216.0,3059.0,indirecta,6093.0,scer_pseudohuerfanas,3
+83211,tbrt,no informativa,Q386P1,4,0.0,4318.0,0.5001737518823121,184441.0,4318.0,indirecta,8633.0,tbrt_pseudohuerfanas,2
+92625,tbrt,no informativa,Q57ZL6,2,0.0,4320.0,0.5004054210587281,184454.0,4320.0,indirecta,8633.0,tbrt_pseudohuerfanas,2
+365428,tbrt,no informativa,Q57UN0,10,0.0,4332.5,0.5018533534113286,188028.0,4332.5,indirecta,8633.0,tbrt_pseudohuerfanas,2
+378750,tbrt,no informativa,Q385V6,2,0.0,4330.5,0.5016216842349125,185264.5,4330.5,indirecta,8633.0,tbrt_pseudohuerfanas,2
+466613,tbrt,no informativa,Q38C41,2,0.0,4320.0,0.5004054210587281,186430.5,4320.0,indirecta,8633.0,tbrt_pseudohuerfanas,3
+467910,tbrt,no informativa,Q38C41,3,0.0,4324.0,0.5008687594115603,185041.5,4324.0,indirecta,8633.0,tbrt_pseudohuerfanas,2
+472020,tbrt,no informativa,Q38C41,2,0.0,4317.0,0.500057917294104,184708.5,4317.0,indirecta,8633.0,tbrt_pseudohuerfanas,3
+472546,tbrt,no informativa,Q38C41,8,0.0,4329.0,0.5014479323526004,186655.5,4329.0,indirecta,8633.0,tbrt_pseudohuerfanas,1
+475598,tbrt,no informativa,Q38C41,5,0.0,4333.5,0.5019691879995367,187475.0,4333.5,indirecta,8633.0,tbrt_pseudohuerfanas,2
+477198,tbrt,no informativa,Q38C41,2,0.0,4324.0,0.5008687594115603,185007.0,4324.0,indirecta,8633.0,tbrt_pseudohuerfanas,1
+477743,tbrt,no informativa,Q38C41,2,0.0,4317.5,0.5001158345882081,184779.5,4317.5,indirecta,8633.0,tbrt_pseudohuerfanas,1
+477981,tbrt,no informativa,Q38C41,4,0.0,4344.0,0.5031854511757211,185618.5,4344.0,indirecta,8633.0,tbrt_pseudohuerfanas,1
+479956,tbrt,no informativa,Q38C41,4,0.0,4330.5,0.5016216842349125,185718.0,4330.5,indirecta,8633.0,tbrt_pseudohuerfanas,1
+481820,tbrt,no informativa,Q38C41,2,0.0,4317.0,0.500057917294104,184708.5,4317.0,indirecta,8633.0,tbrt_pseudohuerfanas,1
+487944,tbrt,no informativa,Q38C41,2,0.0,4318.0,0.5001737518823121,184715.5,4318.0,indirecta,8633.0,tbrt_pseudohuerfanas,1
+490807,tbrt,no informativa,Q38C41,2,0.0,4319.0,0.5002895864705201,184301.5,4319.0,indirecta,8633.0,tbrt_pseudohuerfanas,1
+502144,tbrt,no informativa,Q38C41,4,0.0,4372.0,0.5064288196455462,188503.5,4372.0,indirecta,8633.0,tbrt_pseudohuerfanas,1
+795139,tbrt,no informativa,Q381M1,3,0.0,4329.0,0.5014479323526004,184741.0,4329.0,indirecta,8633.0,tbrt_pseudohuerfanas,2
+956272,tbrt,no informativa,Q385B0,2,0.0,4325.0,0.5009845939997684,184620.5,4325.0,indirecta,8633.0,tbrt_pseudohuerfanas,3
+970988,tbrt,no informativa,Q38DE2,2,0.0,4317.0,0.500057917294104,184271.0,4317.0,indirecta,8633.0,tbrt_pseudohuerfanas,2
+1008566,tbrt,no informativa,Q385V6,2,0.0,4317.0,0.500057917294104,186142.5,4317.0,indirecta,8633.0,tbrt_pseudohuerfanas,2
+1362991,tbrt,no informativa,Q388T4,21,0.0,4322.5,0.5006950075292482,184899.5,4322.5,indirecta,8633.0,tbrt_pseudohuerfanas,3
+1466535,tbrt,no informativa,Q38C91,5,0.0,4318.5,0.500231669176416,186597.5,4318.5,indirecta,8633.0,tbrt_pseudohuerfanas,0
+1620550,tbrt,no informativa,Q38C91,6,0.0,4322.5,0.5006950075292482,184620.5,4322.5,indirecta,8633.0,tbrt_pseudohuerfanas,2
+1716217,tbrt,no informativa,Q38C41,6,0.0,4318.5,0.500231669176416,184841.5,4318.5,indirecta,8633.0,tbrt_pseudohuerfanas,3
+2161758,tbrt,no informativa,Q38CA1,6,0.0,4317.0,0.500057917294104,184515.0,4317.0,indirecta,8633.0,tbrt_pseudohuerfanas,2
+2208312,tbrt,no informativa,Q38C91,76,0.0,4425.0,0.5125680528205723,190239.0,4425.0,indirecta,8633.0,tbrt_pseudohuerfanas,0
+2226478,tbrt,no informativa,Q389T8,6,0.0,4327.5,0.5012741804702884,185388.5,4327.5,indirecta,8633.0,tbrt_pseudohuerfanas,2
+2331455,tbrt,no informativa,Q57V32,17,0.0,4332.0,0.5017954361172247,185413.0,4332.0,indirecta,8633.0,tbrt_pseudohuerfanas,2
+2385307,tbrt,informativa,Q389T8,18,0.0100586159343083,6.0,0.0006950075292482,287.5,6.0,indirecta,8633.0,tbrt_pseudohuerfanas,2
+2396767,tbrt,no informativa,Q389T8,3,0.0,4317.0,0.500057917294104,184687.5,4317.0,indirecta,8633.0,tbrt_pseudohuerfanas,1
+91680,tcr,informativa,Q4E1W2,358,0.0027450980392156,103.5,0.0053791382984252,5510.0,103.5,indirecta,19241.0,tcr_pseudohuerfanas,2
+92470,tcr,no informativa,Q4DA73,357,0.0,10177.5,0.5289485993451484,203388.5,10177.5,indirecta,19241.0,tcr_pseudohuerfanas,2
+99805,tcr,no informativa,Q4DJ07,26,0.0,9631.5,0.5005716958578037,185328.5,9631.5,indirecta,19241.0,tcr_pseudohuerfanas,3
+875821,tcr,no informativa,Q7Z1V1,9,0.0,9800.5,0.5093550231276961,190896.0,9800.5,indirecta,19241.0,tcr_pseudohuerfanas,0
+924218,tcr,no informativa,Q4E0B2,42,0.0,9648.5,0.5014552258198638,186370.0,9648.5,indirecta,19241.0,tcr_pseudohuerfanas,2
+939471,tcr,no informativa,Q4D3W3,6,0.0,9625.5,0.5002598617535471,186286.0,9625.5,indirecta,19241.0,tcr_pseudohuerfanas,2
+1090987,tcr,no informativa,Q7Z1V1,2,0.0,9707.5,0.5045215945117197,186161.0,9707.5,indirecta,19241.0,tcr_pseudohuerfanas,0
+1461974,tcr,no informativa,Q4DA54,3,0.0,9707.5,0.5045215945117197,188474.0,9707.5,indirecta,19241.0,tcr_pseudohuerfanas,0
+1498900,tcr,no informativa,Q4D3W2,5,0.0,9636.0,0.500805571435996,187325.5,9636.0,indirecta,19241.0,tcr_pseudohuerfanas,0
+1499021,tcr,no informativa,Q4D3W2,5,0.0,9676.5,0.5029104516397277,187766.5,9676.5,indirecta,19241.0,tcr_pseudohuerfanas,0
+1499059,tcr,no informativa,Q4D3W2,5,0.0,9646.5,0.501351281118445,186150.0,9646.5,indirecta,19241.0,tcr_pseudohuerfanas,0
+1499061,tcr,no informativa,Q4D3W2,18,0.0,9730.0,0.5056909724026818,191457.0,9730.0,indirecta,19241.0,tcr_pseudohuerfanas,0
+1517256,tcr,no informativa,Q4E0B2,3,0.0,9641.5,0.5010914193648979,184671.5,9641.5,indirecta,19241.0,tcr_pseudohuerfanas,2
+2332379,tcr,no informativa,Q4CST7,36,0.0,9683.5,0.5032742580946936,187201.0,9683.5,indirecta,19241.0,tcr_pseudohuerfanas,2
+2385889,tcr,no informativa,Q4DA54,5,0.0,9695.0,0.503871940127852,185587.0,9695.0,indirecta,19241.0,tcr_pseudohuerfanas,3
+2392598,tcr,no informativa,Q4CQE2,9,0.0,9902.0,0.5146302167247024,193159.0,9902.0,indirecta,19241.0,tcr_pseudohuerfanas,3

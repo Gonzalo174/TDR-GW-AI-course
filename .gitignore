@@ -15,3 +15,6 @@ venv/
 # Salidas temporales
 *.log
 tmp/
+
+# Salidas de las corridas (se versionan solo las tablas chicas del paper)
+resultados/
