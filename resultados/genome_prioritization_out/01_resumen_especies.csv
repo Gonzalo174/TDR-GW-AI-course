@@ -1,0 +1,17 @@
+sp_id,N,N_druggable,nombre,grupo,reino,parasito
+3,18052,1985,sp03 (Mamiferos),Mamiferos,Eucariota,False
+1,4598,752,"sp01 (Bacterias, parasito)",Bacterias,Procariota,True
+10,6743,533,sp10 (Hongos),Hongos,Eucariota,False
+18,18683,402,sp18 (Mamiferos),Mamiferos,Eucariota,False
+21,21747,362,sp21 (Plantas),Plantas,Eucariota,False
+0,4083,204,"sp00 (Bacterias, parasito)",Bacterias,Procariota,True
+17,10707,123,sp17 (Invertebrados),Invertebrados,Eucariota,False
+26,5495,95,"sp26 (Protozoos, parasito)",Protozoos,Eucariota,True
+15,8832,68,"sp15 (Protozoos, parasito)",Protozoos,Eucariota,True
+9,27512,63,sp09 (Invertebrados),Invertebrados,Eucariota,False
+25,6041,47,"sp25 (Hongos, parasito)",Hongos,Eucariota,True
+28,23214,38,sp28 (Plantas),Plantas,Eucariota,False
+23,6564,30,"sp23 (Protozoos, parasito)",Protozoos,Eucariota,True
+4,19245,29,"sp04 (Protozoos, parasito)",Protozoos,Eucariota,True
+5,2687,27,"sp05 (Bacterias, parasito)",Bacterias,Procariota,True
+22,13126,19,sp22 (Amebozoos),Amebozoos,Eucariota,False

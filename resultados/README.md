@@ -1,12 +1,20 @@
 # resultados/
 
-Salidas de los notebooks, una carpeta por análisis. Las crea `tdr.out(carpeta)`;
-están acá versionadas vacías para que el repositorio se clone ya listo para correr.
+Salidas de los notebooks, una carpeta por análisis. Las crea `tdr.out(carpeta)`.
 
-    resultados/<analisis>_out/            tablas .csv y el NN_meta.json de cada corrida
+    resultados/<analisis>_out/            tablas NN_*.csv y el NN_meta.json de cada corrida
     resultados/<analisis>_out/figuras/    .png y .pdf
 
-`.gitignore` excluye el contenido: las tablas se regeneran corriendo las celdas
-de corrida de los notebooks, y las figuras, a partir de las tablas y sin tocar
-la base, con `python comun/figuras.py`. Las figuras que entran al informe se
-copian a `informe/figuras/` (`make -C informe`), y esas sí se versionan.
+**Las tablas y los `NN_meta.json` se versionan** (53 MB): son la salida de la
+corrida del 2026-09-10, y con ellas las figuras y las cifras de los entregables
+se regeneran en segundos, sin volver a correr nada:
+
+    make figuras        # las figuras, desde estas tablas (~40 s)
+    make verificar      # pruebas + figuras + cifras del informe contra las tablas
+
+**Las figuras no se versionan**: se dibujan desde estas tablas
+(`comun/figuras.py`). Las que usa el informe se copian a `informe/figuras/`
+con `make -C informe`, y esas sí se versionan.
+
+Cada tabla lleva el número del notebook cuya celda de corrida la escribió
+(CONVENCIONES.md §7). Volver a correr un notebook las reescribe.

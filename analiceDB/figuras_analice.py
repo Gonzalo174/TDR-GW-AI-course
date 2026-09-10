@@ -17,7 +17,9 @@ A = "analiceDB"
 
 # --- 01 · dimensiones de la red --------------------------------------------
 
-@figura(A, "01_f01_disponibilidad", lee="01_disponibilidad_especie.csv")
+@figura(A, "01_f01_disponibilidad",
+        verifica='Tabla idéntica a la del oráculo v4 (`verificacion/10`); `test_resultados` fija el total de druggables.',
+        lee="01_disponibilidad_especie.csv")
 def disponibilidad(t, plt):
     """Proteínas vs druggables por especie (log-log)."""
     disp = t("01_disponibilidad_especie.csv")
@@ -35,7 +37,9 @@ def disponibilidad(t, plt):
     return fig
 
 
-@figura(A, "01_f02_grado_afiliaciones", lee="01_grado_afiliaciones.csv")
+@figura(A, "01_f02_grado_afiliaciones",
+        verifica='`test_resultados.test_la_capa_de_anotaciones_no_se_movio`: categorías y afiliaciones idénticas a las de antes del recorte.',
+        lee="01_grado_afiliaciones.csv")
 def grado(t, plt):
     """Distribución de grado de las categorías, por fuente (cola pesada: las
     categorías grandes son las que beta > 0 atenúa)."""
@@ -53,7 +57,9 @@ def grado(t, plt):
     return fig
 
 
-@figura(A, "01_f03_tramos_de_grado", lee="01_grado_afiliaciones.csv")
+@figura(A, "01_f03_tramos_de_grado",
+        verifica='La misma tabla que `01_f02`, con el mismo control.',
+        lee="01_grado_afiliaciones.csv")
 def tramos_de_grado(t, plt):
     """Categorías por tramo de grado y por fuente."""
     grad = t("01_grado_afiliaciones.csv")
@@ -76,7 +82,9 @@ def tramos_de_grado(t, plt):
 
 # --- 02 · capas y conectividad ---------------------------------------------
 
-@figura(A, "02_f01_tamanos_cluster", lee="02_tamanos_cluster.csv")
+@figura(A, "02_f01_tamanos_cluster",
+        verifica='Sin control externo: describe la capa química tal como quedó tras el recorte, cuyos conteos registra `DB/meta.json`.',
+        lee="02_tamanos_cluster.csv")
 def tamanos_cluster(t, plt):
     """Compuestos por cluster de fingerprint: sobre qué se corre la capa química."""
     tam = t("02_tamanos_cluster.csv")
@@ -91,7 +99,9 @@ def tamanos_cluster(t, plt):
     return fig
 
 
-@figura(A, "02_f02_componentes_conexas", lee="02_componentes_conexas.csv")
+@figura(A, "02_f02_componentes_conexas",
+        verifica='Es una verificación del recorte en sí: las dos series tienen que coincidir, porque no debe quedar ninguna componente sin bioactividad positiva.',
+        lee="02_componentes_conexas.csv")
 def componentes_conexas(t, plt):
     """Tamaño de las componentes conexas, todas vs las que tienen bioactividad
     positiva. Tras el recorte las dos series coinciden."""
@@ -108,7 +118,9 @@ def componentes_conexas(t, plt):
     return fig
 
 
-@figura(A, "02_f03_conectividad_anotaciones", lee="02_conectividad_anotaciones.csv")
+@figura(A, "02_f03_conectividad_anotaciones",
+        verifica='Sin control: contra el oráculo no hay columnas numéricas comparables (`sin datos` en `10_equivalencia`).',
+        lee="02_conectividad_anotaciones.csv")
 def conectividad_anotaciones(t, plt):
     """Matriz especie x especie de categorías de afiliación compartidas."""
     matriz = t("02_conectividad_anotaciones.csv", index_col=0)
@@ -131,7 +143,9 @@ def conectividad_anotaciones(t, plt):
 
 # --- 03 · calidad de bioactividades ----------------------------------------
 
-@figura(A, "03_f01_bioactividades_por_tag", lee="03_bioactividades_por_tag.csv")
+@figura(A, "03_f01_bioactividades_por_tag",
+        verifica='Contra el oráculo v4: `cluster_consistent` idéntico; los conteos cambian como explica el recorte.',
+        lee="03_bioactividades_por_tag.csv")
 def bioactividades_por_tag(t, plt):
     """Registros compuesto-proteína por tag de actividad."""
     tags = t("03_bioactividades_por_tag.csv")
@@ -148,6 +162,7 @@ def bioactividades_por_tag(t, plt):
 
 
 @figura(A, "03_f02_promiscuidad",
+        verifica='Contra el oráculo v4: de 30 a 7 promiscuos, explicado por el recorte. La corrida exige el mapa de compuestos para no producir la lista falsa (PROVENANCE §3.10).',
         lee=("03_promiscuidad_por_compuesto.csv", "03_curva_filtrado.csv"))
 def promiscuidad(t, plt):
     """MW vs N_parentales con el criterio del paper, y curva de filtrado."""

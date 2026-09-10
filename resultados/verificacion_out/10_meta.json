@@ -1,0 +1,30 @@
+{
+  "notebook": "10_equivalencia.ipynb",
+  "nb": "10",
+  "fecha": "2026-09-10 11:06",
+  "params": {
+    "rtol": 1e-09,
+    "esperado": {
+      "analiceDB": "cambia",
+      "genome_prioritization": "estable",
+      "huerfanas": "cambia",
+      "verificacion": "estable"
+    }
+  },
+  "n_core": null,
+  "tablas_db": {
+    "00_specie_target.csv": "2026-09-08",
+    "01_clusters_fingerprint.csv": "2026-09-08",
+    "01_edges_clusters_fingerprint.part00.csv.gz": "2026-09-08",
+    "01_edges_clusters_fingerprint.part01.csv.gz": "2026-09-08",
+    "02_clusters_subestructure.csv": "2026-09-08",
+    "02_edges_clusters_subestructure.csv": "2026-09-08",
+    "03_bioactivities_organism_compound.csv": "2026-09-08",
+    "03_bioactivities_target_compound.csv": "2026-09-08",
+    "04a_interpro.csv": "2026-09-08",
+    "04b_orthomcl.csv": "2026-09-08"
+  },
+  "python": "3.12.11",
+  "pandas": "3.0.5",
+  "tablas_comparadas": 53
+}

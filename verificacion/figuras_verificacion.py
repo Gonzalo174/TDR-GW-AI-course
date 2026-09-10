@@ -16,7 +16,9 @@ COLOR = {"idéntico": tdr.ST_GOOD, "explicado por el recorte": tdr.S4,
          "DISCREPANCIA": tdr.ST_CRIT, "sin datos": tdr.MUTED, "sin par nuevo": tdr.INK2}
 
 
-@figura("verificacion", "10_f01_equivalencia", lee="10_equivalencia.csv")
+@figura("verificacion", "10_f01_equivalencia",
+        verifica='Es la verificación: compara cada tabla contra `oraculo_v4/` con tolerancia relativa 1e-9 (`verificacion/funciones_verificacion.py`).',
+        lee="10_equivalencia.csv")
 def equivalencia(t, plt):
     """Columnas comparadas contra el oráculo, por análisis y por estado."""
     eq = t("10_equivalencia.csv")

@@ -18,10 +18,11 @@ tablas: si una figura intentara leer otra, o recalcular algo desde la base, fall
 en vez de funcionar por accidente (lo vigila `comun/tests/test_figuras.py`). La
 lista de tablas es además la procedencia de la figura: `--lista` la imprime.
 
-    python comun/figuras.py                     # todas, ~30 s
+    python comun/figuras.py                     # todas, ~40 s
     python comun/figuras.py huerfanas           # las de un análisis
     python comun/figuras.py 02_f01_roc_26       # una sola
     python comun/figuras.py --lista             # figura -> tablas que lee
+    python comun/figuras.py --indice            # reescribe FIGURAS.md
 
 Desde un notebook, la sección «Resultados» llama a `dibujar(nombre)`.
 """
@@ -62,6 +63,7 @@ class Figura:
     lee: tuple                   # tablas (o patrones glob) de <analisis>_out/
     funcion: Callable
     doc: str = field(default="")
+    verifica: str = field(default="")   # que respalda la figura (test, control, oraculo)
 
     @property
     def salidas(self) -> Path:
@@ -79,9 +81,11 @@ class Figura:
 REGISTRO: dict = {}
 
 
-def figura(analisis: str, nombre: str, lee):
+def figura(analisis: str, nombre: str, lee, verifica=""):
     """Registra una función de figura. `lee` son los nombres de las tablas de
-    `resultados/<analisis>_out/` que la figura usa (se admiten patrones glob)."""
+    `resultados/<analisis>_out/` que la figura usa (se admiten patrones glob);
+    `verifica` dice qué la respalda —una prueba, el control, el oráculo— o que
+    no la respalda nada. Las dos cosas van a `FIGURAS.md`."""
     if analisis not in MODULOS:
         raise ValueError(f"análisis desconocido: {analisis!r}")
     lee = (lee,) if isinstance(lee, str) else tuple(lee)
@@ -91,7 +95,7 @@ def figura(analisis: str, nombre: str, lee):
         # la misma funcion vuelta a registrar es un `%autoreload`, no un duplicado
         if previa is not None and previa.funcion.__module__ != f.__module__:
             raise ValueError(f"figura duplicada: {nombre}")
-        REGISTRO[nombre] = Figura(analisis, nombre, lee, f, (f.__doc__ or "").strip())
+        REGISTRO[nombre] = Figura(analisis, nombre, lee, f, (f.__doc__ or "").strip(), verifica)
         return f
     return registrar
 
@@ -208,9 +212,58 @@ def lista() -> pd.DataFrame:
                                             key=lambda kv: (kv[1].analisis, kv[0]))])
 
 
+def indice() -> str:
+    """`FIGURAS.md`: por cada figura, el notebook que la dibuja, las tablas que
+    lee, la función, en qué entregable aparece y qué la verifica. Se genera del
+    registro, así que no puede quedar desactualizado respecto del código (lo
+    vigila `comun/tests/test_figuras.py`)."""
+    cargar_registro()
+    entregables = {
+        "informe": (tdr.RAIZ / "informe" / "informe.tex").read_text(),
+        "presentación": (tdr.RAIZ / "informe" / "presentacion.tex").read_text(),
+        "página": (tdr.RAIZ / "informe" / "generar_pagina.py").read_text(),
+    }
+    lineas = [
+        "# Índice de figuras",
+        "",
+        "Generado por `python comun/figuras.py --indice`; no editar a mano.",
+        "",
+        "Cada figura se dibuja **sólo** desde las tablas de `resultados/<analisis>_out/`",
+        "que figuran en la columna *lee*, que están versionadas: `python comun/figuras.py`",
+        "las regenera todas en unos 40 segundos sin cargar la base. Cada tabla lleva el",
+        "número del notebook cuya celda de corrida la escribió (CONVENCIONES.md §7), y",
+        "el `NN_meta.json` de ese notebook registra la corrida.",
+        "",
+        "La columna *verificación* dice qué respalda cada figura. Cuando no hay control",
+        "independiente, lo dice.",
+        "",
+    ]
+    for analisis in MODULOS:
+        figs = sorted((n, f) for n, f in REGISTRO.items() if f.analisis == analisis)
+        modulo = f"{analisis}/{MODULOS[analisis]}.py"
+        lineas += [f"## {analisis}", "",
+                   f"Funciones en `{modulo}`.", "",
+                   "| figura | notebook | lee | aparece en | verificación |",
+                   "|---|---|---|---|---|"]
+        for n, f in figs:
+            nb = sorted((tdr.RAIZ / analisis).glob(f"{n[:2]}_*.ipynb"))
+            nb = f"`{nb[0].name}`" if nb else "—"
+            usos = ", ".join(k for k, txt in entregables.items() if n in txt) or "—"
+            lee = "<br>".join(f"`{t}`" for t in f.lee)
+            lineas.append(f"| `{n}`<br>{f.funcion.__name__}() | {nb} | {lee} | {usos} | "
+                          f"{f.verifica or 'sin declarar'} |")
+        lineas.append("")
+    return "\n".join(lineas)
+
+
 def main(args):
     pd.set_option("display.width", 200)
     pd.set_option("display.max_colwidth", 90)
+    if "--indice" in args:
+        destino = tdr.RAIZ / "FIGURAS.md"
+        destino.write_text(indice())
+        print(f"escrito: {destino}")
+        return 0
     if "--lista" in args:
         print(lista().to_string(index=False))
         return 0

@@ -1,107 +1,165 @@
 # TDR-GW-AI-course
 
-Proyecto final del curso GW-AI.
+Proyecto final del curso GW-AI: priorización de blancos terapéuticos sobre una
+red multicapa, reproducida sobre una base codificada y con la procedencia de
+cada resultado registrada.
 
-## Contenido
+> **In English.** Given a genome, rank its proteins by how promising they are as
+> drug targets, by propagating scarce experimental evidence across a three-layer
+> network (compounds, proteins, functional annotations). Evaluated leaving out
+> all evidence of the organism being ranked, it beats chance in all 16 organisms;
+> the same model recovers the target of single-target compounds whenever their
+> chemical neighbourhood shares an annotation with it. Everything runs on an
+> integer-coded version of the database, every number in the deliverables is read
+> from the result tables, and every figure is redrawn from versioned tables in
+> ~40 s (`make figuras`). The report and page are in Spanish; `CORRECCION.md`
+> maps each requirement of the assignment to its evidence.
 
-- `final-project.html` — consigna y página de presentación del proyecto.
-- `DB/` — base de datos acondicionada del proyecto (CSV y CSV comprimidos).
-  - `DB/meta.json` describe cada tabla: filas, columnas, tamaño, y el criterio
-    de recorte aplicado al generarla.
+**Para corregir, empezar por [`CORRECCION.md`](CORRECCION.md).**
 
-## Datos
+## Entregables
 
-`DB/` fue generado por `acondicionar.py` a partir de la DB original de TDR.
-El detalle completo (semilla, escala de peso, criterio de recorte, diccionarios
-y esquema de cada tabla) está en `DB/meta.json`.
+| archivo | qué es |
+|---|---|
+| `index.html` | la página de presentación |
+| `informe/informe.pdf` | el informe (8 páginas) |
+| `informe/presentacion.pdf` | la presentación de 5 minutos |
 
-`01_edges_clusters_fingerprint` está partido en dos archivos `.gz`
-(`part00`, `part01`) que deben concatenarse para reconstruir la tabla completa.
+Los tres se arman leyendo `resultados/`: ninguno tiene una cifra escrita a mano.
 
-## Cómo correr los análisis
+## Instalar
 
 ```bash
 conda create -n TDR_GW python=3.12
 conda activate TDR_GW
 pip install -r requirements.txt
-python -m unittest discover -s comun/tests -p "test_*.py"    # 51 tests, ~25 s
 ```
 
-Los notebooks se corren en este orden, y cada uno escribe en
-`resultados/<carpeta>_out/` junto con su `NN_meta.json` de procedencia:
+Compilar el informe y la presentación pide además `pdflatex` y `bibtex`.
 
-| orden | carpeta | qué hace |
-|---|---|---|
-| 1 | `analiceDB/` | descriptivos de la base y de la red (3 notebooks) |
-| 2 | `genome_prioritization/` | barrido de parámetros y elección del óptimo (2) |
-| 3 | `huerfanas/` | pseudohuérfanas, cobertura de semilla, desorfanización (4) |
+## Verificar sin correr nada (~1 min)
 
-La celda 1 de cada notebook agrega `comun/` al path; no hace falta configurar
-nada más, porque todas las rutas se derivan de la ubicación del repositorio.
-
-### Corrida y figuras, por separado
-
-Cada notebook tiene dos mitades que cuestan muy distinto:
-
-| mitad | qué hace | cuánto tarda |
-|---|---|---|
-| **corrida** (Datos → Acondicionamiento → Corrida) | carga la base, calcula y escribe las tablas en `resultados/<analisis>_out/` | de segundos a ~15 min por notebook |
-| **Resultados** | sólo lee esas tablas y dibuja con `F.dibujar(...)` | segundos |
-
-Las figuras no se dibujan en ninguna celda de corrida: están todas en
-`<carpeta>/figuras_<analisis>.py`, cada una declarando qué tablas lee, y un
-test (`comun/tests/test_figuras.py`) verifica que ninguna toque la base. Para
-retocar o regenerar figuras no hace falta volver a correr nada:
+Las tablas de todas las corridas están **versionadas** en
+`resultados/<analisis>_out/`, junto con el `NN_meta.json` de cada una. Con
+ellas, **todas las figuras se reproducen desde las tablas pregeneradas**, sin
+cargar la base ni correr ningún modelo:
 
 ```bash
-python comun/figuras.py                   # todas las figuras, ~30 s
-python comun/figuras.py huerfanas         # las de un análisis
-python comun/figuras.py 02_f01_roc_26     # una sola
-python comun/figuras.py --lista           # qué tablas lee cada figura
+make verificar      # 53 pruebas + las 31 figuras desde las tablas + cifras del informe
+make figuras        # sólo las figuras, ~40 s
+make entregables    # figuras, FIGURAS.md, informe, presentación y página, ~1,5 min
 ```
 
-Desde un notebook alcanza con correr la celda de imports y saltar a la sección
-«Resultados».
+`make verificar` corre las pruebas, redibuja cada figura y comprueba que las
+cifras que `informe/numeros.py` lee hoy de las tablas sean las mismas que están
+en el informe versionado. Qué tablas lee cada figura y qué la verifica está en
+[`FIGURAS.md`](FIGURAS.md).
 
-## Sobre los códigos de la base
+Una figura sola, o las de un análisis:
 
-`DB/` está codificada: toda columna es un entero y los diccionarios que traducen
-esos enteros a la notación original son privados. Las equivalencias que el
-modelo necesita están escritas en `comun/tdr.py` (`TAG_POSITIVE`, `IPR_DOMAIN`,
-`SPECIES`, …), con el comentario de qué selecciona cada una.
+```bash
+python comun/figuras.py huerfanas
+python comun/figuras.py 02_f01_roc_26
+python comun/figuras.py --lista           # figura -> tablas que lee
+```
 
-Las especies se identifican por código, no por nombre. **El nombre de la especie
-no aparece en ninguna parte del repositorio**: ni en el código, ni en los datos,
-ni en los nombres de archivo, ni en la documentación. Lo que sí se publica es el
-tipo de organismo (grupo, reino, si es parásito), porque el modelo lo usa y sin
-él las figuras por grupo no se leen. Tres de las 16 son la única de su
-combinación (grupo, parásito), lo que para ellas equivale a identificarlas: está
-anotado en `comun/tdr.py`.
+## Tiempo de cómputo
+
+Reproducir las tablas es lo único caro. Medido en la corrida del 2026-09-10, en
+una máquina de 48 núcleos con **20 procesos**:
+
+| notebook | qué hace | tiempo |
+|---|---|---|
+| `analiceDB/01_dimensiones_red` | dimensiones de la red, disponibilidad por especie | 21 s |
+| `analiceDB/02_capas_y_conectividad` | tamaños de cluster, componentes conexas, conectividad | 3,5 min |
+| `analiceDB/03_calidad_bioactividades` | filtro de promiscuidad (**necesita datos privados**, ver abajo) | 1 min |
+| `genome_prioritization/01_barrido_parametros` | 16 especies × 120 combinaciones | 7,5 min |
+| `genome_prioritization/02_optimo_y_consistencia` | óptimo, meseta, consistencia | 33 s |
+| `huerfanas/01_pseudohuerfanas` | 7 782 compuestos, uno por uno | 13 min |
+| `huerfanas/02_cobertura_semilla` | tres palancas sobre 500 compuestos | 17 min |
+| `huerfanas/03_desorfanizacion_global` | r*G, directa/indirecta, semilla informativa | 21 s |
+| `huerfanas/04_aplicacion_especie` | embudo de la especie foco | 1 min |
+| `verificacion/10_equivalencia` | comparación contra `oraculo_v4/` | 10 s |
+| **total** | | **~45 min** |
+
+La carga más pesada de la base (con la capa química, 36 M aristas) tarda ~30 s
+y ocupa 2,1 GB; los procesos de la corrida paralela la comparten por `fork`. La
+cantidad de procesos se cambia con `TDR_NCORE` (por defecto 20); con menos, los
+tres notebooks largos tardan proporcionalmente más.
+
+En cambio, **redibujar las 31 figuras desde las tablas lleva ~40 s**, y las
+pruebas, ~25 s.
+
+## Reproducir la corrida (~45 min)
+
+```bash
+make corrida        # los 10 notebooks en orden (CONVENCIONES.md §9)
+make entregables
+```
+
+Cada notebook escribe sus tablas y su `NN_meta.json` en
+`resultados/<analisis>_out/`. Se puede correr uno solo con
+`jupyter nbconvert --to notebook --execute --inplace <notebook>` desde su
+carpeta. Todos tienen las mismas secciones: una **corrida** que carga la base y
+escribe tablas, y **Resultados**, que sólo las lee y dibuja; con la celda de
+imports y esa sección alcanza para ver las figuras sin volver a correr nada
+(CONVENCIONES.md §2).
+
+### `analiceDB/03` necesita datos privados
+
+Es el único notebook que no se reproduce desde el repositorio. Mide la
+promiscuidad química (cuántas superestructuras contienen a cada compuesto) y
+para eso lee tres archivos que no se publican:
+
+| archivo | qué tiene | tamaño |
+|---|---|---|
+| `raw_data/subestructures_chembl35_biolip.txt` | 1 065 346 relaciones superestructura → subestructura, con ids de ChEMBL y SMILES | 248 MB |
+| `raw_data/compounds/compound_data.csv` | id interno ↔ ChEMBL, SMILES y peso molecular | 293 MB |
+| `acondicionarDB/mapeos/mapa_compuesto.csv` | el diccionario de id interno a código de `DB/` | 12 MB |
+
+Se apunta a ellos con `TDR_RAW` (la carpeta `raw_data/`) y `TDR_MAPEOS` (la
+carpeta de mapeos). Los dos primeros identifican los compuestos y el tercero es
+justamente lo que la codificación oculta. Su salida, `03_compuestos_promiscuos.csv`,
+que es lo único que consume `huerfanas/`, está versionada; `make corrida` saltea
+este notebook si falta `TDR_MAPEOS`. Sin el mapa, la corrida falla a propósito:
+los ids no cruzan contra `DB/` y la lista saldría con 30 compuestos falsos en vez
+de los 7 verdaderos (PROVENANCE.md §3.10).
+
+## Datos
+
+`DB/` es la base acondicionada: 260 MB, sólo enteros. La generó
+`acondicionarDB/acondicionar.py` (fuera del repositorio) a partir de la base
+original, en tres operaciones: **recorte** de las componentes químicas sin
+bioactividad positiva, **codificación** a enteros con semilla fija y
+**empaquetado** de la capa de aristas en dos `.csv.gz`. El registro completo
+(semilla, criterio de recorte, diccionarios, esquema de cada tabla) está en
+`DB/meta.json`, y las decisiones con su alternativa descartada, en
+`PROVENANCE.md` §2.
+
+Las equivalencias que el modelo necesita están escritas en `comun/tdr.py`
+(`TAG_POSITIVE`, `IPR_DOMAIN`, `SPECIES`, …), con el comentario de qué
+selecciona cada una. Las especies se identifican por código: **el nombre de la
+especie no aparece en ninguna parte del repositorio**. Lo que sí se publica es
+el tipo de organismo (grupo, reino, si es parásito), porque el modelo lo usa;
+tres de las 16 son la única de su combinación y para ellas eso equivale a
+identificarlas (anotado en `comun/tdr.py`).
 
 ## Estructura
 
-| carpeta | qué es |
+| carpeta o archivo | qué es |
 |---|---|
-| `index.html` | **la página de presentación**, generada desde las tablas |
-| `informe/informe.pdf` | **el informe**, con sus números generados desde las tablas |
-| `informe/presentacion.pdf` | **la presentación** de 5 minutos, con las mismas cifras y figuras |
+| `CORRECCION.md` | la consigna, requisito por requisito, y dónde está la evidencia |
+| `FIGURAS.md` | cada figura: notebook, tablas que lee, dónde aparece y qué la verifica |
 | `PROVENANCE.md` | de dónde viene cada resultado y qué alternativa se descartó |
-| `DB/` | la base codificada; sólo enteros |
-| `comun/` | `tdr.py` (rutas, carga, métricas, estilo), `nucleo.py` (el modelo), `figuras.py` (registro y regeneración de figuras), `tests/` |
+| `CONVENCIONES.md` | las reglas de organización que cita el código |
+| `PLAN.md` | el plan de trabajo, con lo que se hizo y lo que no |
+| `DB/` | la base codificada |
+| `comun/` | `tdr.py` (rutas, carga, métricas, estilo), `nucleo.py` (el modelo), `figuras.py` (registro de figuras), `tests/` |
 | `analiceDB/`, `genome_prioritization/`, `huerfanas/` | los tres análisis, 9 notebooks; cada carpeta con `funciones_*.py` (cálculo) y `figuras_*.py` (figuras) |
 | `verificacion/` | la comparación contra el oráculo |
-| `resultados/` | salidas de las corridas (el contenido no se versiona) |
-| `control/` | óptimos por especie de una corrida independiente, para contrastar |
+| `resultados/` | las tablas de la corrida, versionadas; las figuras se regeneran |
+| `control/` | óptimos por especie de una corrida anterior, para contrastar |
 | `oraculo_v4/` | las mismas tablas calculadas antes del recorte y de la codificación |
-
-## Regenerar los entregables
-
-```bash
-python informe/numeros.py          # los números del informe, desde las tablas
-make -C informe                    # redibuja las figuras y compila -> informe/informe.pdf
-                                   #   y la presentacion de 5 min -> informe/presentacion.pdf
-python informe/generar_pagina.py   # -> index.html
-```
-
-Ninguno de los dos entregables tiene un número escrito a mano: los dos se
-arman leyendo `resultados/`.
+| `informe/` | fuentes del informe y de la presentación, y el generador de la página |
+| `historia/` | el documento de trabajo de la versión v4, sólo como registro |
+| `final-project.html` | la consigna del curso |

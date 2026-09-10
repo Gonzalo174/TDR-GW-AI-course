@@ -47,9 +47,13 @@ def tabla(df: pd.DataFrame, clases="", maxf=None) -> str:
     return f'<div class="tabla-scroll"><table class="{clases}"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
 
 
+FALTANTES = []   # figuras que no estaban: si hay alguna, la pagina no se escribe
+
+
 def figura(ruta: Path, pie: str) -> str:
     """<figure> con el PNG embebido; si falta, un aviso en vez de un hueco mudo."""
     if not ruta.exists():
+        FALTANTES.append(ruta.name)
         return f'<figure class="falta"><div class="aviso">falta {html.escape(ruta.name)}</div><figcaption>{pie}</figcaption></figure>'
     b64 = base64.b64encode(ruta.read_bytes()).decode()
     return (f'<figure><img src="data:image/png;base64,{b64}" alt="{html.escape(pie[:80])}">'
@@ -180,6 +184,13 @@ def construir() -> str:
     A("</div></header>")
 
     # ---------- resumen ----------
+    A('<p class="chapo" lang="en"><strong>In English.</strong> Given a genome, rank its '
+      "proteins as drug-target candidates by propagating scarce experimental evidence across a "
+      "three-layer network (compounds, proteins, functional annotations). Evaluated leaving out "
+      f'all evidence of the organism being ranked, it beats chance in {n["NSobreAzar"]} of '
+      f'{n["NEspeciesOpt"]} organisms (median AUC01 {n["AUCMediana"]}). Run on an '
+      "integer-coded database; every number on this page is read from the result tables, and "
+      "every figure is redrawn from them in about 40 s.</p>")
     A("<h2>En una pantalla</h2>")
     A('<div class="fichas">')
     A(ficha(f'{n["NSobreAzar"]} de {n["NEspeciesOpt"]}', "organismos priorizados mejor que el "
@@ -364,22 +375,22 @@ def construir() -> str:
     A("<h2>Verificarlo y reproducirlo</h2>")
     A(f'<p>{n["NPruebas"]} pruebas corren en menos de medio minuto: integridad de las tablas, '
       "ausencia de fuga, métricas contra valores de referencia, rutas, entorno, y que toda "
-      "figura se dibuje sin tocar la base. Cada notebook separa una <em>celda de corrida</em>, "
-      "que carga la base y escribe tablas, de una sección de resultados que sólo las lee: las "
-      f'{n["NFiguras"]} figuras se regeneran en unos treinta segundos sin volver a correr '
-      "ningún modelo.</p>")
-    A("<pre><code>git clone https://github.com/Gonzalo174/TDR-GW-AI-course\n"
-      "cd TDR-GW-AI-course\n"
-      "conda create -n TDR_GW python=3.12 &amp;&amp; conda activate TDR_GW\n"
+      "figura se dibuje sin tocar la base. Las tablas de la corrida están versionadas, así que "
+      f'las {n["NFiguras"]} figuras y todas las cifras de esta página <strong>se reproducen '
+      "desde las tablas pregeneradas en alrededor de un minuto</strong>, sin volver a correr "
+      "ningún modelo. Rehacer las tablas desde la base lleva unos 45 minutos con 20 "
+      "procesos.</p>")
+    A("<pre><code>conda create -n TDR_GW python=3.12 &amp;&amp; conda activate TDR_GW\n"
       "pip install -r requirements.txt\n"
-      "python -m unittest discover -s comun/tests -p \"test_*.py\"\n"
-      "jupyter nbconvert --to notebook --execute --inplace */[0-9]*.ipynb   # la corrida\n"
-      "python comun/figuras.py                                            # sólo las figuras</code></pre>")
+      "make verificar     # pruebas + figuras desde las tablas + cifras del informe   ~1 min\n"
+      "make corrida       # los 10 notebooks, desde la base                          ~45 min\n"
+      "make entregables   # figuras, informe, presentación y esta página         ~1,5 min</code></pre>")
     A("<p>Cada notebook deja un <code>NN_meta.json</code> junto a sus tablas con la fecha, los "
-      "parámetros, la fecha de cada tabla de entrada y las versiones de python y pandas. El "
-      "repositorio no reproduce la base misma, los nombres legibles de las anotaciones ni la "
-      "identidad de los organismos: lo primero se deriva de datos privados, lo último es "
-      "deliberado.</p>")
+      "parámetros, la fecha de cada tabla de entrada y las versiones de python y pandas. Qué "
+      "tablas lee cada figura y qué la verifica está en <code>FIGURAS.md</code>. El repositorio "
+      "no reproduce la base misma ni el filtro de promiscuidad de <code>analiceDB/03</code> "
+      "(los dos necesitan datos privados; su salida está versionada), ni los nombres legibles "
+      "de las anotaciones ni la identidad de los organismos, que es deliberada.</p>")
 
     A('<footer>Generado por <code>informe/generar_pagina.py</code> a partir de las tablas de '
       "<code>resultados/</code>. Los números de esta página no se escribieron a mano.</footer>")
@@ -388,6 +399,15 @@ def construir() -> str:
 
 
 if __name__ == "__main__":
+    pagina = construir()
+    # Como numeros.py: si falta algo no se pisa la pagina versionada.
+    sin_dato = pagina.count("??")
+    if (FALTANTES or sin_dato) and "--forzar" not in sys.argv:
+        print(f"NO se escribe index.html: faltan {len(FALTANTES)} figuras "
+              f"({', '.join(FALTANTES[:5])}) y {sin_dato} cifras.\n"
+              "Las figuras se dibujan desde las tablas con `python comun/figuras.py`. "
+              "Para escribirla igual: --forzar")
+        sys.exit(1)
     destino = RAIZ / "index.html"
-    destino.write_text("<title>Priorización de blancos terapéuticos</title>\n" + construir())
+    destino.write_text("<title>Priorización de blancos terapéuticos</title>\n" + pagina)
     print(f"escrito: {destino}  ({destino.stat().st_size/1024:.0f} KB)")

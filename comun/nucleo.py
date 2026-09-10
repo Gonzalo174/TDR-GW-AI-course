@@ -1,7 +1,7 @@
 """
 nucleo.py
 ---------
-Nucleo del modelo: `tdr-graph/nds_fun.py` movido tal cual (traduccion de
+Nucleo del modelo: `nds_fun.py` de la versión v3 del proyecto (fuera de este repositorio) movido tal cual (traduccion de
 nds_fun.R). Congelado: se cambia solo con un test de `comun/tests/` que lo
 justifique. Todo lo demas —rutas, carga, metricas, paralelizacion, figuras—
 vive en `comun/tdr.py`.

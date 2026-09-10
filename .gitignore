@@ -24,3 +24,10 @@ informe/presentacion.nav
 informe/presentacion.out
 informe/presentacion.snm
 informe/presentacion.toc
+
+# Auxiliares de LaTeX del informe (se regeneran con make -C informe)
+informe/informe.aux
+informe/informe.bbl
+informe/informe.blg
+informe/informe.log
+informe/informe.out

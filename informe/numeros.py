@@ -357,12 +357,20 @@ def tabla_optimos() -> str:
 
 
 if __name__ == "__main__":
-    (Path(__file__).resolve().parent / "tabla_optimos.tex").write_text(tabla_optimos())
+    # Si falta un dato NO se escribe nada: un numeros.tex con "??" pisaria las
+    # cifras buenas de los entregables versionados. `--forzar` lo escribe igual.
     n = construir()
-    destino = Path(__file__).resolve().parent / "numeros.tex"
-    cuerpo = "\n".join(f"\\newcommand{{\\{k}}}{{{v}}}" for k, v in sorted(n.items()))
-    destino.write_text("% Generado por informe/numeros.py — no editar a mano.\n" + cuerpo + "\n")
     faltan = [k for k, v in n.items() if v == FALTA]
-    print(f"escrito: {destino} ({len(n)} valores)")
+    if faltan and "--forzar" not in sys.argv:
+        print(f"NO se escribe numeros.tex: faltan {len(faltan)} cifras "
+              f"({', '.join(faltan[:8])}{'…' if len(faltan) > 8 else ''}).\n"
+              "Las tablas de resultados/ estan versionadas: si faltan, correr los "
+              "notebooks que las producen (README.md). Para escribirlo igual: --forzar")
+        sys.exit(1)
+    aqui = Path(__file__).resolve().parent
+    (aqui / "tabla_optimos.tex").write_text(tabla_optimos())
+    cuerpo = "\n".join(f"\\newcommand{{\\{k}}}{{{v}}}" for k, v in sorted(n.items()))
+    (aqui / "numeros.tex").write_text("% Generado por informe/numeros.py — no editar a mano.\n" + cuerpo + "\n")
+    print(f"escrito: {aqui / 'numeros.tex'} ({len(n)} valores)")
     if faltan:
         print("  SIN DATO:", ", ".join(faltan))

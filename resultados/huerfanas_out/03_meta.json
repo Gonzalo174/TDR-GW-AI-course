@@ -1,0 +1,26 @@
+{
+  "notebook": "03_desorfanizacion_global.ipynb",
+  "nb": "03",
+  "fecha": "2026-09-10 11:45",
+  "params": {
+    "l_max": 1000,
+    "k_sigma": 3.0
+  },
+  "n_core": null,
+  "tablas_db": {
+    "00_specie_target.csv": "2026-09-08",
+    "01_clusters_fingerprint.csv": "2026-09-08",
+    "01_edges_clusters_fingerprint.part00.csv.gz": "2026-09-08",
+    "01_edges_clusters_fingerprint.part01.csv.gz": "2026-09-08",
+    "02_clusters_subestructure.csv": "2026-09-08",
+    "02_edges_clusters_subestructure.csv": "2026-09-08",
+    "03_bioactivities_organism_compound.csv": "2026-09-08",
+    "03_bioactivities_target_compound.csv": "2026-09-08",
+    "04a_interpro.csv": "2026-09-08",
+    "04b_orthomcl.csv": "2026-09-08"
+  },
+  "python": "3.12.11",
+  "pandas": "3.0.5",
+  "fuente_nb": "01",
+  "r_g_estrella": 74.0
+}

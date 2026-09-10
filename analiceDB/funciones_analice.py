@@ -7,7 +7,7 @@ disponibilidad por especie y el impacto del filtro de promiscuidad quimica—,
 porque cambian numeros que van al texto.
 
 Fuentes: `analiceDB/01_tablas_analisis.ipynb` y `02_conectividad_por_anotaciones.ipynb`
-de v3, `reproducir_v6/descriptivos_red/` y `reproducir_v6/capa_quimica/02_filtro_promiscuidad.py`.
+de la versión v3 del proyecto (fuera de este repositorio).
 
 Nada se ejecuta al importar este modulo.
 """
@@ -101,7 +101,7 @@ def promiscuidad_subestructural(sub, comp, mw_max=tdr.MW_PROMISCUIDAD,
       promiscuos     los que cumplen el criterio -> es lo que consume `huerfanas/`
       impacto        cuántos compuestos y cuántas aristas saca el filtro
 
-    Es principal porque, aplicado (README §7.3), cambia todos los números aguas
+    Es principal porque, aplicado (CONVENCIONES.md §10), cambia todos los números aguas
     abajo: semillas, cobertura y ranking de las pseudohuérfanas.
     """
     n_par = sub.groupby("hijo").size().rename("n_parentales")
@@ -277,7 +277,7 @@ def curva_filtrado(por_compuesto, sub, umbrales=(10, 50, 100, 500), mw_grilla=No
 
 
 def escribir_meta(salidas, nb, **campos):
-    """Reexporta `tdr.escribir_meta` (README §1.4)."""
+    """Reexporta `tdr.escribir_meta` (CONVENCIONES.md §4)."""
     return tdr.escribir_meta(salidas, nb, **campos)
 
 

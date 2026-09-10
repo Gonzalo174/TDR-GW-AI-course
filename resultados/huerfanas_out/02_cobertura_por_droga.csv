@@ -1,0 +1,7783 @@
+drug_id,especie,semilla,n_semilla
+641,0,nula,0
+873,0,nula,0
+1217,0,no informativa,2
+1997,0,no informativa,31
+2096,0,nula,0
+4016,0,no informativa,2
+5734,0,nula,0
+5783,0,nula,0
+6381,0,nula,0
+6678,0,nula,0
+7693,0,nula,0
+8102,0,nula,0
+8348,0,nula,0
+8641,0,nula,0
+9857,0,nula,0
+10626,0,nula,0
+10667,0,no informativa,5
+13721,0,nula,0
+14691,0,nula,0
+15011,0,no informativa,4
+15059,0,nula,0
+15063,0,nula,0
+15846,0,nula,0
+18092,0,nula,0
+20489,0,nula,0
+20799,0,nula,0
+21625,0,nula,0
+22688,0,no informativa,2
+25946,0,nula,0
+26806,0,nula,0
+28499,0,nula,0
+29742,0,no informativa,2
+29857,0,nula,0
+30021,0,no informativa,2
+32983,0,nula,0
+34327,0,nula,0
+36533,0,nula,0
+36548,0,nula,0
+37347,0,nula,0
+37516,0,nula,0
+40677,0,nula,0
+40853,0,nula,0
+41001,0,nula,0
+41005,0,nula,0
+42245,0,no informativa,2
+42406,0,no informativa,5
+43113,0,no informativa,6
+43333,0,no informativa,2
+45213,0,nula,0
+45255,0,nula,0
+45689,0,nula,0
+46070,0,nula,0
+47057,0,nula,0
+47117,0,nula,0
+47230,0,nula,0
+48315,0,nula,0
+49263,0,no informativa,5
+49658,0,nula,0
+49895,0,no informativa,8
+50232,0,nula,0
+51333,0,nula,0
+51948,0,no informativa,10
+52797,0,no informativa,2
+53479,0,no informativa,2
+53731,0,no informativa,3
+54511,0,nula,0
+54609,0,nula,0
+56732,0,nula,0
+57618,0,nula,0
+57702,0,no informativa,7
+59571,0,nula,0
+60774,0,nula,0
+62377,0,nula,0
+62515,0,nula,0
+64003,0,nula,0
+64120,0,no informativa,358
+64567,0,nula,0
+64781,0,no informativa,7
+65203,0,nula,0
+65357,0,nula,0
+65749,0,nula,0
+65812,0,nula,0
+67029,0,nula,0
+68371,0,no informativa,8
+68375,0,nula,0
+69516,0,nula,0
+69588,0,nula,0
+70540,0,nula,0
+70742,0,informativa,6
+71001,0,nula,0
+71685,0,nula,0
+72004,0,no informativa,4
+73585,0,no informativa,16
+74307,0,nula,0
+74541,0,nula,0
+75648,0,nula,0
+76861,0,no informativa,2
+76864,0,nula,0
+76994,0,nula,0
+77175,0,no informativa,5
+77348,0,nula,0
+78558,0,nula,0
+79140,0,no informativa,2
+82326,0,no informativa,4
+82756,0,no informativa,2
+83739,0,no informativa,11
+85953,0,nula,0
+86016,0,nula,0
+87563,0,no informativa,49
+87787,0,nula,0
+88175,0,nula,0
+88796,0,nula,0
+89036,0,no informativa,2
+90574,0,nula,0
+91151,0,nula,0
+93011,0,no informativa,5
+93932,0,nula,0
+96189,0,no informativa,2
+96602,0,nula,0
+96785,0,nula,0
+97334,0,nula,0
+98243,0,nula,0
+98582,0,no informativa,4
+99478,0,nula,0
+99893,0,no informativa,2
+100817,0,nula,0
+101733,0,no informativa,3
+103195,0,nula,0
+104369,0,nula,0
+105122,0,nula,0
+105944,0,nula,0
+108136,0,nula,0
+109049,0,no informativa,60
+109482,0,nula,0
+109617,0,no informativa,9
+113332,0,no informativa,3
+113828,0,nula,0
+114940,0,informativa,2
+115693,0,nula,0
+116595,0,no informativa,7
+116758,0,no informativa,5
+117425,0,nula,0
+117674,0,no informativa,8
+118107,0,nula,0
+119470,0,no informativa,3
+119845,0,no informativa,4
+119857,0,no informativa,6
+121574,0,no informativa,18
+121892,0,nula,0
+123484,0,nula,0
+123705,0,nula,0
+124009,0,no informativa,6
+124059,0,nula,0
+124995,0,nula,0
+125551,0,no informativa,3
+125596,0,no informativa,8
+126712,0,nula,0
+126804,0,nula,0
+127834,0,nula,0
+128197,0,nula,0
+130182,0,informativa,5
+132143,0,nula,0
+132913,0,no informativa,7
+133347,0,no informativa,13
+134080,0,no informativa,3
+134107,0,nula,0
+135098,0,nula,0
+136113,0,nula,0
+137726,0,nula,0
+138804,0,nula,0
+138819,0,nula,0
+139191,0,no informativa,5
+140312,0,nula,0
+140372,0,nula,0
+140558,0,nula,0
+142789,0,no informativa,5
+143097,0,no informativa,20
+144216,0,informativa,12
+144385,0,no informativa,2
+144898,0,nula,0
+145287,0,nula,0
+146059,0,nula,0
+146325,0,no informativa,4
+146370,0,informativa,6
+146892,0,nula,0
+147642,0,nula,0
+148445,0,nula,0
+148837,0,nula,0
+148995,0,no informativa,2
+149093,0,nula,0
+150429,0,nula,0
+150561,0,nula,0
+152199,0,no informativa,3
+154671,0,nula,0
+155043,0,nula,0
+155272,0,nula,0
+155800,0,no informativa,3
+157273,0,nula,0
+158062,0,nula,0
+159200,0,no informativa,10
+159563,0,nula,0
+160279,0,no informativa,17
+160656,0,informativa,2
+161253,0,nula,0
+161483,0,nula,0
+162353,0,no informativa,7
+162599,0,no informativa,2
+163585,0,nula,0
+163808,0,nula,0
+164319,0,nula,0
+164628,0,nula,0
+165668,0,nula,0
+166897,0,nula,0
+167612,0,nula,0
+169587,0,no informativa,11
+170226,0,nula,0
+170831,0,nula,0
+172205,0,nula,0
+172456,0,no informativa,5
+172970,0,no informativa,2
+173242,0,nula,0
+173315,0,nula,0
+175610,0,nula,0
+175950,0,nula,0
+176178,0,nula,0
+176189,0,nula,0
+176477,0,nula,0
+179482,0,nula,0
+180032,0,nula,0
+180167,0,nula,0
+181319,0,no informativa,3
+181511,0,no informativa,7
+181601,0,nula,0
+181650,0,nula,0
+184182,0,no informativa,7
+185136,0,nula,0
+185275,0,nula,0
+186136,0,nula,0
+186533,0,no informativa,3
+186862,0,nula,0
+189124,0,nula,0
+189157,0,informativa,3
+189691,0,nula,0
+190201,0,nula,0
+191275,0,nula,0
+192911,0,nula,0
+193782,0,nula,0
+194963,0,nula,0
+195037,0,nula,0
+195267,0,nula,0
+197482,0,no informativa,3
+198605,0,no informativa,3
+198975,0,nula,0
+199416,0,no informativa,5
+200249,0,no informativa,3
+201441,0,nula,0
+203227,0,no informativa,2
+204024,0,nula,0
+205191,0,nula,0
+208354,0,nula,0
+209671,0,nula,0
+209771,0,nula,0
+209840,0,no informativa,6
+209941,0,nula,0
+211494,0,nula,0
+213005,0,nula,0
+213076,0,nula,0
+214363,0,nula,0
+214704,0,nula,0
+215719,0,nula,0
+216827,0,no informativa,6
+217125,0,no informativa,2
+218052,0,no informativa,7
+218242,0,no informativa,2
+219682,0,nula,0
+220479,0,nula,0
+220991,0,nula,0
+221499,0,nula,0
+221732,0,nula,0
+221849,0,nula,0
+222449,0,no informativa,3
+223319,0,nula,0
+223630,0,nula,0
+224943,0,informativa,2
+225880,0,nula,0
+226262,0,no informativa,3
+226342,0,no informativa,7
+226568,0,no informativa,2
+227810,0,informativa,6
+227886,0,no informativa,4
+229323,0,no informativa,3
+229823,0,no informativa,7
+229894,0,no informativa,21
+230260,0,nula,0
+232276,0,nula,0
+232898,0,nula,0
+233826,0,no informativa,3
+234674,0,nula,0
+234828,0,no informativa,2
+235534,0,nula,0
+235730,0,no informativa,2
+236066,0,nula,0
+236472,0,nula,0
+239024,0,nula,0
+239853,0,nula,0
+241660,0,no informativa,2
+241794,0,nula,0
+241997,0,informativa,100
+243958,0,nula,0
+244900,0,nula,0
+248252,0,no informativa,2
+249513,0,no informativa,3
+249560,0,no informativa,2
+250403,0,no informativa,3
+254292,0,nula,0
+254406,0,nula,0
+255507,0,informativa,3
+255964,0,nula,0
+256391,0,nula,0
+261755,0,no informativa,2
+262145,0,nula,0
+263064,0,nula,0
+263599,0,nula,0
+263824,0,nula,0
+263905,0,nula,0
+264522,0,nula,0
+265081,0,nula,0
+266540,0,no informativa,35
+267070,0,no informativa,8
+268119,0,nula,0
+268620,0,nula,0
+269424,0,nula,0
+270324,0,nula,0
+271656,0,no informativa,12
+271876,0,no informativa,23
+276204,0,nula,0
+277479,0,nula,0
+278346,0,nula,0
+279966,0,nula,0
+283009,0,nula,0
+283634,0,nula,0
+283748,0,nula,0
+284312,0,nula,0
+285645,0,nula,0
+285976,0,no informativa,8
+286967,0,nula,0
+287929,0,no informativa,16
+288733,0,nula,0
+289042,0,no informativa,66
+291454,0,nula,0
+292077,0,nula,0
+292596,0,nula,0
+292963,0,no informativa,6
+293827,0,nula,0
+294935,0,no informativa,4
+295480,0,no informativa,2
+295960,0,nula,0
+296988,0,nula,0
+297165,0,nula,0
+297719,0,nula,0
+300005,0,no informativa,3
+300985,0,nula,0
+301374,0,no informativa,3
+302128,0,no informativa,3
+302230,0,nula,0
+302587,0,nula,0
+303434,0,nula,0
+303560,0,nula,0
+304806,0,nula,0
+304860,0,nula,0
+305155,0,nula,0
+307222,0,nula,0
+309077,0,nula,0
+309211,0,informativa,355
+309685,0,nula,0
+311000,0,nula,0
+311854,0,nula,0
+312407,0,nula,0
+312910,0,nula,0
+314117,0,nula,0
+315038,0,nula,0
+315588,0,nula,0
+316887,0,no informativa,8
+318521,0,nula,0
+319386,0,nula,0
+321015,0,no informativa,2
+321310,0,nula,0
+321500,0,nula,0
+322432,0,nula,0
+323706,0,nula,0
+326175,0,no informativa,3
+326473,0,nula,0
+327189,0,nula,0
+327746,0,nula,0
+328890,0,nula,0
+328896,0,nula,0
+331839,0,nula,0
+331935,0,informativa,6
+335572,0,nula,0
+336630,0,nula,0
+337619,0,nula,0
+338493,0,no informativa,17
+339278,0,nula,0
+339436,0,nula,0
+340065,0,nula,0
+341642,0,no informativa,2
+341804,0,nula,0
+343956,0,nula,0
+344275,0,nula,0
+344612,0,no informativa,11
+345403,0,no informativa,2
+347058,0,nula,0
+351556,0,nula,0
+351985,0,informativa,4
+352760,0,no informativa,3
+353028,0,nula,0
+353420,0,nula,0
+354365,0,nula,0
+355019,0,nula,0
+355156,0,nula,0
+355455,0,no informativa,6
+355700,0,nula,0
+356021,0,nula,0
+356098,0,nula,0
+358636,0,no informativa,6
+360441,0,no informativa,12
+360874,0,nula,0
+361597,0,nula,0
+361757,0,nula,0
+362100,0,informativa,18
+362870,0,no informativa,11
+364386,0,nula,0
+364406,0,no informativa,2
+365730,0,no informativa,4
+365739,0,nula,0
+366692,0,nula,0
+367270,0,nula,0
+368139,0,nula,0
+368474,0,informativa,6
+368794,0,nula,0
+368913,0,no informativa,2
+371720,0,nula,0
+372031,0,nula,0
+372123,0,nula,0
+373804,0,nula,0
+375446,0,no informativa,2
+378163,0,no informativa,2
+378503,0,nula,0
+378584,0,nula,0
+378658,0,nula,0
+379225,0,nula,0
+380507,0,nula,0
+381609,0,nula,0
+381680,0,nula,0
+381957,0,nula,0
+382137,0,nula,0
+383110,0,no informativa,2
+383751,0,nula,0
+383999,0,nula,0
+386208,0,nula,0
+386681,0,nula,0
+386778,0,nula,0
+388926,0,no informativa,2
+389648,0,nula,0
+390557,0,no informativa,9
+390684,0,nula,0
+390844,0,nula,0
+391029,0,nula,0
+391183,0,nula,0
+393508,0,no informativa,2
+394022,0,nula,0
+394443,0,nula,0
+395494,0,nula,0
+396227,0,nula,0
+396251,0,no informativa,10
+397174,0,nula,0
+397302,0,nula,0
+398693,0,nula,0
+398848,0,nula,0
+399437,0,no informativa,3
+399596,0,no informativa,4
+399900,0,nula,0
+399996,0,no informativa,7
+400885,0,no informativa,10
+403163,0,nula,0
+403632,0,no informativa,11
+405014,0,nula,0
+405659,0,nula,0
+406481,0,no informativa,3
+406916,0,informativa,2
+409979,0,nula,0
+410372,0,nula,0
+411610,0,nula,0
+413782,0,nula,0
+414892,0,nula,0
+416505,0,nula,0
+418069,0,no informativa,2
+418221,0,nula,0
+418567,0,nula,0
+418902,0,nula,0
+419205,0,no informativa,11
+420153,0,nula,0
+420416,0,nula,0
+422477,0,nula,0
+422638,0,nula,0
+424578,0,nula,0
+427895,0,nula,0
+428134,0,nula,0
+428624,0,nula,0
+428860,0,nula,0
+429638,0,nula,0
+431544,0,nula,0
+432345,0,nula,0
+432857,0,no informativa,354
+433193,0,nula,0
+433649,0,no informativa,4
+434152,0,nula,0
+434613,0,no informativa,2
+436053,0,nula,0
+436609,0,nula,0
+436820,0,no informativa,5
+436978,0,nula,0
+438005,0,nula,0
+438010,0,no informativa,3
+438192,0,nula,0
+438819,0,no informativa,2
+439068,0,no informativa,27
+440078,0,nula,0
+441909,0,nula,0
+442447,0,nula,0
+442515,0,nula,0
+442809,0,nula,0
+442832,0,nula,0
+443372,0,nula,0
+444241,0,no informativa,5
+444839,0,nula,0
+445166,0,no informativa,2
+445210,0,no informativa,11
+445243,0,no informativa,6
+446433,0,nula,0
+447730,0,no informativa,3
+449042,0,nula,0
+449556,0,no informativa,5
+449875,0,nula,0
+451318,0,nula,0
+451442,0,nula,0
+454218,0,nula,0
+454384,0,no informativa,4
+455054,0,nula,0
+455130,0,no informativa,2
+457485,0,nula,0
+457562,0,nula,0
+457563,0,nula,0
+457675,0,no informativa,3
+458453,0,nula,0
+460099,0,nula,0
+463591,0,nula,0
+464182,0,no informativa,2
+464698,0,nula,0
+465413,0,nula,0
+465424,0,no informativa,2
+467873,0,nula,0
+469112,0,nula,0
+469468,0,nula,0
+469831,0,no informativa,10
+470165,0,nula,0
+470774,0,nula,0
+473557,0,nula,0
+474025,0,nula,0
+474558,0,nula,0
+474689,0,no informativa,4
+475290,0,no informativa,44
+476992,0,nula,0
+477470,0,no informativa,2
+478194,0,nula,0
+478357,0,nula,0
+480469,0,nula,0
+480731,0,nula,0
+481605,0,nula,0
+481968,0,nula,0
+483191,0,no informativa,19
+484051,0,nula,0
+486001,0,no informativa,2
+486903,0,nula,0
+488593,0,nula,0
+489246,0,nula,0
+489915,0,nula,0
+490449,0,nula,0
+490588,0,no informativa,21
+491062,0,no informativa,14
+492393,0,nula,0
+493026,0,nula,0
+493509,0,no informativa,2
+493583,0,nula,0
+493639,0,no informativa,3
+494049,0,nula,0
+494577,0,nula,0
+495789,0,no informativa,14
+496067,0,nula,0
+496265,0,nula,0
+496566,0,no informativa,2
+498687,0,no informativa,13
+499618,0,no informativa,4
+501141,0,nula,0
+501445,0,nula,0
+503876,0,no informativa,3
+504071,0,nula,0
+506146,0,nula,0
+506336,0,nula,0
+506647,0,nula,0
+508022,0,nula,0
+509256,0,nula,0
+510083,0,no informativa,2
+510436,0,nula,0
+511468,0,no informativa,7
+511585,0,nula,0
+514874,0,no informativa,1458
+515464,0,nula,0
+516089,0,nula,0
+516353,0,nula,0
+518080,0,no informativa,2
+518153,0,nula,0
+518507,0,nula,0
+519068,0,nula,0
+519443,0,nula,0
+519563,0,nula,0
+519889,0,nula,0
+520126,0,no informativa,4
+521210,0,no informativa,12
+521369,0,nula,0
+521376,0,nula,0
+521726,0,nula,0
+522162,0,nula,0
+522223,0,nula,0
+522573,0,nula,0
+522979,0,nula,0
+523345,0,no informativa,4
+524502,0,nula,0
+525424,0,nula,0
+526795,0,nula,0
+527154,0,no informativa,6
+527385,0,nula,0
+528791,0,no informativa,4
+529593,0,nula,0
+531357,0,nula,0
+531431,0,nula,0
+532188,0,nula,0
+532573,0,no informativa,6
+534722,0,nula,0
+537160,0,no informativa,3
+537326,0,informativa,5
+538617,0,no informativa,4
+539168,0,nula,0
+541407,0,no informativa,6
+542822,0,nula,0
+543670,0,nula,0
+543867,0,nula,0
+544039,0,nula,0
+544491,0,no informativa,7
+545038,0,nula,0
+545141,0,nula,0
+546160,0,nula,0
+548195,0,nula,0
+548274,0,nula,0
+548305,0,nula,0
+551137,0,no informativa,6
+553051,0,informativa,79
+553806,0,no informativa,7
+554588,0,nula,0
+554604,0,no informativa,2
+555131,0,nula,0
+555643,0,nula,0
+557479,0,no informativa,9
+558658,0,no informativa,2
+559234,0,nula,0
+559548,0,nula,0
+559779,0,nula,0
+561362,0,nula,0
+562090,0,nula,0
+562738,0,nula,0
+563010,0,nula,0
+563890,0,nula,0
+564369,0,nula,0
+567570,0,no informativa,7
+567658,0,nula,0
+569129,0,nula,0
+569138,0,no informativa,8
+572067,0,nula,0
+572210,0,nula,0
+572321,0,nula,0
+572360,0,nula,0
+572684,0,no informativa,2
+572812,0,nula,0
+573207,0,nula,0
+573369,0,nula,0
+573571,0,nula,0
+574150,0,no informativa,376
+575023,0,no informativa,8
+575930,0,nula,0
+579327,0,no informativa,7
+582167,0,nula,0
+582576,0,nula,0
+582936,0,no informativa,3
+586286,0,no informativa,17
+590231,0,nula,0
+590298,0,nula,0
+591905,0,nula,0
+591912,0,no informativa,2
+592236,0,nula,0
+593038,0,nula,0
+594027,0,nula,0
+594260,0,nula,0
+594496,0,no informativa,5
+594796,0,nula,0
+596127,0,no informativa,16
+598489,0,nula,0
+599649,0,nula,0
+601015,0,nula,0
+603364,0,nula,0
+607135,0,nula,0
+607941,0,no informativa,23
+609339,0,nula,0
+609507,0,nula,0
+609537,0,nula,0
+610313,0,nula,0
+611164,0,nula,0
+614095,0,nula,0
+614601,0,nula,0
+615878,0,nula,0
+615935,0,no informativa,2
+616004,0,nula,0
+617065,0,nula,0
+618089,0,nula,0
+619157,0,no informativa,6
+619548,0,nula,0
+620154,0,nula,0
+620284,0,no informativa,3
+621297,0,nula,0
+621848,0,no informativa,5
+622001,0,nula,0
+623664,0,no informativa,2
+624188,0,nula,0
+624251,0,no informativa,4
+626228,0,nula,0
+626476,0,nula,0
+626691,0,nula,0
+627187,0,nula,0
+630931,0,nula,0
+631338,0,nula,0
+632069,0,nula,0
+632200,0,no informativa,2
+632222,0,no informativa,359
+632232,0,no informativa,6
+634298,0,nula,0
+635041,0,nula,0
+635973,0,no informativa,8
+637719,0,no informativa,11
+639034,0,nula,0
+639447,0,nula,0
+640275,0,nula,0
+640367,0,nula,0
+641047,0,no informativa,6
+641202,0,nula,0
+643052,0,nula,0
+643274,0,nula,0
+644154,0,no informativa,7
+645377,0,nula,0
+645449,0,nula,0
+645645,0,informativa,7
+645857,0,nula,0
+646730,0,nula,0
+647769,0,no informativa,3
+647916,0,nula,0
+648995,0,nula,0
+649280,0,nula,0
+649367,0,no informativa,6
+649545,0,nula,0
+649624,0,no informativa,6
+650605,0,nula,0
+651255,0,no informativa,2
+652240,0,nula,0
+652868,0,no informativa,5
+654231,0,nula,0
+654387,0,nula,0
+655481,0,nula,0
+657824,0,nula,0
+658229,0,no informativa,2
+658637,0,nula,0
+659373,0,nula,0
+659439,0,no informativa,2
+661651,0,no informativa,6
+663342,0,nula,0
+663864,0,no informativa,10
+666049,0,nula,0
+667513,0,no informativa,3
+669261,0,nula,0
+669534,0,nula,0
+669812,0,nula,0
+670938,0,nula,0
+671487,0,no informativa,4
+672473,0,nula,0
+673633,0,informativa,3
+674618,0,informativa,4
+674916,0,nula,0
+675202,0,nula,0
+675512,0,nula,0
+675960,0,informativa,134
+676632,0,nula,0
+677562,0,no informativa,2
+678445,0,nula,0
+678642,0,nula,0
+678882,0,nula,0
+678883,0,nula,0
+679190,0,nula,0
+680042,0,no informativa,2
+682105,0,no informativa,2
+682401,0,nula,0
+682588,0,nula,0
+682726,0,nula,0
+686738,0,nula,0
+687390,0,nula,0
+688851,0,nula,0
+689121,0,no informativa,3
+690119,0,nula,0
+690917,0,informativa,2
+693173,0,nula,0
+693528,0,nula,0
+693535,0,no informativa,5
+693581,0,nula,0
+694409,0,nula,0
+694476,0,nula,0
+695305,0,no informativa,3
+695534,0,no informativa,42
+696736,0,nula,0
+697439,0,nula,0
+698828,0,nula,0
+699923,0,nula,0
+700035,0,no informativa,3
+701517,0,no informativa,11
+701783,0,no informativa,2
+702614,0,no informativa,2
+702759,0,nula,0
+705713,0,nula,0
+707666,0,nula,0
+708571,0,nula,0
+709360,0,no informativa,2
+709621,0,nula,0
+712594,0,nula,0
+712882,0,nula,0
+712988,0,no informativa,6
+714540,0,nula,0
+715214,0,nula,0
+716250,0,no informativa,57
+716724,0,nula,0
+718268,0,nula,0
+718777,0,informativa,10
+719528,0,nula,0
+719574,0,nula,0
+720837,0,nula,0
+721822,0,nula,0
+721934,0,no informativa,12
+722330,0,nula,0
+723511,0,informativa,355
+723548,0,nula,0
+723690,0,no informativa,12
+724350,0,no informativa,3
+724408,0,nula,0
+724761,0,no informativa,3
+725071,0,nula,0
+725885,0,nula,0
+728208,0,no informativa,2
+728577,0,no informativa,2
+728674,0,nula,0
+729104,0,nula,0
+729134,0,no informativa,4
+729304,0,nula,0
+729518,0,no informativa,7
+729559,0,nula,0
+730088,0,nula,0
+731479,0,no informativa,3
+731951,0,nula,0
+732559,0,nula,0
+733001,0,nula,0
+733851,0,nula,0
+733887,0,nula,0
+734265,0,no informativa,327
+734309,0,nula,0
+734502,0,nula,0
+736241,0,no informativa,10
+737394,0,nula,0
+740639,0,nula,0
+741233,0,no informativa,6
+741332,0,nula,0
+742007,0,nula,0
+742920,0,nula,0
+744638,0,nula,0
+746260,0,nula,0
+746667,0,no informativa,2
+746699,0,nula,0
+747070,0,nula,0
+747413,0,no informativa,2
+749962,0,no informativa,7
+751357,0,no informativa,5
+753777,0,nula,0
+754193,0,nula,0
+754632,0,no informativa,6
+754922,0,nula,0
+754994,0,nula,0
+755714,0,no informativa,375
+756405,0,nula,0
+757280,0,nula,0
+757406,0,no informativa,4
+758270,0,nula,0
+759522,0,no informativa,2
+759869,0,nula,0
+761650,0,no informativa,7
+762046,0,no informativa,3
+762412,0,nula,0
+763122,0,no informativa,2
+764639,0,nula,0
+765035,0,nula,0
+765186,0,nula,0
+765198,0,informativa,65
+765442,0,nula,0
+765623,0,nula,0
+768621,0,no informativa,10
+769760,0,nula,0
+770680,0,nula,0
+771418,0,nula,0
+771555,0,nula,0
+772266,0,nula,0
+772806,0,nula,0
+773773,0,nula,0
+773833,0,nula,0
+774214,0,nula,0
+774333,0,nula,0
+774573,0,nula,0
+775308,0,nula,0
+776926,0,nula,0
+777210,0,nula,0
+779514,0,nula,0
+780256,0,nula,0
+780582,0,nula,0
+780666,0,nula,0
+780690,0,nula,0
+781677,0,nula,0
+781690,0,nula,0
+782163,0,nula,0
+783089,0,nula,0
+783635,0,nula,0
+783678,0,nula,0
+784749,0,nula,0
+784870,0,informativa,3
+786902,0,nula,0
+787770,0,nula,0
+787880,0,nula,0
+788146,0,nula,0
+788151,0,nula,0
+789170,0,nula,0
+789272,0,nula,0
+789613,0,nula,0
+791217,0,nula,0
+792048,0,nula,0
+793102,0,nula,0
+794549,0,nula,0
+794634,0,nula,0
+794904,0,nula,0
+795541,0,nula,0
+796602,0,nula,0
+798051,0,nula,0
+799974,0,nula,0
+803685,0,nula,0
+804290,0,nula,0
+806043,0,nula,0
+806114,0,nula,0
+807448,0,nula,0
+807452,0,nula,0
+808240,0,nula,0
+808942,0,nula,0
+809442,0,nula,0
+809971,0,nula,0
+812076,0,nula,0
+812242,0,nula,0
+814186,0,nula,0
+814932,0,nula,0
+815860,0,nula,0
+816200,0,nula,0
+816413,0,nula,0
+817661,0,nula,0
+818847,0,nula,0
+820041,0,nula,0
+820343,0,nula,0
+824142,0,nula,0
+824633,0,no informativa,3
+824978,0,nula,0
+826713,0,nula,0
+827136,0,nula,0
+828066,0,nula,0
+829224,0,nula,0
+830767,0,nula,0
+423,10,nula,0
+910,10,nula,0
+2217,10,nula,0
+3341,10,nula,0
+3990,10,nula,0
+4386,10,nula,0
+4725,10,nula,0
+4809,10,nula,0
+5303,10,nula,0
+6858,10,nula,0
+8604,10,nula,0
+8627,10,informativa,8
+9945,10,no informativa,23
+10559,10,no informativa,2
+11300,10,informativa,5
+11475,10,nula,0
+11622,10,no informativa,2
+12446,10,nula,0
+13200,10,nula,0
+13349,10,nula,0
+15689,10,nula,0
+15690,10,nula,0
+15976,10,nula,0
+16368,10,nula,0
+17899,10,nula,0
+20811,10,no informativa,5
+21325,10,nula,0
+21640,10,no informativa,20
+22051,10,nula,0
+23770,10,nula,0
+24348,10,no informativa,6
+24567,10,informativa,15
+24719,10,no informativa,7
+24916,10,nula,0
+25227,10,nula,0
+25946,10,nula,0
+26137,10,nula,0
+26430,10,no informativa,2
+26664,10,nula,0
+26806,10,nula,0
+28537,10,nula,0
+28557,10,nula,0
+29231,10,nula,0
+30672,10,nula,0
+32485,10,no informativa,9
+38037,10,no informativa,4
+38572,10,nula,0
+38633,10,nula,0
+39070,10,nula,0
+39222,10,nula,0
+40219,10,nula,0
+41032,10,nula,0
+41460,10,no informativa,5
+42241,10,nula,0
+43836,10,nula,0
+43959,10,nula,0
+45105,10,no informativa,2
+45268,10,nula,0
+46394,10,nula,0
+46614,10,nula,0
+47900,10,nula,0
+47910,10,no informativa,2
+49322,10,no informativa,2
+50467,10,nula,0
+50549,10,nula,0
+50643,10,nula,0
+50710,10,nula,0
+51152,10,no informativa,414
+51218,10,nula,0
+52472,10,nula,0
+53957,10,nula,0
+55247,10,no informativa,5
+55634,10,nula,0
+56064,10,nula,0
+56879,10,no informativa,4
+57568,10,nula,0
+58656,10,nula,0
+62425,10,nula,0
+62492,10,nula,0
+62585,10,no informativa,5
+64120,10,no informativa,358
+64606,10,no informativa,4
+65195,10,nula,0
+66188,10,nula,0
+67214,10,no informativa,2
+69348,10,nula,0
+70280,10,no informativa,4
+70323,10,no informativa,2
+71209,10,nula,0
+71798,10,nula,0
+72081,10,nula,0
+73221,10,nula,0
+74323,10,nula,0
+77784,10,no informativa,2
+79453,10,no informativa,2
+81892,10,nula,0
+83442,10,nula,0
+84148,10,nula,0
+87445,10,nula,0
+87540,10,nula,0
+87563,10,no informativa,49
+88028,10,nula,0
+91528,10,informativa,3
+92491,10,nula,0
+93995,10,nula,0
+94197,10,no informativa,3
+94627,10,nula,0
+97547,10,nula,0
+97622,10,nula,0
+98502,10,nula,0
+99304,10,nula,0
+99564,10,no informativa,2
+100662,10,nula,0
+102671,10,nula,0
+103179,10,no informativa,5
+103413,10,nula,0
+103517,10,no informativa,4
+103957,10,nula,0
+104550,10,no informativa,2
+105900,10,nula,0
+106239,10,no informativa,3
+108487,10,nula,0
+108861,10,nula,0
+110301,10,no informativa,29
+111778,10,nula,0
+112572,10,nula,0
+113086,10,nula,0
+113525,10,nula,0
+113566,10,nula,0
+113873,10,nula,0
+114251,10,nula,0
+114333,10,no informativa,2
+114983,10,nula,0
+116503,10,nula,0
+116837,10,nula,0
+117765,10,nula,0
+118107,10,nula,0
+118884,10,no informativa,5
+119849,10,nula,0
+122720,10,nula,0
+123532,10,nula,0
+125326,10,nula,0
+125602,10,no informativa,8
+126199,10,nula,0
+126407,10,nula,0
+126824,10,no informativa,3
+127182,10,nula,0
+128498,10,nula,0
+129129,10,nula,0
+130329,10,no informativa,8
+130659,10,nula,0
+130857,10,nula,0
+131321,10,no informativa,12
+133398,10,nula,0
+133548,10,no informativa,2
+133560,10,nula,0
+133735,10,nula,0
+136161,10,nula,0
+136162,10,no informativa,7
+136967,10,nula,0
+137278,10,no informativa,2
+137817,10,nula,0
+138384,10,nula,0
+138572,10,nula,0
+139281,10,nula,0
+139947,10,nula,0
+140056,10,nula,0
+144902,10,nula,0
+145240,10,nula,0
+145253,10,no informativa,3
+146394,10,nula,0
+147623,10,no informativa,3
+149191,10,nula,0
+149257,10,nula,0
+151004,10,no informativa,3
+151553,10,nula,0
+151862,10,nula,0
+153278,10,nula,0
+153664,10,nula,0
+153712,10,nula,0
+153865,10,nula,0
+154136,10,nula,0
+154138,10,nula,0
+154855,10,nula,0
+155959,10,no informativa,21
+157325,10,nula,0
+157399,10,nula,0
+157409,10,nula,0
+157606,10,no informativa,8
+157828,10,nula,0
+157860,10,nula,0
+160850,10,nula,0
+161077,10,nula,0
+161709,10,nula,0
+163851,10,no informativa,2
+164607,10,nula,0
+164614,10,nula,0
+164680,10,nula,0
+165073,10,nula,0
+166952,10,nula,0
+168697,10,nula,0
+169091,10,no informativa,2
+172009,10,no informativa,2
+173273,10,nula,0
+174136,10,nula,0
+175501,10,no informativa,4
+175954,10,nula,0
+176901,10,nula,0
+177763,10,no informativa,7
+178141,10,nula,0
+180561,10,no informativa,4
+180834,10,nula,0
+180969,10,nula,0
+180974,10,nula,0
+180986,10,no informativa,30
+183899,10,nula,0
+185643,10,no informativa,3
+186533,10,no informativa,3
+186973,10,no informativa,19
+187325,10,nula,0
+187800,10,no informativa,3
+190446,10,no informativa,26
+190849,10,nula,0
+192626,10,no informativa,2
+194294,10,nula,0
+194341,10,informativa,39
+194394,10,nula,0
+194746,10,nula,0
+195577,10,nula,0
+198097,10,nula,0
+198815,10,nula,0
+199222,10,no informativa,12
+200384,10,nula,0
+200964,10,nula,0
+201230,10,no informativa,8
+202456,10,no informativa,5
+203413,10,no informativa,6
+203583,10,nula,0
+203682,10,informativa,44
+204001,10,nula,0
+205191,10,nula,0
+207432,10,nula,0
+209301,10,no informativa,2
+209669,10,nula,0
+210198,10,no informativa,3
+210371,10,nula,0
+211479,10,no informativa,5
+211743,10,nula,0
+212118,10,nula,0
+212332,10,no informativa,7
+213702,10,nula,0
+213734,10,nula,0
+214384,10,no informativa,6
+216158,10,nula,0
+217130,10,nula,0
+217725,10,no informativa,6
+218551,10,no informativa,3
+220048,10,nula,0
+220625,10,nula,0
+220918,10,informativa,4
+224485,10,nula,0
+224489,10,nula,0
+226612,10,no informativa,1515
+227592,10,nula,0
+228158,10,no informativa,3
+228212,10,nula,0
+229123,10,no informativa,2
+229297,10,no informativa,8
+229544,10,no informativa,5
+229563,10,nula,0
+229734,10,nula,0
+229938,10,nula,0
+230076,10,nula,0
+230621,10,informativa,8
+235593,10,nula,0
+236023,10,no informativa,2
+237145,10,nula,0
+238753,10,nula,0
+239164,10,nula,0
+239695,10,nula,0
+239853,10,nula,0
+240900,10,nula,0
+240986,10,no informativa,10
+241117,10,nula,0
+241368,10,nula,0
+242059,10,no informativa,359
+242738,10,nula,0
+243292,10,nula,0
+243474,10,nula,0
+243628,10,nula,0
+244676,10,nula,0
+245362,10,nula,0
+245887,10,nula,0
+246429,10,nula,0
+247082,10,nula,0
+247813,10,no informativa,5
+248652,10,nula,0
+249356,10,no informativa,4
+249527,10,nula,0
+251575,10,nula,0
+252218,10,nula,0
+252809,10,nula,0
+253031,10,nula,0
+253197,10,no informativa,5
+253334,10,nula,0
+254211,10,nula,0
+255422,10,nula,0
+255979,10,nula,0
+258172,10,no informativa,4
+259480,10,nula,0
+260053,10,nula,0
+261274,10,nula,0
+261314,10,nula,0
+261510,10,nula,0
+262315,10,nula,0
+263047,10,no informativa,19
+263414,10,nula,0
+263599,10,nula,0
+264018,10,nula,0
+264048,10,nula,0
+264579,10,nula,0
+265014,10,no informativa,3
+265896,10,nula,0
+266181,10,no informativa,3
+267036,10,nula,0
+267239,10,nula,0
+267963,10,nula,0
+268136,10,nula,0
+268464,10,nula,0
+269545,10,informativa,8
+269767,10,nula,0
+271876,10,no informativa,23
+272904,10,nula,0
+273520,10,nula,0
+273838,10,nula,0
+275519,10,nula,0
+275586,10,nula,0
+277909,10,nula,0
+278254,10,no informativa,3
+279437,10,nula,0
+279550,10,no informativa,2
+280688,10,no informativa,3
+281573,10,nula,0
+282305,10,nula,0
+282597,10,nula,0
+283978,10,nula,0
+285718,10,nula,0
+287827,10,nula,0
+288385,10,nula,0
+288684,10,no informativa,2
+289203,10,no informativa,119
+291465,10,no informativa,2
+293106,10,nula,0
+293182,10,nula,0
+293238,10,no informativa,4
+293615,10,nula,0
+294670,10,nula,0
+294985,10,no informativa,4
+295855,10,no informativa,8
+297014,10,no informativa,4
+297319,10,nula,0
+297339,10,nula,0
+297653,10,no informativa,7
+298116,10,no informativa,8
+298427,10,no informativa,2
+298604,10,no informativa,3
+299341,10,no informativa,2
+299577,10,no informativa,2
+299966,10,nula,0
+299992,10,nula,0
+300965,10,informativa,4
+301060,10,nula,0
+302357,10,nula,0
+303067,10,nula,0
+303882,10,no informativa,6
+304572,10,nula,0
+306099,10,nula,0
+306633,10,nula,0
+306873,10,no informativa,7
+307298,10,nula,0
+307679,10,nula,0
+307751,10,no informativa,8
+310007,10,nula,0
+311219,10,no informativa,6
+311226,10,no informativa,7
+311248,10,nula,0
+311607,10,no informativa,2
+313087,10,nula,0
+315076,10,no informativa,3
+316352,10,nula,0
+316668,10,nula,0
+316710,10,nula,0
+319035,10,nula,0
+320006,10,nula,0
+321876,10,no informativa,2
+322457,10,nula,0
+323180,10,nula,0
+323769,10,nula,0
+325017,10,nula,0
+325713,10,nula,0
+326505,10,nula,0
+326537,10,no informativa,2
+326615,10,nula,0
+327506,10,nula,0
+328549,10,nula,0
+329644,10,nula,0
+330127,10,nula,0
+331211,10,nula,0
+331685,10,nula,0
+331935,10,no informativa,6
+332656,10,nula,0
+333060,10,nula,0
+333588,10,nula,0
+334181,10,no informativa,3
+334766,10,nula,0
+334890,10,nula,0
+337101,10,nula,0
+338426,10,nula,0
+338661,10,nula,0
+340267,10,no informativa,2
+342571,10,nula,0
+343015,10,nula,0
+343404,10,nula,0
+344037,10,nula,0
+346422,10,nula,0
+346491,10,no informativa,3
+346830,10,nula,0
+347030,10,nula,0
+348313,10,nula,0
+348477,10,nula,0
+348537,10,nula,0
+348553,10,nula,0
+350139,10,nula,0
+350393,10,nula,0
+350676,10,nula,0
+350917,10,no informativa,2
+353318,10,nula,0
+355272,10,no informativa,6
+357322,10,nula,0
+359314,10,nula,0
+359742,10,nula,0
+360247,10,nula,0
+360424,10,nula,0
+360640,10,nula,0
+360736,10,nula,0
+366165,10,nula,0
+367063,10,nula,0
+368188,10,nula,0
+368228,10,nula,0
+369297,10,nula,0
+370394,10,no informativa,4
+371552,10,nula,0
+372720,10,no informativa,6
+373890,10,nula,0
+378006,10,nula,0
+379738,10,nula,0
+382237,10,no informativa,4
+383217,10,nula,0
+383798,10,no informativa,2
+384015,10,nula,0
+384540,10,no informativa,2
+384627,10,no informativa,2
+386780,10,nula,0
+387289,10,nula,0
+388811,10,nula,0
+389703,10,nula,0
+389937,10,no informativa,10
+389985,10,nula,0
+390599,10,nula,0
+391029,10,nula,0
+391481,10,nula,0
+391687,10,no informativa,5
+391853,10,nula,0
+393102,10,no informativa,3
+393370,10,nula,0
+394886,10,nula,0
+394945,10,no informativa,30
+394994,10,nula,0
+395001,10,nula,0
+395230,10,nula,0
+395287,10,nula,0
+396628,10,nula,0
+397321,10,no informativa,376
+398654,10,nula,0
+400492,10,nula,0
+400643,10,nula,0
+401355,10,no informativa,2
+402682,10,no informativa,4
+403103,10,nula,0
+403988,10,nula,0
+404782,10,nula,0
+406226,10,nula,0
+406409,10,no informativa,4
+407846,10,no informativa,4
+410115,10,no informativa,3
+410272,10,no informativa,60
+410819,10,nula,0
+412013,10,nula,0
+412325,10,nula,0
+412705,10,nula,0
+413257,10,nula,0
+414368,10,no informativa,13
+414657,10,no informativa,8
+415329,10,nula,0
+416481,10,no informativa,2
+417587,10,nula,0
+418136,10,nula,0
+420157,10,nula,0
+422031,10,nula,0
+422536,10,nula,0
+422975,10,nula,0
+423332,10,nula,0
+423536,10,nula,0
+424003,10,nula,0
+424806,10,nula,0
+424809,10,nula,0
+425331,10,no informativa,10
+426958,10,no informativa,3
+427295,10,nula,0
+427541,10,nula,0
+427614,10,no informativa,6
+428737,10,nula,0
+431417,10,nula,0
+432638,10,nula,0
+433060,10,no informativa,4
+433501,10,nula,0
+434440,10,nula,0
+436258,10,nula,0
+436417,10,nula,0
+436483,10,nula,0
+437251,10,nula,0
+438250,10,no informativa,2
+439211,10,nula,0
+440878,10,nula,0
+442055,10,nula,0
+442959,10,informativa,22
+444255,10,nula,0
+444554,10,nula,0
+445172,10,nula,0
+445803,10,nula,0
+446054,10,nula,0
+446587,10,no informativa,2
+446863,10,nula,0
+446902,10,nula,0
+448635,10,no informativa,12
+449029,10,no informativa,3
+449568,10,nula,0
+451468,10,no informativa,6
+451735,10,nula,0
+453855,10,nula,0
+456384,10,no informativa,2
+456466,10,nula,0
+456747,10,no informativa,6
+456837,10,nula,0
+456893,10,no informativa,17
+457031,10,nula,0
+459555,10,no informativa,7
+460458,10,nula,0
+460721,10,nula,0
+462566,10,nula,0
+462589,10,nula,0
+462677,10,no informativa,8
+462985,10,no informativa,3
+463105,10,nula,0
+463221,10,nula,0
+463334,10,nula,0
+464049,10,no informativa,7
+464790,10,nula,0
+465291,10,nula,0
+465515,10,no informativa,5
+465627,10,no informativa,5
+465737,10,nula,0
+466765,10,nula,0
+467781,10,no informativa,15
+467838,10,informativa,5
+469116,10,nula,0
+470223,10,nula,0
+470504,10,nula,0
+471519,10,nula,0
+471715,10,nula,0
+472063,10,nula,0
+472708,10,no informativa,16
+473469,10,nula,0
+474023,10,no informativa,2
+474300,10,no informativa,4
+475051,10,no informativa,2
+478738,10,no informativa,6
+480814,10,no informativa,10
+480914,10,nula,0
+481628,10,nula,0
+482080,10,nula,0
+482486,10,nula,0
+482567,10,nula,0
+483091,10,no informativa,2
+483417,10,no informativa,2
+485409,10,nula,0
+485799,10,nula,0
+487513,10,nula,0
+487665,10,no informativa,10
+488841,10,nula,0
+489302,10,nula,0
+491330,10,nula,0
+491894,10,nula,0
+493687,10,no informativa,2
+494312,10,nula,0
+494432,10,no informativa,4
+494888,10,nula,0
+494917,10,nula,0
+499393,10,nula,0
+500327,10,nula,0
+501699,10,nula,0
+501717,10,nula,0
+505576,10,no informativa,2
+506571,10,nula,0
+508267,10,no informativa,2
+510971,10,nula,0
+511669,10,nula,0
+511760,10,nula,0
+513141,10,nula,0
+513774,10,nula,0
+513923,10,no informativa,3
+514167,10,nula,0
+515169,10,nula,0
+515545,10,nula,0
+515549,10,nula,0
+516954,10,nula,0
+517461,10,nula,0
+518245,10,nula,0
+518289,10,no informativa,2
+518464,10,nula,0
+519458,10,nula,0
+519698,10,no informativa,5
+520285,10,no informativa,5
+520744,10,no informativa,3
+521567,10,no informativa,4
+521806,10,nula,0
+523485,10,nula,0
+524470,10,nula,0
+524871,10,nula,0
+525261,10,nula,0
+525506,10,nula,0
+525899,10,nula,0
+526230,10,nula,0
+527021,10,nula,0
+529983,10,nula,0
+530199,10,no informativa,2
+530483,10,no informativa,2
+531995,10,nula,0
+532969,10,nula,0
+533374,10,nula,0
+534025,10,nula,0
+534273,10,nula,0
+536286,10,nula,0
+536953,10,nula,0
+539013,10,nula,0
+540390,10,no informativa,8
+541736,10,no informativa,2
+543278,10,nula,0
+545378,10,nula,0
+547894,10,nula,0
+549008,10,nula,0
+549025,10,nula,0
+550058,10,nula,0
+550957,10,nula,0
+551926,10,nula,0
+552402,10,nula,0
+552506,10,no informativa,2
+552750,10,nula,0
+553101,10,no informativa,9
+553256,10,no informativa,6
+553263,10,nula,0
+553349,10,nula,0
+554001,10,nula,0
+555620,10,nula,0
+555979,10,nula,0
+556234,10,nula,0
+558474,10,nula,0
+559010,10,no informativa,3
+560558,10,no informativa,3
+563211,10,no informativa,2
+563306,10,nula,0
+565834,10,no informativa,4
+566658,10,nula,0
+567098,10,nula,0
+568759,10,nula,0
+570576,10,nula,0
+570837,10,nula,0
+571210,10,nula,0
+571519,10,nula,0
+571627,10,no informativa,5
+572432,10,nula,0
+572845,10,nula,0
+574819,10,nula,0
+576810,10,nula,0
+580776,10,nula,0
+582256,10,nula,0
+582553,10,nula,0
+585046,10,no informativa,22
+585828,10,no informativa,4
+586188,10,no informativa,3
+586286,10,informativa,17
+586364,10,no informativa,2
+587900,10,nula,0
+588583,10,no informativa,2
+589202,10,nula,0
+591067,10,no informativa,2
+591075,10,no informativa,5
+596373,10,nula,0
+597773,10,no informativa,2
+598655,10,informativa,18
+599185,10,nula,0
+600139,10,nula,0
+600533,10,nula,0
+601688,10,nula,0
+602725,10,no informativa,3
+603140,10,no informativa,3
+603656,10,nula,0
+604349,10,nula,0
+605176,10,nula,0
+605572,10,nula,0
+606364,10,nula,0
+607326,10,nula,0
+608561,10,nula,0
+608649,10,no informativa,6
+608951,10,informativa,74
+609692,10,nula,0
+609925,10,nula,0
+610005,10,nula,0
+612328,10,nula,0
+613398,10,nula,0
+613755,10,nula,0
+614654,10,nula,0
+615771,10,nula,0
+615802,10,nula,0
+615956,10,nula,0
+616475,10,nula,0
+618546,10,nula,0
+619374,10,no informativa,14
+620487,10,nula,0
+620998,10,no informativa,6
+621351,10,nula,0
+621511,10,nula,0
+622492,10,nula,0
+622544,10,nula,0
+623121,10,nula,0
+625480,10,no informativa,4
+626832,10,nula,0
+627729,10,nula,0
+630436,10,nula,0
+632975,10,nula,0
+634782,10,nula,0
+636187,10,nula,0
+636604,10,nula,0
+637534,10,nula,0
+638150,10,nula,0
+638556,10,nula,0
+639454,10,no informativa,6
+640181,10,no informativa,3
+641340,10,no informativa,3
+642589,10,no informativa,2
+642899,10,nula,0
+643927,10,nula,0
+644031,10,no informativa,5
+644638,10,nula,0
+644802,10,nula,0
+645564,10,no informativa,2
+646190,10,no informativa,5
+647490,10,nula,0
+647883,10,nula,0
+647935,10,nula,0
+648205,10,no informativa,8
+648512,10,no informativa,2
+648534,10,no informativa,6
+648808,10,nula,0
+649885,10,nula,0
+650746,10,nula,0
+651846,10,nula,0
+652278,10,nula,0
+653382,10,no informativa,2
+654559,10,nula,0
+654862,10,nula,0
+655570,10,nula,0
+658014,10,nula,0
+658438,10,no informativa,5
+658855,10,nula,0
+661754,10,no informativa,8
+661780,10,no informativa,2
+662184,10,no informativa,2
+664267,10,no informativa,3
+664912,10,nula,0
+666649,10,nula,0
+666745,10,no informativa,5
+667060,10,nula,0
+667196,10,nula,0
+667495,10,informativa,21
+669261,10,nula,0
+669350,10,nula,0
+671638,10,no informativa,2
+673593,10,no informativa,6
+674222,10,nula,0
+674528,10,nula,0
+674913,10,nula,0
+675506,10,nula,0
+676290,10,nula,0
+676838,10,nula,0
+678434,10,nula,0
+679190,10,nula,0
+681025,10,no informativa,8
+681057,10,nula,0
+681244,10,nula,0
+681814,10,no informativa,2
+682574,10,nula,0
+683328,10,nula,0
+683605,10,nula,0
+683897,10,no informativa,2
+684869,10,no informativa,13
+684968,10,no informativa,85
+686029,10,nula,0
+686389,10,nula,0
+686855,10,no informativa,60
+688686,10,no informativa,4
+690125,10,nula,0
+690274,10,nula,0
+694136,10,no informativa,2
+694776,10,no informativa,2
+694780,10,nula,0
+695188,10,no informativa,13
+695369,10,nula,0
+695416,10,no informativa,50
+695491,10,no informativa,10
+695561,10,no informativa,2
+695865,10,nula,0
+696317,10,no informativa,12
+696631,10,nula,0
+697389,10,no informativa,2
+697747,10,no informativa,6
+697884,10,nula,0
+699143,10,nula,0
+699923,10,nula,0
+700002,10,nula,0
+700956,10,no informativa,3
+701576,10,nula,0
+702369,10,nula,0
+702571,10,nula,0
+706006,10,nula,0
+707074,10,no informativa,2
+707304,10,nula,0
+707683,10,informativa,5
+707845,10,nula,0
+707853,10,no informativa,2
+708849,10,nula,0
+710716,10,nula,0
+710800,10,no informativa,9
+716564,10,nula,0
+718268,10,nula,0
+718978,10,nula,0
+723510,10,nula,0
+723619,10,nula,0
+724575,10,no informativa,6
+724744,10,no informativa,2
+725365,10,nula,0
+726083,10,nula,0
+726800,10,nula,0
+727264,10,nula,0
+727504,10,nula,0
+729927,10,no informativa,4
+730371,10,nula,0
+730726,10,nula,0
+731144,10,nula,0
+731618,10,nula,0
+732904,10,nula,0
+733148,10,nula,0
+733949,10,no informativa,2
+735787,10,nula,0
+735809,10,nula,0
+737140,10,nula,0
+737221,10,no informativa,7
+737459,10,nula,0
+738331,10,nula,0
+738597,10,no informativa,45
+739268,10,nula,0
+739781,10,nula,0
+740192,10,no informativa,63
+740825,10,no informativa,11
+742815,10,nula,0
+743589,10,no informativa,2
+744367,10,no informativa,3
+745575,10,nula,0
+745874,10,no informativa,2
+747050,10,nula,0
+747098,10,nula,0
+748001,10,nula,0
+748020,10,nula,0
+748227,10,nula,0
+749341,10,nula,0
+749510,10,nula,0
+750458,10,nula,0
+750525,10,nula,0
+750750,10,nula,0
+750884,10,nula,0
+751137,10,nula,0
+753264,10,nula,0
+755039,10,nula,0
+755932,10,nula,0
+756155,10,nula,0
+756275,10,nula,0
+757955,10,nula,0
+758034,10,nula,0
+759007,10,nula,0
+759334,10,nula,0
+759396,10,no informativa,5
+762284,10,nula,0
+762474,10,nula,0
+763645,10,nula,0
+765394,10,no informativa,4
+766351,10,no informativa,2
+766562,10,no informativa,12
+766918,10,nula,0
+766944,10,no informativa,2
+768220,10,nula,0
+769802,10,nula,0
+770706,10,nula,0
+771061,10,nula,0
+771875,10,nula,0
+773307,10,nula,0
+773623,10,nula,0
+773832,10,nula,0
+776022,10,nula,0
+776759,10,nula,0
+777708,10,nula,0
+777950,10,nula,0
+778349,10,nula,0
+779051,10,nula,0
+779223,10,nula,0
+779344,10,no informativa,3
+781544,10,nula,0
+781707,10,nula,0
+781920,10,nula,0
+782700,10,nula,0
+783067,10,nula,0
+783594,10,nula,0
+784359,10,nula,0
+785238,10,nula,0
+788151,10,nula,0
+788396,10,nula,0
+788791,10,nula,0
+789443,10,nula,0
+792213,10,nula,0
+793175,10,nula,0
+793255,10,nula,0
+793881,10,nula,0
+793988,10,nula,0
+794402,10,nula,0
+795069,10,nula,0
+795302,10,nula,0
+796618,10,nula,0
+799155,10,nula,0
+799667,10,nula,0
+799974,10,nula,0
+800310,10,nula,0
+801432,10,nula,0
+802427,10,nula,0
+803053,10,nula,0
+804252,10,nula,0
+804255,10,nula,0
+804265,10,nula,0
+804675,10,nula,0
+805881,10,nula,0
+806160,10,informativa,3
+807981,10,nula,0
+808661,10,no informativa,8
+809087,10,nula,0
+809182,10,nula,0
+809831,10,nula,0
+810900,10,nula,0
+815287,10,nula,0
+815458,10,nula,0
+815474,10,nula,0
+817019,10,nula,0
+817139,10,nula,0
+820246,10,nula,0
+821007,10,nula,0
+821856,10,nula,0
+822300,10,nula,0
+823364,10,nula,0
+825407,10,nula,0
+825416,10,nula,0
+825423,10,nula,0
+825544,10,nula,0
+826474,10,nula,0
+826798,10,nula,0
+828001,10,nula,0
+828020,10,nula,0
+828208,10,no informativa,9
+828215,10,nula,0
+829110,10,nula,0
+829481,10,nula,0
+830280,10,nula,0
+830448,10,nula,0
+830753,10,nula,0
+1629,15,nula,0
+7845,15,nula,0
+13035,15,no informativa,2
+20692,15,nula,0
+26405,15,nula,0
+33769,15,no informativa,3
+37217,15,no informativa,8
+38736,15,nula,0
+39924,15,no informativa,2
+42228,15,no informativa,14
+48130,15,nula,0
+51445,15,no informativa,4
+58803,15,nula,0
+68019,15,no informativa,4
+68371,15,no informativa,8
+70083,15,no informativa,4
+72799,15,no informativa,513
+73525,15,nula,0
+76212,15,no informativa,6
+78753,15,nula,0
+78799,15,no informativa,2
+85501,15,nula,0
+91995,15,nula,0
+92303,15,nula,0
+97912,15,no informativa,3
+109391,15,nula,0
+111235,15,nula,0
+111752,15,no informativa,4
+117002,15,nula,0
+120333,15,no informativa,9
+123000,15,no informativa,8
+128057,15,nula,0
+133994,15,nula,0
+137226,15,no informativa,15
+144385,15,no informativa,2
+153789,15,nula,0
+154722,15,nula,0
+156577,15,no informativa,5
+156953,15,nula,0
+157452,15,no informativa,2
+159148,15,nula,0
+163654,15,nula,0
+164680,15,nula,0
+165713,15,no informativa,8
+167152,15,nula,0
+169136,15,nula,0
+171230,15,nula,0
+172890,15,no informativa,5
+185651,15,nula,0
+186253,15,no informativa,2
+194973,15,nula,0
+198506,15,no informativa,35
+198687,15,nula,0
+204078,15,nula,0
+205137,15,nula,0
+214452,15,no informativa,3
+216333,15,nula,0
+217801,15,nula,0
+219647,15,nula,0
+219944,15,no informativa,2
+223448,15,no informativa,7
+223455,15,nula,0
+223630,15,nula,0
+224808,15,nula,0
+228000,15,no informativa,5
+231108,15,nula,0
+232242,15,no informativa,2
+238269,15,nula,0
+242414,15,no informativa,21
+245674,15,no informativa,3
+247083,15,nula,0
+252879,15,nula,0
+253822,15,no informativa,2
+265271,15,nula,0
+266458,15,no informativa,3
+267586,15,nula,0
+268750,15,no informativa,3
+270822,15,nula,0
+271087,15,no informativa,3
+273463,15,nula,0
+276185,15,no informativa,7
+281963,15,nula,0
+283259,15,nula,0
+283634,15,nula,0
+284123,15,informativa,3
+285311,15,no informativa,9
+286854,15,no informativa,6
+288104,15,no informativa,5
+293449,15,no informativa,5
+295616,15,nula,0
+297844,15,nula,0
+299335,15,no informativa,2
+304347,15,no informativa,3
+320055,15,nula,0
+324503,15,nula,0
+330214,15,nula,0
+335077,15,nula,0
+340926,15,nula,0
+341405,15,nula,0
+341557,15,no informativa,4
+343274,15,nula,0
+347480,15,no informativa,3
+351151,15,nula,0
+351160,15,no informativa,7
+360013,15,nula,0
+368244,15,nula,0
+372117,15,nula,0
+372742,15,nula,0
+372889,15,no informativa,2
+380139,15,nula,0
+383595,15,nula,0
+388011,15,nula,0
+392304,15,nula,0
+392576,15,nula,0
+393356,15,nula,0
+397693,15,nula,0
+400487,15,nula,0
+403395,15,nula,0
+405595,15,nula,0
+409893,15,nula,0
+411434,15,no informativa,6
+418902,15,nula,0
+420402,15,nula,0
+420906,15,no informativa,5
+425304,15,nula,0
+425554,15,nula,0
+437299,15,nula,0
+438731,15,no informativa,3
+441518,15,nula,0
+443675,15,no informativa,2
+452434,15,nula,0
+452511,15,nula,0
+454093,15,nula,0
+459898,15,nula,0
+462556,15,no informativa,12
+466226,15,nula,0
+467636,15,nula,0
+470945,15,nula,0
+476735,15,nula,0
+477233,15,no informativa,3
+479172,15,no informativa,16
+486286,15,nula,0
+493442,15,nula,0
+494719,15,nula,0
+496265,15,nula,0
+502375,15,nula,0
+507601,15,no informativa,5
+507755,15,nula,0
+508649,15,nula,0
+514981,15,no informativa,5
+517185,15,no informativa,2
+522411,15,no informativa,2
+529274,15,nula,0
+531154,15,nula,0
+532573,15,no informativa,6
+534320,15,nula,0
+539910,15,nula,0
+540809,15,nula,0
+540936,15,nula,0
+546076,15,nula,0
+547262,15,nula,0
+548325,15,nula,0
+548724,15,no informativa,23
+550909,15,no informativa,4
+551782,15,nula,0
+554573,15,nula,0
+559860,15,no informativa,3
+561302,15,nula,0
+562738,15,nula,0
+563440,15,no informativa,11
+565251,15,nula,0
+572006,15,nula,0
+575704,15,no informativa,5
+576359,15,nula,0
+578231,15,nula,0
+581515,15,no informativa,5
+582792,15,nula,0
+583823,15,nula,0
+585143,15,no informativa,14
+590968,15,nula,0
+590998,15,nula,0
+592580,15,nula,0
+598165,15,nula,0
+603603,15,nula,0
+603990,15,no informativa,5
+620154,15,nula,0
+624850,15,nula,0
+640522,15,nula,0
+644557,15,nula,0
+645377,15,nula,0
+649068,15,no informativa,4
+657607,15,nula,0
+664770,15,nula,0
+666502,15,no informativa,2
+668004,15,nula,0
+669565,15,nula,0
+681025,15,no informativa,8
+688526,15,nula,0
+692561,15,nula,0
+692998,15,nula,0
+696357,15,nula,0
+701517,15,no informativa,11
+701741,15,nula,0
+706131,15,nula,0
+708889,15,no informativa,3
+709736,15,nula,0
+711354,15,nula,0
+716541,15,nula,0
+717892,15,nula,0
+718920,15,informativa,2
+719064,15,nula,0
+723548,15,nula,0
+728859,15,nula,0
+730393,15,nula,0
+731107,15,nula,0
+734514,15,no informativa,3
+738739,15,no informativa,27
+739539,15,nula,0
+752520,15,no informativa,34
+759998,15,nula,0
+762616,15,nula,0
+764602,15,nula,0
+764850,15,no informativa,55
+768952,15,nula,0
+772694,15,nula,0
+779350,15,nula,0
+782855,15,nula,0
+787310,15,nula,0
+790286,15,nula,0
+795474,15,nula,0
+807794,15,nula,0
+808493,15,nula,0
+810833,15,nula,0
+815148,15,nula,0
+829362,15,nula,0
+830751,15,nula,0
+5133,17,nula,0
+6530,17,nula,0
+7430,17,nula,0
+15589,17,no informativa,28
+17512,17,no informativa,2
+20004,17,nula,0
+25861,17,no informativa,2
+31415,17,no informativa,5
+35379,17,informativa,13
+35598,17,informativa,5
+44268,17,nula,0
+51152,17,no informativa,414
+55833,17,nula,0
+61272,17,no informativa,5
+63458,17,no informativa,9
+68981,17,no informativa,2
+78084,17,nula,0
+79701,17,nula,0
+80458,17,nula,0
+85671,17,nula,0
+86461,17,nula,0
+90555,17,no informativa,2
+92066,17,nula,0
+98835,17,nula,0
+103409,17,nula,0
+107780,17,no informativa,2
+112077,17,informativa,83
+121145,17,nula,0
+124086,17,no informativa,2
+126552,17,nula,0
+144062,17,no informativa,3
+146549,17,no informativa,10
+148357,17,nula,0
+152028,17,nula,0
+157580,17,nula,0
+170948,17,no informativa,7
+174876,17,nula,0
+175446,17,nula,0
+183766,17,informativa,116
+187582,17,no informativa,3
+187588,17,nula,0
+191112,17,nula,0
+192419,17,no informativa,5
+197793,17,no informativa,5
+205191,17,nula,0
+206491,17,nula,0
+208625,17,nula,0
+211236,17,nula,0
+219224,17,no informativa,3
+225833,17,nula,0
+233649,17,no informativa,5
+236258,17,no informativa,3
+255840,17,nula,0
+266840,17,nula,0
+271656,17,informativa,12
+275643,17,no informativa,18
+276645,17,no informativa,34
+281857,17,nula,0
+285887,17,informativa,5
+288367,17,nula,0
+291400,17,no informativa,354
+291997,17,nula,0
+305757,17,nula,0
+307865,17,informativa,2
+314823,17,no informativa,14
+316629,17,no informativa,374
+320771,17,nula,0
+324561,17,no informativa,10
+330297,17,nula,0
+337233,17,nula,0
+349450,17,informativa,64
+351198,17,nula,0
+356485,17,no informativa,4
+358087,17,no informativa,9
+367960,17,nula,0
+368350,17,nula,0
+368357,17,no informativa,4
+371384,17,no informativa,6
+372957,17,nula,0
+373744,17,no informativa,5
+395830,17,no informativa,2
+403037,17,no informativa,9
+405382,17,no informativa,2
+410323,17,nula,0
+411079,17,informativa,5
+414130,17,nula,0
+422581,17,nula,0
+436220,17,no informativa,5
+437539,17,informativa,5
+437821,17,no informativa,4
+455460,17,nula,0
+458798,17,no informativa,6
+468435,17,nula,0
+468873,17,nula,0
+469831,17,no informativa,10
+484575,17,nula,0
+489392,17,nula,0
+491594,17,informativa,3
+492982,17,informativa,1626
+497940,17,nula,0
+499227,17,informativa,17
+506663,17,nula,0
+510318,17,nula,0
+511375,17,nula,0
+515665,17,no informativa,7
+516797,17,no informativa,13
+526852,17,no informativa,7
+527474,17,no informativa,5
+531226,17,nula,0
+534432,17,nula,0
+539445,17,nula,0
+540809,17,nula,0
+542201,17,nula,0
+548195,17,nula,0
+548518,17,no informativa,4
+548724,17,no informativa,23
+552044,17,nula,0
+554604,17,no informativa,2
+559548,17,nula,0
+559860,17,no informativa,3
+566551,17,informativa,14
+566670,17,informativa,18
+573880,17,no informativa,81
+584551,17,no informativa,6
+598217,17,no informativa,4
+603504,17,nula,0
+605452,17,no informativa,5
+623979,17,no informativa,5
+634298,17,nula,0
+636204,17,nula,0
+637502,17,nula,0
+646728,17,nula,0
+649952,17,no informativa,23
+657401,17,nula,0
+664519,17,no informativa,3
+664762,17,no informativa,6
+671028,17,no informativa,12
+677153,17,no informativa,11
+677600,17,nula,0
+679786,17,no informativa,2
+687068,17,no informativa,5
+688745,17,no informativa,2
+693173,17,nula,0
+698910,17,nula,0
+701517,17,informativa,11
+706089,17,no informativa,8
+709212,17,no informativa,68
+709857,17,nula,0
+710342,17,nula,0
+718426,17,nula,0
+723920,17,no informativa,5
+724241,17,nula,0
+725268,17,informativa,3
+728508,17,nula,0
+728859,17,nula,0
+734773,17,nula,0
+740505,17,no informativa,2
+765046,17,nula,0
+766878,17,no informativa,2
+780432,17,informativa,10
+786537,17,no informativa,3
+800726,17,nula,0
+806967,17,no informativa,10
+808426,17,nula,0
+808910,17,nula,0
+810900,17,nula,0
+816428,17,no informativa,7
+825772,17,nula,0
+826811,17,nula,0
+827002,17,no informativa,4
+1545,18,no informativa,4
+1809,18,nula,0
+2675,18,no informativa,2
+2838,18,nula,0
+5527,18,nula,0
+5646,18,nula,0
+6223,18,nula,0
+7259,18,nula,0
+7913,18,no informativa,9
+8225,18,nula,0
+8506,18,nula,0
+8922,18,nula,0
+9599,18,no informativa,3
+9622,18,informativa,18
+11069,18,no informativa,18
+11070,18,nula,0
+11186,18,nula,0
+11377,18,no informativa,2
+11475,18,nula,0
+13037,18,no informativa,6
+13227,18,nula,0
+15563,18,nula,0
+15689,18,nula,0
+16084,18,nula,0
+16408,18,no informativa,2
+16641,18,nula,0
+16696,18,no informativa,4
+17843,18,nula,0
+18696,18,no informativa,2
+19448,18,nula,0
+20323,18,nula,0
+21150,18,no informativa,14
+21408,18,nula,0
+21790,18,no informativa,2
+22512,18,nula,0
+23133,18,nula,0
+23331,18,no informativa,5
+23441,18,nula,0
+24814,18,no informativa,7
+26651,18,nula,0
+28883,18,nula,0
+29621,18,nula,0
+30212,18,nula,0
+30256,18,no informativa,16
+30704,18,nula,0
+30775,18,nula,0
+31842,18,no informativa,374
+32019,18,no informativa,13
+32968,18,nula,0
+32976,18,nula,0
+35398,18,nula,0
+36738,18,nula,0
+36747,18,no informativa,16
+37428,18,nula,0
+37526,18,nula,0
+37592,18,nula,0
+37620,18,informativa,842
+38228,18,informativa,381
+39962,18,nula,0
+40940,18,no informativa,6
+42074,18,nula,0
+42814,18,nula,0
+43052,18,no informativa,3
+43535,18,no informativa,4
+44316,18,nula,0
+45268,18,nula,0
+46097,18,nula,0
+47593,18,nula,0
+48088,18,no informativa,4
+48709,18,nula,0
+48769,18,no informativa,2
+53226,18,nula,0
+53407,18,nula,0
+53628,18,no informativa,2
+54411,18,nula,0
+55139,18,nula,0
+55853,18,nula,0
+56228,18,nula,0
+58224,18,nula,0
+58791,18,no informativa,2
+61142,18,no informativa,8
+62699,18,nula,0
+64623,18,nula,0
+65890,18,nula,0
+66009,18,no informativa,4
+66158,18,nula,0
+66386,18,no informativa,19
+68430,18,nula,0
+69292,18,nula,0
+69948,18,nula,0
+69980,18,nula,0
+70650,18,nula,0
+70948,18,nula,0
+70992,18,nula,0
+72533,18,no informativa,2
+75128,18,nula,0
+75616,18,nula,0
+77986,18,nula,0
+79721,18,no informativa,2
+81754,18,nula,0
+81860,18,nula,0
+82408,18,nula,0
+82494,18,informativa,2
+83148,18,nula,0
+83689,18,nula,0
+84577,18,nula,0
+85067,18,nula,0
+85238,18,nula,0
+85783,18,nula,0
+86270,18,nula,0
+86692,18,nula,0
+87563,18,no informativa,49
+87636,18,nula,0
+87644,18,nula,0
+87811,18,nula,0
+88446,18,nula,0
+92044,18,nula,0
+92066,18,nula,0
+93280,18,nula,0
+93590,18,no informativa,14
+94615,18,nula,0
+96199,18,nula,0
+96821,18,no informativa,15
+97656,18,no informativa,11
+98509,18,nula,0
+98629,18,no informativa,21
+99331,18,nula,0
+99584,18,no informativa,10
+99979,18,nula,0
+100324,18,nula,0
+101501,18,no informativa,20
+102538,18,nula,0
+102960,18,nula,0
+104358,18,nula,0
+104634,18,nula,0
+105693,18,nula,0
+106111,18,nula,0
+106560,18,informativa,3
+107063,18,no informativa,2
+108147,18,nula,0
+110131,18,nula,0
+113084,18,nula,0
+113864,18,nula,0
+114251,18,nula,0
+114429,18,nula,0
+116874,18,nula,0
+117941,18,nula,0
+118608,18,nula,0
+118782,18,nula,0
+119343,18,nula,0
+122478,18,no informativa,3
+123131,18,nula,0
+123466,18,nula,0
+125944,18,nula,0
+126490,18,nula,0
+126901,18,nula,0
+127753,18,nula,0
+127771,18,nula,0
+127776,18,nula,0
+127910,18,nula,0
+127980,18,nula,0
+128320,18,nula,0
+128479,18,no informativa,5
+130722,18,nula,0
+130804,18,no informativa,4
+131122,18,no informativa,3
+131458,18,no informativa,2
+131534,18,nula,0
+132276,18,nula,0
+133338,18,nula,0
+134781,18,no informativa,2
+135535,18,nula,0
+135783,18,nula,0
+137973,18,no informativa,15
+138463,18,nula,0
+138521,18,nula,0
+139484,18,nula,0
+140961,18,nula,0
+141438,18,nula,0
+141768,18,no informativa,4
+141992,18,no informativa,33
+142823,18,nula,0
+143733,18,nula,0
+147434,18,nula,0
+148007,18,nula,0
+148129,18,nula,0
+148784,18,nula,0
+149365,18,nula,0
+151316,18,no informativa,4
+152520,18,nula,0
+153168,18,nula,0
+154060,18,nula,0
+154120,18,no informativa,5
+155046,18,nula,0
+156563,18,no informativa,2
+158073,18,nula,0
+159872,18,informativa,377
+160357,18,no informativa,3
+163219,18,nula,0
+163336,18,nula,0
+164680,18,nula,0
+167504,18,nula,0
+169193,18,nula,0
+173403,18,nula,0
+173762,18,nula,0
+174021,18,nula,0
+176441,18,no informativa,2
+177239,18,nula,0
+177583,18,nula,0
+178643,18,no informativa,3
+178777,18,no informativa,3
+180790,18,nula,0
+181246,18,no informativa,11
+181644,18,nula,0
+183522,18,nula,0
+183573,18,nula,0
+184792,18,nula,0
+185074,18,nula,0
+185773,18,nula,0
+187279,18,nula,0
+187389,18,nula,0
+187738,18,nula,0
+188263,18,nula,0
+188281,18,nula,0
+189072,18,nula,0
+189860,18,nula,0
+190101,18,nula,0
+190112,18,nula,0
+190653,18,nula,0
+191843,18,nula,0
+192826,18,no informativa,2
+196599,18,nula,0
+197261,18,nula,0
+198886,18,no informativa,12
+198925,18,nula,0
+200272,18,nula,0
+201116,18,nula,0
+201477,18,no informativa,3
+201632,18,nula,0
+201729,18,nula,0
+201916,18,no informativa,3
+203016,18,nula,0
+203220,18,nula,0
+203255,18,nula,0
+204160,18,nula,0
+205542,18,nula,0
+205770,18,nula,0
+205965,18,no informativa,7
+208696,18,nula,0
+208703,18,no informativa,6
+208716,18,no informativa,3
+208848,18,no informativa,3
+208900,18,nula,0
+209020,18,no informativa,5
+209212,18,nula,0
+209221,18,nula,0
+210378,18,nula,0
+210396,18,no informativa,6
+211074,18,nula,0
+211773,18,nula,0
+212237,18,no informativa,2
+213205,18,no informativa,3
+213531,18,informativa,7
+216025,18,nula,0
+216585,18,nula,0
+217090,18,nula,0
+218418,18,nula,0
+220756,18,no informativa,8
+221517,18,nula,0
+223585,18,nula,0
+224412,18,no informativa,11
+225497,18,nula,0
+227285,18,nula,0
+228658,18,nula,0
+228946,18,no informativa,12
+229185,18,nula,0
+229265,18,nula,0
+229959,18,nula,0
+231663,18,nula,0
+231957,18,nula,0
+231959,18,nula,0
+232410,18,no informativa,4
+232638,18,no informativa,8
+232930,18,nula,0
+233307,18,nula,0
+236638,18,nula,0
+237183,18,no informativa,2
+238725,18,nula,0
+238990,18,nula,0
+239071,18,nula,0
+239258,18,nula,0
+239676,18,informativa,11
+240203,18,nula,0
+241001,18,nula,0
+241456,18,nula,0
+241513,18,nula,0
+242368,18,nula,0
+243178,18,nula,0
+244543,18,no informativa,2
+245449,18,no informativa,3
+246265,18,no informativa,22
+246456,18,no informativa,2
+246743,18,nula,0
+246885,18,nula,0
+247752,18,no informativa,3
+247791,18,no informativa,10
+248300,18,nula,0
+250090,18,no informativa,2
+250362,18,nula,0
+250776,18,no informativa,3
+253001,18,nula,0
+253031,18,nula,0
+256765,18,nula,0
+258184,18,no informativa,6
+258228,18,no informativa,2
+259106,18,no informativa,38
+259544,18,nula,0
+259620,18,no informativa,3
+259995,18,nula,0
+260826,18,nula,0
+264014,18,no informativa,2
+264082,18,nula,0
+264164,18,nula,0
+265524,18,nula,0
+266713,18,no informativa,6
+267526,18,nula,0
+267778,18,nula,0
+268959,18,no informativa,37
+273591,18,no informativa,2
+274467,18,nula,0
+274499,18,nula,0
+274775,18,nula,0
+277723,18,nula,0
+278924,18,nula,0
+279267,18,no informativa,47
+279393,18,nula,0
+279907,18,nula,0
+281621,18,no informativa,2
+282379,18,nula,0
+282511,18,nula,0
+282740,18,no informativa,5
+285180,18,nula,0
+287680,18,no informativa,2
+288336,18,nula,0
+291372,18,nula,0
+292046,18,nula,0
+292590,18,no informativa,6
+292645,18,no informativa,9
+292912,18,nula,0
+293479,18,nula,0
+293647,18,nula,0
+295553,18,nula,0
+295762,18,no informativa,5
+295801,18,nula,0
+296744,18,nula,0
+299013,18,nula,0
+299877,18,nula,0
+303441,18,nula,0
+303544,18,nula,0
+303684,18,nula,0
+304568,18,no informativa,4
+307463,18,nula,0
+307751,18,no informativa,8
+308097,18,no informativa,3
+309039,18,no informativa,2
+311458,18,no informativa,2
+311702,18,nula,0
+313619,18,no informativa,8
+313650,18,no informativa,2
+314212,18,no informativa,15
+314823,18,no informativa,14
+315106,18,nula,0
+315611,18,nula,0
+315958,18,nula,0
+316008,18,nula,0
+317224,18,nula,0
+317429,18,nula,0
+318467,18,nula,0
+319674,18,no informativa,7
+319718,18,nula,0
+320803,18,informativa,10
+321368,18,nula,0
+323305,18,no informativa,6
+323368,18,nula,0
+323884,18,nula,0
+323916,18,nula,0
+324464,18,nula,0
+324736,18,nula,0
+324831,18,no informativa,5
+325391,18,nula,0
+326800,18,nula,0
+327332,18,nula,0
+329247,18,nula,0
+329870,18,nula,0
+330423,18,nula,0
+331076,18,nula,0
+331123,18,no informativa,2
+332818,18,nula,0
+334280,18,nula,0
+334678,18,nula,0
+335133,18,nula,0
+335813,18,nula,0
+336725,18,nula,0
+337559,18,nula,0
+338782,18,nula,0
+338891,18,informativa,5
+340176,18,no informativa,13
+340527,18,nula,0
+340708,18,no informativa,9
+341344,18,nula,0
+342902,18,nula,0
+343473,18,nula,0
+344922,18,nula,0
+345638,18,no informativa,3
+347576,18,nula,0
+347693,18,nula,0
+348293,18,no informativa,6
+350156,18,nula,0
+350914,18,nula,0
+352658,18,nula,0
+352699,18,no informativa,5
+353627,18,nula,0
+353672,18,informativa,2
+353899,18,no informativa,2
+354213,18,nula,0
+356096,18,no informativa,6
+356388,18,nula,0
+356765,18,nula,0
+358890,18,no informativa,2
+359030,18,no informativa,2
+360231,18,nula,0
+360349,18,nula,0
+360510,18,no informativa,4
+360631,18,nula,0
+362100,18,no informativa,18
+362693,18,no informativa,3
+363958,18,no informativa,3
+364002,18,nula,0
+365149,18,no informativa,6
+365724,18,nula,0
+365994,18,nula,0
+366249,18,nula,0
+366820,18,nula,0
+368001,18,nula,0
+368247,18,nula,0
+368357,18,no informativa,4
+368652,18,nula,0
+369874,18,nula,0
+369965,18,nula,0
+371936,18,nula,0
+373678,18,nula,0
+373732,18,nula,0
+373849,18,nula,0
+374596,18,informativa,3
+376648,18,nula,0
+376781,18,no informativa,8
+377189,18,no informativa,15
+377940,18,no informativa,2
+380724,18,nula,0
+381299,18,nula,0
+381653,18,no informativa,26
+382585,18,no informativa,10
+382825,18,nula,0
+383078,18,nula,0
+383324,18,nula,0
+384517,18,nula,0
+385371,18,nula,0
+385508,18,nula,0
+386670,18,no informativa,10
+387050,18,nula,0
+387923,18,no informativa,5
+388301,18,nula,0
+389596,18,nula,0
+393456,18,nula,0
+393894,18,nula,0
+394463,18,nula,0
+396491,18,nula,0
+397150,18,nula,0
+400269,18,no informativa,5
+401477,18,nula,0
+404774,18,nula,0
+406353,18,nula,0
+409376,18,nula,0
+410269,18,nula,0
+410280,18,nula,0
+411279,18,no informativa,6
+412001,18,nula,0
+412936,18,nula,0
+413471,18,nula,0
+413955,18,nula,0
+415241,18,nula,0
+415972,18,nula,0
+416469,18,no informativa,9
+417384,18,no informativa,47
+418997,18,nula,0
+419441,18,no informativa,3
+420860,18,no informativa,3
+422684,18,no informativa,12
+422779,18,nula,0
+423002,18,nula,0
+423114,18,informativa,20
+425641,18,nula,0
+425797,18,nula,0
+426634,18,nula,0
+427679,18,informativa,3
+430526,18,no informativa,2
+430632,18,nula,0
+431930,18,nula,0
+431931,18,nula,0
+432510,18,nula,0
+433125,18,nula,0
+433985,18,nula,0
+434959,18,nula,0
+435697,18,nula,0
+435862,18,no informativa,7
+436109,18,nula,0
+436286,18,nula,0
+437546,18,nula,0
+438282,18,nula,0
+439148,18,nula,0
+439604,18,nula,0
+441827,18,nula,0
+442347,18,nula,0
+442477,18,no informativa,6
+443463,18,no informativa,2
+443681,18,no informativa,2
+445110,18,nula,0
+446533,18,nula,0
+446917,18,no informativa,3
+446957,18,nula,0
+447652,18,informativa,3
+447680,18,no informativa,19
+448474,18,no informativa,10
+449381,18,nula,0
+449771,18,nula,0
+450570,18,nula,0
+450638,18,informativa,12
+450948,18,nula,0
+451433,18,nula,0
+451810,18,nula,0
+452782,18,no informativa,3
+455220,18,no informativa,2
+456039,18,no informativa,2
+456504,18,no informativa,6
+457135,18,nula,0
+457431,18,no informativa,2
+457953,18,nula,0
+459314,18,nula,0
+459644,18,nula,0
+460143,18,no informativa,6
+460227,18,informativa,6
+461110,18,nula,0
+461152,18,nula,0
+462292,18,nula,0
+462309,18,nula,0
+464010,18,no informativa,17
+464647,18,nula,0
+465220,18,no informativa,2
+465315,18,nula,0
+465466,18,nula,0
+466365,18,nula,0
+467709,18,nula,0
+468206,18,nula,0
+469831,18,no informativa,10
+471204,18,no informativa,6
+472509,18,nula,0
+472878,18,no informativa,2
+473498,18,nula,0
+474767,18,nula,0
+475021,18,nula,0
+475070,18,no informativa,2
+475763,18,no informativa,2
+476172,18,nula,0
+476279,18,nula,0
+477098,18,nula,0
+478263,18,no informativa,6
+478654,18,no informativa,3
+479781,18,no informativa,3
+479932,18,nula,0
+480499,18,nula,0
+481507,18,nula,0
+484106,18,no informativa,4
+485106,18,no informativa,11
+487465,18,no informativa,2
+488964,18,nula,0
+489208,18,nula,0
+489481,18,no informativa,2
+490391,18,nula,0
+490840,18,no informativa,11
+491156,18,nula,0
+491563,18,nula,0
+492880,18,no informativa,2
+492982,18,informativa,1626
+493003,18,nula,0
+493228,18,nula,0
+493691,18,nula,0
+494054,18,no informativa,23
+494362,18,no informativa,2
+497006,18,no informativa,2
+498372,18,no informativa,6
+498988,18,nula,0
+499650,18,nula,0
+500382,18,nula,0
+501353,18,nula,0
+503317,18,no informativa,2
+503344,18,nula,0
+504510,18,nula,0
+504564,18,no informativa,9
+505576,18,no informativa,2
+506021,18,no informativa,4
+507037,18,nula,0
+508188,18,nula,0
+508794,18,no informativa,7
+508806,18,no informativa,3
+509095,18,nula,0
+509504,18,no informativa,5
+509862,18,no informativa,2
+510175,18,nula,0
+511228,18,no informativa,4
+513091,18,nula,0
+513349,18,no informativa,8
+513900,18,nula,0
+514656,18,nula,0
+514838,18,no informativa,9
+515254,18,nula,0
+517074,18,nula,0
+517185,18,no informativa,2
+518647,18,nula,0
+520448,18,nula,0
+520668,18,no informativa,3
+522248,18,nula,0
+522318,18,informativa,10
+522922,18,nula,0
+522979,18,nula,0
+524297,18,no informativa,3
+524711,18,no informativa,17
+525049,18,informativa,18
+526065,18,no informativa,2
+528526,18,nula,0
+528539,18,nula,0
+530038,18,nula,0
+530087,18,nula,0
+530511,18,nula,0
+530513,18,no informativa,7
+530574,18,nula,0
+530605,18,nula,0
+530673,18,nula,0
+531252,18,no informativa,2
+531322,18,nula,0
+531939,18,nula,0
+532573,18,no informativa,6
+533035,18,nula,0
+535345,18,no informativa,3
+535369,18,nula,0
+535417,18,nula,0
+536138,18,informativa,4
+539327,18,nula,0
+539576,18,nula,0
+540101,18,nula,0
+540104,18,nula,0
+543191,18,nula,0
+543477,18,no informativa,2
+543674,18,no informativa,3
+543758,18,nula,0
+544328,18,nula,0
+544955,18,nula,0
+545135,18,nula,0
+545872,18,nula,0
+546737,18,nula,0
+547247,18,no informativa,2
+547264,18,nula,0
+548088,18,nula,0
+550235,18,no informativa,11
+551026,18,nula,0
+551088,18,nula,0
+551230,18,nula,0
+552388,18,no informativa,3
+553473,18,no informativa,2
+554786,18,nula,0
+554949,18,no informativa,2
+555515,18,nula,0
+555593,18,no informativa,3
+556362,18,nula,0
+557152,18,nula,0
+557479,18,no informativa,9
+557883,18,nula,0
+558282,18,nula,0
+560990,18,nula,0
+561149,18,nula,0
+561369,18,nula,0
+561396,18,no informativa,4
+561863,18,nula,0
+562538,18,no informativa,4
+563846,18,nula,0
+564570,18,nula,0
+565039,18,nula,0
+565365,18,nula,0
+567209,18,nula,0
+567521,18,no informativa,6
+567805,18,no informativa,6
+568357,18,nula,0
+568771,18,no informativa,4
+569337,18,nula,0
+569503,18,no informativa,3
+570417,18,nula,0
+571220,18,no informativa,5
+571550,18,nula,0
+574148,18,nula,0
+574443,18,nula,0
+574506,18,nula,0
+574906,18,nula,0
+578487,18,informativa,62
+578590,18,no informativa,5
+579774,18,nula,0
+580188,18,nula,0
+581962,18,nula,0
+582450,18,no informativa,4
+582568,18,nula,0
+583540,18,nula,0
+585225,18,nula,0
+589155,18,nula,0
+589165,18,nula,0
+589443,18,nula,0
+590210,18,nula,0
+591202,18,nula,0
+591594,18,no informativa,2
+591976,18,nula,0
+593152,18,no informativa,2
+596307,18,nula,0
+597073,18,informativa,11
+597289,18,no informativa,76
+599267,18,nula,0
+599943,18,no informativa,32
+600110,18,nula,0
+600431,18,nula,0
+600647,18,nula,0
+600867,18,nula,0
+601650,18,no informativa,6
+602847,18,nula,0
+605511,18,nula,0
+605672,18,informativa,6
+606370,18,no informativa,2
+606787,18,no informativa,6
+606833,18,no informativa,2
+606900,18,nula,0
+606997,18,nula,0
+607565,18,no informativa,8
+607862,18,nula,0
+607955,18,no informativa,14
+607985,18,no informativa,5
+609814,18,nula,0
+609892,18,nula,0
+609925,18,nula,0
+611773,18,no informativa,4
+613315,18,no informativa,8
+614056,18,no informativa,12
+614572,18,no informativa,9
+615530,18,informativa,10
+616132,18,nula,0
+616798,18,nula,0
+619397,18,nula,0
+619475,18,informativa,9
+619512,18,informativa,2
+620444,18,nula,0
+621186,18,nula,0
+621237,18,no informativa,9
+622659,18,nula,0
+624031,18,no informativa,16
+624899,18,nula,0
+625250,18,no informativa,2
+626477,18,nula,0
+626863,18,nula,0
+627303,18,nula,0
+629181,18,nula,0
+630329,18,nula,0
+630857,18,no informativa,5
+631689,18,nula,0
+631996,18,nula,0
+633054,18,nula,0
+634298,18,nula,0
+634585,18,nula,0
+635451,18,nula,0
+636469,18,nula,0
+636607,18,no informativa,2
+637355,18,nula,0
+639411,18,nula,0
+640201,18,informativa,25
+640381,18,no informativa,15
+642498,18,nula,0
+644677,18,no informativa,3
+645634,18,nula,0
+647383,18,informativa,5
+648382,18,nula,0
+648503,18,nula,0
+649456,18,nula,0
+650790,18,no informativa,37
+651494,18,nula,0
+651522,18,nula,0
+651734,18,nula,0
+653482,18,nula,0
+653534,18,nula,0
+655636,18,nula,0
+655725,18,no informativa,2
+656298,18,nula,0
+657373,18,nula,0
+660260,18,no informativa,2
+664714,18,no informativa,2
+664745,18,nula,0
+665633,18,no informativa,8
+666151,18,nula,0
+666972,18,nula,0
+667318,18,nula,0
+667577,18,nula,0
+667900,18,nula,0
+668031,18,no informativa,6
+668421,18,no informativa,7
+669475,18,no informativa,4
+670221,18,nula,0
+670952,18,nula,0
+671054,18,no informativa,6
+672075,18,nula,0
+674093,18,nula,0
+674394,18,nula,0
+674709,18,no informativa,3
+675194,18,nula,0
+675636,18,nula,0
+675711,18,nula,0
+675960,18,informativa,134
+678527,18,nula,0
+678674,18,nula,0
+678955,18,nula,0
+679715,18,informativa,99
+680545,18,informativa,3
+680684,18,nula,0
+682900,18,nula,0
+684682,18,nula,0
+684837,18,nula,0
+685536,18,no informativa,16
+685657,18,nula,0
+686393,18,nula,0
+689510,18,informativa,3
+690617,18,nula,0
+690715,18,no informativa,4
+692161,18,nula,0
+692607,18,nula,0
+692846,18,no informativa,4
+693259,18,no informativa,2
+693482,18,nula,0
+693535,18,no informativa,5
+694109,18,nula,0
+694886,18,nula,0
+694988,18,nula,0
+696317,18,no informativa,12
+696457,18,nula,0
+696981,18,no informativa,3
+697477,18,no informativa,9
+698093,18,no informativa,3
+698710,18,no informativa,3
+700113,18,no informativa,2
+703358,18,no informativa,9
+704735,18,nula,0
+705943,18,informativa,3
+706516,18,no informativa,3
+708370,18,no informativa,33
+708729,18,nula,0
+709751,18,no informativa,6
+710100,18,nula,0
+710444,18,nula,0
+710709,18,no informativa,3
+711824,18,nula,0
+713089,18,no informativa,2
+713639,18,no informativa,4
+714440,18,nula,0
+714716,18,nula,0
+714835,18,nula,0
+717328,18,nula,0
+718022,18,no informativa,2
+721747,18,nula,0
+722043,18,nula,0
+722435,18,nula,0
+724412,18,nula,0
+724548,18,nula,0
+724797,18,nula,0
+725145,18,nula,0
+725309,18,nula,0
+725615,18,no informativa,2
+726671,18,informativa,31
+726714,18,nula,0
+728051,18,nula,0
+728519,18,nula,0
+730354,18,no informativa,8
+732677,18,nula,0
+732692,18,no informativa,2
+733255,18,no informativa,2
+733439,18,nula,0
+733660,18,no informativa,8
+734646,18,no informativa,3
+734727,18,nula,0
+735203,18,no informativa,11
+735779,18,no informativa,3
+736009,18,nula,0
+736054,18,nula,0
+736136,18,no informativa,2
+736610,18,nula,0
+736659,18,nula,0
+737434,18,nula,0
+738739,18,no informativa,27
+742289,18,nula,0
+742506,18,no informativa,3
+742561,18,nula,0
+744567,18,nula,0
+745081,18,nula,0
+745874,18,no informativa,2
+746556,18,no informativa,2
+747041,18,informativa,12
+747070,18,nula,0
+748683,18,nula,0
+749482,18,no informativa,6
+749796,18,nula,0
+750920,18,nula,0
+752213,18,no informativa,3
+753189,18,nula,0
+754716,18,no informativa,2
+756197,18,no informativa,2
+756925,18,nula,0
+757741,18,nula,0
+758141,18,informativa,3
+761171,18,no informativa,3
+761200,18,nula,0
+761411,18,nula,0
+763470,18,no informativa,2
+764804,18,nula,0
+765393,18,nula,0
+765684,18,nula,0
+766371,18,nula,0
+766834,18,nula,0
+768475,18,no informativa,2
+768573,18,no informativa,409
+768902,18,nula,0
+770201,18,nula,0
+770965,18,nula,0
+772716,18,nula,0
+773472,18,nula,0
+774051,18,nula,0
+776484,18,nula,0
+777584,18,nula,0
+777659,18,nula,0
+777950,18,nula,0
+779388,18,nula,0
+781173,18,nula,0
+782725,18,nula,0
+785683,18,nula,0
+786270,18,nula,0
+787495,18,nula,0
+787738,18,no informativa,2
+788424,18,nula,0
+788525,18,nula,0
+788822,18,nula,0
+790159,18,nula,0
+791251,18,nula,0
+791800,18,nula,0
+792222,18,nula,0
+792949,18,nula,0
+793168,18,informativa,3
+794493,18,nula,0
+795532,18,no informativa,8
+796175,18,nula,0
+796205,18,nula,0
+796279,18,nula,0
+796745,18,no informativa,4
+797927,18,nula,0
+797938,18,nula,0
+798157,18,nula,0
+798235,18,nula,0
+799456,18,nula,0
+800935,18,nula,0
+803405,18,no informativa,12
+805915,18,nula,0
+807050,18,nula,0
+808516,18,nula,0
+808662,18,nula,0
+809033,18,informativa,3
+809771,18,nula,0
+809945,18,nula,0
+811989,18,nula,0
+812423,18,nula,0
+812505,18,nula,0
+813192,18,nula,0
+815267,18,no informativa,9
+816054,18,nula,0
+819000,18,nula,0
+819610,18,nula,0
+821218,18,nula,0
+822556,18,no informativa,14
+824687,18,nula,0
+828033,18,no informativa,9
+829035,18,nula,0
+829199,18,nula,0
+830906,18,nula,0
+831098,18,nula,0
+427,1,nula,0
+873,1,nula,0
+4386,1,nula,0
+4535,1,nula,0
+5218,1,no informativa,13
+5527,1,nula,0
+6747,1,nula,0
+8332,1,nula,0
+11238,1,nula,0
+12243,1,no informativa,14
+12354,1,no informativa,2
+13213,1,nula,0
+13897,1,nula,0
+16098,1,nula,0
+16447,1,nula,0
+16586,1,nula,0
+16635,1,nula,0
+16696,1,no informativa,4
+17319,1,no informativa,3
+17835,1,nula,0
+18006,1,no informativa,5
+18082,1,informativa,2
+18443,1,nula,0
+20448,1,nula,0
+20866,1,no informativa,5
+21080,1,no informativa,19
+21625,1,nula,0
+24260,1,nula,0
+24540,1,nula,0
+25578,1,no informativa,3
+25800,1,nula,0
+27202,1,nula,0
+27470,1,nula,0
+27739,1,no informativa,2
+29427,1,nula,0
+30587,1,nula,0
+33839,1,no informativa,2
+34914,1,nula,0
+35056,1,no informativa,77
+35329,1,no informativa,3
+35730,1,no informativa,359
+36221,1,nula,0
+36747,1,no informativa,16
+39964,1,nula,0
+40677,1,nula,0
+40849,1,nula,0
+42421,1,no informativa,2
+42779,1,nula,0
+44961,1,nula,0
+45219,1,no informativa,2
+45689,1,nula,0
+45971,1,nula,0
+46944,1,no informativa,6
+47514,1,informativa,11
+48252,1,nula,0
+48769,1,no informativa,2
+49294,1,nula,0
+49737,1,no informativa,6
+50192,1,nula,0
+51439,1,nula,0
+51745,1,nula,0
+52466,1,nula,0
+54431,1,no informativa,179
+56908,1,informativa,25
+57226,1,nula,0
+58473,1,no informativa,9
+61126,1,nula,0
+61635,1,nula,0
+62069,1,no informativa,4
+62752,1,nula,0
+63713,1,nula,0
+64417,1,nula,0
+65993,1,nula,0
+66386,1,no informativa,19
+66989,1,no informativa,6
+67433,1,no informativa,2
+68339,1,no informativa,44
+69418,1,nula,0
+71438,1,informativa,301
+71861,1,nula,0
+75650,1,nula,0
+76685,1,nula,0
+76713,1,nula,0
+77010,1,no informativa,7
+78377,1,nula,0
+78930,1,no informativa,13
+79701,1,nula,0
+80139,1,nula,0
+80940,1,nula,0
+82234,1,nula,0
+83972,1,nula,0
+84188,1,no informativa,2
+84731,1,nula,0
+85009,1,nula,0
+85080,1,no informativa,5
+85238,1,nula,0
+85924,1,nula,0
+86435,1,no informativa,7
+86511,1,nula,0
+86577,1,nula,0
+86997,1,nula,0
+88339,1,nula,0
+88351,1,nula,0
+88601,1,nula,0
+88780,1,nula,0
+89331,1,no informativa,4
+91289,1,nula,0
+92207,1,nula,0
+92280,1,nula,0
+93597,1,nula,0
+94573,1,nula,0
+94657,1,no informativa,6
+95700,1,nula,0
+96199,1,nula,0
+97872,1,nula,0
+98372,1,no informativa,4
+99182,1,no informativa,2
+99243,1,nula,0
+99680,1,no informativa,3
+101644,1,no informativa,6
+103555,1,nula,0
+105122,1,nula,0
+105133,1,nula,0
+106815,1,nula,0
+108034,1,nula,0
+108404,1,no informativa,7
+109391,1,nula,0
+109489,1,no informativa,14
+110267,1,nula,0
+110285,1,nula,0
+111582,1,nula,0
+112077,1,informativa,83
+112395,1,no informativa,9
+113410,1,nula,0
+114516,1,nula,0
+115992,1,no informativa,5
+116784,1,no informativa,19
+119461,1,nula,0
+120907,1,nula,0
+124016,1,nula,0
+124515,1,nula,0
+124633,1,nula,0
+126064,1,informativa,3
+127706,1,no informativa,10
+130113,1,no informativa,8
+130624,1,informativa,4
+130792,1,nula,0
+137090,1,nula,0
+138384,1,nula,0
+138973,1,nula,0
+139094,1,nula,0
+140024,1,no informativa,2
+140340,1,nula,0
+140941,1,nula,0
+141560,1,nula,0
+142113,1,nula,0
+143030,1,nula,0
+143645,1,no informativa,22
+143693,1,nula,0
+144219,1,no informativa,2
+145561,1,nula,0
+147537,1,informativa,12
+147837,1,no informativa,2
+148071,1,nula,0
+148656,1,nula,0
+150860,1,no informativa,3
+151877,1,informativa,2
+152435,1,nula,0
+152626,1,no informativa,2
+153347,1,no informativa,2
+153907,1,nula,0
+154786,1,nula,0
+155060,1,no informativa,6
+155169,1,nula,0
+155239,1,nula,0
+155455,1,nula,0
+155854,1,nula,0
+156135,1,nula,0
+156507,1,no informativa,9
+156992,1,no informativa,2
+158200,1,informativa,2
+158844,1,nula,0
+158963,1,nula,0
+159177,1,nula,0
+160305,1,nula,0
+161481,1,nula,0
+161584,1,nula,0
+163538,1,nula,0
+166204,1,no informativa,4
+166897,1,nula,0
+167089,1,nula,0
+167444,1,nula,0
+170177,1,no informativa,2
+170409,1,nula,0
+170695,1,no informativa,5
+171397,1,nula,0
+171992,1,no informativa,2
+172095,1,no informativa,2
+172904,1,nula,0
+173297,1,no informativa,2
+174380,1,nula,0
+174471,1,nula,0
+175200,1,nula,0
+176937,1,nula,0
+177072,1,nula,0
+177087,1,nula,0
+179573,1,nula,0
+181345,1,no informativa,219
+183214,1,nula,0
+183219,1,nula,0
+183988,1,no informativa,4
+184394,1,nula,0
+184708,1,nula,0
+185231,1,no informativa,5
+187310,1,nula,0
+188927,1,no informativa,4
+188943,1,nula,0
+189116,1,no informativa,9
+189624,1,nula,0
+190911,1,no informativa,4
+191209,1,nula,0
+193009,1,nula,0
+193375,1,no informativa,15
+194026,1,no informativa,3
+194724,1,nula,0
+196540,1,nula,0
+196774,1,nula,0
+197274,1,nula,0
+197841,1,informativa,172
+198762,1,no informativa,5
+198924,1,nula,0
+198999,1,informativa,3
+201555,1,no informativa,19
+201632,1,nula,0
+204522,1,nula,0
+204695,1,nula,0
+205644,1,no informativa,5
+205653,1,nula,0
+207414,1,nula,0
+208107,1,nula,0
+208402,1,nula,0
+209212,1,nula,0
+209682,1,nula,0
+210158,1,nula,0
+210192,1,nula,0
+210983,1,nula,0
+211200,1,nula,0
+211249,1,no informativa,5
+213376,1,nula,0
+213608,1,nula,0
+213798,1,nula,0
+214630,1,no informativa,2
+215866,1,nula,0
+217676,1,nula,0
+217823,1,nula,0
+218292,1,no informativa,2
+219697,1,no informativa,6
+220048,1,nula,0
+220157,1,nula,0
+221803,1,nula,0
+222624,1,nula,0
+223222,1,nula,0
+223308,1,no informativa,7
+224612,1,nula,0
+225028,1,no informativa,4
+225985,1,no informativa,2
+226735,1,nula,0
+228019,1,nula,0
+228901,1,no informativa,2
+229064,1,nula,0
+229271,1,informativa,5
+229276,1,nula,0
+229323,1,no informativa,3
+229981,1,no informativa,4
+231220,1,no informativa,2
+231362,1,nula,0
+231890,1,nula,0
+234168,1,no informativa,2
+234446,1,informativa,22
+234447,1,nula,0
+234469,1,no informativa,6
+236712,1,no informativa,4
+237840,1,nula,0
+239267,1,nula,0
+239290,1,no informativa,5
+239395,1,nula,0
+239557,1,no informativa,4
+240986,1,no informativa,10
+241117,1,nula,0
+241794,1,nula,0
+242546,1,nula,0
+243826,1,no informativa,3
+244900,1,nula,0
+248716,1,nula,0
+249331,1,no informativa,4
+249677,1,no informativa,5
+249988,1,nula,0
+251634,1,no informativa,2
+252737,1,informativa,11
+253031,1,nula,0
+253229,1,nula,0
+257290,1,no informativa,2
+259447,1,nula,0
+259591,1,no informativa,4
+259647,1,nula,0
+262009,1,nula,0
+262321,1,no informativa,4
+263300,1,nula,0
+263990,1,nula,0
+264075,1,no informativa,10
+264568,1,nula,0
+266346,1,nula,0
+266458,1,no informativa,3
+268213,1,nula,0
+269652,1,nula,0
+269945,1,nula,0
+270664,1,no informativa,280
+270694,1,nula,0
+270988,1,nula,0
+274575,1,nula,0
+275311,1,nula,0
+275470,1,nula,0
+275521,1,nula,0
+275723,1,no informativa,2
+277865,1,nula,0
+278167,1,nula,0
+278855,1,nula,0
+279539,1,nula,0
+280919,1,nula,0
+281226,1,nula,0
+281372,1,no informativa,3
+281987,1,nula,0
+283737,1,nula,0
+286300,1,informativa,11
+287421,1,nula,0
+288503,1,nula,0
+289544,1,nula,0
+291159,1,nula,0
+291341,1,no informativa,2
+291343,1,nula,0
+291725,1,nula,0
+292110,1,nula,0
+292816,1,nula,0
+292948,1,nula,0
+293388,1,nula,0
+293827,1,nula,0
+294422,1,nula,0
+295242,1,nula,0
+298540,1,nula,0
+298862,1,nula,0
+299394,1,nula,0
+300475,1,no informativa,5
+301361,1,nula,0
+301731,1,nula,0
+302669,1,nula,0
+302754,1,nula,0
+303649,1,nula,0
+304155,1,nula,0
+308352,1,nula,0
+310240,1,nula,0
+312976,1,no informativa,3
+313087,1,nula,0
+313528,1,no informativa,8
+313727,1,no informativa,3
+314644,1,nula,0
+317711,1,nula,0
+317759,1,nula,0
+319750,1,nula,0
+319813,1,nula,0
+320518,1,no informativa,2
+320848,1,nula,0
+321688,1,informativa,2
+321954,1,informativa,7
+322642,1,nula,0
+322776,1,nula,0
+323369,1,no informativa,3
+323966,1,nula,0
+324577,1,nula,0
+325280,1,nula,0
+326706,1,nula,0
+327472,1,nula,0
+328842,1,nula,0
+329241,1,no informativa,12
+329670,1,nula,0
+331396,1,nula,0
+331864,1,nula,0
+333873,1,no informativa,5
+335521,1,nula,0
+336595,1,nula,0
+337559,1,nula,0
+338929,1,no informativa,4
+340046,1,nula,0
+340588,1,nula,0
+342416,1,no informativa,13
+342569,1,nula,0
+344187,1,informativa,7
+345111,1,nula,0
+347139,1,nula,0
+347928,1,nula,0
+349516,1,no informativa,2
+349892,1,nula,0
+349979,1,nula,0
+350342,1,no informativa,8
+350360,1,nula,0
+350704,1,no informativa,16
+355489,1,nula,0
+355685,1,nula,0
+358392,1,no informativa,2
+358485,1,nula,0
+359742,1,nula,0
+360564,1,nula,0
+362584,1,nula,0
+364783,1,no informativa,23
+367357,1,nula,0
+367693,1,nula,0
+368286,1,no informativa,2
+368630,1,nula,0
+369270,1,nula,0
+369663,1,no informativa,4
+372479,1,no informativa,5
+373456,1,no informativa,2
+374128,1,nula,0
+375577,1,no informativa,3
+376475,1,nula,0
+378630,1,nula,0
+378771,1,nula,0
+379331,1,nula,0
+379561,1,nula,0
+380708,1,no informativa,4
+381381,1,no informativa,2
+381601,1,nula,0
+381670,1,nula,0
+381881,1,nula,0
+382212,1,no informativa,4
+382234,1,nula,0
+382715,1,nula,0
+384171,1,no informativa,6
+385162,1,nula,0
+385378,1,nula,0
+385482,1,no informativa,21
+386187,1,no informativa,6
+387265,1,nula,0
+389190,1,nula,0
+389882,1,no informativa,2
+390990,1,no informativa,414
+391029,1,nula,0
+391558,1,nula,0
+391886,1,no informativa,20
+392371,1,nula,0
+395830,1,no informativa,2
+396563,1,no informativa,5
+396914,1,no informativa,4
+396927,1,nula,0
+398145,1,nula,0
+398250,1,nula,0
+399004,1,nula,0
+399610,1,nula,0
+400136,1,nula,0
+400366,1,nula,0
+400752,1,nula,0
+400885,1,no informativa,10
+401092,1,nula,0
+401781,1,no informativa,2
+402519,1,nula,0
+402833,1,nula,0
+403261,1,nula,0
+404990,1,nula,0
+405249,1,nula,0
+405324,1,no informativa,4
+406594,1,no informativa,3
+406918,1,nula,0
+407414,1,no informativa,8
+407578,1,nula,0
+408271,1,nula,0
+408430,1,no informativa,6
+409162,1,nula,0
+409489,1,nula,0
+410272,1,no informativa,60
+411046,1,no informativa,4
+412391,1,nula,0
+414906,1,nula,0
+415134,1,nula,0
+417101,1,nula,0
+417365,1,nula,0
+418425,1,nula,0
+419100,1,nula,0
+419264,1,no informativa,4
+420534,1,nula,0
+421594,1,nula,0
+422032,1,no informativa,2
+422110,1,nula,0
+423274,1,nula,0
+423619,1,nula,0
+423721,1,nula,0
+423973,1,nula,0
+424292,1,nula,0
+425564,1,nula,0
+425761,1,no informativa,4
+425834,1,nula,0
+427248,1,nula,0
+427390,1,no informativa,4
+429353,1,nula,0
+429638,1,nula,0
+430547,1,no informativa,3
+433618,1,nula,0
+435460,1,nula,0
+436195,1,nula,0
+436407,1,no informativa,10
+438703,1,no informativa,6
+440471,1,nula,0
+441262,1,nula,0
+441704,1,nula,0
+444707,1,no informativa,4
+444852,1,no informativa,2
+445306,1,nula,0
+445578,1,nula,0
+446440,1,no informativa,2
+446615,1,nula,0
+446784,1,nula,0
+447622,1,nula,0
+447680,1,no informativa,19
+449415,1,nula,0
+449645,1,nula,0
+449780,1,nula,0
+451103,1,nula,0
+452021,1,nula,0
+452807,1,nula,0
+453172,1,nula,0
+454848,1,nula,0
+455914,1,no informativa,23
+457563,1,nula,0
+459522,1,no informativa,4
+459890,1,no informativa,2
+460333,1,no informativa,7
+462425,1,no informativa,4
+463488,1,no informativa,3
+465234,1,no informativa,6
+467471,1,nula,0
+468976,1,nula,0
+470756,1,nula,0
+473104,1,nula,0
+473283,1,informativa,2
+473819,1,no informativa,8
+474864,1,nula,0
+475648,1,no informativa,6
+476332,1,nula,0
+477162,1,no informativa,2
+477211,1,nula,0
+477472,1,nula,0
+477481,1,nula,0
+477717,1,no informativa,5
+477882,1,nula,0
+478194,1,nula,0
+479089,1,nula,0
+482888,1,nula,0
+483215,1,informativa,6
+484630,1,nula,0
+485050,1,no informativa,2
+485662,1,no informativa,6
+487877,1,nula,0
+488784,1,no informativa,2
+489121,1,nula,0
+489154,1,nula,0
+489230,1,informativa,22
+490939,1,nula,0
+491072,1,nula,0
+491675,1,nula,0
+492063,1,nula,0
+492393,1,nula,0
+492728,1,nula,0
+493107,1,no informativa,5
+494101,1,informativa,1682
+494225,1,nula,0
+494536,1,nula,0
+496873,1,no informativa,10
+498528,1,nula,0
+498623,1,nula,0
+499232,1,nula,0
+499489,1,no informativa,3
+499732,1,nula,0
+499815,1,no informativa,5
+500708,1,nula,0
+501631,1,nula,0
+501946,1,nula,0
+502454,1,nula,0
+503631,1,nula,0
+504894,1,nula,0
+505007,1,no informativa,192
+505067,1,no informativa,2
+505504,1,nula,0
+506089,1,nula,0
+506409,1,no informativa,11
+506857,1,nula,0
+507202,1,nula,0
+509096,1,nula,0
+511420,1,no informativa,3
+511656,1,nula,0
+511810,1,nula,0
+513013,1,no informativa,5
+513136,1,nula,0
+513275,1,informativa,49
+513780,1,nula,0
+514200,1,nula,0
+514412,1,no informativa,15
+514818,1,informativa,2
+515069,1,nula,0
+515670,1,no informativa,17
+515782,1,nula,0
+516640,1,no informativa,2
+517402,1,no informativa,2
+518427,1,nula,0
+518524,1,nula,0
+519220,1,nula,0
+519686,1,nula,0
+519850,1,nula,0
+520289,1,no informativa,2
+521508,1,nula,0
+523815,1,nula,0
+524600,1,nula,0
+526193,1,nula,0
+526534,1,no informativa,2
+526829,1,nula,0
+527195,1,nula,0
+528675,1,no informativa,5
+528991,1,no informativa,8
+530034,1,nula,0
+530494,1,nula,0
+530715,1,nula,0
+531263,1,no informativa,9
+534245,1,nula,0
+535114,1,no informativa,13
+535834,1,no informativa,4
+536245,1,no informativa,5
+536320,1,no informativa,6
+536761,1,no informativa,6
+537023,1,nula,0
+537509,1,nula,0
+538862,1,nula,0
+539565,1,no informativa,4
+540500,1,nula,0
+542113,1,no informativa,2
+542886,1,nula,0
+544011,1,nula,0
+544808,1,nula,0
+545121,1,no informativa,2
+545465,1,nula,0
+546053,1,nula,0
+546634,1,nula,0
+546779,1,nula,0
+547037,1,no informativa,3
+547502,1,no informativa,2
+548518,1,no informativa,4
+548579,1,nula,0
+548657,1,nula,0
+549262,1,no informativa,2
+549787,1,nula,0
+550046,1,no informativa,6
+551066,1,no informativa,2
+552386,1,nula,0
+553392,1,no informativa,5
+553657,1,informativa,6
+553900,1,nula,0
+554297,1,nula,0
+554700,1,nula,0
+554882,1,nula,0
+555935,1,no informativa,4
+556171,1,nula,0
+558076,1,nula,0
+560522,1,nula,0
+560558,1,no informativa,3
+563322,1,nula,0
+563574,1,nula,0
+565124,1,no informativa,9
+566292,1,nula,0
+566357,1,nula,0
+567928,1,no informativa,3
+568233,1,no informativa,2
+568397,1,nula,0
+568970,1,nula,0
+568997,1,no informativa,7
+569129,1,nula,0
+570117,1,nula,0
+570229,1,informativa,4
+571535,1,informativa,4
+571550,1,nula,0
+571649,1,nula,0
+572653,1,nula,0
+574099,1,nula,0
+574491,1,nula,0
+577544,1,no informativa,5
+578134,1,nula,0
+580449,1,informativa,3
+580464,1,nula,0
+580745,1,informativa,4
+581610,1,nula,0
+581791,1,nula,0
+581976,1,nula,0
+582210,1,nula,0
+585253,1,nula,0
+587300,1,nula,0
+588063,1,no informativa,2
+590878,1,nula,0
+591613,1,nula,0
+592940,1,nula,0
+593872,1,nula,0
+594105,1,no informativa,6
+594526,1,nula,0
+595951,1,no informativa,3
+597022,1,no informativa,7
+597522,1,no informativa,10
+597852,1,nula,0
+599057,1,no informativa,7
+599614,1,nula,0
+600219,1,nula,0
+601074,1,nula,0
+601328,1,no informativa,3
+602412,1,nula,0
+603311,1,nula,0
+604357,1,nula,0
+605201,1,nula,0
+605685,1,nula,0
+606208,1,nula,0
+606397,1,nula,0
+606703,1,nula,0
+609245,1,nula,0
+611074,1,no informativa,8
+611434,1,no informativa,4
+611529,1,nula,0
+612320,1,no informativa,76
+612578,1,nula,0
+613262,1,no informativa,5
+614601,1,nula,0
+614834,1,no informativa,29
+615551,1,no informativa,3
+618871,1,nula,0
+620408,1,no informativa,357
+621858,1,nula,0
+622292,1,nula,0
+622484,1,nula,0
+623084,1,informativa,7
+623311,1,no informativa,17
+623824,1,nula,0
+623975,1,nula,0
+624195,1,no informativa,2
+625137,1,nula,0
+626970,1,nula,0
+627692,1,no informativa,5
+628753,1,nula,0
+634298,1,nula,0
+634682,1,no informativa,2
+636772,1,no informativa,6
+636976,1,nula,0
+638148,1,no informativa,6
+638862,1,nula,0
+640298,1,no informativa,21
+641395,1,informativa,84
+643124,1,nula,0
+645213,1,no informativa,2
+645523,1,nula,0
+646181,1,nula,0
+646189,1,no informativa,3
+646260,1,nula,0
+646962,1,nula,0
+647473,1,no informativa,3
+648197,1,nula,0
+651272,1,no informativa,20
+651734,1,nula,0
+651913,1,nula,0
+652160,1,no informativa,3
+653071,1,nula,0
+653719,1,nula,0
+655693,1,nula,0
+655936,1,nula,0
+656165,1,nula,0
+657413,1,no informativa,11
+657911,1,nula,0
+659920,1,no informativa,4
+660385,1,nula,0
+661733,1,no informativa,4
+661942,1,nula,0
+662086,1,nula,0
+663615,1,nula,0
+664838,1,no informativa,12
+664980,1,nula,0
+665925,1,nula,0
+666152,1,nula,0
+668106,1,no informativa,2
+668271,1,nula,0
+669261,1,nula,0
+670092,1,no informativa,2
+670368,1,nula,0
+671054,1,no informativa,6
+672400,1,no informativa,5
+674689,1,no informativa,7
+674752,1,nula,0
+675047,1,nula,0
+675523,1,nula,0
+677197,1,nula,0
+677523,1,nula,0
+677663,1,nula,0
+678618,1,no informativa,8
+679475,1,nula,0
+680060,1,nula,0
+680231,1,nula,0
+681025,1,no informativa,8
+681184,1,nula,0
+682180,1,informativa,181
+682946,1,nula,0
+684325,1,no informativa,3
+684851,1,nula,0
+685385,1,nula,0
+686093,1,no informativa,5
+686415,1,nula,0
+690046,1,no informativa,3
+692998,1,nula,0
+693173,1,nula,0
+694623,1,no informativa,5
+695089,1,nula,0
+695184,1,nula,0
+695534,1,no informativa,42
+696317,1,no informativa,12
+696346,1,nula,0
+696534,1,informativa,90
+697284,1,nula,0
+698889,1,nula,0
+699038,1,nula,0
+699065,1,nula,0
+699853,1,nula,0
+699923,1,nula,0
+699944,1,nula,0
+700063,1,nula,0
+702569,1,nula,0
+702577,1,no informativa,10
+702856,1,nula,0
+703229,1,nula,0
+703573,1,nula,0
+706140,1,nula,0
+707250,1,no informativa,2
+710709,1,no informativa,3
+711022,1,nula,0
+711474,1,nula,0
+713089,1,no informativa,2
+713948,1,no informativa,6
+714044,1,no informativa,2
+714298,1,no informativa,3
+714766,1,no informativa,4
+715011,1,informativa,42
+716740,1,no informativa,10
+717341,1,nula,0
+717624,1,nula,0
+718420,1,no informativa,2
+719809,1,no informativa,3
+720756,1,nula,0
+721904,1,no informativa,6
+722863,1,no informativa,9
+723052,1,nula,0
+723101,1,nula,0
+723997,1,nula,0
+724758,1,nula,0
+725972,1,no informativa,3
+726515,1,informativa,3
+727329,1,nula,0
+727377,1,nula,0
+727855,1,no informativa,2
+730192,1,nula,0
+730456,1,nula,0
+731939,1,nula,0
+732573,1,no informativa,3
+733207,1,nula,0
+733212,1,nula,0
+734187,1,informativa,22
+734373,1,nula,0
+734646,1,no informativa,3
+734686,1,nula,0
+736054,1,nula,0
+736802,1,nula,0
+739381,1,nula,0
+741904,1,nula,0
+742959,1,no informativa,3
+743243,1,nula,0
+743274,1,nula,0
+743647,1,nula,0
+743764,1,no informativa,8
+745018,1,nula,0
+748556,1,nula,0
+749387,1,no informativa,2
+749904,1,nula,0
+750070,1,informativa,10
+750124,1,nula,0
+751684,1,nula,0
+753296,1,no informativa,17
+753400,1,nula,0
+755091,1,no informativa,22
+756358,1,nula,0
+756367,1,nula,0
+757783,1,nula,0
+758145,1,nula,0
+759869,1,nula,0
+760368,1,no informativa,3
+760463,1,nula,0
+760818,1,nula,0
+762186,1,no informativa,18
+764691,1,nula,0
+765520,1,nula,0
+766207,1,nula,0
+766271,1,nula,0
+766997,1,informativa,5
+767137,1,nula,0
+767298,1,nula,0
+767643,1,nula,0
+768077,1,nula,0
+768353,1,nula,0
+768573,1,no informativa,409
+768621,1,no informativa,10
+769094,1,nula,0
+769332,1,no informativa,12
+769899,1,nula,0
+771027,1,nula,0
+771208,1,nula,0
+771395,1,nula,0
+772068,1,nula,0
+772141,1,nula,0
+773331,1,nula,0
+775308,1,nula,0
+775623,1,nula,0
+776311,1,no informativa,18
+776451,1,nula,0
+777076,1,nula,0
+778202,1,nula,0
+779973,1,nula,0
+781440,1,nula,0
+782732,1,nula,0
+783750,1,nula,0
+785723,1,nula,0
+787957,1,no informativa,4
+788151,1,nula,0
+788800,1,nula,0
+789214,1,nula,0
+790659,1,nula,0
+790681,1,nula,0
+791167,1,nula,0
+793413,1,nula,0
+793459,1,nula,0
+794302,1,nula,0
+794716,1,nula,0
+794904,1,nula,0
+795448,1,nula,0
+795516,1,nula,0
+795813,1,no informativa,2
+796514,1,nula,0
+796587,1,nula,0
+799974,1,nula,0
+800198,1,nula,0
+800445,1,nula,0
+800699,1,nula,0
+800767,1,nula,0
+800926,1,nula,0
+801625,1,nula,0
+802112,1,nula,0
+802244,1,nula,0
+803619,1,nula,0
+804973,1,nula,0
+805274,1,nula,0
+806459,1,nula,0
+806729,1,nula,0
+807151,1,nula,0
+807158,1,informativa,4
+808576,1,nula,0
+808594,1,nula,0
+810390,1,nula,0
+810905,1,nula,0
+810927,1,nula,0
+811032,1,no informativa,3
+811156,1,nula,0
+811733,1,nula,0
+811989,1,nula,0
+812159,1,nula,0
+813242,1,nula,0
+814439,1,nula,0
+814684,1,no informativa,162
+815471,1,nula,0
+817646,1,nula,0
+817691,1,nula,0
+817860,1,nula,0
+818176,1,nula,0
+818738,1,nula,0
+820122,1,no informativa,3
+820888,1,nula,0
+821459,1,nula,0
+821568,1,nula,0
+821839,1,nula,0
+823880,1,nula,0
+824874,1,nula,0
+825031,1,nula,0
+825253,1,nula,0
+826110,1,nula,0
+827954,1,nula,0
+828632,1,nula,0
+829490,1,nula,0
+830751,1,nula,0
+3758,21,informativa,19
+3990,21,nula,0
+8517,21,informativa,8
+9504,21,nula,0
+10806,21,informativa,852
+11300,21,informativa,5
+12233,21,no informativa,3
+15846,21,nula,0
+15876,21,informativa,121
+27474,21,nula,0
+31871,21,nula,0
+37669,21,informativa,20
+39551,21,nula,0
+40879,21,nula,0
+41497,21,nula,0
+43361,21,informativa,6
+44354,21,no informativa,7
+46080,21,nula,0
+47971,21,no informativa,3
+48769,21,no informativa,2
+55375,21,nula,0
+56768,21,nula,0
+56857,21,nula,0
+57568,21,nula,0
+59031,21,nula,0
+67932,21,nula,0
+68007,21,no informativa,4
+71070,21,nula,0
+72321,21,no informativa,3
+73457,21,nula,0
+74108,21,nula,0
+76715,21,nula,0
+76864,21,nula,0
+78181,21,no informativa,12
+79701,21,nula,0
+80777,21,nula,0
+86104,21,nula,0
+86267,21,no informativa,16
+87072,21,nula,0
+87116,21,nula,0
+90294,21,nula,0
+97596,21,nula,0
+100468,21,informativa,24
+100752,21,nula,0
+103432,21,no informativa,3
+103442,21,nula,0
+103504,21,nula,0
+104326,21,informativa,5
+105336,21,nula,0
+108101,21,nula,0
+111961,21,nula,0
+112433,21,no informativa,3
+115899,21,no informativa,5
+119481,21,nula,0
+121499,21,no informativa,4
+127698,21,no informativa,3
+130182,21,informativa,5
+131657,21,no informativa,10
+134107,21,nula,0
+135162,21,nula,0
+135774,21,nula,0
+137277,21,nula,0
+139023,21,no informativa,5
+139914,21,no informativa,15
+143793,21,nula,0
+143958,21,nula,0
+144385,21,no informativa,2
+148535,21,nula,0
+154897,21,nula,0
+159854,21,informativa,69
+162452,21,no informativa,4
+163496,21,nula,0
+163507,21,nula,0
+171566,21,no informativa,4
+183099,21,nula,0
+183242,21,no informativa,5
+186378,21,nula,0
+186533,21,no informativa,3
+190714,21,nula,0
+190881,21,nula,0
+190911,21,no informativa,4
+192832,21,informativa,3
+194746,21,nula,0
+198549,21,nula,0
+198762,21,informativa,5
+198999,21,informativa,3
+202813,21,nula,0
+207311,21,nula,0
+210286,21,no informativa,4
+213088,21,nula,0
+214108,21,nula,0
+216287,21,nula,0
+217130,21,nula,0
+217198,21,nula,0
+217201,21,no informativa,7
+217416,21,nula,0
+219048,21,no informativa,13
+221450,21,nula,0
+221584,21,no informativa,2
+229323,21,no informativa,3
+231136,21,no informativa,10
+234466,21,no informativa,2
+236487,21,nula,0
+236887,21,nula,0
+239676,21,no informativa,11
+240680,21,informativa,9
+240900,21,nula,0
+242702,21,nula,0
+246519,21,no informativa,3
+248836,21,no informativa,9
+250326,21,nula,0
+252191,21,no informativa,3
+253031,21,nula,0
+254476,21,no informativa,2
+262418,21,nula,0
+270173,21,nula,0
+270187,21,nula,0
+274263,21,nula,0
+276992,21,nula,0
+279550,21,no informativa,2
+279656,21,nula,0
+280288,21,nula,0
+280640,21,nula,0
+282597,21,nula,0
+284865,21,no informativa,19
+287954,21,nula,0
+292503,21,no informativa,11
+298116,21,no informativa,8
+303649,21,nula,0
+304902,21,informativa,1666
+305018,21,nula,0
+305298,21,nula,0
+311164,21,no informativa,4
+314823,21,no informativa,14
+317051,21,nula,0
+317924,21,nula,0
+320803,21,informativa,10
+323953,21,no informativa,6
+325877,21,no informativa,3
+327984,21,nula,0
+330800,21,no informativa,5
+334426,21,nula,0
+335521,21,nula,0
+337690,21,nula,0
+338701,21,no informativa,4
+340598,21,nula,0
+342677,21,nula,0
+344114,21,nula,0
+346252,21,nula,0
+349040,21,informativa,16
+351026,21,nula,0
+355797,21,nula,0
+358071,21,nula,0
+359255,21,nula,0
+359742,21,nula,0
+361237,21,nula,0
+364155,21,no informativa,6
+364764,21,nula,0
+364953,21,no informativa,7
+366165,21,nula,0
+366834,21,nula,0
+366987,21,nula,0
+368913,21,no informativa,2
+369129,21,nula,0
+373415,21,nula,0
+375127,21,informativa,19
+377252,21,nula,0
+385452,21,nula,0
+386648,21,nula,0
+389399,21,no informativa,7
+390042,21,nula,0
+391029,21,nula,0
+394054,21,nula,0
+394535,21,nula,0
+394550,21,nula,0
+400147,21,informativa,3
+402519,21,nula,0
+404820,21,nula,0
+407578,21,nula,0
+407993,21,nula,0
+408989,21,nula,0
+411353,21,nula,0
+414141,21,no informativa,6
+416570,21,no informativa,11
+421113,21,no informativa,4
+422532,21,nula,0
+424157,21,nula,0
+424195,21,informativa,32
+425128,21,nula,0
+426811,21,nula,0
+430381,21,no informativa,20
+431224,21,nula,0
+431800,21,nula,0
+437556,21,nula,0
+438878,21,nula,0
+445193,21,nula,0
+447308,21,nula,0
+450953,21,no informativa,148
+451521,21,nula,0
+453033,21,no informativa,11
+453218,21,no informativa,11
+454799,21,nula,0
+457768,21,nula,0
+458137,21,no informativa,3
+459617,21,no informativa,6
+459940,21,nula,0
+464295,21,nula,0
+467838,21,informativa,5
+469618,21,no informativa,6
+469940,21,no informativa,353
+473144,21,nula,0
+475290,21,no informativa,44
+481456,21,no informativa,9
+482604,21,nula,0
+485496,21,nula,0
+487095,21,no informativa,5
+489392,21,nula,0
+491930,21,nula,0
+495765,21,nula,0
+496265,21,nula,0
+504054,21,nula,0
+505460,21,nula,0
+506133,21,no informativa,19
+508580,21,nula,0
+512434,21,nula,0
+518224,21,informativa,27
+518467,21,nula,0
+518685,21,informativa,90
+519619,21,no informativa,3
+521836,21,nula,0
+524465,21,nula,0
+526533,21,nula,0
+527369,21,no informativa,3
+536429,21,no informativa,8
+536512,21,nula,0
+541152,21,nula,0
+544981,21,no informativa,4
+545053,21,no informativa,5
+547413,21,no informativa,6
+547639,21,nula,0
+548518,21,no informativa,4
+550058,21,nula,0
+550685,21,nula,0
+556119,21,nula,0
+560558,21,no informativa,3
+561248,21,no informativa,10
+562809,21,nula,0
+566414,21,nula,0
+567598,21,nula,0
+574176,21,nula,0
+580598,21,nula,0
+585654,21,nula,0
+586286,21,no informativa,17
+586521,21,nula,0
+591075,21,no informativa,5
+591708,21,nula,0
+592154,21,nula,0
+592313,21,nula,0
+596738,21,nula,0
+601254,21,nula,0
+603538,21,no informativa,2
+606509,21,no informativa,3
+608649,21,no informativa,6
+614391,21,nula,0
+619005,21,no informativa,4
+620683,21,nula,0
+621308,21,informativa,5
+625426,21,nula,0
+632568,21,nula,0
+633800,21,nula,0
+634744,21,no informativa,3
+634949,21,nula,0
+641908,21,no informativa,2
+643774,21,nula,0
+647090,21,informativa,7
+647364,21,no informativa,4
+647473,21,no informativa,3
+649958,21,nula,0
+655357,21,nula,0
+661733,21,no informativa,4
+664418,21,no informativa,3
+669261,21,nula,0
+669672,21,no informativa,2
+673030,21,informativa,39
+673549,21,no informativa,2
+678154,21,nula,0
+680970,21,nula,0
+688095,21,nula,0
+690124,21,no informativa,4
+691302,21,informativa,7
+693173,21,nula,0
+697645,21,nula,0
+699923,21,nula,0
+700380,21,nula,0
+702535,21,no informativa,3
+702778,21,nula,0
+704060,21,no informativa,6
+704389,21,nula,0
+705943,21,no informativa,3
+707627,21,nula,0
+707833,21,nula,0
+708370,21,no informativa,33
+709513,21,nula,0
+710089,21,nula,0
+712706,21,nula,0
+713089,21,no informativa,2
+720555,21,nula,0
+721444,21,nula,0
+723017,21,nula,0
+723434,21,informativa,58
+724241,21,nula,0
+726759,21,no informativa,5
+727245,21,no informativa,2
+727394,21,no informativa,2
+727855,21,no informativa,2
+730696,21,nula,0
+735415,21,nula,0
+735809,21,nula,0
+737010,21,no informativa,29
+739768,21,nula,0
+741586,21,no informativa,2
+745569,21,nula,0
+746054,21,no informativa,9
+750665,21,no informativa,9
+751879,21,nula,0
+752848,21,nula,0
+760368,21,no informativa,3
+761268,21,informativa,17
+763485,21,nula,0
+763572,21,no informativa,22
+767643,21,nula,0
+768008,21,no informativa,10
+768204,21,nula,0
+768323,21,no informativa,6
+769883,21,nula,0
+770863,21,nula,0
+777798,21,nula,0
+777824,21,informativa,845
+779471,21,nula,0
+780613,21,nula,0
+782162,21,nula,0
+786537,21,no informativa,3
+787738,21,no informativa,2
+787787,21,nula,0
+788834,21,nula,0
+792965,21,nula,0
+794904,21,nula,0
+795329,21,nula,0
+797298,21,informativa,41
+798300,21,no informativa,4
+802590,21,nula,0
+803270,21,nula,0
+803530,21,nula,0
+804159,21,nula,0
+806260,21,informativa,6
+808661,21,no informativa,8
+813653,21,informativa,6
+818322,21,nula,0
+818596,21,nula,0
+823142,21,nula,0
+825163,21,nula,0
+827002,21,no informativa,4
+827998,21,nula,0
+830751,21,nula,0
+26546,22,nula,0
+37620,22,no informativa,842
+52539,22,no informativa,7
+66168,22,nula,0
+76665,22,nula,0
+85238,22,nula,0
+103107,22,nula,0
+114853,22,no informativa,30
+133701,22,no informativa,4
+175165,22,no informativa,76
+176420,22,nula,0
+184483,22,nula,0
+198549,22,nula,0
+219944,22,no informativa,2
+238214,22,no informativa,2
+263086,22,no informativa,7
+284123,22,no informativa,3
+307984,22,nula,0
+355292,22,informativa,6
+378303,22,no informativa,6
+379442,22,no informativa,11
+398469,22,nula,0
+449608,22,no informativa,4
+480561,22,nula,0
+492982,22,informativa,1626
+494598,22,nula,0
+504870,22,nula,0
+511468,22,no informativa,7
+522992,22,no informativa,3
+535788,22,nula,0
+541378,22,no informativa,14
+549583,22,no informativa,7
+577272,22,nula,0
+582507,22,informativa,16
+586286,22,no informativa,17
+586815,22,no informativa,5
+628887,22,nula,0
+662978,22,nula,0
+671391,22,no informativa,18
+675695,22,nula,0
+678398,22,nula,0
+681912,22,no informativa,51
+692331,22,no informativa,2
+699923,22,nula,0
+723592,22,no informativa,2
+739074,22,nula,0
+770863,22,nula,0
+774705,22,nula,0
+789235,22,nula,0
+37132,23,no informativa,2
+37620,23,no informativa,842
+47518,23,nula,0
+50265,23,no informativa,7
+58589,23,nula,0
+58803,23,nula,0
+61622,23,no informativa,3
+70910,23,nula,0
+82720,23,nula,0
+85881,23,no informativa,3
+95441,23,nula,0
+104356,23,nula,0
+120764,23,nula,0
+123815,23,no informativa,9
+129153,23,nula,0
+146370,23,no informativa,6
+179295,23,nula,0
+215677,23,nula,0
+216681,23,nula,0
+223630,23,nula,0
+228724,23,nula,0
+246871,23,nula,0
+250009,23,nula,0
+254476,23,no informativa,2
+254653,23,nula,0
+271137,23,no informativa,4
+296953,23,nula,0
+298598,23,nula,0
+308589,23,nula,0
+316198,23,no informativa,13
+321688,23,no informativa,2
+323086,23,no informativa,3
+323359,23,nula,0
+331119,23,nula,0
+334426,23,nula,0
+341261,23,nula,0
+348994,23,nula,0
+351873,23,nula,0
+354822,23,nula,0
+356240,23,nula,0
+356418,23,nula,0
+367893,23,nula,0
+368533,23,nula,0
+374323,23,nula,0
+376535,23,nula,0
+378048,23,nula,0
+384023,23,nula,0
+391870,23,nula,0
+393356,23,nula,0
+401431,23,nula,0
+406533,23,nula,0
+416390,23,nula,0
+420906,23,no informativa,5
+430947,23,nula,0
+436497,23,no informativa,54
+439110,23,nula,0
+461413,23,no informativa,3
+471787,23,nula,0
+478029,23,no informativa,6
+484229,23,nula,0
+486596,23,no informativa,6
+488129,23,nula,0
+492847,23,nula,0
+501237,23,nula,0
+502611,23,nula,0
+502987,23,nula,0
+503421,23,nula,0
+503918,23,no informativa,2
+511468,23,no informativa,7
+513192,23,no informativa,17
+525671,23,nula,0
+532573,23,no informativa,6
+534287,23,nula,0
+536102,23,nula,0
+540340,23,nula,0
+543551,23,nula,0
+547262,23,nula,0
+548724,23,no informativa,23
+550836,23,nula,0
+554746,23,no informativa,3
+563185,23,nula,0
+565012,23,nula,0
+566276,23,nula,0
+568713,23,nula,0
+569175,23,nula,0
+572772,23,nula,0
+586128,23,nula,0
+586286,23,informativa,17
+594581,23,nula,0
+594965,23,no informativa,6
+620998,23,no informativa,6
+625927,23,nula,0
+626650,23,nula,0
+627094,23,nula,0
+632935,23,nula,0
+636204,23,nula,0
+645377,23,nula,0
+645602,23,nula,0
+658353,23,no informativa,412
+659271,23,nula,0
+659808,23,no informativa,4
+660615,23,no informativa,2
+661318,23,no informativa,13
+667758,23,nula,0
+670182,23,nula,0
+673599,23,nula,0
+684605,23,no informativa,15
+697516,23,no informativa,3
+699923,23,nula,0
+701517,23,no informativa,11
+709212,23,no informativa,68
+712706,23,nula,0
+721940,23,no informativa,2
+726671,23,no informativa,31
+738739,23,no informativa,27
+782392,23,nula,0
+786200,23,nula,0
+799974,23,nula,0
+804264,23,no informativa,5
+805915,23,nula,0
+820763,23,nula,0
+822140,23,nula,0
+822556,23,no informativa,14
+3990,25,nula,0
+35663,25,nula,0
+41901,25,nula,0
+51445,25,no informativa,4
+68740,25,nula,0
+71685,25,nula,0
+72799,25,no informativa,513
+75801,25,nula,0
+80777,25,nula,0
+87563,25,no informativa,49
+95951,25,nula,0
+108295,25,nula,0
+113187,25,no informativa,6
+118107,25,nula,0
+136775,25,nula,0
+146370,25,no informativa,6
+146568,25,no informativa,4
+146677,25,no informativa,5
+153563,25,nula,0
+153824,25,nula,0
+158137,25,no informativa,7
+183334,25,nula,0
+186533,25,no informativa,3
+194746,25,nula,0
+210396,25,no informativa,6
+217198,25,nula,0
+219307,25,nula,0
+219944,25,no informativa,2
+228511,25,nula,0
+249527,25,nula,0
+254476,25,no informativa,2
+273882,25,nula,0
+276542,25,nula,0
+308608,25,nula,0
+313215,25,nula,0
+329786,25,informativa,5
+347198,25,no informativa,12
+347452,25,no informativa,13
+350885,25,nula,0
+362100,25,no informativa,18
+364783,25,no informativa,23
+368357,25,no informativa,4
+378303,25,no informativa,6
+390326,25,informativa,81
+391470,25,no informativa,355
+402519,25,nula,0
+403988,25,nula,0
+410272,25,informativa,60
+410274,25,nula,0
+421276,25,nula,0
+430381,25,no informativa,20
+439679,25,no informativa,7
+448635,25,no informativa,12
+453218,25,no informativa,11
+453648,25,no informativa,1318
+481080,25,nula,0
+494312,25,nula,0
+496697,25,nula,0
+503918,25,no informativa,2
+505460,25,nula,0
+510737,25,no informativa,17
+514874,25,informativa,1458
+517185,25,no informativa,2
+519797,25,nula,0
+523628,25,nula,0
+532573,25,no informativa,6
+532839,25,nula,0
+540809,25,nula,0
+544626,25,no informativa,17
+544632,25,no informativa,4
+547262,25,nula,0
+552114,25,nula,0
+560558,25,no informativa,3
+561248,25,informativa,10
+585801,25,no informativa,3
+615429,25,no informativa,4
+625051,25,nula,0
+633214,25,nula,0
+633859,25,nula,0
+635850,25,nula,0
+644520,25,nula,0
+658353,25,no informativa,412
+679715,25,informativa,99
+679849,25,no informativa,3
+690831,25,nula,0
+696346,25,nula,0
+696991,25,nula,0
+697645,25,nula,0
+701425,25,nula,0
+702284,25,nula,0
+710800,25,no informativa,9
+711567,25,nula,0
+712706,25,nula,0
+720854,25,nula,0
+735809,25,nula,0
+737142,25,nula,0
+738739,25,no informativa,27
+749987,25,no informativa,14
+757583,25,nula,0
+770404,25,no informativa,19
+772068,25,nula,0
+772485,25,nula,0
+782392,25,nula,0
+788834,25,nula,0
+827002,25,no informativa,4
+793,26,nula,0
+955,26,nula,0
+1650,26,nula,0
+2428,26,nula,0
+5134,26,nula,0
+5534,26,no informativa,2
+6000,26,nula,0
+6087,26,nula,0
+6120,26,nula,0
+6610,26,no informativa,3
+7033,26,no informativa,7
+9090,26,nula,0
+10050,26,no informativa,2
+10310,26,no informativa,2
+10781,26,no informativa,355
+10992,26,no informativa,2
+11273,26,no informativa,3
+12394,26,no informativa,2
+12446,26,nula,0
+12757,26,nula,0
+14250,26,nula,0
+14333,26,no informativa,3
+15627,26,nula,0
+18017,26,nula,0
+18781,26,nula,0
+22311,26,nula,0
+24538,26,no informativa,3
+25062,26,nula,0
+25324,26,nula,0
+25537,26,nula,0
+26818,26,no informativa,2
+27980,26,nula,0
+29815,26,nula,0
+30524,26,nula,0
+31462,26,nula,0
+31840,26,nula,0
+31943,26,no informativa,6
+32630,26,no informativa,5
+32810,26,nula,0
+33082,26,nula,0
+33203,26,nula,0
+33600,26,nula,0
+33879,26,informativa,12
+35599,26,no informativa,2
+37579,26,nula,0
+39830,26,no informativa,2
+40393,26,nula,0
+41005,26,nula,0
+41010,26,no informativa,7
+41197,26,nula,0
+42256,26,nula,0
+42824,26,nula,0
+44144,26,informativa,8
+44551,26,nula,0
+45826,26,no informativa,4
+46770,26,nula,0
+46854,26,nula,0
+47057,26,nula,0
+47246,26,nula,0
+47472,26,no informativa,2
+49081,26,nula,0
+49260,26,nula,0
+49968,26,nula,0
+51333,26,nula,0
+51503,26,nula,0
+52852,26,no informativa,2
+53347,26,nula,0
+54578,26,nula,0
+54998,26,nula,0
+57246,26,nula,0
+59232,26,nula,0
+59511,26,nula,0
+60607,26,no informativa,3
+61066,26,nula,0
+61223,26,nula,0
+61920,26,nula,0
+65223,26,nula,0
+65470,26,no informativa,2
+67564,26,nula,0
+68371,26,no informativa,8
+68868,26,no informativa,28
+69448,26,nula,0
+69590,26,no informativa,2
+71645,26,no informativa,14
+72616,26,nula,0
+72681,26,nula,0
+73326,26,no informativa,4
+76429,26,nula,0
+77685,26,nula,0
+78854,26,nula,0
+80047,26,nula,0
+80627,26,nula,0
+81787,26,nula,0
+82800,26,nula,0
+82858,26,no informativa,8
+84319,26,nula,0
+84504,26,nula,0
+84921,26,nula,0
+85765,26,nula,0
+86123,26,nula,0
+86140,26,nula,0
+87288,26,nula,0
+87563,26,informativa,49
+88908,26,no informativa,5
+90331,26,no informativa,14
+90560,26,nula,0
+91232,26,nula,0
+92002,26,no informativa,8
+92872,26,nula,0
+92991,26,nula,0
+94089,26,no informativa,15
+94845,26,nula,0
+95167,26,nula,0
+95674,26,no informativa,5
+96276,26,nula,0
+96715,26,nula,0
+99234,26,nula,0
+99851,26,no informativa,4
+100263,26,nula,0
+102374,26,no informativa,3
+104279,26,nula,0
+105652,26,no informativa,6
+106979,26,nula,0
+108222,26,nula,0
+108778,26,nula,0
+113187,26,no informativa,6
+113288,26,nula,0
+114139,26,nula,0
+114567,26,no informativa,2
+115381,26,no informativa,375
+115617,26,nula,0
+115646,26,nula,0
+116505,26,nula,0
+118894,26,nula,0
+118983,26,nula,0
+119552,26,no informativa,2
+120798,26,nula,0
+121092,26,nula,0
+123988,26,no informativa,7
+124211,26,nula,0
+124995,26,nula,0
+125774,26,no informativa,3
+127067,26,nula,0
+127086,26,nula,0
+127916,26,nula,0
+128831,26,no informativa,2
+129727,26,nula,0
+134842,26,nula,0
+135182,26,nula,0
+135200,26,no informativa,8
+135562,26,nula,0
+135783,26,nula,0
+136619,26,nula,0
+136765,26,nula,0
+137166,26,no informativa,6
+138792,26,no informativa,3
+139191,26,no informativa,5
+139647,26,nula,0
+139756,26,no informativa,3
+139884,26,nula,0
+140052,26,nula,0
+141224,26,nula,0
+141503,26,nula,0
+143286,26,nula,0
+143383,26,nula,0
+144148,26,nula,0
+146892,26,nula,0
+148547,26,nula,0
+149662,26,nula,0
+150268,26,nula,0
+151903,26,nula,0
+153520,26,no informativa,7
+154328,26,no informativa,13
+154395,26,nula,0
+155359,26,nula,0
+155470,26,nula,0
+155590,26,nula,0
+155812,26,nula,0
+156123,26,nula,0
+159159,26,nula,0
+159486,26,nula,0
+160970,26,nula,0
+162207,26,nula,0
+163643,26,nula,0
+163766,26,no informativa,4
+164985,26,nula,0
+165090,26,nula,0
+166587,26,nula,0
+169687,26,no informativa,8
+170859,26,nula,0
+171726,26,nula,0
+172010,26,nula,0
+172094,26,nula,0
+172653,26,no informativa,2
+173051,26,nula,0
+175175,26,no informativa,5
+175228,26,no informativa,7
+175317,26,no informativa,2
+177432,26,nula,0
+179081,26,nula,0
+181126,26,nula,0
+181394,26,nula,0
+181506,26,nula,0
+182342,26,no informativa,6
+182612,26,nula,0
+184190,26,nula,0
+184906,26,nula,0
+185014,26,no informativa,21
+185156,26,nula,0
+185387,26,nula,0
+186144,26,nula,0
+186261,26,no informativa,4
+186533,26,no informativa,3
+188423,26,nula,0
+188900,26,nula,0
+190903,26,no informativa,2
+191377,26,nula,0
+194212,26,no informativa,4
+194669,26,nula,0
+194959,26,nula,0
+195959,26,nula,0
+196141,26,nula,0
+196788,26,nula,0
+198769,26,no informativa,3
+198809,26,nula,0
+200967,26,informativa,23
+201513,26,nula,0
+201633,26,nula,0
+201765,26,nula,0
+202024,26,nula,0
+202629,26,nula,0
+202858,26,no informativa,3
+203383,26,no informativa,6
+206171,26,nula,0
+206705,26,nula,0
+208202,26,nula,0
+208266,26,no informativa,10
+209306,26,nula,0
+209502,26,no informativa,10
+209808,26,no informativa,9
+210186,26,nula,0
+210855,26,no informativa,3
+212662,26,nula,0
+214645,26,nula,0
+215139,26,nula,0
+216149,26,nula,0
+216842,26,nula,0
+217671,26,no informativa,8
+217684,26,nula,0
+218205,26,nula,0
+219839,26,nula,0
+219967,26,nula,0
+220114,26,no informativa,3
+220115,26,nula,0
+221207,26,no informativa,2
+223739,26,nula,0
+223799,26,nula,0
+224047,26,no informativa,3
+224629,26,nula,0
+225103,26,no informativa,10
+225141,26,no informativa,5
+225734,26,nula,0
+226824,26,nula,0
+227526,26,no informativa,68
+228620,26,nula,0
+229132,26,no informativa,3
+230760,26,nula,0
+231660,26,nula,0
+232724,26,nula,0
+233145,26,no informativa,3
+236381,26,nula,0
+239211,26,nula,0
+240605,26,nula,0
+240772,26,no informativa,4
+240867,26,nula,0
+241312,26,nula,0
+242618,26,nula,0
+243310,26,nula,0
+243434,26,nula,0
+244060,26,nula,0
+244529,26,no informativa,19
+244878,26,nula,0
+245784,26,no informativa,2
+246668,26,nula,0
+246814,26,nula,0
+247587,26,nula,0
+248157,26,nula,0
+248482,26,nula,0
+249624,26,nula,0
+250696,26,nula,0
+250946,26,no informativa,2
+252049,26,nula,0
+252066,26,no informativa,13
+253247,26,nula,0
+255076,26,nula,0
+255626,26,nula,0
+256759,26,nula,0
+257525,26,nula,0
+257538,26,no informativa,7
+257923,26,nula,0
+258251,26,nula,0
+258703,26,nula,0
+258731,26,no informativa,2
+260861,26,nula,0
+260878,26,nula,0
+261657,26,no informativa,2
+262206,26,no informativa,2
+263349,26,nula,0
+264710,26,no informativa,13
+264743,26,nula,0
+266998,26,no informativa,2
+267062,26,nula,0
+267086,26,nula,0
+267199,26,no informativa,3
+267414,26,nula,0
+268626,26,nula,0
+269908,26,nula,0
+270612,26,no informativa,4
+271372,26,nula,0
+271658,26,nula,0
+272100,26,nula,0
+272335,26,nula,0
+273466,26,nula,0
+274174,26,nula,0
+274312,26,nula,0
+274679,26,nula,0
+275489,26,nula,0
+276398,26,nula,0
+276522,26,no informativa,7
+277337,26,nula,0
+277859,26,nula,0
+278528,26,nula,0
+279457,26,nula,0
+279550,26,no informativa,2
+282175,26,nula,0
+282448,26,nula,0
+282584,26,nula,0
+283039,26,nula,0
+283237,26,nula,0
+283861,26,nula,0
+284331,26,nula,0
+285418,26,no informativa,3
+286728,26,nula,0
+286868,26,nula,0
+287750,26,nula,0
+287958,26,nula,0
+288377,26,no informativa,355
+289345,26,nula,0
+289619,26,no informativa,6
+289787,26,nula,0
+290923,26,nula,0
+292046,26,nula,0
+292939,26,nula,0
+293005,26,nula,0
+293100,26,nula,0
+293228,26,nula,0
+293552,26,nula,0
+294747,26,no informativa,4
+295524,26,nula,0
+299596,26,nula,0
+302069,26,nula,0
+303272,26,no informativa,3
+304812,26,nula,0
+305553,26,nula,0
+306199,26,nula,0
+308658,26,nula,0
+309685,26,nula,0
+310504,26,nula,0
+310939,26,nula,0
+312237,26,nula,0
+313720,26,nula,0
+313781,26,no informativa,2
+313864,26,nula,0
+313907,26,no informativa,9
+314379,26,nula,0
+314823,26,no informativa,14
+315669,26,no informativa,2
+316045,26,nula,0
+316924,26,no informativa,5
+318092,26,nula,0
+319485,26,nula,0
+322412,26,no informativa,3
+322438,26,no informativa,2
+322561,26,nula,0
+323044,26,nula,0
+323124,26,nula,0
+324935,26,no informativa,2
+327510,26,nula,0
+327543,26,nula,0
+327852,26,no informativa,6
+327867,26,nula,0
+328439,26,no informativa,5
+329099,26,nula,0
+329260,26,nula,0
+329571,26,nula,0
+329650,26,nula,0
+330032,26,no informativa,9
+330412,26,nula,0
+330814,26,nula,0
+331935,26,no informativa,6
+332656,26,nula,0
+334327,26,nula,0
+335757,26,nula,0
+335778,26,nula,0
+335848,26,no informativa,12
+340026,26,nula,0
+340232,26,informativa,24
+341674,26,nula,0
+341940,26,nula,0
+343003,26,nula,0
+343584,26,nula,0
+344364,26,nula,0
+345487,26,no informativa,3
+346603,26,no informativa,7
+347120,26,no informativa,4
+347997,26,nula,0
+349408,26,nula,0
+349607,26,no informativa,4
+349740,26,nula,0
+350619,26,nula,0
+350886,26,nula,0
+351715,26,nula,0
+352812,26,nula,0
+353980,26,no informativa,4
+354396,26,no informativa,2
+357235,26,no informativa,3
+357473,26,nula,0
+358161,26,nula,0
+358284,26,nula,0
+358395,26,nula,0
+359850,26,nula,0
+362230,26,nula,0
+363525,26,no informativa,2
+364845,26,nula,0
+365065,26,nula,0
+366993,26,no informativa,9
+368057,26,nula,0
+368266,26,nula,0
+370573,26,nula,0
+370578,26,no informativa,2
+371259,26,nula,0
+371468,26,nula,0
+371554,26,nula,0
+373345,26,nula,0
+373377,26,no informativa,3
+373744,26,no informativa,5
+373762,26,no informativa,6
+373843,26,no informativa,5
+375877,26,nula,0
+376065,26,nula,0
+376840,26,nula,0
+378902,26,no informativa,2
+379220,26,nula,0
+379753,26,nula,0
+379927,26,no informativa,3
+380865,26,nula,0
+380948,26,no informativa,2
+381186,26,nula,0
+381201,26,nula,0
+381395,26,nula,0
+381592,26,nula,0
+381957,26,nula,0
+382260,26,no informativa,3
+382630,26,no informativa,2
+383017,26,no informativa,2
+383581,26,no informativa,5
+384721,26,nula,0
+385060,26,nula,0
+385552,26,nula,0
+387176,26,no informativa,2
+387454,26,nula,0
+391351,26,nula,0
+392702,26,nula,0
+393356,26,nula,0
+394389,26,nula,0
+394465,26,nula,0
+394843,26,no informativa,51
+396537,26,nula,0
+398903,26,nula,0
+399262,26,no informativa,5
+399437,26,no informativa,3
+400828,26,nula,0
+402020,26,nula,0
+402970,26,nula,0
+403452,26,nula,0
+403572,26,nula,0
+403771,26,no informativa,2
+404617,26,no informativa,5
+405356,26,nula,0
+406055,26,nula,0
+407232,26,no informativa,8
+408168,26,no informativa,14
+408765,26,nula,0
+409377,26,nula,0
+410604,26,nula,0
+410914,26,nula,0
+410973,26,nula,0
+411161,26,no informativa,2
+413334,26,nula,0
+414161,26,nula,0
+414554,26,no informativa,6
+414801,26,nula,0
+415011,26,nula,0
+416223,26,nula,0
+416314,26,nula,0
+419895,26,nula,0
+421027,26,nula,0
+422764,26,nula,0
+423037,26,nula,0
+423533,26,nula,0
+423575,26,nula,0
+423827,26,nula,0
+425537,26,nula,0
+426049,26,nula,0
+426594,26,nula,0
+427194,26,nula,0
+427641,26,nula,0
+427723,26,no informativa,3
+430236,26,nula,0
+430595,26,nula,0
+430943,26,nula,0
+431864,26,nula,0
+433686,26,nula,0
+433824,26,nula,0
+435989,26,nula,0
+436706,26,nula,0
+436818,26,nula,0
+436989,26,nula,0
+437115,26,no informativa,6
+437769,26,nula,0
+439661,26,nula,0
+440429,26,no informativa,3
+441172,26,no informativa,2
+441182,26,nula,0
+441808,26,nula,0
+441866,26,nula,0
+443328,26,no informativa,2
+443677,26,nula,0
+445426,26,nula,0
+446170,26,no informativa,7
+446575,26,nula,0
+448340,26,nula,0
+448357,26,nula,0
+448406,26,nula,0
+448589,26,no informativa,84
+449111,26,nula,0
+449979,26,nula,0
+450042,26,no informativa,358
+451442,26,nula,0
+451584,26,no informativa,5
+451642,26,no informativa,2
+452106,26,nula,0
+452234,26,nula,0
+453631,26,no informativa,11
+453881,26,no informativa,6
+453949,26,nula,0
+454713,26,nula,0
+455454,26,nula,0
+458879,26,nula,0
+458924,26,nula,0
+460161,26,nula,0
+461867,26,nula,0
+463987,26,nula,0
+464067,26,nula,0
+464182,26,no informativa,2
+464740,26,nula,0
+464770,26,nula,0
+467383,26,nula,0
+469039,26,nula,0
+470165,26,nula,0
+470307,26,nula,0
+471415,26,nula,0
+472768,26,no informativa,2
+474919,26,nula,0
+475167,26,nula,0
+476594,26,nula,0
+477016,26,nula,0
+477668,26,nula,0
+478060,26,nula,0
+478828,26,nula,0
+478967,26,nula,0
+480676,26,informativa,4
+481105,26,nula,0
+481405,26,nula,0
+482664,26,no informativa,6
+482807,26,nula,0
+483273,26,nula,0
+483313,26,nula,0
+483572,26,no informativa,2
+483615,26,nula,0
+484331,26,nula,0
+485200,26,nula,0
+485847,26,nula,0
+486001,26,no informativa,2
+486094,26,nula,0
+488951,26,nula,0
+491081,26,nula,0
+492740,26,nula,0
+492787,26,informativa,3
+492805,26,nula,0
+493469,26,no informativa,7
+494353,26,nula,0
+495788,26,nula,0
+496265,26,nula,0
+498271,26,nula,0
+503377,26,nula,0
+503745,26,nula,0
+504947,26,no informativa,376
+505370,26,nula,0
+507814,26,informativa,69
+509456,26,nula,0
+509594,26,nula,0
+509842,26,nula,0
+511103,26,nula,0
+511468,26,no informativa,7
+512530,26,nula,0
+512997,26,no informativa,853
+515665,26,no informativa,7
+515700,26,no informativa,14
+516161,26,nula,0
+517123,26,nula,0
+518433,26,no informativa,2
+518507,26,nula,0
+519134,26,nula,0
+520036,26,nula,0
+520944,26,nula,0
+521382,26,nula,0
+521722,26,nula,0
+522101,26,nula,0
+523385,26,nula,0
+524072,26,no informativa,3
+524421,26,nula,0
+526484,26,informativa,881
+526877,26,no informativa,5
+526906,26,nula,0
+528054,26,nula,0
+530771,26,nula,0
+532151,26,no informativa,2
+532521,26,no informativa,2
+532870,26,nula,0
+532924,26,nula,0
+533001,26,no informativa,2
+533841,26,nula,0
+536801,26,no informativa,7
+538174,26,nula,0
+539704,26,no informativa,4
+540884,26,nula,0
+543447,26,no informativa,4
+544210,26,no informativa,4
+544756,26,nula,0
+544928,26,nula,0
+545139,26,nula,0
+546076,26,nula,0
+546110,26,no informativa,2
+547687,26,nula,0
+549201,26,nula,0
+550776,26,nula,0
+554045,26,nula,0
+556814,26,nula,0
+556881,26,nula,0
+559159,26,nula,0
+559799,26,no informativa,3
+560015,26,no informativa,2
+561490,26,nula,0
+562021,26,nula,0
+563010,26,nula,0
+563186,26,informativa,4
+564484,26,no informativa,7
+564519,26,nula,0
+567209,26,nula,0
+567237,26,nula,0
+567920,26,no informativa,5
+571826,26,no informativa,3
+571899,26,nula,0
+572026,26,nula,0
+572757,26,nula,0
+573175,26,nula,0
+573220,26,nula,0
+573341,26,nula,0
+573345,26,nula,0
+574200,26,no informativa,5
+574424,26,no informativa,5
+575555,26,nula,0
+577921,26,nula,0
+578075,26,no informativa,5
+578678,26,nula,0
+579023,26,nula,0
+581014,26,nula,0
+581859,26,no informativa,15
+583520,26,nula,0
+583596,26,nula,0
+585372,26,nula,0
+586286,26,informativa,17
+587431,26,nula,0
+590782,26,nula,0
+592131,26,nula,0
+592319,26,nula,0
+593425,26,nula,0
+593714,26,nula,0
+594067,26,nula,0
+594556,26,no informativa,3
+594695,26,nula,0
+594790,26,nula,0
+594962,26,no informativa,5
+595563,26,no informativa,13
+596343,26,nula,0
+596976,26,nula,0
+598738,26,no informativa,2
+599057,26,no informativa,7
+600534,26,nula,0
+601426,26,no informativa,8
+602633,26,nula,0
+603045,26,nula,0
+604559,26,nula,0
+606168,26,nula,0
+606927,26,nula,0
+608601,26,no informativa,14
+608788,26,nula,0
+610371,26,no informativa,17
+611253,26,nula,0
+611347,26,nula,0
+611751,26,nula,0
+612153,26,nula,0
+612687,26,no informativa,2
+614638,26,nula,0
+617341,26,nula,0
+617493,26,no informativa,2
+617721,26,no informativa,8
+620416,26,no informativa,5
+620444,26,nula,0
+621119,26,no informativa,2
+621607,26,nula,0
+621725,26,no informativa,9
+623525,26,nula,0
+623821,26,nula,0
+623883,26,nula,0
+624739,26,nula,0
+625688,26,nula,0
+626363,26,informativa,21
+627012,26,nula,0
+627638,26,nula,0
+627738,26,no informativa,3
+629369,26,no informativa,6
+630002,26,nula,0
+631287,26,nula,0
+632069,26,nula,0
+633327,26,no informativa,9
+633735,26,no informativa,8
+634234,26,nula,0
+634913,26,nula,0
+635505,26,nula,0
+636218,26,nula,0
+636635,26,nula,0
+639233,26,nula,0
+640944,26,nula,0
+641147,26,no informativa,7
+646320,26,no informativa,4
+646862,26,nula,0
+646910,26,nula,0
+647110,26,no informativa,51
+648448,26,nula,0
+649984,26,nula,0
+650285,26,nula,0
+651012,26,nula,0
+652517,26,nula,0
+652984,26,nula,0
+653293,26,no informativa,4
+653574,26,no informativa,6
+653936,26,nula,0
+656902,26,nula,0
+658589,26,nula,0
+658893,26,nula,0
+661036,26,nula,0
+662382,26,nula,0
+662628,26,no informativa,7
+664022,26,nula,0
+664172,26,nula,0
+664762,26,no informativa,6
+665660,26,nula,0
+665844,26,nula,0
+666124,26,no informativa,834
+667078,26,nula,0
+667250,26,nula,0
+667887,26,no informativa,7
+668790,26,nula,0
+669431,26,nula,0
+669607,26,no informativa,19
+670597,26,nula,0
+671049,26,nula,0
+671659,26,nula,0
+671700,26,no informativa,2
+672170,26,informativa,6
+672934,26,nula,0
+673206,26,nula,0
+674834,26,no informativa,4
+676019,26,informativa,22
+677894,26,no informativa,2
+679215,26,no informativa,2
+682032,26,nula,0
+682416,26,no informativa,4
+682968,26,nula,0
+683703,26,no informativa,3
+684292,26,nula,0
+684351,26,nula,0
+685219,26,no informativa,3
+685615,26,nula,0
+686412,26,nula,0
+687022,26,nula,0
+687207,26,nula,0
+687762,26,nula,0
+687981,26,nula,0
+689566,26,nula,0
+690258,26,nula,0
+691600,26,nula,0
+692093,26,nula,0
+694176,26,nula,0
+694409,26,nula,0
+695103,26,nula,0
+695369,26,nula,0
+695598,26,nula,0
+696394,26,nula,0
+696757,26,no informativa,5
+699024,26,nula,0
+699107,26,no informativa,2
+699316,26,nula,0
+699965,26,nula,0
+700144,26,nula,0
+700176,26,nula,0
+701442,26,nula,0
+701725,26,nula,0
+701846,26,no informativa,9
+702505,26,no informativa,3
+703231,26,nula,0
+703340,26,nula,0
+703573,26,nula,0
+703689,26,nula,0
+704086,26,informativa,3
+704387,26,nula,0
+704601,26,nula,0
+704621,26,no informativa,6
+705943,26,no informativa,3
+707322,26,nula,0
+707445,26,no informativa,4
+709672,26,no informativa,2
+709905,26,no informativa,2
+709998,26,no informativa,2
+710345,26,no informativa,4
+712112,26,nula,0
+712236,26,no informativa,2
+712997,26,no informativa,2
+714215,26,nula,0
+714273,26,nula,0
+715717,26,nula,0
+716099,26,nula,0
+717137,26,no informativa,2
+719885,26,nula,0
+720312,26,no informativa,3
+720536,26,no informativa,2
+720667,26,nula,0
+720831,26,nula,0
+722435,26,nula,0
+725330,26,nula,0
+725832,26,nula,0
+728117,26,nula,0
+728917,26,nula,0
+729637,26,nula,0
+730706,26,nula,0
+732336,26,nula,0
+733038,26,nula,0
+733496,26,no informativa,25
+733558,26,nula,0
+733883,26,nula,0
+734002,26,nula,0
+734076,26,nula,0
+735552,26,no informativa,4
+736449,26,no informativa,22
+736607,26,nula,0
+737318,26,no informativa,3
+738369,26,no informativa,3
+740386,26,nula,0
+741664,26,nula,0
+742096,26,nula,0
+743339,26,nula,0
+743536,26,no informativa,6
+743608,26,nula,0
+743684,26,nula,0
+744715,26,no informativa,10
+746563,26,nula,0
+746875,26,no informativa,2
+747026,26,nula,0
+750673,26,nula,0
+750784,26,nula,0
+751031,26,nula,0
+751888,26,nula,0
+752044,26,no informativa,78
+752443,26,nula,0
+753643,26,no informativa,15
+753875,26,no informativa,2
+754026,26,nula,0
+755050,26,nula,0
+755621,26,no informativa,5
+756389,26,nula,0
+756673,26,nula,0
+756753,26,nula,0
+756987,26,no informativa,3
+757013,26,no informativa,8
+757194,26,no informativa,2
+757410,26,nula,0
+758570,26,no informativa,4
+759168,26,nula,0
+759252,26,no informativa,8
+759470,26,nula,0
+759533,26,nula,0
+761655,26,nula,0
+762410,26,no informativa,12
+762927,26,no informativa,15
+763989,26,nula,0
+764266,26,no informativa,3
+764838,26,no informativa,2
+768727,26,nula,0
+769192,26,nula,0
+769264,26,no informativa,15
+769824,26,nula,0
+769937,26,nula,0
+770501,26,nula,0
+770522,26,nula,0
+771507,26,nula,0
+771933,26,nula,0
+774385,26,nula,0
+774573,26,nula,0
+775269,26,nula,0
+776333,26,nula,0
+776699,26,nula,0
+776962,26,nula,0
+779250,26,nula,0
+779453,26,nula,0
+781708,26,nula,0
+783146,26,nula,0
+783192,26,nula,0
+784495,26,nula,0
+784496,26,nula,0
+785668,26,nula,0
+786757,26,nula,0
+787342,26,nula,0
+787496,26,nula,0
+789176,26,nula,0
+789180,26,nula,0
+789797,26,nula,0
+790828,26,nula,0
+790861,26,nula,0
+791621,26,nula,0
+792087,26,nula,0
+793324,26,nula,0
+794551,26,nula,0
+794611,26,nula,0
+795829,26,nula,0
+795884,26,nula,0
+795987,26,nula,0
+796157,26,nula,0
+796521,26,nula,0
+797718,26,nula,0
+800620,26,nula,0
+801985,26,nula,0
+802484,26,nula,0
+802572,26,nula,0
+803833,26,nula,0
+804246,26,nula,0
+804294,26,nula,0
+805915,26,nula,0
+806253,26,nula,0
+806423,26,nula,0
+807331,26,nula,0
+807650,26,nula,0
+807816,26,nula,0
+808645,26,nula,0
+809234,26,nula,0
+809442,26,nula,0
+811473,26,nula,0
+813324,26,nula,0
+813340,26,nula,0
+813631,26,nula,0
+814047,26,nula,0
+814078,26,nula,0
+814684,26,no informativa,162
+816319,26,no informativa,4
+817357,26,nula,0
+818101,26,nula,0
+819610,26,nula,0
+819642,26,nula,0
+821238,26,nula,0
+821818,26,nula,0
+822887,26,nula,0
+824166,26,nula,0
+824613,26,nula,0
+824724,26,nula,0
+825135,26,nula,0
+827002,26,no informativa,4
+827060,26,nula,0
+829242,26,nula,0
+830026,26,nula,0
+8158,28,nula,0
+69164,28,nula,0
+92187,28,nula,0
+120124,28,nula,0
+150573,28,nula,0
+186973,28,no informativa,19
+210757,28,informativa,27
+217130,28,nula,0
+220688,28,no informativa,6
+226612,28,informativa,1515
+229109,28,informativa,1411
+285311,28,informativa,9
+302562,28,nula,0
+303729,28,nula,0
+304902,28,informativa,1666
+399210,28,informativa,421
+421627,28,nula,0
+452027,28,nula,0
+481557,28,informativa,86
+502897,28,nula,0
+503918,28,no informativa,2
+508572,28,nula,0
+540809,28,nula,0
+566551,28,no informativa,14
+580730,28,no informativa,2
+589158,28,nula,0
+597174,28,nula,0
+609975,28,nula,0
+626387,28,no informativa,3
+633859,28,nula,0
+650835,28,nula,0
+684325,28,no informativa,3
+690124,28,no informativa,4
+690745,28,no informativa,5
+695416,28,no informativa,50
+701425,28,nula,0
+702778,28,nula,0
+726416,28,no informativa,8
+729936,28,nula,0
+732483,28,nula,0
+800395,28,nula,0
+800522,28,no informativa,11
+822605,28,nula,0
+351,3,nula,0
+1163,3,nula,0
+2487,3,nula,0
+2623,3,no informativa,3
+3142,3,nula,0
+3775,3,no informativa,6
+5008,3,nula,0
+5259,3,nula,0
+5442,3,nula,0
+6321,3,no informativa,4
+7907,3,nula,0
+8845,3,nula,0
+9074,3,nula,0
+9151,3,nula,0
+9644,3,nula,0
+10682,3,nula,0
+13071,3,nula,0
+13897,3,nula,0
+14487,3,no informativa,2
+14853,3,nula,0
+14875,3,no informativa,2
+15931,3,nula,0
+16964,3,nula,0
+17760,3,nula,0
+18182,3,nula,0
+18788,3,no informativa,2
+19424,3,nula,0
+19660,3,nula,0
+20288,3,no informativa,6
+20765,3,nula,0
+23037,3,nula,0
+23211,3,nula,0
+23450,3,nula,0
+23685,3,nula,0
+23789,3,nula,0
+24164,3,no informativa,13
+24472,3,no informativa,6
+25665,3,nula,0
+25718,3,nula,0
+25942,3,nula,0
+26190,3,nula,0
+26198,3,nula,0
+26377,3,no informativa,12
+26460,3,informativa,2
+26648,3,nula,0
+27101,3,nula,0
+27790,3,nula,0
+28253,3,no informativa,27
+28326,3,nula,0
+29443,3,no informativa,3
+30061,3,nula,0
+30151,3,nula,0
+30223,3,nula,0
+34780,3,no informativa,7
+35521,3,nula,0
+35659,3,nula,0
+35665,3,nula,0
+35979,3,nula,0
+36195,3,nula,0
+36664,3,informativa,12
+37063,3,nula,0
+37158,3,informativa,3
+37416,3,nula,0
+40048,3,nula,0
+40302,3,nula,0
+40458,3,no informativa,7
+41296,3,nula,0
+41428,3,nula,0
+43259,3,nula,0
+43302,3,no informativa,13
+43857,3,no informativa,11
+43949,3,nula,0
+44984,3,nula,0
+45153,3,nula,0
+46039,3,nula,0
+47118,3,nula,0
+47246,3,nula,0
+47302,3,nula,0
+48050,3,nula,0
+49380,3,nula,0
+49939,3,nula,0
+51673,3,no informativa,2
+51754,3,no informativa,7
+51918,3,informativa,5
+52568,3,no informativa,2
+54184,3,nula,0
+55202,3,nula,0
+58871,3,nula,0
+59631,3,informativa,2
+60130,3,informativa,6
+60886,3,no informativa,5
+61410,3,no informativa,14
+61897,3,no informativa,9
+61960,3,informativa,4
+62663,3,nula,0
+62907,3,nula,0
+63196,3,nula,0
+64850,3,nula,0
+65435,3,nula,0
+65537,3,nula,0
+66039,3,nula,0
+66826,3,nula,0
+66883,3,nula,0
+67897,3,nula,0
+67912,3,nula,0
+68120,3,nula,0
+68208,3,nula,0
+68245,3,nula,0
+68455,3,nula,0
+71319,3,nula,0
+73947,3,nula,0
+74661,3,nula,0
+75161,3,nula,0
+75167,3,informativa,9
+75554,3,no informativa,2
+75586,3,nula,0
+84505,3,nula,0
+84649,3,nula,0
+84909,3,no informativa,2
+84914,3,informativa,20
+85063,3,no informativa,5
+85099,3,nula,0
+88294,3,no informativa,4
+88826,3,nula,0
+90761,3,nula,0
+90889,3,nula,0
+90999,3,no informativa,4
+92707,3,nula,0
+92919,3,nula,0
+93586,3,nula,0
+93885,3,nula,0
+94679,3,no informativa,3
+95139,3,nula,0
+95533,3,nula,0
+96071,3,nula,0
+97757,3,nula,0
+99879,3,informativa,8
+102086,3,nula,0
+102485,3,no informativa,13
+103267,3,no informativa,2
+103581,3,nula,0
+106860,3,nula,0
+107147,3,nula,0
+108220,3,nula,0
+108990,3,no informativa,2
+109372,3,nula,0
+109529,3,informativa,12
+110371,3,nula,0
+110517,3,nula,0
+112442,3,no informativa,3
+112637,3,nula,0
+112991,3,nula,0
+113674,3,nula,0
+114641,3,nula,0
+115295,3,nula,0
+115879,3,nula,0
+117491,3,nula,0
+117765,3,nula,0
+119138,3,nula,0
+121293,3,nula,0
+122056,3,nula,0
+122589,3,nula,0
+124058,3,no informativa,2
+125501,3,nula,0
+126550,3,nula,0
+128776,3,nula,0
+128838,3,no informativa,5
+129213,3,no informativa,3
+131360,3,informativa,2
+131396,3,nula,0
+131580,3,nula,0
+132216,3,no informativa,3
+132658,3,no informativa,2
+132990,3,nula,0
+133283,3,nula,0
+134127,3,no informativa,9
+135296,3,informativa,14
+135926,3,no informativa,4
+137876,3,no informativa,5
+138937,3,nula,0
+139559,3,no informativa,2
+141320,3,nula,0
+141429,3,nula,0
+145981,3,no informativa,2
+146118,3,nula,0
+146434,3,nula,0
+151034,3,nula,0
+152048,3,nula,0
+152196,3,no informativa,2
+154101,3,no informativa,7
+154230,3,no informativa,3
+154431,3,nula,0
+155054,3,nula,0
+155171,3,nula,0
+155613,3,nula,0
+156111,3,no informativa,4
+157169,3,nula,0
+157398,3,informativa,8
+157642,3,no informativa,3
+157846,3,nula,0
+158510,3,nula,0
+159295,3,nula,0
+159881,3,no informativa,2
+160135,3,no informativa,2
+160704,3,nula,0
+161526,3,nula,0
+162574,3,nula,0
+163567,3,nula,0
+163912,3,nula,0
+163955,3,no informativa,2
+164329,3,nula,0
+165293,3,nula,0
+169549,3,no informativa,18
+172050,3,nula,0
+172157,3,nula,0
+173173,3,nula,0
+173332,3,informativa,2
+175721,3,nula,0
+177452,3,nula,0
+177956,3,nula,0
+178237,3,nula,0
+178322,3,no informativa,2
+179095,3,nula,0
+179266,3,nula,0
+180252,3,nula,0
+183117,3,no informativa,4
+184215,3,nula,0
+184637,3,nula,0
+184837,3,nula,0
+185018,3,nula,0
+188448,3,nula,0
+188511,3,nula,0
+190412,3,nula,0
+191018,3,nula,0
+191358,3,nula,0
+191477,3,nula,0
+191701,3,nula,0
+191785,3,nula,0
+192358,3,nula,0
+192557,3,no informativa,2
+194676,3,nula,0
+194758,3,nula,0
+194822,3,nula,0
+196656,3,nula,0
+196727,3,nula,0
+197081,3,nula,0
+198197,3,nula,0
+198611,3,no informativa,6
+199274,3,nula,0
+199904,3,nula,0
+201574,3,nula,0
+201957,3,nula,0
+204252,3,no informativa,2
+204322,3,no informativa,3
+205222,3,nula,0
+205229,3,nula,0
+205608,3,nula,0
+205794,3,nula,0
+208180,3,no informativa,22
+208583,3,no informativa,2
+209105,3,nula,0
+209310,3,nula,0
+209620,3,nula,0
+210023,3,nula,0
+211285,3,nula,0
+211578,3,no informativa,3
+212678,3,nula,0
+216359,3,nula,0
+217285,3,nula,0
+219450,3,nula,0
+222783,3,nula,0
+222792,3,no informativa,5
+223304,3,nula,0
+223844,3,nula,0
+223876,3,informativa,2
+224315,3,nula,0
+224672,3,no informativa,3
+225241,3,no informativa,7
+225960,3,no informativa,9
+226416,3,nula,0
+226572,3,no informativa,2
+226806,3,nula,0
+227573,3,nula,0
+228120,3,nula,0
+229426,3,nula,0
+230933,3,no informativa,354
+232702,3,no informativa,4
+232722,3,nula,0
+233410,3,nula,0
+233706,3,nula,0
+235221,3,nula,0
+236477,3,nula,0
+236678,3,nula,0
+236797,3,nula,0
+237691,3,no informativa,2
+238103,3,nula,0
+238126,3,no informativa,8
+238380,3,nula,0
+238544,3,nula,0
+239293,3,nula,0
+240725,3,nula,0
+242718,3,no informativa,2
+243292,3,nula,0
+245015,3,nula,0
+246667,3,nula,0
+247126,3,nula,0
+247691,3,no informativa,5
+248306,3,nula,0
+248483,3,nula,0
+248579,3,nula,0
+249294,3,nula,0
+252136,3,nula,0
+254469,3,nula,0
+254972,3,nula,0
+255958,3,nula,0
+257617,3,nula,0
+258418,3,nula,0
+259680,3,no informativa,4
+260155,3,nula,0
+260262,3,nula,0
+261226,3,nula,0
+263680,3,nula,0
+265435,3,no informativa,2
+267129,3,nula,0
+267163,3,nula,0
+267265,3,nula,0
+268044,3,no informativa,2
+268056,3,nula,0
+268408,3,nula,0
+268823,3,nula,0
+268912,3,no informativa,19
+269184,3,nula,0
+269472,3,nula,0
+269489,3,no informativa,3
+272025,3,informativa,11
+272727,3,no informativa,3
+273846,3,nula,0
+275021,3,no informativa,7
+276375,3,no informativa,2
+276480,3,nula,0
+276846,3,nula,0
+276866,3,nula,0
+277151,3,nula,0
+277750,3,nula,0
+277994,3,nula,0
+278671,3,nula,0
+280081,3,nula,0
+281760,3,no informativa,4
+281830,3,nula,0
+282452,3,nula,0
+283515,3,nula,0
+284466,3,nula,0
+284858,3,nula,0
+285241,3,nula,0
+285546,3,nula,0
+285969,3,nula,0
+286627,3,nula,0
+286747,3,no informativa,8
+288463,3,nula,0
+288691,3,nula,0
+289803,3,nula,0
+289947,3,nula,0
+290757,3,nula,0
+291022,3,informativa,6
+293339,3,nula,0
+294338,3,nula,0
+295085,3,nula,0
+295703,3,nula,0
+296532,3,no informativa,5
+296742,3,no informativa,3
+298174,3,no informativa,3
+298196,3,nula,0
+299309,3,nula,0
+299708,3,nula,0
+300234,3,nula,0
+300266,3,no informativa,2
+301887,3,nula,0
+302746,3,nula,0
+303527,3,nula,0
+304976,3,no informativa,2
+305007,3,nula,0
+305135,3,nula,0
+305845,3,nula,0
+306736,3,nula,0
+306745,3,informativa,2
+307562,3,no informativa,2
+307683,3,nula,0
+307879,3,nula,0
+310137,3,nula,0
+311397,3,nula,0
+312063,3,nula,0
+312968,3,nula,0
+312992,3,nula,0
+313616,3,nula,0
+314093,3,nula,0
+315553,3,no informativa,13
+315898,3,no informativa,9
+316066,3,nula,0
+317148,3,nula,0
+318583,3,no informativa,2
+319272,3,nula,0
+319428,3,nula,0
+320027,3,informativa,9
+321993,3,nula,0
+322141,3,nula,0
+322447,3,nula,0
+322779,3,nula,0
+322932,3,nula,0
+323114,3,nula,0
+323298,3,nula,0
+323484,3,no informativa,2
+323613,3,no informativa,2
+323742,3,nula,0
+324779,3,nula,0
+324984,3,nula,0
+324986,3,nula,0
+325124,3,nula,0
+325532,3,nula,0
+328665,3,nula,0
+331040,3,nula,0
+331046,3,nula,0
+334117,3,no informativa,2
+334829,3,nula,0
+334843,3,nula,0
+335830,3,nula,0
+336351,3,nula,0
+337123,3,nula,0
+338126,3,nula,0
+338144,3,nula,0
+338903,3,nula,0
+339874,3,nula,0
+340255,3,no informativa,3
+342621,3,nula,0
+343047,3,no informativa,6
+343060,3,no informativa,2
+343147,3,no informativa,3
+347379,3,nula,0
+347474,3,nula,0
+348285,3,no informativa,2
+349344,3,no informativa,2
+349448,3,nula,0
+349468,3,nula,0
+349540,3,nula,0
+350214,3,nula,0
+350767,3,informativa,12
+351863,3,nula,0
+352769,3,nula,0
+352786,3,nula,0
+353237,3,nula,0
+353633,3,no informativa,3
+354010,3,nula,0
+354486,3,nula,0
+354841,3,nula,0
+355821,3,nula,0
+356209,3,nula,0
+356556,3,nula,0
+358615,3,nula,0
+358880,3,no informativa,7
+360325,3,nula,0
+360353,3,nula,0
+361280,3,informativa,4
+361561,3,no informativa,5
+362463,3,no informativa,2
+364496,3,nula,0
+364581,3,no informativa,9
+364775,3,nula,0
+365502,3,nula,0
+365592,3,nula,0
+366852,3,no informativa,7
+367601,3,nula,0
+367640,3,nula,0
+369510,3,informativa,5
+371007,3,nula,0
+371220,3,nula,0
+374913,3,no informativa,2
+376358,3,nula,0
+376900,3,nula,0
+378361,3,nula,0
+378850,3,nula,0
+378953,3,nula,0
+379270,3,no informativa,9
+380065,3,nula,0
+380635,3,nula,0
+381321,3,nula,0
+381390,3,nula,0
+383639,3,no informativa,2
+383756,3,nula,0
+386504,3,nula,0
+386780,3,nula,0
+387667,3,no informativa,2
+388147,3,nula,0
+389885,3,nula,0
+390304,3,no informativa,3
+391706,3,no informativa,2
+392530,3,nula,0
+394109,3,nula,0
+394267,3,no informativa,2
+395127,3,no informativa,6
+397049,3,nula,0
+397519,3,nula,0
+397648,3,nula,0
+398072,3,nula,0
+398550,3,nula,0
+399719,3,nula,0
+400062,3,nula,0
+400787,3,no informativa,9
+402628,3,no informativa,6
+403372,3,nula,0
+404132,3,nula,0
+404160,3,nula,0
+404579,3,nula,0
+405290,3,nula,0
+405331,3,no informativa,3
+405683,3,no informativa,9
+407217,3,no informativa,3
+409049,3,no informativa,7
+409740,3,nula,0
+411561,3,nula,0
+412047,3,nula,0
+412096,3,nula,0
+412138,3,no informativa,5
+412518,3,nula,0
+412762,3,no informativa,3
+413302,3,informativa,2
+413455,3,nula,0
+414284,3,no informativa,8
+414975,3,nula,0
+415353,3,informativa,128
+418460,3,nula,0
+419061,3,nula,0
+419470,3,nula,0
+419767,3,nula,0
+420937,3,nula,0
+421631,3,nula,0
+423458,3,nula,0
+424694,3,nula,0
+427315,3,nula,0
+430400,3,nula,0
+430870,3,nula,0
+433660,3,no informativa,5
+436479,3,nula,0
+437566,3,no informativa,5
+438269,3,nula,0
+439773,3,nula,0
+440724,3,nula,0
+442759,3,nula,0
+442898,3,nula,0
+442946,3,nula,0
+443646,3,nula,0
+444031,3,no informativa,4
+444909,3,nula,0
+444977,3,nula,0
+447144,3,nula,0
+448849,3,no informativa,353
+450017,3,nula,0
+452888,3,nula,0
+453078,3,nula,0
+453362,3,no informativa,2
+453788,3,nula,0
+455632,3,no informativa,4
+455730,3,nula,0
+455764,3,informativa,5
+456085,3,nula,0
+456502,3,nula,0
+458103,3,nula,0
+460515,3,no informativa,3
+462181,3,nula,0
+462548,3,nula,0
+462859,3,no informativa,3
+463205,3,no informativa,3
+464103,3,nula,0
+465089,3,nula,0
+465646,3,informativa,18
+466671,3,nula,0
+467584,3,nula,0
+467945,3,nula,0
+468048,3,nula,0
+468912,3,nula,0
+469136,3,nula,0
+469502,3,informativa,8
+469825,3,no informativa,2
+470762,3,no informativa,3
+472075,3,nula,0
+472572,3,nula,0
+472657,3,no informativa,3
+473415,3,nula,0
+474845,3,no informativa,4
+474990,3,nula,0
+475068,3,nula,0
+475204,3,nula,0
+475776,3,nula,0
+476416,3,no informativa,6
+477041,3,nula,0
+477320,3,nula,0
+477507,3,nula,0
+478195,3,nula,0
+478292,3,nula,0
+480778,3,informativa,4
+481638,3,informativa,13
+483027,3,nula,0
+484568,3,nula,0
+486273,3,informativa,50
+486461,3,nula,0
+487745,3,nula,0
+488074,3,nula,0
+488947,3,nula,0
+489691,3,nula,0
+489907,3,no informativa,8
+490650,3,nula,0
+490910,3,informativa,7
+492307,3,no informativa,14
+493131,3,nula,0
+493475,3,nula,0
+494317,3,nula,0
+494857,3,nula,0
+495181,3,no informativa,2
+497148,3,nula,0
+497478,3,nula,0
+499268,3,nula,0
+499704,3,informativa,356
+500581,3,no informativa,4
+500942,3,nula,0
+504350,3,no informativa,4
+504403,3,no informativa,3
+506170,3,no informativa,4
+506245,3,nula,0
+507352,3,nula,0
+511934,3,nula,0
+512379,3,nula,0
+512724,3,nula,0
+513287,3,no informativa,3
+516308,3,no informativa,6
+517738,3,nula,0
+518239,3,no informativa,3
+521088,3,no informativa,2
+521856,3,nula,0
+522670,3,no informativa,3
+523580,3,nula,0
+525095,3,nula,0
+526103,3,nula,0
+528260,3,nula,0
+528900,3,nula,0
+531484,3,no informativa,3
+532243,3,nula,0
+532247,3,no informativa,3
+533025,3,nula,0
+533258,3,no informativa,2
+533475,3,nula,0
+533596,3,nula,0
+534475,3,nula,0
+535496,3,nula,0
+537426,3,nula,0
+538724,3,nula,0
+539621,3,nula,0
+540223,3,nula,0
+540285,3,nula,0
+540616,3,nula,0
+540660,3,nula,0
+541788,3,nula,0
+541914,3,nula,0
+541919,3,nula,0
+542282,3,nula,0
+543109,3,nula,0
+543711,3,nula,0
+544306,3,nula,0
+544561,3,nula,0
+544779,3,nula,0
+547378,3,no informativa,3
+547649,3,nula,0
+549600,3,nula,0
+551626,3,nula,0
+552066,3,nula,0
+552122,3,nula,0
+553323,3,nula,0
+554924,3,no informativa,4
+555365,3,nula,0
+556667,3,nula,0
+556765,3,nula,0
+558912,3,nula,0
+563212,3,nula,0
+563519,3,no informativa,2
+564258,3,nula,0
+564671,3,nula,0
+564777,3,nula,0
+564823,3,nula,0
+565797,3,nula,0
+565845,3,nula,0
+567727,3,nula,0
+568125,3,nula,0
+568795,3,informativa,10
+570104,3,nula,0
+570926,3,nula,0
+571701,3,nula,0
+572203,3,nula,0
+572411,3,nula,0
+572981,3,nula,0
+573420,3,nula,0
+574233,3,no informativa,2
+574270,3,nula,0
+574475,3,no informativa,10
+575642,3,no informativa,5
+576022,3,nula,0
+576141,3,no informativa,6
+576734,3,nula,0
+577725,3,nula,0
+578498,3,nula,0
+578568,3,informativa,8
+581227,3,nula,0
+581657,3,nula,0
+582255,3,nula,0
+582501,3,nula,0
+582988,3,no informativa,9
+584227,3,nula,0
+585677,3,nula,0
+585872,3,nula,0
+585876,3,nula,0
+586712,3,nula,0
+587136,3,no informativa,2
+587393,3,nula,0
+588833,3,nula,0
+589889,3,no informativa,11
+591055,3,nula,0
+591533,3,nula,0
+592399,3,no informativa,2
+592550,3,nula,0
+593192,3,nula,0
+595549,3,nula,0
+596347,3,no informativa,4
+596414,3,no informativa,7
+597340,3,nula,0
+597584,3,nula,0
+597870,3,nula,0
+598498,3,no informativa,4
+599049,3,nula,0
+600145,3,nula,0
+602122,3,no informativa,148
+602504,3,informativa,2
+602966,3,no informativa,9
+603007,3,no informativa,10
+604014,3,nula,0
+604743,3,no informativa,2
+604975,3,nula,0
+605720,3,nula,0
+606411,3,nula,0
+606693,3,no informativa,6
+607231,3,nula,0
+607363,3,nula,0
+608891,3,nula,0
+609442,3,nula,0
+611183,3,nula,0
+613727,3,nula,0
+613838,3,no informativa,2
+614299,3,nula,0
+614776,3,nula,0
+615525,3,nula,0
+615621,3,no informativa,3
+615786,3,no informativa,4
+615925,3,nula,0
+616182,3,no informativa,2
+617875,3,no informativa,7
+618742,3,nula,0
+620628,3,no informativa,2
+621779,3,nula,0
+622362,3,nula,0
+622425,3,nula,0
+622718,3,no informativa,3
+623189,3,nula,0
+623465,3,no informativa,3
+625480,3,no informativa,4
+625898,3,no informativa,3
+626317,3,nula,0
+627132,3,nula,0
+627370,3,nula,0
+627389,3,nula,0
+629033,3,no informativa,5
+629307,3,nula,0
+629388,3,nula,0
+629957,3,no informativa,355
+631348,3,no informativa,3
+631901,3,nula,0
+633975,3,nula,0
+634728,3,no informativa,3
+635955,3,no informativa,3
+636709,3,no informativa,8
+638250,3,no informativa,2
+638677,3,nula,0
+639574,3,nula,0
+641282,3,nula,0
+641407,3,no informativa,3
+645760,3,nula,0
+645976,3,nula,0
+646901,3,nula,0
+648096,3,nula,0
+649032,3,nula,0
+649407,3,nula,0
+650814,3,informativa,7
+651860,3,nula,0
+652914,3,nula,0
+653642,3,nula,0
+654287,3,nula,0
+654475,3,nula,0
+654548,3,nula,0
+655948,3,nula,0
+656100,3,nula,0
+657261,3,nula,0
+659805,3,nula,0
+660581,3,no informativa,2
+661023,3,nula,0
+662387,3,nula,0
+662412,3,nula,0
+662558,3,nula,0
+664205,3,no informativa,23
+664299,3,no informativa,3
+665057,3,no informativa,3
+668050,3,nula,0
+669134,3,nula,0
+670856,3,no informativa,23
+671590,3,no informativa,3
+671902,3,no informativa,9
+672523,3,no informativa,21
+673562,3,nula,0
+674341,3,nula,0
+675513,3,nula,0
+677433,3,nula,0
+677635,3,nula,0
+682378,3,nula,0
+684350,3,no informativa,7
+684905,3,no informativa,3
+686039,3,nula,0
+686194,3,nula,0
+687240,3,nula,0
+687352,3,nula,0
+688434,3,nula,0
+690004,3,nula,0
+693331,3,nula,0
+694018,3,nula,0
+694563,3,nula,0
+694676,3,nula,0
+694888,3,nula,0
+695180,3,no informativa,5
+695232,3,no informativa,13
+695561,3,no informativa,2
+696503,3,nula,0
+697870,3,nula,0
+698555,3,nula,0
+698984,3,nula,0
+699725,3,no informativa,2
+699797,3,nula,0
+699960,3,nula,0
+700006,3,informativa,6
+702046,3,nula,0
+702351,3,nula,0
+703392,3,no informativa,3
+703669,3,no informativa,2
+703674,3,nula,0
+703901,3,no informativa,5
+704932,3,informativa,45
+705078,3,nula,0
+706026,3,no informativa,6
+706139,3,nula,0
+706287,3,no informativa,3
+706545,3,nula,0
+707787,3,no informativa,6
+707806,3,nula,0
+708343,3,nula,0
+709105,3,no informativa,2
+709967,3,nula,0
+711202,3,nula,0
+711273,3,nula,0
+713640,3,nula,0
+714937,3,no informativa,3
+715391,3,nula,0
+715565,3,no informativa,4
+715698,3,no informativa,2
+715923,3,informativa,3
+716970,3,nula,0
+717423,3,nula,0
+721868,3,no informativa,3
+722074,3,nula,0
+724881,3,nula,0
+725939,3,informativa,3
+728233,3,nula,0
+728334,3,nula,0
+728493,3,nula,0
+728712,3,nula,0
+728986,3,nula,0
+729212,3,nula,0
+729651,3,nula,0
+731141,3,no informativa,3
+732712,3,no informativa,5
+734402,3,nula,0
+734751,3,nula,0
+734872,3,nula,0
+738081,3,nula,0
+739764,3,no informativa,5
+740049,3,no informativa,6
+740087,3,nula,0
+740179,3,nula,0
+743386,3,nula,0
+744639,3,nula,0
+744752,3,nula,0
+745451,3,nula,0
+748075,3,nula,0
+749074,3,nula,0
+750206,3,nula,0
+750259,3,no informativa,5
+750965,3,nula,0
+753279,3,nula,0
+753855,3,nula,0
+755575,3,nula,0
+756075,3,nula,0
+756457,3,no informativa,3
+756955,3,nula,0
+757342,3,nula,0
+759355,3,nula,0
+760284,3,no informativa,2
+760514,3,informativa,14
+760656,3,no informativa,2
+761859,3,no informativa,14
+761987,3,nula,0
+762152,3,nula,0
+762498,3,nula,0
+763095,3,no informativa,4
+763329,3,nula,0
+763641,3,nula,0
+763853,3,nula,0
+763955,3,no informativa,4
+767094,3,nula,0
+767800,3,nula,0
+767849,3,nula,0
+768621,3,no informativa,10
+769532,3,nula,0
+769644,3,nula,0
+771096,3,nula,0
+773038,3,nula,0
+776260,3,informativa,7
+776754,3,nula,0
+777808,3,nula,0
+778085,3,nula,0
+778836,3,nula,0
+780132,3,nula,0
+780716,3,nula,0
+780970,3,nula,0
+781502,3,nula,0
+782727,3,nula,0
+782973,3,nula,0
+783312,3,nula,0
+783521,3,nula,0
+785036,3,nula,0
+785200,3,nula,0
+785765,3,nula,0
+785991,3,nula,0
+786965,3,nula,0
+787722,3,nula,0
+789496,3,no informativa,3
+789904,3,nula,0
+790540,3,nula,0
+791281,3,nula,0
+791298,3,nula,0
+791841,3,nula,0
+791916,3,nula,0
+792065,3,nula,0
+792554,3,nula,0
+795426,3,nula,0
+795489,3,nula,0
+795688,3,nula,0
+796451,3,nula,0
+796916,3,nula,0
+799893,3,nula,0
+800032,3,nula,0
+800472,3,nula,0
+800474,3,nula,0
+802443,3,nula,0
+803218,3,nula,0
+804375,3,nula,0
+804632,3,no informativa,7
+805780,3,nula,0
+807567,3,nula,0
+808856,3,nula,0
+809177,3,nula,0
+810699,3,nula,0
+811662,3,nula,0
+814488,3,nula,0
+815680,3,nula,0
+817003,3,nula,0
+817258,3,nula,0
+817583,3,nula,0
+818563,3,nula,0
+820151,3,nula,0
+820674,3,nula,0
+822767,3,nula,0
+823911,3,nula,0
+825619,3,nula,0
+826066,3,nula,0
+826245,3,nula,0
+826868,3,nula,0
+827099,3,nula,0
+827357,3,nula,0
+828907,3,nula,0
+829200,3,nula,0
+13536,4,nula,0
+20371,4,nula,0
+42845,4,nula,0
+49693,4,nula,0
+58803,4,nula,0
+65226,4,nula,0
+75030,4,nula,0
+75497,4,nula,0
+78753,4,nula,0
+80744,4,nula,0
+85075,4,nula,0
+86778,4,no informativa,4
+91061,4,no informativa,6
+96499,4,no informativa,8
+111493,4,no informativa,6
+114853,4,no informativa,30
+121527,4,nula,0
+127607,4,nula,0
+130967,4,nula,0
+133994,4,nula,0
+139100,4,no informativa,4
+146568,4,no informativa,4
+154505,4,no informativa,4
+154765,4,nula,0
+159148,4,nula,0
+159503,4,nula,0
+160009,4,nula,0
+168079,4,nula,0
+169156,4,no informativa,2
+188031,4,no informativa,9
+188700,4,nula,0
+188744,4,nula,0
+202240,4,no informativa,9
+208712,4,nula,0
+210978,4,nula,0
+212964,4,nula,0
+219048,4,no informativa,13
+219682,4,nula,0
+219944,4,no informativa,2
+221849,4,nula,0
+222814,4,nula,0
+223207,4,nula,0
+223630,4,nula,0
+225760,4,no informativa,2
+229203,4,nula,0
+239567,4,nula,0
+240148,4,nula,0
+241794,4,nula,0
+254476,4,no informativa,2
+260115,4,nula,0
+266765,4,nula,0
+270004,4,no informativa,4
+277025,4,no informativa,8
+277986,4,nula,0
+279550,4,no informativa,2
+291253,4,nula,0
+295811,4,nula,0
+300527,4,nula,0
+305970,4,nula,0
+312910,4,nula,0
+320257,4,no informativa,7
+328309,4,nula,0
+342299,4,nula,0
+352069,4,nula,0
+353396,4,nula,0
+363848,4,nula,0
+367314,4,nula,0
+368039,4,no informativa,7
+369823,4,nula,0
+373952,4,no informativa,3
+378303,4,no informativa,6
+381548,4,no informativa,10
+392345,4,nula,0
+393483,4,nula,0
+399437,4,no informativa,3
+403071,4,no informativa,2
+403261,4,nula,0
+405837,4,nula,0
+410272,4,no informativa,60
+412098,4,nula,0
+413171,4,nula,0
+422172,4,no informativa,2
+436164,4,nula,0
+436434,4,nula,0
+438731,4,no informativa,3
+448286,4,no informativa,3
+452049,4,no informativa,2
+453342,4,nula,0
+461294,4,nula,0
+463650,4,no informativa,2
+464152,4,no informativa,4
+475290,4,no informativa,44
+485575,4,nula,0
+488864,4,no informativa,5
+491148,4,nula,0
+491459,4,no informativa,2
+514981,4,no informativa,5
+516115,4,nula,0
+518635,4,no informativa,2
+528178,4,no informativa,3
+532839,4,nula,0
+539474,4,nula,0
+541685,4,nula,0
+548724,4,no informativa,23
+549787,4,nula,0
+550058,4,nula,0
+553020,4,no informativa,2
+557725,4,nula,0
+560418,4,nula,0
+564887,4,no informativa,7
+567541,4,nula,0
+568469,4,nula,0
+579762,4,no informativa,5
+590118,4,no informativa,3
+590748,4,no informativa,2
+591921,4,nula,0
+596312,4,nula,0
+608649,4,no informativa,6
+626126,4,no informativa,9
+631737,4,nula,0
+637191,4,no informativa,5
+638954,4,nula,0
+647364,4,no informativa,4
+651852,4,no informativa,4
+654114,4,nula,0
+656403,4,nula,0
+659760,4,nula,0
+660166,4,nula,0
+664762,4,no informativa,6
+683159,4,no informativa,18
+709212,4,no informativa,68
+713072,4,nula,0
+729606,4,nula,0
+734593,4,nula,0
+738422,4,no informativa,3
+738967,4,nula,0
+740881,4,no informativa,4
+749987,4,no informativa,14
+750671,4,nula,0
+769707,4,informativa,4
+774946,4,nula,0
+782279,4,nula,0
+782855,4,nula,0
+784918,4,nula,0
+794904,4,nula,0
+796343,4,nula,0
+798786,4,nula,0
+805409,4,nula,0
+814685,4,nula,0
+824423,4,nula,0
+826871,4,nula,0
+828493,4,nula,0
+829362,4,nula,0
+10858,5,no informativa,4
+23007,5,no informativa,7
+51445,5,no informativa,4
+103341,5,no informativa,12
+118107,5,nula,0
+133634,5,no informativa,11
+155455,5,nula,0
+197841,5,no informativa,172
+231413,5,nula,0
+254476,5,no informativa,2
+290180,5,informativa,8
+316361,5,nula,0
+328802,5,nula,0
+337040,5,nula,0
+351873,5,nula,0
+365548,5,informativa,8
+368433,5,no informativa,6
+390097,5,nula,0
+407041,5,no informativa,2
+477481,5,nula,0
+503918,5,no informativa,2
+505054,5,nula,0
+517185,5,no informativa,2
+532573,5,no informativa,6
+540406,5,informativa,17
+541378,5,no informativa,14
+559860,5,no informativa,3
+599166,5,informativa,9
+603813,5,no informativa,19
+607231,5,nula,0
+678576,5,nula,0
+684605,5,no informativa,15
+692043,5,no informativa,3
+767433,5,informativa,6
+775308,5,nula,0
+785389,5,informativa,28
+804264,5,no informativa,5
+824568,5,nula,0
+873,9,nula,0
+2680,9,no informativa,3
+2691,9,nula,0
+5436,9,no informativa,4
+14309,9,no informativa,2
+14358,9,nula,0
+14610,9,nula,0
+15176,9,nula,0
+15689,9,nula,0
+16346,9,nula,0
+17660,9,nula,0
+23225,9,no informativa,3
+23815,9,no informativa,4
+30750,9,nula,0
+31719,9,no informativa,2
+33126,9,nula,0
+34962,9,nula,0
+35376,9,no informativa,2
+35659,9,nula,0
+35973,9,informativa,10
+36035,9,nula,0
+36109,9,nula,0
+36647,9,no informativa,2
+37350,9,no informativa,5
+37926,9,no informativa,19
+39644,9,nula,0
+39727,9,nula,0
+40995,9,nula,0
+46794,9,no informativa,7
+46801,9,no informativa,2
+48859,9,nula,0
+50093,9,nula,0
+51445,9,no informativa,4
+52839,9,no informativa,2
+56118,9,no informativa,3
+57453,9,no informativa,7
+57784,9,nula,0
+58199,9,no informativa,18
+62725,9,nula,0
+64270,9,nula,0
+64634,9,nula,0
+66372,9,nula,0
+67294,9,nula,0
+67310,9,no informativa,3
+68690,9,nula,0
+69267,9,no informativa,4
+73841,9,nula,0
+74204,9,nula,0
+78684,9,nula,0
+78741,9,no informativa,2
+81110,9,no informativa,3
+82531,9,nula,0
+82572,9,nula,0
+85035,9,nula,0
+86506,9,no informativa,3
+86511,9,nula,0
+88339,9,nula,0
+90062,9,nula,0
+95622,9,nula,0
+96661,9,nula,0
+102162,9,informativa,13
+103477,9,nula,0
+109650,9,no informativa,59
+110782,9,no informativa,2
+113290,9,no informativa,3
+114375,9,nula,0
+115783,9,no informativa,3
+115891,9,nula,0
+117041,9,no informativa,6
+117376,9,nula,0
+118987,9,nula,0
+121574,9,no informativa,18
+121896,9,nula,0
+123838,9,no informativa,17
+124233,9,nula,0
+125046,9,nula,0
+125534,9,nula,0
+131470,9,nula,0
+131513,9,nula,0
+138916,9,nula,0
+140254,9,nula,0
+140436,9,nula,0
+141543,9,nula,0
+142339,9,nula,0
+142856,9,nula,0
+143212,9,nula,0
+143645,9,no informativa,22
+146009,9,no informativa,3
+147191,9,nula,0
+147544,9,no informativa,3
+147991,9,no informativa,2
+149890,9,nula,0
+150124,9,nula,0
+152802,9,no informativa,2
+155029,9,nula,0
+155095,9,nula,0
+155135,9,nula,0
+156365,9,nula,0
+160447,9,nula,0
+161567,9,nula,0
+164821,9,nula,0
+166075,9,nula,0
+167307,9,nula,0
+167457,9,no informativa,3
+168903,9,nula,0
+168935,9,no informativa,4
+170256,9,nula,0
+171138,9,no informativa,2
+172185,9,nula,0
+173869,9,nula,0
+174988,9,nula,0
+176912,9,no informativa,2
+182877,9,no informativa,6
+186189,9,nula,0
+187157,9,no informativa,2
+188326,9,nula,0
+190378,9,nula,0
+190696,9,nula,0
+190919,9,no informativa,9
+192480,9,nula,0
+192684,9,nula,0
+194357,9,no informativa,3
+196746,9,no informativa,2
+196934,9,informativa,8
+197725,9,nula,0
+201261,9,no informativa,9
+205925,9,nula,0
+206195,9,no informativa,3
+207325,9,nula,0
+208114,9,nula,0
+208411,9,no informativa,4
+209306,9,nula,0
+211193,9,nula,0
+211589,9,no informativa,8
+215973,9,nula,0
+217145,9,no informativa,2
+219797,9,no informativa,2
+220092,9,nula,0
+221101,9,no informativa,46
+223351,9,nula,0
+223630,9,nula,0
+226612,9,informativa,1515
+227594,9,nula,0
+229109,9,informativa,1411
+231007,9,no informativa,2
+232216,9,nula,0
+232924,9,nula,0
+233555,9,nula,0
+233716,9,nula,0
+237079,9,nula,0
+237737,9,nula,0
+238369,9,nula,0
+241387,9,nula,0
+241698,9,no informativa,11
+243636,9,no informativa,6
+251112,9,no informativa,6
+251982,9,nula,0
+254718,9,no informativa,2
+256253,9,no informativa,5
+256518,9,nula,0
+256737,9,nula,0
+259407,9,nula,0
+261262,9,nula,0
+262374,9,informativa,12
+264135,9,nula,0
+264971,9,nula,0
+267351,9,nula,0
+267357,9,nula,0
+268298,9,no informativa,309
+271759,9,nula,0
+273477,9,nula,0
+276870,9,nula,0
+277162,9,nula,0
+278067,9,nula,0
+278586,9,nula,0
+279473,9,nula,0
+283887,9,nula,0
+285311,9,informativa,9
+287756,9,nula,0
+288449,9,nula,0
+288894,9,nula,0
+289012,9,no informativa,5
+291855,9,nula,0
+292671,9,nula,0
+294611,9,nula,0
+295448,9,nula,0
+301949,9,nula,0
+301996,9,nula,0
+302489,9,no informativa,7
+304068,9,nula,0
+304500,9,no informativa,4
+305995,9,no informativa,2
+311015,9,nula,0
+311592,9,nula,0
+312253,9,nula,0
+312407,9,nula,0
+313771,9,nula,0
+316089,9,nula,0
+316929,9,nula,0
+317465,9,nula,0
+317716,9,nula,0
+319870,9,no informativa,6
+322170,9,nula,0
+324363,9,nula,0
+325881,9,nula,0
+327543,9,nula,0
+328933,9,no informativa,3
+329247,9,nula,0
+330053,9,nula,0
+331407,9,no informativa,7
+333563,9,nula,0
+336567,9,no informativa,5
+338245,9,nula,0
+338645,9,nula,0
+344501,9,nula,0
+344924,9,nula,0
+345352,9,nula,0
+351479,9,nula,0
+355635,9,nula,0
+356498,9,informativa,2
+356561,9,nula,0
+358088,9,nula,0
+358297,9,nula,0
+358615,9,nula,0
+360820,9,nula,0
+364719,9,nula,0
+365861,9,nula,0
+366334,9,nula,0
+368981,9,nula,0
+369433,9,nula,0
+371664,9,nula,0
+376121,9,nula,0
+377676,9,nula,0
+384930,9,nula,0
+386291,9,no informativa,7
+388811,9,nula,0
+389799,9,nula,0
+397461,9,nula,0
+398190,9,nula,0
+399996,9,no informativa,7
+401272,9,nula,0
+402760,9,nula,0
+404155,9,nula,0
+406424,9,nula,0
+406660,9,nula,0
+406814,9,nula,0
+407790,9,nula,0
+409947,9,no informativa,4
+410481,9,nula,0
+410702,9,no informativa,2
+410959,9,no informativa,252
+411098,9,nula,0
+411598,9,nula,0
+413245,9,nula,0
+416130,9,nula,0
+416221,9,no informativa,13
+416992,9,nula,0
+418741,9,nula,0
+422581,9,nula,0
+424664,9,nula,0
+425555,9,nula,0
+430145,9,nula,0
+431338,9,no informativa,6
+432490,9,nula,0
+435437,9,no informativa,2
+439655,9,no informativa,2
+440930,9,nula,0
+441808,9,nula,0
+441907,9,no informativa,5
+442946,9,nula,0
+443366,9,nula,0
+444986,9,nula,0
+447526,9,nula,0
+448212,9,nula,0
+450793,9,nula,0
+451583,9,nula,0
+454235,9,nula,0
+456225,9,nula,0
+457100,9,nula,0
+458302,9,nula,0
+458564,9,no informativa,2
+458968,9,nula,0
+459110,9,no informativa,8
+460973,9,nula,0
+461698,9,nula,0
+465423,9,nula,0
+465915,9,nula,0
+466071,9,nula,0
+466531,9,no informativa,2
+468738,9,nula,0
+469468,9,nula,0
+474659,9,nula,0
+476429,9,no informativa,2
+477886,9,no informativa,2
+479744,9,nula,0
+484431,9,nula,0
+484576,9,nula,0
+485720,9,nula,0
+486022,9,nula,0
+486557,9,nula,0
+487823,9,nula,0
+488492,9,nula,0
+488563,9,no informativa,11
+489392,9,nula,0
+489926,9,nula,0
+490882,9,nula,0
+490910,9,no informativa,7
+491047,9,nula,0
+494537,9,nula,0
+495235,9,nula,0
+498761,9,no informativa,2
+498905,9,no informativa,2
+500805,9,nula,0
+501522,9,no informativa,4
+502295,9,nula,0
+502775,9,nula,0
+504493,9,nula,0
+505820,9,nula,0
+509487,9,nula,0
+511468,9,no informativa,7
+512977,9,no informativa,3
+513560,9,nula,0
+517146,9,no informativa,2
+517491,9,nula,0
+520804,9,no informativa,21
+521406,9,no informativa,9
+526411,9,nula,0
+526681,9,no informativa,3
+532785,9,nula,0
+535352,9,nula,0
+535448,9,no informativa,238
+539036,9,no informativa,15
+541517,9,nula,0
+542965,9,no informativa,2
+545991,9,nula,0
+550089,9,nula,0
+550290,9,nula,0
+550394,9,nula,0
+551692,9,no informativa,2
+552549,9,no informativa,3
+554537,9,no informativa,3
+555791,9,nula,0
+557675,9,nula,0
+561407,9,nula,0
+561744,9,nula,0
+562947,9,nula,0
+565654,9,no informativa,2
+565724,9,no informativa,6
+566727,9,no informativa,4
+567111,9,no informativa,4
+568983,9,nula,0
+571449,9,nula,0
+574214,9,nula,0
+575697,9,no informativa,5
+576060,9,nula,0
+577979,9,nula,0
+581247,9,nula,0
+581777,9,no informativa,5
+584318,9,nula,0
+587817,9,nula,0
+589028,9,no informativa,3
+589443,9,nula,0
+590139,9,nula,0
+596048,9,nula,0
+596618,9,nula,0
+598280,9,informativa,6
+599137,9,nula,0
+601620,9,nula,0
+607285,9,no informativa,8
+611845,9,no informativa,4
+612438,9,nula,0
+616160,9,no informativa,3
+617459,9,nula,0
+617646,9,nula,0
+619094,9,no informativa,9
+620796,9,nula,0
+620990,9,no informativa,2
+621144,9,nula,0
+624052,9,nula,0
+625193,9,nula,0
+626363,9,no informativa,21
+626616,9,nula,0
+629121,9,nula,0
+629645,9,nula,0
+634442,9,nula,0
+635489,9,nula,0
+637199,9,no informativa,5
+638040,9,nula,0
+641112,9,nula,0
+641462,9,nula,0
+642709,9,nula,0
+642728,9,nula,0
+644083,9,nula,0
+645379,9,nula,0
+648207,9,nula,0
+651651,9,nula,0
+654481,9,nula,0
+655214,9,nula,0
+656697,9,nula,0
+659290,9,nula,0
+662354,9,nula,0
+666750,9,nula,0
+668890,9,no informativa,2
+671391,9,no informativa,18
+673775,9,nula,0
+678018,9,no informativa,8
+678562,9,nula,0
+678882,9,nula,0
+680012,9,no informativa,6
+683400,9,nula,0
+684605,9,no informativa,15
+690680,9,nula,0
+691786,9,nula,0
+692456,9,nula,0
+695384,9,no informativa,4
+695452,9,no informativa,3
+696393,9,nula,0
+697363,9,nula,0
+698113,9,nula,0
+700332,9,nula,0
+702082,9,no informativa,3
+705943,9,no informativa,3
+707671,9,nula,0
+708401,9,nula,0
+716777,9,nula,0
+717505,9,nula,0
+720276,9,nula,0
+720391,9,nula,0
+721052,9,nula,0
+725152,9,no informativa,9
+727452,9,nula,0
+727989,9,no informativa,2
+728951,9,nula,0
+729528,9,no informativa,3
+729722,9,no informativa,2
+730415,9,nula,0
+733883,9,nula,0
+734104,9,nula,0
+734309,9,nula,0
+735097,9,nula,0
+740704,9,no informativa,2
+740961,9,nula,0
+743245,9,nula,0
+743269,9,nula,0
+744854,9,nula,0
+748099,9,nula,0
+753194,9,nula,0
+753275,9,nula,0
+753782,9,nula,0
+757569,9,nula,0
+759731,9,nula,0
+762421,9,nula,0
+763296,9,nula,0
+764205,9,no informativa,18
+765716,9,nula,0
+767265,9,no informativa,2
+769531,9,nula,0
+773611,9,nula,0
+773773,9,nula,0
+776033,9,nula,0
+782392,9,nula,0
+783248,9,nula,0
+783662,9,nula,0
+784774,9,nula,0
+786116,9,nula,0
+786529,9,nula,0
+787486,9,nula,0
+787738,9,no informativa,2
+788174,9,nula,0
+789640,9,nula,0
+790620,9,nula,0
+793748,9,nula,0
+794418,9,nula,0
+795571,9,nula,0
+795990,9,nula,0
+796799,9,nula,0
+798160,9,nula,0
+798179,9,nula,0
+798661,9,nula,0
+798964,9,nula,0
+801399,9,nula,0
+802128,9,nula,0
+803294,9,nula,0
+803527,9,nula,0
+805039,9,nula,0
+807532,9,nula,0
+808979,9,nula,0
+809953,9,nula,0
+811128,9,nula,0
+813145,9,nula,0
+813192,9,nula,0
+813453,9,nula,0
+813731,9,nula,0
+817058,9,nula,0
+817918,9,nula,0
+818177,9,nula,0
+822195,9,nula,0
+826264,9,nula,0
+828035,9,nula,0
+829389,9,nula,0
+829744,9,nula,0

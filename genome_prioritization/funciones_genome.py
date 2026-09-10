@@ -1,11 +1,11 @@
 """
 funciones_genome.py — piezas del barrido de parametros y de la eleccion del optimo.
 
-Es el `full_genome_v5.ipynb` desarmado en funciones (README §1.2): el ciclo que
+Es el barrido de genoma completo de la versión v3 desarmado en funciones (CONVENCIONES.md §2): el ciclo que
 las combina no vive aca, vive en la celda de corrida del notebook, que es donde
 uno lo va a mirar.
 
-Division (README §5):
+Division (CONVENCIONES.md §8):
   PRINCIPAL = cambia un numero que va al paper (semilla, relevance score,
               propagacion, metrica, ranking) -> lleva docstring y test.
   AUXILIAR  = no lo cambia (I/O, paralelizacion, formateo, figuras, chequeos).
@@ -90,7 +90,7 @@ def evaluar_combinacion(combo, params=PARAMS):
     AUC01 es la pAUC(FPR<=0.10) normalizada y corregida por McClish, calculada
     sobre el ranking restringido a la especie; AUC y el corte de Youden se
     calculan sobre el ranking global. La metrica es la de `comun/tdr.py`: aca no
-    se reimplementa (README §1.1).
+    se reimplementa (CONVENCIONES.md §1).
     """
     ia, ib, il, ig = combo
     beta_val = params["beta"][ib]
@@ -116,7 +116,7 @@ def evaluar_combinacion(combo, params=PARAMS):
 
 def guardar_barrido(filas, salidas, nb, sp_code, params=PARAMS):
     """Arma el DataFrame de resultados, lo ordena por AUC01 y lo escribe como
-    `<salidas>/<nb>_<especie>.csv` (README §1.9).
+    `<salidas>/<nb>_<especie>.csv` (CONVENCIONES.md §7).
 
     Traduce el `pcode` de indices a los valores legibles de alpha/beta/lambda_/gamma
     (`lambda_` vacio = modo hibrido, en el que manda gamma).
@@ -149,7 +149,7 @@ def optimos_por_especie(barrido, k=1):
 def consistencia(barrido, k=10):
     """Concordancia entre especies sobre el perfil de las 120 combinaciones.
 
-    Dos vistas, las dos del README §4 (`02_optimo_y_consistencia`):
+    Dos vistas, las dos de `genome_prioritization/02_optimo_y_consistencia`:
       * `frecuencias`: cuantas especies ponen cada valor de parametro en su
         top-K, contra la frecuencia marginal de la grilla (enriquecimiento > 1
         = el valor aparece mas de lo que daria el azar);
@@ -238,13 +238,13 @@ def cargar_barrido(salidas, nb="01", spoi=None):
 
 
 def escribir_meta(salidas, nb, **campos):
-    """Reexporta `tdr.escribir_meta` (README §1.4)."""
+    """Reexporta `tdr.escribir_meta` (CONVENCIONES.md §4)."""
     return tdr.escribir_meta(salidas, nb, **campos)
 
 
 def comparar_con_control(optimos, control=None):
-    """Control del README §1.3: los optimos nuevos tienen que coincidir con los
-    de `gon3/resultados/genoma_completo_v5/`.
+    """Control del CONVENCIONES.md §3: los optimos nuevos tienen que coincidir con los
+    de `control/genoma_completo_v5/` (CONVENCIONES.md §3).
 
     Devuelve una tabla por especie con el optimo de cada corrida y la diferencia
     de AUC01. `genoma_completo_v5` ya usa la metrica corregida, asi que la

@@ -53,7 +53,9 @@ def _semilla_por_especie(res, plt, titulo):
 
 # --- 01 · pseudohuérfanas ---------------------------------------------------
 
-@figura(H, "01_f01_grupos_por_especie", lee="01_k1_drugs.csv")
+@figura(H, "01_f01_grupos_por_especie",
+        verifica='Sin control directo de `01_k1_drugs`; el conjunto evaluado tiene el mismo tamaño que en el oráculo v4.',
+        lee="01_k1_drugs.csv")
 def grupos_por_especie(t, plt):
     """Pseudohuérfanas por especie, apiladas por grupo 0-3."""
     k1 = t("01_k1_drugs.csv")
@@ -74,7 +76,9 @@ def grupos_por_especie(t, plt):
     return fig
 
 
-@figura(H, "01_f02_frank_por_grupo", lee=(PSEUDO, "01_k1_drugs.csv"))
+@figura(H, "01_f02_frank_por_grupo",
+        verifica='`test_fuga`: la orfanización quita todas las aristas de la droga. Contra el oráculo v4 cambia en la dirección que predice el recorte.',
+        lee=(PSEUDO, "01_k1_drugs.csv"))
 def frank_por_grupo(t, plt):
     """Distribución de frank por grupo (Fig 2 del paper 2016)."""
     df = _pseudohuerfanas(t, con_grupo=True)
@@ -93,14 +97,18 @@ def frank_por_grupo(t, plt):
     return fig
 
 
-@figura(H, "01_f03_semilla_por_especie", lee=PSEUDO)
+@figura(H, "01_f03_semilla_por_especie",
+        verifica='Consistencia interna: con semilla no informativa el puntaje del blanco es 0 por construcción, y se observa 0 % recuperado. Contra el oráculo v4 cambia como predice el recorte.',
+        lee=PSEUDO)
 def semilla_por_especie(t, plt):
     """Clase de semilla por especie: el techo teórico del método."""
     return _semilla_por_especie(_pseudohuerfanas(t), plt,
                                 "Cobertura de semilla: informativa = techo del método")
 
 
-@figura(H, "01_f04_recuperacion_por_semilla", lee="01_resumen_frank.csv")
+@figura(H, "01_f04_recuperacion_por_semilla",
+        verifica='La misma consistencia interna que `01_f03`, sobre `01_resumen_frank` (comparada contra el oráculo v4).',
+        lee="01_resumen_frank.csv")
 def recuperacion_por_semilla(t, plt):
     """% de pseudohuérfanas recuperadas (frank < 0.1) por clase de semilla."""
     resumen = t("01_resumen_frank.csv")
@@ -118,7 +126,9 @@ def recuperacion_por_semilla(t, plt):
 
 # --- 02 · cobertura de semilla ---------------------------------------------
 
-@figura(H, "02_f02_palancas", lee="02_palancas.csv")
+@figura(H, "02_f02_palancas",
+        verifica='Sin control. Dos de las tres palancas no pueden rescatar nada en esta base por construcción, así que el 0 es esperado (ver informe).',
+        lee="02_palancas.csv")
 def palancas(t, plt):
     """Pseudohuérfanas sin semilla informativa que cada palanca rescata."""
     pal = t("02_palancas.csv")
@@ -133,7 +143,9 @@ def palancas(t, plt):
     return fig
 
 
-@figura(H, "02_f03_techo_teorico", lee="02_cobertura_por_especie.csv")
+@figura(H, "02_f03_techo_teorico",
+        verifica='Es la fracción informativa de `huerfanas/01` por organismo: coincide con `01_f03` (consistencia interna).',
+        lee="02_cobertura_por_especie.csv")
 def techo_teorico(t, plt):
     """Fracción con semilla informativa por especie: ninguna reponderación
     puede superarla."""
@@ -148,7 +160,9 @@ def techo_teorico(t, plt):
 
 # --- 03 · desorfanización global -------------------------------------------
 
-@figura(H, "03_f01_distribucion_rg", lee="03_ranking_global.csv")
+@figura(H, "03_f01_distribucion_rg",
+        verifica='Contra el oráculo v4 (`03_ranking_global`): cambia como predice el recorte.',
+        lee="03_ranking_global.csv")
 def distribucion_rg(t, plt):
     """Posición del blanco verdadero en el ranking global."""
     con_rg = t("03_ranking_global.csv")
@@ -162,7 +176,9 @@ def distribucion_rg(t, plt):
     return fig
 
 
-@figura(H, "03_f02_recuperacion", lee=("03_curva_recuperacion.csv", "03_rg_estrella.csv"))
+@figura(H, "03_f02_recuperacion",
+        verifica='Contra el oráculo v4: r*G cambia como predice el recorte. No hay control independiente del corte.',
+        lee=("03_curva_recuperacion.csv", "03_rg_estrella.csv"))
 def recuperacion(t, plt):
     """Fig 3A: ρ(rG) y λ(rG), con el umbral 3σ que define r*G."""
     curva = t("03_curva_recuperacion.csv")
@@ -182,7 +198,9 @@ def recuperacion(t, plt):
     return fig
 
 
-@figura(H, "03_f03_rss", lee="03_rss_distribucion.csv")
+@figura(H, "03_f03_rss",
+        verifica='Contra el oráculo v4 (`03_rss_distribucion`): cambia como predice el recorte.',
+        lee="03_rss_distribucion.csv")
 def rss(t, plt):
     """Posición del blanco verdadero dentro de su especie, con el acumulado."""
     d = t("03_rss_distribucion.csv")
@@ -198,7 +216,9 @@ def rss(t, plt):
     return fig
 
 
-@figura(H, "03_f04_directa_indirecta", lee="03_ranking_global.csv")
+@figura(H, "03_f04_directa_indirecta",
+        verifica='Contra el oráculo v4 (`03_clases_inferencia`). La partición 68/32 del trabajo de 2016 no se verificó contra el artículo.',
+        lee="03_ranking_global.csv")
 def directa_indirecta(t, plt):
     """Fig 4b: rG y rSS por clase de inferencia (directa / indirecta)."""
     df = t("03_ranking_global.csv")
@@ -218,7 +238,9 @@ def directa_indirecta(t, plt):
 
 # --- 04 · aplicación a la especie foco -------------------------------------
 
-@figura(H, "04_f01_embudo", lee="04_embudo.csv")
+@figura(H, "04_f01_embudo",
+        verifica='Contra el oráculo v4 (`04_sp26_embudo`): menos tratables, explicado por el recorte.',
+        lee="04_embudo.csv")
 def embudo(t, plt):
     """Compuestos que sobreviven a cada paso del embudo de la especie foco."""
     e = t("04_embudo.csv")
@@ -234,7 +256,9 @@ def embudo(t, plt):
     return fig
 
 
-@figura(H, "04_f02_rg_sugerencias", lee=("04_sugerencias.csv", "03_rg_estrella.csv"))
+@figura(H, "04_f02_rg_sugerencias",
+        verifica='Sin sugerencias bajo r*G: no se dibuja.',
+        lee=("04_sugerencias.csv", "03_rg_estrella.csv"))
 def rg_sugerencias(t, plt):
     """Sin sugerencias bajo r*G no hay nada que dibujar."""
     sug = t("04_sugerencias.csv")
@@ -249,7 +273,9 @@ def rg_sugerencias(t, plt):
     return fig
 
 
-@figura(H, "04_f03_familias", lee="04_familias.csv")
+@figura(H, "04_f03_familias",
+        verifica='Sin sugerencias bajo r*G: no se dibuja.',
+        lee="04_familias.csv")
 def familias(t, plt):
     """Sin sugerencias no hay familias que contar."""
     fam = t("04_familias.csv")
@@ -267,6 +293,7 @@ def familias(t, plt):
 
 
 @figura(H, "03_f05_semilla_informativa",
+        verifica='Sin control independiente. Referencias internas: el azar en el panel (a); el efecto del tamaño de semilla se comprobó dentro de cada organismo, no sólo en el total.',
         lee=("03_informativa.csv", "03_informativa_topk.csv"))
 def semilla_informativa(t, plt):
     """Las pseudohuérfanas con semilla informativa: dónde cae el blanco, más

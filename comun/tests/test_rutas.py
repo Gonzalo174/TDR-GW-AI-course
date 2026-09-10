@@ -1,4 +1,4 @@
-"""Convenciones de rutas y de numeracion (README §1.8 y §1.9).
+"""Convenciones de rutas y de numeracion (CONVENCIONES.md §6 y §1.9).
 
 Las dos reglas que sostienen el arbol y que es facil violar sin darse cuenta:
 todas las rutas se resuelven contra la raiz del repositorio (ningun path
@@ -36,8 +36,8 @@ class TestRutas(unittest.TestCase):
         for c in ("analiceDB", "genome_prioritization", "huerfanas"):
             self.assertNotIn(str(C.DB), str(C.out(c)))
 
-    def test_out_solo_acepta_las_cuatro_carpetas(self):
-        """Un typo en el nombre crearia una carpeta `_out` huerfana en gon4."""
+    def test_out_solo_acepta_las_carpetas_de_analisis(self):
+        """Un error en el nombre crearia una carpeta `_out` huerfana en resultados/."""
         for mal in ("genome_priorization", "genome_prioritization/", "salidas", ""):
             with self.subTest(carpeta=mal):
                 with self.assertRaises(ValueError):
@@ -45,7 +45,7 @@ class TestRutas(unittest.TestCase):
 
     def test_las_carpetas_no_llevan_numero(self):
         """Un nombre que empieza con digito no es importable desde Python
-        (README §1.1): el orden lo dan los numeros de los notebooks."""
+        (CONVENCIONES.md §1): el orden lo dan los numeros de los notebooks."""
         for c in C.CARPETAS:
             self.assertFalse(c[0].isdigit(), f"{c} arranca con digito")
             self.assertTrue(c.isidentifier(), f"{c} no es importable")
@@ -60,7 +60,7 @@ class TestRutas(unittest.TestCase):
 class TestNumeracion(unittest.TestCase):
     """Los notebooks llevan numero y se lo propagan a todo lo que generan."""
 
-    RAIZ = C.V4
+    RAIZ = C.RAIZ
 
     def test_los_notebooks_arrancan_con_numero(self):
         for carpeta in C.CARPETAS:
@@ -71,7 +71,7 @@ class TestNumeracion(unittest.TestCase):
 
     def test_cada_carpeta_de_analisis_tiene_su_py(self):
         """Lo especifico de cada analisis vive en `funciones_<carpeta>.py`; lo
-        compartido sube a `comun/` (README §1.1)."""
+        compartido sube a `comun/` (CONVENCIONES.md §1)."""
         for carpeta, py in [("analiceDB", "funciones_analice.py"),
                             ("genome_prioritization", "funciones_genome.py"),
                             ("huerfanas", "funciones_huerfanas.py")]:

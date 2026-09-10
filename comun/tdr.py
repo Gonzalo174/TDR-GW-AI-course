@@ -1,12 +1,12 @@
 """
-tdr.py — lo compartido por las cuatro carpetas de analisis de TDR_2026_v4.
+tdr.py — lo compartido por las carpetas de analisis del repositorio.
 
 Un unico lugar donde viven las rutas, la carga de las tablas, las metricas, la
-paralelizacion y el estilo de las figuras (README §1.1). La regla es: si una
+paralelizacion y el estilo de las figuras (CONVENCIONES.md §1). La regla es: si una
 funcion la necesitan dos carpetas, sube aca; nadie reimplementa una metrica.
 
   * rutas          -> `DB` (entrada, no se reescribe) y `out(carpeta)` (salidas
-                      en `gon4/<carpeta>_out/`, README §1.8)
+                      en `resultados/<carpeta>_out/`, CONVENCIONES.md §6)
   * carga          -> `cargar_db()` devuelve un `Datos` con las tablas pedidas
   * metricas       -> `pauc_normalizada`, `mcclish`, `auc01_mcclish`, `auc_global`
   * envoltorios    -> `semilla_global`, `relevance_scores`, `propagar`
@@ -14,11 +14,13 @@ funcion la necesitan dos carpetas, sube aca; nadie reimplementa una metrica.
   * figuras        -> `estilo()`, `guardar(fig, nombre, carpeta)`, paleta
   * procedencia    -> `escribir_meta(...)` deja el `NN_meta.json` de cada corrida
 
-Uso desde la celda 1 de cualquier notebook:
+Uso desde la celda 1 de cualquier notebook, que busca la raiz del repositorio
+(la carpeta que contiene `DB/`) y agrega `comun/` al path:
 
-    import sys
-    V4 = "/home/ggiordano/TDR/TDR_2026_v4"
-    sys.path.insert(0, f"{V4}/comun")
+    RAIZ = Path.cwd()
+    while not (RAIZ / "DB").is_dir() and RAIZ != RAIZ.parent:
+        RAIZ = RAIZ.parent
+    sys.path.insert(0, str(RAIZ / "comun"))
     import tdr, nucleo as nf
 
 Nada se ejecuta al importar este modulo: `out()` es lo unico que crea directorios,
@@ -38,19 +40,17 @@ import numpy as np
 import pandas as pd
 
 # ---------------------------------------------------------------------------
-# Rutas (README §1.8): cero literales de path dentro de los notebooks
+# Rutas (CONVENCIONES.md §6): cero literales de path dentro de los notebooks
 # ---------------------------------------------------------------------------
 
 # Todo cuelga de la raiz del repositorio, deducida de la ubicacion de este
 # archivo: el repo se clona en cualquier lado y nada hay que reconfigurar.
 RAIZ = Path(__file__).resolve().parents[1]
-V4 = RAIZ                                     # nombre historico, mismo directorio
 DB = RAIZ / "DB"                              # la base codificada; no se reescribe
 SALIDAS = RAIZ / "resultados"                 # salidas de los notebooks
-GON4 = SALIDAS                                # nombre historico de `SALIDAS`
 
 # Control independiente: los optimos por especie de la corrida v5, calculados
-# con la metrica ya corregida (README §1.3). Se versionan en el repo.
+# con la metrica ya corregida (CONVENCIONES.md §3). Se versionan en el repo.
 CONTROL_V5 = RAIZ / "control" / "genoma_completo_v5"
 
 # Datos crudos (.tsv de InterProScan, tabla de subestructuras): NO se publican,
@@ -59,12 +59,14 @@ CONTROL_V5 = RAIZ / "control" / "genoma_completo_v5"
 # Con una copia local se puede apuntar a ella: export TDR_RAW=/ruta/raw_data
 RAW = Path(os.environ.get("TDR_RAW", RAIZ / "raw_data_ausente"))
 
-CARPETAS = ["createDB", "analiceDB", "genome_prioritization", "huerfanas"]
+CARPETAS = ["analiceDB", "genome_prioritization", "huerfanas"]
 
-N_CORE_DEFAULT = 20
+# Procesos para las corridas paralelas. Con TDR_NCORE se ajusta a la maquina:
+# la corrida completa tarda ~45 min con 20 (ver README.md, "Tiempo de computo").
+N_CORE_DEFAULT = int(os.environ.get("TDR_NCORE", 20))
 
-if str(V4 / "comun") not in sys.path:
-    sys.path.insert(0, str(V4 / "comun"))
+if str(RAIZ / "comun") not in sys.path:
+    sys.path.insert(0, str(RAIZ / "comun"))
 
 import nucleo as nf  # noqa: E402  (el modelo; ver comun/nucleo.py, congelado)
 
@@ -230,8 +232,8 @@ def cargar_db(anotaciones=True, quimica=False, fenotipo=False,
                   En la base va como entero x100.
     fenotipo    : bioactividades compuesto-organismo.
     cluster_consistent : filtra los positivos/negativos inconsistentes a nivel
-                  cluster. `huerfanas/` lo usa (como `orphan_drugs_v4.ipynb`);
-                  el barrido de `genome_prioritization/` no (como full_genome_v5).
+                  cluster. `huerfanas/` lo usa (como en la versión v3);
+                  el barrido de `genome_prioritization/` no (como la corrida de control).
     """
     def log(*a):
         if verbose:
@@ -318,7 +320,7 @@ def fechas_db():
 
 
 # ---------------------------------------------------------------------------
-# Metricas — el unico lugar donde vive la pAUC (README §1.1)
+# Metricas — el unico lugar donde vive la pAUC (CONVENCIONES.md §1)
 # ---------------------------------------------------------------------------
 
 FPR_MAX = 0.10
@@ -480,7 +482,7 @@ def un_hilo_por_proceso():
 
 
 # ---------------------------------------------------------------------------
-# Procedencia: el meta.json de cada corrida (README §1.4)
+# Procedencia: el meta.json de cada corrida (CONVENCIONES.md §4)
 # ---------------------------------------------------------------------------
 
 def escribir_meta(salidas, nb, notebook=None, params=None, n_core=None, **extra):
@@ -580,7 +582,7 @@ def estilo(interactivo=True):
 
 def guardar(fig, nombre, carpeta, png=True):
     """Guarda pdf (+png) en `carpeta`. `nombre` arranca con el numero del
-    notebook: `f"{NB}_f01_<nombre>"` (README §1.9)."""
+    notebook: `f"{NB}_f01_<nombre>"` (CONVENCIONES.md §7)."""
     carpeta = Path(carpeta)
     carpeta.mkdir(parents=True, exist_ok=True)
     fig.savefig(carpeta / f"{nombre}.pdf", bbox_inches="tight")
@@ -653,7 +655,7 @@ def cargar_csvs(salidas, nb, patron="*", columna="especie"):
 
 
 # ---------------------------------------------------------------------------
-# Filtro de promiscuidad quimica (README §7.3, decidido: se aplica)
+# Filtro de promiscuidad quimica (CONVENCIONES.md §10, decidido: se aplica)
 # ---------------------------------------------------------------------------
 #
 # El paper 2016 (S3 Fig) excluye las relaciones de subestructura de las moleculas
@@ -674,12 +676,12 @@ def compuestos_promiscuos(salidas_analice=None):
     Es la salida del notebook `analiceDB/03_calidad_bioactividades.ipynb`: hay que
     correrlo antes que `huerfanas/`. Si falta, el error dice exactamente eso.
     """
-    salidas = Path(salidas_analice) if salidas_analice else (GON4 / "analiceDB_out")
+    salidas = Path(salidas_analice) if salidas_analice else (SALIDAS / "analiceDB_out")
     p = salidas / "03_compuestos_promiscuos.csv"
     if not p.exists():
         raise FileNotFoundError(
             f"falta {p}: correr analiceDB/03_calidad_bioactividades.ipynb antes "
-            f"que huerfanas/ (README §7.3, el filtro se aplica)")
+            f"que huerfanas/ (CONVENCIONES.md §10, el filtro se aplica)")
     return pd.read_csv(p)["drug_id"].astype("int64").unique()
 
 

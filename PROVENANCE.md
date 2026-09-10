@@ -68,6 +68,7 @@ Todas verificables en el código, con el comentario al lado.
 | 3.9 | La columna de especie que sale del nombre de archivo se convierte a entero cuando son todos dígitos | antes los códigos eran texto y la comparación funcionaba por accidente; con códigos numéricos, `especie == SP_FOCO` comparaba `"26"` contra `26` y no encontraba nada |
 | 3.10 | `cargar_subestructuras_crudas` recodifica los ids de `raw_data/` a los códigos de `DB/` | sin eso las salidas no cruzan contra `datos.bioact` y el conjunto llega vacío a `huerfanas/` sin error: los compuestos promiscuos pasaban de 7 a 30 falsos |
 | 3.11 | Las figuras se dibujan en `<carpeta>/figuras_<analisis>.py` y **sólo leen tablas** de `resultados/`; cada una declara cuáles (`python comun/figuras.py --lista`), y la corrida guarda todo lo que una figura necesita (p. ej. `02_ranking_26.csv` para la ROC, `01_control_v5.csv`) | regenerar una figura costaba la corrida entera: varias dependían de variables en memoria o se dibujaban antes de la corrida, y todas exigían cargar la base. **Descartado:** guardar los objetos intermedios en `pickle`, que acopla las figuras a versiones de pandas y no se puede leer ni comparar contra el oráculo. Al redibujarlas desde las tablas, tres figuras de la corrida anterior resultaron rotuladas con el código crudo (`0`, `1`, …) en lugar del nombre; en las dos matrices especie × especie la causa es que los encabezados leídos del CSV son texto y la búsqueda en `NOMBRE_CORTO` fallaba en silencio. Las figuras nuevas convierten el encabezado antes de buscar |
+| 3.12 | Las tablas de `resultados/` (53 MB) y sus `NN_meta.json` se versionan; las figuras no | quien corrige tiene que poder comprobar figuras y cifras sin pagar ~45 min de corrida con 20 procesos: con las tablas, `make verificar` lo hace en ~1 min. En un clon sin ellas no se regeneraba ninguna figura y la receta de entregables reescribía el informe con «??»; ahora `numeros.py` y `generar_pagina.py` se niegan a escribir si falta un dato. **Descartado:** versionar también las figuras, que se regeneran desde las tablas y duplicarían 30 archivos binarios; y no versionar nada, que dejaba la verificación atada a la corrida completa |
 
 ## 4. Qué es código propio y qué es librería
 
@@ -96,7 +97,7 @@ entre especies con distinta proporción de positivos.
 
 Tres niveles, del más barato al más caro.
 
-**Las pruebas** (`comun/tests/`, 51, corren en ~25 s). Integridad de las tablas,
+**Las pruebas** (`comun/tests/`, 53, corren en ~25 s). Integridad de las tablas,
 ausencia de fuga en el leave-one-species-out, métricas contra valores de
 referencia, rutas, y el entorno. Cuatro son específicas del port y cubren lo que
 puede romperse en silencio: que el filtro de positivos no quede vacío, que la

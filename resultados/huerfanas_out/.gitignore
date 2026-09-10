@@ -1,3 +1,7 @@
-*
+# Las tablas y los meta.json de la corrida SE VERSIONAN: con ellas las figuras
+# y las cifras de los entregables se regeneran en segundos, sin volver a
+# correr ningun notebook (README.md, "Tiempo de computo"). Las figuras no:
+# se dibujan desde estas tablas con `python comun/figuras.py`.
+!*.csv
+!*.json
 !.gitignore
-!figuras/

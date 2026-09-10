@@ -1,7 +1,7 @@
 # Compila el informe. `make` produce informe.pdf.
 #
 # Antes de compilar redibuja las figuras desde las tablas de resultados/ (sin
-# tocar la base: `comun/figuras.py`, ~30 s), las trae y verifica que estén
+# tocar la base: `comun/figuras.py`, ~40 s), las trae y verifica que estén
 # TODAS las que el .tex incluye: si falta una, LaTeX no
 # falla, escribe el nombre del archivo en el lugar de la figura y el PDF sale
 # con un hueco que se nota tarde.

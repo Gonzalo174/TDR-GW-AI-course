@@ -48,6 +48,18 @@ class TestRegistro(unittest.TestCase):
                 for t in f.lee:
                     self.assertTrue(t.endswith(".csv"), t)
 
+    def test_cada_figura_dice_que_la_verifica(self):
+        for nombre, f in REG.items():
+            with self.subTest(figura=nombre):
+                self.assertTrue(f.verifica.strip(), "falta `verifica=` en @figura")
+
+    def test_el_indice_esta_al_dia(self):
+        """FIGURAS.md se genera del registro: si alguien agrega o cambia una
+        figura sin regenerarlo, el índice que lee el corrector miente."""
+        actual = (RAIZ / "FIGURAS.md").read_text()
+        self.assertEqual(actual, figuras.indice(),
+                         "FIGURAS.md desactualizado: correr `python comun/figuras.py --indice`")
+
     def test_los_notebooks_no_dibujan_por_su_cuenta(self):
         """Ninguna celda de notebook arma o guarda una figura: eso vive en
         `figuras_*.py`. Si vuelve a pasar, esa figura sólo se regenera corriendo

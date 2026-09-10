@@ -1,18 +1,17 @@
 """
 funciones_huerfanas.py — pseudohuerfanas, cobertura de semilla y desorfanizacion.
 
-Es `tdr-graph/orphan_drugs_v4.ipynb` mas `reproducir_v6/{cobertura_semilla,
-desorfanizacion_global, inferencia_directa_indirecta, aplicacion_especie}` desarmados
-en funciones. El ciclo que las combina vive en la celda de corrida de cada
-notebook (README §1.2).
+Es el análisis de drogas huérfanas de la versión v3 del proyecto (fuera de este
+repositorio; ver `historia/`) desarmado en funciones. El ciclo que las combina vive en la celda de corrida de cada
+notebook (CONVENCIONES.md §2).
 
-Division (README §5):
+Division (CONVENCIONES.md §8):
   PRINCIPAL = cambia un numero que va al paper. AUXILIAR = no.
 
-**Filtro de promiscuidad**: por la decision del README §7.3 la capa quimica se
+**Filtro de promiscuidad**: por la decision del CONVENCIONES.md §10 la capa quimica se
 filtra ANTES de construir cualquier semilla, con `tdr.filtrar_capa_quimica()` y la
 lista que deja `analiceDB/03`. Los numeros de esta carpeta no son comparables con
-los de `gon3/resultados/pseudohuerfanas/`, que se calcularon sin filtrar.
+los de la versión v3 (fuera de este repositorio), que se calcularon sin filtrar.
 
 Paralelizacion por fork: los workers leen las tablas de globals del modulo, que el
 padre llena con `fijar_contexto()` antes de crear el pool.
@@ -28,7 +27,7 @@ import pandas as pd
 import tdr
 import nucleo as nf
 
-RSEED = 123457          # la semilla del muestreo de `orphan_drugs_v4.ipynb`
+RSEED = 123457          # la semilla del muestreo de la versión v3, para poder compararlas
 N_MUESTRA = 1000        # el paper 2016 toma 1 000 moleculas con un unico blanco
 
 # Contexto compartido con los procesos hijos (se llena con `fijar_contexto`).
@@ -201,7 +200,7 @@ def priorizar_droga(cid):
 
 
 def guardar_huerfanas(filas, salidas, nb, sp_code, sufijo="pseudohuerfanas"):
-    """Escribe `<salidas>/<nb>_<especie>_<sufijo>.csv` (README §1.9)."""
+    """Escribe `<salidas>/<nb>_<especie>_<sufijo>.csv` (CONVENCIONES.md §7)."""
     df = pd.DataFrame(filas)
     destino = Path(salidas) / f"{nb}_{sp_code}_{sufijo}.csv"
     df.to_csv(destino, index=False)
@@ -214,7 +213,7 @@ def guardar_huerfanas(filas, salidas, nb, sp_code, sufijo="pseudohuerfanas"):
 
 def cobertura_por_palanca(datos, palanca, muestra, umbral=0.8, mapa_kegg=None,
                           verbose=True):
-    """Cuánto sube la cobertura de semilla cada palanca del README §4.
+    """Cuánto sube la cobertura de semilla cada palanca que se evalúa en `huerfanas/02`.
 
     Las tres palancas sobre el 61 % de semilla nula, sin re-correr el modelo:
     lo que se mide es el techo que habilitaría cada una.
@@ -411,14 +410,14 @@ def parametros_optimos(salidas_genome=None, nb="02"):
     """Optimos por especie calculados en `genome_prioritization/02`.
 
     Devuelve `{sp: (alpha, beta, lambda_, gamma)}`. Falla con un mensaje claro si
-    el barrido todavia no se corrio: `huerfanas/` va despues (README §6.5).
+    el barrido todavia no se corrio: `huerfanas/` va despues (CONVENCIONES.md §9).
     """
-    salidas = Path(salidas_genome) if salidas_genome else (tdr.GON4 / "genome_prioritization_out")
+    salidas = Path(salidas_genome) if salidas_genome else (tdr.SALIDAS / "genome_prioritization_out")
     p = salidas / f"{nb}_optimos_por_especie.csv"
     if not p.exists():
         raise FileNotFoundError(
             f"falta {p}: correr genome_prioritization/01 y 02 antes que huerfanas/ "
-            f"(README §6, pasos 3 y 5)")
+            f"(CONVENCIONES.md §9, pasos 3 y 5)")
     o = pd.read_csv(p)
     return {r["especie"]: (r["alpha"], r["beta"],
                            None if pd.isna(r["lambda_"]) else r["lambda_"], r["gamma"])
@@ -451,7 +450,7 @@ def resumen_frank(df, corte=0.1):
 
 
 def escribir_meta(salidas, nb, **campos):
-    """Reexporta `tdr.escribir_meta` (README §1.4)."""
+    """Reexporta `tdr.escribir_meta` (CONVENCIONES.md §4)."""
     return tdr.escribir_meta(salidas, nb, **campos)
 
 

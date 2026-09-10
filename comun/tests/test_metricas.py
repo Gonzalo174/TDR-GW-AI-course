@@ -40,7 +40,7 @@ class TestMcClish(unittest.TestCase):
         self.assertTrue(np.all(np.diff(m) > 0))
 
     def test_formula_invertida_del_notebook(self):
-        """La fórmula de full_genome_v4 (0.5*(1-(p-0.005)/0.095)) es decreciente y
+        """La fórmula de la versión v3 (0.5*(1-(p-0.005)/0.095)) es decreciente y
         cae fuera de [0.5, 1]: este test documenta por qué se reemplaza."""
         p = np.array([0.05, 0.5, 1.0])
         mala = 0.5 * (1 - (p - 0.005) / 0.095)

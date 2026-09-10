@@ -1,7 +1,7 @@
-*
+# Las tablas y los meta.json de la corrida SE VERSIONAN: con ellas las figuras
+# y las cifras de los entregables se regeneran en segundos, sin volver a
+# correr ningun notebook (README.md, "Tiempo de computo"). Las figuras no:
+# se dibujan desde estas tablas con `python comun/figuras.py`.
+!*.csv
+!*.json
 !.gitignore
-!figuras/
-# Excepcion: `huerfanas/` necesita esta tabla y producirla exige `raw_data/`,
-# que no se publica (ver PROVENANCE.md §6). Se versiona ya calculada, igual que
-# se versiona `DB/` en vez del pipeline que la genera.
-!03_compuestos_promiscuos.csv

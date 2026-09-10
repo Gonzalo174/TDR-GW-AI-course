@@ -1,0 +1,12 @@
+capa,entidad,n
+2 - proteínas,proteínas (V_P),399353
+2 - proteínas,especies,30
+3 - afiliaciones,categorías InterPro,14083
+3 - afiliaciones,categorías OrthoMCL,76157
+2-3 (afiliación),enlaces proteína-categoría,769661
+1-2 (bioactividad),registros compuesto-proteína,1983780
+1-2 (bioactividad),enlaces E_DP positivos,248545
+1-2 (bioactividad),enlaces E_DP negativos,101973
+1-2 (bioactividad),proteínas druggables,19650
+1 - compuestos,compuestos con bioactividad,432930
+fenotípica,registros compuesto-organismo,263128

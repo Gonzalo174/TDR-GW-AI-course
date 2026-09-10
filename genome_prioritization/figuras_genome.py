@@ -33,7 +33,9 @@ def _etiqueta(sp):
 
 # --- 01 · barrido -----------------------------------------------------------
 
-@figura(G, "01_f01_positivos_por_especie", lee="01_resumen_especies.csv")
+@figura(G, "01_f01_positivos_por_especie",
+        verifica='Deriva de la base; el total de druggables lo fija `test_resultados`.',
+        lee="01_resumen_especies.csv")
 def positivos_por_especie(t, plt):
     """Blancos druggables por especie: los positivos que el barrido recupera."""
     e = t("01_resumen_especies.csv").sort_values("N_druggable")
@@ -47,7 +49,9 @@ def positivos_por_especie(t, plt):
     return fig
 
 
-@figura(G, "01_f02_control_v5", lee="01_control_v5.csv")
+@figura(G, "01_f02_control_v5",
+        verifica='Es el control externo (CONVENCIONES §3): `test_los_optimos_reproducen_el_control` exige los 16 óptimos iguales y ΔAUC01 < 1e-9.',
+        lee="01_control_v5.csv")
 def control_v5(t, plt):
     """AUC01 de esta corrida contra la del control independiente."""
     c = t("01_control_v5.csv")
@@ -63,7 +67,9 @@ def control_v5(t, plt):
     return fig
 
 
-@figura(G, "01_f03_auc01_por_especie", lee=BARRIDO)
+@figura(G, "01_f03_auc01_por_especie",
+        verifica='Barrido idéntico al oráculo v4 (149 de 149 columnas); óptimos iguales al control (`test_resultados`); `test_fuga` (sin fuga en el leave-one-species-out) y `test_metricas` (pAUC y McClish).',
+        lee=BARRIDO)
 def auc01_por_especie(t, plt):
     """AUC01 en el óptimo de cada especie, bajo leave-one-species-out."""
     o = _optimos(_barrido(t)).sort_values("AUC01")
@@ -81,6 +87,7 @@ def auc01_por_especie(t, plt):
 # --- 02 · óptimo y consistencia --------------------------------------------
 
 @figura(G, f"02_f01_roc_{tdr.SP_FOCO}",
+        verifica='La AUC01 de la leyenda se recalcula del ranking guardado y coincide con la del óptimo en `02_optimos_por_especie`; `test_metricas`, `test_fuga`.',
         lee=(f"02_ranking_{tdr.SP_FOCO}.csv", "02_optimos_por_especie.csv"))
 def roc_foco(t, plt):
     """ROC global y distribución de scores de la especie foco, en su óptimo."""
@@ -121,7 +128,9 @@ def roc_foco(t, plt):
     return fig
 
 
-@figura(G, "02_f02_grilla_beta", lee=BARRIDO)
+@figura(G, "02_f02_grilla_beta",
+        verifica='El barrido que resume es idéntico al del oráculo v4 (`10_equivalencia`).',
+        lee=BARRIDO)
 def grilla_beta(t, plt):
     """Efecto de cada parámetro sobre la AUC01; el panel de beta es la
     comparación G'r (beta=0) vs G'rk (beta>0)."""
@@ -144,7 +153,9 @@ def grilla_beta(t, plt):
     return fig
 
 
-@figura(G, "02_f03_plateau", lee="02_plateau.csv")
+@figura(G, "02_f03_plateau",
+        verifica='`02_plateau` idéntica a la del oráculo v4.',
+        lee="02_plateau.csv")
 def plateau(t, plt):
     """Caída relativa de AUC01 al top-K por especie: cuán plano es el óptimo."""
     pl = t("02_plateau.csv").sort_values("caida_top20")
@@ -159,7 +170,9 @@ def plateau(t, plt):
     return fig
 
 
-@figura(G, "02_f04_consistencia_especies", lee="02_spearman_especies.csv")
+@figura(G, "02_f04_consistencia_especies",
+        verifica='`02_spearman_especies` idéntica a la del oráculo v4.',
+        lee="02_spearman_especies.csv")
 def consistencia_especies(t, plt):
     """Concordancia (Spearman) entre especies sobre el perfil de la grilla."""
     sp = t("02_spearman_especies.csv", index_col=0)
@@ -177,7 +190,9 @@ def consistencia_especies(t, plt):
     return fig
 
 
-@figura(G, "02_f05_enriquecimiento_topk", lee="02_consistencia.csv")
+@figura(G, "02_f05_enriquecimiento_topk",
+        verifica='`02_consistencia` idéntica a la del oráculo v4.',
+        lee="02_consistencia.csv")
 def enriquecimiento_topk(t, plt):
     """Enriquecimiento de cada valor de parámetro en el top-10 de cada especie."""
     frec = t("02_consistencia.csv")
