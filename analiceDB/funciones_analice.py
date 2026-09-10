@@ -181,7 +181,7 @@ def conectividad_entre_especies(datos, por="anotaciones"):
     return m
 
 
-def cargar_subestructuras_crudas(raw=None, mapeo=None):
+def cargar_subestructuras_crudas(raw=None, mapeo=None, exigir_mapa=False):
     """Relaciones de subestructura crudas + pesos moleculares, mapeadas a `drug_id`.
 
     Lee `raw_data/subestructures_chembl35_biolip.txt` (1 065 346 relaciones) y
@@ -197,6 +197,11 @@ def cargar_subestructuras_crudas(raw=None, mapeo=None):
 
     Ni los crudos ni los mapeos se publican: en un clon del repositorio esta
     funcion no corre, y las salidas de `analiceDB/03` vienen ya calculadas.
+
+    `exigir_mapa=True` convierte el aviso en error. Lo usa la corrida de
+    `analiceDB/03`, cuya lista de promiscuos consume `huerfanas/`: sin el mapa,
+    esa lista sale con 30 compuestos falsos en vez de los verdaderos, y nada
+    falla (PROVENANCE.md, 3.10).
     """
     raw = Path(raw) if raw else tdr.RAW
     sub_p = raw / "subestructures_chembl35_biolip.txt"
@@ -231,6 +236,11 @@ def cargar_subestructuras_crudas(raw=None, mapeo=None):
         sub = sub[(sub["padre"] != tdr.FALTANTE) & (sub["hijo"] != tdr.FALTANTE)]
         comp["drug_id"] = comp["drug_id"].map(mc).fillna(tdr.FALTANTE).astype("int64")
         comp = comp[comp["drug_id"] != tdr.FALTANTE]
+    elif exigir_mapa:
+        raise FileNotFoundError(
+            "falta mapa_compuesto.csv: definir TDR_MAPEOS con la carpeta de los mapeos "
+            "privados. Sin el mapa los ids crudos no cruzan contra DB/ y la lista de "
+            "promiscuos sale falsa (PROVENANCE.md, 3.10)")
     else:
         print("AVISO: sin mapa_compuesto; los drug_id quedan en la notacion "
               "original y NO cruzan contra DB/ (ver TDR_MAPEOS)", flush=True)
@@ -271,92 +281,5 @@ def escribir_meta(salidas, nb, **campos):
     return tdr.escribir_meta(salidas, nb, **campos)
 
 
-# --- figuras ---------------------------------------------------------------
-
-def fig_disponibilidad(disp, plt):
-    """Proteínas vs druggables por especie, con la recta de ajuste log-log."""
-    d = disp[disp["sp_id"].isin(tdr.ESPECIES_16) & (disp["druggables"] > 0)]
-    fig, ax = plt.subplots(figsize=(5.5, 4.5), tight_layout=True)
-    ax.scatter(d["proteinas"], d["druggables"], color=tdr.S1, zorder=3)
-    for _, r in d.iterrows():
-        ax.annotate(tdr.NOMBRE_CORTO.get(r["sp_id"], r["sp_id"]),
-                    (r["proteinas"] * 1.04, r["druggables"]), fontsize=7, color=tdr.INK2)
-    ax.set_xscale("log")
-    ax.set_yscale("log")
-    ax.set_xlabel("proteínas")
-    ax.set_ylabel("druggables")
-    ax.set_title("Disponibilidad de evidencia por especie")
-    return fig
-
-
-def fig_grado(grado, plt):
-    """Distribución de grado de las categorías, por fuente (cola pesada)."""
-    fig, ax = plt.subplots(figsize=(5.5, 4), tight_layout=True)
-    bins = np.logspace(0, 4, 19)
-#     bins = np.logspace(0, np.log10(max(grado["grado"].max(), 10)), 40)
-    for db, etiqueta, color in [("ip", "InterPro", tdr.S1), ("omcl", "OrthoMCL", tdr.S2)]:
-        g = grado.loc[grado["db"] == db, "grado"]
-        ax.hist(g, bins=bins, histtype="step", color=color, label=f"{etiqueta} ({len(g)})")
-    ax.set_xscale("log")
-    ax.set_yscale("log")
-    ax.set_xlabel("proteínas anotadas a la categoría")
-    ax.set_ylabel("categorías")
-    ax.legend(fontsize=8)
-    return fig
-
-
-def fig_conectividad(matriz, plt, titulo=""):
-    """Matriz especie x especie de elementos compartidos."""
-    fig, ax = plt.subplots(figsize=(6, 5), tight_layout=True)
-    m = np.log10(matriz.values + 1)
-    im = ax.imshow(m, cmap="Blues")
-    etiquetas = [tdr.NOMBRE_CORTO.get(s, s) for s in matriz.columns]
-    ax.set_xticks(range(len(etiquetas)))
-    ax.set_xticklabels(etiquetas, rotation=90, fontsize=7)
-    ax.set_yticks(range(len(etiquetas)))
-    ax.set_yticklabels(etiquetas, fontsize=7)
-    ax.grid(False)
-    ax.set_title(titulo)
-    
-    # Crear el colorbar
-    cbar = fig.colorbar(im, ax=ax, label="Cantidad compartida")
-    
-    # Configurar los ticks del colorbar manualmente
-    manual_ticks = [0, 1, 10, 100, 1000, 10000]  # Valores originales deseados
-    log_ticks = [np.log10(t + 1) for t in manual_ticks]  # Convertir a escala logarítmica
-    cbar.set_ticks(log_ticks)  # Asignar los ticks al colorbar
-    cbar.ax.set_yticklabels([f"{t}" for t in manual_ticks])  # Etiquetas manuales
-    
-    return fig
-
-
-def fig_promiscuidad(por_compuesto, curva, plt):
-    """MW vs N_parentales con el criterio del paper, y curva de filtrado."""
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4), tight_layout=True)
-
-    d = por_compuesto.dropna(subset=["molweight"])
-    ax1.scatter(d["molweight"], d["n_parentales"], s=3, alpha=0.2, color=tdr.MUTED)
-    sel = d[(d["molweight"] < tdr.MW_PROMISCUIDAD) &
-            (d["n_parentales"] > tdr.N_PARENTALES_PROMISCUIDAD)]
-    ax1.scatter(sel["molweight"], sel["n_parentales"], s=12, color=tdr.ST_CRIT,
-                label=f"filtrados ({len(sel)})")
-    ax1.axvline(tdr.MW_PROMISCUIDAD, color=tdr.S2, lw=1, ls="--")
-    ax1.axhline(tdr.N_PARENTALES_PROMISCUIDAD, color=tdr.S2, lw=1, ls="--")
-    ax1.set_yscale("log")
-    ax1.set_xlabel("peso molecular (Da)")
-    ax1.set_ylabel("superestructuras que lo contienen")
-    ax1.set_xlim(0, 600)
-    ax1.legend(fontsize=8)
-    ax1.set_title("Criterio del paper (S3 Fig)")
-
-    for umbral, color in zip(sorted(curva["umbral_promiscuidad"].unique()),
-                             tdr.ORD + [tdr.S2]):
-        c = curva[curva["umbral_promiscuidad"] == umbral]
-        ax2.plot(c["mw_max"], 100 * c["aristas_filtrables"] / c["aristas_filtrables"].max(),
-                 color=color, label=f"N_parentales > {umbral}")
-    ax2.axvline(tdr.MW_PROMISCUIDAD, color=tdr.MUTED, lw=1, ls="--")
-    ax2.set_xlabel("umbral de peso molecular (Da)")
-    ax2.set_ylabel("aristas filtrables (% del máximo)")
-    ax2.legend(fontsize=8)
-    ax2.set_title("Sensibilidad al umbral")
-    return fig
+# Las figuras viven en `figuras_analice.py`: se dibujan desde las tablas de
+# `resultados/`, sin cargar la base (ver `comun/figuras.py`).

@@ -24,7 +24,11 @@ base real (privada)                    este repositorio
         ▼                                     │
   mapeos/ (privado, no se publica)            ▼
                                        resultados/<analisis>_out/
-                                         tablas + figuras + NN_meta.json
+                                         tablas + NN_meta.json
+                                              │
+                                              │  comun/figuras.py (sin tocar la base)
+                                              ▼
+                                       resultados/<analisis>_out/figuras/
                                               │
                                               ▼
                                        verificacion/10_equivalencia.ipynb
@@ -63,6 +67,7 @@ Todas verificables en el código, con el comentario al lado.
 | 3.8 | El faltante de `lambda_` (que marca el modo híbrido) se rotula `"nan"` a mano, no con `astype(str)` | en pandas 3 `astype(str)` **conserva** el faltante en vez de convertirlo a la cadena `"nan"`, y entonces `sorted` compara `str` contra `float` y matplotlib rechaza el valor. Se escribe explícito, que funciona igual en pandas 2 y 3 |
 | 3.9 | La columna de especie que sale del nombre de archivo se convierte a entero cuando son todos dígitos | antes los códigos eran texto y la comparación funcionaba por accidente; con códigos numéricos, `especie == SP_FOCO` comparaba `"26"` contra `26` y no encontraba nada |
 | 3.10 | `cargar_subestructuras_crudas` recodifica los ids de `raw_data/` a los códigos de `DB/` | sin eso las salidas no cruzan contra `datos.bioact` y el conjunto llega vacío a `huerfanas/` sin error: los compuestos promiscuos pasaban de 7 a 30 falsos |
+| 3.11 | Las figuras se dibujan en `<carpeta>/figuras_<analisis>.py` y **sólo leen tablas** de `resultados/`; cada una declara cuáles (`python comun/figuras.py --lista`), y la corrida guarda todo lo que una figura necesita (p. ej. `02_ranking_26.csv` para la ROC, `01_control_v5.csv`) | regenerar una figura costaba la corrida entera: varias dependían de variables en memoria o se dibujaban antes de la corrida, y todas exigían cargar la base. **Descartado:** guardar los objetos intermedios en `pickle`, que acopla las figuras a versiones de pandas y no se puede leer ni comparar contra el oráculo. Al redibujarlas desde las tablas, tres figuras de la corrida anterior resultaron rotuladas con el código crudo (`0`, `1`, …) en lugar del nombre; en las dos matrices especie × especie la causa es que los encabezados leídos del CSV son texto y la búsqueda en `NOMBRE_CORTO` fallaba en silencio. Las figuras nuevas convierten el encabezado antes de buscar |
 
 ## 4. Qué es código propio y qué es librería
 
@@ -91,7 +96,7 @@ entre especies con distinta proporción de positivos.
 
 Tres niveles, del más barato al más caro.
 
-**Las pruebas** (`comun/tests/`, 38, corren en ~15 s). Integridad de las tablas,
+**Las pruebas** (`comun/tests/`, 51, corren en ~25 s). Integridad de las tablas,
 ausencia de fuga en el leave-one-species-out, métricas contra valores de
 referencia, rutas, y el entorno. Cuatro son específicas del port y cubren lo que
 puede romperse en silencio: que el filtro de positivos no quede vacío, que la
@@ -134,4 +139,8 @@ verificable:
 - **los nombres de las anotaciones** (3.6);
 - **la identidad de las especies**: por diseño;
 - **`analiceDB/cargar_subestructuras_crudas`**: lee `raw_data/`, que no se
-  publica. Se puede apuntar a una copia local con `TDR_RAW`.
+  publica, y recodifica sus ids con `mapa_compuesto.csv`, que tampoco. Con una
+  copia local se apunta a los dos con `TDR_RAW` y `TDR_MAPEOS`; la corrida de
+  `analiceDB/03` exige el mapa y falla si falta, porque sin él la lista de
+  promiscuos sale con 30 compuestos falsos (3.10). Esa lista se versiona ya
+  calculada.

@@ -23,7 +23,7 @@
 \input{numeros}
 
 \title{\vspace{-1.5cm}Priorización de blancos terapéuticos sobre una red multicapa\\[.3em]
-\large Reproducción sobre una base codificada, con la procedencia registrada}
+\large Propagación de evidencia entre organismos y desorfanización de compuestos}
 \author{Gonzalo Giordano}
 \date{Corrida del \FechaCorrida\ \\[.2em]
 \small\url{https://github.com/Gonzalo174/TDR-GW-AI-course}}
@@ -35,229 +35,333 @@
 \noindent
 Dado el genoma de un organismo, ordenar sus proteínas por cuán prometedoras son
 como blanco de un fármaco. La evidencia experimental es escasa y está repartida
-de forma muy desigual entre organismos, de modo que la estrategia es propagar lo
-que se sabe de unas proteínas a otras sobre una red de tres capas: compuestos,
-proteínas y anotaciones funcionales. Este informe reproduce el análisis completo
-sobre una versión \emph{codificada} de la base --- toda columna es un entero y los
-diccionarios que traducen esos enteros son privados --- y documenta la procedencia
-de cada resultado junto con la verificación que lo sostiene. La reproducción
-recupera \NIdenticas\ de \NComparadas\ columnas idénticas a un oráculo
-independiente, con \NDiscrepancias\ discrepancias.
+de forma muy desigual entre organismos, así que la estrategia es propagarla sobre
+una red de tres capas: compuestos, proteínas y anotaciones funcionales. Evaluada
+dejando afuera toda la evidencia del organismo que se prioriza, la propagación
+supera al azar en los \NSobreAzar\ organismos, con una mediana de AUC01 de
+\AUCMediana; los \NProtozoosArriba\ primeros puestos son los \NProtozoos\
+protozoos parásitos, y el único parámetro que decide el resultado es la
+penalización de las categorías grandes. El mismo modelo aplicado a compuestos
+con un único blanco conocido recupera ese blanco en el \PctRecuperadas\,\% de los
+casos, y la razón está medida: el \PctSinSemilla\,\% no tiene ningún vecino
+químico con blanco conocido, y cuando la semilla sí comparte una anotación con el
+blanco la recuperación es del \PctRecInformativa\,\%. Todo se corrió sobre una
+versión codificada de la base, con la procedencia de cada resultado registrada.
 \end{abstract}
 
 \section{El problema}
 
 Un programa de descubrimiento de fármacos para una enfermedad desatendida
-empieza por elegir qué proteína atacar. Esa elección se hace con poca evidencia:
-para la mayoría de los organismos de interés se conocen apenas decenas de
-proteínas con actividad medida, sobre genomas de miles.
+empieza por elegir qué proteína atacar, y esa elección se hace con poca
+evidencia: para la mayoría de los organismos de interés se conocen apenas
+decenas de proteínas con actividad medida, sobre genomas de miles.
 
 La hipótesis que explota este trabajo es que la evidencia se puede transferir.
 Dos proteínas que comparten un dominio funcional tienden a comportarse parecido
 frente a un compuesto, y dos compuestos químicamente similares tienden a actuar
 sobre las mismas proteínas. Formalizado, eso es una red de tres capas sobre la
 que se propaga una señal desde las proteínas con evidencia hacia las que no la
-tienen.
+tienen \cite{berenstein2016}. El trabajo responde dos preguntas con esa red:
+\emph{¿qué tan bien prioriza el genoma de un organismo del que no se sabe nada?}
+(Sección~\ref{sec:prio}) y \emph{¿puede proponer el blanco de un compuesto que
+no tiene ninguno?} (Sección~\ref{sec:huerf}).
 
-La base de este trabajo tiene \NProteinas\ proteínas de \NEspecies\ organismos,
-\NPositivos\ enlaces de bioactividad positiva y \NAfiliaciones\ afiliaciones a
-\NInterPro\ dominios InterPro y \NOrthoMCL\ grupos de ortología.
+\section{Datos y método}
 
-\section{Los datos y lo que se les hizo}
+La base tiene \NProteinas\ proteínas de \NEspecies\ organismos con evidencia
+suficiente, \NPositivos\ enlaces de bioactividad positiva y \NAfiliaciones\
+afiliaciones a \NInterPro\ dominios InterPro y \NOrthoMCL\ grupos de ortología.
+La evidencia por organismo va de \DrugMin\ a \DrugMax\ proteínas con actividad
+conocida (Figura~\ref{fig:disp}): esa desigualdad es la premisa del método.
 
-La base publicada en el repositorio no es la original: se derivó de ella en tres
-operaciones, cada una con una alternativa defendible que se descartó por una
-razón explícita (Cuadro~\ref{tab:decisiones}).
+La versión publicada en el repositorio está \emph{codificada} ---toda columna es
+un entero y los diccionarios que traducen esos enteros son privados--- y
+\emph{recortada}: se eliminaron las componentes conexas del grafo de similitud
+química sin ningún compuesto de bioactividad positiva
+(\NCompuestosAntes${\to}$\NCompuestosDespues\ compuestos), que por construcción no
+pueden aportar a una propagación desde evidencia positiva. Los organismos se
+identifican por código y por tipo; el nombre no se publica en ninguna parte.
 
-\begin{table}[h]
-\centering\small
-\caption{Decisiones sobre los datos y su alternativa descartada.}
-\label{tab:decisiones}
-\begin{tabular}{@{}p{2.4cm}p{5.6cm}p{5.6cm}@{}}
-\toprule
-\textbf{decisión} & \textbf{qué se hizo} & \textbf{alternativa descartada} \\
-\midrule
-recorte &
-Se eliminan las componentes conexas del grafo de similitud química sin ningún
-compuesto de bioactividad positiva: \NCompuestosAntes${\to}$\NCompuestosDespues\
-compuestos &
-Publicar la base entera: \(941\) MB sólo de aristas, inviable en un repositorio \\
-codificación &
-Toda notación propia pasa a entero consecutivo en orden aleatorio con semilla
-fija &
-Publicar los identificadores reales, que es lo que se quiere evitar \\
-empaquetado &
-La capa de aristas va partida en dos archivos comprimidos, con las \NAristas\
-aristas completas &
-Subir el umbral de similitud hasta que entre en un archivo: cuesta compuestos \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-El recorte no es neutral y no se pretende que lo sea: elimina de la base todo lo
-que no puede contribuir a una propagación desde evidencia positiva. La
-Figura~\ref{fig:comp} lo muestra de la forma más directa posible: en la base
-recortada, la distribución de tamaños de las componentes conexas y la
-distribución de las componentes que contienen bioactividad positiva coinciden
-exactamente, porque por construcción no queda ninguna que no la tenga.
-
-\begin{figure}[h]
+\begin{figure}[!htb]
 \centering
-\includegraphics[width=.72\textwidth]{figuras/02_f02_componentes_conexas.pdf}
-\caption{Tamaño de las componentes conexas del grafo de similitud química. Las
-dos series se superponen: tras el recorte no queda ninguna componente sin
-bioactividad positiva. Es una verificación de que el recorte hizo exactamente lo
-que declara.}
-\label{fig:comp}
-\end{figure}
-
-La desigualdad de evidencia entre organismos, que es la premisa del método,
-abarca más de un orden de magnitud: entre \DrugMin\ y \DrugMax\ proteínas con
-actividad conocida según el organismo (Figura~\ref{fig:disp}). Los organismos se
-identifican por código y por tipo; el nombre no se publica en ninguna parte del
-repositorio.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=.72\textwidth]{figuras/01_f01_disponibilidad.pdf}
+\includegraphics[width=.6\textwidth]{figuras/01_f01_disponibilidad.pdf}
 \caption{Evidencia disponible por organismo, en escala logarítmica en los dos
 ejes.}
 \label{fig:disp}
 \end{figure}
 
-\section{El método}
+\textbf{Propagación.} Las anotaciones se puntúan por cuánto se enriquecen en
+proteínas ya conocidas como blanco: un test exacto de Fisher unilateral por
+categoría, corregido con Benjamini--Hochberg \cite{benjamini1995}. Esa
+puntuación pondera la propagación hacia las proteínas sin evidencia, que tiene
+cuatro parámetros: $\alpha$ (cuánto pesa la puntuación de la categoría),
+$\beta$ (cuánto se penaliza a las categorías grandes; $\beta=0$ es la red
+$G'_r$ y $\beta>0$ la $G'_{rk}$), $\lambda$ y $\gamma$ (cómo se combinan las
+categorías de una proteína).
 
-Las anotaciones se puntúan primero por cuánto se enriquecen en proteínas ya
-conocidas como blanco: un test exacto de Fisher unilateral por categoría,
-corregido por comparaciones múltiples con Benjamini--Hochberg
-\cite{benjamini1995}. Esa puntuación pondera después la propagación hacia las
-proteínas sin evidencia. El esquema completo, con sus cuatro parámetros, es el
-de \cite{berenstein2016}.
+\textbf{Métrica.} El área parcial bajo la curva ROC restringida a
+$\mathrm{FPR}\le 0.10$, corregida por McClish \cite{mcclish1989} para que el
+azar valga $0.5$ y el clasificador perfecto $1.0$ (AUC01). Sólo importa el
+extremo del ranking: nadie va a ensayar más allá de las primeras decenas de
+proteínas. La pAUC se integra interpolando el punto exacto
+$(\mathrm{FPR}_{\max}, \mathrm{TPR})$; truncar en el último punto, que es lo
+directo, subestima el área.
 
-La métrica es el área parcial bajo la curva ROC restringida a
-\(\mathrm{FPR}\le 0.10\), corregida por McClish \cite{mcclish1989} para que el
-azar valga \(0.5\) y el clasificador perfecto \(1.0\). La restricción no es
-cosmética: sólo importa el extremo del ranking, porque nadie va a ensayar
-experimentalmente más allá de las primeras decenas de proteínas.
-
-Un detalle de implementación con consecuencia numérica: la pAUC se calcula
-interpolando el punto exacto \((\mathrm{FPR}_{\max}, \mathrm{TPR})\) antes de
-integrar. Truncar en el último punto con \(\mathrm{FPR}\le \mathrm{FPR}_{\max}\),
-que es lo directo, subestima el área.
-
-La validación es \emph{leave-one-species-out}: para evaluar un organismo se
+\textbf{Validación.} \emph{Leave-one-species-out}: para evaluar un organismo se
 retira toda su evidencia de la semilla y se lo prioriza como si no se supiera
-nada de él. Que eso esté bien hecho no se asume, se verifica: hay una prueba
-dedicada que comprueba que ninguna proteína del organismo evaluado sobrevive en
-la semilla, con su control negativo al lado.
+nada de él. Una prueba dedicada comprueba que ninguna proteína del organismo
+evaluado sobrevive en la semilla, con su control negativo al lado.
 
-\section{Resultados}
+\section{Priorización de genoma completo}
+\label{sec:prio}
 
-En su óptimo, la priorización alcanza una mediana de \AUCMediana\ de AUC01 entre
-los \NEspeciesOpt\ organismos evaluados, con un rango de \AUCMin\ a \AUCMax, y
-supera el azar en \NSobreAzar\ de ellos (Figura~\ref{fig:auc}).
+Para cada organismo se barrieron las 120 combinaciones válidas de los cuatro
+parámetros. En su óptimo, la priorización alcanza una mediana de AUC01 de
+\AUCMediana\ entre los \NEspeciesOpt\ organismos, con un rango de \AUCMin\ a
+\AUCMax, y supera el azar en los \NSobreAzar\ (Figura~\ref{fig:auc},
+Cuadro~\ref{tab:opt}). El orden no es arbitrario: los \NProtozoosArriba\ primeros
+puestos son los \NProtozoos\ protozoos parásitos, y los últimos son bacterias y
+hongos.
 
-\begin{figure}[h]
+\begin{figure}[!htb]
 \centering
-\includegraphics[width=.72\textwidth]{figuras/01_f03_auc01_por_especie.pdf}
-\caption{Desempeño por organismo en su óptimo, bajo leave-one-species-out. La
+\includegraphics[width=.8\textwidth]{figuras/01_f03_auc01_por_especie.pdf}
+\caption{AUC01 en el óptimo de cada organismo, bajo leave-one-species-out. La
 línea punteada marca el azar.}
 \label{fig:auc}
 \end{figure}
 
-Un número óptimo sólo significa algo si el óptimo no es un pico casual. La
-Figura~\ref{fig:plateau} muestra cuán plano es: el desempeño se sostiene en un
-entorno amplio de la grilla de parámetros, de modo que la elección no es frágil.
+\begin{table}[!htb]
+\centering\small
+\caption{Óptimo por organismo. $\lambda$ híbrido es el modo que combina las
+categorías con $\gamma$.}
+\label{tab:opt}
+\input{tabla_optimos}
+\end{table}
 
-\begin{figure}[h]
+La Figura~\ref{fig:roc} muestra qué significa ese número para el organismo foco
+del trabajo, un protozoo parásito (sp\,26): AUC global de \AUCGlobalFoco\ y
+AUC01 de \AUCFoco. La distribución de puntajes explica la forma de la curva: la
+mayoría de sus \NDrugFoco\ proteínas druggables recibe un puntaje en la cola alta,
+pero \NSinPuntajeFoco\ no reciben ninguno, porque no comparten anotación con nada
+que tenga evidencia: son las que la curva sólo alcanza al final.
+
+\begin{figure}[!htb]
 \centering
-\includegraphics[width=.72\textwidth]{figuras/02_f03_plateau.pdf}
-\caption{Estabilidad del óptimo en la grilla de parámetros.}
+\includegraphics[width=\textwidth]{figuras/02_f01_roc_26.pdf}
+\caption{Organismo foco en su óptimo. Izquierda: ROC global, con el corte de
+$\mathrm{FPR}=0.1$ que define la AUC01. Derecha: puntaje de propagación (NDS)
+de las proteínas druggables frente al resto.}
+\label{fig:roc}
+\end{figure}
+
+\textbf{Qué decide el resultado.} De los cuatro parámetros, sólo $\beta$ mueve
+la AUC01 de forma consistente (Figura~\ref{fig:beta}): penalizar a las
+categorías grandes mejora la priorización, y el óptimo tiene $\beta>0$ en
+\NBetaPositivo\ de los \NEspeciesOpt\ organismos. Contado sobre las diez mejores
+combinaciones de cada organismo, $\beta=1$ aparece \EnrBetaUno\ veces más de lo
+que daría el azar y $\beta=0$ apenas \EnrBetaCero; el \PctTopBetaPositivo\,\% de
+esas combinaciones tiene $\beta>0$. $\alpha$, $\lambda$ y $\gamma$ casi no
+cambian la mediana.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{figuras/02_f02_grilla_beta.pdf}
+\caption{AUC01 de las 120 combinaciones por organismo, agrupadas por el valor de
+cada parámetro. El panel de $\beta$ compara $G'_r$ ($\beta=0$) con $G'_{rk}$.}
+\label{fig:beta}
+\end{figure}
+
+\textbf{Qué tan firme es el óptimo.} Un número óptimo sólo significa algo si no
+es un pico casual. En todos los organismos, las veinte mejores combinaciones
+quedan a menos del \CaidaTopVeinteMax\,\% de la AUC01 máxima
+(Figura~\ref{fig:plateau}): el óptimo es una meseta, y la elección de parámetros
+no es frágil. Además, el perfil de la grilla se parece entre organismos: la
+correlación de Spearman mediana entre pares es \SpearmanMediana, y es positiva
+en el \PctSpearmanPositivo\,\% de los pares. Los parámetros que funcionan en un
+organismo funcionan en los demás.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.8\textwidth]{figuras/02_f03_plateau.pdf}
+\caption{Caída relativa de la AUC01 entre el óptimo y la $K$-ésima mejor
+combinación, por organismo.}
 \label{fig:plateau}
 \end{figure}
 
-\section{Verificación}
+\section{Desorfanización de compuestos}
+\label{sec:huerf}
 
-Tres controles, del más barato al más caro.
+La segunda pregunta invierte la dirección: dado un compuesto sin blanco
+conocido, proponer uno. Para poder medir el acierto se usan
+\emph{pseudohuérfanas}: compuestos con exactamente un blanco conocido en un
+organismo (\NKUno\ en la base), a los que se les borra toda su bioactividad. La
+semilla se arma entonces desde su vecindario químico ---los compuestos similares
+que sí tienen blanco---, se propaga con los parámetros óptimos del organismo, y
+se mide la posición relativa del blanco verdadero entre las proteínas del
+organismo (\emph{frank}; se lo cuenta recuperado si $\mathrm{frank}<0.1$). Se
+evaluaron \NPseudo\ pseudohuérfanas, hasta mil por organismo.
 
-\textbf{Las pruebas.} \NPruebas\ pruebas que corren en unos quince segundos:
-integridad de las tablas, ausencia de fuga en la validación cruzada, las
-métricas contra valores de referencia, las rutas y el entorno.
+\textbf{El resultado global es bajo, y la causa está medida.} El blanco se
+recupera en el \PctRecuperadas\,\% de los casos. La Figura~\ref{fig:semilla}
+muestra por qué: la recuperación la decide la \emph{clase de semilla}, no el
+modelo. El \PctSinSemilla\,\% de las pseudohuérfanas no tiene ningún vecino
+químico con blanco conocido (semilla nula), y no hay propagación posible. De
+las que tienen semilla, \NNoInformativa\ la tienen \emph{no informativa}:
+ninguna de sus proteínas comparte una anotación con el blanco verdadero, y la
+recuperación es del \PctRecNoInformativa\,\%. Las \NInformativa\ restantes, con
+al menos una anotación en común, se recuperan en el \PctRecInformativa\,\%.
 
-\textbf{El control externo.} Los óptimos por organismo se contrastan contra los
-de una corrida independiente anterior, versionada en el repositorio. Los
-parámetros óptimos coinciden en los \NEspeciesOpt\ organismos y la diferencia
-máxima de AUC01 es \emph{exactamente} cero: la reproducción sobre la base
-codificada no movió un solo dígito del control.
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.49\textwidth]{figuras/01_f04_recuperacion_por_semilla.pdf}\hfill
+\includegraphics[width=.49\textwidth]{figuras/01_f03_semilla_por_especie.pdf}
+\caption{Izquierda: recuperación por clase de semilla. Derecha: composición de
+la semilla por organismo; la fracción informativa (verde) es el techo del
+método.}
+\label{fig:semilla}
+\end{figure}
 
-\textbf{El oráculo.} Las mismas tablas calculadas antes del recorte y de la
-codificación. La comparación es informativa por una asimetría: el recorte
-\emph{debe} mover los descriptivos de la base, y \emph{no debe} mover la
-priorización, que no la toca. De \NComparadas\ columnas comparadas,
-\NIdenticas\ resultan idénticas, \NExplicadas\ cambian de forma explicada por
-el recorte y \NDiscrepancias\ quedan como discrepancia.
+La fracción informativa es entonces un techo: ninguna reponderación de la red
+puede superarla. Por organismo va del \TechoMin\,\% al \TechoMax\,\%. Por la
+misma razón, los compuestos cuyo cluster químico tiene enlaces a bioactividad
+positiva y blancos en más de un organismo (grupo 3) se recuperan más que los que
+no tienen ninguna de las dos cosas (grupo 0): \PctRecGrupoTres\,\% contra
+\PctRecGrupoCero\,\%. Se probaron tres palancas para ampliar la semilla sobre
+\NMuestraPalancas\ pseudohuérfanas sin semilla informativa ---subir el umbral de
+similitud, agregar KEGG como tercera fuente de anotaciones y usar la actividad
+fenotípica como respaldo--- y rescataron \NRescatadas. Las dos primeras no podían
+hacerlo en esta base: la capa química guardada sólo permite subir el umbral, que
+quita vecinos, y el mapeo a KEGG no está disponible.
 
-El corte cae donde tiene que caer: en \texttt{genome\_prioritization} las 149
-columnas comparadas son idénticas y ninguna cambia, mientras que en
-\texttt{huerfanas}, que construye la semilla desde el vecindario químico, 83 de
-177 se mueven. La diferencia se explica sin apelar a nada externo: el conjunto
-evaluado es el mismo --- 7\,782 pseudohuérfanas de los dos lados --- pero el filtro
-de promiscuidad pasó de descartar 30 compuestos a \NPromiscuos, porque 23 de
-aquellos 30 no sobrevivieron al recorte, y con menos aristas descartadas más
-drogas consiguen semilla.
+\textbf{Cuando hay semilla informativa.} El \PctRecInformativa\,\% dice poco:
+con unas doce mil proteínas por organismo, $\mathrm{frank}<0.1$ es quedar entre
+las primeras $\sim$\FrankCorteRank, y sólo \NInfFueraCorte\ de las \NInformativa\
+quedan afuera. La Figura~\ref{fig:inf} mira la posición absoluta. El blanco
+verdadero queda primero en el \PctInfTopUno\,\% de los casos, entre los diez
+primeros en el \PctInfTopDiez\,\% y entre los cien primeros en el
+\PctInfTopCien\,\%; el azar pondría en el top-10 al \AzarTopDiez\,\%. Detrás de
+ese promedio hay dos poblaciones. En las \NInfDirecta\ de inferencia directa
+---el blanco verdadero ya está en la semilla, lo trae un vecino químico--- la
+posición mediana es \RSSMedInfDirecta\ y el \PctTopDiezDirecta\,\% cae en el
+top-10; en las \NInfIndirecta\ indirectas, donde sólo se llega por anotaciones
+compartidas, la mediana es \RSSMedInfIndirecta\ y el top-10 baja al
+\PctTopDiezIndirecta\,\%. Las semillas grandes diluyen la señal: el tamaño de la
+semilla y la posición del blanco se correlacionan ($\rho=\RhoSemillaRSS$), y la
+correlación es positiva dentro de \NOrgRhoPos\ de los \NOrgRho\ organismos con al
+menos quince casos, así que no es un efecto de mezclar organismos. Una advertencia
+de lectura: en el \PctEmpates\,\% de los casos el blanco comparte puntaje con
+otras proteínas y su posición es un promedio de empate.
 
-Una corrección que conviene dejar escrita: al diseñar esta comparación agrupé
-\texttt{huerfanas} con \texttt{genome\_prioritization} entre lo que «no debería
-moverse». Era incorrecto, y la corrida lo mostró. El criterio correcto es uno
-solo: si el análisis toca la capa química, el recorte lo mueve.
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{figuras/03_f05_semilla_informativa.pdf}
+\caption{Las \NInformativa\ pseudohuérfanas con semilla informativa.
+(a)~Fracción con el blanco entre las $k$ primeras proteínas de su organismo,
+frente al azar; la línea punteada es el corte $\mathrm{frank}=0.1$.
+(b)~\emph{frank} en escala logarítmica. (c)~Tamaño de la semilla contra
+posición del blanco. (d)~Posición por organismo; la barra es la mediana.}
+\label{fig:inf}
+\end{figure}
 
-\subsection*{Lo que casi sale mal}
+\textbf{Hasta dónde confiar en el ranking.} Sobre el ranking global (las
+\NProteinas\ proteínas de la red), la curva de recuperación acumulada tiene una
+pendiente alta en las primeras posiciones que cae al ruido de fondo en
+$r^*_G=\RGEstrella$ (Figura~\ref{fig:rg}): una propuesta más abajo que eso no se
+distingue del azar. Ese corte separa dos mecanismos. En la inferencia
+\emph{directa} el blanco verdadero está entre las semillas (lo trae un vecino
+químico); en la \emph{indirecta} sólo se llega por la capa de anotaciones. La
+directa es el \PctDirecta\,\% de los casos con ranking y pone el blanco en la
+posición global mediana \RGDirecta\ (posición \RSSDirecta\ dentro del
+organismo); la indirecta, el \PctIndirecta\,\%, lo pone en la \RGIndirecta. El
+trabajo original reporta una partición 68\,\%\,/\,32\,\% \cite{berenstein2016}:
+aquí casi toda la recuperación útil viene de vecinos químicos.
 
-Cuatro errores merecen quedar escritos, porque ninguno se encontró leyendo el
-código: los encontraron las pruebas o la inspección de las salidas.
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.52\textwidth]{figuras/03_f02_recuperacion.pdf}
+\caption{Arriba: compuestos cuyo blanco verdadero cae antes de la posición $l$
+del ranking global. Abajo: su derivada, suavizada, y el umbral $\lambda_\infty +
+3\sigma$ que define $r^*_G$.}
+\label{fig:rg}
+\end{figure}
 
-La base codificada guarda el tag de actividad como el entero \(2\), mientras el
-código heredado filtraba por el texto \texttt{"positive"}. Esa comparación no
-lanza ningún error: devuelve cero filas. El análisis completo seguía adelante
-produciendo \texttt{NaN} y rankings vacíos, con \NPositivos\ enlaces de evidencia
-descartados en silencio.
+\textbf{Aplicación al organismo foco.} De \EmbudoActivos\ compuestos con
+actividad fenotípica contra sp\,26, \EmbudoHuerfanos\ no tienen blanco proteico
+conocido y los \EmbudoTratables\ tienen vecinos químicos con blanco. Ninguno
+recibe una propuesta por encima de $r^*_G$ (\NSugerencias\ sugerencias): con la
+base recortada el embudo es demasiado angosto para producir candidatos, y el
+método lo dice en vez de forzar una respuesta.
 
-El segundo: InterPro y OrthoMCL se codificaron por separado, cada uno empezando
-en cero, de modo que sus códigos se pisan --- los \NInterPro\ dominios caen
-dentro del rango de los \NOrthoMCL\ grupos de ortología. Concatenarlos habría
-fusionado anotaciones sin relación alguna, y el test de Fisher habría contado
-proteínas de dos vocabularios distintos como si fueran de uno.
+\section{Contraste con la versión anterior (v4)}
+\label{sec:v4}
 
-El tercero y el cuarto son el mismo patrón otra vez, y aparecieron ya con los
-notebooks corriendo. Un filtro escrito como \texttt{sp\_id != "bioactive"}
-compara un entero contra un texto y por lo tanto es siempre verdadero: la
-pseudo-especie que agrupa blancos sin organismo asignado nunca se excluía, y
-aportaba 67\,587 falsas pseudohuérfanas sobre un total de 127\,840 --- el 53\,\%
-del conjunto. Y las relaciones de subestructura leídas de los datos crudos
-entraban sin recodificar, de modo que no cruzaban contra la base y el filtro de
-promiscuidad descartaba 30 compuestos falsos en lugar de \NPromiscuos\
-verdaderos.
+Este repositorio es un port del análisis v4 a la base codificada y recortada.
+Para saber si el port es fiel, las mismas tablas se calcularon antes de los dos
+cambios y quedaron versionadas como oráculo. El criterio es uno solo: \emph{si
+el análisis toca la capa química, el recorte lo mueve; si no la toca, no lo
+mueve}. De \NComparadas\ columnas comparadas hay \NDiscrepancias\
+discrepancias (Figura~\ref{fig:eq}):
 
-Los cuatro comparten la misma forma: una columna que pasó a ser un entero
-codificado, comparada contra el texto que solía contener. Ninguno lanza una
-excepción; todos devuelven un conjunto vacío o equivocado y dejan que el
-análisis siga. Es la razón de que las pruebas vayan antes que los resultados, y
-de que los números se lean de las tablas en vez de escribirse a mano.
+\begin{itemize}\setlength\itemsep{.1em}
+\item \textbf{Priorización}, sin capa química: las \NComparadasGP\ columnas son
+idénticas (\NIdenticasGP), y los óptimos coinciden con los de un control
+independiente en \ControlCoinciden\ de \NEspeciesOpt\ organismos, con diferencia
+máxima de AUC01 de \ControlDeltaMax.
+\item \textbf{Desorfanización}, que arma la semilla desde el vecindario químico:
+\NCambianHU\ de \NComparadasHU\ columnas cambian, todas en la dirección que el
+recorte predice. El filtro de promiscuidad pasó de descartar \PromiscuosVcuatro\
+compuestos a \NPromiscuos\ ---la mayoría no sobrevivió al recorte---, así que
+más compuestos tienen vecinos: la semilla nula baja del \PctSinSemillaVcuatro\
+al \PctSinSemilla\,\%, la recuperación sube del \PctRecuperadasVcuatro\ al
+\PctRecuperadas\,\% y $r^*_G$ pasa de \RGEstrellaVcuatro\ a \RGEstrella. El
+conjunto evaluado es el mismo (\NPseudo\ pseudohuérfanas en los dos lados).
+\item \textbf{Descriptivos de la base}: \NCambianAN\ de \NComparadasAN\ columnas
+cambian, las que miden componentes químicas.
+\end{itemize}
 
-\section{Procedencia y límites}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.5\textwidth]{figuras/10_f01_equivalencia.pdf}
+\caption{Columnas comparadas contra el oráculo v4, por análisis. Verde:
+idéntica; ámbar: cambio explicado por el recorte; rojo sería una discrepancia.}
+\label{fig:eq}
+\end{figure}
 
-Cada corrida deja un \texttt{meta.json} junto a sus tablas con la fecha, el
-notebook de origen, los parámetros, la fecha de cada tabla de entrada y las
-versiones de python (\VersionPython) y pandas (\VersionPandas). El registro
-completo de decisiones, con lo que se descartó en cada bifurcación y qué es
-código propio frente a qué se llamó de una librería, está en
+El port no fue gratuito. La base codificada guarda como enteros lo que antes era
+texto, y cuatro filtros heredados comparaban contra el texto: el de
+bioactividad positiva (\texttt{== "positive"}) devolvía cero filas y descartaba
+en silencio \NPositivos\ enlaces; InterPro y OrthoMCL se codificaron desde cero
+por separado y sus códigos se pisaban; la pseudo-especie sin organismo nunca se
+excluía y aportaba el 53\,\% de las pseudohuérfanas; y las subestructuras crudas
+no cruzaban contra la base. Ninguno lanza una excepción, y los cuatro los
+encontraron las pruebas o la comparación con el oráculo. El detalle está en
 \texttt{PROVENANCE.md}.
 
-Este repositorio no reproduce tres cosas, y conviene decirlo: la base misma, que
-se deriva de datos que no se publican; los nombres legibles de las anotaciones,
-que exigen un diccionario privado; y la identidad de los organismos, que es
-deliberada. Lo que sí se publica es la salida de cada uno de esos pasos y el
-registro de cómo se produjo.
+\section{Verificación, reproducibilidad y límites}
+
+\textbf{Pruebas.} \NPruebas\ pruebas que corren en menos de medio minuto:
+integridad de las tablas, ausencia de fuga en la validación cruzada, las
+métricas contra valores de referencia, las rutas, el entorno, y que toda figura
+se dibuje sin tocar la base.
+
+\textbf{Corrida y figuras separadas.} Cada notebook tiene una celda de corrida
+que carga la base y escribe tablas en \texttt{resultados/}, y una sección de
+resultados que sólo las lee. Las \NFiguras\ figuras están declaradas en
+\texttt{comun/figuras.py} junto con las tablas que leen ---esa lista es su
+procedencia--- y se regeneran todas en unos treinta segundos con
+\texttt{python comun/figuras.py}, sin volver a correr ningún modelo.
+
+\textbf{Procedencia.} Cada corrida deja un \texttt{meta.json} junto a sus tablas
+con la fecha, el notebook de origen, los parámetros, la fecha de cada tabla de
+entrada y las versiones de python (\VersionPython) y pandas (\VersionPandas).
+Ningún número de este informe está escrito a mano: se leen de las tablas con
+\texttt{informe/numeros.py}. El registro de decisiones, con lo que se descartó
+en cada bifurcación, está en \texttt{PROVENANCE.md}.
+
+\textbf{Límites.} El repositorio no reproduce la base misma, que se deriva de
+datos que no se publican; ni los nombres legibles de las anotaciones, que exigen
+un diccionario privado; ni la identidad de los organismos, que es deliberada.
 
 \bibliographystyle{plain}
 \bibliography{refs}

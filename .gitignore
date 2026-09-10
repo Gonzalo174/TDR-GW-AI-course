@@ -16,3 +16,11 @@ venv/
 *.log
 tmp/
 
+
+# Auxiliares de LaTeX de la presentacion
+informe/presentacion.aux
+informe/presentacion.log
+informe/presentacion.nav
+informe/presentacion.out
+informe/presentacion.snm
+informe/presentacion.toc

@@ -24,7 +24,7 @@ y esquema de cada tabla) está en `DB/meta.json`.
 conda create -n TDR_GW python=3.12
 conda activate TDR_GW
 pip install -r requirements.txt
-python -m unittest discover -s comun/tests -p "test_*.py"    # 38 tests, ~15 s
+python -m unittest discover -s comun/tests -p "test_*.py"    # 51 tests, ~25 s
 ```
 
 Los notebooks se corren en este orden, y cada uno escribe en
@@ -38,6 +38,30 @@ Los notebooks se corren en este orden, y cada uno escribe en
 
 La celda 1 de cada notebook agrega `comun/` al path; no hace falta configurar
 nada más, porque todas las rutas se derivan de la ubicación del repositorio.
+
+### Corrida y figuras, por separado
+
+Cada notebook tiene dos mitades que cuestan muy distinto:
+
+| mitad | qué hace | cuánto tarda |
+|---|---|---|
+| **corrida** (Datos → Acondicionamiento → Corrida) | carga la base, calcula y escribe las tablas en `resultados/<analisis>_out/` | de segundos a ~15 min por notebook |
+| **Resultados** | sólo lee esas tablas y dibuja con `F.dibujar(...)` | segundos |
+
+Las figuras no se dibujan en ninguna celda de corrida: están todas en
+`<carpeta>/figuras_<analisis>.py`, cada una declarando qué tablas lee, y un
+test (`comun/tests/test_figuras.py`) verifica que ninguna toque la base. Para
+retocar o regenerar figuras no hace falta volver a correr nada:
+
+```bash
+python comun/figuras.py                   # todas las figuras, ~30 s
+python comun/figuras.py huerfanas         # las de un análisis
+python comun/figuras.py 02_f01_roc_26     # una sola
+python comun/figuras.py --lista           # qué tablas lee cada figura
+```
+
+Desde un notebook alcanza con correr la celda de imports y saltar a la sección
+«Resultados».
 
 ## Sobre los códigos de la base
 
@@ -60,10 +84,11 @@ anotado en `comun/tdr.py`.
 |---|---|
 | `index.html` | **la página de presentación**, generada desde las tablas |
 | `informe/informe.pdf` | **el informe**, con sus números generados desde las tablas |
+| `informe/presentacion.pdf` | **la presentación** de 5 minutos, con las mismas cifras y figuras |
 | `PROVENANCE.md` | de dónde viene cada resultado y qué alternativa se descartó |
 | `DB/` | la base codificada; sólo enteros |
-| `comun/` | `tdr.py` (rutas, carga, métricas, figuras), `nucleo.py` (el modelo), `tests/` |
-| `analiceDB/`, `genome_prioritization/`, `huerfanas/` | los tres análisis, 9 notebooks |
+| `comun/` | `tdr.py` (rutas, carga, métricas, estilo), `nucleo.py` (el modelo), `figuras.py` (registro y regeneración de figuras), `tests/` |
+| `analiceDB/`, `genome_prioritization/`, `huerfanas/` | los tres análisis, 9 notebooks; cada carpeta con `funciones_*.py` (cálculo) y `figuras_*.py` (figuras) |
 | `verificacion/` | la comparación contra el oráculo |
 | `resultados/` | salidas de las corridas (el contenido no se versiona) |
 | `control/` | óptimos por especie de una corrida independiente, para contrastar |
@@ -73,7 +98,8 @@ anotado en `comun/tdr.py`.
 
 ```bash
 python informe/numeros.py          # los números del informe, desde las tablas
-make -C informe                    # -> informe/informe.pdf
+make -C informe                    # redibuja las figuras y compila -> informe/informe.pdf
+                                   #   y la presentacion de 5 min -> informe/presentacion.pdf
 python informe/generar_pagina.py   # -> index.html
 ```
 

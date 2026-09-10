@@ -9,7 +9,9 @@ import ast, json, pathlib, sys, importlib, unittest
 
 RAIZ = pathlib.Path(__file__).resolve().parents[2]
 LOCALES = {"tdr", "nucleo", "funciones_analice", "funciones_genome",
-           "funciones_huerfanas", "funciones_verificacion"}
+           "funciones_huerfanas", "funciones_verificacion",
+           "figuras", "figuras_analice", "figuras_genome", "figuras_huerfanas",
+           "figuras_verificacion", "numeros"}
 
 
 def _sin_magics(src):

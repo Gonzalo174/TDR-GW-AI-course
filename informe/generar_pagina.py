@@ -127,6 +127,14 @@ figcaption{color:var(--tinta2); font-size:.84rem; margin-top:.7rem; line-height:
 .nota{border-left:3px solid var(--acento); background:var(--panel);
   padding:.7rem 1rem; margin:1.2rem 0; border-radius:0 8px 8px 0}
 .nota p{margin:.3rem 0}
+.par{display:grid; grid-template-columns:repeat(auto-fit,minmax(20rem,1fr)); gap:0 1rem}
+.par figure{margin:1rem 0}
+.diapo{background:var(--panel); border:1px solid var(--linea); border-radius:12px;
+  padding:1.2rem 1.4rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(22rem,1fr));
+  gap:0 1.4rem; align-items:center; margin:1.2rem 0}
+.diapo figure{border:none; padding:0; margin:.6rem 0}
+.diapo ul{margin:.4rem 0; padding-left:1.1rem; font-size:.93rem}
+.diapo li{margin:.35rem 0}
 footer{margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--linea);
   color:var(--tenue); font-size:.82rem}
 a{color:var(--acento)}
@@ -137,25 +145,21 @@ def ficha(n, rotulo):
     return f'<div class="ficha"><div class="n">{n}</div><div class="r">{rotulo}</div></div>'
 
 
+def numeros() -> dict:
+    """Las mismas cifras que el informe (`informe/numeros.py`), sin el marcado
+    de LaTeX: una sola fuente para los dos entregables."""
+    sys.path.insert(0, str(RAIZ / "informe"))
+    import numeros as nu
+    return {k: str(v).replace("\\,", "\u202f") for k, v in nu.construir().items()}
+
+
 def construir() -> str:
     P = []
     A = P.append
+    n = numeros()
 
-    # ---------- datos que la pagina necesita ----------
-    dim = leer("analiceDB_out", "01_dimensiones_capas.csv")
-    disp = leer("analiceDB_out", "01_disponibilidad_especie.csv")
-    tags = leer("analiceDB_out", "03_bioactividades_por_tag.csv")
-    impacto = leer("analiceDB_out", "03_impacto_filtro.csv")
     optimos = leer("genome_prioritization_out", "02_optimos_por_especie.csv")
-    consist = leer("genome_prioritization_out", "02_consistencia.csv")
-    eq = leer("verificacion_out", "10_equivalencia.csv")
     m01 = meta("analiceDB_out", "01")
-
-    def d(entidad, defecto="—"):
-        if dim is None:
-            return defecto
-        f = dim[dim["entidad"] == entidad]
-        return f"{int(f['n'].iloc[0]):,}".replace(",", " ") if len(f) else defecto
 
     A(f"<style>{CSS}</style>")
     A('<div class="envoltorio">')
@@ -163,154 +167,219 @@ def construir() -> str:
     # ---------- cabecera ----------
     A("<header>")
     A("<h1>Priorización de blancos terapéuticos sobre una red multicapa</h1>")
-    A('<p class="bajada">Reproducción completa de un análisis de descubrimiento de blancos '
-      'sobre una base de bioactividad codificada, con la procedencia de cada resultado '
-      'registrada y un oráculo independiente contra el cual contrastarlo.</p>')
+    A('<p class="bajada">Propagar la poca evidencia experimental que hay entre organismos '
+      "para ordenar un genoma completo por cuán prometedoras son sus proteínas como blanco "
+      "de un fármaco, y usar la misma red para proponer el blanco de compuestos que no "
+      "tienen ninguno.</p>")
     A('<div class="meta-cabecera">')
     A(f'<span>corrida: {m01.get("fecha", "—")}</span>')
     A(f'<span>python {m01.get("python", "—")} · pandas {m01.get("pandas", "—")}</span>')
     A('<span><a href="https://github.com/Gonzalo174/TDR-GW-AI-course">repositorio</a></span>')
+    A('<span><a href="informe/informe.pdf">informe (PDF)</a></span>')
+    A('<span><a href="informe/presentacion.pdf">presentación (PDF)</a></span>')
     A("</div></header>")
 
     # ---------- resumen ----------
-    A("<h2>De qué se trata</h2>")
-    A("<p>El problema es de mi propia investigación: dado un genoma, ordenar sus proteínas "
-      "por cuán prometedoras son como blanco de un fármaco. La evidencia disponible es "
-      "escasa y está repartida de forma muy desigual entre organismos, así que la "
-      "estrategia es propagar lo que se sabe de unas proteínas a otras a través de una red "
-      "de tres capas: compuestos, proteínas y anotaciones funcionales.</p>")
+    A("<h2>En una pantalla</h2>")
     A('<div class="fichas">')
-    A(ficha(d("proteínas (V_P)"), "proteínas en la red"))
-    A(ficha(d("enlaces E_DP positivos"), "enlaces de bioactividad positiva"))
-    A(ficha(d("enlaces proteína-categoría"), "afiliaciones a anotaciones"))
-    A(ficha("16", "organismos con evidencia suficiente"))
+    A(ficha(f'{n["NSobreAzar"]} de {n["NEspeciesOpt"]}', "organismos priorizados mejor que el "
+            "azar, sin usar nada de su propia evidencia"))
+    A(ficha(n["AUCMediana"], f'AUC01 mediana (rango {n["AUCMin"]}–{n["AUCMax"]})'))
+    A(ficha(f'{n["PctRecInformativa"]} %', "de los blancos recuperados cuando la semilla "
+            "comparte una anotación con el blanco"))
+    A(ficha(f'{n["PctSinSemilla"]} %', "de los compuestos sin ningún vecino químico con "
+            "blanco: el cuello de botella"))
     A("</div>")
-    A('<div class="nota"><p>Este repositorio publica la base <strong>codificada</strong>: '
-      "toda columna es un entero y los diccionarios que traducen esos enteros a la notación "
-      "original son privados. La pregunta que gobierna el trabajo es si un análisis puede "
-      "sobrevivir intacto a esa transformación — y cómo demostrarlo.</p></div>")
+    A("<p>El problema es de mi propia investigación: dado un genoma, ordenar sus proteínas "
+      "por cuán prometedoras son como blanco de un fármaco. La evidencia es escasa y está "
+      "repartida de forma muy desigual entre organismos, así que la estrategia es propagar "
+      "lo que se sabe sobre una red de tres capas —compuestos, proteínas y anotaciones "
+      "funcionales— desde las proteínas con evidencia hacia las que no la tienen.</p>")
 
-    # ---------- datos ----------
-    A("<h2>Los datos</h2>")
-    A("<p>La base se derivó de la original en tres operaciones, cada una con una alternativa "
-      "que se descartó por una razón que está escrita en "
-      '<a href="PROVENANCE.md">PROVENANCE.md</a>: un <strong>recorte</strong> que elimina las '
-      "componentes conexas del grafo de similitud química sin ninguna bioactividad positiva "
-      "(2 396 103 → 831 175 compuestos), la <strong>codificación</strong> a enteros con "
-      "semilla fija, y el <strong>empaquetado</strong> de la capa de aristas en dos archivos "
-      "comprimidos que preservan las 36 152 622 aristas completas.</p>")
-    if dim is not None:
-        A(tabla(dim))
-        A('<p class="chapo">Dimensiones de las tres capas. Producidas por '
-          "<code>analiceDB/01_dimensiones_red.ipynb</code> mediante "
-          "<code>funciones_analice.dimensiones_capas</code>.</p>")
+    # ---------- datos y metodo ----------
+    A("<h2>Datos y método</h2>")
+    A(f'<p>La base tiene {n["NProteinas"]} proteínas de {n["NEspecies"]} organismos con '
+      f'evidencia suficiente, {n["NPositivos"]} enlaces de bioactividad positiva y '
+      f'{n["NAfiliaciones"]} afiliaciones a {n["NInterPro"]} dominios InterPro y '
+      f'{n["NOrthoMCL"]} grupos de ortología. La evidencia por organismo va de '
+      f'{n["DrugMin"]} a {n["DrugMax"]} proteínas con actividad conocida: esa desigualdad '
+      "es la premisa del método. La base publicada está <strong>codificada</strong> (toda "
+      "columna es un entero; los diccionarios son privados) y <strong>recortada</strong> a "
+      "las componentes químicas con alguna bioactividad positiva.</p>")
     A(figura(fig("analiceDB_out", "01_f01_disponibilidad.png"),
-             "Evidencia disponible por organismo. Cada punto es una especie, identificada por "
-             "código y tipo de organismo; el nombre no se publica. Los dos ejes son "
-             "logarítmicos y abarcan un orden de magnitud largo: esa desigualdad es la que "
-             "justifica propagar evidencia entre proteínas."))
-    if tags is not None:
-        t = tags.copy()
-        if "activity_tag" in t.columns:
-            t["activity_tag"] = t["activity_tag"].map(lambda v: tdr.TAG_NOMBRE.get(v, v))
-        A(tabla(t))
-        A('<p class="chapo">Composición de los registros de bioactividad por tag. '
-          "<code>analiceDB/03</code>.</p>")
-
-    # ---------- metodo ----------
-    A("<h2>El método</h2>")
-    A("<p>Sobre la red se corre una propagación con cuatro parámetros. Las anotaciones se "
-      "puntúan primero por cuánto se enriquecen en proteínas ya conocidas como blanco "
-      "—un test exacto de Fisher por cada categoría, corregido por comparaciones múltiples— "
-      "y esa puntuación pondera después la propagación hacia las proteínas sin evidencia.</p>")
-    A("<p>La métrica es el área parcial bajo la curva ROC restringida a "
-      "<code>FPR ≤ 0.10</code>, corregida por McClish para que azar valga 0.5 y clasificador "
-      "perfecto 1.0. La restricción no es cosmética: en este problema sólo importa el "
-      "extremo del ranking, porque nadie va a ensayar experimentalmente más allá de las "
-      "primeras decenas de proteínas.</p>")
+             "Evidencia disponible por organismo, en escala logarítmica en los dos ejes. Cada "
+             "punto es una especie, identificada por código y tipo de organismo."))
+    A("<p>Las anotaciones se puntúan por cuánto se enriquecen en blancos conocidos (Fisher "
+      "unilateral, corregido por Benjamini–Hochberg) y esa puntuación pondera la propagación, "
+      "que tiene cuatro parámetros: α (peso de la puntuación), β (penalización de las "
+      "categorías grandes), λ y γ (cómo se combinan las categorías de una proteína). La "
+      "métrica es la <strong>AUC01</strong>: el área bajo la ROC hasta <code>FPR ≤ 0.10</code>, "
+      "corregida por McClish para que el azar valga 0.5. Sólo importa el extremo del "
+      "ranking.</p>")
     A('<div class="nota"><p>La validación es <strong>leave-one-species-out</strong>: para '
       "evaluar un organismo se le quita toda su evidencia a la semilla y se lo prioriza como "
-      "si no se supiera nada de él. Que eso esté bien hecho no se asume: hay una prueba "
-      "dedicada (<code>comun/tests/test_fuga.py</code>) que verifica que ninguna proteína "
-      "del organismo evaluado sobrevive en la semilla, con su control negativo al lado.</p></div>")
+      "si no se supiera nada de él. Una prueba dedicada "
+      "(<code>comun/tests/test_fuga.py</code>) verifica que ninguna proteína del organismo "
+      "evaluado sobrevive en la semilla.</p></div>")
 
-    # ---------- resultados ----------
-    A("<h2>Resultados</h2>")
-    if optimos is not None:
-        cols = [c for c in ["especie", "AUC01", "AUC", "alpha", "beta", "lambda_", "gamma",
-                            "N_targets"] if c in optimos.columns]
-        A(tabla(optimos[cols].sort_values("AUC01", ascending=False)))
-        A('<p class="chapo">Parámetros óptimos y desempeño por organismo. '
-          "<code>genome_prioritization/02_optimo_y_consistencia.ipynb</code>.</p>")
+    # ---------- priorizacion ----------
+    A("<h2>1 · Priorización de genoma completo</h2>")
+    A(f'<p>Para cada organismo se barrieron las 120 combinaciones válidas de parámetros. En su '
+      f'óptimo la AUC01 mediana es <strong>{n["AUCMediana"]}</strong> y los '
+      f'{n["NSobreAzar"]} organismos superan el azar. El orden no es arbitrario: los '
+      f'{n["NProtozoosArriba"]} primeros puestos son los {n["NProtozoos"]} protozoos '
+      "parásitos.</p>")
     A(figura(fig("genome_prioritization_out", "01_f03_auc01_por_especie.png"),
-             "Desempeño por organismo en su óptimo, bajo leave-one-species-out. La línea "
-             "punteada en 0.5 es el azar."))
+             "AUC01 en el óptimo de cada organismo, bajo leave-one-species-out. La línea "
+             "punteada es el azar."))
+    if optimos is not None:
+        o = optimos.merge(tdr.META[["sp", "grupo", "parasito"]], left_on="especie",
+                          right_on="sp", how="left")
+        o["especie"] = o["especie"].map(lambda s: f"sp{int(s):02d}")
+        o["lambda_"] = o["lambda_"].map(lambda v: "híbrido" if pd.isna(v) else f"{v:g}")
+        o["parasito"] = o["parasito"].map({True: "sí", False: "no"})
+        cols = ["especie", "grupo", "parasito", "AUC01", "AUC", "alpha", "beta", "lambda_", "gamma"]
+        A(tabla(o[cols].sort_values("AUC01", ascending=False)))
+        A('<p class="chapo">Óptimo por organismo. '
+          "<code>genome_prioritization/02_optimo_y_consistencia.ipynb</code>.</p>")
+    A(figura(fig("genome_prioritization_out", "02_f01_roc_26.png"),
+             f'El organismo foco, un protozoo parásito (sp26), en su óptimo: AUC global '
+             f'{n["AUCGlobalFoco"]}, AUC01 {n["AUCFoco"]}. A la derecha, el puntaje de '
+             "propagación de las proteínas druggables frente al resto."))
+    A("<h3>Qué decide el resultado</h3>")
+    A(f'<p>De los cuatro parámetros sólo <strong>β</strong> mueve la AUC01 de forma '
+      f'consistente: penalizar las categorías grandes mejora la priorización, y el óptimo tiene '
+      f'β &gt; 0 en {n["NBetaPositivo"]} de {n["NEspeciesOpt"]} organismos. Entre las diez '
+      f'mejores combinaciones de cada organismo, β = 1 aparece {n["EnrBetaUno"]} veces más de '
+      f'lo que daría el azar y β = 0 apenas {n["EnrBetaCero"]}.</p>')
+    A(figura(fig("genome_prioritization_out", "02_f02_grilla_beta.png"),
+             "AUC01 de las 120 combinaciones por organismo, agrupadas por el valor de cada "
+             "parámetro. En el panel de β, 0 es la red G'r y &gt;0 la G'rk."))
+    A("<h3>Qué tan firme es el óptimo</h3>")
+    A(f'<p>En todos los organismos las veinte mejores combinaciones quedan a menos del '
+      f'{n["CaidaTopVeinteMax"]} % del máximo: el óptimo es una meseta, no un pico casual. Y '
+      f'el perfil de la grilla se parece entre organismos (Spearman mediana '
+      f'{n["SpearmanMediana"]}, positiva en el {n["PctSpearmanPositivo"]} % de los pares): '
+      "los parámetros que funcionan en uno funcionan en los demás.</p>")
+    A('<div class="par">')
     A(figura(fig("genome_prioritization_out", "02_f03_plateau.png"),
-             "Cuán plano es el óptimo. Si el desempeño cayera abruptamente al moverse del "
-             "máximo, la elección de parámetros sería frágil y el número reportado, casual."))
+             "Caída de la AUC01 entre el óptimo y la K-ésima mejor combinación."))
+    A(figura(fig("genome_prioritization_out", "02_f04_consistencia_especies.png"),
+             "Concordancia entre organismos sobre el perfil de la grilla."))
+    A("</div>")
 
-    # ---------- verificacion ----------
-    A("<h2>Cómo sé que esto está bien</h2>")
-    A("<p>Tres controles, del más barato al más caro. Ninguno es una figura sin nada detrás.</p>")
-    A("<h3>1. Las pruebas</h3>")
-    A("<p>38 pruebas que corren en unos 15 segundos: integridad de las tablas, ausencia de "
-      "fuga en la validación cruzada, las métricas contra valores de referencia, las rutas y "
-      "el entorno. Cuatro son específicas de esta reproducción y cubren lo que puede "
-      "romperse <em>en silencio</em> — el caso real que las motivó está más abajo.</p>")
-    A("<h3>2. El control externo</h3>")
-    A("<p>Los óptimos por organismo se contrastan contra los de una corrida independiente "
-      "anterior, versionada en <code>control/</code>.</p>")
-    if consist is not None:
-        A(tabla(consist, maxf=12))
-    A("<h3>3. El oráculo</h3>")
-    A("<p>Las mismas tablas calculadas antes del recorte y de la codificación, en "
-      "<code>oraculo_v4/</code>. La comparación es informativa por una asimetría: el recorte "
-      "<strong>debe</strong> mover los descriptivos de la base, y <strong>no debe</strong> "
-      "mover la priorización, que trabaja sobre anotaciones y blancos conocidos.</p>")
-    if eq is not None and len(eq):
-        piv = eq.groupby(["analisis", "estado"]).size().unstack(fill_value=0).reset_index()
-        A(tabla(piv))
-        n_disc = int((eq["estado"] == "DISCREPANCIA").sum())
-        marca = ('<span class="marca m-ok">sin discrepancias</span>' if n_disc == 0
-                 else f'<span class="marca m-mal">{n_disc} discrepancias</span>')
-        A(f"<p>{marca} sobre {len(eq)} columnas comparadas.</p>")
+    # ---------- huerfanas ----------
+    A("<h2>2 · Desorfanización de compuestos</h2>")
+    A(f'<p>La segunda pregunta invierte la dirección: dado un compuesto sin blanco conocido, '
+      f'proponer uno. Para medir el acierto se usan <strong>pseudohuérfanas</strong>, compuestos '
+      f'con exactamente un blanco conocido a los que se les borra toda su bioactividad; la '
+      f'semilla se arma desde su vecindario químico y se mide la posición relativa del blanco '
+      f'verdadero (<em>frank</em>, recuperado si &lt; 0.1). Se evaluaron {n["NPseudo"]}.</p>')
+    A(f'<p>El blanco se recupera en el <strong>{n["PctRecuperadas"]} %</strong> de los casos, y la '
+      f'causa está medida: la recuperación la decide la <em>clase de semilla</em>, no el modelo. '
+      f'El {n["PctSinSemilla"]} % no tiene ningún vecino químico con blanco (semilla nula). '
+      f'Con semilla pero sin ninguna anotación en común con el blanco '
+      f'({n["NNoInformativa"]} casos), la recuperación es del {n["PctRecNoInformativa"]} %; con '
+      f'al menos una ({n["NInformativa"]}), del <strong>{n["PctRecInformativa"]} %</strong>.</p>')
+    A('<div class="par">')
+    A(figura(fig("huerfanas_out", "01_f04_recuperacion_por_semilla.png"),
+             "Recuperación por clase de semilla."))
+    A(figura(fig("huerfanas_out", "01_f03_semilla_por_especie.png"),
+             "Composición de la semilla por organismo: la fracción informativa (verde) es el "
+             "techo del método."))
+    A("</div>")
+    A(f'<p>La fracción informativa es un techo que ninguna reponderación de la red puede '
+      f'superar; por organismo va del {n["TechoMin"]} % al {n["TechoMax"]} %. Tres palancas para '
+      f'ampliar la semilla (subir el umbral de similitud, sumar KEGG, usar la actividad '
+      f'fenotípica) rescataron {n["NRescatadas"]} de {n["NMuestraPalancas"]}; las dos primeras '
+      "no podían hacerlo en esta base.</p>")
+    A("<h3>Cuando hay semilla informativa</h3>")
+    A(f'<p>El {n["PctRecInformativa"]} % dice poco: con unas doce mil proteínas por organismo, '
+      f'frank &lt; 0.1 es quedar entre las primeras ~{n["FrankCorteRank"]}. Mirando la posición '
+      f'absoluta, el blanco queda <strong>primero en el {n["PctInfTopUno"]} %</strong> de los '
+      f'casos, en el top-10 en el {n["PctInfTopDiez"]} % y en el top-100 en el '
+      f'{n["PctInfTopCien"]} % (el azar pondría en el top-10 al {n["AzarTopDiez"]} %). Son dos '
+      f'poblaciones: en la inferencia <em>directa</em> ({n["NInfDirecta"]}; el blanco ya está en '
+      f'la semilla) la posición mediana es {n["RSSMedInfDirecta"]} y el top-10 llega al '
+      f'{n["PctTopDiezDirecta"]} %; en la <em>indirecta</em> ({n["NInfIndirecta"]}; sólo por '
+      f'anotaciones) la mediana es {n["RSSMedInfIndirecta"]} y el top-10, '
+      f'{n["PctTopDiezIndirecta"]} %. Las semillas grandes diluyen la señal (ρ = '
+      f'{n["RhoSemillaRSS"]}, positiva en {n["NOrgRhoPos"]} de {n["NOrgRho"]} organismos con '
+      f'casos suficientes). En el {n["PctEmpates"]} % el blanco empata en puntaje con otras '
+      "proteínas.</p>")
+    A(figura(fig("huerfanas_out", "03_f05_semilla_informativa.png"),
+             "(a) Fracción con el blanco en el top-k de su organismo, frente al azar; la "
+             "punteada es frank = 0.1. (b) frank en escala log. (c) Tamaño de la semilla contra "
+             "posición del blanco. (d) Posición por organismo; la barra es la mediana."))
+    A("<h3>Hasta dónde confiar en el ranking</h3>")
+    A(f'<p>Sobre el ranking global, la recuperación acumulada tiene pendiente alta en las '
+      f'primeras posiciones y cae al ruido de fondo en <strong>r*G = {n["RGEstrella"]}</strong>: '
+      f'una propuesta más abajo no se distingue del azar. La inferencia <em>directa</em> (el '
+      f'blanco lo trae un vecino químico) es el {n["PctDirecta"]} % de los casos y pone el blanco '
+      f'en la posición global mediana {n["RGDirecta"]}; la <em>indirecta</em> (sólo por '
+      f'anotaciones), el {n["PctIndirecta"]} %, lo pone en la {n["RGIndirecta"]}.</p>')
+    A(figura(fig("huerfanas_out", "03_f02_recuperacion.png"),
+             "Arriba: compuestos cuyo blanco cae antes de la posición l del ranking global. "
+             "Abajo: su derivada suavizada y el umbral λ∞ + 3σ que define r*G."))
+    A(f'<p><strong>Aplicación al organismo foco.</strong> De {n["EmbudoActivos"]} compuestos con '
+      f'actividad fenotípica contra sp26, {n["EmbudoHuerfanos"]} no tienen blanco proteico y '
+      f'{n["EmbudoTratables"]} tienen vecinos químicos con blanco; ninguno recibe una propuesta '
+      f'por encima de r*G ({n["NSugerencias"]} sugerencias). Con la base recortada el embudo es '
+      "demasiado angosto, y el método lo dice en vez de forzar una respuesta.</p>")
+
+    # ---------- contraste con v4: un solo panel ----------
+    A("<h2>3 · Contraste con la versión anterior (v4)</h2>")
+    A('<div class="diapo">')
+    A('<div class="diapo-texto">')
+    A("<p>Este repositorio porta el análisis v4 a la base codificada y recortada. Las mismas "
+      "tablas calculadas antes de los dos cambios quedaron como oráculo, con un único criterio: "
+      "<strong>si el análisis toca la capa química, el recorte lo mueve; si no, no</strong>. "
+      f'Sobre {n["NComparadas"]} columnas: ')
+    marca = ('<span class="marca m-ok">sin discrepancias</span>' if n["NDiscrepancias"] == "0"
+             else f'<span class="marca m-mal">{n["NDiscrepancias"]} discrepancias</span>')
+    A(f"{marca}</p><ul>")
+    A(f'<li><strong>Priorización</strong> (sin química): {n["NIdenticasGP"]} de '
+      f'{n["NComparadasGP"]} columnas idénticas; el control independiente coincide en '
+      f'{n["ControlCoinciden"]} de {n["NEspeciesOpt"]} organismos, Δ AUC01 máx. = '
+      f'{n["ControlDeltaMax"]}.</li>')
+    A(f'<li><strong>Desorfanización</strong>: {n["NCambianHU"]} de {n["NComparadasHU"]} columnas '
+      f'cambian como predice el recorte. Menos compuestos promiscuos filtrados '
+      f'({n["PromiscuosVcuatro"]} → {n["NPromiscuos"]}), más vecinos: semilla nula '
+      f'{n["PctSinSemillaVcuatro"]} → {n["PctSinSemilla"]} %, recuperación '
+      f'{n["PctRecuperadasVcuatro"]} → {n["PctRecuperadas"]} %, r*G '
+      f'{n["RGEstrellaVcuatro"]} → {n["RGEstrella"]}.</li>')
+    A(f'<li><strong>Descriptivos</strong>: {n["NCambianAN"]} de {n["NComparadasAN"]} cambian, las '
+      "que miden componentes químicas.</li></ul>")
+    A('<p class="chapo">El port destapó cuatro filtros heredados que comparaban un entero '
+      "codificado contra el texto que solía contener; ninguno lanzaba una excepción, y los "
+      "encontraron las pruebas y esta comparación. Detalle en "
+      '<a href="PROVENANCE.md">PROVENANCE.md</a>.</p>')
+    A("</div>")
     A(figura(fig("verificacion_out", "10_f01_equivalencia.png"),
-             "Equivalencia contra el oráculo por análisis. Verde es idéntico; ámbar es una "
-             "diferencia que el recorte explica; rojo sería una discrepancia a investigar."))
-
-    A("<h3>Lo que casi sale mal</h3>")
-    A('<div class="nota"><p>La base codificada guarda el tag de actividad como el entero '
-      "<code>2</code>, mientras el código heredado filtraba por el texto "
-      "<code>\"positive\"</code>. Esa comparación no lanza ningún error: devuelve cero filas. "
-      "El pipeline entero seguía adelante produciendo NaN y rankings vacíos, con "
-      "<strong>248 457</strong> enlaces de evidencia silenciosamente descartados.</p>"
-      "<p>Un segundo caso: InterPro y OrthoMCL se codificaron por separado, cada uno "
-      "empezando en 0, así que sus códigos se pisan — los 14 083 dominios caen dentro del "
-      "rango de los 76 157 grupos de ortología. Concatenarlos habría fusionado anotaciones "
-      "sin relación alguna.</p>"
-      "<p>Ninguno de los dos se encontró leyendo el código: los encontraron las pruebas al "
-      "correrlas por primera vez contra la base nueva. Es la razón de que las pruebas vayan "
-      "antes que los resultados y no después.</p></div>")
+             "Columnas comparadas contra el oráculo, por análisis. Verde: idéntica; ámbar: "
+             "cambio explicado por el recorte."))
+    A("</div>")
 
     # ---------- reproducir ----------
-    A("<h2>Reproducirlo</h2>")
+    A("<h2>Verificarlo y reproducirlo</h2>")
+    A(f'<p>{n["NPruebas"]} pruebas corren en menos de medio minuto: integridad de las tablas, '
+      "ausencia de fuga, métricas contra valores de referencia, rutas, entorno, y que toda "
+      "figura se dibuje sin tocar la base. Cada notebook separa una <em>celda de corrida</em>, "
+      "que carga la base y escribe tablas, de una sección de resultados que sólo las lee: las "
+      f'{n["NFiguras"]} figuras se regeneran en unos treinta segundos sin volver a correr '
+      "ningún modelo.</p>")
     A("<pre><code>git clone https://github.com/Gonzalo174/TDR-GW-AI-course\n"
       "cd TDR-GW-AI-course\n"
       "conda create -n TDR_GW python=3.12 &amp;&amp; conda activate TDR_GW\n"
       "pip install -r requirements.txt\n"
       "python -m unittest discover -s comun/tests -p \"test_*.py\"\n"
-      "jupyter nbconvert --to notebook --execute --inplace analiceDB/*.ipynb</code></pre>")
-    A("<p>Las rutas se derivan de la ubicación del repositorio, así que no hay nada que "
-      "configurar. Cada notebook deja un <code>NN_meta.json</code> junto a sus tablas con la "
-      "fecha, los parámetros, la fecha de cada tabla de entrada y las versiones de python y "
-      "pandas.</p>")
-
-    A("<h2>Los límites</h2>")
-    A("<p>Un repositorio que no declara lo que no puede hacer no es verificable. Éste no "
-      "reproduce: la base misma, que se deriva de datos que no se publican; los nombres "
-      "legibles de las anotaciones, que exigen un diccionario privado; y la identidad de los "
-      "organismos, que es deliberada. Lo que sí se publica es la salida de cada uno de esos "
-      "pasos y el registro de cómo se produjo.</p>")
+      "jupyter nbconvert --to notebook --execute --inplace */[0-9]*.ipynb   # la corrida\n"
+      "python comun/figuras.py                                            # sólo las figuras</code></pre>")
+    A("<p>Cada notebook deja un <code>NN_meta.json</code> junto a sus tablas con la fecha, los "
+      "parámetros, la fecha de cada tabla de entrada y las versiones de python y pandas. El "
+      "repositorio no reproduce la base misma, los nombres legibles de las anotaciones ni la "
+      "identidad de los organismos: lo primero se deriva de datos privados, lo último es "
+      "deliberado.</p>")
 
     A('<footer>Generado por <code>informe/generar_pagina.py</code> a partir de las tablas de '
       "<code>resultados/</code>. Los números de esta página no se escribieron a mano.</footer>")

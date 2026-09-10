@@ -229,8 +229,11 @@ def paralelizar(func, items, n_core=tdr.N_CORE_DEFAULT, **kw):
 
 
 def cargar_barrido(salidas, nb="01", spoi=None):
-    """Concatena los CSV del barrido agregando la columna `especie`."""
-    b = tdr.cargar_csvs(salidas, nb, columna="especie")
+    """Concatena los CSV del barrido agregando la columna `especie`.
+
+    El patron `[0-9]*` toma solo los `01_<codigo>.csv`: el notebook 01 escribe
+    tambien `01_resumen_especies.csv` y `01_control_v5.csv`, que no son especies."""
+    b = tdr.cargar_csvs(salidas, nb, patron="[0-9]*", columna="especie")
     return b[b["especie"].isin(spoi)].copy() if spoi else b
 
 
@@ -288,90 +291,17 @@ def resumen_especies(datos, spoi, optimos=None):
     return r.sort_values("N_druggable", ascending=False).reset_index(drop=True)
 
 
-# --- figuras ---------------------------------------------------------------
-
-def fig_roc(sp_rnk, rnk, sp_code, params_opt, plt):
-    """ROC global + distribucion de scores de la especie elegida (celda 6 de 02)."""
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4), tight_layout=True)
-
-    from sklearn.metrics import roc_curve
-    fpr, tpr, _ = roc_curve(rnk["druggable"], rnk["score"])
-    auc_g = tdr.auc_global(rnk["druggable"], rnk["score"])
-    auc01 = tdr.auc01_mcclish(sp_rnk["druggable"], sp_rnk["score"])
-    ax1.plot(fpr, tpr, color=tdr.S1, label=f"ROC global (AUC = {auc_g:.3f})")
-    ax1.plot([0, 1], [0, 1], color=tdr.MUTED, ls="--", lw=1, label="azar")
-    ax1.axvline(tdr.FPR_MAX, color=tdr.S2, lw=1, ls=":",
-                label=f"FPR = {tdr.FPR_MAX:g} (AUC01 = {auc01:.3f})")
-    ax1.set_xlabel("Tasa de falsos positivos")
-    ax1.set_ylabel("Tasa de verdaderos positivos")
-    ax1.set_title(f"{tdr.NOMBRE_CORTO.get(sp_code, sp_code)}")
-    ax1.legend(loc="lower right", fontsize=8)
-
-    bins = np.logspace(-10, 1, 30)
-    for etiqueta, sel, color in [("druggable", 1, tdr.S1), ("no druggable", 0, tdr.S2)]:
-        s = rnk.loc[rnk["druggable"] == sel, "score"].dropna()
-        ax2.hist(s, bins=bins, density=True, histtype="step", color=color,
-                 label=f"{etiqueta} ({len(s)})")
-    ax2.set_xscale("log")
-    ax2.set_yscale("log")
-    ax2.set_xlabel("NDS")
-    ax2.set_ylabel("densidad")
-    a, b, l, g = params_opt
-    ax2.set_title(f"alpha={a} beta={b} lambda={l} gamma={g}", fontsize=9)
-    ax2.legend(fontsize=8)
-    return fig
 
 
-def fig_grilla_beta(barrido, plt):
-    """Efecto de cada parametro sobre la AUC01, con beta destacado.
-
-    El panel de beta es la comparacion G'r (beta=0) vs G'rk (beta>0) que el
-    README §1.5 saca de `red_gr_vs_grk/`: ya esta contenida en la grilla.
-    """
-    fig, axes = plt.subplots(1, 4, figsize=(11, 3), sharey=True, tight_layout=True)
-    for ax, col in zip(axes, ["alpha", "beta", "lambda_", "gamma"]):
-        datos = barrido.copy()
-        # "nan" = modo hibrido, es una categoria mas. Se escribe a mano porque
-        # `astype(str)` conserva el faltante en pandas 3 en vez de convertirlo a
-        # la cadena "nan", y entonces `sorted` compara str contra float.
-        datos[col] = datos[col].map(lambda v: "nan" if pd.isna(v) else str(v))
-        orden = sorted(datos[col].unique())
-        ax.boxplot([datos.loc[datos[col] == v, "AUC01"].dropna() for v in orden],
-                   showfliers=False)
-        ax.set_xticks(range(1, len(orden) + 1))
-        ax.set_xticklabels(orden, fontsize=8)
-        ax.set_xlabel(col)
-        ax.set_title(col, fontsize=9)
-    axes[0].set_ylabel("AUC01")
-    axes[1].set_title("beta:  0 = G'r,  >0 = G'rk", fontsize=9)
-    return fig
+def tabla_ranking(rnk, ctx):
+    """El ranking global de una corrida, listo para guardar: score, si es
+    druggable y si es de la especie evaluada. Es lo que la figura de la ROC
+    necesita para no volver a correr el modelo."""
+    sp_targets = set(map(str, ctx["sp_targets"]))
+    t = rnk[["target_id", "score", "druggable"]].copy()
+    t["de_la_especie"] = t["target_id"].astype(str).isin(sp_targets)
+    return t
 
 
-def fig_consistencia(spearman, plt):
-    """Matriz de concordancia entre especies sobre el perfil de la grilla."""
-    fig, ax = plt.subplots(figsize=(6, 5), tight_layout=True)
-    orden = [s for s in tdr.ESPECIES_16 if s in spearman.columns]
-    m = spearman.loc[orden, orden]
-    im = ax.imshow(m.values, vmin=-1, vmax=1, cmap="RdBu_r")
-    ax.set_xticks(range(len(orden)))
-    ax.set_xticklabels([tdr.NOMBRE_CORTO.get(s, s) for s in orden], rotation=90, fontsize=7)
-    ax.set_yticks(range(len(orden)))
-    ax.set_yticklabels([tdr.NOMBRE_CORTO.get(s, s) for s in orden], fontsize=7)
-    ax.grid(False)
-    fig.colorbar(im, ax=ax, label="Spearman sobre AUC01")
-    return fig
-
-
-def fig_plateau(pl, plt):
-    """Caida relativa al top-K por especie: cuan identificado esta el optimo."""
-    fig, ax = plt.subplots(figsize=(7, 3.5), tight_layout=True)
-    pl = pl.sort_values("caida_top20")
-    x = np.arange(len(pl))
-    for k, color in zip((5, 10, 20), tdr.ORD):
-        ax.plot(x, 100 * pl[f"caida_top{k}"], "o-", color=color, ms=3, label=f"top-{k}")
-    ax.set_xticks(x)
-    ax.set_xticklabels([tdr.NOMBRE_CORTO.get(s, s) for s in pl["especie"]],
-                       rotation=90, fontsize=7)
-    ax.set_ylabel("caida de AUC01 (%)")
-    ax.legend(fontsize=8)
-    return fig
+# Las figuras viven en `figuras_genome.py`: se dibujan desde las tablas de
+# `resultados/`, sin cargar la base (ver `comun/figuras.py`).

@@ -18,6 +18,7 @@ TDR_TESTS_QUIMICA=1 python3 -m unittest tests.test_integridad -v   # + capa quí
 | `test_proyeccion.py` | Que `nucleo.nds()` sea equivalente a la proyección `M^bip S (M^bip)ᵀ` del roadmap: con λ = 0, `score_i · k_i` coincide exactamente con `(M S Mᵀ w)_i`. También que β = 1 penalice a las categorías grandes. | instantáneo |
 | `test_rutas.py` | Que `gon4` resuelva a `/data1`, que `out()` rechace un nombre de carpeta con typo, que ninguna carpeta arranque con dígito (importabilidad) y que todo notebook lleve su `NN_`. | instantáneo |
 | `test_integridad.py` | Tablas de entrada: toda proteína anotada tiene especie, prefijos `IPR`/`OG` coherentes con la columna `db` (el Fisher de `nucleo` separa por prefijo y deja NaN silenciosos si aparece otro), sin duplicados, positivos y negativos disjuntos, pesos de similitud en rango. | minutos |
+| `test_figuras.py` | Que toda figura se dibuje desde sus tablas de `resultados/` con la carga de la base anulada, que no lea tablas que no declaró, que ningún notebook dibuje por su cuenta y que el informe y la página sólo usen figuras registradas. | ~10 s |
 | `test_fuga.py` | Que `sp_out` deje la semilla sin ningún blanco de la especie evaluada (con control negativo) y que la orfanización remueva todas las aristas de la droga. | minutos |
 
 Los tests que leen la base se saltean solos si `DB/` no está montado. Los mismos

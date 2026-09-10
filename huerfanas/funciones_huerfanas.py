@@ -455,122 +455,35 @@ def escribir_meta(salidas, nb, **campos):
     return tdr.escribir_meta(salidas, nb, **campos)
 
 
-# --- figuras ---------------------------------------------------------------
+def analisis_informativa(res, ks=None):
+    """Las pseudohuerfanas con semilla informativa, miradas mas de cerca que con
+    `frank < 0.1`.
 
-def fig_grupos(k1, plt):
-    """Pseudohuérfanas por especie, apiladas por grupo 0-3."""
-    t = (k1.groupby(["sp_id", "grupo"]).size().unstack(fill_value=0)
-         .reindex(columns=[0, 1, 2, 3], fill_value=0))
-    t = t.loc[t.sum(axis=1).sort_values(ascending=False).index]
-    fig, ax = plt.subplots(figsize=(7, 3.5), tight_layout=True)
-    abajo = np.zeros(len(t))
-    etiquetas = {0: "ninguna", 1: "enlace a bioactividad +",
-                 2: "multiespecie", 3: "ambas"}
-    for g in [0, 1, 2, 3]:
-        ax.bar(range(len(t)), t[g], bottom=abajo, color=tdr.COLOR_GRUPO[g],
-               label=f"grupo {g} — {etiquetas[g]}")
-        abajo += t[g].values
-    ax.set_xticks(range(len(t)))
-    ax.set_xticklabels([tdr.NOMBRE_CORTO.get(s, s) for s in t.index], rotation=90, fontsize=7)
-    ax.set_ylabel("drogas pseudohuérfanas")
-    ax.legend(fontsize=7)
-    return fig
+    Con ~12 000 proteinas por especie, `frank < 0.1` es quedar entre las primeras
+    ~1 200: casi todas las informativas lo cumplen y el numero no discrimina.
+    Aca se mira la posicion absoluta del blanco dentro de su especie (`rSS`):
 
-
-def fig_frank(df, plt, corte=0.1):
-    """Distribución de frank por grupo (Fig 2 del paper 2016)."""
-    fig, axes = plt.subplots(4, 1, figsize=(5.5, 6), sharex=True, sharey=True,
-                             tight_layout=True)
-    bins = np.arange(0, 0.61, 0.01)
-    for g, ax in zip([0, 1, 2, 3], axes):
-        d = df[df["grupo"] == g]
-        ax.hist(d["frank"].dropna(), bins=bins, color=tdr.COLOR_GRUPO[g])
-        ax.axvline(corte, color=tdr.INK2, lw=1, ls="--")
-        ax.set_ylabel(f"grupo {g}", fontsize=8)
-        ax.text(0.98, 0.85, f"{d['frank'].notna().sum()} de {len(d)} con semilla · "
-                            f"{(d['frank'] < corte).mean():.0%} < {corte}",
-                transform=ax.transAxes, ha="right", fontsize=7, color=tdr.INK2)
-    axes[-1].set_xlabel("frank (posición relativa del blanco verdadero)")
-    return fig
+      sub   una fila por droga informativa, con `clase` (directa/indirecta),
+            `rSS`, `frank`, `rG`, `n_semilla`, `n_targets` y si hubo empate
+            (rSS fraccionario: el blanco comparte puntaje con otras proteinas)
+      topk  para cada k, la fraccion con `rSS <= k` (todas, directa, indirecta)
+            y la que daria el azar, `mean(min(k, n_targets) / n_targets)`
+    """
+    ks = np.unique(np.round(np.logspace(0, 4, 81)).astype(int)) if ks is None else np.asarray(ks)
+    sub = res.loc[res["semilla"] == "informativa",
+                  ["drug_id", "especie", "grupo", "clase", "rSS", "frank", "rG",
+                   "n_semilla", "n_targets", "score"]].copy()
+    sub["empate"] = (sub["rSS"] % 1) != 0
+    filas = []
+    for k in ks:
+        fila = {"k": int(k), "todas": (sub["rSS"] <= k).mean(),
+                "azar": np.mean(np.minimum(k, sub["n_targets"]) / sub["n_targets"])}
+        for c in ("directa", "indirecta"):
+            d = sub[sub["clase"] == c]
+            fila[c] = (d["rSS"] <= k).mean() if len(d) else np.nan
+        filas.append(fila)
+    return sub.reset_index(drop=True), pd.DataFrame(filas)
 
 
-def fig_cobertura(cob, plt):
-    """Clase de semilla por especie: el techo teórico del método."""
-    t = (cob.groupby(["especie", "semilla"]).size().unstack(fill_value=0))
-    for c in ("nula", "no informativa", "informativa"):
-        if c not in t.columns:
-            t[c] = 0
-    t = t[["nula", "no informativa", "informativa"]]
-    t = t.div(t.sum(axis=1), axis=0).sort_values("informativa")
-    fig, ax = plt.subplots(figsize=(7, 3.5), tight_layout=True)
-    abajo = np.zeros(len(t))
-    for c in t.columns:
-        ax.bar(range(len(t)), 100 * t[c], bottom=abajo, color=tdr.COLOR_SEMILLA[c], label=c)
-        abajo += 100 * t[c].values
-    ax.set_xticks(range(len(t)))
-    ax.set_xticklabels([tdr.NOMBRE_CORTO.get(s, s) for s in t.index], rotation=90, fontsize=7)
-    ax.set_ylabel("% de pseudohuérfanas")
-    ax.set_title("Cobertura de semilla: informativa = techo del método")
-    ax.legend(fontsize=8)
-    return fig
-
-
-def fig_palancas(pal, plt):
-    """Ganancia potencial de cada palanca sobre la semilla nula / no informativa."""
-    t = pal.groupby("palanca")["rescatada"].agg(["sum", "count", "mean"])
-    fig, ax = plt.subplots(figsize=(5.5, 3.5), tight_layout=True)
-    ax.bar(range(len(t)), 100 * t["mean"], color=tdr.CATEGORICOS[:len(t)])
-    ax.set_xticks(range(len(t)))
-    ax.set_xticklabels(t.index, fontsize=8)
-    ax.set_ylabel("% de pseudohuérfanas rescatadas")
-    for i, (n, c) in enumerate(zip(t["sum"], t["count"])):
-        ax.text(i, 100 * n / c, f"{int(n)}/{int(c)}", ha="center", va="bottom", fontsize=7)
-    return fig
-
-
-def fig_recuperacion(curva, rg_star, plt):
-    """Fig 3A: ρ(rG) y λ(rG) apilados, con la línea del umbral 3σ."""
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(6, 5), sharex=True, tight_layout=True)
-    ax1.plot(curva["l"], curva["rho"], color=tdr.S1)
-    ax1.set_ylabel("ρ(l): drogas recuperadas")
-    ax2.plot(curva["l"], curva["lambda"], color=tdr.MUTED, lw=1, label="λ(l)")
-    ax2.plot(curva["l"], curva["lambda_suave"], color=tdr.S1, label="λ̃(l)")
-    ax2.axhline(rg_star["umbral"].iloc[0], color=tdr.S2, ls="--", lw=1, label="λ∞ + 3σ")
-    ax2.axvline(rg_star["r_g_estrella"].iloc[0], color=tdr.ST_CRIT, ls=":", lw=1.5,
-                label=f"r*G = {rg_star['r_g_estrella'].iloc[0]:.0f}")
-    ax2.set_xlabel("posición en el ranking global (rG)")
-    ax2.set_ylabel("λ(l)")
-    ax2.set_xscale("log")
-    ax2.legend(fontsize=8)
-    return fig
-
-
-def fig_inferencia(df, plt):
-    """Fig 4b: distribución de rG y rSS por clase de inferencia."""
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9, 3.5), tight_layout=True)
-    clases = [c for c in ("directa", "indirecta") if c in set(df["clase"])]
-    for ax, col, etiqueta in [(ax1, "rG", "rG (ranking global)"),
-                              (ax2, "rSS", "rSS (dentro de la especie)")]:
-        datos = [df.loc[df["clase"] == c, col].dropna() for c in clases]
-        ax.boxplot(datos, showfliers=False)
-        ax.set_xticks(range(1, len(clases) + 1))
-        ax.set_xticklabels(clases, fontsize=8)
-        ax.set_yscale("log")
-        ax.set_ylabel(etiqueta)
-    n = df["clase"].value_counts(normalize=True)
-    ax1.set_title(" · ".join(f"{c}: {100*n.get(c, 0):.0f} %" for c in clases), fontsize=9)
-    return fig
-
-
-def fig_embudo(embudo, plt):
-    """Compuestos que sobreviven a cada paso del embudo de la especie foco."""
-    fig, ax = plt.subplots(figsize=(6, 3), tight_layout=True)
-    ax.barh(range(len(embudo)), embudo["n"], color=tdr.ORD[:len(embudo)])
-    ax.set_yticks(range(len(embudo)))
-    ax.set_yticklabels(embudo["paso"], fontsize=8)
-    ax.invert_yaxis()
-    ax.set_xscale("log")
-    for i, n in enumerate(embudo["n"]):
-        ax.text(n * 1.05, i, f"{n:,}", va="center", fontsize=8, color=tdr.INK2)
-    ax.set_xlabel("compuestos")
-    return fig
+# Las figuras viven en `figuras_huerfanas.py`: se dibujan desde las tablas de
+# `resultados/`, sin cargar la base (ver `comun/figuras.py`).
