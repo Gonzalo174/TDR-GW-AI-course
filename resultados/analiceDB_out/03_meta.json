@@ -1,7 +1,7 @@
 {
   "notebook": "03_calidad_bioactividades.ipynb",
   "nb": "03",
-  "fecha": "2026-09-10 10:31",
+  "fecha": "2026-09-10 15:33",
   "params": {
     "mw_max": 150,
     "n_parentales_min": 100
@@ -22,5 +22,11 @@
   "python": "3.12.11",
   "pandas": "3.0.5",
   "aplica_filtro": true,
-  "consumido_por": "huerfanas/"
+  "consumido_por": "huerfanas/",
+  "insumo_externo": "datos_externos/promiscuidad/ (derivar.py, datos crudos)",
+  "transcriptas": [
+    "03_compuestos_promiscuos.csv",
+    "03_impacto_filtro.csv",
+    "03_curva_filtrado.csv"
+  ]
 }

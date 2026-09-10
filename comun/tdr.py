@@ -54,8 +54,9 @@ SALIDAS = RAIZ / "resultados"                 # salidas de los notebooks
 CONTROL_V5 = RAIZ / "control" / "genoma_completo_v5"
 
 # Datos crudos (.tsv de InterProScan, tabla de subestructuras): NO se publican,
-# son la base real. Las dos funciones que los leen -`nombres_ipr` y
-# `analiceDB.cargar_subestructuras_crudas`- quedan indisponibles en un clon.
+# son la base real, y ningun analisis los lee. Los usan `nombres_ipr` (que por
+# eso no esta disponible) y `datos_externos/promiscuidad/derivar.py`, que
+# calcula fuera de los analisis el unico insumo que no sale de DB/.
 # Con una copia local se puede apuntar a ella: export TDR_RAW=/ruta/raw_data
 RAW = Path(os.environ.get("TDR_RAW", RAIZ / "raw_data_ausente"))
 
@@ -660,11 +661,11 @@ def cargar_csvs(salidas, nb, patron="*", columna="especie"):
 #
 # El paper 2016 (S3 Fig) excluye las relaciones de subestructura de las moleculas
 # chicas y promiscuas: `MW < 150 Da` y `N_parentales > 100`, donde N_parentales es
-# la cantidad de superestructuras que contienen a la molecula. La base local no lo
-# aplica: 30 compuestos concentran 104 075 relaciones, el 12 % de la capa.
+# la cantidad de superestructuras que contienen a la molecula.
 #
-# `analiceDB/03` mide el efecto y escribe la lista; `huerfanas/` la aplica antes
-# de construir cualquier semilla. Vive aca porque lo usan las dos carpetas (§1.1).
+# La lista se calcula desde datos crudos en `datos_externos/promiscuidad/`;
+# `analiceDB/03` la transcribe y mide su efecto sobre la base, y `huerfanas/` la
+# aplica antes de construir cualquier semilla (CONVENCIONES.md §10).
 
 MW_PROMISCUIDAD = 150       # Da
 N_PARENTALES_PROMISCUIDAD = 100
@@ -673,8 +674,9 @@ N_PARENTALES_PROMISCUIDAD = 100
 def compuestos_promiscuos(salidas_analice=None):
     """Lee `analiceDB_out/03_compuestos_promiscuos.csv` y devuelve los `drug_id`.
 
-    Es la salida del notebook `analiceDB/03_calidad_bioactividades.ipynb`: hay que
-    correrlo antes que `huerfanas/`. Si falta, el error dice exactamente eso.
+    `analiceDB/03_calidad_bioactividades.ipynb` la transcribe desde
+    `datos_externos/promiscuidad/`: hay que correrlo antes que `huerfanas/`. Si
+    falta, el error dice exactamente eso.
     """
     salidas = Path(salidas_analice) if salidas_analice else (SALIDAS / "analiceDB_out")
     p = salidas / "03_compuestos_promiscuos.csv"

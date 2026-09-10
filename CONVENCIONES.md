@@ -58,8 +58,10 @@ comparación G′r (β = 0) contra G′rk (β > 0) es una vista del barrido
 Todo se resuelve contra la raíz del repositorio (`tdr.RAIZ`, la carpeta que
 contiene `DB/`). Ningún notebook tiene un literal de ruta. `DB/` es de sólo
 lectura; las salidas van a `resultados/<analisis>_out/`, que crea `tdr.out()`.
-Las dos únicas rutas externas son opcionales y privadas: `TDR_RAW` y
-`TDR_MAPEOS` (sólo para `analiceDB/03`, ver `README.md`).
+Ningún notebook lee nada fuera del repositorio. El único cálculo que necesita
+datos privados, la lista de compuestos promiscuos, vive en
+`datos_externos/promiscuidad/derivar.py` (rutas `TDR_RAW` y `TDR_MAPEOS`) y su
+salida se versiona como insumo (§10).
 
 ## §7 · Numeración
 
@@ -93,6 +95,7 @@ contra `oraculo_v4/`.
 Los compuestos chicos y promiscuos (peso molecular < 150 Da y más de 100
 superestructuras que los contienen, el criterio del trabajo de 2016) se retiran
 de la capa de subestructuras **antes** de armar cualquier semilla.
-`analiceDB/03` mide el efecto y escribe `03_compuestos_promiscuos.csv`;
-`huerfanas/` lo aplica con `tdr.filtrar_capa_quimica()`. Como `analiceDB/03`
-necesita datos privados, esa tabla se versiona ya calculada.
+La lista sale de `datos_externos/promiscuidad/` (se calcula desde datos crudos,
+fuera de los análisis); `analiceDB/03` la transcribe a
+`03_compuestos_promiscuos.csv` y mide desde la base cuánto saca, y `huerfanas/`
+la aplica con `tdr.filtrar_capa_quimica()`.

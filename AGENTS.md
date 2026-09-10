@@ -8,7 +8,8 @@ evidencia y los valores que la verificación tiene que dar.
 - Verificar sin correr nada (~2 min): `make verificar`
 - Reproducir las tablas desde la base (~45 min, 20 procesos): `make corrida`
 - No hace falta configurar rutas: todo se resuelve desde la raíz del repositorio.
-- `analiceDB/03` necesita datos privados (`TDR_RAW`, `TDR_MAPEOS`); sin ellos
-  `make corrida` lo saltea y se usa su tabla versionada.
+- Ningún notebook necesita datos fuera del repositorio. La lista de compuestos
+  promiscuos se calcula aparte desde datos privados y se versiona como insumo
+  (`datos_externos/promiscuidad/`).
 - No escribas a mano en `informe/numeros.tex`, `informe/tabla_optimos.tex`,
   `FIGURAS.md` ni `index.html`: se generan desde las tablas.

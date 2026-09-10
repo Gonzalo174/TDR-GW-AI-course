@@ -25,7 +25,7 @@ análisis sigue). Por eso las pruebas iban antes que las corridas.
 | A.3 | Confirmar que sobreviven las 16 especies del modelo | ✅ | `test_las_16_especies_estan_completas` |
 | A.4 | Rutas relativas a la raíz del repo; control de v5 copiado | ✅ | `tdr.RAIZ`; `test_todo_cuelga_del_repositorio`; `control/genoma_completo_v5/` |
 | A.4 | Publicar los diccionarios chicos en `DB/mapeos/` + `comun/codigos.py` | 🔀 | no se publicó ningún diccionario: sólo las cinco constantes que el modelo necesita. Publicarlos habría deshecho la codificación (PROVENANCE §3.1) |
-| A.4 | Resolver `RAW` (datos crudos) | 🔀 | ruta opcional `TDR_RAW`; sólo la usa `analiceDB/03`, cuya salida se versiona (README, «`analiceDB/03` necesita datos privados») |
+| A.4 | Resolver `RAW` (datos crudos) | 🔀 | ningún notebook los lee: el único cálculo que los necesita, la lista de compuestos promiscuos, pasó a `datos_externos/promiscuidad/derivar.py` y su salida se versiona (PROVENANCE §3.13) |
 | A.5 | Leer la capa de aristas partida en dos `.gz` y desescalar el peso | ✅ | `tdr.leer_aristas()`: 36 152 622 aristas |
 | A.6 | `cluster_consistent` como booleano | ✅ | cast explícito en `cargar_db` |
 | A.7 | Explotar la asimetría: lo que no toca la capa química no debe moverse | ✅ | `verificacion/10`: priorización idéntica, 0 discrepancias. Con una corrección: `huerfanas/` sí toca la capa química y sí se mueve (PROVENANCE §5) |
@@ -111,6 +111,7 @@ que un agente pueda reproducir sin haber hablado con nadie.
 |---|---|
 | ⏳ Publicar la página | la consigna la enlaza desde la página del curso |
 | ⏳ Un control independiente del **modelo**, no sólo del port | el control de v5 corre el mismo `nucleo.py` (CONVENCIONES §3) |
-| ⏳ Hacer reproducible `analiceDB/03` desde el repo | opción: publicar las relaciones de subestructura y el peso molecular ya codificados. Hay que evaluar si eso permite reidentificar compuestos |
+| ✅ Que ningún notebook necesite datos privados | `analiceDB/03` ya no lee datos crudos; la lista de promiscuos es un insumo externo versionado (PROVENANCE §3.13) |
+| ⏳ Revisar por qué la semilla nula bajó del 83 al 69 % respecto de v4 | el informe lo atribuye a que se filtran menos promiscuos (30 → 7), pero el filtro no saca ninguna arista de la capa de subestructuras de `DB/` (`03_impacto_en_la_base`): la explicación hay que confirmarla |
 | ⏳ Palancas reales para ampliar la semilla | bajar el umbral de similitud por debajo de 0.8 exige recalcular la capa química; KEGG exige un mapeo que no está |
 | ⏳ Verificar contra el artículo la partición directa/indirecta 68/32 | hoy se cita desde un comentario del código de v3 |

@@ -354,11 +354,12 @@ def construir() -> str:
       f'{n["ControlCoinciden"]} de {n["NEspeciesOpt"]} organismos, Δ AUC01 máx. = '
       f'{n["ControlDeltaMax"]}.</li>')
     A(f'<li><strong>Desorfanización</strong>: {n["NCambianHU"]} de {n["NComparadasHU"]} columnas '
-      f'cambian como predice el recorte. Menos compuestos promiscuos filtrados '
-      f'({n["PromiscuosVcuatro"]} → {n["NPromiscuos"]}), más vecinos: semilla nula '
+      f'cambian como predice el recorte: semilla nula '
       f'{n["PctSinSemillaVcuatro"]} → {n["PctSinSemilla"]} %, recuperación '
       f'{n["PctRecuperadasVcuatro"]} → {n["PctRecuperadas"]} %, r*G '
-      f'{n["RGEstrellaVcuatro"]} → {n["RGEstrella"]}.</li>')
+      f'{n["RGEstrellaVcuatro"]} → {n["RGEstrella"]}. Los promiscuos filtrados pasan de '
+      f'{n["PromiscuosVcuatro"]} a {n["NPromiscuos"]}, pero en la base actual el filtro saca '
+      f'{n["NDdsRemovidas"]} aristas: por qué baja la semilla nula está por confirmar.</li>')
     A(f'<li><strong>Descriptivos</strong>: {n["NCambianAN"]} de {n["NComparadasAN"]} cambian, las '
       "que miden componentes químicas.</li></ul>")
     A('<p class="chapo">El port destapó cuatro filtros heredados que comparaban un entero '
@@ -388,8 +389,8 @@ def construir() -> str:
     A("<p>Cada notebook deja un <code>NN_meta.json</code> junto a sus tablas con la fecha, los "
       "parámetros, la fecha de cada tabla de entrada y las versiones de python y pandas. Qué "
       "tablas lee cada figura y qué la verifica está en <code>FIGURAS.md</code>. El repositorio "
-      "no reproduce la base misma ni el filtro de promiscuidad de <code>analiceDB/03</code> "
-      "(los dos necesitan datos privados; su salida está versionada), ni los nombres legibles "
+      "no reproduce la base misma ni la lista de compuestos promiscuos (las dos se derivan de "
+      "datos privados y se versionan como insumo), ni los nombres legibles "
       "de las anotaciones ni la identidad de los organismos, que es deliberada.</p>")
 
     A('<footer>Generado por <code>informe/generar_pagina.py</code> a partir de las tablas de '

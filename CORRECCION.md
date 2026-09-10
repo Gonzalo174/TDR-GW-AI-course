@@ -32,10 +32,10 @@ Valores que tiene que dar, y que las pruebas o el informe verifican:
 | figuras | 29 dibujadas, 2 sin datos (no hay sugerencias bajo r*G) | `make figuras` |
 
 Reproducir las tablas desde la base, en cambio, lleva ~45 minutos con 20
-procesos (`make corrida`; detalle en README, «Tiempo de cómputo»). Un notebook,
-`analiceDB/03`, necesita datos privados y no se puede reproducir desde el
-repositorio; su salida está versionada (README, «`analiceDB/03` necesita datos
-privados»).
+procesos (`make corrida`; detalle en README, «Tiempo de cómputo»). Todos los
+notebooks corren desde el repositorio. El único insumo calculado fuera de `DB/`
+es la lista de compuestos promiscuos, que exige datos crudos privados: está
+versionada en `datos_externos/promiscuidad/`, con su procedencia.
 
 ## La consigna, requisito por requisito
 
@@ -56,7 +56,8 @@ privados»).
 - **La base original y su acondicionamiento**: `DB/` se deriva de datos que no
   se publican. Lo que se publica es la salida y el registro de cómo se produjo
   (`DB/meta.json`, `PROVENANCE.md` §2).
-- **`analiceDB/03`** no corre sin datos privados (ver arriba).
+- **El cálculo de la lista de compuestos promiscuos**: necesita datos crudos
+  privados; se versiona su salida (`datos_externos/promiscuidad/README.md`).
 - **Los nombres de las anotaciones y la identidad de los organismos**: por
   diseño. Tres de los 16 organismos son identificables por su tipo, y está
   anotado.

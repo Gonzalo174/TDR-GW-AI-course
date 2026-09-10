@@ -129,7 +129,7 @@ a{color:var(--acento)}
 <p>Este repositorio porta el análisis v4 a la base codificada y recortada. Las mismas tablas calculadas antes de los dos cambios quedaron como oráculo, con un único criterio: <strong>si el análisis toca la capa química, el recorte lo mueve; si no, no</strong>. Sobre 353 columnas: 
 <span class="marca m-ok">sin discrepancias</span></p><ul>
 <li><strong>Priorización</strong> (sin química): 149 de 149 columnas idénticas; el control independiente coincide en 16 de 16 organismos, Δ AUC01 máx. = 0.</li>
-<li><strong>Desorfanización</strong>: 83 de 177 columnas cambian como predice el recorte. Menos compuestos promiscuos filtrados (30 → 7), más vecinos: semilla nula 83 → 69 %, recuperación 2.6 → 3.4 %, r*G 54 → 74.</li>
+<li><strong>Desorfanización</strong>: 83 de 177 columnas cambian como predice el recorte: semilla nula 83 → 69 %, recuperación 2.6 → 3.4 %, r*G 54 → 74. Los promiscuos filtrados pasan de 30 a 7, pero en la base actual el filtro saca 0 aristas: por qué baja la semilla nula está por confirmar.</li>
 <li><strong>Descriptivos</strong>: 14 de 23 cambian, las que miden componentes químicas.</li></ul>
 <p class="chapo">El port destapó cuatro filtros heredados que comparaban un entero codificado contra el texto que solía contener; ninguno lanzaba una excepción, y los encontraron las pruebas y esta comparación. Detalle en <a href="PROVENANCE.md">PROVENANCE.md</a>.</p>
 </div>
@@ -142,6 +142,6 @@ pip install -r requirements.txt
 make verificar     # pruebas + figuras desde las tablas + cifras del informe   ~1 min
 make corrida       # los 10 notebooks, desde la base                          ~45 min
 make entregables   # figuras, informe, presentación y esta página         ~1,5 min</code></pre>
-<p>Cada notebook deja un <code>NN_meta.json</code> junto a sus tablas con la fecha, los parámetros, la fecha de cada tabla de entrada y las versiones de python y pandas. Qué tablas lee cada figura y qué la verifica está en <code>FIGURAS.md</code>. El repositorio no reproduce la base misma ni el filtro de promiscuidad de <code>analiceDB/03</code> (los dos necesitan datos privados; su salida está versionada), ni los nombres legibles de las anotaciones ni la identidad de los organismos, que es deliberada.</p>
+<p>Cada notebook deja un <code>NN_meta.json</code> junto a sus tablas con la fecha, los parámetros, la fecha de cada tabla de entrada y las versiones de python y pandas. Qué tablas lee cada figura y qué la verifica está en <code>FIGURAS.md</code>. El repositorio no reproduce la base misma ni la lista de compuestos promiscuos (las dos se derivan de datos privados y se versionan como insumo), ni los nombres legibles de las anotaciones ni la identidad de los organismos, que es deliberada.</p>
 <footer>Generado por <code>informe/generar_pagina.py</code> a partir de las tablas de <code>resultados/</code>. Los números de esta página no se escribieron a mano.</footer>
 </div>

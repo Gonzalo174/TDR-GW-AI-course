@@ -162,38 +162,27 @@ def bioactividades_por_tag(t, plt):
 
 
 @figura(A, "03_f02_promiscuidad",
-        verifica='Contra el oráculo v4: de 30 a 7 promiscuos, explicado por el recorte. La corrida exige el mapa de compuestos para no producir la lista falsa (PROVENANCE §3.10).',
-        lee=("03_promiscuidad_por_compuesto.csv", "03_curva_filtrado.csv"))
+        verifica='La lista y la curva vienen de `datos_externos/promiscuidad/derivar.py`, que las reproduce byte a byte con los datos crudos. Contra el oráculo v4: de 30 a 7 promiscuos, explicado por el recorte. El efecto sobre la base lo mide `03_impacto_en_la_base`.',
+        lee="03_curva_filtrado.csv")
 def promiscuidad(t, plt):
-    """MW vs N_parentales con el criterio del paper, y curva de filtrado."""
-    por_compuesto = t("03_promiscuidad_por_compuesto.csv")
+    """Sensibilidad del criterio de promiscuidad: compuestos y relaciones de
+    subestructura que filtraría cada combinación de (MW, N_parentales)."""
     curva = t("03_curva_filtrado.csv")
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4), tight_layout=True)
-
-    d = por_compuesto.dropna(subset=["molweight"])
-    ax1.scatter(d["molweight"], d["n_parentales"], s=3, alpha=0.2, color=tdr.MUTED,
-                rasterized=True)
-    sel = d[(d["molweight"] < tdr.MW_PROMISCUIDAD) &
-            (d["n_parentales"] > tdr.N_PARENTALES_PROMISCUIDAD)]
-    ax1.scatter(sel["molweight"], sel["n_parentales"], s=12, color=tdr.ST_CRIT,
-                label=f"filtrados ({len(sel)})")
-    ax1.axvline(tdr.MW_PROMISCUIDAD, color=tdr.S2, lw=1, ls="--")
-    ax1.axhline(tdr.N_PARENTALES_PROMISCUIDAD, color=tdr.S2, lw=1, ls="--")
-    ax1.set_yscale("log")
-    ax1.set_xlabel("peso molecular (Da)")
-    ax1.set_ylabel("superestructuras que lo contienen")
-    ax1.set_xlim(0, 600)
-    ax1.legend(fontsize=8)
-    ax1.set_title("Criterio del paper (S3 Fig)")
-
     for umbral, color in zip(sorted(curva["umbral_promiscuidad"].unique()),
                              tdr.ORD + [tdr.S2]):
         c = curva[curva["umbral_promiscuidad"] == umbral]
+        ax1.plot(c["mw_max"], c["compuestos_filtrables"], color=color,
+                 label=f"N_parentales > {umbral}")
         ax2.plot(c["mw_max"], 100 * c["aristas_filtrables"] / c["aristas_filtrables"].max(),
                  color=color, label=f"N_parentales > {umbral}")
-    ax2.axvline(tdr.MW_PROMISCUIDAD, color=tdr.MUTED, lw=1, ls="--")
-    ax2.set_xlabel("umbral de peso molecular (Da)")
-    ax2.set_ylabel("aristas filtrables (% del máximo)")
-    ax2.legend(fontsize=8)
+    for ax in (ax1, ax2):
+        ax.axvline(tdr.MW_PROMISCUIDAD, color=tdr.MUTED, lw=1, ls="--")
+        ax.set_xlabel("umbral de peso molecular (Da)")
+        ax.legend(fontsize=8)
+    ax1.set_yscale("symlog")
+    ax1.set_ylabel("compuestos filtrables")
+    ax1.set_title("Compuestos que saca el criterio")
+    ax2.set_ylabel("relaciones filtrables (% del máximo)")
     ax2.set_title("Sensibilidad al umbral")
     return fig

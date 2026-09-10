@@ -68,7 +68,8 @@ Todas verificables en el código, con el comentario al lado.
 | 3.9 | La columna de especie que sale del nombre de archivo se convierte a entero cuando son todos dígitos | antes los códigos eran texto y la comparación funcionaba por accidente; con códigos numéricos, `especie == SP_FOCO` comparaba `"26"` contra `26` y no encontraba nada |
 | 3.10 | `cargar_subestructuras_crudas` recodifica los ids de `raw_data/` a los códigos de `DB/` | sin eso las salidas no cruzan contra `datos.bioact` y el conjunto llega vacío a `huerfanas/` sin error: los compuestos promiscuos pasaban de 7 a 30 falsos |
 | 3.11 | Las figuras se dibujan en `<carpeta>/figuras_<analisis>.py` y **sólo leen tablas** de `resultados/`; cada una declara cuáles (`python comun/figuras.py --lista`), y la corrida guarda todo lo que una figura necesita (p. ej. `02_ranking_26.csv` para la ROC, `01_control_v5.csv`) | regenerar una figura costaba la corrida entera: varias dependían de variables en memoria o se dibujaban antes de la corrida, y todas exigían cargar la base. **Descartado:** guardar los objetos intermedios en `pickle`, que acopla las figuras a versiones de pandas y no se puede leer ni comparar contra el oráculo. Al redibujarlas desde las tablas, tres figuras de la corrida anterior resultaron rotuladas con el código crudo (`0`, `1`, …) en lugar del nombre; en las dos matrices especie × especie la causa es que los encabezados leídos del CSV son texto y la búsqueda en `NOMBRE_CORTO` fallaba en silencio. Las figuras nuevas convierten el encabezado antes de buscar |
-| 3.12 | Las tablas de `resultados/` (53 MB) y sus `NN_meta.json` se versionan; las figuras no | quien corrige tiene que poder comprobar figuras y cifras sin pagar ~45 min de corrida con 20 procesos: con las tablas, `make verificar` lo hace en ~1 min. En un clon sin ellas no se regeneraba ninguna figura y la receta de entregables reescribía el informe con «??»; ahora `numeros.py` y `generar_pagina.py` se niegan a escribir si falta un dato. **Descartado:** versionar también las figuras, que se regeneran desde las tablas y duplicarían 30 archivos binarios; y no versionar nada, que dejaba la verificación atada a la corrida completa |
+| 3.12 | Las tablas de `resultados/` (~50 MB) y sus `NN_meta.json` se versionan; las figuras no | quien corrige tiene que poder comprobar figuras y cifras sin pagar ~45 min de corrida con 20 procesos: con las tablas, `make verificar` lo hace en ~1 min. En un clon sin ellas no se regeneraba ninguna figura y la receta de entregables reescribía el informe con «??»; ahora `numeros.py` y `generar_pagina.py` se niegan a escribir si falta un dato. **Descartado:** versionar también las figuras, que se regeneran desde las tablas y duplicarían 30 archivos binarios; y no versionar nada, que dejaba la verificación atada a la corrida completa |
+| 3.13 | El cálculo de la lista de promiscuos sale de `analiceDB/03` a `datos_externos/promiscuidad/derivar.py`, y su salida (7 compuestos y dos tablas agregadas) se versiona como insumo; `analiceDB/03` la transcribe y mide su efecto sobre `DB/` | así ningún notebook necesita datos privados y toda la corrida se reproduce desde el repositorio. `derivar.py` reproduce las tres tablas byte a byte. **No se publica** la tabla por compuesto (peso molecular de ~84 000 compuestos al lado de su código): con esa precisión el peso molecular reidentifica el compuesto y deshace la codificación. **Descartado:** publicar las relaciones de subestructura y los pesos ya codificados para calcular la lista dentro del repo, por el mismo riesgo |
 
 ## 4. Qué es código propio y qué es librería
 
@@ -125,10 +126,14 @@ Una corrección al criterio que había escrito antes: agrupé `huerfanas/` con
 construye la semilla desde el vecindario químico de cada droga, así que el
 recorte la mueve necesariamente. Lo que se ve al comparar confirma la corrección
 y la explica: el conjunto evaluado es **idéntico** (7 782 pseudohuérfanas en los
-dos lados), pero la distribución por tipo de semilla se corre, porque el filtro
-de promiscuidad pasó de descartar 30 compuestos (11.98 % de las aristas) a 7
-(1.6 %) — 23 de esos 30 no sobrevivieron al recorte. Menos aristas descartadas,
-más drogas con semilla no nula.
+dos lados), pero la distribución por tipo de semilla se corre: la semilla nula
+baja del 83 al 69 %. El filtro de promiscuidad pasó de descartar 30 compuestos
+(11.98 % de las relaciones crudas) a 7 (1.6 %), porque 23 de esos 30 no
+sobrevivieron al recorte, y la primera lectura fue que menos descartes daban más
+drogas con semilla. **Esa explicación no está confirmada**: medido sobre la base
+(`analiceDB/03_impacto_en_la_base.csv`), el filtro actual saca 5 compuestos y
+ninguna arista de la capa de subestructuras de `DB/`. Queda como pendiente en
+`PLAN.md`.
 
 ## 6. Lo que no se puede reproducir desde este repositorio
 
@@ -139,9 +144,7 @@ verificable:
   que sí se publica es su salida y el registro de cómo se produjo;
 - **los nombres de las anotaciones** (3.6);
 - **la identidad de las especies**: por diseño;
-- **`analiceDB/cargar_subestructuras_crudas`**: lee `raw_data/`, que no se
-  publica, y recodifica sus ids con `mapa_compuesto.csv`, que tampoco. Con una
-  copia local se apunta a los dos con `TDR_RAW` y `TDR_MAPEOS`; la corrida de
-  `analiceDB/03` exige el mapa y falla si falta, porque sin él la lista de
-  promiscuos sale con 30 compuestos falsos (3.10). Esa lista se versiona ya
-  calculada.
+- **la lista de compuestos promiscuos**: se calcula desde relaciones de
+  subestructura crudas y un diccionario privado, en
+  `datos_externos/promiscuidad/derivar.py` (rutas `TDR_RAW` y `TDR_MAPEOS`); su
+  salida se versiona como insumo y ningún notebook lee datos crudos (3.13).

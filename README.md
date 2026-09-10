@@ -72,7 +72,7 @@ una máquina de 48 núcleos con **20 procesos**:
 |---|---|---|
 | `analiceDB/01_dimensiones_red` | dimensiones de la red, disponibilidad por especie | 21 s |
 | `analiceDB/02_capas_y_conectividad` | tamaños de cluster, componentes conexas, conectividad | 3,5 min |
-| `analiceDB/03_calidad_bioactividades` | filtro de promiscuidad (**necesita datos privados**, ver abajo) | 1 min |
+| `analiceDB/03_calidad_bioactividades` | bioactividades por tag, efecto del filtro de promiscuidad sobre la base | 1 min |
 | `genome_prioritization/01_barrido_parametros` | 16 especies × 120 combinaciones | 7,5 min |
 | `genome_prioritization/02_optimo_y_consistencia` | óptimo, meseta, consistencia | 33 s |
 | `huerfanas/01_pseudohuerfanas` | 7 782 compuestos, uno por uno | 13 min |
@@ -105,25 +105,17 @@ escribe tablas, y **Resultados**, que sólo las lee y dibuja; con la celda de
 imports y esa sección alcanza para ver las figuras sin volver a correr nada
 (CONVENCIONES.md §2).
 
-### `analiceDB/03` necesita datos privados
+### El único insumo calculado fuera: la lista de compuestos promiscuos
 
-Es el único notebook que no se reproduce desde el repositorio. Mide la
-promiscuidad química (cuántas superestructuras contienen a cada compuesto) y
-para eso lee tres archivos que no se publican:
-
-| archivo | qué tiene | tamaño |
-|---|---|---|
-| `raw_data/subestructures_chembl35_biolip.txt` | 1 065 346 relaciones superestructura → subestructura, con ids de ChEMBL y SMILES | 248 MB |
-| `raw_data/compounds/compound_data.csv` | id interno ↔ ChEMBL, SMILES y peso molecular | 293 MB |
-| `acondicionarDB/mapeos/mapa_compuesto.csv` | el diccionario de id interno a código de `DB/` | 12 MB |
-
-Se apunta a ellos con `TDR_RAW` (la carpeta `raw_data/`) y `TDR_MAPEOS` (la
-carpeta de mapeos). Los dos primeros identifican los compuestos y el tercero es
-justamente lo que la codificación oculta. Su salida, `03_compuestos_promiscuos.csv`,
-que es lo único que consume `huerfanas/`, está versionada; `make corrida` saltea
-este notebook si falta `TDR_MAPEOS`. Sin el mapa, la corrida falla a propósito:
-los ids no cruzan contra `DB/` y la lista saldría con 30 compuestos falsos en vez
-de los 7 verdaderos (PROVENANCE.md §3.10).
+Todos los notebooks corren desde `DB/`. La excepción es la **lista** de
+compuestos promiscuos que filtra `huerfanas/` (CONVENCIONES.md §10): contar
+cuántas superestructuras contienen a cada compuesto exige las relaciones de
+subestructura crudas, que `DB/` no conserva. Esa lista se calcula aparte, con
+`datos_externos/promiscuidad/derivar.py`, sobre tres archivos privados (datos
+crudos de ChEMBL y el diccionario de la codificación), y se versiona como
+insumo, igual que `DB/`. `analiceDB/03` la lee y mide desde la base cuánto saca.
+Qué archivos necesita, cómo se produjo y cómo se verificó está en
+[`datos_externos/promiscuidad/README.md`](datos_externos/promiscuidad/README.md).
 
 ## Datos
 
@@ -160,6 +152,7 @@ identificarlas (anotado en `comun/tdr.py`).
 | `resultados/` | las tablas de la corrida, versionadas; las figuras se regeneran |
 | `control/` | óptimos por especie de una corrida anterior, para contrastar |
 | `oraculo_v4/` | las mismas tablas calculadas antes del recorte y de la codificación |
+| `datos_externos/` | el único insumo calculado fuera de `DB/`: la lista de compuestos promiscuos, con su procedencia |
 | `informe/` | fuentes del informe y de la presentación, y el generador de la página |
 | `historia/` | el documento de trabajo de la versión v4, sólo como registro |
 | `final-project.html` | la consigna del curso |

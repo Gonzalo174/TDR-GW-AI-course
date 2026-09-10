@@ -63,7 +63,7 @@ CLAVES = [
     "FrankCorteRank", "NInfFueraCorte", "NOrgRho", "NOrgRhoPos", "EmbudoActivos", "EmbudoHuerfanos", "EmbudoTratables", "NSugerencias",
     # contraste con v4
     "NComparadasGP", "NIdenticasGP", "NComparadasHU", "NCambianHU", "NComparadasAN",
-    "NCambianAN", "PromiscuosVcuatro", "PctAristasVcuatro", "ControlCoinciden", "ControlDeltaMax",
+    "NCambianAN", "PromiscuosVcuatro", "PctAristasVcuatro", "NPromiscuosEnBase", "NDdsRemovidas", "ControlCoinciden", "ControlDeltaMax",
     "PctRecuperadasVcuatro", "PctSinSemillaVcuatro", "RGEstrellaVcuatro",
 ]
 
@@ -293,6 +293,10 @@ def _contraste_v4(n, eq):
                 n["NIdenticasGP"] = str(int((e["estado"] == "idéntico").sum()))
             else:
                 n[f"NCambian{clave}"] = str(int((e["estado"] == cambia).sum()))
+    base = _leer("analiceDB_out", "03_impacto_en_la_base.csv")
+    if base is not None:
+        n["NPromiscuosEnBase"] = _mil(base["compuestos_presentes_en_la_base"].iloc[0])
+        n["NDdsRemovidas"] = _mil(base["dds_antes"].iloc[0] - base["dds_despues"].iloc[0])
     imp = _leer_oraculo("analiceDB_out", "03_impacto_filtro.csv")
     if imp is not None:
         n["PromiscuosVcuatro"] = _mil(imp["compuestos_filtrados"].iloc[0])

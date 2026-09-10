@@ -310,12 +310,14 @@ independiente en \ControlCoinciden\ de \NEspeciesOpt\ organismos, con diferencia
 máxima de AUC01 de \ControlDeltaMax.
 \item \textbf{Desorfanización}, que arma la semilla desde el vecindario químico:
 \NCambianHU\ de \NComparadasHU\ columnas cambian, todas en la dirección que el
-recorte predice. El filtro de promiscuidad pasó de descartar \PromiscuosVcuatro\
-compuestos a \NPromiscuos\ ---la mayoría no sobrevivió al recorte---, así que
-más compuestos tienen vecinos: la semilla nula baja del \PctSinSemillaVcuatro\
-al \PctSinSemilla\,\%, la recuperación sube del \PctRecuperadasVcuatro\ al
-\PctRecuperadas\,\% y $r^*_G$ pasa de \RGEstrellaVcuatro\ a \RGEstrella. El
-conjunto evaluado es el mismo (\NPseudo\ pseudohuérfanas en los dos lados).
+recorte predice: la semilla nula baja del \PctSinSemillaVcuatro\ al
+\PctSinSemilla\,\%, la recuperación sube del \PctRecuperadasVcuatro\ al
+\PctRecuperadas\,\% y $r^*_G$ pasa de \RGEstrellaVcuatro\ a \RGEstrella, sobre
+el mismo conjunto (\NPseudo\ pseudohuérfanas en los dos lados). El filtro de
+promiscuidad pasó de \PromiscuosVcuatro\ compuestos a \NPromiscuos\ ---la mayoría
+no sobrevivió al recorte---, pero no está confirmado que eso explique la baja de
+la semilla nula: en la base actual el filtro saca \NPromiscuosEnBase\ compuestos
+y \NDdsRemovidas\ aristas de la capa de subestructuras.
 \item \textbf{Descriptivos de la base}: \NCambianAN\ de \NComparadasAN\ columnas
 cambian, las que miden componentes químicas.
 \end{itemize}
@@ -365,8 +367,8 @@ Ningún número de este informe está escrito a mano: se leen de las tablas con
 en cada bifurcación, está en \texttt{PROVENANCE.md}.
 
 \textbf{Límites.} El repositorio no reproduce la base misma, que se deriva de
-datos que no se publican; ni el filtro de promiscuidad, que lee las relaciones de
-subestructura crudas y su diccionario (su salida está versionada); ni los nombres legibles de las anotaciones, que exigen
+datos que no se publican; ni la lista de compuestos promiscuos, que se calcula desde
+relaciones de subestructura crudas (se versiona como insumo); ni los nombres legibles de las anotaciones, que exigen
 un diccionario privado; ni la identidad de los organismos, que es deliberada.
 
 \bibliographystyle{plain}

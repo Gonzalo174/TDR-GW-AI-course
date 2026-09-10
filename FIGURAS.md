@@ -24,7 +24,7 @@ Funciones en `analiceDB/figuras_analice.py`.
 | `02_f02_componentes_conexas`<br>componentes_conexas() | `02_capas_y_conectividad.ipynb` | `02_componentes_conexas.csv` | — | Es una verificación del recorte en sí: las dos series tienen que coincidir, porque no debe quedar ninguna componente sin bioactividad positiva. |
 | `02_f03_conectividad_anotaciones`<br>conectividad_anotaciones() | `02_capas_y_conectividad.ipynb` | `02_conectividad_anotaciones.csv` | — | Sin control: contra el oráculo no hay columnas numéricas comparables (`sin datos` en `10_equivalencia`). |
 | `03_f01_bioactividades_por_tag`<br>bioactividades_por_tag() | `03_calidad_bioactividades.ipynb` | `03_bioactividades_por_tag.csv` | — | Contra el oráculo v4: `cluster_consistent` idéntico; los conteos cambian como explica el recorte. |
-| `03_f02_promiscuidad`<br>promiscuidad() | `03_calidad_bioactividades.ipynb` | `03_promiscuidad_por_compuesto.csv`<br>`03_curva_filtrado.csv` | — | Contra el oráculo v4: de 30 a 7 promiscuos, explicado por el recorte. La corrida exige el mapa de compuestos para no producir la lista falsa (PROVENANCE §3.10). |
+| `03_f02_promiscuidad`<br>promiscuidad() | `03_calidad_bioactividades.ipynb` | `03_curva_filtrado.csv` | — | La lista y la curva vienen de `datos_externos/promiscuidad/derivar.py`, que las reproduce byte a byte con los datos crudos. Contra el oráculo v4: de 30 a 7 promiscuos, explicado por el recorte. El efecto sobre la base lo mide `03_impacto_en_la_base`. |
 
 ## genome_prioritization
 

@@ -44,14 +44,8 @@ entregables: figuras
 	$(MAKE) -C informe
 	$(PY) informe/generar_pagina.py
 
-# analiceDB/03 necesita datos privados (TDR_RAW y TDR_MAPEOS, ver README.md):
-# sin ellos se saltea, y huerfanas/ usa su tabla versionada.
 corrida:
 	@for nb in $(NOTEBOOKS); do \
-	  if [ "$$nb" = analiceDB/03_calidad_bioactividades ] && [ -z "$$TDR_MAPEOS" ]; then \
-	    echo "== $$nb: se saltea (sin TDR_RAW/TDR_MAPEOS); se usa su tabla versionada"; \
-	    continue; \
-	  fi; \
 	  echo "== $$nb  $$(date +%H:%M:%S)"; \
 	  (cd $$(dirname $$nb) && jupyter nbconvert --to notebook --execute --inplace \
 	     --ExecutePreprocessor.timeout=-1 $$(basename $$nb).ipynb) || exit 1; \
