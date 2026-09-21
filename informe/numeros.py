@@ -43,6 +43,9 @@ CLAVES = [
     "NProteinas", "NPositivos", "NNegativos", "NAfiliaciones", "NInterPro",
     "NOrthoMCL", "NDruggables", "NRegistros", "NEspecies", "DrugMax", "DrugMin",
     "NPromiscuos", "PctAristasFiltradas", "AUCMediana", "AUCMax", "AUCMin",
+    "NQuinasas", "PctQuinasasProt", "NBetaPierde", "DeltaAUCBetaMediana",
+    "DeltaAUCBetaMax", "NFloodBetaCero", "EnriqTopBetaCeroMax", "EnriqTopBetaUnoMax",
+    "NDesplazaAbajo", "DesplazaQuinasaMediana",
     "NSobreAzar", "NEspeciesOpt", "NComparadas", "NIdenticas", "NDiscrepancias",
     "NExplicadas", "FechaCorrida", "VersionPython", "VersionPandas",
     "NAristas", "NCompuestosAntes", "NCompuestosDespues", "NPruebas", "NFiguras",
@@ -106,6 +109,21 @@ def construir() -> dict:
     if imp is not None and len(imp):
         n["NPromiscuos"] = _mil(imp["compuestos_filtrados"].iloc[0])
         n["PctAristasFiltradas"] = f"{imp['pct_aristas'].iloc[0]:.1f}"
+
+    beta = _leer("genome_prioritization_out", "03_resumen_beta.csv")
+    if beta is not None and len(beta):
+        n["NQuinasas"] = _mil(len(tdr.ANN_QUINASA))
+        n["PctQuinasasProt"] = f"{beta['pct_quinasas'].mean():.1f}"
+        # beta = 1 contra beta = 0, a (alpha, lambda, gamma) fijos
+        n["NBetaPierde"] = str(int((beta["delta_auc01"] > 0).sum()))
+        n["DeltaAUCBetaMediana"] = f"{beta['delta_auc01'].median():.3f}"
+        n["DeltaAUCBetaMax"] = f"{beta['delta_auc01'].max():.3f}"
+        # especies en las que beta=0 inunda de quinasas la cabeza del ranking
+        n["NFloodBetaCero"] = str(int((beta["enriq_top100_b0"] > 10).sum()))
+        n["EnriqTopBetaCeroMax"] = f"{beta['enriq_top100_b0'].max():.0f}"
+        n["EnriqTopBetaUnoMax"] = f"{beta['enriq_top100_b1'].max():.1f}"
+        n["NDesplazaAbajo"] = str(int((beta["delta_pct_quinasa"] > 0).sum()))
+        n["DesplazaQuinasaMediana"] = f"{beta['delta_pct_quinasa'].median():.1f}"
 
     opt = _leer("genome_prioritization_out", "02_optimos_por_especie.csv")
     if opt is not None and "AUC01" in opt.columns:
@@ -350,7 +368,12 @@ def tabla_optimos() -> str:
     for _, r in opt.sort_values("AUC01", ascending=False).iterrows():
         lam = "híbrido" if pd.isna(r["lambda_"]) else f"{r['lambda_']:g}"
         par = "sí" if r.get("parasito") else "no"
-        filas.append(f"sp{int(r['especie']):02d} & {r.get('grupo', '')} & {par} & "
+        # El binomio, en cursiva como manda la nomenclatura; si la especie no
+        # esta en META cae al codigo, que es la clave de la tabla.
+        nom = r.get("nombre")
+        nom = (f"\\textit{{{nom}}}" if isinstance(nom, str)
+               else f"sp{int(r['especie']):02d}")
+        filas.append(f"{nom} & {r.get('grupo', '')} & {par} & "
                      f"{r['AUC01']:.3f} & {r['AUC']:.3f} & {r['alpha']:g} & {r['beta']:g} & "
                      f"{lam} & {r['gamma']:g} \\\\")
     return ("% Generado por informe/numeros.py — no editar a mano.\n"

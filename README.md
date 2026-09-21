@@ -45,7 +45,7 @@ ellas, **todas las figuras se reproducen desde las tablas pregeneradas**, sin
 cargar la base ni correr ningún modelo:
 
 ```bash
-make verificar      # 53 pruebas + las 31 figuras desde las tablas + cifras del informe
+make verificar      # 60 pruebas + las 35 figuras desde las tablas + cifras del informe
 make figuras        # sólo las figuras, ~40 s
 make entregables    # figuras, FIGURAS.md, informe, presentación y página, ~1,5 min
 ```
@@ -75,19 +75,20 @@ una máquina de 48 núcleos con **20 procesos**:
 | `analiceDB/03_calidad_bioactividades` | bioactividades por tag, efecto del filtro de promiscuidad sobre la base | 1 min |
 | `genome_prioritization/01_barrido_parametros` | 16 especies × 120 combinaciones | 7,5 min |
 | `genome_prioritization/02_optimo_y_consistencia` | óptimo, meseta, consistencia | 33 s |
+| `genome_prioritization/03_comparacion_beta_promiscuidad` | β = 1 contra β = 0 a parámetros fijos; dónde quedan las quinasas | 2,5 min |
 | `huerfanas/01_pseudohuerfanas` | 7 782 compuestos, uno por uno | 13 min |
 | `huerfanas/02_cobertura_semilla` | tres palancas sobre 500 compuestos | 17 min |
 | `huerfanas/03_desorfanizacion_global` | r*G, directa/indirecta, semilla informativa | 21 s |
 | `huerfanas/04_aplicacion_especie` | embudo de la especie foco | 1 min |
 | `verificacion/10_equivalencia` | comparación contra `oraculo_v4/` | 10 s |
-| **total** | | **~45 min** |
+| **total** | | **~48 min** |
 
 La carga más pesada de la base (con la capa química, 36 M aristas) tarda ~30 s
 y ocupa 2,1 GB; los procesos de la corrida paralela la comparten por `fork`. La
 cantidad de procesos se cambia con `TDR_NCORE` (por defecto 20); con menos, los
 tres notebooks largos tardan proporcionalmente más.
 
-En cambio, **redibujar las 31 figuras desde las tablas lleva ~40 s**, y las
+En cambio, **redibujar las 35 figuras desde las tablas lleva ~40 s**, y las
 pruebas, ~25 s.
 
 ## Reproducir la corrida (~45 min)
@@ -130,11 +131,16 @@ bioactividad positiva, **codificación** a enteros con semilla fija y
 
 Las equivalencias que el modelo necesita están escritas en `comun/tdr.py`
 (`TAG_POSITIVE`, `IPR_DOMAIN`, `SPECIES`, …), con el comentario de qué
-selecciona cada una. Las especies se identifican por código: **el nombre de la
-especie no aparece en ninguna parte del repositorio**. Lo que sí se publica es
-el tipo de organismo (grupo, reino, si es parásito), porque el modelo lo usa;
-tres de las 16 son la única de su combinación y para ellas eso equivale a
-identificarlas (anotado en `comun/tdr.py`).
+selecciona cada una. Las especies **se nombran**: `SPECIES` da, para cada uno de
+los 16 códigos, el organismo (`26` → *Plasmodium falciparum*) junto con su tipo
+(grupo, reino, si es parásito), y las figuras y las tablas de `resultados/` se
+rotulan con el binomio abreviado. El código sigue siendo la clave con la que la
+especie entra en `DB/`, en `control/` y en las tablas.
+
+El resto de la codificación sigue en pie: compuestos, blancos, clusters,
+InterPro y OrthoMCL no se traducen, y los diccionarios de `mapeos/` no se
+publican. Eso es lo que impide reidentificar los compuestos (`PROVENANCE.md`
+§3.13); los nombres de las 16 especies no aportan nada a esa reidentificación.
 
 ## Estructura
 
@@ -147,12 +153,12 @@ identificarlas (anotado en `comun/tdr.py`).
 | `PLAN.md` | el plan de trabajo, con lo que se hizo y lo que no |
 | `DB/` | la base codificada |
 | `comun/` | `tdr.py` (rutas, carga, métricas, estilo), `nucleo.py` (el modelo), `figuras.py` (registro de figuras), `tests/` |
-| `analiceDB/`, `genome_prioritization/`, `huerfanas/` | los tres análisis, 9 notebooks; cada carpeta con `funciones_*.py` (cálculo) y `figuras_*.py` (figuras) |
+| `analiceDB/`, `genome_prioritization/`, `huerfanas/` | los tres análisis, 10 notebooks; cada carpeta con `funciones_*.py` (cálculo) y `figuras_*.py` (figuras) |
 | `verificacion/` | la comparación contra el oráculo |
 | `resultados/` | las tablas de la corrida, versionadas; las figuras se regeneran |
 | `control/` | óptimos por especie de una corrida anterior, para contrastar |
 | `oraculo_v4/` | las mismas tablas calculadas antes del recorte y de la codificación |
-| `datos_externos/` | el único insumo calculado fuera de `DB/`: la lista de compuestos promiscuos, con su procedencia |
+| `datos_externos/` | lo que no sale de `DB/`: la lista de compuestos promiscuos (insumo versionado) y la procedencia de `tdr.ANN_QUINASA` |
 | `informe/` | fuentes del informe y de la presentación, y el generador de la página |
 | `historia/` | el documento de trabajo de la versión v4, sólo como registro |
 | `final-project.html` | la consigna del curso |

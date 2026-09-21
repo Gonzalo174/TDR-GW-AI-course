@@ -206,3 +206,97 @@ def enriquecimiento_topk(t, plt):
         ax.set_title(col, fontsize=9)
     axes[0].set_ylabel("enriquecimiento en el top-10")
     return fig
+
+
+# --- 03 · beta y las quinasas ----------------------------------------------
+
+RESUMEN = "03_resumen_beta.csv"
+
+
+def _orden_resumen(t, col):
+    """El resumen ordenado por `col`, con la etiqueta de especie ya resuelta."""
+    r = t(RESUMEN).sort_values(col).reset_index(drop=True)
+    r["etiqueta"] = [_etiqueta(s) for s in r["especie"]]
+    return r
+
+
+def _dumbbell(ax, r, col_a, col_b, et_a, et_b):
+    """Un renglon por especie con los dos valores unidos: hace ver el tamano y el
+    signo del cambio de una sola pasada, que es lo que dos barras apiladas
+    esconden."""
+    y = np.arange(len(r))
+    ax.hlines(y, r[col_b], r[col_a], color=tdr.MUTED, lw=1, zorder=1)
+    ax.scatter(r[col_b], y, color=tdr.S2, s=28, zorder=3, label=et_b)
+    ax.scatter(r[col_a], y, color=tdr.S1, s=28, zorder=3, label=et_a)
+    ax.set_yticks(y)
+    ax.set_yticklabels(r["etiqueta"], fontsize=7)
+    ax.legend(fontsize=8)
+
+
+@figura(G, "03_f01_auc01_beta",
+        verifica='Las AUC01 de beta=1 salen del mismo barrido que `02_optimos_por_especie` y `test_resultados` fija; la de beta=0 se recalcula con la misma metrica (`test_metricas`).',
+        lee=RESUMEN)
+def auc01_beta(t, plt):
+    """AUC01 con la penalizacion por tamano de categoria y sin ella."""
+    r = _orden_resumen(t, "auc01_b1")
+    fig, ax = plt.subplots(figsize=(7, 4), tight_layout=True)
+    _dumbbell(ax, r, "auc01_b1", "auc01_b0", "β = 1  (G′rk)", "β = 0  (G′r)")
+    ax.axvline(0.5, color=tdr.MUTED, ls="--", lw=1)
+    ax.set_xlabel("AUC01 a (α, λ, γ) fijos  (0.5 = azar)")
+    ax.set_title("Apagar la penalización por categoría grande cuesta AUC01")
+    return fig
+
+
+@figura(G, "03_f02_percentil_quinasas",
+        verifica='Percentiles del mismo ranking cuya AUC01 verifica `03_f01`; el conjunto de quinasas lo fija `test_resultados` (391 anotaciones, 13 921 proteínas).',
+        lee=RESUMEN)
+def percentil_quinasas(t, plt):
+    """Donde cae la quinasa tipica en el ranking bajo cada beta."""
+    r = _orden_resumen(t, "pct_quinasa_mediana_b1")
+    fig, ax = plt.subplots(figsize=(7, 4), tight_layout=True)
+    _dumbbell(ax, r, "pct_quinasa_mediana_b1", "pct_quinasa_mediana_b0",
+              "β = 1", "β = 0")
+    ax.set_xlabel("percentil mediano de las quinasas  (0 = cabeza del ranking)")
+    ax.set_title("Posición de la quinasa típica")
+    return fig
+
+
+@figura(G, "03_f03_desplazamiento",
+        verifica='El contraste es interno: las dos series salen de la misma tabla y del mismo ranking. Si beta moviera el ranking entero por igual, las dos medianas coincidirían.',
+        lee="03_desplazamiento.csv")
+def desplazamiento(t, plt):
+    """Desplazamiento al pasar de beta=0 a beta=1: quinasas contra el resto."""
+    d = t("03_desplazamiento.csv")
+    orden = (d[d["grupo"] == "quinasa"].sort_values("delta_mediana")["especie"].tolist())
+    fig, ax = plt.subplots(figsize=(7.5, 4), tight_layout=True)
+    x = np.arange(len(orden))
+    for grupo, color, off in [("quinasa", tdr.S1, -0.15), ("resto", tdr.S2, 0.15)]:
+        g = d[d["grupo"] == grupo].set_index("especie").loc[orden]
+        ax.vlines(x + off, g["delta_q1"], g["delta_q3"], color=color, lw=2, alpha=0.5)
+        ax.plot(x + off, g["delta_mediana"], "o", color=color, ms=4, label=grupo)
+    ax.axhline(0, color=tdr.MUTED, ls="--", lw=1)
+    ax.set_xticks(x)
+    ax.set_xticklabels([_etiqueta(s) for s in orden], rotation=90, fontsize=7)
+    ax.set_ylabel("Δ percentil  (β=1 − β=0);  > 0 = baja")
+    ax.set_title("El desplazamiento que produce β, por grupo (mediana y cuartiles)")
+    ax.legend(fontsize=8)
+    return fig
+
+
+@figura(G, "03_f04_enriquecimiento_top100",
+        verifica='El esperado es el que daría un ranking indiferente a ser quinasa: `top_k × n_quinasas / n_targets`, con las tres columnas en la misma tabla.',
+        lee=RESUMEN)
+def enriquecimiento_top100(t, plt):
+    """Quinasas en las primeras 100 posiciones, contra lo que daria el azar."""
+    r = _orden_resumen(t, "enriq_top100_b1")
+    fig, ax = plt.subplots(figsize=(7.5, 4), tight_layout=True)
+    x = np.arange(len(r))
+    ax.bar(x - 0.2, r["enriq_top100_b0"], width=0.4, color=tdr.S2, label="β = 0")
+    ax.bar(x + 0.2, r["enriq_top100_b1"], width=0.4, color=tdr.S1, label="β = 1")
+    ax.axhline(1, color=tdr.MUTED, ls="--", lw=1)
+    ax.set_xticks(x)
+    ax.set_xticklabels(r["etiqueta"], rotation=90, fontsize=7)
+    ax.set_ylabel("enriquecimiento de quinasas en el top-100")
+    ax.set_title("La cabeza del ranking  (1 = lo que daría el azar)")
+    ax.legend(fontsize=8)
+    return fig

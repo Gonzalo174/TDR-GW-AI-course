@@ -136,52 +136,60 @@ ESCALA_PESO = 100      # los pesos de las aristas van escalados x100 (0.82 -> 82
 # ---------------------------------------------------------------------------
 # Las 16 especies del modelo
 # ---------------------------------------------------------------------------
-# Se identifican por su codigo, no por su nombre: la correspondencia
-# codigo -> especie vive en los diccionarios privados. Lo que si se publica es
-# el tipo de organismo, porque el modelo lo usa —contrasta parasitos contra no
-# parasitos, y procariotas contra eucariotas— y porque sin el las figuras por
-# grupo no se pueden leer.
+# El codigo sigue siendo el identificador: es la clave con la que la especie
+# entra en `DB/`, en `control/` y en las tablas de `resultados/`. Lo que se
+# publica aca es a que organismo corresponde cada codigo, junto con el tipo de
+# organismo, que el modelo usa —contrasta parasitos contra no parasitos, y
+# procariotas contra eucariotas— y sin el cual las figuras por grupo no se leen.
 #
-# Advertencia de anonimato: tres de las 16 son la unica especie de su
-# combinacion (grupo, parasito), asi que para ellas el par identifica al
-# organismo. Es una consecuencia aceptada de publicar el grupo.
+# La correspondencia codigo -> organismo sale de los mapeos privados
+# (`mapa_especie.csv` cruzado contra `raw_data/genomes/genome_data.csv`); esta
+# tabla es la unica parte de esos diccionarios que se publica. El resto de la
+# codificacion sigue en pie: compuestos, blancos, clusters, InterPro y OrthoMCL
+# no se traducen, porque es lo que evita reidentificar los compuestos
+# (PROVENANCE.md §3.13).
 
 SPECIES = {
-    # codigo: (grupo, reino, parasito)
-     0: ("Bacterias",     "Procariota", True),
-     1: ("Bacterias",     "Procariota", True),
-     3: ("Mamiferos",     "Eucariota",  False),
-     4: ("Protozoos",     "Eucariota",  True),
-     5: ("Bacterias",     "Procariota", True),
-     9: ("Invertebrados", "Eucariota",  False),
-    10: ("Hongos",        "Eucariota",  False),
-    15: ("Protozoos",     "Eucariota",  True),
-    17: ("Invertebrados", "Eucariota",  False),
-    18: ("Mamiferos",     "Eucariota",  False),
-    21: ("Plantas",       "Eucariota",  False),
-    22: ("Amebozoos",     "Eucariota",  False),
-    23: ("Protozoos",     "Eucariota",  True),
-    25: ("Hongos",        "Eucariota",  True),
-    26: ("Protozoos",     "Eucariota",  True),
-    28: ("Plantas",       "Eucariota",  False),
+    # codigo: (organismo, grupo, reino, parasito)
+     0: ("Mycobacterium tuberculosis", "Bacterias",     "Procariota", True),
+     1: ("Escherichia coli",           "Bacterias",     "Procariota", True),
+     3: ("Homo sapiens",               "Mamiferos",     "Eucariota",  False),
+     4: ("Trypanosoma cruzi",          "Protozoos",     "Eucariota",  True),
+     5: ("Staphylococcus aureus",      "Bacterias",     "Procariota", True),
+     9: ("Caenorhabditis elegans",     "Invertebrados", "Eucariota",  False),
+    10: ("Saccharomyces cerevisiae",   "Hongos",        "Eucariota",  False),
+    15: ("Trypanosoma brucei",         "Protozoos",     "Eucariota",  True),
+    17: ("Drosophila melanogaster",    "Invertebrados", "Eucariota",  False),
+    18: ("Mus musculus",               "Mamiferos",     "Eucariota",  False),
+    21: ("Arabidopsis thaliana",       "Plantas",       "Eucariota",  False),
+    22: ("Dictyostelium discoideum",   "Amebozoos",     "Eucariota",  False),
+    23: ("Leishmania major",           "Protozoos",     "Eucariota",  True),
+    25: ("Candida albicans",           "Hongos",        "Eucariota",  True),
+    26: ("Plasmodium falciparum",      "Protozoos",     "Eucariota",  True),
+    28: ("Oryza sativa",               "Plantas",       "Eucariota",  False),
 }
 ESPECIES_16 = list(SPECIES)
 
+# Nombre completo del organismo, por codigo.
+NOMBRE_ESPECIE = {c: e for c, (e, _g, _r, _p) in SPECIES.items()}
+
 # Kinetoplastidos: el clado de interes del proyecto, tres de los protozoos
-# parasitos. Se los trata como grupo en varias figuras.
+# parasitos (T. cruzi, T. brucei, L. major). Se los trata como grupo en varias
+# figuras.
 KINETOPLASTIDOS = [4, 15, 23]
 
-# La especie sobre la que se aplica el modelo en `huerfanas/04`: un protozoo
-# parasito, agente de una enfermedad desatendida. Se la nombra por su codigo.
+# La especie sobre la que se aplica el modelo en `huerfanas/04`: Plasmodium
+# falciparum, agente de la malaria.
 SP_FOCO = 26
 
-# Etiqueta para ejes y tablas: el codigo, y entre parentesis el tipo de
-# organismo, que es lo que hace legible la figura.
-NOMBRE_CORTO = {c: f"sp{c:02d} ({g}{', parasito' if par else ''})"
-                for c, (g, _r, par) in SPECIES.items()}
+# Etiqueta para ejes y tablas: el binomio abreviado ("P. falciparum"), que es
+# lo que entra en un eje sin desbordarlo. El grupo y el reino viajan en columnas
+# aparte de META, asi que no hacen falta en la etiqueta.
+NOMBRE_CORTO = {c: f"{e.split()[0][0]}. {' '.join(e.split()[1:])}"
+                for c, e in NOMBRE_ESPECIE.items()}
 
 META = pd.DataFrame(
-    [{"sp": k, "nombre": NOMBRE_CORTO[k], "grupo": v[0], "reino": v[1], "parasito": v[2]}
+    [{"sp": k, "nombre": NOMBRE_CORTO[k], "grupo": v[1], "reino": v[2], "parasito": v[3]}
      for k, v in SPECIES.items()])
 
 
@@ -608,8 +616,9 @@ def nombres_ipr(refrescar=False):
     entero codificado. Ligar uno con otro exige `mapa_interpro`, que es privado.
 
     Consecuencia: en un clon del repositorio los dominios de un resultado se
-    identifican por su codigo y no se pueden nombrar. Es la decision abierta 1
-    de PLAN.md.
+    identifican por su codigo y no se pueden nombrar. La unica excepcion es
+    `ANN_QUINASA`, donde se publica el accession de 391 dominios porque
+    `genome_prioritization/03` los necesita (PROVENANCE.md §3.15).
 
     Con una copia local de los crudos y del mapeo se puede reconstruir:
     `export TDR_RAW=/ruta/raw_data` y pasar `mapeo` con el diccionario privado.
@@ -719,3 +728,148 @@ def filtrar_capa_quimica(datos, promiscuos, verbose=True):
         print(f"  dds   {n_dds0} -> {len(d.dds)} "
               f"({100 * (n_dds0 - len(d.dds)) / n_dds0:.2f} % removido)", flush=True)
     return d
+
+
+# ---------------------------------------------------------------------------
+# Quinasas: la categoria grande y promiscua contra la que se mide beta
+# ---------------------------------------------------------------------------
+#
+# Cuales de los 14 083 dominios son de quinasa no se puede decidir desde `DB/`:
+# hace falta el nombre, y `ann` es un entero codificado (ver `nombres_ipr`).
+#
+# Revelacion parcial y deliberada (PROVENANCE.md §3.15): se publica el
+# accession de InterPro de estos 391 dominios al lado de su codigo. Es lo unico
+# del diccionario privado `mapa_interpro.csv` que sale a la luz; el resto de los
+# 36 924 accessions sigue sin publicarse. De aca para abajo el analisis usa
+# **solo** el codigo: el accession esta para que se pueda auditar la marca, no
+# para que el codigo lo use.
+#
+# Salen del catalogo de InterPro (`raw_data/targets/interpro.xml`): las entradas
+# cuyo nombre o nombre corto contiene `kinase`, de tipo `Domain` —el mismo
+# recorte que hace `cargar_db` con `IPR_DOMAIN`— y presentes en la base. Se
+# regeneran con `datos_externos/quinasas/derivar.py`.
+
+PATRON_QUINASA_FUENTE = r"kinase"   # el patron con el que se filtro el catalogo
+
+ANN_QUINASA = {
+    15: "IPR047895", 187: "IPR015795", 202: "IPR015865", 329: "IPR025287",
+    407: "IPR041747", 415: "IPR035448", 609: "IPR047314", 651: "IPR034669",
+    1024: "IPR054327", 1044: "IPR024637", 1290: "IPR033928", 1326: "IPR056301",
+    1529: "IPR011147", 1546: "IPR057756", 1791: "IPR037310", 1829: "IPR018941",
+    2254: "IPR015725", 2255: "IPR055214", 2336: "IPR032834", 2360: "IPR046854",
+    2645: "IPR010622", 2793: "IPR059117", 2903: "IPR032640", 3024: "IPR049571",
+    3084: "IPR035066", 3132: "IPR003117", 3192: "IPR027084", 3370: "IPR042709",
+    3374: "IPR034848", 3387: "IPR015966", 3575: "IPR039154", 3598: "IPR020635",
+    3900: "IPR034665", 3979: "IPR026611", 4051: "IPR022488", 4174: "IPR004399",
+    4212: "IPR046855", 4273: "IPR000023", 4479: "IPR040712", 4566: "IPR030220",
+    4573: "IPR035850", 4762: "IPR057764", 4914: "IPR019539", 4950: "IPR034667",
+    4965: "IPR058710", 4984: "IPR015275", 5255: "IPR041087", 5300: "IPR035765",
+    5312: "IPR008144", 5378: "IPR013727", 5530: "IPR045579", 5565: "IPR042704",
+    5713: "IPR037317", 5812: "IPR007371", 5816: "IPR057529", 5818: "IPR037952",
+    5844: "IPR054017", 6120: "IPR035771", 6349: "IPR002219", 6471: "IPR042666",
+    6899: "IPR040999", 6960: "IPR031314", 7023: "IPR000961", 7144: "IPR056802",
+    7319: "IPR029099", 7382: "IPR035063", 7456: "IPR033702", 7507: "IPR011611",
+    7553: "IPR048002", 7761: "IPR004147", 7806: "IPR041108", 7809: "IPR042785",
+    8001: "IPR004166", 8140: "IPR034668", 8183: "IPR047588", 8217: "IPR039137",
+    8273: "IPR058126", 8335: "IPR045581", 8359: "IPR011712", 8428: "IPR029304",
+    8596: "IPR012582", 8611: "IPR047368", 8719: "IPR035056", 8830: "IPR037778",
+    8928: "IPR007862", 8954: "IPR030484", 9017: "IPR002420", 9036: "IPR035852",
+    9122: "IPR055495", 9138: "IPR037709", 9164: "IPR041744", 9183: "IPR047908",
+    9198: "IPR047256", 9245: "IPR044767", 9301: "IPR040665", 9303: "IPR042714",
+    9505: "IPR034676", 9520: "IPR047916", 9692: "IPR047221", 9729: "IPR018984",
+    9792: "IPR013750", 10000: "IPR039192", 10072: "IPR039482", 10131: "IPR034877",
+    10169: "IPR034663", 10233: "IPR035870", 10349: "IPR035175", 10404: "IPR031634",
+    10734: "IPR025198", 10778: "IPR041746", 11087: "IPR005702", 11152: "IPR024105",
+    11196: "IPR025561", 11610: "IPR001048", 11667: "IPR054474", 11753: "IPR033768",
+    11825: "IPR058209", 12060: "IPR042703", 12062: "IPR037708", 12081: "IPR035591",
+    12232: "IPR034675", 12247: "IPR057469", 12252: "IPR013896", 12449: "IPR035805",
+    12643: "IPR047484", 12684: "IPR037452", 12863: "IPR047475", 12868: "IPR047471",
+    12920: "IPR037702", 12976: "IPR035589", 12992: "IPR003113", 13085: "IPR032380",
+    13097: "IPR002192", 13259: "IPR037719", 13300: "IPR019380", 13339: "IPR022673",
+    13597: "IPR037707", 13738: "IPR040976", 13777: "IPR037375", 13880: "IPR003594",
+    13885: "IPR029597", 14037: "IPR001263", 14109: "IPR001245", 14300: "IPR000550",
+    14392: "IPR013079", 14432: "IPR034673", 14453: "IPR018292", 14454: "IPR059233",
+    14771: "IPR020676", 14879: "IPR000719", 14912: "IPR041739", 15002: "IPR017892",
+    15092: "IPR057640", 15098: "IPR021820", 15261: "IPR001573", 15397: "IPR035022",
+    15436: "IPR041734", 15445: "IPR044131", 15514: "IPR027916", 15546: "IPR004105",
+    15622: "IPR057380", 15751: "IPR056782", 15819: "IPR049508", 15831: "IPR034662",
+    15837: "IPR035064", 15965: "IPR035770", 16157: "IPR029878", 16236: "IPR034659",
+    16358: "IPR024678", 16427: "IPR049871", 16469: "IPR034661", 16610: "IPR049761",
+    16689: "IPR037705", 16696: "IPR014009", 16918: "IPR015285", 17091: "IPR047487",
+    17100: "IPR034671", 17164: "IPR041745", 17195: "IPR030611", 17267: "IPR031994",
+    17343: "IPR054000", 17376: "IPR001772", 17412: "IPR042743", 17477: "IPR041906",
+    17617: "IPR044769", 17706: "IPR045270", 17901: "IPR022126", 17931: "IPR037706",
+    17940: "IPR019247", 17985: "IPR015897", 18014: "IPR011102", 18155: "IPR024641",
+    18265: "IPR003151", 18377: "IPR000403", 18438: "IPR045583", 18750: "IPR031775",
+    18798: "IPR000341", 18893: "IPR031475", 19052: "IPR035574", 19088: "IPR035014",
+    19100: "IPR047367", 19224: "IPR034677", 19293: "IPR049587", 19415: "IPR002826",
+    19477: "IPR057614", 19545: "IPR010599", 19647: "IPR005467", 19661: "IPR014930",
+    19686: "IPR040464", 19750: "IPR037606", 19953: "IPR021821", 20064: "IPR007373",
+    20264: "IPR035692", 20463: "IPR042817", 20489: "IPR035583", 20603: "IPR006204",
+    20626: "IPR037711", 20665: "IPR047222", 20676: "IPR037311", 20829: "IPR031831",
+    20944: "IPR004358", 21092: "IPR023602", 21141: "IPR033470", 21184: "IPR042698",
+    21363: "IPR029353", 21449: "IPR005189", 21475: "IPR011495", 21512: "IPR031782",
+    21541: "IPR018485", 21542: "IPR042767", 21647: "IPR047965", 21683: "IPR031636",
+    21775: "IPR058619", 21817: "IPR028754", 22053: "IPR047485", 22129: "IPR032872",
+    22182: "IPR007521", 22204: "IPR047480", 22318: "IPR040867", 22409: "IPR012736",
+    22483: "IPR041740", 22519: "IPR019510", 22623: "IPR022066", 22625: "IPR057292",
+    22635: "IPR013543", 23019: "IPR026683", 23357: "IPR034907", 23650: "IPR033923",
+    23666: "IPR035748", 23862: "IPR035804", 24126: "IPR035078", 24265: "IPR056383",
+    24384: "IPR012844", 24404: "IPR040110", 24432: "IPR040642", 24439: "IPR035053",
+    24465: "IPR057092", 24601: "IPR047499", 24674: "IPR042717", 24817: "IPR008145",
+    24998: "IPR037784", 25034: "IPR041905", 25104: "IPR011126", 25130: "IPR035853",
+    25136: "IPR042134", 25155: "IPR039430", 25401: "IPR045363", 25463: "IPR015793",
+    25552: "IPR011104", 25646: "IPR042696", 25704: "IPR035751", 25787: "IPR040667",
+    25951: "IPR047469", 26012: "IPR057564", 26050: "IPR002498", 26298: "IPR000687",
+    26859: "IPR047896", 26980: "IPR042710", 27130: "IPR003175", 27149: "IPR057754",
+    27272: "IPR032807", 27276: "IPR045495", 27497: "IPR034664", 27553: "IPR041390",
+    27845: "IPR029462", 27864: "IPR035579", 27937: "IPR046861", 28115: "IPR016045",
+    28153: "IPR048637", 28286: "IPR047486", 28299: "IPR022007", 28420: "IPR046803",
+    28446: "IPR035020", 28489: "IPR024604", 28499: "IPR041309", 28586: "IPR031850",
+    28587: "IPR057579", 28695: "IPR012737", 28843: "IPR034879", 29013: "IPR001206",
+    29025: "IPR025200", 29036: "IPR041743", 29182: "IPR035572", 29342: "IPR035860",
+    29377: "IPR035772", 29557: "IPR018955", 29647: "IPR039148", 29654: "IPR048629",
+    29660: "IPR037704", 29713: "IPR022708", 29719: "IPR058681", 29796: "IPR003661",
+    30038: "IPR035077", 30042: "IPR056392", 30087: "IPR024638", 30164: "IPR047477",
+    30216: "IPR037716", 30270: "IPR042133", 30474: "IPR042718", 30493: "IPR054481",
+    30850: "IPR022247", 30967: "IPR034670", 31036: "IPR019017", 31144: "IPR003852",
+    31293: "IPR057465", 31519: "IPR006083", 31610: "IPR000756", 31655: "IPR045267",
+    31660: "IPR056574", 31814: "IPR037638", 31862: "IPR013579", 31939: "IPR034674",
+    32106: "IPR041328", 32198: "IPR035586", 32382: "IPR018484", 32390: "IPR015022",
+    32535: "IPR035016", 32546: "IPR056865", 33007: "IPR044093", 33024: "IPR024585",
+    33101: "IPR035851", 33113: "IPR029601", 33123: "IPR048470", 33227: "IPR042822",
+    33279: "IPR035693", 33336: "IPR024953", 33340: "IPR011641", 33354: "IPR042697",
+    33404: "IPR035060", 33422: "IPR047915", 33460: "IPR037313", 33495: "IPR022672",
+    33555: "IPR034851", 33666: "IPR048394", 33741: "IPR042763", 33763: "IPR035837",
+    33791: "IPR045067", 33792: "IPR042706", 33898: "IPR037312", 33907: "IPR034672",
+    33924: "IPR019511", 33945: "IPR029477", 34087: "IPR028182", 34193: "IPR035588",
+    34218: "IPR013695", 34239: "IPR010559", 34329: "IPR045801", 34557: "IPR054693",
+    34640: "IPR008207", 34725: "IPR035533", 34756: "IPR033719", 34831: "IPR054466",
+    34904: "IPR054521", 35003: "IPR047470", 35211: "IPR047962", 35249: "IPR039026",
+    35259: "IPR047478", 35474: "IPR054352", 35487: "IPR056803", 35761: "IPR010737",
+    35858: "IPR041429", 35873: "IPR013749", 35890: "IPR037703", 35896: "IPR044493",
+    35983: "IPR042132", 36374: "IPR022049", 36401: "IPR056981", 36416: "IPR011620",
+    36534: "IPR035062", 36787: "IPR011994", 36865: "IPR049870",
+}
+
+
+def anotaciones_quinasa():
+    """Los `ann` de la capa de anotaciones que son dominios de quinasa.
+
+    Vienen con el prefijo `IP` que `cargar_db` le repone a InterPro al
+    concatenarlo con OrthoMCL (PROVENANCE.md §3.3), asi que cruzan directo
+    contra `datos.sta` sin que el analisis tenga que saber de prefijos.
+    """
+    return np.array([f"IP{c}" for c in sorted(ANN_QUINASA)])
+
+
+def marcar_quinasas(target_ids, sta, quinasas=None):
+    """Serie booleana por proteina: True si tiene al menos un dominio de quinasa.
+
+    `target_ids` fija el indice y el orden, asi que el resultado se puede pegar a
+    un ranking sin reordenar nada. Las proteinas sin ninguna anotacion dan False.
+    """
+    q = set(map(str, quinasas if quinasas is not None else anotaciones_quinasa()))
+    con_q = set(sta.loc[sta["ann"].astype(str).isin(q), "target_id"].astype(str))
+    idx = pd.Index(map(str, target_ids), name="target_id")
+    return pd.Series(idx.isin(con_q), index=idx, name="quinasa")

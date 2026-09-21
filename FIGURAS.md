@@ -40,6 +40,10 @@ Funciones en `genome_prioritization/figuras_genome.py`.
 | `02_f03_plateau`<br>plateau() | `02_optimo_y_consistencia.ipynb` | `02_plateau.csv` | informe, página | `02_plateau` idéntica a la del oráculo v4. |
 | `02_f04_consistencia_especies`<br>consistencia_especies() | `02_optimo_y_consistencia.ipynb` | `02_spearman_especies.csv` | página | `02_spearman_especies` idéntica a la del oráculo v4. |
 | `02_f05_enriquecimiento_topk`<br>enriquecimiento_topk() | `02_optimo_y_consistencia.ipynb` | `02_consistencia.csv` | — | `02_consistencia` idéntica a la del oráculo v4. |
+| `03_f01_auc01_beta`<br>auc01_beta() | `03_comparacion_beta_promiscuidad.ipynb` | `03_resumen_beta.csv` | informe, página | Las AUC01 de beta=1 salen del mismo barrido que `02_optimos_por_especie` y `test_resultados` fija; la de beta=0 se recalcula con la misma metrica (`test_metricas`). |
+| `03_f02_percentil_quinasas`<br>percentil_quinasas() | `03_comparacion_beta_promiscuidad.ipynb` | `03_resumen_beta.csv` | — | Percentiles del mismo ranking cuya AUC01 verifica `03_f01`; el conjunto de quinasas lo fija `test_resultados` (391 anotaciones, 13 921 proteínas). |
+| `03_f03_desplazamiento`<br>desplazamiento() | `03_comparacion_beta_promiscuidad.ipynb` | `03_desplazamiento.csv` | informe, página | El contraste es interno: las dos series salen de la misma tabla y del mismo ranking. Si beta moviera el ranking entero por igual, las dos medianas coincidirían. |
+| `03_f04_enriquecimiento_top100`<br>enriquecimiento_top100() | `03_comparacion_beta_promiscuidad.ipynb` | `03_resumen_beta.csv` | informe, página | El esperado es el que daría un ranking indiferente a ser quinasa: `top_k × n_quinasas / n_targets`, con las tres columnas en la misma tabla. |
 
 ## huerfanas
 

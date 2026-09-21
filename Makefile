@@ -16,6 +16,7 @@ NOTEBOOKS = analiceDB/01_dimensiones_red analiceDB/02_capas_y_conectividad \
             analiceDB/03_calidad_bioactividades \
             genome_prioritization/01_barrido_parametros \
             genome_prioritization/02_optimo_y_consistencia \
+            genome_prioritization/03_comparacion_beta_promiscuidad \
             huerfanas/01_pseudohuerfanas huerfanas/02_cobertura_semilla \
             huerfanas/03_desorfanizacion_global huerfanas/04_aplicacion_especie \
             verificacion/10_equivalencia

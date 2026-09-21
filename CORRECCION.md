@@ -15,9 +15,9 @@ make verificar
 `make verificar` hace tres cosas, y tiene que terminar diciendo
 `OK: las cifras del informe coinciden con las tablas de resultados/`:
 
-1. corre las 53 pruebas de `comun/tests/` (~25 s; 2 se saltean salvo con
+1. corre las 60 pruebas de `comun/tests/` (~25 s; 2 se saltean salvo con
    `TDR_TESTS_QUIMICA=1`, porque cargan la capa química entera);
-2. redibuja las 31 figuras desde las tablas versionadas de `resultados/`, sin
+2. redibuja las 35 figuras desde las tablas versionadas de `resultados/`, sin
    cargar la base (~40 s);
 3. vuelve a calcular todas las cifras del informe desde esas tablas y comprueba
    que coincidan con las del informe versionado.

@@ -83,12 +83,17 @@ función: vive en la celda de corrida (§2).
 ```
 analiceDB/01, 02, 03  ─┐
 genome_prioritization/01 → 02 ─┤
-                                └─> huerfanas/01 → 02, 03 → 04  ─>  verificacion/10
+                     └──→ 03    └─> huerfanas/01 → 02, 03 → 04  ─>  verificacion/10
 ```
 
 `huerfanas/` necesita los óptimos de `genome_prioritization/02` y la lista de
 compuestos promiscuos de `analiceDB/03` (§10). `verificacion/10` compara todo
 contra `oraculo_v4/`.
+
+`genome_prioritization/03` cuelga del barrido del `01` y no alimenta a nadie: es
+una rama lateral que lee el barrido y vuelve a correr el modelo dos veces por
+especie para aislar el efecto de β. Puede correrse o saltearse sin mover ningún
+otro número.
 
 ## §10 · El filtro de promiscuidad química se aplica
 

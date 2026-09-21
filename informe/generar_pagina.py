@@ -244,9 +244,10 @@ def construir() -> str:
              "AUC01 en el óptimo de cada organismo, bajo leave-one-species-out. La línea "
              "punteada es el azar."))
     if optimos is not None:
-        o = optimos.merge(tdr.META[["sp", "grupo", "parasito"]], left_on="especie",
-                          right_on="sp", how="left")
-        o["especie"] = o["especie"].map(lambda s: f"sp{int(s):02d}")
+        o = optimos.merge(tdr.META[["sp", "nombre", "grupo", "parasito"]],
+                          left_on="especie", right_on="sp", how="left")
+        o["especie"] = o["nombre"].where(o["nombre"].notna(),
+                                         o["especie"].map(lambda s: f"sp{int(s):02d}"))
         o["lambda_"] = o["lambda_"].map(lambda v: "híbrido" if pd.isna(v) else f"{v:g}")
         o["parasito"] = o["parasito"].map({True: "sí", False: "no"})
         cols = ["especie", "grupo", "parasito", "AUC01", "AUC", "alpha", "beta", "lambda_", "gamma"]
@@ -254,7 +255,7 @@ def construir() -> str:
         A('<p class="chapo">Óptimo por organismo. '
           "<code>genome_prioritization/02_optimo_y_consistencia.ipynb</code>.</p>")
     A(figura(fig("genome_prioritization_out", "02_f01_roc_26.png"),
-             f'El organismo foco, un protozoo parásito (sp26), en su óptimo: AUC global '
+             f'El organismo foco, {tdr.NOMBRE_ESPECIE[tdr.SP_FOCO]}, en su óptimo: AUC global '
              f'{n["AUCGlobalFoco"]}, AUC01 {n["AUCFoco"]}. A la derecha, el puntaje de '
              "propagación de las proteínas druggables frente al resto."))
     A("<h3>Qué decide el resultado</h3>")
@@ -278,6 +279,35 @@ def construir() -> str:
     A(figura(fig("genome_prioritization_out", "02_f04_consistencia_especies.png"),
              "Concordancia entre organismos sobre el perfil de la grilla."))
     A("</div>")
+
+    A("<h3>Sobre quién actúa β</h3>")
+    A(f'<p>Que β ayude no dice <em>a costa de qué</em>. Para aislarlo se fija el mejor '
+      f'(α, λ, γ) de cada organismo dentro de β = 1 y después se mueve <strong>sólo</strong> β '
+      f'a 0: lo único que cambia entre las dos corridas es la penalización. El grupo de prueba '
+      f'son las <strong>quinasas</strong>, el caso de libro de una categoría grande y promiscua '
+      f'({n["NQuinasas"]} dominios, el {n["PctQuinasasProt"]} % de las proteínas de un genoma '
+      f'típico).</p>')
+    A(f'<p>Apagar la penalización cuesta AUC01 en {n["NBetaPierde"]} de los '
+      f'{n["NEspeciesOpt"]} organismos (mediana {n["DeltaAUCBetaMediana"]}, máximo '
+      f'{n["DeltaAUCBetaMax"]}), y lo que se pierde se ve en la cabeza del ranking: con β = 0, '
+      f'en {n["NFloodBetaCero"]} organismos las primeras cien posiciones se llenan de quinasas '
+      f'—hasta {n["EnriqTopBetaCeroMax"]} veces más de las que daría el azar, y en varios casos '
+      f'el top-100 es <em>enteramente</em> quinasa—. Con β = 1 ese enriquecimiento no pasa de '
+      f'{n["EnriqTopBetaUnoMax"]} en ningún organismo.</p>')
+    A('<div class="par">')
+    A(figura(fig("genome_prioritization_out", "03_f01_auc01_beta.png"),
+             "AUC01 con la penalización (β = 1) y sin ella (β = 0), a (α, λ, γ) fijos."))
+    A(figura(fig("genome_prioritization_out", "03_f04_enriquecimiento_top100.png"),
+             "Quinasas en las primeras cien posiciones, contra las que daría el azar."))
+    A("</div>")
+    A(f'<p>El desplazamiento es <strong>específico</strong>: al pasar de β = 0 a β = 1 las '
+      f'quinasas bajan en {n["NDesplazaAbajo"]} de los {n["NEspeciesOpt"]} organismos (mediana '
+      f'{n["DesplazaQuinasaMediana"]} percentiles), mientras que la mediana del resto del genoma '
+      f'no se mueve de cero en ninguno. β no reordena el ranking entero: saca del tope a las '
+      f'proteínas que estaban ahí por compartir una anotación que comparte medio genoma.</p>')
+    A(figura(fig("genome_prioritization_out", "03_f03_desplazamiento.png"),
+             "Desplazamiento en percentiles al pasar de β = 0 a β = 1, separando quinasas "
+             "del resto del genoma. Positivo = la proteína baja."))
 
     # ---------- huerfanas ----------
     A("<h2>2 · Desorfanización de compuestos</h2>")
@@ -333,7 +363,7 @@ def construir() -> str:
              "Arriba: compuestos cuyo blanco cae antes de la posición l del ranking global. "
              "Abajo: su derivada suavizada y el umbral λ∞ + 3σ que define r*G."))
     A(f'<p><strong>Aplicación al organismo foco.</strong> De {n["EmbudoActivos"]} compuestos con '
-      f'actividad fenotípica contra sp26, {n["EmbudoHuerfanos"]} no tienen blanco proteico y '
+      f'actividad fenotípica contra {tdr.NOMBRE_ESPECIE[tdr.SP_FOCO]}, {n["EmbudoHuerfanos"]} no tienen blanco proteico y '
       f'{n["EmbudoTratables"]} tienen vecinos químicos con blanco; ninguno recibe una propuesta '
       f'por encima de r*G ({n["NSugerencias"]} sugerencias). Con la base recortada el embudo es '
       "demasiado angosto, y el método lo dice en vez de forzar una respuesta.</p>")

@@ -316,8 +316,8 @@ def r_g_estrella(curva, desde=50, k_sigma=3.0, ventana=5):
 def embudo_especie(datos, sp=None):
     """Embudo de compuestos huérfanos con actividad fenotípica contra `sp`.
 
-    `sp=None` usa `tdr.SP_FOCO`: el protozoo parásito sobre el que se aplica el
-    modelo, identificado por su código.
+    `sp=None` usa `tdr.SP_FOCO`: Plasmodium falciparum, la especie sobre la que
+    se aplica el modelo. Entra por su código, que es la clave de la base.
 
       paso 1  compuestos con bioactividad fenotípica positiva contra `sp`
       paso 2  de esos, los que NO tienen ningún enlace de bioactividad a un

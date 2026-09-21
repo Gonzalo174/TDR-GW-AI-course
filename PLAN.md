@@ -53,7 +53,7 @@ que un agente pueda reproducir sin haber hablado con nadie.
 
 | qué se pensaba hacer | estado | evidencia |
 |---|---|---|
-| Positivos no vacíos, 16 especies, aristas completas, base entera, métricas | ✅ | `comun/tests/`, 53 pruebas; la primera corrida encontró 6 fallas reales |
+| Positivos no vacíos, 16 especies, aristas completas, base entera, métricas | ✅ | `comun/tests/`, 60 pruebas; la primera corrida encontró 6 fallas reales |
 | (agregado) Que el entorno tenga todo lo que se importa | ✅ | `test_entorno.py` |
 | (agregado) Que los resultados reproduzcan el control | ✅ | `test_resultados.py` |
 | (agregado) Que las figuras se dibujen sin tocar la base | ✅ | `test_figuras.py` |
@@ -62,7 +62,7 @@ que un agente pueda reproducir sin haber hablado con nadie.
 
 | qué se pensaba hacer | estado | evidencia |
 |---|---|---|
-| Correr los 9 notebooks en orden | ✅ | corridas del 2026-09-08 y 2026-09-10; tablas y `NN_meta.json` en `resultados/` |
+| Correr los 10 notebooks en orden | ✅ | corridas del 2026-09-08 y 2026-09-10; tablas y `NN_meta.json` en `resultados/` |
 | Notebook de equivalencia contra v4 que clasifique cada diferencia | ✅ | `verificacion/10_equivalencia.ipynb`: 353 columnas, 252 idénticas, 97 explicadas por el recorte, 0 discrepancias |
 | (agregado) Análisis de las pseudohuérfanas con semilla informativa | ✅ | `huerfanas/03`, figura `03_f05` |
 
@@ -98,7 +98,7 @@ que un agente pueda reproducir sin haber hablado con nadie.
 
 | # | pregunta | decisión |
 |---|---|---|
-| D.1 | `nombres_ipr()`: sin el diccionario privado no hay nombres de dominio | ✅ las familias se presentan por código; la función falla explicando por qué (PROVENANCE §3.6) |
+| D.1 | `nombres_ipr()`: sin el diccionario privado no hay nombres de dominio | ✅ las familias se presentan por código; la función falla explicando por qué (PROVENANCE §3.6). Con una excepción posterior: los 391 dominios de quinasa sí se nombran, porque `genome_prioritization/03` los necesita (PROVENANCE §3.15) |
 | D.2 | Alcance: ¿los tres análisis o uno a fondo? | ✅ los tres, con la priorización y la desorfanización como resultados principales |
 | D.3 | ¿Se actualiza el informe de v4 o se escribe uno nuevo? | ✅ uno nuevo, más corto, con el contraste con v4 en una sola sección |
 | D.4 | `paper/` nombraba las especies | ✅ salió del repo (commit `52a09dc`); sus tablas quedaron, anonimizadas, en `oraculo_v4/` |

@@ -56,6 +56,17 @@ class TestRutas(unittest.TestCase):
         self.assertEqual(set(C.ESPECIES_16), set(C.META["sp"]))
         self.assertTrue(set(C.KINETOPLASTIDOS) <= set(C.ESPECIES_16))
 
+    def test_cada_codigo_nombra_un_organismo_distinto(self):
+        """El codigo sigue siendo la clave, pero cada uno tiene nombre y el
+        nombre es unico: si dos codigos colapsaran en la misma etiqueta, las
+        figuras por especie apilarian dos organismos en una sola barra."""
+        self.assertEqual(set(C.ESPECIES_16), set(C.NOMBRE_ESPECIE))
+        self.assertEqual(len(set(C.NOMBRE_ESPECIE.values())), 16)
+        self.assertEqual(len(set(C.NOMBRE_CORTO.values())), 16)
+        self.assertEqual(C.NOMBRE_ESPECIE[C.SP_FOCO], "Plasmodium falciparum")
+        self.assertEqual([C.NOMBRE_CORTO[s] for s in C.KINETOPLASTIDOS],
+                         ["T. cruzi", "T. brucei", "L. major"])
+
 
 class TestNumeracion(unittest.TestCase):
     """Los notebooks llevan numero y se lo propagan a todo lo que generan."""

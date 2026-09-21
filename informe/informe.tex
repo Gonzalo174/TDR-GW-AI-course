@@ -79,8 +79,11 @@ un entero y los diccionarios que traducen esos enteros son privados--- y
 \emph{recortada}: se eliminaron las componentes conexas del grafo de similitud
 química sin ningún compuesto de bioactividad positiva
 (\NCompuestosAntes${\to}$\NCompuestosDespues\ compuestos), que por construcción no
-pueden aportar a una propagación desde evidencia positiva. Los organismos se
-identifican por código y por tipo; el nombre no se publica en ninguna parte.
+pueden aportar a una propagación desde evidencia positiva. Los organismos entran
+al modelo por su código, pero se nombran; lo que sigue sin publicarse es la
+identidad de compuestos, proteínas y anotaciones, con una excepción declarada:
+los \NQuinasas\ dominios de quinasa, que hacen falta para la
+Sección~\ref{sec:prio}.
 
 \begin{figure}[!htb]
 \centering
@@ -140,7 +143,7 @@ categorías con $\gamma$.}
 \end{table}
 
 La Figura~\ref{fig:roc} muestra qué significa ese número para el organismo foco
-del trabajo, un protozoo parásito (sp\,26): AUC global de \AUCGlobalFoco\ y
+del trabajo, \textit{Plasmodium falciparum}: AUC global de \AUCGlobalFoco\ y
 AUC01 de \AUCFoco. La distribución de puntajes explica la forma de la curva: la
 mayoría de sus \NDrugFoco\ proteínas druggables recibe un puntaje en la cola alta,
 pero \NSinPuntajeFoco\ no reciben ninguno, porque no comparten anotación con nada
@@ -187,6 +190,57 @@ organismo funcionan en los demás.
 \caption{Caída relativa de la AUC01 entre el óptimo y la $K$-ésima mejor
 combinación, por organismo.}
 \label{fig:plateau}
+\end{figure}
+
+\textbf{Sobre quién actúa $\beta$.} Que $\beta$ ayude no dice \emph{a costa de
+qué}. Para aislarlo, el notebook \texttt{03} fija el mejor
+$(\alpha,\lambda,\gamma)$ de cada organismo dentro de $\beta=1$ y después mueve
+\textbf{sólo} $\beta$ a 0: lo único que cambia entre las dos corridas es la
+penalización. El grupo de prueba son las quinasas, el caso de libro de una
+categoría grande y promiscua: \NQuinasas\ de los \NInterPro\ dominios, pero el
+\PctQuinasasProt\,\% de las proteínas de un genoma típico.
+
+Apagar la penalización cuesta AUC01 en \NBetaPierde\ de los \NEspeciesOpt\
+organismos (mediana \DeltaAUCBetaMediana, máximo \DeltaAUCBetaMax; 
+Figura~\ref{fig:betaauc}), y lo que se pierde se ve en la cabeza del ranking.
+Con $\beta=0$, en \NFloodBetaCero\ organismos las primeras cien posiciones se
+llenan de quinasas: hasta \EnriqTopBetaCeroMax\ veces más de las que daría el azar,
+y en varios casos el top-100 es \emph{enteramente} quinasa. Con $\beta=1$ ese
+enriquecimiento no pasa de \EnriqTopBetaUnoMax\ en ningún organismo
+(Figura~\ref{fig:betatop}).
+
+El desplazamiento es específico. Al pasar de $\beta=0$ a $\beta=1$ las quinasas
+bajan en \NDesplazaAbajo\ de los \NEspeciesOpt\ organismos —mediana
+\DesplazaQuinasaMediana\ percentiles— mientras que la mediana del resto del
+genoma no se mueve de cero en ninguno (Figura~\ref{fig:betadesp}). $\beta$ no
+reordena el ranking entero: saca del tope a las proteínas que estaban ahí por
+compartir una anotación que comparte medio genoma.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.8\textwidth]{figuras/03_f01_auc01_beta.pdf}
+\caption{AUC01 con la penalización ($\beta=1$) y sin ella ($\beta=0$), a
+$(\alpha,\lambda,\gamma)$ fijos en el óptimo de cada organismo.}
+\label{fig:betaauc}
+\end{figure}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{figuras/03_f04_enriquecimiento_top100.pdf}
+\caption{Quinasas en las primeras cien posiciones, contra las que daría un
+ranking indiferente a serlo. El conteo es el esperado bajo desempate uniforme:
+con $\beta=0$ los puntajes se degeneran y el corte cae dentro de un bloque
+empatado.}
+\label{fig:betatop}
+\end{figure}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{figuras/03_f03_desplazamiento.pdf}
+\caption{Desplazamiento en percentiles al pasar de $\beta=0$ a $\beta=1$,
+mediana y cuartiles, separando quinasas del resto del genoma. Positivo = la
+proteína baja en el ranking.}
+\label{fig:betadesp}
 \end{figure}
 
 \section{Desorfanización de compuestos}
@@ -287,7 +341,7 @@ del ranking global. Abajo: su derivada, suavizada, y el umbral $\lambda_\infty +
 \end{figure}
 
 \textbf{Aplicación al organismo foco.} De \EmbudoActivos\ compuestos con
-actividad fenotípica contra sp\,26, \EmbudoHuerfanos\ no tienen blanco proteico
+actividad fenotípica contra \textit{P.\,falciparum}, \EmbudoHuerfanos\ no tienen blanco proteico
 conocido y los \EmbudoTratables\ tienen vecinos químicos con blanco. Ninguno
 recibe una propuesta por encima de $r^*_G$ (\NSugerencias\ sugerencias): con la
 base recortada el embudo es demasiado angosto para producir candidatos, y el

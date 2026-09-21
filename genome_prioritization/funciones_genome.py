@@ -194,6 +194,172 @@ def plateau(barrido, tolerancias=(0.001, 0.005, 0.01)):
     return pd.DataFrame(filas).sort_values("auc01_max", ascending=False).reset_index(drop=True)
 
 
+# --- 03 · beta y la penalizacion de las categorias grandes ------------------
+
+# Los dos valores de beta que compara el notebook 03. beta = 1 es el optimo modal
+# del barrido (10 de las 16 especies); beta = 0 apaga la penalizacion por tamano
+# de categoria, que es lo que en el paper distingue G'rk de G'r (CONVENCIONES.md §5).
+BETA_ALTO = 1.0
+BETA_NULO = 0.0
+
+# Corte para la vista "cabeza del ranking". 100 proteinas es lo que un grupo
+# experimental puede llegar a mirar de un genoma.
+TOP_K = 100
+
+
+def params_a_beta_fijo(barrido, beta=BETA_ALTO):
+    """El mejor (alpha, lambda_, gamma) de cada especie **dentro** de beta fijo.
+
+    Es la eleccion que hace comparable el contraste: si cada beta se quedara con
+    su propio optimo global cambiarian los cuatro parametros a la vez y el efecto
+    de beta no se podria separar del de los otros tres. Aca se elige una vez, con
+    `beta = BETA_ALTO`, y despues se mueve **solo** beta.
+
+    Devuelve una fila por especie con los parametros y la AUC01 que el barrido ya
+    habia medido para esa combinacion.
+    """
+    b = barrido[barrido["beta"] == beta]
+    if b.empty:
+        raise ValueError(f"el barrido no tiene beta = {beta}; la grilla es {PARAMS['beta']}")
+    return (b.sort_values(["especie", "AUC01"], ascending=[True, False])
+            .groupby("especie", as_index=False, group_keys=False)
+            .head(1)
+            .reset_index(drop=True))
+
+
+def ranking_por_beta(datos, ctx, alpha, lam, gamma, betas=(BETA_ALTO, BETA_NULO),
+                     quinasas=None):
+    """El ranking de una especie bajo cada beta, con las quinasas marcadas.
+
+    Corre `nds` una vez por beta reusando el mismo contexto: la semilla, los
+    p-valores de Fisher y el relevance score no dependen de beta, asi que se
+    calculan una sola vez (son la parte cara).
+
+    Devuelve (tabla, aucs):
+      tabla  una fila por proteina de la especie: score y percentil bajo cada
+             beta, si es druggable y si es quinasa. El percentil va de 0 (la
+             cabeza del ranking) a 100, para que las especies sean comparables
+             pese a tener genomas de tamanos muy distintos.
+      aucs   {beta: AUC01}, recalculada con la metrica de `comun/tdr.py`.
+    """
+    cat_rs = tdr.relevance_scores(alpha=alpha, pv=ctx["cat_rs"])
+    base, aucs = None, {}
+
+    for beta in betas:
+        rnk = tdr.propagar(datos.sta, ctx["seed"], cat_rs,
+                           beta=beta, lambda_=lam, gamma=gamma)
+        sp_rnk = tdr.ranking_especie(rnk, ctx["sp_targets"], ctx["tp"])
+        aucs[beta] = tdr.auc01_mcclish(sp_rnk["druggable"], sp_rnk["score"])
+
+        suf = _suf(beta)
+        col = sp_rnk[["target_id", "score", "rank"]].rename(
+            columns={"score": f"score_{suf}", "rank": f"rank_{suf}"})
+        col[f"pct_{suf}"] = 100 * (col[f"rank_{suf}"] - 1) / (len(col) - 1)
+        if base is None:
+            base = sp_rnk[["target_id", "druggable"]].merge(col, on="target_id")
+        else:
+            base = base.merge(col, on="target_id", how="left")
+
+    base["quinasa"] = tdr.marcar_quinasas(base["target_id"], datos.sta).values
+    base["especie"] = ctx["sp_code"]
+    return base.reset_index(drop=True), aucs
+
+
+def resumen_beta(tabla, aucs, sp_code, betas=(BETA_ALTO, BETA_NULO), top_k=TOP_K):
+    """Una fila por especie: que le hace beta a las quinasas.
+
+    Tres vistas del mismo efecto, porque ninguna sola alcanza:
+
+      * `pct_quinasa_mediana_*`  donde cae la quinasa tipica en el ranking
+        (0 = cabeza). Es robusta pero se come las colas;
+      * `quinasas_top*`          cuantas quinasas hay en las primeras `top_k`
+        posiciones, que es lo que un grupo experimental miraria;
+      * `enriq_top*`             esas quinasas contra las que darian si el
+        ranking fuera indiferente a serlo (> 1 = las quinasas suben).
+
+    `delta_*` se escribe siempre como beta alto menos beta nulo, asi que un
+    delta positivo en un percentil significa que **beta las empuja hacia abajo**.
+    """
+    q = tabla[tabla["quinasa"]]
+    n_q, n = len(q), len(tabla)
+    f = {"especie": sp_code, "n_targets": n, "n_quinasas": n_q,
+         "n_druggable": int(tabla["druggable"].sum()),
+         "pct_quinasas": 100 * n_q / n if n else np.nan}
+
+    for beta in betas:
+        suf = _suf(beta)
+        f[f"auc01_{suf}"] = aucs[beta]
+        f[f"pct_quinasa_mediana_{suf}"] = q[f"pct_{suf}"].median() if n_q else np.nan
+        en_top = quinasas_en_top(tabla, f"score_{suf}", top_k)
+        f[f"quinasas_top{top_k}_{suf}"] = en_top
+        esperado = min(top_k, n) * n_q / n if n else np.nan
+        f[f"enriq_top{top_k}_{suf}"] = en_top / esperado if esperado else np.nan
+
+    alto, nulo = _suf(betas[0]), _suf(betas[1])
+    f["delta_auc01"] = f[f"auc01_{alto}"] - f[f"auc01_{nulo}"]
+    f["delta_pct_quinasa"] = (f[f"pct_quinasa_mediana_{alto}"] -
+                              f[f"pct_quinasa_mediana_{nulo}"])
+    f["delta_enriq_top"] = f[f"enriq_top{top_k}_{alto}"] - f[f"enriq_top{top_k}_{nulo}"]
+    return f
+
+
+def quinasas_en_top(tabla, col_score, top_k=TOP_K):
+    """Quinasas esperadas en las primeras `top_k` posiciones, con empates.
+
+    Contar `nsmallest(top_k)` a secas da un numero falso: con beta = 0 los
+    scores se degeneran y el corte cae dentro de un bloque de decenas de
+    proteinas empatadas, de modo que *cual* entra al top lo decide el orden en
+    que pandas devolvio las filas. En una especie ese desempate arbitrario metia
+    74 empatadas y hacia parecer que el top-100 era todo quinasa.
+
+    Lo que se cuenta aca es el **valor esperado** bajo desempate uniforme: los
+    bloques que entran enteros suman todas sus quinasas, y el bloque que queda a
+    caballo del corte suma las suyas prorrateadas por la fraccion que entra. Es
+    determinista y no depende del orden de las filas.
+    """
+    n = len(tabla)
+    k = min(top_k, n)
+    orden = tabla.sort_values(col_score, ascending=False)
+    bloques = orden.groupby(col_score, sort=False)["quinasa"].agg(["size", "sum"])
+
+    esperado, libres = 0.0, k
+    for tam, con_q in zip(bloques["size"], bloques["sum"]):
+        if libres <= 0:
+            break
+        esperado += float(con_q) * min(libres / tam, 1.0)
+        libres -= tam
+    return esperado
+
+
+def desplazamiento(tabla, sp_code, betas=(BETA_ALTO, BETA_NULO)):
+    """Cuanto se mueve cada proteina al pasar de beta nulo a beta alto, por grupo.
+
+    El contraste es quinasas contra el resto: si beta bajara todo el ranking por
+    igual el desplazamiento seria el mismo en los dos grupos y no diria nada
+    sobre la promiscuidad. Lo que se reporta es la mediana y los cuartiles del
+    desplazamiento en percentiles, positivo = la proteina baja.
+    """
+    alto, nulo = _suf(betas[0]), _suf(betas[1])
+    d = tabla.assign(delta=tabla[f"pct_{alto}"] - tabla[f"pct_{nulo}"])
+    filas = []
+    for es_q, g in d.groupby("quinasa"):
+        filas.append({
+            "especie": sp_code,
+            "grupo": "quinasa" if es_q else "resto",
+            "n": len(g),
+            "delta_q1": g["delta"].quantile(0.25),
+            "delta_mediana": g["delta"].median(),
+            "delta_q3": g["delta"].quantile(0.75),
+            "delta_media": g["delta"].mean(),
+        })
+    return filas
+
+
+def _suf(beta):
+    """Sufijo de columna para un beta: 1.0 -> `b1`, 0.0 -> `b0`."""
+    return "b" + f"{beta:g}".replace(".", "p").replace("-", "m")
+
+
 # ============================= AUXILIARES ============================
 
 def grilla_valida(params=PARAMS):
