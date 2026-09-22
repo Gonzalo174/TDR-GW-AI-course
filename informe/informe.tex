@@ -300,7 +300,7 @@ ese promedio hay dos poblaciones. En las \NInfDirecta\ de inferencia directa
 posición mediana es \RSSMedInfDirecta\ y el \PctTopDiezDirecta\,\% cae en el
 top-10; en las \NInfIndirecta\ indirectas, donde sólo se llega por anotaciones
 compartidas, la mediana es \RSSMedInfIndirecta\ y el top-10 baja al
-\PctTopDiezIndirecta\,\%. Las semillas grandes diluyen la señal: el tamaño de la
+\PctTopDiezIndirecta\,\%. Las semillas grandes diluyen la señal (Figura~\ref{fig:infrss}): el tamaño de la
 semilla y la posición del blanco se correlacionan ($\rho=\RhoSemillaRSS$), y la
 correlación es positiva dentro de \NOrgRhoPos\ de los \NOrgRho\ organismos con al
 menos quince casos, así que no es un efecto de mezclar organismos. Una advertencia
@@ -310,12 +310,22 @@ otras proteínas y su posición es un promedio de empate.
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{figuras/03_f05_semilla_informativa.pdf}
-\caption{Las \NInformativa\ pseudohuérfanas con semilla informativa.
-(a)~Fracción con el blanco entre las $k$ primeras proteínas de su organismo,
-frente al azar; la línea punteada es el corte $\mathrm{frank}=0.1$.
-(b)~\emph{frank} en escala logarítmica. (c)~Tamaño de la semilla contra
-posición del blanco. (d)~Posición por organismo; la barra es la mediana.}
+\caption{Dónde cae el blanco en las \NInformativa\ pseudohuérfanas con semilla
+informativa. (a)~Fracción con el blanco entre las $k$ primeras proteínas de su
+organismo, frente al azar; la línea punteada es el corte $\mathrm{frank}=0.1$.
+(b)~\emph{frank} en escala logarítmica, con la mediana de cada clase.}
 \label{fig:inf}
+\end{figure}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{figuras/03_f06_semilla_rss.pdf}
+\caption{Qué diluye la señal, sobre las mismas \NInformativa\ pseudohuérfanas.
+(a)~Tamaño de la semilla contra posición del blanco, con los dos ejes en la
+misma escala. (b)~Posición por organismo, en seis de los \NEspecies\ organismos
+---uno por grupo taxonómico---; la barra es la mediana y el violín, la
+distribución.}
+\label{fig:infrss}
 \end{figure}
 
 \textbf{Hasta dónde confiar en el ranking.} Sobre el ranking global (las

@@ -1,4 +1,4 @@
-% Presentacion de 5 minutos: 9 diapositivas, ~30 s cada una.
+% Presentacion de 10 minutos: 11 diapositivas, ~50 s cada una.
 % Como el informe, no tiene una cifra escrita a mano: todas salen de numeros.tex,
 % que genera informe/numeros.py leyendo resultados/ y DB/meta.json.
 %
@@ -16,6 +16,7 @@
 \definecolor{naranja}{HTML}{EB6834}
 \definecolor{verde}{HTML}{1BAF7A}
 \definecolor{ambar}{HTML}{EDA100}
+\definecolor{rojo}{HTML}{D03B3B}
 \definecolor{tinta}{HTML}{12100C}
 \definecolor{tinta2}{HTML}{4A463D}
 \definecolor{tenue}{HTML}{8A857A}
@@ -41,7 +42,11 @@
 % los estilos van fuera de los frames: beamer lee su cuerpo como argumento y
 % un #1 adentro rompe la compilacion
 \tikzset{n/.style={circle,draw=#1,fill=#1!25,minimum size=4.5mm,inner sep=0},
-         l/.style={font=\scriptsize\color{tinta2},anchor=east}}
+         l/.style={font=\scriptsize\color{tinta2},anchor=east},
+         m/.style={circle,draw=#1,fill=#1!25,minimum size=3.4mm,inner sep=0},
+         apagado/.style={circle,draw=tenue,fill=tenue!12,minimum size=3.4mm,inner sep=0},
+         blanco/.style={circle,draw=#1,fill=#1!35,minimum size=3.4mm,inner sep=0,
+                        double,double distance=.6pt,line width=.5pt}}
 
 \input{numeros}
 
@@ -182,10 +187,10 @@ nombres de las anotaciones no se pueden reconstruir.}
 % ------------------------------------------- 6 · resultados priorizacion
 \begin{frame}{Resultados I: priorizar un genoma sin su propia evidencia}
 \begin{columns}[c]
-\column{.55\textwidth}
+\column{.52\textwidth}
 \includegraphics[width=\textwidth]{figuras/01_f03_auc01_por_especie.pdf}
-\column{.43\textwidth}
-\begin{itemize}\setlength\itemsep{.55em}\small
+\column{.46\textwidth}
+\begin{itemize}\setlength\itemsep{.45em}\small
 \item Supera al azar en los \textbf{\NSobreAzar} organismos; AUC01 mediana
   \AUCMediana\ (\AUCMin–\AUCMax).
 \item Los \NProtozoosArriba\ primeros son los \NProtozoos\ \textbf{protozoos
@@ -193,54 +198,164 @@ nombres de las anotaciones no se pueden reconstruir.}
 \item Lo decide un solo parámetro, \textbf{$\beta$}: penalizar las categorías
   grandes. $\beta>0$ en \NBetaPositivo/\NEspeciesOpt\ óptimos; $\beta=1$ está
   \EnrBetaUno$\times$ sobrerrepresentado en el top-10.
-\item El óptimo es una meseta: las 20 mejores combinaciones quedan a menos del
+\item El óptimo es una meseta: las 20 mejores quedan a menos del
   \CaidaTopVeinteMax\,\% del máximo.
 \end{itemize}
 \end{columns}
+\vspace{.2em}
+\begin{center}
+$\displaystyle \mathrm{score}_i \;=\; k_i^{\,\lambda-1}
+  \sum_{l\,\in\,A(i)} {\color{azulo}|C_l|^{-\beta}}\;\mathrm{RS}_l
+  \sum_{j\,\in\,S\,\cap\,C_l} \frac{w_j}{k_j^{\,\lambda}}$
+\end{center}
+{\scriptsize\color{tinta2}\hspace{1em}${\color{azulo}|C_l|^{-\beta}}$: el grado
+de la categoría $l$ ---cuántas proteínas la comparten--- elevado a $-\beta$.
+$k_i$: anotaciones de la proteína; $\mathrm{RS}_l$: relevancia (Fisher + BH);
+$S$: semilla. $\beta=0$ la apaga: es $G'_r$ contra $G'_{rk}$.}
+\end{frame}
+
+% ------------------------------------------------ 7 · sobre quien actua beta
+\begin{frame}{$\beta=0$ contra $\beta=1$: sobre quién actúa la penalización}
+{\small Se fija el mejor $(\alpha,\lambda,\gamma)$ \emph{dentro} de $\beta=1$ y
+se mueve \textbf{sólo} $\beta$ a 0. Grupo de prueba, las quinasas ---categoría
+grande y promiscua---: \NQuinasas\ de \NInterPro\ dominios, pero el
+\PctQuinasasProt\,\% de las proteínas de un genoma típico.}
+\vspace{.2em}
+\begin{columns}[T]
+\column{.48\textwidth}
+\centering
+\includegraphics[width=.92\textwidth]{figuras/03_f01_auc01_beta.pdf}\\[.1em]
+{\scriptsize\color{tinta2}Apagarla cuesta AUC01 en \NBetaPierde\ de los
+\NEspeciesOpt\ organismos (mediana \DeltaAUCBetaMediana, máx.\ \DeltaAUCBetaMax).}
+\column{.48\textwidth}
+\centering
+\includegraphics[width=.92\textwidth]{figuras/03_f04_enriquecimiento_top100.pdf}\\[.1em]
+{\scriptsize\color{tinta2}Con $\beta=0$ la cabeza se inunda de quinasas: hasta
+\EnriqTopBetaCeroMax$\times$ el azar en \NFloodBetaCero\ organismos. Con
+$\beta=1$ no pasa de \EnriqTopBetaUnoMax\ en ninguno.}
+\end{columns}
+\vspace{.1em}
+{\small Y el desplazamiento es \textbf{específico}: las quinasas bajan
+\DesplazaQuinasaMediana\ percentiles en \NDesplazaAbajo/\NEspeciesOpt\
+organismos y el resto no se mueve. $\beta$ no reordena el ranking: saca del
+tope lo que estaba ahí por una anotación que tiene medio genoma.}
 \end{frame}
 
 % ---------------------------------------------- 7 · resultados huerfanas
 \begin{frame}{Resultados II: proponer el blanco de un compuesto huérfano}
 \begin{columns}[T]
-\column{.5\textwidth}
+\column{.36\textwidth}
 \small Se le borra toda la bioactividad a \NPseudo\ compuestos con un único
 blanco conocido, y se lo busca desde su vecindario químico.
-\begin{itemize}\setlength\itemsep{.45em}
-\item Se recupera en el \textbf{\PctRecuperadas\,\%}. La causa está medida:
-\item el \textbf{\PctSinSemilla\,\%} no tiene ningún vecino químico con blanco;
-\item si la semilla comparte una anotación con el blanco: \textbf{\PctRecInformativa\,\%};
-  si no, \PctRecNoInformativa\,\%.
-\item El límite es la cobertura química, no el modelo: el techo va del
+\begin{itemize}\setlength\itemsep{.4em}
+\item Se recupera en el \textbf{\PctRecuperadas\,\%}, y la causa está medida:
+  todo depende de qué llega a la semilla.
+\item El límite es la \textbf{cobertura química}, no el modelo: el techo va del
   \TechoMin\ al \TechoMax\,\% por organismo.
 \end{itemize}
-\column{.48\textwidth}
+\column{.62\textwidth}
 \centering
-\includegraphics[width=\textwidth]{figuras/01_f03_semilla_por_especie.pdf}\\[.3em]
-{\scriptsize\color{tinta2}Rojo: sin semilla. Ámbar: semilla sin anotación en común.
-Verde: semilla informativa.}
+\includegraphics[width=.76\textwidth]{figuras/01_f03_semilla_por_especie.pdf}\\[.3em]
+% los tres casos, con los nodos siempre en el mismo lugar: lo que cambia son las
+% aristas que sobreviven
+\begin{tikzpicture}[scale=.68,every node/.style={transform shape}]
+  % --- rojo: sin semilla -------------------------------------------------
+  \begin{scope}[xshift=0cm]
+    \node[blanco=naranja] (c0) at (0,1.5) {};
+    \node[m=naranja] (c1) at (.8,1.5) {};
+    \node[m=naranja] (c2) at (1.6,1.5) {};
+    \node[apagado] (p1) at (.8,.75) {};
+    \node[apagado] (p2) at (1.6,.75) {};
+    \node[apagado] (pt) at (2.4,.75) {};
+    \node[apagado] (a1) at (1.2,0) {};
+    \node[apagado] (a2) at (2.0,0) {};
+    \draw[naranja,dashed] (c0)--(c1) (c1)--(c2);
+    \node[font=\scriptsize\color{rojo},below=.3 of a1,xshift=.4cm,
+          align=center,text width=3.4cm]
+      {\textbf{sin semilla}\\ \PctSinSemilla\,\% de los casos};
+  \end{scope}
+  % --- ambar: semilla sin anotacion en comun -----------------------------
+  \begin{scope}[xshift=4.6cm]
+    \node[blanco=naranja] (c0) at (0,1.5) {};
+    \node[m=naranja] (c1) at (.8,1.5) {};
+    \node[m=naranja] (c2) at (1.6,1.5) {};
+    \node[m=azulo] (p1) at (.8,.75) {};
+    \node[m=azulo] (p2) at (1.6,.75) {};
+    \node[apagado] (pt) at (2.4,.75) {};
+    \node[m=verde] (a1) at (1.2,0) {};
+    \node[m=verde] (a2) at (2.0,0) {};
+    \draw[naranja,dashed] (c0)--(c1) (c1)--(c2);
+    \draw[tinta2] (c1)--(p1) (c2)--(p2);
+    \draw[tenue] (p1)--(a1) (p2)--(a1) (p2)--(a2);
+    \node[font=\scriptsize\color{ambar},below=.3 of a1,xshift=.4cm,
+          align=center,text width=3.4cm]
+      {\textbf{sin anotación en común}\\ recupera \PctRecNoInformativa\,\%};
+  \end{scope}
+  % --- verde: semilla informativa, la vuelta completa --------------------
+  \begin{scope}[xshift=9.2cm]
+    \node[blanco=naranja] (c0) at (0,1.5) {};
+    \node[m=naranja] (c1) at (.8,1.5) {};
+    \node[m=naranja] (c2) at (1.6,1.5) {};
+    \node[m=azulo] (p1) at (.8,.75) {};
+    \node[m=azulo] (p2) at (1.6,.75) {};
+    \node[blanco=verde] (pt) at (2.4,.75) {};
+    \node[m=verde] (a1) at (1.2,0) {};
+    \node[m=verde] (a2) at (2.0,0) {};
+    \draw[naranja,dashed] (c0)--(c1) (c1)--(c2);
+    \draw[tinta2] (c1)--(p1) (c2)--(p2);
+    \draw[tenue] (p1)--(a1) (p2)--(a1) (p2)--(a2) (a2)--(pt);
+    \draw[->,thick,azulo] (p2) to[bend left=40] (pt);
+    \node[font=\scriptsize\color{verde},below=.3 of a1,xshift=.4cm,
+          align=center,text width=3.4cm]
+      {\textbf{semilla informativa}\\ recupera \PctRecInformativa\,\%};
+  \end{scope}
+\end{tikzpicture}\\[.2em]
+{\scriptsize\color{tinta2}Las capas de la diapositiva 2 ---compuestos,
+proteínas, anotaciones---, con los nodos siempre en el mismo lugar: lo que
+cambia es qué aristas sobreviven. Anillo naranja: el huérfano. Verde: su blanco.}
 \end{columns}
 \end{frame}
 
-% ------------------------------------ 8 · resultados semilla informativa
+% ------------------------------------ 9 · resultados semilla informativa
 \begin{frame}{Resultados III: cuando hay semilla informativa}
 \begin{columns}[c]
-\column{.6\textwidth}
+\column{.66\textwidth}
 \includegraphics[width=\textwidth]{figuras/03_f05_semilla_informativa.pdf}
-\column{.38\textwidth}
+\column{.32\textwidth}
 \small $\mathrm{frank}<0.1$ es quedar entre las primeras $\sim$\FrankCorteRank: no
-discrimina. Con la posición exacta:
+discrimina. Con la posición exacta, sobre las \NInformativa\ con semilla
+informativa:
 \begin{itemize}\setlength\itemsep{.45em}
 \item \textbf{1.º} en el \PctInfTopUno\,\%, \textbf{top-10} en el
   \PctInfTopDiez\,\% (azar: \AzarTopDiez\,\%).
 \item \textbf{Directa} (el vecino trae el blanco): mediana \RSSMedInfDirecta.
   \textbf{Indirecta} (sólo anotaciones): \RSSMedInfIndirecta.
-\item Semillas grandes diluyen: $\rho=\RhoSemillaRSS$, positiva en
-  \NOrgRhoPos/\NOrgRho\ organismos.
+\item La mediana de las dos clases queda dos órdenes por debajo del corte: no
+  es que apenas lo pasen.
 \end{itemize}
 \end{columns}
 \end{frame}
 
-% --------------------------------------------------------------- 9 · cierre
+% ------------------------------------------- 10 · que diluye la senal
+\begin{frame}{Resultados III (cont.): qué diluye la señal}
+\begin{columns}[c]
+\column{.62\textwidth}
+\includegraphics[width=\textwidth]{figuras/03_f06_semilla_rss.pdf}
+\column{.36\textwidth}
+\begin{itemize}\setlength\itemsep{.55em}\small
+\item Cuanto más grande la semilla, más abajo cae el blanco:
+  $\rho=\RhoSemillaRSS$, positiva \emph{dentro} de \NOrgRhoPos\ de los
+  \NOrgRho\ organismos con casos suficientes.
+\item Panel (b): seis organismos, uno por grupo taxonómico. La mediana se
+  mueve entre ellos, pero la cabeza de cada distribución está siempre en las
+  primeras posiciones.
+\item En el \PctEmpates\,\% de los casos el blanco empata en puntaje: su
+  posición es un promedio de empate.
+\end{itemize}
+\end{columns}
+\end{frame}
+
+% -------------------------------------------------------------- 11 · cierre
 \begin{frame}{Qué me llevo}
 \begin{columns}[T]
 \column{.48\textwidth}
@@ -248,22 +363,26 @@ discrimina. Con la posición exacta:
 \begin{itemize}\setlength\itemsep{.4em}\small
 \item La propagación prioriza genomas de los que no se sabe nada, y lo que la
   hace funcionar es penalizar las categorías grandes.
-\item Para desorfanizar, el cuello de botella es la cobertura química: cuando
-  hay semilla informativa, el blanco cae en el top-10 el \PctInfTopDiez\,\% de
-  las veces.
-\item Siguiente paso: ampliar la semilla (umbral de similitud por debajo de
-  0.8, KEGG).
+\item Para desorfanizar, el cuello de botella es la cobertura química: con
+  semilla informativa el blanco cae en el top-10 el \PctInfTopDiez\,\% de las
+  veces.
+\item \textbf{Siguiente paso: ponerlo a disposición de la comunidad}
+  ---priorización, algoritmo y base codificada--- para que cualquier grupo
+  pueda correr su genoma y discutir los rankings.
 \end{itemize}
 \end{block}
 \column{.48\textwidth}
 \begin{block}{Del trabajo con Claude}
-\begin{itemize}\setlength\itemsep{.4em}\small
-\item Las pruebas antes que los resultados: las fallas caras no lanzan
-  excepciones.
-\item Cada cifra se lee de una tabla; cada decisión queda escrita con la
-  alternativa que se descartó (\texttt{PROVENANCE.md}).
-\item Separar la corrida de las figuras: iterar sobre una figura cuesta
-  segundos, no la corrida.
+\begin{itemize}\setlength\itemsep{.25em}\small
+\item \textbf{Generar los resultados con código}: es lo que hace controlable la
+  trazabilidad. Cada cifra se lee de una tabla y cada decisión queda escrita
+  (\texttt{PROVENANCE.md}).
+\item \textbf{Separar la corrida de las figuras}: iterar sobre una figura cuesta
+  segundos, no los tres cuartos de hora de la corrida.
+\item \textbf{Soltura con el agente}, con los modos del curso: planificar antes
+  de tocar, delegar la exploración, pedir la prueba antes que el resultado.
+\item Y lo más caro: \textbf{las pruebas antes que los resultados} ---las
+  fallas que importan no lanzan excepciones.
 \end{itemize}
 \end{block}
 \end{columns}

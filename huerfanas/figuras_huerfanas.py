@@ -16,6 +16,12 @@ H = "huerfanas"
 PSEUDO = "01_*_pseudohuerfanas.csv"
 CORTE = 0.1                          # frank < 0.1 = blanco recuperado
 
+# Los organismos que representan a los grupos de `tdr.META` en `03_f06`: de cada
+# grupo, el que mas pseudohuerfanas informativas aporta (168 de las 270). Con los
+# 16 el panel es una mancha; la seleccion es por grupo, no por resultado.
+REPRESENTATIVOS = [3, 1, 21, 17, 10, 26]    # H. sapiens, E. coli, A. thaliana,
+                                            # D. melanogaster, S. cerevisiae, P. falciparum
+
 
 def _etiqueta(sp):
     return tdr.NOMBRE_CORTO.get(sp, sp)
@@ -293,7 +299,7 @@ def familias(t, plt):
 
 
 @figura(H, "03_f05_semilla_informativa",
-        verifica='Sin control independiente. Referencias internas: el azar en el panel (a); el efecto del tamaño de semilla se comprobó dentro de cada organismo, no sólo en el total.',
+        verifica='Sin control independiente. Referencias internas: el azar en el panel (a); las dos clases se cuentan sobre la misma tabla que `03_f06`.',
         lee=("03_informativa.csv", "03_informativa_topk.csv"))
 def semilla_informativa(t, plt):
     """Las pseudohuérfanas con semilla informativa: dónde cae el blanco, más
@@ -301,7 +307,7 @@ def semilla_informativa(t, plt):
     inf = t("03_informativa.csv")
     topk = t("03_informativa_topk.csv")
     color = {"directa": tdr.S1, "indirecta": tdr.S2}
-    fig, ((a1, a2), (a3, a4)) = plt.subplots(2, 2, figsize=(11, 7.5), tight_layout=True)
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(9, 4.6), tight_layout=True)
 
     # (a) recuperacion top-k contra el azar
     a1.plot(topk["k"], 100 * topk["todas"], color=tdr.INK, label=f"todas (n = {len(inf)})")
@@ -320,47 +326,90 @@ def semilla_informativa(t, plt):
     a1.set_title("a · Recuperación top-k")
     a1.legend(fontsize=7, loc="upper left")
 
-    # (b) frank en escala log: cuan por debajo de 0.1 queda
-    bins = np.logspace(np.log10(inf["frank"].min()) - 0.1, 0, 36)
+    # (b) frank en escala log: cuan por debajo de 0.1 queda. El bin es el doble
+    # de ancho que el de la primera version: con 35 bins el histograma era un
+    # peine que no se leia proyectado.
+    bins = np.logspace(np.log10(inf["frank"].min()) - 0.1, 0, 18)
     for c in ("directa", "indirecta"):
         d = inf.loc[inf["clase"] == c, "frank"]
         a2.hist(d, bins=bins, histtype="step", lw=1.8, color=color[c],
-                label=f"{c}: mediana {d.median():.1e}")
-    a2.axvline(CORTE, color=tdr.INK2, ls=":", lw=1)
-    a2.text(CORTE * 0.8, a2.get_ylim()[1] * 0.9, f"corte {CORTE}", ha="right",
-            fontsize=7, color=tdr.INK2)
+                label=f"{c} (n = {len(d)})")
     a2.set_xscale("log")
+    a2.axvline(CORTE, color=tdr.INK2, ls=":", lw=1)
+    tope = a2.get_ylim()[1]
+    a2.text(CORTE * 0.8, tope * 0.95, f"corte {CORTE}", ha="right",
+            fontsize=7, color=tdr.INK2)
+    # la mediana va en el grafico, no en la leyenda
+    for i, c in enumerate(("directa", "indirecta")):
+        m = inf.loc[inf["clase"] == c, "frank"].median()
+        a2.axvline(m, color=color[c], ls="--", lw=1.2)
+        a2.text(m * 1.15, tope * (0.78 - 0.1 * i), f"mediana {m:.0e}",
+                fontsize=7, color=color[c])
     a2.set_xlabel("frank (posición relativa del blanco)")
     a2.set_ylabel("drogas")
     a2.set_title("b · Qué tan por debajo del corte")
     a2.legend(fontsize=7, loc="upper left")
 
-    # (c) tamaño de la semilla contra posicion
+    for ax in (a1, a2):
+        ax.set_box_aspect(1)
+    return fig
+
+
+@figura(H, "03_f06_semilla_rss",
+        verifica='Sin control independiente. El efecto del tamaño de semilla se comprobó dentro de cada organismo, no sólo en el total; el panel (b) muestra seis de los 16 organismos, elegidos por grupo de `tdr.META` y por cantidad de casos, no por el resultado.',
+        lee="03_informativa.csv")
+def semilla_rss(t, plt):
+    """Qué diluye la señal: tamaño de la semilla y organismo."""
     from scipy.stats import spearmanr
+    inf = t("03_informativa.csv")
+    color = {"directa": tdr.S1, "indirecta": tdr.S2}
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(9, 4.6), tight_layout=True)
+
+    # (a) tamaño de la semilla contra posicion, con los dos ejes en la misma
+    # escala: las dos magnitudes son conteos de proteinas y se comparan.
     for c in ("directa", "indirecta"):
         d = inf[inf["clase"] == c]
-        a3.scatter(d["n_semilla"], d["rSS"], s=10, alpha=0.6, color=color[c], label=c)
+        a1.scatter(d["n_semilla"], d["rSS"], s=10, alpha=0.6, color=color[c], label=c)
     rho = spearmanr(inf["n_semilla"], inf["rSS"]).correlation
-    a3.set_xscale("log")
-    a3.set_yscale("log")
-    a3.set_xlabel("proteínas en la semilla")
-    a3.set_ylabel("rSS (posición del blanco)")
-    a3.set_title(f"c · Semillas grandes diluyen (Spearman ρ = {rho:.2f})")
-    a3.legend(fontsize=7)
+    lim = (0.8, 1.2 * max(inf["n_semilla"].max(), inf["rSS"].max()))
+    a1.set_xscale("log")
+    a1.set_yscale("log")
+    a1.set_xlim(lim)
+    a1.set_ylim(lim)
+    a1.set_xlabel("proteínas en la semilla")
+    a1.set_ylabel("rSS (posición del blanco)")
+    a1.set_title(f"a · Semillas grandes diluyen (Spearman ρ = {rho:.2f})")
+    a1.legend(fontsize=7)
 
-    # (d) por especie
-    orden = (inf.groupby("especie")["rSS"].median().sort_values(ascending=False).index)
+    # (b) por organismo, sobre log10(rSS): el violin necesita un eje lineal, asi
+    # que se transforma el dato y se etiquetan los ticks como potencias de 10.
+    sel = [s for s in REPRESENTATIVOS if (inf["especie"] == s).any()]
+    orden = (inf[inf["especie"].isin(sel)].groupby("especie")["rSS"]
+             .median().sort_values(ascending=False).index.tolist())
     rng = np.random.default_rng(0)
+    datos = [np.log10(inf.loc[inf["especie"] == sp, "rSS"].to_numpy()) for sp in orden]
+    v = a2.violinplot(datos, positions=range(len(orden)), orientation="horizontal",
+                      widths=0.85, showextrema=False, showmedians=False)
+    for cuerpo in v["bodies"]:
+        cuerpo.set_facecolor(tdr.GRID)
+        cuerpo.set_edgecolor(tdr.AXIS)
+        cuerpo.set_alpha(1)
     for i, sp in enumerate(orden):
         d = inf[inf["especie"] == sp]
-        y = i + rng.uniform(-0.25, 0.25, len(d))
-        a4.scatter(d["rSS"], y, s=8, alpha=0.6, color=[color[c] for c in d["clase"]])
-        a4.plot(d["rSS"].median(), i, "|", color=tdr.INK, ms=12, mew=2)
-    a4.axvline(10, color=tdr.MUTED, ls="--", lw=1)
-    a4.set_yticks(range(len(orden)))
-    a4.set_yticklabels([f"{_etiqueta(sp)}  n={int((inf['especie'] == sp).sum())}"
-                        for sp in orden], fontsize=6)
-    a4.set_xscale("log")
-    a4.set_xlabel("rSS (posición del blanco); | = mediana")
-    a4.set_title("d · Por organismo")
+        y = i + rng.uniform(-0.22, 0.22, len(d))
+        a2.scatter(np.log10(d["rSS"]), y, s=10, alpha=0.7,
+                   color=[color[c] for c in d["clase"]], zorder=3)
+        a2.plot(np.log10(d["rSS"].median()), i, "|", color=tdr.INK, ms=14, mew=2, zorder=4)
+    a2.axvline(1, color=tdr.MUTED, ls="--", lw=1)
+    a2.set_yticks(range(len(orden)))
+    a2.set_yticklabels([f"{_etiqueta(sp)}  n={int((inf['especie'] == sp).sum())}"
+                        for sp in orden], fontsize=7)
+    a2.set_xticks([0, 1, 2, 3, 4])
+    a2.set_xticklabels(["1", "10", "100", "1 000", "10 000"])
+    a2.set_xlabel("rSS (posición del blanco);  | = mediana")
+    n_sel = int(inf["especie"].isin(sel).sum())
+    a2.set_title(f"b · Por organismo (uno por grupo; {n_sel} de {len(inf)} casos)")
+
+    for ax in (a1, a2):
+        ax.set_box_aspect(1)
     return fig

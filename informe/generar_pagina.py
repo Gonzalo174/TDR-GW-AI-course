@@ -350,8 +350,11 @@ def construir() -> str:
       "proteínas.</p>")
     A(figura(fig("huerfanas_out", "03_f05_semilla_informativa.png"),
              "(a) Fracción con el blanco en el top-k de su organismo, frente al azar; la "
-             "punteada es frank = 0.1. (b) frank en escala log. (c) Tamaño de la semilla contra "
-             "posición del blanco. (d) Posición por organismo; la barra es la mediana."))
+             "punteada es frank = 0.1. (b) frank en escala log, con la mediana de cada clase."))
+    A(figura(fig("huerfanas_out", "03_f06_semilla_rss.png"),
+             "(a) Tamaño de la semilla contra posición del blanco, con los dos ejes en la misma "
+             "escala. (b) Posición por organismo, en seis organismos —uno por grupo—; la barra "
+             "es la mediana y el violín, la distribución."))
     A("<h3>Hasta dónde confiar en el ranking</h3>")
     A(f'<p>Sobre el ranking global, la recuperación acumulada tiene pendiente alta en las '
       f'primeras posiciones y cae al ruido de fondo en <strong>r*G = {n["RGEstrella"]}</strong>: '
