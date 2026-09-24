@@ -13,7 +13,11 @@ aristas de esa capa; no toca proteinas ni anotaciones.
     trabaja sobre anotaciones y blancos conocidos -> ESTABLE
   * `analiceDB/` describe la base entera, componentes conexas incluidas -> CAMBIA
   * `huerfanas/` construye la semilla desde el vecindario quimico de cada
-    droga (`quimica=True`), y su notebook 03 lee las salidas del 01 -> CAMBIA
+    droga (`quimica=True`), y su notebook 03 lee las salidas del 01 -> CAMBIA.
+    Desde el 2026-09-24 cambia ademas por una correccion del modelo: la semilla
+    buscaba vecinos quimicos con el id de la droga en tablas indexadas por
+    cluster (PROVENANCE.md §3.16). El oraculo tiene el error; este repositorio
+    no. El rotulo "explicado por el recorte" cubre en huerfanas las dos causas.
 
 Lo estable tiene que salir identico; lo que cambia tiene que cambiar de una
 forma que se pueda explicar. Eso es lo que sostiene el resultado ante alguien
@@ -42,7 +46,7 @@ RTOL = 1e-9
 ESPERADO = {
     "analiceDB": "cambia",               # describe la base recortada
     "genome_prioritization": "estable",  # anotaciones + druggables, sin quimica
-    "huerfanas": "cambia",               # la semilla sale del vecindario quimico
+    "huerfanas": "cambia",               # vecindario quimico + correccion de la semilla (PROVENANCE §3.16)
     "verificacion": "estable",
 }
 

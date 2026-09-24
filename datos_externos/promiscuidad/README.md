@@ -13,7 +13,7 @@ y mide desde la base cuánto saca de la capa que usa el modelo.
 
 | archivo | qué es |
 |---|---|
-| `compuestos_promiscuos.csv` | los 7 compuestos que cumplen el criterio: código, superestructuras que los contienen, peso molecular |
+| `compuestos_promiscuos.csv` | los 5 compuestos que cumplen el criterio: código, superestructuras que los contienen, peso molecular |
 | `impacto_filtro.csv` | cuántos compuestos y cuántas relaciones crudas saca el filtro |
 | `curva_filtrado.csv` | cuántos compuestos y relaciones sacaría cada combinación de umbrales: la sensibilidad del criterio |
 | `derivar.py` | el cálculo, desde los datos crudos |
@@ -40,14 +40,21 @@ codificación oculta: ninguno se publica.
 - `derivar.py` reproduce las tres tablas **byte a byte** respecto de las que
   había escrito `analiceDB/03` cuando todavía leía los datos crudos.
 - La corrida exige el mapa: sin él, los ids crudos no cruzan contra `DB/` y la
-  lista sale con 30 compuestos falsos en vez de los 7 verdaderos, sin que nada
+  lista sale con compuestos falsos en vez de los 5 verdaderos, sin que nada
   falle (PROVENANCE.md §3.10).
-- Contra el oráculo v4, la lista pasa de 30 a 7 compuestos, un cambio que
+- Contra el oráculo v4, la lista pasa de 25 a 5 compuestos, un cambio que
   explica el recorte de la base (`verificacion/10`).
+- **Corrección del 2026-09-24.** Hasta esa fecha la tabla tenía 7 filas para 5
+  compuestos: `compound_data.csv` repite algunos compuestos y el cruce con el
+  peso molecular los duplicaba (en v4 pasaba lo mismo: 30 filas, 25
+  compuestos). `derivar.py` ahora deduplica antes del cruce. El conteo de
+  relaciones que saca el filtro (7 445, 1.6 %) ya estaba bien, y el filtro de
+  `huerfanas/` usa la lista como conjunto, así que ninguna semilla cambió por
+  esto; sí cambian el conteo de compuestos y la curva de sensibilidad.
 
 ## Qué no se publica
 
 La tabla por compuesto (peso molecular y superestructuras de los ~84 000
 compuestos): el peso molecular con toda su precisión, al lado del código,
 permitiría reidentificar los compuestos y deshacer la codificación
-(PROVENANCE.md §3.13). Se publican sólo los 7 filtrados y los agregados.
+(PROVENANCE.md §3.13). Se publican sólo los 5 filtrados y los agregados.

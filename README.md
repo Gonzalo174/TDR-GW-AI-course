@@ -45,7 +45,7 @@ ellas, **todas las figuras se reproducen desde las tablas pregeneradas**, sin
 cargar la base ni correr ningún modelo:
 
 ```bash
-make verificar      # 60 pruebas + las 35 figuras desde las tablas + cifras del informe
+make verificar      # 63 pruebas + las 36 figuras desde las tablas + cifras del informe
 make figuras        # sólo las figuras, ~40 s
 make entregables    # figuras, FIGURAS.md, informe, presentación y página, ~1,5 min
 ```
@@ -88,7 +88,7 @@ y ocupa 2,1 GB; los procesos de la corrida paralela la comparten por `fork`. La
 cantidad de procesos se cambia con `TDR_NCORE` (por defecto 20); con menos, los
 tres notebooks largos tardan proporcionalmente más.
 
-En cambio, **redibujar las 35 figuras desde las tablas lleva ~40 s**, y las
+En cambio, **redibujar las 36 figuras desde las tablas lleva ~40 s**, y las
 pruebas, ~25 s.
 
 ## Reproducir la corrida (~45 min)

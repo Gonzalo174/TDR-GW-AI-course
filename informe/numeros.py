@@ -64,6 +64,8 @@ CLAVES = [
     "PctInfTopCien", "PctTopDiezDirecta", "PctTopDiezIndirecta", "AzarTopDiez",
     "RSSMedInfDirecta", "RSSMedInfIndirecta", "RhoSemillaRSS", "PctEmpates",
     "FrankCorteRank", "NInfFueraCorte", "NOrgRho", "NOrgRhoPos", "EmbudoActivos", "EmbudoHuerfanos", "EmbudoTratables", "NSugerencias",
+    "NSugCompuestos", "NSugBlancos", "RGSensMin", "RGSensMax", "KSigmaMin", "KSigmaMax",
+    "PctRecuperadasDirecta",
     # contraste con v4
     "NComparadasGP", "NIdenticasGP", "NComparadasHU", "NCambianHU", "NComparadasAN",
     "NCambianAN", "PromiscuosVcuatro", "PctAristasVcuatro", "NPromiscuosEnBase", "NDdsRemovidas", "ControlCoinciden", "ControlDeltaMax",
@@ -237,6 +239,11 @@ def _huerfanas(n):
             if f is not None:
                 n[f"N{clave}"] = _mil(f["n"])
                 n[f"PctRec{clave}"] = _pct(f["pct_recuperadas"])
+        # de las recuperadas, cuantas por inferencia directa (el vecino trae el blanco)
+        rec = {c: (lambda f: f["n"] * f["pct_recuperadas"] / 100)(fila("clase", c))
+               for c in ("directa", "indirecta") if fila("clase", c) is not None}
+        if len(rec) == 2 and sum(rec.values()) > 0:
+            n["PctRecuperadasDirecta"] = _pct(100 * rec["directa"] / sum(rec.values()), 0)
         for clave, g in (("Cero", 0), ("Tres", 3)):
             f = fila("grupo", g)
             if f is not None:
@@ -252,6 +259,12 @@ def _huerfanas(n):
     rg = _leer(H, "03_rg_estrella.csv")
     if rg is not None:
         n["RGEstrella"] = _mil(rg["r_g_estrella"].iloc[0])
+    sens = _leer(H, "03_rg_sensibilidad.csv")
+    if sens is not None and len(sens):
+        n["RGSensMin"] = _mil(sens["r_g_estrella"].min())
+        n["RGSensMax"] = _mil(sens["r_g_estrella"].max())
+        n["KSigmaMin"] = f'{sens["k_sigma"].min():g}'
+        n["KSigmaMax"] = f'{sens["k_sigma"].max():g}'
     rk = _leer(H, "03_ranking_global.csv")
     if rk is not None:
         n["NConRG"] = _mil(len(rk))
@@ -295,9 +308,12 @@ def _huerfanas(n):
     p = RES / H / "04_sugerencias.csv"
     if p.exists():
         try:
-            n["NSugerencias"] = _mil(len(pd.read_csv(p)))
+            sug = pd.read_csv(p)
+            n["NSugerencias"] = _mil(len(sug))
+            n["NSugCompuestos"] = _mil(sug["drug_id"].nunique())
+            n["NSugBlancos"] = _mil(sug["target_id"].nunique())
         except pd.errors.EmptyDataError:
-            n["NSugerencias"] = "0"
+            n["NSugerencias"] = n["NSugCompuestos"] = n["NSugBlancos"] = "0"
 
 
 def _contraste_v4(n, eq):
@@ -317,7 +333,11 @@ def _contraste_v4(n, eq):
         n["NDdsRemovidas"] = _mil(base["dds_antes"].iloc[0] - base["dds_despues"].iloc[0])
     imp = _leer_oraculo("analiceDB_out", "03_impacto_filtro.csv")
     if imp is not None:
-        n["PromiscuosVcuatro"] = _mil(imp["compuestos_filtrados"].iloc[0])
+        # compuestos distintos: la tabla de v4 cuenta 30 filas para 25 compuestos
+        # (datos_externos/promiscuidad/README.md, correccion del 2026-09-24)
+        lv4 = _leer_oraculo("analiceDB_out", "03_compuestos_promiscuos.csv")
+        n["PromiscuosVcuatro"] = (_mil(lv4["drug_id"].nunique()) if lv4 is not None
+                                  else _mil(imp["compuestos_filtrados"].iloc[0]))
         n["PctAristasVcuatro"] = _pct(imp["pct_aristas"].iloc[0], 0)
     ctl = _leer("genome_prioritization_out", "01_control_v5.csv")
     if ctl is not None:

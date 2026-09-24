@@ -15,9 +15,9 @@ make verificar
 `make verificar` hace tres cosas, y tiene que terminar diciendo
 `OK: las cifras del informe coinciden con las tablas de resultados/`:
 
-1. corre las 60 pruebas de `comun/tests/` (~25 s; 2 se saltean salvo con
+1. corre las 63 pruebas de `comun/tests/` (~25 s; 2 se saltean salvo con
    `TDR_TESTS_QUIMICA=1`, porque cargan la capa química entera);
-2. redibuja las 35 figuras desde las tablas versionadas de `resultados/`, sin
+2. redibuja las 36 figuras desde las tablas versionadas de `resultados/`, sin
    cargar la base (~40 s);
 3. vuelve a calcular todas las cifras del informe desde esas tablas y comprueba
    que coincidan con las del informe versionado.
@@ -26,10 +26,10 @@ Valores que tiene que dar, y que las pruebas o el informe verifican:
 
 | qué | valor esperado | dónde se comprueba |
 |---|---|---|
-| pruebas | 53 en verde, 2 salteadas | `make pruebas` |
+| pruebas | 61 en verde, 2 salteadas | `make pruebas` |
 | óptimos contra el control independiente | 16 de 16 iguales, ΔAUC01 = 0 | `test_resultados.test_los_optimos_reproducen_el_control` |
-| comparación contra el oráculo v4 | 353 columnas, 0 discrepancias | `resultados/verificacion_out/10_equivalencia.csv` |
-| figuras | 29 dibujadas, 2 sin datos (no hay sugerencias bajo r*G) | `make figuras` |
+| comparación contra el oráculo v4 | 356 columnas, 0 discrepancias | `resultados/verificacion_out/10_equivalencia.csv` |
+| figuras | 36 de 36 dibujadas | `make figuras` |
 
 Reproducir las tablas desde la base, en cambio, lleva ~45 minutos con 20
 procesos (`make corrida`; detalle en README, «Tiempo de cómputo»). Todos los
@@ -47,7 +47,7 @@ versionada en `datos_externos/promiscuidad/`, con su procedencia.
 | **Qué se escribió de cero y qué se llamó de una librería** | `PROVENANCE.md` §4 |
 | **Cada elección con una alternativa defendible** | `PROVENANCE.md` §2 (datos) y §3 (port), cada fila con la alternativa descartada |
 | **Cómo se verificó cada resultado**; «una figura con origen y sin verificación es sólo una afirmación» | `FIGURAS.md`, columna *verificación*, figura por figura, incluidas las que no tienen control independiente. Los tres niveles están en `PROVENANCE.md` §5: pruebas, control externo, oráculo |
-| **Evidencia suficiente para defenderlo** | la comparación contra el oráculo v4 predice qué debe cambiar y qué no, y acierta (0 discrepancias); cuatro fallas silenciosas del port, encontradas por las pruebas o por la inspección de las salidas, en `PROVENANCE.md` §3 y en el informe §5 |
+| **Evidencia suficiente para defenderlo** | la comparación contra el oráculo v4 predice qué debe cambiar y qué no, y acierta (0 discrepancias); un error del modelo heredado de v4, corregido con una prueba (`PROVENANCE.md` §3.16); cuatro fallas silenciosas del port, encontradas por las pruebas o por la inspección de las salidas, en `PROVENANCE.md` §3 y en el informe §5 |
 | **Una página HTML y un PDF** | `index.html`, `informe/informe.pdf` (y `informe/presentacion.pdf`) |
 | **El repositorio, para máquinas: instrucciones, entorno, datos y verificaciones legibles por alguien que nunca habló con nosotros** | `README.md` (instalar, verificar, reproducir, tiempos); `requirements.txt` (versiones exactas, vigilado por `test_entorno.py`); `DB/` (la base, con `DB/meta.json`); `comun/tests/`; `Makefile` |
 
@@ -74,7 +74,7 @@ Los pendientes están en `PLAN.md`, «Lo que queda».
 |---|---|
 | `CONVENCIONES.md` | las reglas de organización que cita el código (`CONVENCIONES.md §N`) |
 | `comun/tdr.py` | rutas, carga de la base, métricas, estilo |
-| `comun/nucleo.py` | el modelo; congelado salvo una línea (PROVENANCE §3.4) |
+| `comun/nucleo.py` | el modelo; congelado salvo dos cambios, cada uno con su registro (PROVENANCE §3.4 y §3.16) |
 | `comun/figuras.py` | el registro de figuras y su regeneración |
 | `<analisis>/funciones_*.py` | el cálculo de cada análisis |
 | `<analisis>/figuras_*.py` | las figuras de cada análisis |

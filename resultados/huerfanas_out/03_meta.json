@@ -1,7 +1,7 @@
 {
   "notebook": "03_desorfanizacion_global.ipynb",
   "nb": "03",
-  "fecha": "2026-09-10 11:45",
+  "fecha": "2026-09-24 16:29",
   "params": {
     "l_max": 1000,
     "k_sigma": 3.0
@@ -22,5 +22,5 @@
   "python": "3.12.11",
   "pandas": "3.0.5",
   "fuente_nb": "01",
-  "r_g_estrella": 74.0
+  "r_g_estrella": 76.0
 }

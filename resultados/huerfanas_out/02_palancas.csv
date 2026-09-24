@@ -1,1501 +1,1501 @@
 drug_id,especie,grupo,palanca,parametro,semilla_antes,semilla_despues,rescatada
-427,1,0,umbral,0.9,nula,nula,False
-955,26,1,umbral,0.9,nula,nula,False
-2675,18,0,umbral,0.9,nula,nula,False
-3775,3,3,umbral,0.9,nula,nula,False
-5442,3,0,umbral,0.9,nula,nula,False
-5534,26,2,umbral,0.9,nula,nula,False
-6000,26,3,umbral,0.9,nula,nula,False
-7845,15,1,umbral,0.9,nula,nula,False
-8348,0,0,umbral,0.9,nula,nula,False
-8922,18,2,umbral,0.9,nula,nula,False
+423,10,0,umbral,0.9,nula,nula,False
+873,9,2,umbral,0.9,nula,nula,False
+2623,3,1,umbral,0.9,nula,nula,False
+3142,3,0,umbral,0.9,nula,nula,False
+5303,10,2,umbral,0.9,nula,nula,False
+5527,18,2,umbral,0.9,nula,nula,False
+5734,0,0,umbral,0.9,nula,nula,False
+7430,17,0,umbral,0.9,nula,nula,False
+8158,28,0,umbral,0.9,nula,nula,False
+8641,0,2,umbral,0.9,nula,nula,False
 9857,0,0,umbral,0.9,nula,nula,False
-13037,18,3,umbral,0.9,no informativa,no informativa,False
-14487,3,2,umbral,0.9,nula,nula,False
+13227,18,2,umbral,0.9,nula,nula,False
 14691,0,0,umbral,0.9,nula,nula,False
-15846,0,2,umbral,0.9,nula,nula,False
-17835,1,0,umbral,0.9,nula,nula,False
-18017,26,1,umbral,0.9,nula,nula,False
-19424,3,0,umbral,0.9,nula,nula,False
-19660,3,0,umbral,0.9,nula,nula,False
-22688,0,2,umbral,0.9,nula,nula,False
-23037,3,3,umbral,0.9,nula,nula,False
-23211,3,0,umbral,0.9,nula,nula,False
-23331,18,2,umbral,0.9,no informativa,no informativa,False
-24814,18,0,umbral,0.9,no informativa,no informativa,False
-24916,10,3,umbral,0.9,nula,nula,False
-25537,26,3,umbral,0.9,nula,nula,False
-25861,17,2,umbral,0.9,no informativa,no informativa,False
-26818,26,2,umbral,0.9,nula,nula,False
-27980,26,2,umbral,0.9,nula,nula,False
-28557,10,0,umbral,0.9,nula,nula,False
+15011,0,0,umbral,0.9,nula,nula,False
+15976,10,1,umbral,0.9,nula,nula,False
+18006,1,3,umbral,0.9,informativa,informativa,False
+18182,3,0,umbral,0.9,nula,nula,False
+19448,18,3,umbral,0.9,informativa,informativa,False
+20004,17,0,umbral,0.9,nula,nula,False
+23133,18,1,umbral,0.9,nula,nula,False
+23225,9,0,umbral,0.9,nula,nula,False
+23450,3,0,umbral,0.9,nula,nula,False
+24814,18,0,umbral,0.9,nula,nula,False
+25324,26,2,umbral,0.9,nula,nula,False
+25665,3,1,umbral,0.9,nula,nula,False
+25946,0,2,umbral,0.9,nula,nula,False
+27202,1,3,umbral,0.9,nula,nula,False
+27790,3,0,umbral,0.9,nula,nula,False
+28537,10,1,umbral,0.9,nula,nula,False
+32983,0,1,umbral,0.9,nula,nula,False
+33203,26,2,umbral,0.9,nula,nula,False
 33600,26,2,umbral,0.9,nula,nula,False
-34327,0,0,umbral,0.9,nula,nula,False
-34914,1,3,umbral,0.9,nula,nula,False
-35398,18,2,umbral,0.9,nula,nula,False
+34780,3,0,umbral,0.9,nula,nula,False
+35521,3,0,umbral,0.9,nula,nula,False
 35659,9,2,umbral,0.9,nula,nula,False
-35979,3,1,umbral,0.9,nula,nula,False
-36035,9,2,umbral,0.9,nula,nula,False
-39070,10,3,umbral,0.9,nula,nula,False
-39644,9,2,umbral,0.9,nula,nula,False
-40219,10,3,umbral,0.9,nula,nula,False
-41005,0,3,umbral,0.9,nula,nula,False
-42256,26,1,umbral,0.9,nula,nula,False
+35663,25,0,umbral,0.9,nula,nula,False
+37620,18,2,umbral,0.9,nula,nula,False
+37620,23,2,umbral,0.9,nula,nula,False
+39551,21,0,umbral,0.9,nula,nula,False
+40393,26,2,umbral,0.9,nula,nula,False
+41032,10,3,umbral,0.9,nula,nula,False
+41497,21,0,umbral,0.9,nula,nula,False
 42845,4,0,umbral,0.9,nula,nula,False
+43113,0,2,umbral,0.9,nula,nula,False
 43857,3,0,umbral,0.9,nula,nula,False
-44551,26,1,umbral,0.9,nula,nula,False
-45255,0,2,umbral,0.9,nula,nula,False
-49939,3,1,umbral,0.9,nula,nula,False
-50232,0,1,umbral,0.9,nula,nula,False
-53628,18,2,umbral,0.9,nula,nula,False
-60607,26,3,umbral,0.9,nula,nula,False
-61920,26,3,umbral,0.9,nula,nula,False
-63196,3,1,umbral,0.9,nula,nula,False
-63713,1,0,umbral,0.9,nula,nula,False
-64120,10,2,umbral,0.9,informativa,informativa,False
-65195,10,0,umbral,0.9,nula,nula,False
-65357,0,1,umbral,0.9,nula,nula,False
-65470,26,0,umbral,0.9,nula,nula,False
-65537,3,1,umbral,0.9,nula,nula,False
-67564,26,2,umbral,0.9,nula,nula,False
-68007,21,0,umbral,0.9,nula,nula,False
-71001,0,0,umbral,0.9,nula,nula,False
-72799,25,2,umbral,0.9,no informativa,no informativa,False
-80744,4,0,umbral,0.9,nula,nula,False
-84504,26,3,umbral,0.9,nula,nula,False
-85765,26,0,umbral,0.9,nula,nula,False
-86267,21,3,umbral,0.9,no informativa,no informativa,False
-88601,1,0,umbral,0.9,nula,nula,False
-92491,10,3,umbral,0.9,nula,nula,False
-92919,3,1,umbral,0.9,nula,nula,False
-95533,3,2,umbral,0.9,nula,nula,False
-96189,0,0,umbral,0.9,nula,nula,False
-97547,10,0,umbral,0.9,nula,nula,False
-103517,10,2,umbral,0.9,no informativa,no informativa,False
-109391,15,2,umbral,0.9,nula,nula,False
-110285,1,1,umbral,0.9,nula,nula,False
-113828,0,3,umbral,0.9,nula,nula,False
-114251,10,3,umbral,0.9,nula,nula,False
-115693,0,3,umbral,0.9,nula,nula,False
-121574,0,2,umbral,0.9,informativa,informativa,False
-125602,10,1,umbral,0.9,no informativa,no informativa,False
-126490,18,1,umbral,0.9,nula,nula,False
-127753,18,2,umbral,0.9,nula,nula,False
+49260,26,1,umbral,0.9,nula,nula,False
+49322,10,0,umbral,0.9,nula,nula,False
+53347,26,2,umbral,0.9,nula,nula,False
+58803,4,2,umbral,0.9,nula,nula,False
+61272,17,2,umbral,0.9,no informativa,no informativa,False
+62425,10,3,umbral,0.9,nula,nula,False
+62725,9,1,umbral,0.9,nula,nula,False
+62907,3,2,umbral,0.9,nula,nula,False
+64120,0,2,umbral,0.9,nula,nula,False
+64120,10,2,umbral,0.9,nula,nula,False
+64567,0,0,umbral,0.9,nula,nula,False
+64623,18,0,umbral,0.9,nula,nula,False
+66989,1,1,umbral,0.9,nula,nula,False
+67433,1,3,umbral,0.9,informativa,informativa,False
+71209,10,0,umbral,0.9,nula,nula,False
+72533,18,3,umbral,0.9,nula,nula,False
+79701,17,2,umbral,0.9,nula,nula,False
+83739,0,0,umbral,0.9,nula,nula,False
+85035,9,0,umbral,0.9,nula,nula,False
+85783,18,2,umbral,0.9,nula,nula,False
+88339,1,2,umbral,0.9,nula,nula,False
+92002,26,3,umbral,0.9,nula,nula,False
+92066,17,2,umbral,0.9,informativa,informativa,False
+95622,9,1,umbral,0.9,nula,nula,False
+96199,18,2,umbral,0.9,nula,nula,False
+96499,4,2,umbral,0.9,nula,nula,False
+103555,1,0,umbral,0.9,nula,nula,False
+109489,1,3,umbral,0.9,no informativa,no informativa,False
+110267,1,1,umbral,0.9,nula,nula,False
+113566,10,0,umbral,0.9,nula,nula,False
+114429,18,2,umbral,0.9,nula,nula,False
+116874,18,3,umbral,0.9,nula,nula,False
+123705,0,0,umbral,0.9,nula,nula,False
+125602,10,1,umbral,0.9,nula,nula,False
+127607,4,0,umbral,0.9,nula,nula,False
+127698,21,0,umbral,0.9,nula,nula,False
 127980,18,2,umbral,0.9,nula,nula,False
-131580,3,0,umbral,0.9,nula,nula,False
-138384,1,2,umbral,0.9,nula,nula,False
-140961,18,2,umbral,0.9,nula,nula,False
-143030,1,0,umbral,0.9,nula,nula,False
-152435,1,0,umbral,0.9,nula,nula,False
+132143,0,2,umbral,0.9,nula,nula,False
+138463,18,1,umbral,0.9,nula,nula,False
+140312,0,1,umbral,0.9,nula,nula,False
+142113,1,0,umbral,0.9,nula,nula,False
+151553,10,3,umbral,0.9,nula,nula,False
+152520,18,2,umbral,0.9,nula,nula,False
+152802,9,3,umbral,0.9,nula,nula,False
 153520,26,0,umbral,0.9,nula,nula,False
 153789,15,0,umbral,0.9,nula,nula,False
-154120,18,3,umbral,0.9,no informativa,no informativa,False
-154230,3,0,umbral,0.9,nula,nula,False
-154431,3,0,umbral,0.9,nula,nula,False
-155613,3,1,umbral,0.9,nula,nula,False
-156577,15,2,umbral,0.9,nula,nula,False
-158062,0,0,umbral,0.9,nula,nula,False
-159200,0,3,umbral,0.9,informativa,informativa,False
-159881,3,2,umbral,0.9,no informativa,no informativa,False
-163654,15,3,umbral,0.9,nula,nula,False
-164680,15,3,umbral,0.9,nula,nula,False
-167457,9,3,umbral,0.9,nula,nula,False
-173242,0,0,umbral,0.9,nula,nula,False
-175165,22,2,umbral,0.9,informativa,informativa,False
-177087,1,0,umbral,0.9,nula,nula,False
-178237,3,3,umbral,0.9,nula,nula,False
+153824,25,2,umbral,0.9,nula,nula,False
+155239,1,0,umbral,0.9,nula,nula,False
+155470,26,2,umbral,0.9,nula,nula,False
+157399,10,0,umbral,0.9,nula,nula,False
+157452,15,1,umbral,0.9,nula,nula,False
+158073,18,2,umbral,0.9,nula,nula,False
+158963,1,1,umbral,0.9,nula,nula,False
+162353,0,1,umbral,0.9,nula,nula,False
+162599,0,0,umbral,0.9,nula,nula,False
+164680,10,3,umbral,0.9,informativa,informativa,False
+172205,0,0,umbral,0.9,nula,nula,False
+173051,26,3,umbral,0.9,nula,nula,False
+175200,1,0,umbral,0.9,nula,nula,False
+176441,18,0,umbral,0.9,nula,nula,False
+176912,9,1,umbral,0.9,nula,nula,False
 179573,1,0,umbral,0.9,nula,nula,False
-181511,0,2,umbral,0.9,nula,nula,False
-184483,22,0,umbral,0.9,nula,nula,False
-185156,26,1,umbral,0.9,nula,nula,False
-186533,10,2,umbral,0.9,nula,nula,False
-186533,25,2,umbral,0.9,nula,nula,False
-190412,3,1,umbral,0.9,nula,nula,False
-190714,21,3,umbral,0.9,nula,nula,False
+183219,1,1,umbral,0.9,nula,nula,False
+184708,1,0,umbral,0.9,nula,nula,False
+184906,26,3,umbral,0.9,nula,nula,False
+185387,26,2,umbral,0.9,nula,nula,False
+187389,18,0,umbral,0.9,nula,nula,False
+188326,9,3,umbral,0.9,informativa,informativa,False
+190849,10,0,umbral,0.9,nula,nula,False
+191018,3,3,umbral,0.9,nula,nula,False
 192358,3,0,umbral,0.9,nula,nula,False
-192557,3,0,umbral,0.9,nula,nula,False
 193009,1,0,umbral,0.9,nula,nula,False
-196141,26,2,umbral,0.9,nula,nula,False
-200272,18,3,umbral,0.9,nula,nula,False
-204252,3,1,umbral,0.9,nula,nula,False
-204322,3,2,umbral,0.9,nula,nula,False
-208202,26,1,umbral,0.9,nula,nula,False
-208354,0,0,umbral,0.9,nula,nula,False
-208696,18,2,umbral,0.9,nula,nula,False
-208716,18,3,umbral,0.9,nula,nula,False
+196599,18,3,umbral,0.9,nula,nula,False
+201477,18,2,umbral,0.9,nula,nula,False
+202240,4,0,umbral,0.9,nula,nula,False
+205137,15,0,umbral,0.9,nula,nula,False
+205222,3,0,umbral,0.9,nula,nula,False
+205653,1,0,umbral,0.9,nula,nula,False
+206171,26,1,umbral,0.9,nula,nula,False
+209020,18,0,umbral,0.9,nula,nula,False
+209105,3,0,umbral,0.9,nula,nula,False
+210186,26,3,umbral,0.9,nula,nula,False
 210855,26,1,umbral,0.9,nula,nula,False
-211249,1,2,umbral,0.9,no informativa,no informativa,False
-211743,10,0,umbral,0.9,nula,nula,False
-212678,3,3,umbral,0.9,nula,nula,False
-217823,1,0,umbral,0.9,nula,nula,False
-218242,0,1,umbral,0.9,nula,nula,False
-219944,25,2,umbral,0.9,nula,nula,False
-222624,1,1,umbral,0.9,nula,nula,False
-222783,3,0,umbral,0.9,nula,nula,False
-223304,3,0,umbral,0.9,nula,nula,False
-223630,0,2,umbral,0.9,nula,nula,False
-224808,15,1,umbral,0.9,nula,nula,False
-225833,17,2,umbral,0.9,nula,nula,False
-225960,3,1,umbral,0.9,no informativa,no informativa,False
-227285,18,3,umbral,0.9,nula,nula,False
-229938,10,3,umbral,0.9,nula,nula,False
-231890,1,3,umbral,0.9,nula,nula,False
-232722,3,0,umbral,0.9,nula,nula,False
-232924,9,2,umbral,0.9,nula,nula,False
-235534,0,2,umbral,0.9,nula,nula,False
-236066,0,0,umbral,0.9,nula,nula,False
-241660,0,1,umbral,0.9,nula,nula,False
-242546,1,1,umbral,0.9,nula,nula,False
-245674,15,3,umbral,0.9,nula,nula,False
-246814,26,2,umbral,0.9,nula,nula,False
-247791,18,3,umbral,0.9,nula,nula,False
-248252,0,1,umbral,0.9,nula,nula,False
-248652,10,3,umbral,0.9,nula,nula,False
-249294,3,0,umbral,0.9,nula,nula,False
-249677,1,2,umbral,0.9,nula,nula,False
-254476,5,2,umbral,0.9,nula,nula,False
-254476,25,2,umbral,0.9,nula,nula,False
-254718,9,0,umbral,0.9,nula,nula,False
-262321,1,0,umbral,0.9,nula,nula,False
-267070,0,1,umbral,0.9,nula,nula,False
+213734,10,0,umbral,0.9,nula,nula,False
+215973,9,0,umbral,0.9,nula,nula,False
+217801,15,0,umbral,0.9,nula,nula,False
+219450,3,1,umbral,0.9,nula,nula,False
+219839,26,2,umbral,0.9,nula,nula,False
+220479,0,0,umbral,0.9,nula,nula,False
+220991,0,0,umbral,0.9,nula,nula,False
+221849,4,2,umbral,0.9,nula,nula,False
+223585,18,1,umbral,0.9,nula,nula,False
+223739,26,2,umbral,0.9,nula,nula,False
+229123,10,2,umbral,0.9,nula,nula,False
+229265,18,0,umbral,0.9,nula,nula,False
+229276,1,0,umbral,0.9,nula,nula,False
+230260,0,2,umbral,0.9,nula,nula,False
+231220,1,1,umbral,0.9,nula,nula,False
+233826,0,3,umbral,0.9,nula,nula,False
+239567,4,0,umbral,0.9,nula,nula,False
+240772,26,0,umbral,0.9,nula,nula,False
+241001,18,0,umbral,0.9,nula,nula,False
+243474,10,2,umbral,0.9,nula,nula,False
+244543,18,2,umbral,0.9,nula,nula,False
+244676,10,0,umbral,0.9,nula,nula,False
+244878,26,1,umbral,0.9,nula,nula,False
+245362,10,0,umbral,0.9,nula,nula,False
+245784,26,0,umbral,0.9,nula,nula,False
+249527,10,2,umbral,0.9,nula,nula,False
+249560,0,0,umbral,0.9,nula,nula,False
+252737,1,0,umbral,0.9,nula,nula,False
+255964,0,0,umbral,0.9,nula,nula,False
+264082,18,3,umbral,0.9,no informativa,no informativa,False
+264579,10,3,umbral,0.9,nula,nula,False
 268136,10,2,umbral,0.9,nula,nula,False
-268408,3,0,umbral,0.9,nula,nula,False
-270664,1,2,umbral,0.9,informativa,informativa,False
-272100,26,1,umbral,0.9,nula,nula,False
-272727,3,3,umbral,0.9,nula,nula,False
-274263,21,1,umbral,0.9,nula,nula,False
-277162,9,2,umbral,0.9,nula,nula,False
-278067,9,3,umbral,0.9,nula,nula,False
-278586,9,2,umbral,0.9,nula,nula,False
-279473,9,2,umbral,0.9,nula,nula,False
-279966,0,0,umbral,0.9,nula,nula,False
-280081,3,2,umbral,0.9,nula,nula,False
-280688,10,0,umbral,0.9,nula,nula,False
-280919,1,1,umbral,0.9,nula,nula,False
-282175,26,2,umbral,0.9,nula,nula,False
-283515,3,1,umbral,0.9,nula,nula,False
-283634,0,3,umbral,0.9,nula,nula,False
-283634,15,3,umbral,0.9,nula,nula,False
-287929,0,2,umbral,0.9,nula,nula,False
-289947,3,1,umbral,0.9,nula,nula,False
-293552,26,0,umbral,0.9,nula,nula,False
-293827,1,3,umbral,0.9,nula,nula,False
-295524,26,0,umbral,0.9,nula,nula,False
-295703,3,2,umbral,0.9,nula,nula,False
-295811,4,0,umbral,0.9,nula,nula,False
-297165,0,2,umbral,0.9,nula,nula,False
-298862,1,2,umbral,0.9,nula,nula,False
+268912,3,2,umbral,0.9,nula,nula,False
+269472,3,3,umbral,0.9,nula,nula,False
+270173,21,2,umbral,0.9,nula,nula,False
+274775,18,0,umbral,0.9,nula,nula,False
+275470,1,1,umbral,0.9,nula,nula,False
+275723,1,0,umbral,0.9,nula,nula,False
+276398,26,0,umbral,0.9,nula,nula,False
+276522,26,0,umbral,0.9,nula,nula,False
+276870,9,2,umbral,0.9,nula,nula,False
+277151,3,3,umbral,0.9,nula,nula,False
+278346,0,2,umbral,0.9,nula,nula,False
+279267,18,0,umbral,0.9,no informativa,no informativa,False
+279550,10,2,umbral,0.9,nula,nula,False
+280288,21,2,umbral,0.9,nula,nula,False
+282597,21,2,umbral,0.9,nula,nula,False
+287680,18,1,umbral,0.9,nula,nula,False
+288894,9,3,umbral,0.9,nula,nula,False
+291454,0,0,umbral,0.9,nula,nula,False
+292077,0,1,umbral,0.9,nula,nula,False
+292110,1,3,umbral,0.9,nula,nula,False
+292645,18,2,umbral,0.9,no informativa,no informativa,False
+294985,10,0,umbral,0.9,nula,nula,False
+295448,9,2,umbral,0.9,nula,nula,False
+298427,10,3,umbral,0.9,nula,nula,False
+299335,15,0,umbral,0.9,nula,nula,False
 299708,3,1,umbral,0.9,nula,nula,False
+299966,10,0,umbral,0.9,nula,nula,False
+300527,4,0,umbral,0.9,nula,nula,False
+301887,3,2,umbral,0.9,nula,nula,False
 303272,26,1,umbral,0.9,nula,nula,False
-304806,0,0,umbral,0.9,nula,nula,False
-304860,0,1,umbral,0.9,nula,nula,False
-304976,3,0,umbral,0.9,nula,nula,False
-305553,26,0,umbral,0.9,nula,nula,False
-306633,10,0,umbral,0.9,nula,nula,False
-307562,3,2,umbral,0.9,nula,nula,False
-313650,18,1,umbral,0.9,no informativa,no informativa,False
+307879,3,2,umbral,0.9,nula,nula,False
+308608,25,2,umbral,0.9,nula,nula,False
+311458,18,2,umbral,0.9,nula,nula,False
+313215,25,2,umbral,0.9,nula,nula,False
 315588,0,0,umbral,0.9,nula,nula,False
-316887,0,0,umbral,0.9,nula,nula,False
-321015,0,0,umbral,0.9,nula,nula,False
-322432,0,2,umbral,0.9,nula,nula,False
-323114,3,1,umbral,0.9,nula,nula,False
-323916,18,0,umbral,0.9,nula,nula,False
-324577,1,1,umbral,0.9,nula,nula,False
+316008,18,0,umbral,0.9,nula,nula,False
+319386,0,0,umbral,0.9,nula,nula,False
+319813,1,2,umbral,0.9,nula,nula,False
+321310,0,1,umbral,0.9,nula,nula,False
+321500,0,2,umbral,0.9,nula,nula,False
+323359,23,0,umbral,0.9,nula,nula,False
 324779,3,0,umbral,0.9,nula,nula,False
-325713,10,3,umbral,0.9,nula,nula,False
-330297,17,0,umbral,0.9,nula,nula,False
-333060,10,1,umbral,0.9,nula,nula,False
-337559,18,3,umbral,0.9,nula,nula,False
-340267,10,3,umbral,0.9,nula,nula,False
-341344,18,3,umbral,0.9,nula,nula,False
-341674,26,1,umbral,0.9,nula,nula,False
-341940,26,0,umbral,0.9,nula,nula,False
-342571,10,0,umbral,0.9,nula,nula,False
+329099,26,1,umbral,0.9,nula,nula,False
+330412,26,0,umbral,0.9,nula,nula,False
+331864,1,2,umbral,0.9,nula,nula,False
+333873,1,3,umbral,0.9,no informativa,no informativa,False
+334890,10,2,umbral,0.9,nula,nula,False
+335521,1,2,umbral,0.9,nula,nula,False
+335830,3,0,umbral,0.9,nula,nula,False
+336567,9,3,umbral,0.9,nula,nula,False
+338645,9,1,umbral,0.9,nula,nula,False
+339874,3,1,umbral,0.9,nula,nula,False
+340065,0,2,umbral,0.9,nula,nula,False
 342902,18,0,umbral,0.9,nula,nula,False
-343584,26,0,umbral,0.9,nula,nula,False
-344364,26,0,umbral,0.9,nula,nula,False
-347120,26,0,umbral,0.9,nula,nula,False
-347928,1,0,umbral,0.9,nula,nula,False
-349607,26,2,umbral,0.9,nula,nula,False
-353396,4,0,umbral,0.9,nula,nula,False
-356021,0,0,umbral,0.9,nula,nula,False
-356096,18,2,umbral,0.9,informativa,informativa,False
-356418,23,2,umbral,0.9,nula,nula,False
-358485,1,0,umbral,0.9,nula,nula,False
-360247,10,0,umbral,0.9,nula,nula,False
-360349,18,1,umbral,0.9,nula,nula,False
-360353,3,0,umbral,0.9,nula,nula,False
-360510,18,1,umbral,0.9,no informativa,no informativa,False
-365149,18,2,umbral,0.9,nula,nula,False
+343956,0,2,umbral,0.9,nula,nula,False
+350156,18,0,umbral,0.9,nula,nula,False
+351151,15,2,umbral,0.9,nula,nula,False
+351556,0,0,umbral,0.9,nula,nula,False
+351873,23,2,umbral,0.9,nula,nula,False
+352069,4,0,umbral,0.9,nula,nula,False
+353318,10,2,umbral,0.9,nula,nula,False
+355455,0,0,umbral,0.9,nula,nula,False
+355489,1,2,umbral,0.9,nula,nula,False
+356556,3,3,umbral,0.9,nula,nula,False
+360640,10,0,umbral,0.9,nula,nula,False
+363848,4,0,umbral,0.9,nula,nula,False
 368001,18,2,umbral,0.9,nula,nula,False
-370578,26,1,umbral,0.9,no informativa,no informativa,False
-372117,15,1,umbral,0.9,nula,nula,False
-375446,0,2,umbral,0.9,no informativa,no informativa,False
-376648,18,0,umbral,0.9,nula,nula,False
-378361,3,0,umbral,0.9,nula,nula,False
-380065,3,1,umbral,0.9,nula,nula,False
+368139,0,0,umbral,0.9,nula,nula,False
+368357,18,3,umbral,0.9,informativa,informativa,False
+368652,18,3,umbral,0.9,nula,nula,False
+373678,18,2,umbral,0.9,nula,nula,False
+374913,3,0,umbral,0.9,nula,nula,False
+375577,1,0,umbral,0.9,nula,nula,False
+376781,18,2,umbral,0.9,nula,nula,False
+379270,3,1,umbral,0.9,nula,nula,False
 380139,15,0,umbral,0.9,nula,nula,False
-381680,0,0,umbral,0.9,nula,nula,False
-381957,0,2,umbral,0.9,nula,nula,False
-383581,26,0,umbral,0.9,nula,nula,False
-385060,26,1,umbral,0.9,nula,nula,False
-389885,3,2,umbral,0.9,nula,nula,False
-389937,10,3,umbral,0.9,no informativa,no informativa,False
-391029,10,2,umbral,0.9,nula,nula,False
+381186,26,0,umbral,0.9,nula,nula,False
+383217,10,2,umbral,0.9,nula,nula,False
+384930,9,2,umbral,0.9,nula,nula,False
+386187,1,1,umbral,0.9,nula,nula,False
+386504,3,0,umbral,0.9,nula,nula,False
+386780,10,2,umbral,0.9,nula,nula,False
+387289,10,1,umbral,0.9,nula,nula,False
 391029,21,2,umbral,0.9,nula,nula,False
-391351,26,1,umbral,0.9,nula,nula,False
-391886,1,0,umbral,0.9,nula,nula,False
-392702,26,0,umbral,0.9,nula,nula,False
-396227,0,0,umbral,0.9,nula,nula,False
-397648,3,3,umbral,0.9,nula,nula,False
-399437,0,3,umbral,0.9,informativa,informativa,False
-400062,3,2,umbral,0.9,nula,nula,False
-400885,1,2,umbral,0.9,no informativa,no informativa,False
-401092,1,2,umbral,0.9,nula,nula,False
-405659,0,2,umbral,0.9,nula,nula,False
-405683,3,2,umbral,0.9,nula,nula,False
-407217,3,0,umbral,0.9,no informativa,no informativa,False
+391706,3,0,umbral,0.9,nula,nula,False
+393508,0,0,umbral,0.9,nula,nula,False
+394463,18,0,umbral,0.9,nula,nula,False
+394994,10,0,umbral,0.9,nula,nula,False
+398190,9,1,umbral,0.9,nula,nula,False
+402519,21,2,umbral,0.9,nula,nula,False
+402970,26,0,umbral,0.9,nula,nula,False
+403163,0,2,umbral,0.9,nula,nula,False
+403632,0,0,umbral,0.9,nula,nula,False
+405837,4,1,umbral,0.9,nula,nula,False
+406660,9,3,umbral,0.9,nula,nula,False
 407790,9,3,umbral,0.9,nula,nula,False
-411610,0,3,umbral,0.9,nula,nula,False
-412518,3,1,umbral,0.9,nula,nula,False
-412705,10,0,umbral,0.9,nula,nula,False
-413782,0,0,umbral,0.9,nula,nula,False
-416505,0,0,umbral,0.9,nula,nula,False
-418997,18,3,umbral,0.9,nula,nula,False
-420153,0,0,umbral,0.9,nula,nula,False
-422172,4,0,umbral,0.9,nula,nula,False
-423332,10,1,umbral,0.9,nula,nula,False
-423619,1,3,umbral,0.9,nula,nula,False
-424806,10,0,umbral,0.9,nula,nula,False
-425554,15,0,umbral,0.9,nula,nula,False
-428860,0,1,umbral,0.9,nula,nula,False
-437251,10,1,umbral,0.9,nula,nula,False
-437821,17,2,umbral,0.9,nula,nula,False
-443646,3,3,umbral,0.9,nula,nula,False
-446587,10,2,umbral,0.9,informativa,informativa,False
-451468,10,3,umbral,0.9,nula,nula,False
-452888,3,1,umbral,0.9,nula,nula,False
-453033,21,2,umbral,0.9,nula,nula,False
-457563,0,2,umbral,0.9,nula,nula,False
-459314,18,0,umbral,0.9,nula,nula,False
-459617,21,3,umbral,0.9,nula,nula,False
-461413,23,0,umbral,0.9,nula,nula,False
-465291,10,1,umbral,0.9,nula,nula,False
-465515,10,2,umbral,0.9,nula,nula,False
-467471,1,3,umbral,0.9,nula,nula,False
-468048,3,0,umbral,0.9,nula,nula,False
-468435,17,2,umbral,0.9,nula,nula,False
-469116,10,2,umbral,0.9,nula,nula,False
-469136,3,3,umbral,0.9,nula,nula,False
-469940,21,3,umbral,0.9,nula,nula,False
-474300,10,2,umbral,0.9,nula,nula,False
-479089,1,3,umbral,0.9,nula,nula,False
-480499,18,1,umbral,0.9,nula,nula,False
-481605,0,3,umbral,0.9,nula,nula,False
-483273,26,3,umbral,0.9,nula,nula,False
-484568,3,0,umbral,0.9,nula,nula,False
-485200,26,0,umbral,0.9,nula,nula,False
-486461,3,0,umbral,0.9,nula,nula,False
-488841,10,1,umbral,0.9,nula,nula,False
-488864,4,2,umbral,0.9,no informativa,no informativa,False
-491072,1,0,umbral,0.9,nula,nula,False
-492307,3,1,umbral,0.9,nula,nula,False
-494054,18,0,umbral,0.9,nula,nula,False
-494312,25,2,umbral,0.9,nula,nula,False
-496265,26,3,umbral,0.9,nula,nula,False
+411046,1,2,umbral,0.9,nula,nula,False
+411561,3,1,umbral,0.9,nula,nula,False
+412391,1,0,umbral,0.9,nula,nula,False
+413257,10,0,umbral,0.9,nula,nula,False
+417384,18,2,umbral,0.9,informativa,informativa,False
+419205,0,0,umbral,0.9,nula,nula,False
+419264,1,0,umbral,0.9,nula,nula,False
+422110,1,0,umbral,0.9,nula,nula,False
+422536,10,3,umbral,0.9,nula,nula,False
+423827,26,0,umbral,0.9,nula,nula,False
+431338,9,0,umbral,0.9,nula,nula,False
+432345,0,0,umbral,0.9,nula,nula,False
+440471,1,0,umbral,0.9,nula,nula,False
+440878,10,1,umbral,0.9,nula,nula,False
+445172,10,1,umbral,0.9,nula,nula,False
+446575,26,1,umbral,0.9,nula,nula,False
+448340,26,1,umbral,0.9,no informativa,no informativa,False
+449111,26,0,umbral,0.9,nula,nula,False
+452807,1,0,umbral,0.9,nula,nula,False
+453172,1,1,umbral,0.9,nula,nula,False
+455054,0,0,umbral,0.9,nula,nula,False
+455460,17,2,umbral,0.9,nula,nula,False
+458924,26,0,umbral,0.9,nula,nula,False
+462425,1,0,umbral,0.9,nula,nula,False
+462859,3,3,umbral,0.9,nula,nula,False
+464182,26,2,umbral,0.9,nula,nula,False
+464647,18,0,umbral,0.9,nula,nula,False
+464698,0,0,umbral,0.9,nula,nula,False
+464790,10,1,umbral,0.9,nula,nula,False
+466226,15,1,umbral,0.9,nula,nula,False
+470504,10,3,umbral,0.9,nula,nula,False
+474845,3,1,umbral,0.9,nula,nula,False
+477668,26,1,umbral,0.9,nula,nula,False
+478654,18,2,umbral,0.9,nula,nula,False
+480814,10,2,umbral,0.9,nula,nula,False
+480914,10,0,umbral,0.9,nula,nula,False
+483191,0,3,umbral,0.9,informativa,informativa,False
+485050,1,0,umbral,0.9,nula,nula,False
+485106,18,0,umbral,0.9,no informativa,no informativa,False
+485496,21,0,umbral,0.9,nula,nula,False
+487513,10,0,umbral,0.9,nula,nula,False
+489392,17,2,umbral,0.9,nula,nula,False
+489926,9,2,umbral,0.9,nula,nula,False
+491675,1,0,umbral,0.9,nula,nula,False
+493475,3,2,umbral,0.9,nula,nula,False
+495235,9,2,umbral,0.9,nula,nula,False
+499232,1,1,umbral,0.9,nula,nula,False
+499393,10,2,umbral,0.9,nula,nula,False
 499618,0,0,umbral,0.9,nula,nula,False
-503421,23,0,umbral,0.9,nula,nula,False
-503918,5,2,umbral,0.9,informativa,informativa,False
-504071,0,0,umbral,0.9,nula,nula,False
-504350,3,1,umbral,0.9,nula,nula,False
-504894,1,1,umbral,0.9,nula,nula,False
-505370,26,3,umbral,0.9,nula,nula,False
-505460,21,3,umbral,0.9,nula,nula,False
-508572,28,0,umbral,0.9,nula,nula,False
-508806,18,0,umbral,0.9,nula,nula,False
-509256,0,2,umbral,0.9,nula,nula,False
-509456,26,0,umbral,0.9,nula,nula,False
-511656,1,1,umbral,0.9,nula,nula,False
-513136,1,1,umbral,0.9,nula,nula,False
-513141,10,2,umbral,0.9,nula,nula,False
-514167,10,1,umbral,0.9,nula,nula,False
-514200,1,1,umbral,0.9,nula,nula,False
-514656,18,1,umbral,0.9,nula,nula,False
-514874,0,2,umbral,0.9,informativa,informativa,False
-515464,0,3,umbral,0.9,nula,nula,False
-515670,1,1,umbral,0.9,no informativa,no informativa,False
-519563,0,1,umbral,0.9,nula,nula,False
-521567,10,3,umbral,0.9,nula,nula,False
-527021,10,0,umbral,0.9,nula,nula,False
+499704,3,1,umbral,0.9,nula,nula,False
+499732,1,1,umbral,0.9,nula,nula,False
+499815,1,0,umbral,0.9,nula,nula,False
+503745,26,0,umbral,0.9,nula,nula,False
+503918,23,2,umbral,0.9,informativa,informativa,False
+504493,9,0,umbral,0.9,nula,nula,False
+505067,1,0,umbral,0.9,nula,nula,False
+505460,25,3,umbral,0.9,informativa,informativa,False
+505820,9,0,umbral,0.9,nula,nula,False
+506245,3,0,umbral,0.9,nula,nula,False
+510436,0,3,umbral,0.9,informativa,informativa,False
+511468,9,2,umbral,0.9,informativa,informativa,False
+515670,1,1,umbral,0.9,nula,nula,False
+517185,5,2,umbral,0.9,nula,nula,False
+520126,0,3,umbral,0.9,nula,nula,False
+524072,26,2,umbral,0.9,nula,nula,False
 530511,18,0,umbral,0.9,nula,nula,False
-534025,10,3,umbral,0.9,nula,nula,False
-536320,1,1,umbral,0.9,no informativa,no informativa,False
-537160,0,1,umbral,0.9,nula,nula,False
-541788,3,3,umbral,0.9,nula,nula,False
-544756,26,3,umbral,0.9,nula,nula,False
-544779,3,0,umbral,0.9,nula,nula,False
-545378,10,2,umbral,0.9,nula,nula,False
-548579,1,0,umbral,0.9,nula,nula,False
-548657,1,3,umbral,0.9,nula,nula,False
-550058,10,3,umbral,0.9,nula,nula,False
-554001,10,0,umbral,0.9,nula,nula,False
-554786,18,2,umbral,0.9,nula,nula,False
-555643,0,3,umbral,0.9,nula,nula,False
-556881,26,1,umbral,0.9,nula,nula,False
-557725,4,2,umbral,0.9,nula,nula,False
-558474,10,1,umbral,0.9,nula,nula,False
-559860,17,2,umbral,0.9,informativa,informativa,False
-562738,0,3,umbral,0.9,nula,nula,False
-564519,26,0,umbral,0.9,nula,nula,False
-565251,15,2,umbral,0.9,nula,nula,False
-566276,23,3,umbral,0.9,nula,nula,False
-566551,28,2,umbral,0.9,informativa,informativa,False
-567209,18,2,umbral,0.9,nula,nula,False
-571449,9,3,umbral,0.9,nula,nula,False
-572432,10,3,umbral,0.9,nula,nula,False
-572653,1,3,umbral,0.9,nula,nula,False
-572684,0,2,umbral,0.9,nula,nula,False
-573369,0,0,umbral,0.9,nula,nula,False
-574148,18,3,umbral,0.9,nula,nula,False
-574233,3,0,umbral,0.9,nula,nula,False
-576141,3,3,umbral,0.9,nula,nula,False
-581657,3,3,umbral,0.9,nula,nula,False
-585372,26,0,umbral,0.9,nula,nula,False
-586188,10,3,umbral,0.9,no informativa,no informativa,False
-588063,1,3,umbral,0.9,informativa,informativa,False
-589202,10,1,umbral,0.9,nula,nula,False
-590231,0,0,umbral,0.9,nula,nula,False
-591075,21,2,umbral,0.9,informativa,informativa,False
-593038,0,3,umbral,0.9,nula,nula,False
-594496,0,2,umbral,0.9,no informativa,no informativa,False
-599614,1,3,umbral,0.9,nula,nula,False
-601254,21,0,umbral,0.9,nula,nula,False
-603045,26,3,umbral,0.9,nula,nula,False
-603656,10,2,umbral,0.9,nula,nula,False
-606411,3,0,umbral,0.9,nula,nula,False
-607231,3,3,umbral,0.9,nula,nula,False
-608788,26,0,umbral,0.9,nula,nula,False
-609537,0,0,umbral,0.9,nula,nula,False
-610005,10,0,umbral,0.9,nula,nula,False
-612438,9,0,umbral,0.9,nula,nula,False
-615786,3,0,umbral,0.9,nula,nula,False
+530574,18,0,umbral,0.9,nula,nula,False
+534245,1,1,umbral,0.9,no informativa,no informativa,False
+538174,26,0,umbral,0.9,nula,nula,False
+538862,1,1,umbral,0.9,nula,nula,False
+539036,9,0,umbral,0.9,nula,nula,False
+542282,3,0,umbral,0.9,nula,nula,False
+543758,18,0,umbral,0.9,nula,nula,False
+544491,0,0,umbral,0.9,nula,nula,False
+546779,1,0,umbral,0.9,nula,nula,False
+547894,10,2,umbral,0.9,nula,nula,False
+551626,3,3,umbral,0.9,nula,nula,False
+552122,3,2,umbral,0.9,nula,nula,False
+553806,0,0,umbral,0.9,nula,nula,False
+554588,0,0,umbral,0.9,nula,nula,False
+554924,3,3,umbral,0.9,nula,nula,False
+555515,18,1,umbral,0.9,nula,nula,False
+558912,3,1,umbral,0.9,nula,nula,False
+559548,17,2,umbral,0.9,nula,nula,False
+563890,0,1,umbral,0.9,nula,nula,False
+564484,26,2,umbral,0.9,nula,nula,False
+565124,1,0,umbral,0.9,nula,nula,False
+566292,1,0,umbral,0.9,nula,nula,False
+567928,1,0,umbral,0.9,nula,nula,False
+568233,1,2,umbral,0.9,nula,nula,False
+570576,10,2,umbral,0.9,nula,nula,False
+571220,18,3,umbral,0.9,nula,nula,False
+571899,26,0,umbral,0.9,nula,nula,False
+572812,0,1,umbral,0.9,nula,nula,False
+572981,3,0,umbral,0.9,nula,nula,False
+573220,26,3,umbral,0.9,nula,nula,False
+574150,0,0,umbral,0.9,nula,nula,False
+576810,10,0,umbral,0.9,nula,nula,False
+579327,0,2,umbral,0.9,informativa,informativa,False
+584318,9,3,umbral,0.9,nula,nula,False
+586521,21,0,umbral,0.9,nula,nula,False
+586712,3,0,umbral,0.9,nula,nula,False
+587393,3,0,umbral,0.9,nula,nula,False
+589028,9,1,umbral,0.9,nula,nula,False
+592940,1,1,umbral,0.9,nula,nula,False
+594260,0,1,umbral,0.9,nula,nula,False
+598165,15,0,umbral,0.9,nula,nula,False
+599057,26,2,umbral,0.9,nula,nula,False
+600533,10,2,umbral,0.9,nula,nula,False
+602966,3,2,umbral,0.9,nula,nula,False
+604743,3,1,umbral,0.9,nula,nula,False
+605201,1,1,umbral,0.9,nula,nula,False
+605572,10,3,umbral,0.9,no informativa,no informativa,False
+610313,0,0,umbral,0.9,nula,nula,False
+612320,1,3,umbral,0.9,informativa,informativa,False
+614601,0,2,umbral,0.9,nula,nula,False
+614638,26,2,umbral,0.9,nula,nula,False
+614776,3,1,umbral,0.9,nula,nula,False
 615802,10,2,umbral,0.9,nula,nula,False
-620444,26,3,umbral,0.9,nula,nula,False
-621297,0,0,umbral,0.9,nula,nula,False
-622001,0,0,umbral,0.9,nula,nula,False
-622492,10,2,umbral,0.9,nula,nula,False
-622544,10,2,umbral,0.9,nula,nula,False
-624052,9,2,umbral,0.9,nula,nula,False
-625898,3,0,umbral,0.9,nula,nula,False
+620990,9,3,umbral,0.9,informativa,informativa,False
+621607,26,2,umbral,0.9,nula,nula,False
+622292,1,2,umbral,0.9,nula,nula,False
+622425,3,1,umbral,0.9,nula,nula,False
+624251,0,0,umbral,0.9,nula,nula,False
+625480,3,2,umbral,0.9,nula,nula,False
 626832,10,2,umbral,0.9,nula,nula,False
-628753,1,0,umbral,0.9,nula,nula,False
+626970,1,1,umbral,0.9,nula,nula,False
 628887,22,2,umbral,0.9,nula,nula,False
-630329,18,3,umbral,0.9,nula,nula,False
-630931,0,1,umbral,0.9,nula,nula,False
-631996,18,0,umbral,0.9,nula,nula,False
-638556,10,0,umbral,0.9,nula,nula,False
-641340,10,2,umbral,0.9,nula,nula,False
-643274,0,2,umbral,0.9,nula,nula,False
-646728,17,2,umbral,0.9,nula,nula,False
-649984,26,2,umbral,0.9,nula,nula,False
-653534,18,1,umbral,0.9,nula,nula,False
-654475,3,0,umbral,0.9,nula,nula,False
-654559,10,2,umbral,0.9,nula,nula,False
-655214,9,2,umbral,0.9,nula,nula,False
-656902,26,2,umbral,0.9,nula,nula,False
-660615,23,1,umbral,0.9,nula,nula,False
-661733,1,2,umbral,0.9,nula,nula,False
-664980,1,2,umbral,0.9,nula,nula,False
-671391,9,3,umbral,0.9,informativa,informativa,False
-674528,10,2,umbral,0.9,nula,nula,False
-675711,18,2,umbral,0.9,nula,nula,False
-677197,1,0,umbral,0.9,nula,nula,False
-677433,3,1,umbral,0.9,nula,nula,False
-680231,1,0,umbral,0.9,nula,nula,False
-681057,10,1,umbral,0.9,nula,nula,False
-682032,26,2,umbral,0.9,nula,nula,False
-682416,26,0,umbral,0.9,nula,nula,False
-685615,26,1,umbral,0.9,nula,nula,False
-686415,1,1,umbral,0.9,nula,nula,False
-690274,10,0,umbral,0.9,nula,nula,False
-692561,15,3,umbral,0.9,nula,nula,False
-693482,18,0,umbral,0.9,nula,nula,False
-694409,0,2,umbral,0.9,nula,nula,False
-694886,18,1,umbral,0.9,nula,nula,False
-695232,3,1,umbral,0.9,nula,nula,False
-695561,3,3,umbral,0.9,nula,nula,False
-696346,1,2,umbral,0.9,nula,nula,False
-696394,26,3,umbral,0.9,nula,nula,False
-697363,9,2,umbral,0.9,nula,nula,False
-697516,23,0,umbral,0.9,no informativa,no informativa,False
-698555,3,0,umbral,0.9,nula,nula,False
-699038,1,0,umbral,0.9,nula,nula,False
-700144,26,0,umbral,0.9,nula,nula,False
-701725,26,2,umbral,0.9,nula,nula,False
-702369,10,0,umbral,0.9,nula,nula,False
-702614,0,2,umbral,0.9,nula,nula,False
-706006,10,3,umbral,0.9,nula,nula,False
-707833,21,3,umbral,0.9,nula,nula,False
-712594,0,0,umbral,0.9,nula,nula,False
-712988,0,0,umbral,0.9,no informativa,no informativa,False
-721868,3,2,umbral,0.9,nula,nula,False
-724241,17,3,umbral,0.9,nula,nula,False
-724241,21,3,umbral,0.9,nula,nula,False
-727264,10,1,umbral,0.9,nula,nula,False
-728508,17,0,umbral,0.9,nula,nula,False
-730415,9,1,umbral,0.9,nula,nula,False
-731939,1,2,umbral,0.9,nula,nula,False
-737010,21,2,umbral,0.9,no informativa,no informativa,False
-737318,26,2,umbral,0.9,nula,nula,False
-738967,4,2,umbral,0.9,nula,nula,False
-742920,0,1,umbral,0.9,nula,nula,False
-745451,3,0,umbral,0.9,nula,nula,False
-745569,21,2,umbral,0.9,nula,nula,False
-748001,10,0,umbral,0.9,nula,nula,False
-749074,3,2,umbral,0.9,nula,nula,False
-750458,10,3,umbral,0.9,nula,nula,False
-750750,10,3,umbral,0.9,nula,nula,False
-754632,0,2,umbral,0.9,no informativa,no informativa,False
-757741,18,2,umbral,0.9,nula,nula,False
-757783,1,1,umbral,0.9,nula,nula,False
-758145,1,2,umbral,0.9,nula,nula,False
+633327,26,2,umbral,0.9,nula,nula,False
+634442,9,3,umbral,0.9,informativa,informativa,False
+638150,10,0,umbral,0.9,nula,nula,False
+643774,21,2,umbral,0.9,nula,nula,False
+646862,26,0,umbral,0.9,nula,nula,False
+648205,10,0,umbral,0.9,nula,nula,False
+648448,26,0,umbral,0.9,nula,nula,False
+650835,28,2,umbral,0.9,nula,nula,False
+651012,26,0,umbral,0.9,nula,nula,False
+651651,9,0,umbral,0.9,nula,nula,False
+652517,26,2,umbral,0.9,nula,nula,False
+653071,1,0,umbral,0.9,nula,nula,False
+656165,1,2,umbral,0.9,nula,nula,False
+665633,18,1,umbral,0.9,nula,nula,False
+669261,0,2,umbral,0.9,nula,nula,False
+670952,18,1,umbral,0.9,nula,nula,False
+673549,21,1,umbral,0.9,nula,nula,False
+674093,18,0,umbral,0.9,nula,nula,False
+675512,0,0,umbral,0.9,nula,nula,False
+675523,1,0,umbral,0.9,nula,nula,False
+678576,5,2,umbral,0.9,nula,nula,False
+680684,18,3,umbral,0.9,informativa,informativa,False
+682588,0,1,umbral,0.9,nula,nula,False
+688745,17,1,umbral,0.9,nula,nula,False
+689566,26,0,umbral,0.9,nula,nula,False
+690046,1,0,umbral,0.9,nula,nula,False
+690124,28,2,umbral,0.9,nula,nula,False
+690258,26,0,umbral,0.9,nula,nula,False
+692561,15,3,umbral,0.9,informativa,informativa,False
+693535,0,3,umbral,0.9,no informativa,no informativa,False
+695103,26,0,umbral,0.9,nula,nula,False
+695180,3,2,umbral,0.9,nula,nula,False
+696736,0,3,umbral,0.9,no informativa,no informativa,False
+697516,23,0,umbral,0.9,nula,nula,False
+698093,18,0,umbral,0.9,nula,nula,False
+698828,0,0,umbral,0.9,nula,nula,False
+699024,26,0,umbral,0.9,nula,nula,False
+700063,1,2,umbral,0.9,nula,nula,False
+705943,26,2,umbral,0.9,informativa,informativa,False
+707445,26,3,umbral,0.9,nula,nula,False
+715391,3,1,umbral,0.9,nula,nula,False
+720854,25,0,umbral,0.9,nula,nula,False
+721822,0,0,umbral,0.9,nula,nula,False
+723997,1,0,umbral,0.9,nula,nula,False
+724758,1,0,umbral,0.9,nula,nula,False
+725145,18,1,umbral,0.9,nula,nula,False
+729936,28,0,umbral,0.9,nula,nula,False
+730088,0,0,umbral,0.9,nula,nula,False
+733148,10,0,umbral,0.9,nula,nula,False
+735203,18,0,umbral,0.9,nula,nula,False
+736659,18,0,umbral,0.9,nula,nula,False
+737140,10,3,umbral,0.9,nula,nula,False
+740049,3,0,umbral,0.9,nula,nula,False
+743386,3,3,umbral,0.9,nula,nula,False
+744854,9,2,umbral,0.9,nula,nula,False
+746054,21,2,umbral,0.9,nula,nula,False
+748075,3,3,umbral,0.9,nula,nula,False
+753400,1,1,umbral,0.9,nula,nula,False
+753855,3,0,umbral,0.9,nula,nula,False
+755050,26,3,umbral,0.9,nula,nula,False
+756405,0,0,umbral,0.9,nula,nula,False
+758034,10,0,umbral,0.9,nula,nula,False
 759396,10,2,umbral,0.9,nula,nula,False
-759533,26,0,umbral,0.9,nula,nula,False
-764205,9,0,umbral,0.9,nula,nula,False
-765394,10,1,umbral,0.9,no informativa,no informativa,False
+761987,3,2,umbral,0.9,nula,nula,False
+763485,21,1,umbral,0.9,nula,nula,False
 767137,1,1,umbral,0.9,nula,nula,False
-768353,1,2,umbral,0.9,nula,nula,False
-770863,22,2,umbral,0.9,nula,nula,False
-771061,10,1,umbral,0.9,nula,nula,False
-774333,0,3,umbral,0.9,nula,nula,False
-774705,22,3,umbral,0.9,nula,nula,False
-776759,10,2,umbral,0.9,nula,nula,False
+768727,26,0,umbral,0.9,nula,nula,False
+769802,10,0,umbral,0.9,nula,nula,False
+770863,21,2,umbral,0.9,nula,nula,False
+771208,1,0,umbral,0.9,nula,nula,False
+771418,0,1,umbral,0.9,nula,nula,False
+771875,10,1,umbral,0.9,nula,nula,False
+774946,4,1,umbral,0.9,nula,nula,False
+776926,0,2,umbral,0.9,nula,nula,False
 777076,1,2,umbral,0.9,nula,nula,False
-777950,18,3,umbral,0.9,nula,nula,False
-779453,26,1,umbral,0.9,nula,nula,False
-781502,3,0,umbral,0.9,nula,nula,False
-781677,0,2,umbral,0.9,nula,nula,False
-782855,15,2,umbral,0.9,nula,nula,False
-786902,0,1,umbral,0.9,nula,nula,False
-787738,18,2,umbral,0.9,informativa,informativa,False
+777708,10,0,umbral,0.9,nula,nula,False
+780256,0,0,umbral,0.9,nula,nula,False
+781920,10,2,umbral,0.9,nula,nula,False
+782855,4,2,umbral,0.9,nula,nula,False
+783594,10,0,umbral,0.9,nula,nula,False
 789235,22,3,umbral,0.9,nula,nula,False
-794904,1,2,umbral,0.9,nula,nula,False
-795448,1,1,umbral,0.9,nula,nula,False
-795474,15,2,umbral,0.9,nula,nula,False
-795532,18,1,umbral,0.9,nula,nula,False
-796175,18,2,umbral,0.9,nula,nula,False
-796279,18,0,umbral,0.9,nula,nula,False
-796799,9,0,umbral,0.9,nula,nula,False
+791217,0,0,umbral,0.9,nula,nula,False
+791251,18,2,umbral,0.9,nula,nula,False
+791281,3,1,umbral,0.9,nula,nula,False
+791800,18,2,umbral,0.9,nula,nula,False
+794418,9,2,umbral,0.9,nula,nula,False
+794611,26,3,umbral,0.9,informativa,informativa,False
+794634,0,0,umbral,0.9,nula,nula,False
+794716,1,1,umbral,0.9,nula,nula,False
+795829,26,2,umbral,0.9,nula,nula,False
+796205,18,0,umbral,0.9,nula,nula,False
+796587,1,0,umbral,0.9,nula,nula,False
+798051,0,0,umbral,0.9,nula,nula,False
+798179,9,2,umbral,0.9,nula,nula,False
+798964,9,0,umbral,0.9,nula,nula,False
 799893,3,1,umbral,0.9,nula,nula,False
-800445,1,2,umbral,0.9,nula,nula,False
-800926,1,0,umbral,0.9,nula,nula,False
-801985,26,0,umbral,0.9,nula,nula,False
-803405,18,1,umbral,0.9,no informativa,no informativa,False
+800032,3,2,umbral,0.9,nula,nula,False
+801432,10,2,umbral,0.9,nula,nula,False
+804375,3,3,umbral,0.9,nula,nula,False
+804675,10,1,umbral,0.9,nula,nula,False
+805780,3,1,umbral,0.9,nula,nula,False
 806043,0,2,umbral,0.9,nula,nula,False
-806967,17,2,umbral,0.9,nula,nula,False
-808645,26,3,umbral,0.9,nula,nula,False
-809945,18,3,umbral,0.9,nula,nula,False
-814684,26,2,umbral,0.9,informativa,informativa,False
-824633,0,3,umbral,0.9,nula,nula,False
-824724,26,3,umbral,0.9,nula,nula,False
+808516,18,2,umbral,0.9,nula,nula,False
+809087,10,0,umbral,0.9,nula,nula,False
+809177,3,0,umbral,0.9,nula,nula,False
+811473,26,0,umbral,0.9,nula,nula,False
+812505,18,2,umbral,0.9,nula,nula,False
+815860,0,0,umbral,0.9,nula,nula,False
+819610,26,2,umbral,0.9,nula,nula,False
+822605,28,0,umbral,0.9,nula,nula,False
+827002,26,2,umbral,0.9,no informativa,no informativa,False
+827954,1,1,umbral,0.9,nula,nula,False
+828035,9,2,umbral,0.9,nula,nula,False
 828632,1,0,umbral,0.9,nula,nula,False
-427,1,0,kegg,,nula,nula,False
-955,26,1,kegg,,nula,nula,False
-2675,18,0,kegg,,no informativa,no informativa,False
-3775,3,3,kegg,,no informativa,no informativa,False
-5442,3,0,kegg,,nula,nula,False
-5534,26,2,kegg,,no informativa,no informativa,False
-6000,26,3,kegg,,nula,nula,False
-7845,15,1,kegg,,nula,nula,False
-8348,0,0,kegg,,nula,nula,False
-8922,18,2,kegg,,nula,nula,False
+830280,10,2,umbral,0.9,nula,nula,False
+830753,10,2,umbral,0.9,nula,nula,False
+423,10,0,kegg,,nula,nula,False
+873,9,2,kegg,,nula,nula,False
+2623,3,1,kegg,,nula,nula,False
+3142,3,0,kegg,,nula,nula,False
+5303,10,2,kegg,,nula,nula,False
+5527,18,2,kegg,,nula,nula,False
+5734,0,0,kegg,,nula,nula,False
+7430,17,0,kegg,,nula,nula,False
+8158,28,0,kegg,,nula,nula,False
+8641,0,2,kegg,,nula,nula,False
 9857,0,0,kegg,,nula,nula,False
-13037,18,3,kegg,,no informativa,no informativa,False
-14487,3,2,kegg,,no informativa,no informativa,False
+13227,18,2,kegg,,nula,nula,False
 14691,0,0,kegg,,nula,nula,False
-15846,0,2,kegg,,nula,nula,False
-17835,1,0,kegg,,nula,nula,False
-18017,26,1,kegg,,nula,nula,False
-19424,3,0,kegg,,nula,nula,False
-19660,3,0,kegg,,nula,nula,False
-22688,0,2,kegg,,no informativa,no informativa,False
-23037,3,3,kegg,,nula,nula,False
-23211,3,0,kegg,,nula,nula,False
-23331,18,2,kegg,,no informativa,no informativa,False
-24814,18,0,kegg,,no informativa,no informativa,False
-24916,10,3,kegg,,nula,nula,False
-25537,26,3,kegg,,nula,nula,False
-25861,17,2,kegg,,no informativa,no informativa,False
-26818,26,2,kegg,,no informativa,no informativa,False
-27980,26,2,kegg,,nula,nula,False
-28557,10,0,kegg,,nula,nula,False
+15011,0,0,kegg,,nula,nula,False
+15976,10,1,kegg,,no informativa,no informativa,False
+18006,1,3,kegg,,informativa,informativa,False
+18182,3,0,kegg,,nula,nula,False
+19448,18,3,kegg,,informativa,informativa,False
+20004,17,0,kegg,,nula,nula,False
+23133,18,1,kegg,,nula,nula,False
+23225,9,0,kegg,,nula,nula,False
+23450,3,0,kegg,,nula,nula,False
+24814,18,0,kegg,,nula,nula,False
+25324,26,2,kegg,,nula,nula,False
+25665,3,1,kegg,,nula,nula,False
+25946,0,2,kegg,,nula,nula,False
+27202,1,3,kegg,,informativa,informativa,False
+27790,3,0,kegg,,nula,nula,False
+28537,10,1,kegg,,nula,nula,False
+32983,0,1,kegg,,nula,nula,False
+33203,26,2,kegg,,nula,nula,False
 33600,26,2,kegg,,nula,nula,False
-34327,0,0,kegg,,nula,nula,False
-34914,1,3,kegg,,nula,nula,False
-35398,18,2,kegg,,nula,nula,False
+34780,3,0,kegg,,nula,nula,False
+35521,3,0,kegg,,nula,nula,False
 35659,9,2,kegg,,nula,nula,False
-35979,3,1,kegg,,nula,nula,False
-36035,9,2,kegg,,nula,nula,False
-39070,10,3,kegg,,nula,nula,False
-39644,9,2,kegg,,nula,nula,False
-40219,10,3,kegg,,nula,nula,False
-41005,0,3,kegg,,nula,nula,False
-42256,26,1,kegg,,nula,nula,False
+35663,25,0,kegg,,nula,nula,False
+37620,18,2,kegg,,nula,nula,False
+37620,23,2,kegg,,nula,nula,False
+39551,21,0,kegg,,nula,nula,False
+40393,26,2,kegg,,nula,nula,False
+41032,10,3,kegg,,nula,nula,False
+41497,21,0,kegg,,nula,nula,False
 42845,4,0,kegg,,nula,nula,False
-43857,3,0,kegg,,no informativa,no informativa,False
-44551,26,1,kegg,,nula,nula,False
-45255,0,2,kegg,,nula,nula,False
-49939,3,1,kegg,,nula,nula,False
-50232,0,1,kegg,,nula,nula,False
-53628,18,2,kegg,,no informativa,no informativa,False
-60607,26,3,kegg,,no informativa,no informativa,False
-61920,26,3,kegg,,nula,nula,False
-63196,3,1,kegg,,nula,nula,False
-63713,1,0,kegg,,nula,nula,False
-64120,10,2,kegg,,informativa,informativa,False
-65195,10,0,kegg,,nula,nula,False
-65357,0,1,kegg,,nula,nula,False
-65470,26,0,kegg,,no informativa,no informativa,False
-65537,3,1,kegg,,nula,nula,False
-67564,26,2,kegg,,nula,nula,False
-68007,21,0,kegg,,no informativa,no informativa,False
-71001,0,0,kegg,,nula,nula,False
-72799,25,2,kegg,,informativa,informativa,False
-80744,4,0,kegg,,nula,nula,False
-84504,26,3,kegg,,nula,nula,False
-85765,26,0,kegg,,nula,nula,False
-86267,21,3,kegg,,no informativa,no informativa,False
-88601,1,0,kegg,,nula,nula,False
-92491,10,3,kegg,,nula,nula,False
-92919,3,1,kegg,,nula,nula,False
-95533,3,2,kegg,,nula,nula,False
-96189,0,0,kegg,,no informativa,no informativa,False
-97547,10,0,kegg,,nula,nula,False
-103517,10,2,kegg,,no informativa,no informativa,False
-109391,15,2,kegg,,nula,nula,False
-110285,1,1,kegg,,nula,nula,False
-113828,0,3,kegg,,nula,nula,False
-114251,10,3,kegg,,nula,nula,False
-115693,0,3,kegg,,nula,nula,False
-121574,0,2,kegg,,informativa,informativa,False
-125602,10,1,kegg,,no informativa,no informativa,False
-126490,18,1,kegg,,nula,nula,False
-127753,18,2,kegg,,nula,nula,False
+43113,0,2,kegg,,nula,nula,False
+43857,3,0,kegg,,nula,nula,False
+49260,26,1,kegg,,nula,nula,False
+49322,10,0,kegg,,nula,nula,False
+53347,26,2,kegg,,nula,nula,False
+58803,4,2,kegg,,nula,nula,False
+61272,17,2,kegg,,no informativa,no informativa,False
+62425,10,3,kegg,,nula,nula,False
+62725,9,1,kegg,,nula,nula,False
+62907,3,2,kegg,,nula,nula,False
+64120,0,2,kegg,,nula,nula,False
+64120,10,2,kegg,,nula,nula,False
+64567,0,0,kegg,,nula,nula,False
+64623,18,0,kegg,,nula,nula,False
+66989,1,1,kegg,,no informativa,no informativa,False
+67433,1,3,kegg,,informativa,informativa,False
+71209,10,0,kegg,,nula,nula,False
+72533,18,3,kegg,,informativa,informativa,False
+79701,17,2,kegg,,nula,nula,False
+83739,0,0,kegg,,nula,nula,False
+85035,9,0,kegg,,nula,nula,False
+85783,18,2,kegg,,nula,nula,False
+88339,1,2,kegg,,nula,nula,False
+92002,26,3,kegg,,nula,nula,False
+92066,17,2,kegg,,informativa,informativa,False
+95622,9,1,kegg,,no informativa,no informativa,False
+96199,18,2,kegg,,nula,nula,False
+96499,4,2,kegg,,nula,nula,False
+103555,1,0,kegg,,nula,nula,False
+109489,1,3,kegg,,no informativa,no informativa,False
+110267,1,1,kegg,,nula,nula,False
+113566,10,0,kegg,,nula,nula,False
+114429,18,2,kegg,,nula,nula,False
+116874,18,3,kegg,,informativa,informativa,False
+123705,0,0,kegg,,nula,nula,False
+125602,10,1,kegg,,nula,nula,False
+127607,4,0,kegg,,nula,nula,False
+127698,21,0,kegg,,nula,nula,False
 127980,18,2,kegg,,nula,nula,False
-131580,3,0,kegg,,nula,nula,False
-138384,1,2,kegg,,nula,nula,False
-140961,18,2,kegg,,nula,nula,False
-143030,1,0,kegg,,nula,nula,False
-152435,1,0,kegg,,nula,nula,False
-153520,26,0,kegg,,no informativa,no informativa,False
+132143,0,2,kegg,,nula,nula,False
+138463,18,1,kegg,,no informativa,no informativa,False
+140312,0,1,kegg,,no informativa,no informativa,False
+142113,1,0,kegg,,nula,nula,False
+151553,10,3,kegg,,nula,nula,False
+152520,18,2,kegg,,nula,nula,False
+152802,9,3,kegg,,nula,nula,False
+153520,26,0,kegg,,nula,nula,False
 153789,15,0,kegg,,nula,nula,False
-154120,18,3,kegg,,informativa,informativa,False
-154230,3,0,kegg,,no informativa,no informativa,False
-154431,3,0,kegg,,nula,nula,False
-155613,3,1,kegg,,nula,nula,False
-156577,15,2,kegg,,no informativa,no informativa,False
-158062,0,0,kegg,,nula,nula,False
-159200,0,3,kegg,,informativa,informativa,False
-159881,3,2,kegg,,no informativa,no informativa,False
-163654,15,3,kegg,,nula,nula,False
-164680,15,3,kegg,,nula,nula,False
-167457,9,3,kegg,,no informativa,no informativa,False
-173242,0,0,kegg,,nula,nula,False
-175165,22,2,kegg,,informativa,informativa,False
-177087,1,0,kegg,,nula,nula,False
-178237,3,3,kegg,,nula,nula,False
+153824,25,2,kegg,,nula,nula,False
+155239,1,0,kegg,,nula,nula,False
+155470,26,2,kegg,,nula,nula,False
+157399,10,0,kegg,,nula,nula,False
+157452,15,1,kegg,,nula,nula,False
+158073,18,2,kegg,,nula,nula,False
+158963,1,1,kegg,,nula,nula,False
+162353,0,1,kegg,,nula,nula,False
+162599,0,0,kegg,,nula,nula,False
+164680,10,3,kegg,,informativa,informativa,False
+172205,0,0,kegg,,nula,nula,False
+173051,26,3,kegg,,nula,nula,False
+175200,1,0,kegg,,nula,nula,False
+176441,18,0,kegg,,nula,nula,False
+176912,9,1,kegg,,no informativa,no informativa,False
 179573,1,0,kegg,,nula,nula,False
-181511,0,2,kegg,,no informativa,no informativa,False
-184483,22,0,kegg,,nula,nula,False
-185156,26,1,kegg,,nula,nula,False
-186533,10,2,kegg,,no informativa,no informativa,False
-186533,25,2,kegg,,no informativa,no informativa,False
-190412,3,1,kegg,,nula,nula,False
-190714,21,3,kegg,,nula,nula,False
+183219,1,1,kegg,,nula,nula,False
+184708,1,0,kegg,,nula,nula,False
+184906,26,3,kegg,,informativa,informativa,False
+185387,26,2,kegg,,nula,nula,False
+187389,18,0,kegg,,nula,nula,False
+188326,9,3,kegg,,informativa,informativa,False
+190849,10,0,kegg,,nula,nula,False
+191018,3,3,kegg,,nula,nula,False
 192358,3,0,kegg,,nula,nula,False
-192557,3,0,kegg,,no informativa,no informativa,False
 193009,1,0,kegg,,nula,nula,False
-196141,26,2,kegg,,nula,nula,False
-200272,18,3,kegg,,nula,nula,False
-204252,3,1,kegg,,no informativa,no informativa,False
-204322,3,2,kegg,,no informativa,no informativa,False
-208202,26,1,kegg,,nula,nula,False
-208354,0,0,kegg,,nula,nula,False
-208696,18,2,kegg,,nula,nula,False
-208716,18,3,kegg,,informativa,informativa,False
-210855,26,1,kegg,,no informativa,no informativa,False
-211249,1,2,kegg,,no informativa,no informativa,False
-211743,10,0,kegg,,nula,nula,False
-212678,3,3,kegg,,nula,nula,False
-217823,1,0,kegg,,nula,nula,False
-218242,0,1,kegg,,no informativa,no informativa,False
-219944,25,2,kegg,,no informativa,no informativa,False
-222624,1,1,kegg,,nula,nula,False
-222783,3,0,kegg,,nula,nula,False
-223304,3,0,kegg,,nula,nula,False
-223630,0,2,kegg,,nula,nula,False
-224808,15,1,kegg,,nula,nula,False
-225833,17,2,kegg,,nula,nula,False
-225960,3,1,kegg,,no informativa,no informativa,False
-227285,18,3,kegg,,nula,nula,False
-229938,10,3,kegg,,nula,nula,False
-231890,1,3,kegg,,nula,nula,False
-232722,3,0,kegg,,nula,nula,False
-232924,9,2,kegg,,nula,nula,False
-235534,0,2,kegg,,nula,nula,False
-236066,0,0,kegg,,nula,nula,False
-241660,0,1,kegg,,no informativa,no informativa,False
-242546,1,1,kegg,,nula,nula,False
-245674,15,3,kegg,,no informativa,no informativa,False
-246814,26,2,kegg,,nula,nula,False
-247791,18,3,kegg,,no informativa,no informativa,False
-248252,0,1,kegg,,no informativa,no informativa,False
-248652,10,3,kegg,,nula,nula,False
-249294,3,0,kegg,,nula,nula,False
-249677,1,2,kegg,,no informativa,no informativa,False
-254476,5,2,kegg,,no informativa,no informativa,False
-254476,25,2,kegg,,no informativa,no informativa,False
-254718,9,0,kegg,,no informativa,no informativa,False
-262321,1,0,kegg,,no informativa,no informativa,False
-267070,0,1,kegg,,no informativa,no informativa,False
+196599,18,3,kegg,,informativa,informativa,False
+201477,18,2,kegg,,nula,nula,False
+202240,4,0,kegg,,nula,nula,False
+205137,15,0,kegg,,nula,nula,False
+205222,3,0,kegg,,nula,nula,False
+205653,1,0,kegg,,nula,nula,False
+206171,26,1,kegg,,nula,nula,False
+209020,18,0,kegg,,nula,nula,False
+209105,3,0,kegg,,nula,nula,False
+210186,26,3,kegg,,nula,nula,False
+210855,26,1,kegg,,nula,nula,False
+213734,10,0,kegg,,nula,nula,False
+215973,9,0,kegg,,nula,nula,False
+217801,15,0,kegg,,nula,nula,False
+219450,3,1,kegg,,no informativa,no informativa,False
+219839,26,2,kegg,,nula,nula,False
+220479,0,0,kegg,,nula,nula,False
+220991,0,0,kegg,,nula,nula,False
+221849,4,2,kegg,,nula,nula,False
+223585,18,1,kegg,,nula,nula,False
+223739,26,2,kegg,,nula,nula,False
+229123,10,2,kegg,,nula,nula,False
+229265,18,0,kegg,,nula,nula,False
+229276,1,0,kegg,,nula,nula,False
+230260,0,2,kegg,,nula,nula,False
+231220,1,1,kegg,,no informativa,no informativa,False
+233826,0,3,kegg,,informativa,informativa,False
+239567,4,0,kegg,,nula,nula,False
+240772,26,0,kegg,,nula,nula,False
+241001,18,0,kegg,,nula,nula,False
+243474,10,2,kegg,,nula,nula,False
+244543,18,2,kegg,,nula,nula,False
+244676,10,0,kegg,,nula,nula,False
+244878,26,1,kegg,,nula,nula,False
+245362,10,0,kegg,,nula,nula,False
+245784,26,0,kegg,,nula,nula,False
+249527,10,2,kegg,,nula,nula,False
+249560,0,0,kegg,,nula,nula,False
+252737,1,0,kegg,,nula,nula,False
+255964,0,0,kegg,,nula,nula,False
+264082,18,3,kegg,,no informativa,no informativa,False
+264579,10,3,kegg,,nula,nula,False
 268136,10,2,kegg,,nula,nula,False
-268408,3,0,kegg,,nula,nula,False
-270664,1,2,kegg,,informativa,informativa,False
-272100,26,1,kegg,,nula,nula,False
-272727,3,3,kegg,,no informativa,no informativa,False
-274263,21,1,kegg,,nula,nula,False
-277162,9,2,kegg,,nula,nula,False
-278067,9,3,kegg,,nula,nula,False
-278586,9,2,kegg,,nula,nula,False
-279473,9,2,kegg,,nula,nula,False
-279966,0,0,kegg,,nula,nula,False
-280081,3,2,kegg,,nula,nula,False
-280688,10,0,kegg,,no informativa,no informativa,False
-280919,1,1,kegg,,nula,nula,False
-282175,26,2,kegg,,nula,nula,False
-283515,3,1,kegg,,nula,nula,False
-283634,0,3,kegg,,nula,nula,False
-283634,15,3,kegg,,nula,nula,False
-287929,0,2,kegg,,informativa,informativa,False
-289947,3,1,kegg,,nula,nula,False
-293552,26,0,kegg,,nula,nula,False
-293827,1,3,kegg,,nula,nula,False
-295524,26,0,kegg,,nula,nula,False
-295703,3,2,kegg,,nula,nula,False
-295811,4,0,kegg,,nula,nula,False
-297165,0,2,kegg,,nula,nula,False
-298862,1,2,kegg,,nula,nula,False
+268912,3,2,kegg,,nula,nula,False
+269472,3,3,kegg,,no informativa,no informativa,False
+270173,21,2,kegg,,nula,nula,False
+274775,18,0,kegg,,nula,nula,False
+275470,1,1,kegg,,nula,nula,False
+275723,1,0,kegg,,nula,nula,False
+276398,26,0,kegg,,nula,nula,False
+276522,26,0,kegg,,nula,nula,False
+276870,9,2,kegg,,nula,nula,False
+277151,3,3,kegg,,no informativa,no informativa,False
+278346,0,2,kegg,,nula,nula,False
+279267,18,0,kegg,,no informativa,no informativa,False
+279550,10,2,kegg,,nula,nula,False
+280288,21,2,kegg,,nula,nula,False
+282597,21,2,kegg,,nula,nula,False
+287680,18,1,kegg,,no informativa,no informativa,False
+288894,9,3,kegg,,nula,nula,False
+291454,0,0,kegg,,nula,nula,False
+292077,0,1,kegg,,nula,nula,False
+292110,1,3,kegg,,informativa,informativa,False
+292645,18,2,kegg,,no informativa,no informativa,False
+294985,10,0,kegg,,nula,nula,False
+295448,9,2,kegg,,nula,nula,False
+298427,10,3,kegg,,nula,nula,False
+299335,15,0,kegg,,nula,nula,False
 299708,3,1,kegg,,nula,nula,False
-303272,26,1,kegg,,no informativa,no informativa,False
-304806,0,0,kegg,,nula,nula,False
-304860,0,1,kegg,,nula,nula,False
-304976,3,0,kegg,,no informativa,no informativa,False
-305553,26,0,kegg,,nula,nula,False
-306633,10,0,kegg,,nula,nula,False
-307562,3,2,kegg,,no informativa,no informativa,False
-313650,18,1,kegg,,no informativa,no informativa,False
+299966,10,0,kegg,,nula,nula,False
+300527,4,0,kegg,,nula,nula,False
+301887,3,2,kegg,,nula,nula,False
+303272,26,1,kegg,,nula,nula,False
+307879,3,2,kegg,,nula,nula,False
+308608,25,2,kegg,,nula,nula,False
+311458,18,2,kegg,,nula,nula,False
+313215,25,2,kegg,,nula,nula,False
 315588,0,0,kegg,,nula,nula,False
-316887,0,0,kegg,,no informativa,no informativa,False
-321015,0,0,kegg,,no informativa,no informativa,False
-322432,0,2,kegg,,nula,nula,False
-323114,3,1,kegg,,nula,nula,False
-323916,18,0,kegg,,nula,nula,False
-324577,1,1,kegg,,nula,nula,False
+316008,18,0,kegg,,nula,nula,False
+319386,0,0,kegg,,nula,nula,False
+319813,1,2,kegg,,nula,nula,False
+321310,0,1,kegg,,nula,nula,False
+321500,0,2,kegg,,nula,nula,False
+323359,23,0,kegg,,nula,nula,False
 324779,3,0,kegg,,nula,nula,False
-325713,10,3,kegg,,nula,nula,False
-330297,17,0,kegg,,nula,nula,False
-333060,10,1,kegg,,nula,nula,False
-337559,18,3,kegg,,nula,nula,False
-340267,10,3,kegg,,no informativa,no informativa,False
-341344,18,3,kegg,,nula,nula,False
-341674,26,1,kegg,,nula,nula,False
-341940,26,0,kegg,,nula,nula,False
-342571,10,0,kegg,,nula,nula,False
+329099,26,1,kegg,,nula,nula,False
+330412,26,0,kegg,,nula,nula,False
+331864,1,2,kegg,,nula,nula,False
+333873,1,3,kegg,,no informativa,no informativa,False
+334890,10,2,kegg,,nula,nula,False
+335521,1,2,kegg,,nula,nula,False
+335830,3,0,kegg,,nula,nula,False
+336567,9,3,kegg,,informativa,informativa,False
+338645,9,1,kegg,,nula,nula,False
+339874,3,1,kegg,,no informativa,no informativa,False
+340065,0,2,kegg,,nula,nula,False
 342902,18,0,kegg,,nula,nula,False
-343584,26,0,kegg,,nula,nula,False
-344364,26,0,kegg,,nula,nula,False
-347120,26,0,kegg,,no informativa,no informativa,False
-347928,1,0,kegg,,nula,nula,False
-349607,26,2,kegg,,no informativa,no informativa,False
-353396,4,0,kegg,,nula,nula,False
-356021,0,0,kegg,,nula,nula,False
-356096,18,2,kegg,,informativa,informativa,False
-356418,23,2,kegg,,nula,nula,False
-358485,1,0,kegg,,nula,nula,False
-360247,10,0,kegg,,nula,nula,False
-360349,18,1,kegg,,nula,nula,False
-360353,3,0,kegg,,nula,nula,False
-360510,18,1,kegg,,no informativa,no informativa,False
-365149,18,2,kegg,,informativa,informativa,False
+343956,0,2,kegg,,nula,nula,False
+350156,18,0,kegg,,nula,nula,False
+351151,15,2,kegg,,nula,nula,False
+351556,0,0,kegg,,nula,nula,False
+351873,23,2,kegg,,nula,nula,False
+352069,4,0,kegg,,nula,nula,False
+353318,10,2,kegg,,nula,nula,False
+355455,0,0,kegg,,nula,nula,False
+355489,1,2,kegg,,nula,nula,False
+356556,3,3,kegg,,nula,nula,False
+360640,10,0,kegg,,nula,nula,False
+363848,4,0,kegg,,nula,nula,False
 368001,18,2,kegg,,nula,nula,False
-370578,26,1,kegg,,no informativa,no informativa,False
-372117,15,1,kegg,,nula,nula,False
-375446,0,2,kegg,,no informativa,no informativa,False
-376648,18,0,kegg,,nula,nula,False
-378361,3,0,kegg,,nula,nula,False
-380065,3,1,kegg,,nula,nula,False
+368139,0,0,kegg,,nula,nula,False
+368357,18,3,kegg,,informativa,informativa,False
+368652,18,3,kegg,,informativa,informativa,False
+373678,18,2,kegg,,nula,nula,False
+374913,3,0,kegg,,nula,nula,False
+375577,1,0,kegg,,nula,nula,False
+376781,18,2,kegg,,nula,nula,False
+379270,3,1,kegg,,nula,nula,False
 380139,15,0,kegg,,nula,nula,False
-381680,0,0,kegg,,nula,nula,False
-381957,0,2,kegg,,nula,nula,False
-383581,26,0,kegg,,no informativa,no informativa,False
-385060,26,1,kegg,,nula,nula,False
-389885,3,2,kegg,,nula,nula,False
-389937,10,3,kegg,,no informativa,no informativa,False
-391029,10,2,kegg,,nula,nula,False
+381186,26,0,kegg,,nula,nula,False
+383217,10,2,kegg,,nula,nula,False
+384930,9,2,kegg,,nula,nula,False
+386187,1,1,kegg,,nula,nula,False
+386504,3,0,kegg,,nula,nula,False
+386780,10,2,kegg,,nula,nula,False
+387289,10,1,kegg,,nula,nula,False
 391029,21,2,kegg,,nula,nula,False
-391351,26,1,kegg,,nula,nula,False
-391886,1,0,kegg,,no informativa,no informativa,False
-392702,26,0,kegg,,nula,nula,False
-396227,0,0,kegg,,nula,nula,False
-397648,3,3,kegg,,nula,nula,False
-399437,0,3,kegg,,informativa,informativa,False
-400062,3,2,kegg,,nula,nula,False
-400885,1,2,kegg,,no informativa,no informativa,False
-401092,1,2,kegg,,nula,nula,False
-405659,0,2,kegg,,nula,nula,False
-405683,3,2,kegg,,informativa,informativa,False
-407217,3,0,kegg,,no informativa,no informativa,False
-407790,9,3,kegg,,nula,nula,False
-411610,0,3,kegg,,nula,nula,False
-412518,3,1,kegg,,nula,nula,False
-412705,10,0,kegg,,nula,nula,False
-413782,0,0,kegg,,nula,nula,False
-416505,0,0,kegg,,nula,nula,False
-418997,18,3,kegg,,nula,nula,False
-420153,0,0,kegg,,nula,nula,False
-422172,4,0,kegg,,no informativa,no informativa,False
-423332,10,1,kegg,,nula,nula,False
-423619,1,3,kegg,,nula,nula,False
-424806,10,0,kegg,,nula,nula,False
-425554,15,0,kegg,,nula,nula,False
-428860,0,1,kegg,,nula,nula,False
-437251,10,1,kegg,,nula,nula,False
-437821,17,2,kegg,,no informativa,no informativa,False
-443646,3,3,kegg,,nula,nula,False
-446587,10,2,kegg,,informativa,informativa,False
-451468,10,3,kegg,,informativa,informativa,False
-452888,3,1,kegg,,nula,nula,False
-453033,21,2,kegg,,no informativa,no informativa,False
-457563,0,2,kegg,,nula,nula,False
-459314,18,0,kegg,,nula,nula,False
-459617,21,3,kegg,,no informativa,no informativa,False
-461413,23,0,kegg,,no informativa,no informativa,False
-465291,10,1,kegg,,nula,nula,False
-465515,10,2,kegg,,no informativa,no informativa,False
-467471,1,3,kegg,,nula,nula,False
-468048,3,0,kegg,,nula,nula,False
-468435,17,2,kegg,,nula,nula,False
-469116,10,2,kegg,,nula,nula,False
-469136,3,3,kegg,,nula,nula,False
-469940,21,3,kegg,,informativa,informativa,False
-474300,10,2,kegg,,no informativa,no informativa,False
-479089,1,3,kegg,,nula,nula,False
-480499,18,1,kegg,,nula,nula,False
-481605,0,3,kegg,,nula,nula,False
-483273,26,3,kegg,,nula,nula,False
-484568,3,0,kegg,,nula,nula,False
-485200,26,0,kegg,,nula,nula,False
-486461,3,0,kegg,,nula,nula,False
-488841,10,1,kegg,,nula,nula,False
-488864,4,2,kegg,,no informativa,no informativa,False
-491072,1,0,kegg,,nula,nula,False
-492307,3,1,kegg,,no informativa,no informativa,False
-494054,18,0,kegg,,no informativa,no informativa,False
-494312,25,2,kegg,,nula,nula,False
-496265,26,3,kegg,,nula,nula,False
-499618,0,0,kegg,,no informativa,no informativa,False
-503421,23,0,kegg,,nula,nula,False
-503918,5,2,kegg,,informativa,informativa,False
-504071,0,0,kegg,,nula,nula,False
-504350,3,1,kegg,,no informativa,no informativa,False
-504894,1,1,kegg,,nula,nula,False
-505370,26,3,kegg,,nula,nula,False
-505460,21,3,kegg,,nula,nula,False
-508572,28,0,kegg,,nula,nula,False
-508806,18,0,kegg,,no informativa,no informativa,False
-509256,0,2,kegg,,nula,nula,False
-509456,26,0,kegg,,nula,nula,False
-511656,1,1,kegg,,nula,nula,False
-513136,1,1,kegg,,nula,nula,False
-513141,10,2,kegg,,nula,nula,False
-514167,10,1,kegg,,nula,nula,False
-514200,1,1,kegg,,nula,nula,False
-514656,18,1,kegg,,nula,nula,False
-514874,0,2,kegg,,informativa,informativa,False
-515464,0,3,kegg,,nula,nula,False
-515670,1,1,kegg,,no informativa,no informativa,False
-519563,0,1,kegg,,nula,nula,False
-521567,10,3,kegg,,informativa,informativa,False
-527021,10,0,kegg,,nula,nula,False
+391706,3,0,kegg,,nula,nula,False
+393508,0,0,kegg,,nula,nula,False
+394463,18,0,kegg,,nula,nula,False
+394994,10,0,kegg,,nula,nula,False
+398190,9,1,kegg,,nula,nula,False
+402519,21,2,kegg,,nula,nula,False
+402970,26,0,kegg,,nula,nula,False
+403163,0,2,kegg,,nula,nula,False
+403632,0,0,kegg,,nula,nula,False
+405837,4,1,kegg,,nula,nula,False
+406660,9,3,kegg,,informativa,informativa,False
+407790,9,3,kegg,,informativa,informativa,False
+411046,1,2,kegg,,no informativa,no informativa,False
+411561,3,1,kegg,,nula,nula,False
+412391,1,0,kegg,,nula,nula,False
+413257,10,0,kegg,,nula,nula,False
+417384,18,2,kegg,,informativa,informativa,False
+419205,0,0,kegg,,nula,nula,False
+419264,1,0,kegg,,nula,nula,False
+422110,1,0,kegg,,nula,nula,False
+422536,10,3,kegg,,informativa,informativa,False
+423827,26,0,kegg,,nula,nula,False
+431338,9,0,kegg,,nula,nula,False
+432345,0,0,kegg,,nula,nula,False
+440471,1,0,kegg,,nula,nula,False
+440878,10,1,kegg,,no informativa,no informativa,False
+445172,10,1,kegg,,nula,nula,False
+446575,26,1,kegg,,nula,nula,False
+448340,26,1,kegg,,no informativa,no informativa,False
+449111,26,0,kegg,,nula,nula,False
+452807,1,0,kegg,,nula,nula,False
+453172,1,1,kegg,,nula,nula,False
+455054,0,0,kegg,,nula,nula,False
+455460,17,2,kegg,,nula,nula,False
+458924,26,0,kegg,,nula,nula,False
+462425,1,0,kegg,,nula,nula,False
+462859,3,3,kegg,,no informativa,no informativa,False
+464182,26,2,kegg,,nula,nula,False
+464647,18,0,kegg,,nula,nula,False
+464698,0,0,kegg,,nula,nula,False
+464790,10,1,kegg,,nula,nula,False
+466226,15,1,kegg,,nula,nula,False
+470504,10,3,kegg,,informativa,informativa,False
+474845,3,1,kegg,,nula,nula,False
+477668,26,1,kegg,,nula,nula,False
+478654,18,2,kegg,,nula,nula,False
+480814,10,2,kegg,,nula,nula,False
+480914,10,0,kegg,,nula,nula,False
+483191,0,3,kegg,,informativa,informativa,False
+485050,1,0,kegg,,nula,nula,False
+485106,18,0,kegg,,no informativa,no informativa,False
+485496,21,0,kegg,,nula,nula,False
+487513,10,0,kegg,,nula,nula,False
+489392,17,2,kegg,,nula,nula,False
+489926,9,2,kegg,,nula,nula,False
+491675,1,0,kegg,,nula,nula,False
+493475,3,2,kegg,,nula,nula,False
+495235,9,2,kegg,,nula,nula,False
+499232,1,1,kegg,,nula,nula,False
+499393,10,2,kegg,,nula,nula,False
+499618,0,0,kegg,,nula,nula,False
+499704,3,1,kegg,,nula,nula,False
+499732,1,1,kegg,,nula,nula,False
+499815,1,0,kegg,,nula,nula,False
+503745,26,0,kegg,,nula,nula,False
+503918,23,2,kegg,,informativa,informativa,False
+504493,9,0,kegg,,nula,nula,False
+505067,1,0,kegg,,nula,nula,False
+505460,25,3,kegg,,informativa,informativa,False
+505820,9,0,kegg,,nula,nula,False
+506245,3,0,kegg,,nula,nula,False
+510436,0,3,kegg,,informativa,informativa,False
+511468,9,2,kegg,,informativa,informativa,False
+515670,1,1,kegg,,nula,nula,False
+517185,5,2,kegg,,nula,nula,False
+520126,0,3,kegg,,nula,nula,False
+524072,26,2,kegg,,nula,nula,False
 530511,18,0,kegg,,nula,nula,False
-534025,10,3,kegg,,nula,nula,False
-536320,1,1,kegg,,no informativa,no informativa,False
-537160,0,1,kegg,,no informativa,no informativa,False
-541788,3,3,kegg,,nula,nula,False
-544756,26,3,kegg,,nula,nula,False
-544779,3,0,kegg,,nula,nula,False
-545378,10,2,kegg,,nula,nula,False
-548579,1,0,kegg,,nula,nula,False
-548657,1,3,kegg,,nula,nula,False
-550058,10,3,kegg,,nula,nula,False
-554001,10,0,kegg,,nula,nula,False
-554786,18,2,kegg,,nula,nula,False
-555643,0,3,kegg,,nula,nula,False
-556881,26,1,kegg,,nula,nula,False
-557725,4,2,kegg,,nula,nula,False
-558474,10,1,kegg,,nula,nula,False
-559860,17,2,kegg,,informativa,informativa,False
-562738,0,3,kegg,,nula,nula,False
-564519,26,0,kegg,,nula,nula,False
-565251,15,2,kegg,,nula,nula,False
-566276,23,3,kegg,,nula,nula,False
-566551,28,2,kegg,,informativa,informativa,False
-567209,18,2,kegg,,nula,nula,False
-571449,9,3,kegg,,nula,nula,False
-572432,10,3,kegg,,nula,nula,False
-572653,1,3,kegg,,nula,nula,False
-572684,0,2,kegg,,no informativa,no informativa,False
-573369,0,0,kegg,,nula,nula,False
-574148,18,3,kegg,,nula,nula,False
-574233,3,0,kegg,,no informativa,no informativa,False
-576141,3,3,kegg,,no informativa,no informativa,False
-581657,3,3,kegg,,nula,nula,False
-585372,26,0,kegg,,nula,nula,False
-586188,10,3,kegg,,no informativa,no informativa,False
-588063,1,3,kegg,,informativa,informativa,False
-589202,10,1,kegg,,nula,nula,False
-590231,0,0,kegg,,nula,nula,False
-591075,21,2,kegg,,informativa,informativa,False
-593038,0,3,kegg,,nula,nula,False
-594496,0,2,kegg,,no informativa,no informativa,False
-599614,1,3,kegg,,nula,nula,False
-601254,21,0,kegg,,nula,nula,False
-603045,26,3,kegg,,nula,nula,False
-603656,10,2,kegg,,nula,nula,False
-606411,3,0,kegg,,nula,nula,False
-607231,3,3,kegg,,nula,nula,False
-608788,26,0,kegg,,nula,nula,False
-609537,0,0,kegg,,nula,nula,False
-610005,10,0,kegg,,nula,nula,False
-612438,9,0,kegg,,nula,nula,False
-615786,3,0,kegg,,no informativa,no informativa,False
+530574,18,0,kegg,,nula,nula,False
+534245,1,1,kegg,,no informativa,no informativa,False
+538174,26,0,kegg,,nula,nula,False
+538862,1,1,kegg,,nula,nula,False
+539036,9,0,kegg,,nula,nula,False
+542282,3,0,kegg,,nula,nula,False
+543758,18,0,kegg,,nula,nula,False
+544491,0,0,kegg,,nula,nula,False
+546779,1,0,kegg,,nula,nula,False
+547894,10,2,kegg,,nula,nula,False
+551626,3,3,kegg,,nula,nula,False
+552122,3,2,kegg,,nula,nula,False
+553806,0,0,kegg,,nula,nula,False
+554588,0,0,kegg,,nula,nula,False
+554924,3,3,kegg,,nula,nula,False
+555515,18,1,kegg,,nula,nula,False
+558912,3,1,kegg,,nula,nula,False
+559548,17,2,kegg,,nula,nula,False
+563890,0,1,kegg,,nula,nula,False
+564484,26,2,kegg,,nula,nula,False
+565124,1,0,kegg,,nula,nula,False
+566292,1,0,kegg,,nula,nula,False
+567928,1,0,kegg,,nula,nula,False
+568233,1,2,kegg,,nula,nula,False
+570576,10,2,kegg,,nula,nula,False
+571220,18,3,kegg,,nula,nula,False
+571899,26,0,kegg,,nula,nula,False
+572812,0,1,kegg,,nula,nula,False
+572981,3,0,kegg,,nula,nula,False
+573220,26,3,kegg,,informativa,informativa,False
+574150,0,0,kegg,,nula,nula,False
+576810,10,0,kegg,,nula,nula,False
+579327,0,2,kegg,,informativa,informativa,False
+584318,9,3,kegg,,informativa,informativa,False
+586521,21,0,kegg,,no informativa,no informativa,False
+586712,3,0,kegg,,nula,nula,False
+587393,3,0,kegg,,nula,nula,False
+589028,9,1,kegg,,no informativa,no informativa,False
+592940,1,1,kegg,,nula,nula,False
+594260,0,1,kegg,,nula,nula,False
+598165,15,0,kegg,,nula,nula,False
+599057,26,2,kegg,,nula,nula,False
+600533,10,2,kegg,,nula,nula,False
+602966,3,2,kegg,,nula,nula,False
+604743,3,1,kegg,,no informativa,no informativa,False
+605201,1,1,kegg,,nula,nula,False
+605572,10,3,kegg,,informativa,informativa,False
+610313,0,0,kegg,,nula,nula,False
+612320,1,3,kegg,,informativa,informativa,False
+614601,0,2,kegg,,nula,nula,False
+614638,26,2,kegg,,nula,nula,False
+614776,3,1,kegg,,nula,nula,False
 615802,10,2,kegg,,nula,nula,False
-620444,26,3,kegg,,nula,nula,False
-621297,0,0,kegg,,nula,nula,False
-622001,0,0,kegg,,nula,nula,False
-622492,10,2,kegg,,nula,nula,False
-622544,10,2,kegg,,nula,nula,False
-624052,9,2,kegg,,nula,nula,False
-625898,3,0,kegg,,no informativa,no informativa,False
+620990,9,3,kegg,,informativa,informativa,False
+621607,26,2,kegg,,nula,nula,False
+622292,1,2,kegg,,nula,nula,False
+622425,3,1,kegg,,nula,nula,False
+624251,0,0,kegg,,nula,nula,False
+625480,3,2,kegg,,nula,nula,False
 626832,10,2,kegg,,nula,nula,False
-628753,1,0,kegg,,nula,nula,False
+626970,1,1,kegg,,nula,nula,False
 628887,22,2,kegg,,nula,nula,False
-630329,18,3,kegg,,nula,nula,False
-630931,0,1,kegg,,nula,nula,False
-631996,18,0,kegg,,nula,nula,False
-638556,10,0,kegg,,nula,nula,False
-641340,10,2,kegg,,no informativa,no informativa,False
-643274,0,2,kegg,,nula,nula,False
-646728,17,2,kegg,,nula,nula,False
-649984,26,2,kegg,,nula,nula,False
-653534,18,1,kegg,,nula,nula,False
-654475,3,0,kegg,,nula,nula,False
-654559,10,2,kegg,,nula,nula,False
-655214,9,2,kegg,,nula,nula,False
-656902,26,2,kegg,,nula,nula,False
-660615,23,1,kegg,,no informativa,no informativa,False
-661733,1,2,kegg,,no informativa,no informativa,False
-664980,1,2,kegg,,nula,nula,False
-671391,9,3,kegg,,informativa,informativa,False
-674528,10,2,kegg,,nula,nula,False
-675711,18,2,kegg,,nula,nula,False
-677197,1,0,kegg,,nula,nula,False
-677433,3,1,kegg,,nula,nula,False
-680231,1,0,kegg,,nula,nula,False
-681057,10,1,kegg,,nula,nula,False
-682032,26,2,kegg,,nula,nula,False
-682416,26,0,kegg,,no informativa,no informativa,False
-685615,26,1,kegg,,nula,nula,False
-686415,1,1,kegg,,nula,nula,False
-690274,10,0,kegg,,nula,nula,False
-692561,15,3,kegg,,nula,nula,False
-693482,18,0,kegg,,nula,nula,False
-694409,0,2,kegg,,nula,nula,False
-694886,18,1,kegg,,nula,nula,False
-695232,3,1,kegg,,no informativa,no informativa,False
-695561,3,3,kegg,,no informativa,no informativa,False
-696346,1,2,kegg,,nula,nula,False
-696394,26,3,kegg,,nula,nula,False
-697363,9,2,kegg,,nula,nula,False
-697516,23,0,kegg,,no informativa,no informativa,False
-698555,3,0,kegg,,nula,nula,False
-699038,1,0,kegg,,nula,nula,False
-700144,26,0,kegg,,nula,nula,False
-701725,26,2,kegg,,nula,nula,False
-702369,10,0,kegg,,nula,nula,False
-702614,0,2,kegg,,no informativa,no informativa,False
-706006,10,3,kegg,,nula,nula,False
-707833,21,3,kegg,,nula,nula,False
-712594,0,0,kegg,,nula,nula,False
-712988,0,0,kegg,,no informativa,no informativa,False
-721868,3,2,kegg,,no informativa,no informativa,False
-724241,17,3,kegg,,nula,nula,False
-724241,21,3,kegg,,nula,nula,False
-727264,10,1,kegg,,nula,nula,False
-728508,17,0,kegg,,nula,nula,False
-730415,9,1,kegg,,nula,nula,False
-731939,1,2,kegg,,nula,nula,False
-737010,21,2,kegg,,no informativa,no informativa,False
-737318,26,2,kegg,,no informativa,no informativa,False
-738967,4,2,kegg,,nula,nula,False
-742920,0,1,kegg,,nula,nula,False
-745451,3,0,kegg,,nula,nula,False
-745569,21,2,kegg,,nula,nula,False
-748001,10,0,kegg,,nula,nula,False
-749074,3,2,kegg,,nula,nula,False
-750458,10,3,kegg,,nula,nula,False
-750750,10,3,kegg,,nula,nula,False
-754632,0,2,kegg,,no informativa,no informativa,False
-757741,18,2,kegg,,nula,nula,False
-757783,1,1,kegg,,nula,nula,False
-758145,1,2,kegg,,nula,nula,False
-759396,10,2,kegg,,no informativa,no informativa,False
-759533,26,0,kegg,,nula,nula,False
-764205,9,0,kegg,,no informativa,no informativa,False
-765394,10,1,kegg,,no informativa,no informativa,False
+633327,26,2,kegg,,nula,nula,False
+634442,9,3,kegg,,informativa,informativa,False
+638150,10,0,kegg,,nula,nula,False
+643774,21,2,kegg,,nula,nula,False
+646862,26,0,kegg,,nula,nula,False
+648205,10,0,kegg,,nula,nula,False
+648448,26,0,kegg,,nula,nula,False
+650835,28,2,kegg,,nula,nula,False
+651012,26,0,kegg,,nula,nula,False
+651651,9,0,kegg,,nula,nula,False
+652517,26,2,kegg,,nula,nula,False
+653071,1,0,kegg,,nula,nula,False
+656165,1,2,kegg,,nula,nula,False
+665633,18,1,kegg,,nula,nula,False
+669261,0,2,kegg,,nula,nula,False
+670952,18,1,kegg,,no informativa,no informativa,False
+673549,21,1,kegg,,nula,nula,False
+674093,18,0,kegg,,nula,nula,False
+675512,0,0,kegg,,nula,nula,False
+675523,1,0,kegg,,nula,nula,False
+678576,5,2,kegg,,nula,nula,False
+680684,18,3,kegg,,informativa,informativa,False
+682588,0,1,kegg,,nula,nula,False
+688745,17,1,kegg,,no informativa,no informativa,False
+689566,26,0,kegg,,nula,nula,False
+690046,1,0,kegg,,nula,nula,False
+690124,28,2,kegg,,nula,nula,False
+690258,26,0,kegg,,nula,nula,False
+692561,15,3,kegg,,informativa,informativa,False
+693535,0,3,kegg,,no informativa,no informativa,False
+695103,26,0,kegg,,nula,nula,False
+695180,3,2,kegg,,nula,nula,False
+696736,0,3,kegg,,informativa,informativa,False
+697516,23,0,kegg,,nula,nula,False
+698093,18,0,kegg,,nula,nula,False
+698828,0,0,kegg,,nula,nula,False
+699024,26,0,kegg,,nula,nula,False
+700063,1,2,kegg,,nula,nula,False
+705943,26,2,kegg,,informativa,informativa,False
+707445,26,3,kegg,,informativa,informativa,False
+715391,3,1,kegg,,nula,nula,False
+720854,25,0,kegg,,nula,nula,False
+721822,0,0,kegg,,nula,nula,False
+723997,1,0,kegg,,nula,nula,False
+724758,1,0,kegg,,nula,nula,False
+725145,18,1,kegg,,nula,nula,False
+729936,28,0,kegg,,nula,nula,False
+730088,0,0,kegg,,nula,nula,False
+733148,10,0,kegg,,nula,nula,False
+735203,18,0,kegg,,nula,nula,False
+736659,18,0,kegg,,nula,nula,False
+737140,10,3,kegg,,informativa,informativa,False
+740049,3,0,kegg,,nula,nula,False
+743386,3,3,kegg,,informativa,informativa,False
+744854,9,2,kegg,,nula,nula,False
+746054,21,2,kegg,,nula,nula,False
+748075,3,3,kegg,,nula,nula,False
+753400,1,1,kegg,,nula,nula,False
+753855,3,0,kegg,,nula,nula,False
+755050,26,3,kegg,,informativa,informativa,False
+756405,0,0,kegg,,nula,nula,False
+758034,10,0,kegg,,nula,nula,False
+759396,10,2,kegg,,nula,nula,False
+761987,3,2,kegg,,nula,nula,False
+763485,21,1,kegg,,nula,nula,False
 767137,1,1,kegg,,nula,nula,False
-768353,1,2,kegg,,nula,nula,False
-770863,22,2,kegg,,nula,nula,False
-771061,10,1,kegg,,nula,nula,False
-774333,0,3,kegg,,nula,nula,False
-774705,22,3,kegg,,nula,nula,False
-776759,10,2,kegg,,nula,nula,False
+768727,26,0,kegg,,nula,nula,False
+769802,10,0,kegg,,nula,nula,False
+770863,21,2,kegg,,nula,nula,False
+771208,1,0,kegg,,nula,nula,False
+771418,0,1,kegg,,nula,nula,False
+771875,10,1,kegg,,nula,nula,False
+774946,4,1,kegg,,nula,nula,False
+776926,0,2,kegg,,nula,nula,False
 777076,1,2,kegg,,nula,nula,False
-777950,18,3,kegg,,nula,nula,False
-779453,26,1,kegg,,nula,nula,False
-781502,3,0,kegg,,nula,nula,False
-781677,0,2,kegg,,nula,nula,False
-782855,15,2,kegg,,nula,nula,False
-786902,0,1,kegg,,nula,nula,False
-787738,18,2,kegg,,informativa,informativa,False
-789235,22,3,kegg,,nula,nula,False
-794904,1,2,kegg,,nula,nula,False
-795448,1,1,kegg,,nula,nula,False
-795474,15,2,kegg,,nula,nula,False
-795532,18,1,kegg,,no informativa,no informativa,False
-796175,18,2,kegg,,nula,nula,False
-796279,18,0,kegg,,nula,nula,False
-796799,9,0,kegg,,nula,nula,False
+777708,10,0,kegg,,nula,nula,False
+780256,0,0,kegg,,nula,nula,False
+781920,10,2,kegg,,nula,nula,False
+782855,4,2,kegg,,nula,nula,False
+783594,10,0,kegg,,nula,nula,False
+789235,22,3,kegg,,no informativa,no informativa,False
+791217,0,0,kegg,,nula,nula,False
+791251,18,2,kegg,,nula,nula,False
+791281,3,1,kegg,,nula,nula,False
+791800,18,2,kegg,,nula,nula,False
+794418,9,2,kegg,,nula,nula,False
+794611,26,3,kegg,,informativa,informativa,False
+794634,0,0,kegg,,nula,nula,False
+794716,1,1,kegg,,nula,nula,False
+795829,26,2,kegg,,nula,nula,False
+796205,18,0,kegg,,nula,nula,False
+796587,1,0,kegg,,nula,nula,False
+798051,0,0,kegg,,nula,nula,False
+798179,9,2,kegg,,nula,nula,False
+798964,9,0,kegg,,nula,nula,False
 799893,3,1,kegg,,nula,nula,False
-800445,1,2,kegg,,nula,nula,False
-800926,1,0,kegg,,nula,nula,False
-801985,26,0,kegg,,nula,nula,False
-803405,18,1,kegg,,no informativa,no informativa,False
+800032,3,2,kegg,,nula,nula,False
+801432,10,2,kegg,,nula,nula,False
+804375,3,3,kegg,,informativa,informativa,False
+804675,10,1,kegg,,nula,nula,False
+805780,3,1,kegg,,nula,nula,False
 806043,0,2,kegg,,nula,nula,False
-806967,17,2,kegg,,no informativa,no informativa,False
-808645,26,3,kegg,,nula,nula,False
-809945,18,3,kegg,,nula,nula,False
-814684,26,2,kegg,,informativa,informativa,False
-824633,0,3,kegg,,no informativa,no informativa,False
-824724,26,3,kegg,,nula,nula,False
+808516,18,2,kegg,,nula,nula,False
+809087,10,0,kegg,,nula,nula,False
+809177,3,0,kegg,,nula,nula,False
+811473,26,0,kegg,,nula,nula,False
+812505,18,2,kegg,,nula,nula,False
+815860,0,0,kegg,,nula,nula,False
+819610,26,2,kegg,,nula,nula,False
+822605,28,0,kegg,,nula,nula,False
+827002,26,2,kegg,,no informativa,no informativa,False
+827954,1,1,kegg,,nula,nula,False
+828035,9,2,kegg,,nula,nula,False
 828632,1,0,kegg,,nula,nula,False
-427,1,0,fenotipo,,nula,nula,False
-955,26,1,fenotipo,,nula,nula,False
-2675,18,0,fenotipo,,no informativa,no informativa,False
-3775,3,3,fenotipo,,no informativa,no informativa,False
-5442,3,0,fenotipo,,nula,nula,False
-5534,26,2,fenotipo,,no informativa,no informativa,False
-6000,26,3,fenotipo,,nula,nula,False
-7845,15,1,fenotipo,,nula,nula,False
-8348,0,0,fenotipo,,nula,nula,False
-8922,18,2,fenotipo,,nula,nula,False
+830280,10,2,kegg,,nula,nula,False
+830753,10,2,kegg,,nula,nula,False
+423,10,0,fenotipo,,nula,nula,False
+873,9,2,fenotipo,,nula,nula,False
+2623,3,1,fenotipo,,nula,nula,False
+3142,3,0,fenotipo,,nula,nula,False
+5303,10,2,fenotipo,,nula,nula,False
+5527,18,2,fenotipo,,nula,nula,False
+5734,0,0,fenotipo,,nula,nula,False
+7430,17,0,fenotipo,,nula,nula,False
+8158,28,0,fenotipo,,nula,nula,False
+8641,0,2,fenotipo,,nula,nula,False
 9857,0,0,fenotipo,,nula,nula,False
-13037,18,3,fenotipo,,no informativa,no informativa,False
-14487,3,2,fenotipo,,no informativa,no informativa,False
+13227,18,2,fenotipo,,nula,nula,False
 14691,0,0,fenotipo,,nula,nula,False
-15846,0,2,fenotipo,,nula,nula,False
-17835,1,0,fenotipo,,nula,nula,False
-18017,26,1,fenotipo,,nula,nula,False
-19424,3,0,fenotipo,,nula,nula,False
-19660,3,0,fenotipo,,nula,nula,False
-22688,0,2,fenotipo,,no informativa,no informativa,False
-23037,3,3,fenotipo,,nula,nula,False
-23211,3,0,fenotipo,,nula,nula,False
-23331,18,2,fenotipo,,no informativa,no informativa,False
-24814,18,0,fenotipo,,no informativa,no informativa,False
-24916,10,3,fenotipo,,nula,nula,False
-25537,26,3,fenotipo,,nula,nula,False
-25861,17,2,fenotipo,,no informativa,no informativa,False
-26818,26,2,fenotipo,,no informativa,no informativa,False
-27980,26,2,fenotipo,,nula,nula,False
-28557,10,0,fenotipo,,nula,nula,False
+15011,0,0,fenotipo,,nula,nula,False
+15976,10,1,fenotipo,,no informativa,no informativa,False
+18006,1,3,fenotipo,,informativa,informativa,False
+18182,3,0,fenotipo,,nula,nula,False
+19448,18,3,fenotipo,,informativa,informativa,False
+20004,17,0,fenotipo,,nula,nula,False
+23133,18,1,fenotipo,,nula,nula,False
+23225,9,0,fenotipo,,nula,nula,False
+23450,3,0,fenotipo,,nula,nula,False
+24814,18,0,fenotipo,,nula,nula,False
+25324,26,2,fenotipo,,nula,nula,False
+25665,3,1,fenotipo,,nula,nula,False
+25946,0,2,fenotipo,,nula,nula,False
+27202,1,3,fenotipo,,informativa,informativa,False
+27790,3,0,fenotipo,,nula,nula,False
+28537,10,1,fenotipo,,nula,nula,False
+32983,0,1,fenotipo,,nula,nula,False
+33203,26,2,fenotipo,,nula,nula,False
 33600,26,2,fenotipo,,nula,nula,False
-34327,0,0,fenotipo,,nula,nula,False
-34914,1,3,fenotipo,,nula,nula,False
-35398,18,2,fenotipo,,nula,no informativa,False
+34780,3,0,fenotipo,,nula,nula,False
+35521,3,0,fenotipo,,nula,nula,False
 35659,9,2,fenotipo,,nula,nula,False
-35979,3,1,fenotipo,,nula,nula,False
-36035,9,2,fenotipo,,nula,nula,False
-39070,10,3,fenotipo,,nula,nula,False
-39644,9,2,fenotipo,,nula,nula,False
-40219,10,3,fenotipo,,nula,nula,False
-41005,0,3,fenotipo,,nula,nula,False
-42256,26,1,fenotipo,,nula,nula,False
+35663,25,0,fenotipo,,nula,nula,False
+37620,18,2,fenotipo,,nula,nula,False
+37620,23,2,fenotipo,,nula,nula,False
+39551,21,0,fenotipo,,nula,nula,False
+40393,26,2,fenotipo,,nula,nula,False
+41032,10,3,fenotipo,,nula,nula,False
+41497,21,0,fenotipo,,nula,nula,False
 42845,4,0,fenotipo,,nula,nula,False
-43857,3,0,fenotipo,,no informativa,no informativa,False
-44551,26,1,fenotipo,,nula,nula,False
-45255,0,2,fenotipo,,nula,nula,False
-49939,3,1,fenotipo,,nula,nula,False
-50232,0,1,fenotipo,,nula,nula,False
-53628,18,2,fenotipo,,no informativa,no informativa,False
-60607,26,3,fenotipo,,no informativa,no informativa,False
-61920,26,3,fenotipo,,nula,nula,False
-63196,3,1,fenotipo,,nula,nula,False
-63713,1,0,fenotipo,,nula,nula,False
-64120,10,2,fenotipo,,informativa,informativa,False
-65195,10,0,fenotipo,,nula,nula,False
-65357,0,1,fenotipo,,nula,nula,False
-65470,26,0,fenotipo,,no informativa,no informativa,False
-65537,3,1,fenotipo,,nula,nula,False
-67564,26,2,fenotipo,,nula,nula,False
-68007,21,0,fenotipo,,no informativa,no informativa,False
-71001,0,0,fenotipo,,nula,nula,False
-72799,25,2,fenotipo,,informativa,informativa,False
-80744,4,0,fenotipo,,nula,nula,False
-84504,26,3,fenotipo,,nula,nula,False
-85765,26,0,fenotipo,,nula,nula,False
-86267,21,3,fenotipo,,no informativa,no informativa,False
-88601,1,0,fenotipo,,nula,nula,False
-92491,10,3,fenotipo,,nula,nula,False
-92919,3,1,fenotipo,,nula,nula,False
-95533,3,2,fenotipo,,nula,nula,False
-96189,0,0,fenotipo,,no informativa,no informativa,False
-97547,10,0,fenotipo,,nula,nula,False
-103517,10,2,fenotipo,,no informativa,no informativa,False
-109391,15,2,fenotipo,,nula,nula,False
-110285,1,1,fenotipo,,nula,nula,False
-113828,0,3,fenotipo,,nula,nula,False
-114251,10,3,fenotipo,,nula,nula,False
-115693,0,3,fenotipo,,nula,nula,False
-121574,0,2,fenotipo,,informativa,informativa,False
-125602,10,1,fenotipo,,no informativa,no informativa,False
-126490,18,1,fenotipo,,nula,nula,False
-127753,18,2,fenotipo,,nula,nula,False
+43113,0,2,fenotipo,,nula,nula,False
+43857,3,0,fenotipo,,nula,nula,False
+49260,26,1,fenotipo,,nula,nula,False
+49322,10,0,fenotipo,,nula,nula,False
+53347,26,2,fenotipo,,nula,nula,False
+58803,4,2,fenotipo,,nula,nula,False
+61272,17,2,fenotipo,,no informativa,no informativa,False
+62425,10,3,fenotipo,,nula,nula,False
+62725,9,1,fenotipo,,nula,nula,False
+62907,3,2,fenotipo,,nula,nula,False
+64120,0,2,fenotipo,,nula,nula,False
+64120,10,2,fenotipo,,nula,nula,False
+64567,0,0,fenotipo,,nula,nula,False
+64623,18,0,fenotipo,,nula,nula,False
+66989,1,1,fenotipo,,no informativa,no informativa,False
+67433,1,3,fenotipo,,informativa,informativa,False
+71209,10,0,fenotipo,,nula,nula,False
+72533,18,3,fenotipo,,informativa,informativa,False
+79701,17,2,fenotipo,,nula,nula,False
+83739,0,0,fenotipo,,nula,nula,False
+85035,9,0,fenotipo,,nula,nula,False
+85783,18,2,fenotipo,,nula,nula,False
+88339,1,2,fenotipo,,nula,nula,False
+92002,26,3,fenotipo,,nula,nula,False
+92066,17,2,fenotipo,,informativa,informativa,False
+95622,9,1,fenotipo,,no informativa,no informativa,False
+96199,18,2,fenotipo,,nula,nula,False
+96499,4,2,fenotipo,,nula,nula,False
+103555,1,0,fenotipo,,nula,nula,False
+109489,1,3,fenotipo,,no informativa,no informativa,False
+110267,1,1,fenotipo,,nula,nula,False
+113566,10,0,fenotipo,,nula,nula,False
+114429,18,2,fenotipo,,nula,nula,False
+116874,18,3,fenotipo,,informativa,informativa,False
+123705,0,0,fenotipo,,nula,nula,False
+125602,10,1,fenotipo,,nula,nula,False
+127607,4,0,fenotipo,,nula,nula,False
+127698,21,0,fenotipo,,nula,nula,False
 127980,18,2,fenotipo,,nula,nula,False
-131580,3,0,fenotipo,,nula,nula,False
-138384,1,2,fenotipo,,nula,nula,False
-140961,18,2,fenotipo,,nula,nula,False
-143030,1,0,fenotipo,,nula,nula,False
-152435,1,0,fenotipo,,nula,nula,False
-153520,26,0,fenotipo,,no informativa,no informativa,False
+132143,0,2,fenotipo,,nula,nula,False
+138463,18,1,fenotipo,,no informativa,no informativa,False
+140312,0,1,fenotipo,,no informativa,no informativa,False
+142113,1,0,fenotipo,,nula,nula,False
+151553,10,3,fenotipo,,nula,nula,False
+152520,18,2,fenotipo,,nula,nula,False
+152802,9,3,fenotipo,,nula,nula,False
+153520,26,0,fenotipo,,nula,nula,False
 153789,15,0,fenotipo,,nula,nula,False
-154120,18,3,fenotipo,,informativa,informativa,False
-154230,3,0,fenotipo,,no informativa,no informativa,False
-154431,3,0,fenotipo,,nula,nula,False
-155613,3,1,fenotipo,,nula,nula,False
-156577,15,2,fenotipo,,no informativa,no informativa,False
-158062,0,0,fenotipo,,nula,nula,False
-159200,0,3,fenotipo,,informativa,informativa,False
-159881,3,2,fenotipo,,no informativa,no informativa,False
-163654,15,3,fenotipo,,nula,nula,False
-164680,15,3,fenotipo,,nula,no informativa,False
-167457,9,3,fenotipo,,no informativa,no informativa,False
-173242,0,0,fenotipo,,nula,nula,False
-175165,22,2,fenotipo,,informativa,informativa,False
-177087,1,0,fenotipo,,nula,nula,False
-178237,3,3,fenotipo,,nula,nula,False
+153824,25,2,fenotipo,,nula,nula,False
+155239,1,0,fenotipo,,nula,nula,False
+155470,26,2,fenotipo,,nula,nula,False
+157399,10,0,fenotipo,,nula,nula,False
+157452,15,1,fenotipo,,nula,nula,False
+158073,18,2,fenotipo,,nula,nula,False
+158963,1,1,fenotipo,,nula,nula,False
+162353,0,1,fenotipo,,nula,nula,False
+162599,0,0,fenotipo,,nula,nula,False
+164680,10,3,fenotipo,,informativa,informativa,False
+172205,0,0,fenotipo,,nula,nula,False
+173051,26,3,fenotipo,,nula,nula,False
+175200,1,0,fenotipo,,nula,nula,False
+176441,18,0,fenotipo,,nula,nula,False
+176912,9,1,fenotipo,,no informativa,no informativa,False
 179573,1,0,fenotipo,,nula,nula,False
-181511,0,2,fenotipo,,no informativa,no informativa,False
-184483,22,0,fenotipo,,nula,no informativa,False
-185156,26,1,fenotipo,,nula,nula,False
-186533,10,2,fenotipo,,no informativa,no informativa,False
-186533,25,2,fenotipo,,no informativa,no informativa,False
-190412,3,1,fenotipo,,nula,nula,False
-190714,21,3,fenotipo,,nula,nula,False
+183219,1,1,fenotipo,,nula,nula,False
+184708,1,0,fenotipo,,nula,nula,False
+184906,26,3,fenotipo,,informativa,informativa,False
+185387,26,2,fenotipo,,nula,nula,False
+187389,18,0,fenotipo,,nula,nula,False
+188326,9,3,fenotipo,,informativa,informativa,False
+190849,10,0,fenotipo,,nula,nula,False
+191018,3,3,fenotipo,,nula,nula,False
 192358,3,0,fenotipo,,nula,nula,False
-192557,3,0,fenotipo,,no informativa,no informativa,False
 193009,1,0,fenotipo,,nula,nula,False
-196141,26,2,fenotipo,,nula,nula,False
-200272,18,3,fenotipo,,nula,nula,False
-204252,3,1,fenotipo,,no informativa,no informativa,False
-204322,3,2,fenotipo,,no informativa,no informativa,False
-208202,26,1,fenotipo,,nula,nula,False
-208354,0,0,fenotipo,,nula,nula,False
-208696,18,2,fenotipo,,nula,nula,False
-208716,18,3,fenotipo,,informativa,informativa,False
-210855,26,1,fenotipo,,no informativa,no informativa,False
-211249,1,2,fenotipo,,no informativa,no informativa,False
-211743,10,0,fenotipo,,nula,nula,False
-212678,3,3,fenotipo,,nula,nula,False
-217823,1,0,fenotipo,,nula,nula,False
-218242,0,1,fenotipo,,no informativa,no informativa,False
-219944,25,2,fenotipo,,no informativa,no informativa,False
-222624,1,1,fenotipo,,nula,nula,False
-222783,3,0,fenotipo,,nula,nula,False
-223304,3,0,fenotipo,,nula,nula,False
-223630,0,2,fenotipo,,nula,nula,False
-224808,15,1,fenotipo,,nula,nula,False
-225833,17,2,fenotipo,,nula,nula,False
-225960,3,1,fenotipo,,no informativa,no informativa,False
-227285,18,3,fenotipo,,nula,nula,False
-229938,10,3,fenotipo,,nula,nula,False
-231890,1,3,fenotipo,,nula,nula,False
-232722,3,0,fenotipo,,nula,nula,False
-232924,9,2,fenotipo,,nula,nula,False
-235534,0,2,fenotipo,,nula,nula,False
-236066,0,0,fenotipo,,nula,nula,False
-241660,0,1,fenotipo,,no informativa,no informativa,False
-242546,1,1,fenotipo,,nula,nula,False
-245674,15,3,fenotipo,,no informativa,no informativa,False
-246814,26,2,fenotipo,,nula,nula,False
-247791,18,3,fenotipo,,no informativa,no informativa,False
-248252,0,1,fenotipo,,no informativa,no informativa,False
-248652,10,3,fenotipo,,nula,nula,False
-249294,3,0,fenotipo,,nula,nula,False
-249677,1,2,fenotipo,,no informativa,no informativa,False
-254476,5,2,fenotipo,,no informativa,no informativa,False
-254476,25,2,fenotipo,,no informativa,no informativa,False
-254718,9,0,fenotipo,,no informativa,no informativa,False
-262321,1,0,fenotipo,,no informativa,no informativa,False
-267070,0,1,fenotipo,,no informativa,no informativa,False
+196599,18,3,fenotipo,,informativa,informativa,False
+201477,18,2,fenotipo,,nula,nula,False
+202240,4,0,fenotipo,,nula,nula,False
+205137,15,0,fenotipo,,nula,nula,False
+205222,3,0,fenotipo,,nula,nula,False
+205653,1,0,fenotipo,,nula,nula,False
+206171,26,1,fenotipo,,nula,nula,False
+209020,18,0,fenotipo,,nula,nula,False
+209105,3,0,fenotipo,,nula,nula,False
+210186,26,3,fenotipo,,nula,nula,False
+210855,26,1,fenotipo,,nula,nula,False
+213734,10,0,fenotipo,,nula,nula,False
+215973,9,0,fenotipo,,nula,nula,False
+217801,15,0,fenotipo,,nula,nula,False
+219450,3,1,fenotipo,,no informativa,no informativa,False
+219839,26,2,fenotipo,,nula,nula,False
+220479,0,0,fenotipo,,nula,nula,False
+220991,0,0,fenotipo,,nula,nula,False
+221849,4,2,fenotipo,,nula,nula,False
+223585,18,1,fenotipo,,nula,nula,False
+223739,26,2,fenotipo,,nula,nula,False
+229123,10,2,fenotipo,,nula,nula,False
+229265,18,0,fenotipo,,nula,nula,False
+229276,1,0,fenotipo,,nula,nula,False
+230260,0,2,fenotipo,,nula,nula,False
+231220,1,1,fenotipo,,no informativa,no informativa,False
+233826,0,3,fenotipo,,informativa,informativa,False
+239567,4,0,fenotipo,,nula,nula,False
+240772,26,0,fenotipo,,nula,nula,False
+241001,18,0,fenotipo,,nula,nula,False
+243474,10,2,fenotipo,,nula,nula,False
+244543,18,2,fenotipo,,nula,nula,False
+244676,10,0,fenotipo,,nula,nula,False
+244878,26,1,fenotipo,,nula,nula,False
+245362,10,0,fenotipo,,nula,nula,False
+245784,26,0,fenotipo,,nula,nula,False
+249527,10,2,fenotipo,,nula,nula,False
+249560,0,0,fenotipo,,nula,nula,False
+252737,1,0,fenotipo,,nula,nula,False
+255964,0,0,fenotipo,,nula,nula,False
+264082,18,3,fenotipo,,no informativa,no informativa,False
+264579,10,3,fenotipo,,nula,nula,False
 268136,10,2,fenotipo,,nula,nula,False
-268408,3,0,fenotipo,,nula,nula,False
-270664,1,2,fenotipo,,informativa,informativa,False
-272100,26,1,fenotipo,,nula,nula,False
-272727,3,3,fenotipo,,no informativa,no informativa,False
-274263,21,1,fenotipo,,nula,nula,False
-277162,9,2,fenotipo,,nula,nula,False
-278067,9,3,fenotipo,,nula,nula,False
-278586,9,2,fenotipo,,nula,nula,False
-279473,9,2,fenotipo,,nula,nula,False
-279966,0,0,fenotipo,,nula,nula,False
-280081,3,2,fenotipo,,nula,nula,False
-280688,10,0,fenotipo,,no informativa,no informativa,False
-280919,1,1,fenotipo,,nula,nula,False
-282175,26,2,fenotipo,,nula,nula,False
-283515,3,1,fenotipo,,nula,nula,False
-283634,0,3,fenotipo,,nula,nula,False
-283634,15,3,fenotipo,,nula,nula,False
-287929,0,2,fenotipo,,informativa,informativa,False
-289947,3,1,fenotipo,,nula,nula,False
-293552,26,0,fenotipo,,nula,nula,False
-293827,1,3,fenotipo,,nula,nula,False
-295524,26,0,fenotipo,,nula,nula,False
-295703,3,2,fenotipo,,nula,nula,False
-295811,4,0,fenotipo,,nula,nula,False
-297165,0,2,fenotipo,,nula,nula,False
-298862,1,2,fenotipo,,nula,nula,False
+268912,3,2,fenotipo,,nula,nula,False
+269472,3,3,fenotipo,,no informativa,no informativa,False
+270173,21,2,fenotipo,,nula,nula,False
+274775,18,0,fenotipo,,nula,nula,False
+275470,1,1,fenotipo,,nula,nula,False
+275723,1,0,fenotipo,,nula,nula,False
+276398,26,0,fenotipo,,nula,nula,False
+276522,26,0,fenotipo,,nula,nula,False
+276870,9,2,fenotipo,,nula,nula,False
+277151,3,3,fenotipo,,no informativa,no informativa,False
+278346,0,2,fenotipo,,nula,nula,False
+279267,18,0,fenotipo,,no informativa,no informativa,False
+279550,10,2,fenotipo,,nula,nula,False
+280288,21,2,fenotipo,,nula,nula,False
+282597,21,2,fenotipo,,nula,nula,False
+287680,18,1,fenotipo,,no informativa,no informativa,False
+288894,9,3,fenotipo,,nula,nula,False
+291454,0,0,fenotipo,,nula,nula,False
+292077,0,1,fenotipo,,nula,nula,False
+292110,1,3,fenotipo,,informativa,informativa,False
+292645,18,2,fenotipo,,no informativa,no informativa,False
+294985,10,0,fenotipo,,nula,nula,False
+295448,9,2,fenotipo,,nula,nula,False
+298427,10,3,fenotipo,,nula,nula,False
+299335,15,0,fenotipo,,nula,nula,False
 299708,3,1,fenotipo,,nula,nula,False
-303272,26,1,fenotipo,,no informativa,no informativa,False
-304806,0,0,fenotipo,,nula,nula,False
-304860,0,1,fenotipo,,nula,nula,False
-304976,3,0,fenotipo,,no informativa,no informativa,False
-305553,26,0,fenotipo,,nula,nula,False
-306633,10,0,fenotipo,,nula,nula,False
-307562,3,2,fenotipo,,no informativa,no informativa,False
-313650,18,1,fenotipo,,no informativa,no informativa,False
+299966,10,0,fenotipo,,nula,nula,False
+300527,4,0,fenotipo,,nula,nula,False
+301887,3,2,fenotipo,,nula,nula,False
+303272,26,1,fenotipo,,nula,nula,False
+307879,3,2,fenotipo,,nula,nula,False
+308608,25,2,fenotipo,,nula,nula,False
+311458,18,2,fenotipo,,nula,nula,False
+313215,25,2,fenotipo,,nula,nula,False
 315588,0,0,fenotipo,,nula,nula,False
-316887,0,0,fenotipo,,no informativa,no informativa,False
-321015,0,0,fenotipo,,no informativa,no informativa,False
-322432,0,2,fenotipo,,nula,nula,False
-323114,3,1,fenotipo,,nula,nula,False
-323916,18,0,fenotipo,,nula,nula,False
-324577,1,1,fenotipo,,nula,nula,False
+316008,18,0,fenotipo,,nula,nula,False
+319386,0,0,fenotipo,,nula,nula,False
+319813,1,2,fenotipo,,nula,nula,False
+321310,0,1,fenotipo,,nula,nula,False
+321500,0,2,fenotipo,,nula,nula,False
+323359,23,0,fenotipo,,nula,nula,False
 324779,3,0,fenotipo,,nula,nula,False
-325713,10,3,fenotipo,,nula,nula,False
-330297,17,0,fenotipo,,nula,nula,False
-333060,10,1,fenotipo,,nula,nula,False
-337559,18,3,fenotipo,,nula,nula,False
-340267,10,3,fenotipo,,no informativa,no informativa,False
-341344,18,3,fenotipo,,nula,nula,False
-341674,26,1,fenotipo,,nula,nula,False
-341940,26,0,fenotipo,,nula,nula,False
-342571,10,0,fenotipo,,nula,nula,False
+329099,26,1,fenotipo,,nula,nula,False
+330412,26,0,fenotipo,,nula,nula,False
+331864,1,2,fenotipo,,nula,nula,False
+333873,1,3,fenotipo,,no informativa,no informativa,False
+334890,10,2,fenotipo,,nula,nula,False
+335521,1,2,fenotipo,,nula,nula,False
+335830,3,0,fenotipo,,nula,nula,False
+336567,9,3,fenotipo,,informativa,informativa,False
+338645,9,1,fenotipo,,nula,nula,False
+339874,3,1,fenotipo,,no informativa,no informativa,False
+340065,0,2,fenotipo,,nula,nula,False
 342902,18,0,fenotipo,,nula,nula,False
-343584,26,0,fenotipo,,nula,nula,False
-344364,26,0,fenotipo,,nula,nula,False
-347120,26,0,fenotipo,,no informativa,no informativa,False
-347928,1,0,fenotipo,,nula,nula,False
-349607,26,2,fenotipo,,no informativa,no informativa,False
-353396,4,0,fenotipo,,nula,nula,False
-356021,0,0,fenotipo,,nula,nula,False
-356096,18,2,fenotipo,,informativa,informativa,False
-356418,23,2,fenotipo,,nula,nula,False
-358485,1,0,fenotipo,,nula,nula,False
-360247,10,0,fenotipo,,nula,nula,False
-360349,18,1,fenotipo,,nula,nula,False
-360353,3,0,fenotipo,,nula,nula,False
-360510,18,1,fenotipo,,no informativa,no informativa,False
-365149,18,2,fenotipo,,informativa,informativa,False
+343956,0,2,fenotipo,,nula,nula,False
+350156,18,0,fenotipo,,nula,nula,False
+351151,15,2,fenotipo,,nula,nula,False
+351556,0,0,fenotipo,,nula,nula,False
+351873,23,2,fenotipo,,nula,nula,False
+352069,4,0,fenotipo,,nula,nula,False
+353318,10,2,fenotipo,,nula,nula,False
+355455,0,0,fenotipo,,nula,no informativa,False
+355489,1,2,fenotipo,,nula,nula,False
+356556,3,3,fenotipo,,nula,nula,False
+360640,10,0,fenotipo,,nula,nula,False
+363848,4,0,fenotipo,,nula,nula,False
 368001,18,2,fenotipo,,nula,nula,False
-370578,26,1,fenotipo,,no informativa,no informativa,False
-372117,15,1,fenotipo,,nula,nula,False
-375446,0,2,fenotipo,,no informativa,no informativa,False
-376648,18,0,fenotipo,,nula,nula,False
-378361,3,0,fenotipo,,nula,nula,False
-380065,3,1,fenotipo,,nula,nula,False
+368139,0,0,fenotipo,,nula,nula,False
+368357,18,3,fenotipo,,informativa,informativa,False
+368652,18,3,fenotipo,,informativa,informativa,False
+373678,18,2,fenotipo,,nula,nula,False
+374913,3,0,fenotipo,,nula,nula,False
+375577,1,0,fenotipo,,nula,nula,False
+376781,18,2,fenotipo,,nula,nula,False
+379270,3,1,fenotipo,,nula,nula,False
 380139,15,0,fenotipo,,nula,nula,False
-381680,0,0,fenotipo,,nula,nula,False
-381957,0,2,fenotipo,,nula,nula,False
-383581,26,0,fenotipo,,no informativa,no informativa,False
-385060,26,1,fenotipo,,nula,nula,False
-389885,3,2,fenotipo,,nula,nula,False
-389937,10,3,fenotipo,,no informativa,no informativa,False
-391029,10,2,fenotipo,,nula,nula,False
+381186,26,0,fenotipo,,nula,nula,False
+383217,10,2,fenotipo,,nula,nula,False
+384930,9,2,fenotipo,,nula,nula,False
+386187,1,1,fenotipo,,nula,nula,False
+386504,3,0,fenotipo,,nula,nula,False
+386780,10,2,fenotipo,,nula,nula,False
+387289,10,1,fenotipo,,nula,nula,False
 391029,21,2,fenotipo,,nula,nula,False
-391351,26,1,fenotipo,,nula,nula,False
-391886,1,0,fenotipo,,no informativa,no informativa,False
-392702,26,0,fenotipo,,nula,nula,False
-396227,0,0,fenotipo,,nula,nula,False
-397648,3,3,fenotipo,,nula,nula,False
-399437,0,3,fenotipo,,informativa,informativa,False
-400062,3,2,fenotipo,,nula,nula,False
-400885,1,2,fenotipo,,no informativa,no informativa,False
-401092,1,2,fenotipo,,nula,nula,False
-405659,0,2,fenotipo,,nula,nula,False
-405683,3,2,fenotipo,,informativa,informativa,False
-407217,3,0,fenotipo,,no informativa,no informativa,False
-407790,9,3,fenotipo,,nula,nula,False
-411610,0,3,fenotipo,,nula,nula,False
-412518,3,1,fenotipo,,nula,nula,False
-412705,10,0,fenotipo,,nula,nula,False
-413782,0,0,fenotipo,,nula,nula,False
-416505,0,0,fenotipo,,nula,nula,False
-418997,18,3,fenotipo,,nula,nula,False
-420153,0,0,fenotipo,,nula,nula,False
-422172,4,0,fenotipo,,no informativa,no informativa,False
-423332,10,1,fenotipo,,nula,nula,False
-423619,1,3,fenotipo,,nula,nula,False
-424806,10,0,fenotipo,,nula,nula,False
-425554,15,0,fenotipo,,nula,nula,False
-428860,0,1,fenotipo,,nula,nula,False
-437251,10,1,fenotipo,,nula,nula,False
-437821,17,2,fenotipo,,no informativa,no informativa,False
-443646,3,3,fenotipo,,nula,nula,False
-446587,10,2,fenotipo,,informativa,informativa,False
-451468,10,3,fenotipo,,informativa,informativa,False
-452888,3,1,fenotipo,,nula,nula,False
-453033,21,2,fenotipo,,no informativa,no informativa,False
-457563,0,2,fenotipo,,nula,nula,False
-459314,18,0,fenotipo,,nula,nula,False
-459617,21,3,fenotipo,,no informativa,no informativa,False
-461413,23,0,fenotipo,,no informativa,no informativa,False
-465291,10,1,fenotipo,,nula,nula,False
-465515,10,2,fenotipo,,no informativa,no informativa,False
-467471,1,3,fenotipo,,nula,nula,False
-468048,3,0,fenotipo,,nula,nula,False
-468435,17,2,fenotipo,,nula,nula,False
-469116,10,2,fenotipo,,nula,nula,False
-469136,3,3,fenotipo,,nula,nula,False
-469940,21,3,fenotipo,,informativa,informativa,False
-474300,10,2,fenotipo,,no informativa,no informativa,False
-479089,1,3,fenotipo,,nula,nula,False
-480499,18,1,fenotipo,,nula,nula,False
-481605,0,3,fenotipo,,nula,nula,False
-483273,26,3,fenotipo,,nula,nula,False
-484568,3,0,fenotipo,,nula,nula,False
-485200,26,0,fenotipo,,nula,nula,False
-486461,3,0,fenotipo,,nula,nula,False
-488841,10,1,fenotipo,,nula,nula,False
-488864,4,2,fenotipo,,no informativa,no informativa,False
-491072,1,0,fenotipo,,nula,nula,False
-492307,3,1,fenotipo,,no informativa,no informativa,False
-494054,18,0,fenotipo,,no informativa,no informativa,False
-494312,25,2,fenotipo,,nula,nula,False
-496265,26,3,fenotipo,,nula,nula,False
-499618,0,0,fenotipo,,no informativa,no informativa,False
-503421,23,0,fenotipo,,nula,nula,False
-503918,5,2,fenotipo,,informativa,informativa,False
-504071,0,0,fenotipo,,nula,nula,False
-504350,3,1,fenotipo,,no informativa,no informativa,False
-504894,1,1,fenotipo,,nula,nula,False
-505370,26,3,fenotipo,,nula,nula,False
-505460,21,3,fenotipo,,nula,nula,False
-508572,28,0,fenotipo,,nula,nula,False
-508806,18,0,fenotipo,,no informativa,no informativa,False
-509256,0,2,fenotipo,,nula,nula,False
-509456,26,0,fenotipo,,nula,nula,False
-511656,1,1,fenotipo,,nula,nula,False
-513136,1,1,fenotipo,,nula,nula,False
-513141,10,2,fenotipo,,nula,nula,False
-514167,10,1,fenotipo,,nula,nula,False
-514200,1,1,fenotipo,,nula,nula,False
-514656,18,1,fenotipo,,nula,nula,False
-514874,0,2,fenotipo,,informativa,informativa,False
-515464,0,3,fenotipo,,nula,nula,False
-515670,1,1,fenotipo,,no informativa,no informativa,False
-519563,0,1,fenotipo,,nula,nula,False
-521567,10,3,fenotipo,,informativa,informativa,False
-527021,10,0,fenotipo,,nula,nula,False
+391706,3,0,fenotipo,,nula,nula,False
+393508,0,0,fenotipo,,nula,nula,False
+394463,18,0,fenotipo,,nula,nula,False
+394994,10,0,fenotipo,,nula,nula,False
+398190,9,1,fenotipo,,nula,nula,False
+402519,21,2,fenotipo,,nula,nula,False
+402970,26,0,fenotipo,,nula,nula,False
+403163,0,2,fenotipo,,nula,nula,False
+403632,0,0,fenotipo,,nula,nula,False
+405837,4,1,fenotipo,,nula,nula,False
+406660,9,3,fenotipo,,informativa,informativa,False
+407790,9,3,fenotipo,,informativa,informativa,False
+411046,1,2,fenotipo,,no informativa,no informativa,False
+411561,3,1,fenotipo,,nula,nula,False
+412391,1,0,fenotipo,,nula,nula,False
+413257,10,0,fenotipo,,nula,nula,False
+417384,18,2,fenotipo,,informativa,informativa,False
+419205,0,0,fenotipo,,nula,nula,False
+419264,1,0,fenotipo,,nula,nula,False
+422110,1,0,fenotipo,,nula,nula,False
+422536,10,3,fenotipo,,informativa,informativa,False
+423827,26,0,fenotipo,,nula,nula,False
+431338,9,0,fenotipo,,nula,nula,False
+432345,0,0,fenotipo,,nula,nula,False
+440471,1,0,fenotipo,,nula,nula,False
+440878,10,1,fenotipo,,no informativa,no informativa,False
+445172,10,1,fenotipo,,nula,nula,False
+446575,26,1,fenotipo,,nula,nula,False
+448340,26,1,fenotipo,,no informativa,no informativa,False
+449111,26,0,fenotipo,,nula,nula,False
+452807,1,0,fenotipo,,nula,nula,False
+453172,1,1,fenotipo,,nula,nula,False
+455054,0,0,fenotipo,,nula,nula,False
+455460,17,2,fenotipo,,nula,nula,False
+458924,26,0,fenotipo,,nula,nula,False
+462425,1,0,fenotipo,,nula,nula,False
+462859,3,3,fenotipo,,no informativa,no informativa,False
+464182,26,2,fenotipo,,nula,nula,False
+464647,18,0,fenotipo,,nula,nula,False
+464698,0,0,fenotipo,,nula,nula,False
+464790,10,1,fenotipo,,nula,nula,False
+466226,15,1,fenotipo,,nula,nula,False
+470504,10,3,fenotipo,,informativa,informativa,False
+474845,3,1,fenotipo,,nula,nula,False
+477668,26,1,fenotipo,,nula,nula,False
+478654,18,2,fenotipo,,nula,no informativa,False
+480814,10,2,fenotipo,,nula,nula,False
+480914,10,0,fenotipo,,nula,nula,False
+483191,0,3,fenotipo,,informativa,informativa,False
+485050,1,0,fenotipo,,nula,nula,False
+485106,18,0,fenotipo,,no informativa,no informativa,False
+485496,21,0,fenotipo,,nula,nula,False
+487513,10,0,fenotipo,,nula,nula,False
+489392,17,2,fenotipo,,nula,nula,False
+489926,9,2,fenotipo,,nula,nula,False
+491675,1,0,fenotipo,,nula,nula,False
+493475,3,2,fenotipo,,nula,nula,False
+495235,9,2,fenotipo,,nula,nula,False
+499232,1,1,fenotipo,,nula,nula,False
+499393,10,2,fenotipo,,nula,nula,False
+499618,0,0,fenotipo,,nula,nula,False
+499704,3,1,fenotipo,,nula,nula,False
+499732,1,1,fenotipo,,nula,nula,False
+499815,1,0,fenotipo,,nula,nula,False
+503745,26,0,fenotipo,,nula,nula,False
+503918,23,2,fenotipo,,informativa,informativa,False
+504493,9,0,fenotipo,,nula,nula,False
+505067,1,0,fenotipo,,nula,nula,False
+505460,25,3,fenotipo,,informativa,informativa,False
+505820,9,0,fenotipo,,nula,nula,False
+506245,3,0,fenotipo,,nula,nula,False
+510436,0,3,fenotipo,,informativa,informativa,False
+511468,9,2,fenotipo,,informativa,informativa,False
+515670,1,1,fenotipo,,nula,nula,False
+517185,5,2,fenotipo,,nula,nula,False
+520126,0,3,fenotipo,,nula,nula,False
+524072,26,2,fenotipo,,nula,nula,False
 530511,18,0,fenotipo,,nula,nula,False
-534025,10,3,fenotipo,,nula,nula,False
-536320,1,1,fenotipo,,no informativa,no informativa,False
-537160,0,1,fenotipo,,no informativa,no informativa,False
-541788,3,3,fenotipo,,nula,nula,False
-544756,26,3,fenotipo,,nula,nula,False
-544779,3,0,fenotipo,,nula,nula,False
-545378,10,2,fenotipo,,nula,nula,False
-548579,1,0,fenotipo,,nula,nula,False
-548657,1,3,fenotipo,,nula,nula,False
-550058,10,3,fenotipo,,nula,nula,False
-554001,10,0,fenotipo,,nula,nula,False
-554786,18,2,fenotipo,,nula,nula,False
-555643,0,3,fenotipo,,nula,nula,False
-556881,26,1,fenotipo,,nula,nula,False
-557725,4,2,fenotipo,,nula,nula,False
-558474,10,1,fenotipo,,nula,nula,False
-559860,17,2,fenotipo,,informativa,informativa,False
-562738,0,3,fenotipo,,nula,nula,False
-564519,26,0,fenotipo,,nula,nula,False
-565251,15,2,fenotipo,,nula,nula,False
-566276,23,3,fenotipo,,nula,nula,False
-566551,28,2,fenotipo,,informativa,informativa,False
-567209,18,2,fenotipo,,nula,nula,False
-571449,9,3,fenotipo,,nula,nula,False
-572432,10,3,fenotipo,,nula,nula,False
-572653,1,3,fenotipo,,nula,nula,False
-572684,0,2,fenotipo,,no informativa,no informativa,False
-573369,0,0,fenotipo,,nula,nula,False
-574148,18,3,fenotipo,,nula,nula,False
-574233,3,0,fenotipo,,no informativa,no informativa,False
-576141,3,3,fenotipo,,no informativa,no informativa,False
-581657,3,3,fenotipo,,nula,nula,False
-585372,26,0,fenotipo,,nula,nula,False
-586188,10,3,fenotipo,,no informativa,no informativa,False
-588063,1,3,fenotipo,,informativa,informativa,False
-589202,10,1,fenotipo,,nula,nula,False
-590231,0,0,fenotipo,,nula,nula,False
-591075,21,2,fenotipo,,informativa,informativa,False
-593038,0,3,fenotipo,,nula,nula,False
-594496,0,2,fenotipo,,no informativa,no informativa,False
-599614,1,3,fenotipo,,nula,nula,False
-601254,21,0,fenotipo,,nula,nula,False
-603045,26,3,fenotipo,,nula,nula,False
-603656,10,2,fenotipo,,nula,nula,False
-606411,3,0,fenotipo,,nula,nula,False
-607231,3,3,fenotipo,,nula,nula,False
-608788,26,0,fenotipo,,nula,nula,False
-609537,0,0,fenotipo,,nula,nula,False
-610005,10,0,fenotipo,,nula,nula,False
-612438,9,0,fenotipo,,nula,nula,False
-615786,3,0,fenotipo,,no informativa,no informativa,False
+530574,18,0,fenotipo,,nula,nula,False
+534245,1,1,fenotipo,,no informativa,no informativa,False
+538174,26,0,fenotipo,,nula,nula,False
+538862,1,1,fenotipo,,nula,nula,False
+539036,9,0,fenotipo,,nula,nula,False
+542282,3,0,fenotipo,,nula,nula,False
+543758,18,0,fenotipo,,nula,nula,False
+544491,0,0,fenotipo,,nula,nula,False
+546779,1,0,fenotipo,,nula,nula,False
+547894,10,2,fenotipo,,nula,nula,False
+551626,3,3,fenotipo,,nula,nula,False
+552122,3,2,fenotipo,,nula,nula,False
+553806,0,0,fenotipo,,nula,nula,False
+554588,0,0,fenotipo,,nula,nula,False
+554924,3,3,fenotipo,,nula,nula,False
+555515,18,1,fenotipo,,nula,nula,False
+558912,3,1,fenotipo,,nula,nula,False
+559548,17,2,fenotipo,,nula,nula,False
+563890,0,1,fenotipo,,nula,nula,False
+564484,26,2,fenotipo,,nula,nula,False
+565124,1,0,fenotipo,,nula,nula,False
+566292,1,0,fenotipo,,nula,nula,False
+567928,1,0,fenotipo,,nula,nula,False
+568233,1,2,fenotipo,,nula,nula,False
+570576,10,2,fenotipo,,nula,nula,False
+571220,18,3,fenotipo,,nula,nula,False
+571899,26,0,fenotipo,,nula,nula,False
+572812,0,1,fenotipo,,nula,nula,False
+572981,3,0,fenotipo,,nula,nula,False
+573220,26,3,fenotipo,,informativa,informativa,False
+574150,0,0,fenotipo,,nula,nula,False
+576810,10,0,fenotipo,,nula,nula,False
+579327,0,2,fenotipo,,informativa,informativa,False
+584318,9,3,fenotipo,,informativa,informativa,False
+586521,21,0,fenotipo,,no informativa,no informativa,False
+586712,3,0,fenotipo,,nula,nula,False
+587393,3,0,fenotipo,,nula,nula,False
+589028,9,1,fenotipo,,no informativa,no informativa,False
+592940,1,1,fenotipo,,nula,nula,False
+594260,0,1,fenotipo,,nula,nula,False
+598165,15,0,fenotipo,,nula,no informativa,False
+599057,26,2,fenotipo,,nula,nula,False
+600533,10,2,fenotipo,,nula,nula,False
+602966,3,2,fenotipo,,nula,nula,False
+604743,3,1,fenotipo,,no informativa,no informativa,False
+605201,1,1,fenotipo,,nula,nula,False
+605572,10,3,fenotipo,,informativa,informativa,False
+610313,0,0,fenotipo,,nula,nula,False
+612320,1,3,fenotipo,,informativa,informativa,False
+614601,0,2,fenotipo,,nula,nula,False
+614638,26,2,fenotipo,,nula,nula,False
+614776,3,1,fenotipo,,nula,nula,False
 615802,10,2,fenotipo,,nula,nula,False
-620444,26,3,fenotipo,,nula,nula,False
-621297,0,0,fenotipo,,nula,nula,False
-622001,0,0,fenotipo,,nula,nula,False
-622492,10,2,fenotipo,,nula,nula,False
-622544,10,2,fenotipo,,nula,nula,False
-624052,9,2,fenotipo,,nula,nula,False
-625898,3,0,fenotipo,,no informativa,no informativa,False
+620990,9,3,fenotipo,,informativa,informativa,False
+621607,26,2,fenotipo,,nula,nula,False
+622292,1,2,fenotipo,,nula,nula,False
+622425,3,1,fenotipo,,nula,nula,False
+624251,0,0,fenotipo,,nula,nula,False
+625480,3,2,fenotipo,,nula,nula,False
 626832,10,2,fenotipo,,nula,nula,False
-628753,1,0,fenotipo,,nula,nula,False
+626970,1,1,fenotipo,,nula,nula,False
 628887,22,2,fenotipo,,nula,nula,False
-630329,18,3,fenotipo,,nula,nula,False
-630931,0,1,fenotipo,,nula,nula,False
-631996,18,0,fenotipo,,nula,nula,False
-638556,10,0,fenotipo,,nula,nula,False
-641340,10,2,fenotipo,,no informativa,no informativa,False
-643274,0,2,fenotipo,,nula,nula,False
-646728,17,2,fenotipo,,nula,nula,False
-649984,26,2,fenotipo,,nula,nula,False
-653534,18,1,fenotipo,,nula,nula,False
-654475,3,0,fenotipo,,nula,nula,False
-654559,10,2,fenotipo,,nula,nula,False
-655214,9,2,fenotipo,,nula,nula,False
-656902,26,2,fenotipo,,nula,nula,False
-660615,23,1,fenotipo,,no informativa,no informativa,False
-661733,1,2,fenotipo,,no informativa,no informativa,False
-664980,1,2,fenotipo,,nula,nula,False
-671391,9,3,fenotipo,,informativa,informativa,False
-674528,10,2,fenotipo,,nula,nula,False
-675711,18,2,fenotipo,,nula,nula,False
-677197,1,0,fenotipo,,nula,nula,False
-677433,3,1,fenotipo,,nula,nula,False
-680231,1,0,fenotipo,,nula,nula,False
-681057,10,1,fenotipo,,nula,nula,False
-682032,26,2,fenotipo,,nula,nula,False
-682416,26,0,fenotipo,,no informativa,no informativa,False
-685615,26,1,fenotipo,,nula,nula,False
-686415,1,1,fenotipo,,nula,nula,False
-690274,10,0,fenotipo,,nula,nula,False
-692561,15,3,fenotipo,,nula,nula,False
-693482,18,0,fenotipo,,nula,nula,False
-694409,0,2,fenotipo,,nula,nula,False
-694886,18,1,fenotipo,,nula,nula,False
-695232,3,1,fenotipo,,no informativa,no informativa,False
-695561,3,3,fenotipo,,no informativa,no informativa,False
-696346,1,2,fenotipo,,nula,nula,False
-696394,26,3,fenotipo,,nula,nula,False
-697363,9,2,fenotipo,,nula,nula,False
-697516,23,0,fenotipo,,no informativa,no informativa,False
-698555,3,0,fenotipo,,nula,nula,False
-699038,1,0,fenotipo,,nula,nula,False
-700144,26,0,fenotipo,,nula,nula,False
-701725,26,2,fenotipo,,nula,nula,False
-702369,10,0,fenotipo,,nula,nula,False
-702614,0,2,fenotipo,,no informativa,no informativa,False
-706006,10,3,fenotipo,,nula,nula,False
-707833,21,3,fenotipo,,nula,nula,False
-712594,0,0,fenotipo,,nula,nula,False
-712988,0,0,fenotipo,,no informativa,no informativa,False
-721868,3,2,fenotipo,,no informativa,no informativa,False
-724241,17,3,fenotipo,,nula,nula,False
-724241,21,3,fenotipo,,nula,nula,False
-727264,10,1,fenotipo,,nula,nula,False
-728508,17,0,fenotipo,,nula,nula,False
-730415,9,1,fenotipo,,nula,nula,False
-731939,1,2,fenotipo,,nula,nula,False
-737010,21,2,fenotipo,,no informativa,no informativa,False
-737318,26,2,fenotipo,,no informativa,no informativa,False
-738967,4,2,fenotipo,,nula,nula,False
-742920,0,1,fenotipo,,nula,nula,False
-745451,3,0,fenotipo,,nula,nula,False
-745569,21,2,fenotipo,,nula,no informativa,False
-748001,10,0,fenotipo,,nula,nula,False
-749074,3,2,fenotipo,,nula,nula,False
-750458,10,3,fenotipo,,nula,nula,False
-750750,10,3,fenotipo,,nula,nula,False
-754632,0,2,fenotipo,,no informativa,no informativa,False
-757741,18,2,fenotipo,,nula,nula,False
-757783,1,1,fenotipo,,nula,nula,False
-758145,1,2,fenotipo,,nula,nula,False
-759396,10,2,fenotipo,,no informativa,no informativa,False
-759533,26,0,fenotipo,,nula,nula,False
-764205,9,0,fenotipo,,no informativa,no informativa,False
-765394,10,1,fenotipo,,no informativa,no informativa,False
+633327,26,2,fenotipo,,nula,nula,False
+634442,9,3,fenotipo,,informativa,informativa,False
+638150,10,0,fenotipo,,nula,nula,False
+643774,21,2,fenotipo,,nula,nula,False
+646862,26,0,fenotipo,,nula,nula,False
+648205,10,0,fenotipo,,nula,nula,False
+648448,26,0,fenotipo,,nula,nula,False
+650835,28,2,fenotipo,,nula,nula,False
+651012,26,0,fenotipo,,nula,nula,False
+651651,9,0,fenotipo,,nula,nula,False
+652517,26,2,fenotipo,,nula,nula,False
+653071,1,0,fenotipo,,nula,nula,False
+656165,1,2,fenotipo,,nula,nula,False
+665633,18,1,fenotipo,,nula,nula,False
+669261,0,2,fenotipo,,nula,nula,False
+670952,18,1,fenotipo,,no informativa,no informativa,False
+673549,21,1,fenotipo,,nula,nula,False
+674093,18,0,fenotipo,,nula,nula,False
+675512,0,0,fenotipo,,nula,nula,False
+675523,1,0,fenotipo,,nula,nula,False
+678576,5,2,fenotipo,,nula,nula,False
+680684,18,3,fenotipo,,informativa,informativa,False
+682588,0,1,fenotipo,,nula,nula,False
+688745,17,1,fenotipo,,no informativa,no informativa,False
+689566,26,0,fenotipo,,nula,nula,False
+690046,1,0,fenotipo,,nula,nula,False
+690124,28,2,fenotipo,,nula,nula,False
+690258,26,0,fenotipo,,nula,nula,False
+692561,15,3,fenotipo,,informativa,informativa,False
+693535,0,3,fenotipo,,no informativa,no informativa,False
+695103,26,0,fenotipo,,nula,nula,False
+695180,3,2,fenotipo,,nula,nula,False
+696736,0,3,fenotipo,,informativa,informativa,False
+697516,23,0,fenotipo,,nula,nula,False
+698093,18,0,fenotipo,,nula,nula,False
+698828,0,0,fenotipo,,nula,nula,False
+699024,26,0,fenotipo,,nula,nula,False
+700063,1,2,fenotipo,,nula,nula,False
+705943,26,2,fenotipo,,informativa,informativa,False
+707445,26,3,fenotipo,,informativa,informativa,False
+715391,3,1,fenotipo,,nula,nula,False
+720854,25,0,fenotipo,,nula,nula,False
+721822,0,0,fenotipo,,nula,nula,False
+723997,1,0,fenotipo,,nula,nula,False
+724758,1,0,fenotipo,,nula,nula,False
+725145,18,1,fenotipo,,nula,nula,False
+729936,28,0,fenotipo,,nula,nula,False
+730088,0,0,fenotipo,,nula,nula,False
+733148,10,0,fenotipo,,nula,nula,False
+735203,18,0,fenotipo,,nula,nula,False
+736659,18,0,fenotipo,,nula,nula,False
+737140,10,3,fenotipo,,informativa,informativa,False
+740049,3,0,fenotipo,,nula,nula,False
+743386,3,3,fenotipo,,informativa,informativa,False
+744854,9,2,fenotipo,,nula,nula,False
+746054,21,2,fenotipo,,nula,nula,False
+748075,3,3,fenotipo,,nula,nula,False
+753400,1,1,fenotipo,,nula,nula,False
+753855,3,0,fenotipo,,nula,nula,False
+755050,26,3,fenotipo,,informativa,informativa,False
+756405,0,0,fenotipo,,nula,nula,False
+758034,10,0,fenotipo,,nula,nula,False
+759396,10,2,fenotipo,,nula,nula,False
+761987,3,2,fenotipo,,nula,no informativa,False
+763485,21,1,fenotipo,,nula,nula,False
 767137,1,1,fenotipo,,nula,nula,False
-768353,1,2,fenotipo,,nula,nula,False
-770863,22,2,fenotipo,,nula,nula,False
-771061,10,1,fenotipo,,nula,nula,False
-774333,0,3,fenotipo,,nula,nula,False
-774705,22,3,fenotipo,,nula,nula,False
-776759,10,2,fenotipo,,nula,nula,False
+768727,26,0,fenotipo,,nula,nula,False
+769802,10,0,fenotipo,,nula,nula,False
+770863,21,2,fenotipo,,nula,nula,False
+771208,1,0,fenotipo,,nula,nula,False
+771418,0,1,fenotipo,,nula,nula,False
+771875,10,1,fenotipo,,nula,nula,False
+774946,4,1,fenotipo,,nula,nula,False
+776926,0,2,fenotipo,,nula,nula,False
 777076,1,2,fenotipo,,nula,nula,False
-777950,18,3,fenotipo,,nula,no informativa,False
-779453,26,1,fenotipo,,nula,nula,False
-781502,3,0,fenotipo,,nula,nula,False
-781677,0,2,fenotipo,,nula,nula,False
-782855,15,2,fenotipo,,nula,nula,False
-786902,0,1,fenotipo,,nula,nula,False
-787738,18,2,fenotipo,,informativa,informativa,False
-789235,22,3,fenotipo,,nula,nula,False
-794904,1,2,fenotipo,,nula,nula,False
-795448,1,1,fenotipo,,nula,nula,False
-795474,15,2,fenotipo,,nula,nula,False
-795532,18,1,fenotipo,,no informativa,no informativa,False
-796175,18,2,fenotipo,,nula,no informativa,False
-796279,18,0,fenotipo,,nula,nula,False
-796799,9,0,fenotipo,,nula,nula,False
+777708,10,0,fenotipo,,nula,nula,False
+780256,0,0,fenotipo,,nula,nula,False
+781920,10,2,fenotipo,,nula,nula,False
+782855,4,2,fenotipo,,nula,nula,False
+783594,10,0,fenotipo,,nula,nula,False
+789235,22,3,fenotipo,,no informativa,no informativa,False
+791217,0,0,fenotipo,,nula,nula,False
+791251,18,2,fenotipo,,nula,nula,False
+791281,3,1,fenotipo,,nula,nula,False
+791800,18,2,fenotipo,,nula,nula,False
+794418,9,2,fenotipo,,nula,nula,False
+794611,26,3,fenotipo,,informativa,informativa,False
+794634,0,0,fenotipo,,nula,nula,False
+794716,1,1,fenotipo,,nula,nula,False
+795829,26,2,fenotipo,,nula,nula,False
+796205,18,0,fenotipo,,nula,nula,False
+796587,1,0,fenotipo,,nula,nula,False
+798051,0,0,fenotipo,,nula,nula,False
+798179,9,2,fenotipo,,nula,nula,False
+798964,9,0,fenotipo,,nula,nula,False
 799893,3,1,fenotipo,,nula,nula,False
-800445,1,2,fenotipo,,nula,nula,False
-800926,1,0,fenotipo,,nula,nula,False
-801985,26,0,fenotipo,,nula,nula,False
-803405,18,1,fenotipo,,no informativa,no informativa,False
+800032,3,2,fenotipo,,nula,nula,False
+801432,10,2,fenotipo,,nula,nula,False
+804375,3,3,fenotipo,,informativa,informativa,False
+804675,10,1,fenotipo,,nula,nula,False
+805780,3,1,fenotipo,,nula,nula,False
 806043,0,2,fenotipo,,nula,nula,False
-806967,17,2,fenotipo,,no informativa,no informativa,False
-808645,26,3,fenotipo,,nula,nula,False
-809945,18,3,fenotipo,,nula,nula,False
-814684,26,2,fenotipo,,informativa,informativa,False
-824633,0,3,fenotipo,,no informativa,no informativa,False
-824724,26,3,fenotipo,,nula,nula,False
+808516,18,2,fenotipo,,nula,nula,False
+809087,10,0,fenotipo,,nula,nula,False
+809177,3,0,fenotipo,,nula,nula,False
+811473,26,0,fenotipo,,nula,nula,False
+812505,18,2,fenotipo,,nula,nula,False
+815860,0,0,fenotipo,,nula,nula,False
+819610,26,2,fenotipo,,nula,no informativa,False
+822605,28,0,fenotipo,,nula,nula,False
+827002,26,2,fenotipo,,no informativa,no informativa,False
+827954,1,1,fenotipo,,nula,nula,False
+828035,9,2,fenotipo,,nula,nula,False
 828632,1,0,fenotipo,,nula,nula,False
+830280,10,2,fenotipo,,nula,nula,False
+830753,10,2,fenotipo,,nula,nula,False

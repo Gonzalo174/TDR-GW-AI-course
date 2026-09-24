@@ -289,9 +289,9 @@ hacerlo en esta base: la capa química guardada sólo permite subir el umbral, q
 quita vecinos, y el mapeo a KEGG no está disponible.
 
 \textbf{Cuando hay semilla informativa.} El \PctRecInformativa\,\% dice poco:
-con unas doce mil proteínas por organismo, $\mathrm{frank}<0.1$ es quedar entre
-las primeras $\sim$\FrankCorteRank, y sólo \NInfFueraCorte\ de las \NInformativa\
-quedan afuera. La Figura~\ref{fig:inf} mira la posición absoluta. El blanco
+en la mediana de estos casos, $\mathrm{frank}<0.1$ es quedar entre las primeras
+$\sim$\FrankCorteRank\ proteínas del organismo, y sólo \NInfFueraCorte\ de las
+\NInformativa\ quedan afuera. La Figura~\ref{fig:inf} mira la posición absoluta. El blanco
 verdadero queda primero en el \PctInfTopUno\,\% de los casos, entre los diez
 primeros en el \PctInfTopDiez\,\% y entre los cien primeros en el
 \PctInfTopCien\,\%; el azar pondría en el top-10 al \AzarTopDiez\,\%. Detrás de
@@ -332,14 +332,19 @@ distribución.}
 \NProteinas\ proteínas de la red), la curva de recuperación acumulada tiene una
 pendiente alta en las primeras posiciones que cae al ruido de fondo en
 $r^*_G=\RGEstrella$ (Figura~\ref{fig:rg}): una propuesta más abajo que eso no se
-distingue del azar. Ese corte separa dos mecanismos. En la inferencia
+distingue del azar. Es un corte operativo, no un parámetro identificado: el
+umbral es $\lambda_\infty + k_\sigma\sigma$ con $k_\sigma=3$, y con $k_\sigma$
+entre \KSigmaMin\ y \KSigmaMax\ el corte va de \RGSensMin\ a \RGSensMax. Ese
+corte separa dos mecanismos. En la inferencia
 \emph{directa} el blanco verdadero está entre las semillas (lo trae un vecino
 químico); en la \emph{indirecta} sólo se llega por la capa de anotaciones. La
 directa es el \PctDirecta\,\% de los casos con ranking y pone el blanco en la
 posición global mediana \RGDirecta\ (posición \RSSDirecta\ dentro del
-organismo); la indirecta, el \PctIndirecta\,\%, lo pone en la \RGIndirecta. El
-trabajo original reporta una partición 68\,\%\,/\,32\,\% \cite{berenstein2016}:
-aquí casi toda la recuperación útil viene de vecinos químicos.
+organismo); la indirecta, el \PctIndirecta\,\%, lo pone en la \RGIndirecta. De
+los blancos recuperados, el \PctRecuperadasDirecta\,\% lo trae un vecino
+químico: la mayor parte de la recuperación útil viene de la capa química. (La
+partición 68\,\%\,/\,32\,\% que el código de la versión v3 atribuye a
+\cite{berenstein2016} no se verificó contra el artículo.)
 
 \begin{figure}[!htb]
 \centering
@@ -352,10 +357,12 @@ del ranking global. Abajo: su derivada, suavizada, y el umbral $\lambda_\infty +
 
 \textbf{Aplicación al organismo foco.} De \EmbudoActivos\ compuestos con
 actividad fenotípica contra \textit{P.\,falciparum}, \EmbudoHuerfanos\ no tienen blanco proteico
-conocido y los \EmbudoTratables\ tienen vecinos químicos con blanco. Ninguno
-recibe una propuesta por encima de $r^*_G$ (\NSugerencias\ sugerencias): con la
-base recortada el embudo es demasiado angosto para producir candidatos, y el
-método lo dice en vez de forzar una respuesta.
+conocido y los \EmbudoTratables\ tienen vecinos químicos con blanco. De ellos,
+\NSugCompuestos\ reciben una propuesta por encima de $r^*_G$ (\NSugerencias\
+sugerencias sobre \NSugBlancos\ blanco distinto de \textit{P.\,falciparum}).
+Es un candidato para ensayar, no un resultado: el embudo es angosto porque la
+base está recortada, y la propuesta vale lo que vale la recuperación por
+encima de $r^*_G$ medida arriba.
 
 \section{Contraste con la versión anterior (v4)}
 \label{sec:v4}
@@ -364,8 +371,10 @@ Este repositorio es un port del análisis v4 a la base codificada y recortada.
 Para saber si el port es fiel, las mismas tablas se calcularon antes de los dos
 cambios y quedaron versionadas como oráculo. El criterio es uno solo: \emph{si
 el análisis toca la capa química, el recorte lo mueve; si no la toca, no lo
-mueve}. De \NComparadas\ columnas comparadas hay \NDiscrepancias\
-discrepancias (Figura~\ref{fig:eq}):
+mueve}. En desorfanización hay además una segunda causa de cambio: este
+repositorio corrige un error del modelo que el oráculo tiene (más abajo). De
+\NComparadas\ columnas comparadas hay \NDiscrepancias\ discrepancias
+(Figura~\ref{fig:eq}):
 
 \begin{itemize}\setlength\itemsep{.1em}
 \item \textbf{Priorización}, sin capa química: las \NComparadasGP\ columnas son
@@ -373,15 +382,18 @@ idénticas (\NIdenticasGP), y los óptimos coinciden con los de un control
 independiente en \ControlCoinciden\ de \NEspeciesOpt\ organismos, con diferencia
 máxima de AUC01 de \ControlDeltaMax.
 \item \textbf{Desorfanización}, que arma la semilla desde el vecindario químico:
-\NCambianHU\ de \NComparadasHU\ columnas cambian, todas en la dirección que el
-recorte predice: la semilla nula baja del \PctSinSemillaVcuatro\ al
+\NCambianHU\ de \NComparadasHU\ columnas cambian. Contra el oráculo, que tiene
+el error de la semilla, la semilla nula baja del \PctSinSemillaVcuatro\ al
 \PctSinSemilla\,\%, la recuperación sube del \PctRecuperadasVcuatro\ al
-\PctRecuperadas\,\% y $r^*_G$ pasa de \RGEstrellaVcuatro\ a \RGEstrella, sobre
-el mismo conjunto (\NPseudo\ pseudohuérfanas en los dos lados). El filtro de
-promiscuidad pasó de \PromiscuosVcuatro\ compuestos a \NPromiscuos\ ---la mayoría
-no sobrevivió al recorte---, pero no está confirmado que eso explique la baja de
-la semilla nula: en la base actual el filtro saca \NPromiscuosEnBase\ compuestos
-y \NDdsRemovidas\ aristas de la capa de subestructuras.
+\PctRecuperadas\,\% y $r^*_G$ pasa de \RGEstrellaVcuatro\ a \RGEstrella, con el
+mismo tamaño de muestra (\NPseudo\ pseudohuérfanas en los dos lados). Casi todo
+ese cambio es la corrección y no el recorte: v4 corregida, fuera de este
+repositorio, da las mismas clases de semilla para los compuestos que las dos
+muestras comparten (\texttt{PROVENANCE.md} §3.16). El filtro de promiscuidad
+pasó de \PromiscuosVcuatro\ compuestos a \NPromiscuos\ ---la mayoría no
+sobrevivió al recorte---, y no mueve la semilla: en la base actual saca
+\NPromiscuosEnBase\ compuestos y \NDdsRemovidas\ aristas de la capa de
+subestructuras.
 \item \textbf{Descriptivos de la base}: \NCambianAN\ de \NComparadasAN\ columnas
 cambian, las que miden componentes químicas.
 \end{itemize}
@@ -390,7 +402,8 @@ cambian, las que miden componentes químicas.
 \centering
 \includegraphics[width=.5\textwidth]{figuras/10_f01_equivalencia.pdf}
 \caption{Columnas comparadas contra el oráculo v4, por análisis. Verde:
-idéntica; ámbar: cambio explicado por el recorte; rojo sería una discrepancia.}
+idéntica; ámbar: cambio explicado por el recorte (en desorfanización, también
+por la corrección de la semilla); rojo sería una discrepancia.}
 \label{fig:eq}
 \end{figure}
 
@@ -403,6 +416,20 @@ excluía y aportaba el 53\,\% de las pseudohuérfanas; y las subestructuras crud
 no cruzaban contra la base. Ninguno lanza una excepción, y los cuatro los
 encontraron las pruebas o la comparación con el oráculo. El detalle está en
 \texttt{PROVENANCE.md}.
+
+\textbf{Un error que no era del port.} Al armar la semilla de un compuesto, el
+modelo busca sus vecinos en las aristas de similitud química, que unen
+\emph{clusters} de compuestos. El código las consultaba con el identificador del
+\emph{compuesto}, herencia del código original en R, escrito cuando esas aristas
+eran compuesto--compuesto. Como las dos numeraciones se solapan, no fallaba:
+devolvía los vecinos de otro cluster, sin relación con el compuesto. El error
+estaba también en v4, y ahí se encontró; se corrigió con una prueba que arma un
+cluster señuelo con el mismo número que el compuesto, y que falla con el código
+anterior. Sólo afecta a la desorfanización: la priorización arma la semilla
+desde todas las drogas y no pasa por esa búsqueda. Con el error, la semilla de
+cada compuesto dependía de qué cluster tenía su número, y la codificación
+renumeró compuestos y clusters: eso explica por qué, antes de corregirlo, la
+semilla nula difería entre v4 y este repositorio.
 
 \section{Verificación, reproducibilidad y límites}
 
@@ -433,7 +460,7 @@ en cada bifurcación, está en \texttt{PROVENANCE.md}.
 \textbf{Límites.} El repositorio no reproduce la base misma, que se deriva de
 datos que no se publican; ni la lista de compuestos promiscuos, que se calcula desde
 relaciones de subestructura crudas (se versiona como insumo); ni los nombres legibles de las anotaciones, que exigen
-un diccionario privado; ni la identidad de los organismos, que es deliberada.
+un diccionario privado.
 
 \bibliographystyle{plain}
 \bibliography{refs}

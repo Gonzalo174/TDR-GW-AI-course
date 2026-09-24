@@ -6,6 +6,12 @@ nds_fun.R). Congelado: se cambia solo con un test de `comun/tests/` que lo
 justifique. Todo lo demas —rutas, carga, metricas, paralelizacion, figuras—
 vive en `comun/tdr.py`.
 
+Cambios respecto del original (cada uno con su test o su registro):
+  2026-09-08  clave de salida con map(str, sp_out) (PROVENANCE.md §3.4).
+  2026-09-24  get_druggable_targets consulta ddt/dds con cluster_id y no con
+              drug_id (comun/tests/test_vecinos.py, PROVENANCE.md §3.16). Un
+              unico salto, como antes. Portado desde TDR_2026_v4.
+
 Dependencies:
     pandas, numpy, scipy
 
@@ -94,8 +100,8 @@ def get_druggable_targets(
         aux = "all"
         if sp_out is not None:
             # map(str, ...): los codigos de especie son enteros en esta base.
-            # Unico cambio a este modulo en el port; arma la clave del dict de
-            # salida y no interviene en ningun calculo.
+            # Arma la clave del dict de salida y no interviene en ningun
+            # calculo (PROVENANCE.md §3.4).
             aux += "_sp_out_" + "_".join(map(str, sp_out))
         if sp_out_kfold < 1:
             aux += f"_sp_out_kfold_{sp_out_kfold}"
@@ -159,12 +165,19 @@ def get_druggable_targets(
  
                 # --- Tanimoto similarity navigation ---
                 doi_and_nei = np.concatenate([nei1, [idoi]]).astype(float)
+                # ddt y dds unen CLUSTERS identitarios (createDB/01-02): se consultan
+                # con los cluster_id de estas drogas, no con sus drug_id. Hasta el
+                # 2026-09-24 se consultaban con drug_id (heredado de nds_fun.R, cuando
+                # las aristas eran droga-droga) y devolvian los vecinos de otro
+                # cluster. Test: comun/tests/test_vecinos.py
+                t_cl = tclus.loc[tclus["drug"].isin(doi_and_nei), "cluster_id"].unique()
+                s_cl = sclus.loc[sclus["drug"].isin(doi_and_nei), "cluster_id"].unique()
  
-                neitc_1 = ddt[ddt["clusID1"].isin(doi_and_nei)][["clusID2", "weight"]].copy()
+                neitc_1 = ddt[ddt["clusID1"].isin(t_cl)][["clusID2", "weight"]].copy()
                 neitc_1 = neitc_1.dropna(subset=["weight"])
                 neitc_1 = neitc_1.rename(columns={"clusID2": "cluster_id"})
  
-                neitc_2 = ddt[ddt["clusID2"].isin(doi_and_nei)][["clusID1", "weight"]].copy()
+                neitc_2 = ddt[ddt["clusID2"].isin(t_cl)][["clusID1", "weight"]].copy()
                 neitc_2 = neitc_2.dropna(subset=["weight"])
                 neitc_2 = neitc_2.rename(columns={"clusID1": "cluster_id"})
  
@@ -189,7 +202,7 @@ def get_druggable_targets(
                     target_tani["type"] = "tani"
  
                 # --- Substructure similarity navigation ---
-                neisc = dds[dds.index.isin(doi_and_nei)][["to", "weight"]].copy()
+                neisc = dds[dds.index.isin(s_cl)][["to", "weight"]].copy()
                 neisc = neisc.dropna(subset=["weight"])
                 neisc = neisc.rename(columns={"to": "cluster_id"})
  

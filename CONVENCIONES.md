@@ -9,7 +9,10 @@ como registro), y acá están escritas tal como rigen en este repositorio.
 
 `comun/nucleo.py` es el modelo (semilla, relevance score, propagación) y está
 **congelado**: se cambia sólo con una prueba de `comun/tests/` que lo justifique.
-En este repositorio se cambió una línea, documentada en `PROVENANCE.md` §3.4.
+En este repositorio se cambió dos veces: una línea que arma la clave de un
+diccionario (`PROVENANCE.md` §3.4) y la consulta de la capa química al armar la
+semilla de una droga, que buscaba vecinos con el id equivocado
+(`PROVENANCE.md` §3.16, `comun/tests/test_vecinos.py`).
 `comun/tdr.py` tiene lo compartido: rutas, carga, métricas, paralelización y
 estilo. Cada carpeta de análisis tiene su `funciones_<analisis>.py` (cálculo) y
 su `figuras_<analisis>.py` (figuras). **Si una función la necesitan dos carpetas,

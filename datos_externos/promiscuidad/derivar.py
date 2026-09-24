@@ -125,8 +125,12 @@ def promiscuidad_subestructural(sub, comp, mw_max=tdr.MW_PROMISCUIDAD,
     abajo: semillas, cobertura y ranking de las pseudohuérfanas.
     """
     n_par = sub.groupby("hijo").size().rename("n_parentales")
+    # compound_data trae filas repetidas para algunos compuestos: sin este
+    # drop_duplicates el merge los duplica y la lista contaba 7 filas para 5
+    # compuestos (en v4, 30 para 25). Corregido el 2026-09-24.
+    mw = comp[["drug_id", "molweight"]].drop_duplicates("drug_id")
     d = (n_par.reset_index().rename(columns={"hijo": "drug_id"})
-         .merge(comp[["drug_id", "molweight"]], on="drug_id", how="left"))
+         .merge(mw, on="drug_id", how="left"))
 
     sel = d[(d["molweight"] < mw_max) & (d["n_parentales"] > n_par_min)].copy()
     aristas = int(sub["hijo"].isin(set(sel["drug_id"])).sum())

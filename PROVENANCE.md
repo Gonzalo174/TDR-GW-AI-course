@@ -66,18 +66,20 @@ Todas verificables en el código, con el comentario al lado.
 | 3.7 | Los outputs guardados de los notebooks se limpiaron antes de correr | traían los resultados de la versión anterior, calculados sobre otra base: dejarlos mezclaría dos corridas en un mismo archivo |
 | 3.8 | El faltante de `lambda_` (que marca el modo híbrido) se rotula `"nan"` a mano, no con `astype(str)` | en pandas 3 `astype(str)` **conserva** el faltante en vez de convertirlo a la cadena `"nan"`, y entonces `sorted` compara `str` contra `float` y matplotlib rechaza el valor. Se escribe explícito, que funciona igual en pandas 2 y 3 |
 | 3.9 | La columna de especie que sale del nombre de archivo se convierte a entero cuando son todos dígitos | antes los códigos eran texto y la comparación funcionaba por accidente; con códigos numéricos, `especie == SP_FOCO` comparaba `"26"` contra `26` y no encontraba nada |
-| 3.10 | `cargar_subestructuras_crudas` recodifica los ids de `raw_data/` a los códigos de `DB/` | sin eso las salidas no cruzan contra `datos.bioact` y el conjunto llega vacío a `huerfanas/` sin error: los compuestos promiscuos pasaban de 7 a 30 falsos |
+| 3.10 | `cargar_subestructuras_crudas` recodifica los ids de `raw_data/` a los códigos de `DB/` | sin eso las salidas no cruzan contra `datos.bioact` y el conjunto llega vacío a `huerfanas/` sin error: la lista de compuestos promiscuos salía con 30 filas falsas en lugar de los compuestos verdaderos |
 | 3.11 | Las figuras se dibujan en `<carpeta>/figuras_<analisis>.py` y **sólo leen tablas** de `resultados/`; cada una declara cuáles (`python comun/figuras.py --lista`), y la corrida guarda todo lo que una figura necesita (p. ej. `02_ranking_26.csv` para la ROC, `01_control_v5.csv`) | regenerar una figura costaba la corrida entera: varias dependían de variables en memoria o se dibujaban antes de la corrida, y todas exigían cargar la base. **Descartado:** guardar los objetos intermedios en `pickle`, que acopla las figuras a versiones de pandas y no se puede leer ni comparar contra el oráculo. Al redibujarlas desde las tablas, tres figuras de la corrida anterior resultaron rotuladas con el código crudo (`0`, `1`, …) en lugar del nombre; en las dos matrices especie × especie la causa es que los encabezados leídos del CSV son texto y la búsqueda en `NOMBRE_CORTO` fallaba en silencio. Las figuras nuevas convierten el encabezado antes de buscar |
 | 3.12 | Las tablas de `resultados/` (~50 MB) y sus `NN_meta.json` se versionan; las figuras no | quien corrige tiene que poder comprobar figuras y cifras sin pagar ~45 min de corrida con 20 procesos: con las tablas, `make verificar` lo hace en ~1 min. En un clon sin ellas no se regeneraba ninguna figura y la receta de entregables reescribía el informe con «??»; ahora `numeros.py` y `generar_pagina.py` se niegan a escribir si falta un dato. **Descartado:** versionar también las figuras, que se regeneran desde las tablas y duplicarían 30 archivos binarios; y no versionar nada, que dejaba la verificación atada a la corrida completa |
-| 3.13 | El cálculo de la lista de promiscuos sale de `analiceDB/03` a `datos_externos/promiscuidad/derivar.py`, y su salida (7 compuestos y dos tablas agregadas) se versiona como insumo; `analiceDB/03` la transcribe y mide su efecto sobre `DB/` | así ningún notebook necesita datos privados y toda la corrida se reproduce desde el repositorio. `derivar.py` reproduce las tres tablas byte a byte. **No se publica** la tabla por compuesto (peso molecular de ~84 000 compuestos al lado de su código): con esa precisión el peso molecular reidentifica el compuesto y deshace la codificación. **Descartado:** publicar las relaciones de subestructura y los pesos ya codificados para calcular la lista dentro del repo, por el mismo riesgo |
+| 3.13 | El cálculo de la lista de promiscuos sale de `analiceDB/03` a `datos_externos/promiscuidad/derivar.py`, y su salida (5 compuestos y dos tablas agregadas) se versiona como insumo; `analiceDB/03` la transcribe y mide su efecto sobre `DB/` | así ningún notebook necesita datos privados y toda la corrida se reproduce desde el repositorio. `derivar.py` reproduce las tres tablas byte a byte. **No se publica** la tabla por compuesto (peso molecular de ~84 000 compuestos al lado de su código): con esa precisión el peso molecular reidentifica el compuesto y deshace la codificación. **Descartado:** publicar las relaciones de subestructura y los pesos ya codificados para calcular la lista dentro del repo, por el mismo riesgo |
 | 3.14 | **Se revierte el anonimato de las especies**, y sólo el de las especies: los 16 nombres se escriben en `SPECIES` y pasan a las etiquetas de figuras y a la columna `nombre` de las tablas. Salen de cruzar `mapeos/mapa_especie.csv` contra `raw_data/genomes/genome_data.csv`, y son la única parte de los diccionarios privados que se publica | los códigos hacían el resultado ilegible: «sp26 (Protozoos, parasito)» no dice que el caso de aplicación es la malaria, ni que los tres kinetoplástidos son *T. cruzi*, *T. brucei* y *L. major*, ni que el contraste es contra *H. sapiens*. Y el anonimato ya era nominal: 3.2 admitía que el par (grupo, parásito) identificaba a tres de las 16. **No cambia la exposición de los compuestos**, que es lo que protege la codificación (3.13): los mapeos de compuesto, blanco, cluster, InterPro y OrthoMCL siguen sin publicarse. **Descartado:** recodificar `DB/` y `control/` con el nombre como identificador, que rompe la comparación byte a byte contra la corrida v5 y obliga a rehacer la corrida entera para un cambio de rótulo |
 
 | 3.15 | **Se revela el accession de InterPro de 391 dominios**: los de quinasa, en `tdr.ANN_QUINASA`, con el accession al lado de cada código. El análisis usa sólo el código; el accession está para auditar la marca. `datos_externos/quinasas/derivar.py` la regenera desde el catálogo de InterPro y el mapeo privado | `genome_prioritization/03` pregunta qué le hace β a una categoría grande y promiscua, y qué dominio es de quinasa no se puede decidir desde `DB/`: `ann` es un entero y los nombres no se publican (3.6). Sin la marca no hay análisis. **Costo aceptado:** esos 391 códigos quedan desanonimizados; los otros 36 533 accessions, y todo mapeo de compuesto, blanco o cluster, siguen sin publicarse. **Descartado:** versionar la lista como insumo externo en `datos_externos/`, como la de promiscuos (3.13) — es chica y estable, y esconderla en un CSV no la hacía menos pública, sólo más difícil de auditar; y publicar el nombre del dominio además del accession, que no agrega nada al análisis porque las quinasas se miran como grupo |
+| 3.16 | **Se corrige un error del modelo, heredado de v4**: al armar la semilla de una droga, `nucleo.get_druggable_targets` buscaba sus vecinos químicos en `ddt` (fingerprint) y `dds` (subestructura) con el `drug_id` de la droga y de sus *cluster-mates*, pero esas tablas unen **clusters** identitarios (`clusID1/clusID2`, `from/to` son `cluster_id`). Ahora se consulta con los `cluster_id` de esas drogas. Un único salto en la capa química, como antes; las demás reglas del núcleo no se tocaron. Lo justifica `comun/tests/test_vecinos.py`, que con datos sintéticos arma un cluster señuelo con el mismo número que la droga: falla con el código anterior (2 fallas, 1 error) y pasa con el nuevo. Se encontró y corrigió primero en `TDR_2026_v4`, y se portó acá el 2026-09-24 (`historia/README_GWAI_correccion_semilla.md`) | el error venía de `nds_fun.R`, escrito cuando esas aristas eran droga–droga, y se tradujo tal cual. **No fallaba**: las numeraciones se solapan (compuestos 0–831 174, clusters de fingerprint 0–769 636, de subestructura 0–788 536), así que buscar el compuesto 12 345 como cluster 12 345 devolvía los vecinos de **otro** cluster. Sólo afecta a `huerfanas/` (01–04, salvo el embudo) y a lo que las lee; `genome_prioritization/` arma la semilla sin `doi` y no pasa por esa rama, y los *cluster-mates* ya usaban `tclus`/`sclus` bien. **Descartado:** agregar un segundo salto en la capa química, que se probó en v4 y casi no mueve la recuperación (*A. thaliana*: 22.3 → 23.1 %) |
+| 3.17 | En `huerfanas/04` se iguala el tipo de `target_id` antes de cruzar las sugerencias con sus anotaciones | `tdr.anotar_targets` devuelve el `target_id` de `sta` (texto) y el ranking lo tiene entero. Es la misma clase de falla que las de §3 (un entero contra el texto que solía ser), pero en un camino que nunca se había ejecutado: hasta la corrección de 3.16 no había ninguna sugerencia bajo r*G. Esta sí lanzaba una excepción. **Descartado:** cambiar el tipo en `tdr.anotar_targets`, que usan otros análisis |
 ## 4. Qué es código propio y qué es librería
 
 | pieza | de dónde sale |
 |---|---|
-| modelo de propagación (`nds`, `get_druggable_targets`, `rs`) | `comun/nucleo.py`, propio, congelado salvo 3.4 |
+| modelo de propagación (`nds`, `get_druggable_targets`, `rs`) | `comun/nucleo.py`, propio, congelado salvo 3.4 y 3.16 |
 | test exacto de Fisher | `scipy.stats.fisher_exact` |
 | corrección por comparaciones múltiples | `statsmodels`, método `fdr_bh` |
 | ROC y AUC | `sklearn.metrics.roc_curve`, `auc`, `roc_auc_score` |
@@ -126,16 +128,40 @@ es decir nodos y aristas de esa capa; no toca proteínas ni anotaciones.
 Una corrección al criterio que había escrito antes: agrupé `huerfanas/` con
 `genome_prioritization/` como «no debería moverse», y está mal. `huerfanas/`
 construye la semilla desde el vecindario químico de cada droga, así que el
-recorte la mueve necesariamente. Lo que se ve al comparar confirma la corrección
-y la explica: el conjunto evaluado es **idéntico** (7 782 pseudohuérfanas en los
-dos lados), pero la distribución por tipo de semilla se corre: la semilla nula
-baja del 83 al 69 %. El filtro de promiscuidad pasó de descartar 30 compuestos
-(11.98 % de las relaciones crudas) a 7 (1.6 %), porque 23 de esos 30 no
-sobrevivieron al recorte, y la primera lectura fue que menos descartes daban más
-drogas con semilla. **Esa explicación no está confirmada**: medido sobre la base
-(`analiceDB/03_impacto_en_la_base.csv`), el filtro actual saca 5 compuestos y
-ninguna arista de la capa de subestructuras de `DB/`. Queda como pendiente en
-`PLAN.md`.
+recorte la mueve necesariamente. El tamaño de la muestra es el mismo (7 782
+pseudohuérfanas en los dos lados), pero antes de la corrección de §3.16 la semilla
+nula difería: 83 % en v4 y 69 % acá.
+
+**La causa era el error de §3.16, no el filtro de promiscuidad.** La primera
+lectura fue que el filtro descartaba menos compuestos (de 25 a 5, porque 20 no
+sobrevivieron al recorte; las tablas decían 30 y 7 porque tenían filas
+duplicadas), pero medido sobre la base (`analiceDB/03_impacto_en_la_base.csv`)
+el filtro saca 5 compuestos y **ninguna** arista de la capa de subestructuras de
+`DB/`: no podía mover la semilla. Con el error, la semilla de un compuesto
+dependía de qué cluster tenía su número, y la codificación renumeró compuestos y
+clusters; los clusters «equivocados» eran otros. Con la semilla corregida
+(2026-09-24) la predicción era que las semillas coincidieran con las de v4
+corregida para los mismos compuestos, y se cumple. Control hecho fuera del
+repositorio, porque cruzar los ids exige `mapa_compuesto`, que es privado:
+
+| | v4 corregida | este repositorio |
+|---|---:|---:|
+| semilla nula | 67.2 % | 67.8 % |
+| semillas informativas | 1 383 | 1 365 |
+| recuperadas (frank < 0.1) | 17.7 % | 17.5 % |
+| r*G | 80 | 76 |
+| sugerencias para *P. falciparum* | 2 compuestos → 1 blanco | los mismos 2 compuestos → el mismo blanco, con el mismo puntaje y rG |
+
+- En los 5 218 compuestos que comparten las dos muestras, la clase de semilla
+  coincide en el 100 %; frank y rSS, en todos salvo uno (*O. sativa*, puesto 59
+  contra 56, por el desempate con los pesos redondeados de la base codificada).
+- En los 10 organismos con menos de 1 000 pseudohuérfanas, donde las dos
+  muestras son el conjunto completo, el porcentaje de semilla nula y de
+  recuperación por organismo es idéntico. Las diferencias del total vienen de
+  los 6 organismos muestreados: el sorteo de 1 000 depende del orden de los ids,
+  que la codificación cambió.
+- La corrida anterior de este repositorio (con el error) queda en el historial:
+  `git show e3afdb0:resultados/huerfanas_out/01_resumen_frank.csv`.
 
 ## 6. Lo que no se puede reproducir desde este repositorio
 

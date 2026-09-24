@@ -1,10 +1,10 @@
 {
   "notebook": "04_aplicacion_especie.ipynb",
   "nb": "04",
-  "fecha": "2026-09-10 11:06",
+  "fecha": "2026-09-24 16:32",
   "params": {
     "especie": 26,
-    "r_g_estrella": 74.0,
+    "r_g_estrella": 76.0,
     "optimos": [
       1.2,
       1.0,

@@ -1,7 +1,7 @@
 {
   "notebook": "10_equivalencia.ipynb",
   "nb": "10",
-  "fecha": "2026-09-10 15:36",
+  "fecha": "2026-09-24 16:32",
   "params": {
     "rtol": 1e-09,
     "esperado": {

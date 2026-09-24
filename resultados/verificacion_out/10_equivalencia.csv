@@ -11,19 +11,19 @@ analiceDB,02_conectividad_drogas.csv,(sin columnas numericas comunes),,,,sin dat
 analiceDB,03_bioactividades_por_tag.csv,cluster_consistent,8.0,1.0,0.0,idéntico,fila,8,8
 analiceDB,03_bioactividades_por_tag.csv,n,8.0,0.5,1499732.0,explicado por el recorte,fila,8,8
 analiceDB,03_bioactividades_por_tag.csv,pct,8.0,0.0,6.607042563891611,explicado por el recorte,fila,8,8
-analiceDB,03_compuestos_promiscuos.csv,drug_id,7.0,0.0,1527286.0,explicado por el recorte,fila,7,30
-analiceDB,03_compuestos_promiscuos.csv,molweight,7.0,0.0,40.056452255999986,explicado por el recorte,fila,7,30
-analiceDB,03_compuestos_promiscuos.csv,n_parentales,7.0,0.0,24321.0,explicado por el recorte,fila,7,30
+analiceDB,03_compuestos_promiscuos.csv,drug_id,5.0,0.0,488006.0,explicado por el recorte,fila,5,30
+analiceDB,03_compuestos_promiscuos.csv,molweight,5.0,0.0,40.056452255999986,explicado por el recorte,fila,5,30
+analiceDB,03_compuestos_promiscuos.csv,n_parentales,5.0,0.0,24321.0,explicado por el recorte,fila,5,30
 analiceDB,03_curva_filtrado.csv,aristas_filtrables,92.0,0.13043478260869565,214621.0,explicado por el recorte,fila,92,92
-analiceDB,03_curva_filtrado.csv,compuestos_filtrables,92.0,0.13043478260869565,1505.0,explicado por el recorte,fila,92,92
+analiceDB,03_curva_filtrado.csv,compuestos_filtrables,92.0,0.13043478260869565,1990.0,explicado por el recorte,fila,92,92
 analiceDB,03_curva_filtrado.csv,mw_max,92.0,1.0,0.0,idéntico,fila,92,92
 analiceDB,03_curva_filtrado.csv,umbral_promiscuidad,92.0,1.0,0.0,idéntico,fila,92,92
 analiceDB,03_impacto_filtro.csv,aristas_filtradas,1.0,0.0,96630.0,explicado por el recorte,fila,1,1
-analiceDB,03_impacto_filtro.csv,compuestos_filtrados,1.0,0.0,23.0,explicado por el recorte,fila,1,1
+analiceDB,03_impacto_filtro.csv,compuestos_filtrados,1.0,0.0,25.0,explicado por el recorte,fila,1,1
 analiceDB,03_impacto_filtro.csv,mw_mediana_filtrados,1.0,0.0,13.518025580000014,explicado por el recorte,fila,1,1
-analiceDB,03_impacto_filtro.csv,n_parentales_p99,1.0,0.0,9.0,explicado por el recorte,fila,1,1
+analiceDB,03_impacto_filtro.csv,n_parentales_p99,1.0,0.0,7.0,explicado por el recorte,fila,1,1
 analiceDB,03_impacto_filtro.csv,pct_aristas,1.0,0.0,10.365703946329733,explicado por el recorte,fila,1,1
-analiceDB,03_impacto_filtro.csv,pct_compuestos,1.0,0.0,0.006232742105244901,explicado por el recorte,fila,1,1
+analiceDB,03_impacto_filtro.csv,pct_compuestos,1.0,0.0,0.008250453908095,explicado por el recorte,fila,1,1
 genome_prioritization,01_sp0.csv,AUC,120.0,1.0,4.440892098500626e-16,idéntico,fila,120,120
 genome_prioritization,01_sp0.csv,AUC01,120.0,1.0,0.0,idéntico,fila,120,120
 genome_prioritization,01_sp0.csv,N_targets,120.0,1.0,0.0,idéntico,fila,120,120
@@ -175,180 +175,183 @@ genome_prioritization,02_plateau.csv,n_dentro_0.005,16.0,1.0,0.0,idéntico,distr
 genome_prioritization,02_plateau.csv,n_dentro_0.01,16.0,1.0,0.0,idéntico,distribucion,16,16
 genome_prioritization,02_spearman_especies.csv,(sin columnas numericas comunes),,,,sin datos,,16,16
 huerfanas,01_resumen_frank.csv,corte,27.0,1.0,0.0,idéntico,fila,27,27
-huerfanas,01_resumen_frank.csv,n,27.0,0.1111111111111111,1112.0,explicado por el recorte,fila,27,27
-huerfanas,01_resumen_frank.csv,pct_recuperadas,27.0,0.14814814814814814,15.625474996200031,explicado por el recorte,fila,27,27
-huerfanas,01_resumen_frank.csv,pct_sin_semilla,27.0,0.2222222222222222,40.80495356037153,explicado por el recorte,fila,27,27
+huerfanas,01_resumen_frank.csv,n,27.0,0.1111111111111111,1197.0,explicado por el recorte,fila,27,27
+huerfanas,01_resumen_frank.csv,pct_recuperadas,27.0,0.14814814814814814,39.206161582048104,explicado por el recorte,fila,27,27
+huerfanas,01_resumen_frank.csv,pct_sin_semilla,27.0,0.2222222222222222,61.532140042778344,explicado por el recorte,fila,27,27
 huerfanas,01_sp0_pseudohuerfanas.csv,drug_id,1000.0,0.19224180840205063,1760771.5,explicado por el recorte,distribucion,1000,1000
-huerfanas,01_sp0_pseudohuerfanas.csv,frank,102.0,0.9996330275229358,0.04668694376743071,idéntico,distribucion,1000,1000
-huerfanas,01_sp0_pseudohuerfanas.csv,n_semilla,1000.0,1.0,4.178000000000001,idéntico,distribucion,1000,1000
+huerfanas,01_sp0_pseudohuerfanas.csv,frank,102.0,0.0045259938837919345,0.4995089614534742,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp0_pseudohuerfanas.csv,n_semilla,1000.0,1.0,9.47,idéntico,distribucion,1000,1000
 huerfanas,01_sp0_pseudohuerfanas.csv,n_targets,102.0,1.0,0.0,idéntico,distribucion,1000,1000
-huerfanas,01_sp0_pseudohuerfanas.csv,rG,102.0,0.9982045832289487,17192.9519211725,explicado por el recorte,distribucion,1000,1000
-huerfanas,01_sp0_pseudohuerfanas.csv,rSS,102.0,0.9996330275229358,190.15592196474563,idéntico,distribucion,1000,1000
-huerfanas,01_sp0_pseudohuerfanas.csv,rank,102.0,0.9996330275229358,190.15592196474563,idéntico,distribucion,1000,1000
-huerfanas,01_sp0_pseudohuerfanas.csv,score,102.0,1.0,0.006823228148583649,idéntico,distribucion,1000,1000
+huerfanas,01_sp0_pseudohuerfanas.csv,rG,102.0,0.0013439246106868863,185029.25,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp0_pseudohuerfanas.csv,rSS,102.0,0.0045259938837920455,2034.5,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp0_pseudohuerfanas.csv,rank,102.0,0.0045259938837920455,2034.5,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp0_pseudohuerfanas.csv,score,102.0,0.0,0.08794751140075024,explicado por el recorte,distribucion,1000,1000
 huerfanas,01_sp0_pseudohuerfanas.csv,target_id,1000.0,1.0,743.6539999999804,idéntico,distribucion,1000,1000
 huerfanas,01_sp10_pseudohuerfanas.csv,drug_id,1000.0,0.9804300924255596,547726.152,explicado por el recorte,distribucion,1000,1000
-huerfanas,01_sp10_pseudohuerfanas.csv,frank,184.0,0.9995102040816325,0.019320154947906065,idéntico,distribucion,1000,1000
-huerfanas,01_sp10_pseudohuerfanas.csv,n_semilla,1000.0,1.0,3.335,idéntico,distribucion,1000,1000
+huerfanas,01_sp10_pseudohuerfanas.csv,frank,184.0,0.9969781117281934,0.147988542034229,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp10_pseudohuerfanas.csv,n_semilla,1000.0,1.0,7.398,idéntico,distribucion,1000,1000
 huerfanas,01_sp10_pseudohuerfanas.csv,n_targets,184.0,1.0,0.0,idéntico,distribucion,1000,1000
-huerfanas,01_sp10_pseudohuerfanas.csv,rG,184.0,0.9968774279577062,7343.335412105109,explicado por el recorte,distribucion,1000,1000
-huerfanas,01_sp10_pseudohuerfanas.csv,rSS,184.0,0.9995102040816326,117.71770409759165,idéntico,distribucion,1000,1000
-huerfanas,01_sp10_pseudohuerfanas.csv,rank,184.0,0.9995102040816326,117.71770409759165,idéntico,distribucion,1000,1000
-huerfanas,01_sp10_pseudohuerfanas.csv,score,184.0,1.0,0.028715774106487284,idéntico,distribucion,1000,1000
+huerfanas,01_sp10_pseudohuerfanas.csv,rG,184.0,0.9962972701469092,54673.797661211516,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp10_pseudohuerfanas.csv,rSS,184.0,0.9969781117281934,901.6941866145578,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp10_pseudohuerfanas.csv,rank,184.0,0.9969781117281934,901.6941866145578,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp10_pseudohuerfanas.csv,score,184.0,1.0,1.6197990185950517,idéntico,distribucion,1000,1000
 huerfanas,01_sp10_pseudohuerfanas.csv,target_id,1000.0,1.0,804.8399999999965,idéntico,distribucion,1000,1000
 huerfanas,01_sp15_pseudohuerfanas.csv,drug_id,236.0,0.5278267297630752,799353.6144067796,explicado por el recorte,distribucion,236,236
-huerfanas,01_sp15_pseudohuerfanas.csv,frank,31.0,0.9983831851253031,0.005439008964490788,explicado por el recorte,distribucion,236,236
-huerfanas,01_sp15_pseudohuerfanas.csv,n_semilla,236.0,1.0,3.5211864406779663,idéntico,distribucion,236,236
+huerfanas,01_sp15_pseudohuerfanas.csv,frank,31.0,0.0005205320994793317,0.5004343797057802,explicado por el recorte,distribucion,236,236
+huerfanas,01_sp15_pseudohuerfanas.csv,n_semilla,236.0,1.0,11.330508474576272,idéntico,distribucion,236,236
 huerfanas,01_sp15_pseudohuerfanas.csv,n_targets,31.0,1.0,0.0,idéntico,distribucion,236,236
-huerfanas,01_sp15_pseudohuerfanas.csv,rG,31.0,0.9931569208292265,2231.7750314201985,explicado por el recorte,distribucion,236,236
-huerfanas,01_sp15_pseudohuerfanas.csv,rSS,31.0,0.9983831851253031,46.95496439044837,explicado por el recorte,distribucion,236,236
-huerfanas,01_sp15_pseudohuerfanas.csv,rank,31.0,0.9983831851253031,46.95496439044837,explicado por el recorte,distribucion,236,236
-huerfanas,01_sp15_pseudohuerfanas.csv,score,31.0,1.0,0.0003180394451231436,idéntico,distribucion,236,236
+huerfanas,01_sp15_pseudohuerfanas.csv,rG,31.0,0.00047052588027551856,184812.5,explicado por el recorte,distribucion,236,236
+huerfanas,01_sp15_pseudohuerfanas.csv,rSS,31.0,0.0005205320994794427,4320.25,explicado por el recorte,distribucion,236,236
+huerfanas,01_sp15_pseudohuerfanas.csv,rank,31.0,0.0005205320994794427,4320.25,explicado por el recorte,distribucion,236,236
+huerfanas,01_sp15_pseudohuerfanas.csv,score,31.0,0.0,0.006448243851382671,explicado por el recorte,distribucion,236,236
 huerfanas,01_sp15_pseudohuerfanas.csv,target_id,236.0,1.0,0.0,idéntico,distribucion,236,236
 huerfanas,01_sp17_pseudohuerfanas.csv,drug_id,170.0,0.1924241848352648,1731640.0,explicado por el recorte,distribucion,170,170
-huerfanas,01_sp17_pseudohuerfanas.csv,frank,38.0,0.9954098664688428,0.04357788531801149,explicado por el recorte,distribucion,170,170
-huerfanas,01_sp17_pseudohuerfanas.csv,n_semilla,170.0,0.0,6.641176470588233,explicado por el recorte,distribucion,170,170
+huerfanas,01_sp17_pseudohuerfanas.csv,frank,38.0,0.009502072756066848,0.49707807386629266,explicado por el recorte,distribucion,170,170
+huerfanas,01_sp17_pseudohuerfanas.csv,n_semilla,170.0,1.0,7.023529411764704,idéntico,distribucion,170,170
 huerfanas,01_sp17_pseudohuerfanas.csv,n_targets,38.0,1.0,0.0,idéntico,distribucion,170,170
-huerfanas,01_sp17_pseudohuerfanas.csv,rG,38.0,0.9971038002836818,15885.15085679313,explicado por el recorte,distribucion,170,170
-huerfanas,01_sp17_pseudohuerfanas.csv,rSS,38.0,0.9954098664688428,466.0654834761317,explicado por el recorte,distribucion,170,170
-huerfanas,01_sp17_pseudohuerfanas.csv,rank,38.0,0.9954098664688428,466.0654834761317,explicado por el recorte,distribucion,170,170
-huerfanas,01_sp17_pseudohuerfanas.csv,score,38.0,1.0,0.003386557027866246,idéntico,distribucion,170,170
+huerfanas,01_sp17_pseudohuerfanas.csv,rG,38.0,0.008102053936994591,183209.75,explicado por el recorte,distribucion,170,170
+huerfanas,01_sp17_pseudohuerfanas.csv,rSS,38.0,0.009502072756066848,5316.25,explicado por el recorte,distribucion,170,170
+huerfanas,01_sp17_pseudohuerfanas.csv,rank,38.0,0.009502072756066848,5316.25,explicado por el recorte,distribucion,170,170
+huerfanas,01_sp17_pseudohuerfanas.csv,score,38.0,0.0,0.018635293550760983,explicado por el recorte,distribucion,170,170
 huerfanas,01_sp17_pseudohuerfanas.csv,target_id,170.0,1.0,0.0,idéntico,distribucion,170,170
 huerfanas,01_sp18_pseudohuerfanas.csv,drug_id,1000.0,0.4930472963326622,637832.9310000001,explicado por el recorte,distribucion,1000,1000
-huerfanas,01_sp18_pseudohuerfanas.csv,frank,182.0,0.9991269234966714,0.02452705752036155,idéntico,distribucion,1000,1000
-huerfanas,01_sp18_pseudohuerfanas.csv,n_semilla,1000.0,1.0,2.5709999999999997,idéntico,distribucion,1000,1000
+huerfanas,01_sp18_pseudohuerfanas.csv,frank,182.0,0.008902239213544383,0.4989551828430026,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp18_pseudohuerfanas.csv,n_semilla,1000.0,1.0,7.191000000000001,idéntico,distribucion,1000,1000
 huerfanas,01_sp18_pseudohuerfanas.csv,n_targets,182.0,1.0,0.0,idéntico,distribucion,1000,1000
-huerfanas,01_sp18_pseudohuerfanas.csv,rG,182.0,0.9969237352797503,7940.555347091955,explicado por el recorte,distribucion,1000,1000
-huerfanas,01_sp18_pseudohuerfanas.csv,rSS,182.0,0.9991269234966714,446.0245410077732,idéntico,distribucion,1000,1000
-huerfanas,01_sp18_pseudohuerfanas.csv,rank,182.0,0.9991269234966714,446.0245410077732,idéntico,distribucion,1000,1000
-huerfanas,01_sp18_pseudohuerfanas.csv,score,182.0,1.0,0.0020463596364826715,idéntico,distribucion,1000,1000
+huerfanas,01_sp18_pseudohuerfanas.csv,rG,182.0,0.010453239167790396,183269.75,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp18_pseudohuerfanas.csv,rSS,182.0,0.008902239213544494,9073.5,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp18_pseudohuerfanas.csv,rank,182.0,0.008902239213544494,9073.5,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp18_pseudohuerfanas.csv,score,182.0,0.0,0.19670210101092614,explicado por el recorte,distribucion,1000,1000
 huerfanas,01_sp18_pseudohuerfanas.csv,target_id,1000.0,0.9359244633154191,12948.0,explicado por el recorte,distribucion,1000,1000
 huerfanas,01_sp1_pseudohuerfanas.csv,drug_id,1000.0,0.1888234146531148,1835742.5,explicado por el recorte,distribucion,1000,1000
-huerfanas,01_sp1_pseudohuerfanas.csv,frank,146.0,0.9993399339933994,0.03404110417044587,idéntico,distribucion,1000,1000
-huerfanas,01_sp1_pseudohuerfanas.csv,n_semilla,1000.0,1.0,3.375,idéntico,distribucion,1000,1000
+huerfanas,01_sp1_pseudohuerfanas.csv,frank,146.0,0.008366358432408405,0.49680123538495485,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp1_pseudohuerfanas.csv,n_semilla,1000.0,1.0,19.304,idéntico,distribucion,1000,1000
 huerfanas,01_sp1_pseudohuerfanas.csv,n_targets,146.0,1.0,0.0,idéntico,distribucion,1000,1000
-huerfanas,01_sp1_pseudohuerfanas.csv,rG,146.0,0.9967519690345397,12792.480353280465,explicado por el recorte,distribucion,1000,1000
-huerfanas,01_sp1_pseudohuerfanas.csv,rSS,146.0,0.9993399339933994,154.30832520463127,idéntico,distribucion,1000,1000
-huerfanas,01_sp1_pseudohuerfanas.csv,rank,146.0,0.9993399339933994,154.30832520463127,idéntico,distribucion,1000,1000
-huerfanas,01_sp1_pseudohuerfanas.csv,score,146.0,1.0,0.003239156694593376,idéntico,distribucion,1000,1000
+huerfanas,01_sp1_pseudohuerfanas.csv,rG,146.0,0.0017550549096917445,184570.0,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp1_pseudohuerfanas.csv,rSS,146.0,0.008366358432408627,2252.0,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp1_pseudohuerfanas.csv,rank,146.0,0.008366358432408627,2252.0,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp1_pseudohuerfanas.csv,score,146.0,0.0,0.05739483483145217,explicado por el recorte,distribucion,1000,1000
 huerfanas,01_sp1_pseudohuerfanas.csv,target_id,1000.0,1.0,1545.9520000000193,idéntico,distribucion,1000,1000
 huerfanas,01_sp21_pseudohuerfanas.csv,drug_id,364.0,0.17357173916151725,1965215.0,explicado por el recorte,distribucion,364,364
-huerfanas,01_sp21_pseudohuerfanas.csv,frank,68.0,0.9977954347127175,0.08888032834158682,explicado por el recorte,distribucion,364,364
-huerfanas,01_sp21_pseudohuerfanas.csv,n_semilla,364.0,1.0,7.692307692307692,idéntico,distribucion,364,364
+huerfanas,01_sp21_pseudohuerfanas.csv,frank,68.0,0.005431530494821479,0.4975361517914709,explicado por el recorte,distribucion,364,364
+huerfanas,01_sp21_pseudohuerfanas.csv,n_semilla,364.0,1.0,18.543956043956044,idéntico,distribucion,364,364
 huerfanas,01_sp21_pseudohuerfanas.csv,n_targets,68.0,1.0,0.0,idéntico,distribucion,364,364
-huerfanas,01_sp21_pseudohuerfanas.csv,rG,68.0,0.9953107584021763,32733.531108597293,explicado por el recorte,distribucion,364,364
-huerfanas,01_sp21_pseudohuerfanas.csv,rSS,68.0,0.9977954347127176,1929.9474496092143,explicado por el recorte,distribucion,364,364
-huerfanas,01_sp21_pseudohuerfanas.csv,rank,68.0,0.9977954347127176,1929.9474496092143,explicado por el recorte,distribucion,364,364
-huerfanas,01_sp21_pseudohuerfanas.csv,score,68.0,1.0,0.023770485829570507,idéntico,distribucion,364,364
+huerfanas,01_sp21_pseudohuerfanas.csv,rG,68.0,0.007535423132040697,183006.25,explicado por el recorte,distribucion,364,364
+huerfanas,01_sp21_pseudohuerfanas.csv,rSS,68.0,0.00543153049482159,10803.5,explicado por el recorte,distribucion,364,364
+huerfanas,01_sp21_pseudohuerfanas.csv,rank,68.0,0.00543153049482159,10803.5,explicado por el recorte,distribucion,364,364
+huerfanas,01_sp21_pseudohuerfanas.csv,score,68.0,0.0,0.027293473130904078,explicado por el recorte,distribucion,364,364
 huerfanas,01_sp21_pseudohuerfanas.csv,target_id,364.0,1.0,0.0,idéntico,distribucion,364,364
 huerfanas,01_sp22_pseudohuerfanas.csv,drug_id,49.0,0.32742050962571745,1012672.0,explicado por el recorte,distribucion,49,49
-huerfanas,01_sp22_pseudohuerfanas.csv,frank,15.0,0.9898167006109979,0.07858801955990219,explicado por el recorte,distribucion,49,49
-huerfanas,01_sp22_pseudohuerfanas.csv,n_semilla,49.0,0.0,14.755102040816325,explicado por el recorte,distribucion,49,49
+huerfanas,01_sp22_pseudohuerfanas.csv,frank,15.0,0.9993903368388967,0.0661181651478106,idéntico,distribucion,49,49
+huerfanas,01_sp22_pseudohuerfanas.csv,n_semilla,49.0,1.0,41.22448979591836,idéntico,distribucion,49,49
 huerfanas,01_sp22_pseudohuerfanas.csv,n_targets,15.0,1.0,0.0,idéntico,distribucion,49,49
-huerfanas,01_sp22_pseudohuerfanas.csv,rG,15.0,0.995072318291737,28583.01999999999,explicado por el recorte,distribucion,49,49
-huerfanas,01_sp22_pseudohuerfanas.csv,rSS,15.0,0.9898167006109979,1028.5600000000004,explicado por el recorte,distribucion,49,49
-huerfanas,01_sp22_pseudohuerfanas.csv,rank,15.0,0.9898167006109979,1028.5600000000004,explicado por el recorte,distribucion,49,49
-huerfanas,01_sp22_pseudohuerfanas.csv,score,15.0,1.0,0.0008533455836748972,idéntico,distribucion,49,49
+huerfanas,01_sp22_pseudohuerfanas.csv,rG,15.0,0.9978961734631951,24583.22727272728,explicado por el recorte,distribucion,49,49
+huerfanas,01_sp22_pseudohuerfanas.csv,rSS,15.0,0.9993903368388966,865.3545454545451,idéntico,distribucion,49,49
+huerfanas,01_sp22_pseudohuerfanas.csv,rank,15.0,0.9993903368388966,865.3545454545451,idéntico,distribucion,49,49
+huerfanas,01_sp22_pseudohuerfanas.csv,score,15.0,1.0,0.0024471045635306127,idéntico,distribucion,49,49
 huerfanas,01_sp22_pseudohuerfanas.csv,target_id,49.0,1.0,0.0,idéntico,distribucion,49,49
 huerfanas,01_sp23_pseudohuerfanas.csv,drug_id,123.0,0.2698054211030467,1321060.0,explicado por el recorte,distribucion,123,123
-huerfanas,01_sp23_pseudohuerfanas.csv,frank,17.0,0.9953087167070218,0.022690382110749918,explicado por el recorte,distribucion,123,123
-huerfanas,01_sp23_pseudohuerfanas.csv,n_semilla,123.0,1.0,12.130081300813009,idéntico,distribucion,123,123
+huerfanas,01_sp23_pseudohuerfanas.csv,frank,17.0,0.9988596624600884,0.13951839019428613,explicado por el recorte,distribucion,123,123
+huerfanas,01_sp23_pseudohuerfanas.csv,n_semilla,123.0,1.0,17.772357723577237,idéntico,distribucion,123,123
 huerfanas,01_sp23_pseudohuerfanas.csv,n_targets,17.0,1.0,0.0,idéntico,distribucion,123,123
-huerfanas,01_sp23_pseudohuerfanas.csv,rG,17.0,0.9925118562276396,9078.607088989433,explicado por el recorte,distribucion,123,123
-huerfanas,01_sp23_pseudohuerfanas.csv,rSS,17.0,0.9953087167070218,148.9396681749622,explicado por el recorte,distribucion,123,123
-huerfanas,01_sp23_pseudohuerfanas.csv,rank,17.0,0.9953087167070218,148.9396681749622,explicado por el recorte,distribucion,123,123
-huerfanas,01_sp23_pseudohuerfanas.csv,score,17.0,1.0,8.548091873693092e-05,idéntico,distribucion,123,123
+huerfanas,01_sp23_pseudohuerfanas.csv,rG,17.0,0.9976149205379138,51331.46783088235,explicado por el recorte,distribucion,123,123
+huerfanas,01_sp23_pseudohuerfanas.csv,rSS,17.0,0.9988596624600882,915.7987132352941,explicado por el recorte,distribucion,123,123
+huerfanas,01_sp23_pseudohuerfanas.csv,rank,17.0,0.9988596624600882,915.7987132352941,explicado por el recorte,distribucion,123,123
+huerfanas,01_sp23_pseudohuerfanas.csv,score,17.0,1.0,0.005011026579443858,idéntico,distribucion,123,123
 huerfanas,01_sp23_pseudohuerfanas.csv,target_id,123.0,1.0,0.0,idéntico,distribucion,123,123
 huerfanas,01_sp25_pseudohuerfanas.csv,drug_id,105.0,0.4442995252327785,813576.0571428572,explicado por el recorte,distribucion,105,105
-huerfanas,01_sp25_pseudohuerfanas.csv,frank,32.0,0.9990942774804445,0.030457052620213032,idéntico,distribucion,105,105
-huerfanas,01_sp25_pseudohuerfanas.csv,n_semilla,105.0,1.0,13.885714285714286,idéntico,distribucion,105,105
+huerfanas,01_sp25_pseudohuerfanas.csv,frank,32.0,0.9958793472886104,0.14751655629139077,explicado por el recorte,distribucion,105,105
+huerfanas,01_sp25_pseudohuerfanas.csv,n_semilla,105.0,1.0,58.55238095238096,idéntico,distribucion,105,105
 huerfanas,01_sp25_pseudohuerfanas.csv,n_targets,32.0,1.0,0.0,idéntico,distribucion,105,105
-huerfanas,01_sp25_pseudohuerfanas.csv,rG,32.0,0.9934033594847163,11565.800271739135,explicado por el recorte,distribucion,105,105
-huerfanas,01_sp25_pseudohuerfanas.csv,rSS,32.0,0.9990942774804447,183.960597826087,idéntico,distribucion,105,105
-huerfanas,01_sp25_pseudohuerfanas.csv,rank,32.0,0.9990942774804447,183.960597826087,idéntico,distribucion,105,105
-huerfanas,01_sp25_pseudohuerfanas.csv,score,32.0,1.0,0.003940045052043789,idéntico,distribucion,105,105
+huerfanas,01_sp25_pseudohuerfanas.csv,rG,32.0,0.9961491359184892,54959.52083333333,explicado por el recorte,distribucion,105,105
+huerfanas,01_sp25_pseudohuerfanas.csv,rSS,32.0,0.9958793472886105,891.0,explicado por el recorte,distribucion,105,105
+huerfanas,01_sp25_pseudohuerfanas.csv,rank,32.0,0.9958793472886105,891.0,explicado por el recorte,distribucion,105,105
+huerfanas,01_sp25_pseudohuerfanas.csv,score,32.0,1.0,0.03298756298183748,idéntico,distribucion,105,105
 huerfanas,01_sp25_pseudohuerfanas.csv,target_id,105.0,1.0,0.0,idéntico,distribucion,105,105
 huerfanas,01_sp26_pseudohuerfanas.csv,drug_id,1000.0,0.7883421924304496,170300.04700000008,explicado por el recorte,distribucion,1000,1000
-huerfanas,01_sp26_pseudohuerfanas.csv,frank,182.0,0.9994567677682208,0.004569748142956909,idéntico,distribucion,1000,1000
-huerfanas,01_sp26_pseudohuerfanas.csv,n_semilla,1000.0,1.0,4.468,idéntico,distribucion,1000,1000
+huerfanas,01_sp26_pseudohuerfanas.csv,frank,182.0,0.001448619284744157,0.5017743403093722,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp26_pseudohuerfanas.csv,n_semilla,1000.0,1.0,2.4080000000000004,idéntico,distribucion,1000,1000
 huerfanas,01_sp26_pseudohuerfanas.csv,n_targets,182.0,1.0,0.0,idéntico,distribucion,1000,1000
-huerfanas,01_sp26_pseudohuerfanas.csv,rG,182.0,0.999364249020836,1478.2274446568044,idéntico,distribucion,1000,1000
-huerfanas,01_sp26_pseudohuerfanas.csv,rSS,182.0,0.9994567677682209,25.110766045548644,idéntico,distribucion,1000,1000
-huerfanas,01_sp26_pseudohuerfanas.csv,rank,182.0,0.9994567677682209,25.110766045548644,idéntico,distribucion,1000,1000
-huerfanas,01_sp26_pseudohuerfanas.csv,score,182.0,1.0,0.0007278791192951089,idéntico,distribucion,1000,1000
+huerfanas,01_sp26_pseudohuerfanas.csv,rG,182.0,0.0010161263007357757,185811.5,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp26_pseudohuerfanas.csv,rSS,182.0,0.001448619284744268,2757.25,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp26_pseudohuerfanas.csv,rank,182.0,0.001448619284744268,2757.25,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp26_pseudohuerfanas.csv,score,182.0,0.0,0.017242066390224086,explicado por el recorte,distribucion,1000,1000
 huerfanas,01_sp26_pseudohuerfanas.csv,target_id,1000.0,1.0,3193.597999999998,idéntico,distribucion,1000,1000
 huerfanas,01_sp28_pseudohuerfanas.csv,drug_id,43.0,0.21917805857711736,1811788.0,explicado por el recorte,distribucion,43,43
-huerfanas,01_sp28_pseudohuerfanas.csv,frank,14.0,0.9983908254385566,0.032791324349397855,explicado por el recorte,distribucion,43,43
-huerfanas,01_sp28_pseudohuerfanas.csv,n_semilla,43.0,1.0,21.116279069767444,idéntico,distribucion,43,43
+huerfanas,01_sp28_pseudohuerfanas.csv,frank,14.0,0.01182720029057216,0.49438942395057245,explicado por el recorte,distribucion,43,43
+huerfanas,01_sp28_pseudohuerfanas.csv,n_semilla,43.0,0.0,15.232558139534888,explicado por el recorte,distribucion,43,43
 huerfanas,01_sp28_pseudohuerfanas.csv,n_targets,14.0,1.0,0.0,idéntico,distribucion,43,43
-huerfanas,01_sp28_pseudohuerfanas.csv,rG,14.0,0.999148527182153,12036.054511278198,idéntico,distribucion,43,43
-huerfanas,01_sp28_pseudohuerfanas.csv,rSS,14.0,0.9983908254385567,721.8026315789475,explicado por el recorte,distribucion,43,43
-huerfanas,01_sp28_pseudohuerfanas.csv,rank,14.0,0.9983908254385567,721.8026315789475,explicado por el recorte,distribucion,43,43
-huerfanas,01_sp28_pseudohuerfanas.csv,score,14.0,1.0,0.006016773603480616,idéntico,distribucion,43,43
+huerfanas,01_sp28_pseudohuerfanas.csv,rG,14.0,0.013629755680532596,182007.75,explicado por el recorte,distribucion,43,43
+huerfanas,01_sp28_pseudohuerfanas.csv,rSS,14.0,0.01182720029057227,10882.5,explicado por el recorte,distribucion,43,43
+huerfanas,01_sp28_pseudohuerfanas.csv,rank,14.0,0.01182720029057227,10882.5,explicado por el recorte,distribucion,43,43
+huerfanas,01_sp28_pseudohuerfanas.csv,score,14.0,0.0,0.01761587582155881,explicado por el recorte,distribucion,43,43
 huerfanas,01_sp28_pseudohuerfanas.csv,target_id,43.0,1.0,0.0,idéntico,distribucion,43,43
 huerfanas,01_sp3_pseudohuerfanas.csv,drug_id,1000.0,0.8926766327073432,301508.686,explicado por el recorte,distribucion,1000,1000
-huerfanas,01_sp3_pseudohuerfanas.csv,frank,159.0,0.9998477234658141,0.033050906275722935,idéntico,distribucion,1000,1000
-huerfanas,01_sp3_pseudohuerfanas.csv,n_semilla,1000.0,1.0,2.4979999999999998,idéntico,distribucion,1000,1000
+huerfanas,01_sp3_pseudohuerfanas.csv,frank,159.0,0.0006701187937860897,0.5031593153794246,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp3_pseudohuerfanas.csv,n_semilla,1000.0,1.0,0.796,idéntico,distribucion,1000,1000
 huerfanas,01_sp3_pseudohuerfanas.csv,n_targets,159.0,1.0,0.0,idéntico,distribucion,1000,1000
-huerfanas,01_sp3_pseudohuerfanas.csv,rG,159.0,0.999709850377262,11848.562229210365,idéntico,distribucion,1000,1000
-huerfanas,01_sp3_pseudohuerfanas.csv,rSS,159.0,0.999847723465814,538.7628232005591,idéntico,distribucion,1000,1000
-huerfanas,01_sp3_pseudohuerfanas.csv,rank,159.0,0.999847723465814,538.7628232005591,idéntico,distribucion,1000,1000
-huerfanas,01_sp3_pseudohuerfanas.csv,score,159.0,1.0,0.009989155752229167,idéntico,distribucion,1000,1000
+huerfanas,01_sp3_pseudohuerfanas.csv,rG,159.0,0.00036447969848074635,185128.0,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp3_pseudohuerfanas.csv,rSS,159.0,0.0006701187937862008,8202.0,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp3_pseudohuerfanas.csv,rank,159.0,0.0006701187937862008,8202.0,explicado por el recorte,distribucion,1000,1000
+huerfanas,01_sp3_pseudohuerfanas.csv,score,159.0,0.0,0.1747356823796217,explicado por el recorte,distribucion,1000,1000
 huerfanas,01_sp3_pseudohuerfanas.csv,target_id,1000.0,0.9624822026219929,6087.0,explicado por el recorte,distribucion,1000,1000
 huerfanas,01_sp4_pseudohuerfanas.csv,drug_id,153.0,0.26903760219147077,1101431.594771242,explicado por el recorte,distribucion,153,153
-huerfanas,01_sp4_pseudohuerfanas.csv,frank,16.0,0.9986828512396695,0.02065344094084809,explicado por el recorte,distribucion,153,153
-huerfanas,01_sp4_pseudohuerfanas.csv,n_semilla,153.0,1.0,2.6666666666666665,idéntico,distribucion,153,153
+huerfanas,01_sp4_pseudohuerfanas.csv,frank,16.0,0.9947572314049588,0.15946254092822615,explicado por el recorte,distribucion,153,153
+huerfanas,01_sp4_pseudohuerfanas.csv,n_semilla,153.0,1.0,1.8954248366013071,idéntico,distribucion,153,153
 huerfanas,01_sp4_pseudohuerfanas.csv,n_targets,16.0,1.0,0.0,idéntico,distribucion,153,153
-huerfanas,01_sp4_pseudohuerfanas.csv,rG,16.0,0.9980391946912367,6685.97767857142,explicado por el recorte,distribucion,153,153
-huerfanas,01_sp4_pseudohuerfanas.csv,rSS,16.0,0.9986828512396694,397.3928571428569,explicado por el recorte,distribucion,153,153
-huerfanas,01_sp4_pseudohuerfanas.csv,rank,16.0,0.9986828512396694,397.3928571428569,explicado por el recorte,distribucion,153,153
-huerfanas,01_sp4_pseudohuerfanas.csv,score,16.0,1.0,0.00026889086630445,idéntico,distribucion,153,153
+huerfanas,01_sp4_pseudohuerfanas.csv,rG,16.0,0.9900326845499249,60497.625,explicado por el recorte,distribucion,153,153
+huerfanas,01_sp4_pseudohuerfanas.csv,rSS,16.0,0.9947572314049586,3068.21875,explicado por el recorte,distribucion,153,153
+huerfanas,01_sp4_pseudohuerfanas.csv,rank,16.0,0.9947572314049586,3068.21875,explicado por el recorte,distribucion,153,153
+huerfanas,01_sp4_pseudohuerfanas.csv,score,16.0,1.0,0.016865673462479063,idéntico,distribucion,153,153
 huerfanas,01_sp4_pseudohuerfanas.csv,target_id,153.0,1.0,0.0,idéntico,distribucion,153,153
 huerfanas,01_sp5_pseudohuerfanas.csv,drug_id,38.0,0.21339313178296448,1630256.5,explicado por el recorte,distribucion,38,38
-huerfanas,01_sp5_pseudohuerfanas.csv,frank,11.0,0.9968210717529518,0.03255289520721616,explicado por el recorte,distribucion,38,38
-huerfanas,01_sp5_pseudohuerfanas.csv,n_semilla,38.0,0.0,3.0,explicado por el recorte,distribucion,38,38
+huerfanas,01_sp5_pseudohuerfanas.csv,frank,11.0,0.034968210717529535,0.48582533150434387,explicado por el recorte,distribucion,38,38
+huerfanas,01_sp5_pseudohuerfanas.csv,n_semilla,38.0,1.0,48.60526315789474,idéntico,distribucion,38,38
 huerfanas,01_sp5_pseudohuerfanas.csv,n_targets,11.0,1.0,0.0,idéntico,distribucion,38,38
-huerfanas,01_sp5_pseudohuerfanas.csv,rG,11.0,0.9983612027933859,12433.25946969699,explicado por el recorte,distribucion,38,38
-huerfanas,01_sp5_pseudohuerfanas.csv,rSS,11.0,0.9968210717529519,71.19318181818187,explicado por el recorte,distribucion,38,38
-huerfanas,01_sp5_pseudohuerfanas.csv,rank,11.0,0.9968210717529519,71.19318181818187,explicado por el recorte,distribucion,38,38
-huerfanas,01_sp5_pseudohuerfanas.csv,score,11.0,1.0,0.0019898457443990186,idéntico,distribucion,38,38
+huerfanas,01_sp5_pseudohuerfanas.csv,rG,11.0,0.023970044548854874,180312.75,explicado por el recorte,distribucion,38,38
+huerfanas,01_sp5_pseudohuerfanas.csv,rSS,11.0,0.034968210717529535,1062.5,explicado por el recorte,distribucion,38,38
+huerfanas,01_sp5_pseudohuerfanas.csv,rank,11.0,0.034968210717529535,1062.5,explicado por el recorte,distribucion,38,38
+huerfanas,01_sp5_pseudohuerfanas.csv,score,11.0,0.0,0.10487929456653466,explicado por el recorte,distribucion,38,38
 huerfanas,01_sp5_pseudohuerfanas.csv,target_id,38.0,1.0,0.0,idéntico,distribucion,38,38
 huerfanas,01_sp9_pseudohuerfanas.csv,drug_id,501.0,0.7669353877150762,95780.0,explicado por el recorte,distribucion,501,501
-huerfanas,01_sp9_pseudohuerfanas.csv,frank,115.0,0.9952536766027832,0.0065799649197617605,explicado por el recorte,distribucion,501,501
-huerfanas,01_sp9_pseudohuerfanas.csv,n_semilla,501.0,1.0,0.8602794411177648,idéntico,distribucion,501,501
+huerfanas,01_sp9_pseudohuerfanas.csv,frank,115.0,0.9941110589255393,0.13950643627351367,explicado por el recorte,distribucion,501,501
+huerfanas,01_sp9_pseudohuerfanas.csv,n_semilla,501.0,1.0,3.4451097804391217,idéntico,distribucion,501,501
 huerfanas,01_sp9_pseudohuerfanas.csv,n_targets,115.0,1.0,0.0,idéntico,distribucion,501,501
-huerfanas,01_sp9_pseudohuerfanas.csv,rG,115.0,0.9981826735667719,2346.387527768966,explicado por el recorte,distribucion,501,501
-huerfanas,01_sp9_pseudohuerfanas.csv,rSS,115.0,0.9952536766027831,180.45553792446844,explicado por el recorte,distribucion,501,501
-huerfanas,01_sp9_pseudohuerfanas.csv,rank,115.0,0.9952536766027831,180.45553792446844,explicado por el recorte,distribucion,501,501
-huerfanas,01_sp9_pseudohuerfanas.csv,score,115.0,1.0,2.3991967602636884e-05,idéntico,distribucion,501,501
+huerfanas,01_sp9_pseudohuerfanas.csv,rG,115.0,0.9953002835989324,51148.565772432936,explicado por el recorte,distribucion,501,501
+huerfanas,01_sp9_pseudohuerfanas.csv,rSS,115.0,0.9941110589255392,3825.9640148011113,explicado por el recorte,distribucion,501,501
+huerfanas,01_sp9_pseudohuerfanas.csv,rank,115.0,0.9941110589255392,3825.9640148011113,explicado por el recorte,distribucion,501,501
+huerfanas,01_sp9_pseudohuerfanas.csv,score,115.0,1.0,0.000112588800027001,idéntico,distribucion,501,501
 huerfanas,01_sp9_pseudohuerfanas.csv,target_id,501.0,1.0,0.0,idéntico,distribucion,501,501
-huerfanas,03_clases_inferencia.csv,n,27.0,0.5573770491803278,37.978835978835974,explicado por el recorte,distribucion,28,27
-huerfanas,03_clases_inferencia.csv,rG_mediana,27.0,0.9968393798445433,3574.2833994708926,explicado por el recorte,distribucion,28,27
-huerfanas,03_clases_inferencia.csv,rSS_mediana,27.0,0.9495876855415063,117.16765873015856,explicado por el recorte,distribucion,28,27
+huerfanas,03_clases_inferencia.csv,n,27.0,0.33009708737864074,34.5,explicado por el recorte,distribucion,32,27
+huerfanas,03_clases_inferencia.csv,rG_mediana,27.0,0.01565985846365192,182004.0,explicado por el recorte,distribucion,32,27
+huerfanas,03_clases_inferencia.csv,rSS_mediana,27.0,0.05937328202308956,2138.75,explicado por el recorte,distribucion,32,27
 huerfanas,03_curva_recuperacion.csv,l,1000.0,1.0,0.0,idéntico,fila,1000,1000
-huerfanas,03_curva_recuperacion.csv,lambda,1000.0,0.843,7.0,explicado por el recorte,fila,1000,1000
-huerfanas,03_curva_recuperacion.csv,lambda_suave,1000.0,0.0,2.4447804107703055,explicado por el recorte,fila,1000,1000
-huerfanas,03_curva_recuperacion.csv,rho,1000.0,0.0,30.0,explicado por el recorte,fila,1000,1000
-huerfanas,03_ranking_global.csv,drug_id,1312.0,0.9916225846338448,454424.06671093934,explicado por el recorte,distribucion,2424,1312
-huerfanas,03_ranking_global.csv,frank,1312.0,0.9992197170105366,0.02458072678254336,idéntico,distribucion,2424,1312
-huerfanas,03_ranking_global.csv,grupo,1312.0,1.0,0.24686820816227972,idéntico,distribucion,2424,1312
-huerfanas,03_ranking_global.csv,n_semilla,1312.0,0.8,1.0,explicado por el recorte,distribucion,2424,1312
-huerfanas,03_ranking_global.csv,n_targets,1312.0,1.0,666.3873762376243,idéntico,distribucion,2424,1312
-huerfanas,03_ranking_global.csv,rG,1312.0,0.9980962126210063,8982.548777972319,explicado por el recorte,distribucion,2424,1312
-huerfanas,03_ranking_global.csv,rSS,1312.0,0.9998364141992475,16.115400869354744,idéntico,distribucion,2424,1312
-huerfanas,03_ranking_global.csv,rank,1312.0,0.9998364141992475,16.115400869354744,idéntico,distribucion,2424,1312
-huerfanas,03_ranking_global.csv,score,1312.0,1.0,0.00849757278187408,idéntico,distribucion,2424,1312
-huerfanas,03_ranking_global.csv,target_id,1312.0,0.9858417203609771,5507.87925370282,explicado por el recorte,distribucion,2424,1312
+huerfanas,03_curva_recuperacion.csv,lambda,1000.0,0.662,83.0,explicado por el recorte,fila,1000,1000
+huerfanas,03_curva_recuperacion.csv,lambda_suave,1000.0,0.0,37.70930331074945,explicado por el recorte,fila,1000,1000
+huerfanas,03_curva_recuperacion.csv,rho,1000.0,0.0,981.0,explicado por el recorte,fila,1000,1000
+huerfanas,03_ranking_global.csv,drug_id,1312.0,0.9526371157256959,436207.8101262285,explicado por el recorte,distribucion,2509,1312
+huerfanas,03_ranking_global.csv,frank,1312.0,0.020261085200909967,0.49204878858936857,explicado por el recorte,distribucion,2509,1312
+huerfanas,03_ranking_global.csv,grupo,1312.0,0.6666666666666667,1.0,explicado por el recorte,distribucion,2509,1312
+huerfanas,03_ranking_global.csv,n_semilla,1312.0,0.8,15.629196174260464,explicado por el recorte,distribucion,2509,1312
+huerfanas,03_ranking_global.csv,n_targets,1312.0,1.0,189.1372558788371,idéntico,distribucion,2509,1312
+huerfanas,03_ranking_global.csv,rG,1312.0,0.015040819299731778,182541.5,explicado por el recorte,distribucion,2509,1312
+huerfanas,03_ranking_global.csv,rSS,1312.0,0.028632198952879606,2968.5,explicado por el recorte,distribucion,2509,1312
+huerfanas,03_ranking_global.csv,rank,1312.0,0.028632198952879606,2968.5,explicado por el recorte,distribucion,2509,1312
+huerfanas,03_ranking_global.csv,score,1312.0,0.0,0.2975348135461293,explicado por el recorte,distribucion,2509,1312
+huerfanas,03_ranking_global.csv,target_id,1312.0,0.9755361946137082,5175.0,explicado por el recorte,distribucion,2509,1312
 huerfanas,03_rg_estrella.csv,desde,1.0,1.0,0.0,idéntico,fila,1,1
 huerfanas,03_rg_estrella.csv,k_sigma,1.0,1.0,0.0,idéntico,fila,1,1
-huerfanas,03_rg_estrella.csv,lambda_inf,1.0,0.0,0.023549835916005,explicado por el recorte,fila,1,1
-huerfanas,03_rg_estrella.csv,r_g_estrella,1.0,0.0,20.0,explicado por el recorte,fila,1,1
-huerfanas,03_rg_estrella.csv,sigma,1.0,0.0,0.025282249817915214,explicado por el recorte,fila,1,1
-huerfanas,03_rg_estrella.csv,umbral,1.0,0.0,0.09939658536975077,explicado por el recorte,fila,1,1
-huerfanas,03_rss_distribucion.csv,frac_acumulada,668.0,0.0,0.24593747484504547,explicado por el recorte,fila,1085,668
-huerfanas,03_rss_distribucion.csv,n,668.0,0.4625748502994012,64.0,explicado por el recorte,fila,1085,668
-huerfanas,03_rss_distribucion.csv,posicion,668.0,0.017964071856287425,6819.0,explicado por el recorte,fila,1085,668
+huerfanas,03_rg_estrella.csv,lambda_inf,1.0,0.0,0.4425907355017754,explicado por el recorte,fila,1,1
+huerfanas,03_rg_estrella.csv,r_g_estrella,1.0,0.0,22.0,explicado por el recorte,fila,1,1
+huerfanas,03_rg_estrella.csv,sigma,1.0,0.0,0.7043550075459383,explicado por el recorte,fila,1,1
+huerfanas,03_rg_estrella.csv,umbral,1.0,0.0,2.5556557581395896,explicado por el recorte,fila,1,1
+huerfanas,03_rss_distribucion.csv,frac_acumulada,668.0,0.0,0.32498645121465164,explicado por el recorte,fila,797,668
+huerfanas,03_rss_distribucion.csv,n,668.0,0.48353293413173654,504.0,explicado por el recorte,fila,797,668
+huerfanas,03_rss_distribucion.csv,posicion,668.0,0.017964071856287425,5186.0,explicado por el recorte,fila,797,668
 huerfanas,04_sp26_compuestos.csv,drug_id,3.0,0.0,646301.0,explicado por el recorte,fila,3,32
 huerfanas,04_sp26_compuestos.csv,tratable,3.0,1.0,0.0,idéntico,fila,3,32
 huerfanas,04_sp26_embudo.csv,n,3.0,0.0,59.0,explicado por el recorte,fila,3,3
-huerfanas,04_sp26_sugerencias.csv,-,,,,vacía de un lado,-,0,2
+huerfanas,04_sp26_sugerencias.csv,drug_id,2.0,0.0,441558.0,explicado por el recorte,fila,2,2
+huerfanas,04_sp26_sugerencias.csv,rG,2.0,0.0,49.5,explicado por el recorte,fila,2,2
+huerfanas,04_sp26_sugerencias.csv,score,2.0,0.0,0.0124109732364012,explicado por el recorte,fila,2,2
+huerfanas,04_sp26_sugerencias.csv,target_id,2.0,0.0,201315.0,explicado por el recorte,fila,2,2

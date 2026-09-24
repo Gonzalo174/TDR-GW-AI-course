@@ -1,2 +1,2 @@
 criterio,compuestos_filtrados,pct_compuestos,aristas_filtradas,pct_aristas,n_parentales_p99,mw_mediana_filtrados
-MW < 150 y N_parentales > 100,7,0.008324711310904183,7445,1.6152968284205456,25.0,116.131348512
+MW < 150 y N_parentales > 100,5,0.006306999508054039,7445,1.6152968284205456,23.0,116.131348512

@@ -1,5 +1,9 @@
 # Plan de trabajo — proyecto final GW-AI
 
+> **Actualización del 2026-09-24:** se portó desde `TDR_2026_v4` la corrección
+> de un error del modelo en la semilla de desorfanización y se rehízo
+> `huerfanas/` (registro en `historia/README_GWAI_correccion_semilla.md`).
+>
 > **Estado al 2026-09-10.** Las seis fases están hechas. Queda pendiente la
 > publicación de la página (se espera el contacto de los organizadores) y un
 > puñado de mejoras que se listan al final. El plan original, del 2026-09-08,
@@ -112,6 +116,8 @@ que un agente pueda reproducir sin haber hablado con nadie.
 | ⏳ Publicar la página | la consigna la enlaza desde la página del curso |
 | ⏳ Un control independiente del **modelo**, no sólo del port | el control de v5 corre el mismo `nucleo.py` (CONVENCIONES §3) |
 | ✅ Que ningún notebook necesite datos privados | `analiceDB/03` ya no lee datos crudos; la lista de promiscuos es un insumo externo versionado (PROVENANCE §3.13) |
-| ⏳ Revisar por qué la semilla nula bajó del 83 al 69 % respecto de v4 | el informe lo atribuye a que se filtran menos promiscuos (30 → 7), pero el filtro no saca ninguna arista de la capa de subestructuras de `DB/` (`03_impacto_en_la_base`): la explicación hay que confirmarla |
+| ✅ Revisar por qué la semilla nula bajó del 83 al 69 % respecto de v4 | era el error de la semilla (vecinos buscados con el id del compuesto en tablas de clusters), que la codificación hacía caer en otros clusters. Corregido el 2026-09-24 con `comun/tests/test_vecinos.py`; con la corrección, las semillas coinciden con las de v4 corregida (PROVENANCE §3.16 y §5) |
+| ✅ La lista de promiscuos tenía filas duplicadas (7 filas, 5 compuestos; en v4, 30 y 25) | `derivar.py` deduplica antes del cruce; el filtro ya la usaba como conjunto, así que ninguna semilla cambió (`datos_externos/promiscuidad/README.md`) |
+| ⏳ La sensibilidad de r*G, más allá de k_σ | `03_rg_sensibilidad.csv` barre k_σ entre 2 y 4 (68–88); en v4 se vio que con toda la grilla (ventana, `desde`, suavizado) va de 20 a 195. Se presenta como corte operativo |
 | ⏳ Palancas reales para ampliar la semilla | bajar el umbral de similitud por debajo de 0.8 exige recalcular la capa química; KEGG exige un mapeo que no está |
 | ⏳ Verificar contra el artículo la partición directa/indirecta 68/32 | hoy se cita desde un comentario del código de v3 |

@@ -162,7 +162,7 @@ def bioactividades_por_tag(t, plt):
 
 
 @figura(A, "03_f02_promiscuidad",
-        verifica='La lista y la curva vienen de `datos_externos/promiscuidad/derivar.py`, que las reproduce byte a byte con los datos crudos. Contra el oráculo v4: de 30 a 7 promiscuos, explicado por el recorte. El efecto sobre la base lo mide `03_impacto_en_la_base`.',
+        verifica='La lista y la curva vienen de `datos_externos/promiscuidad/derivar.py`, que las reproduce byte a byte con los datos crudos. Contra el oráculo v4: de 25 a 5 promiscuos (compuestos distintos; las tablas tenían filas duplicadas hasta el 2026-09-24), explicado por el recorte. El efecto sobre la base lo mide `03_impacto_en_la_base`.',
         lee="03_curva_filtrado.csv")
 def promiscuidad(t, plt):
     """Sensibilidad del criterio de promiscuidad: compuestos y relaciones de

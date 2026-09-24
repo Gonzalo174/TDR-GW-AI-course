@@ -335,8 +335,8 @@ def construir() -> str:
       f'fenotípica) rescataron {n["NRescatadas"]} de {n["NMuestraPalancas"]}; las dos primeras '
       "no podían hacerlo en esta base.</p>")
     A("<h3>Cuando hay semilla informativa</h3>")
-    A(f'<p>El {n["PctRecInformativa"]} % dice poco: con unas doce mil proteínas por organismo, '
-      f'frank &lt; 0.1 es quedar entre las primeras ~{n["FrankCorteRank"]}. Mirando la posición '
+    A(f'<p>El {n["PctRecInformativa"]} % dice poco: en la mediana de estos casos, frank &lt; 0.1 '
+      f'es quedar entre las primeras ~{n["FrankCorteRank"]} proteínas del organismo. Mirando la posición '
       f'absoluta, el blanco queda <strong>primero en el {n["PctInfTopUno"]} %</strong> de los '
       f'casos, en el top-10 en el {n["PctInfTopDiez"]} % y en el top-100 en el '
       f'{n["PctInfTopCien"]} % (el azar pondría en el top-10 al {n["AzarTopDiez"]} %). Son dos '
@@ -358,18 +358,21 @@ def construir() -> str:
     A("<h3>Hasta dónde confiar en el ranking</h3>")
     A(f'<p>Sobre el ranking global, la recuperación acumulada tiene pendiente alta en las '
       f'primeras posiciones y cae al ruido de fondo en <strong>r*G = {n["RGEstrella"]}</strong>: '
-      f'una propuesta más abajo no se distingue del azar. La inferencia <em>directa</em> (el '
+      f'una propuesta más abajo no se distingue del azar. Es un corte operativo: con k_σ entre '
+      f'{n["KSigmaMin"]} y {n["KSigmaMax"]} va de {n["RGSensMin"]} a {n["RGSensMax"]}. La inferencia <em>directa</em> (el '
       f'blanco lo trae un vecino químico) es el {n["PctDirecta"]} % de los casos y pone el blanco '
       f'en la posición global mediana {n["RGDirecta"]}; la <em>indirecta</em> (sólo por '
-      f'anotaciones), el {n["PctIndirecta"]} %, lo pone en la {n["RGIndirecta"]}.</p>')
+      f'anotaciones), el {n["PctIndirecta"]} %, lo pone en la {n["RGIndirecta"]}. De los '
+      f'blancos recuperados, el {n["PctRecuperadasDirecta"]} % lo trae un vecino químico.</p>')
     A(figura(fig("huerfanas_out", "03_f02_recuperacion.png"),
              "Arriba: compuestos cuyo blanco cae antes de la posición l del ranking global. "
              "Abajo: su derivada suavizada y el umbral λ∞ + 3σ que define r*G."))
     A(f'<p><strong>Aplicación al organismo foco.</strong> De {n["EmbudoActivos"]} compuestos con '
       f'actividad fenotípica contra {tdr.NOMBRE_ESPECIE[tdr.SP_FOCO]}, {n["EmbudoHuerfanos"]} no tienen blanco proteico y '
-      f'{n["EmbudoTratables"]} tienen vecinos químicos con blanco; ninguno recibe una propuesta '
-      f'por encima de r*G ({n["NSugerencias"]} sugerencias). Con la base recortada el embudo es '
-      "demasiado angosto, y el método lo dice en vez de forzar una respuesta.</p>")
+      f'{n["EmbudoTratables"]} tienen vecinos químicos con blanco; {n["NSugCompuestos"]} reciben '
+      f'una propuesta por encima de r*G ({n["NSugerencias"]} sugerencias sobre '
+      f'{n["NSugBlancos"]} blanco distinto). Es un candidato para ensayar, no un resultado: el '
+      "embudo es angosto porque la base está recortada.</p>")
 
     # ---------- contraste con v4: un solo panel ----------
     A("<h2>3 · Contraste con la versión anterior (v4)</h2>")
@@ -378,6 +381,7 @@ def construir() -> str:
     A("<p>Este repositorio porta el análisis v4 a la base codificada y recortada. Las mismas "
       "tablas calculadas antes de los dos cambios quedaron como oráculo, con un único criterio: "
       "<strong>si el análisis toca la capa química, el recorte lo mueve; si no, no</strong>. "
+      "En desorfanización cambia además por la corrección de un error que el oráculo tiene. "
       f'Sobre {n["NComparadas"]} columnas: ')
     marca = ('<span class="marca m-ok">sin discrepancias</span>' if n["NDiscrepancias"] == "0"
              else f'<span class="marca m-mal">{n["NDiscrepancias"]} discrepancias</span>')
@@ -387,22 +391,27 @@ def construir() -> str:
       f'{n["ControlCoinciden"]} de {n["NEspeciesOpt"]} organismos, Δ AUC01 máx. = '
       f'{n["ControlDeltaMax"]}.</li>')
     A(f'<li><strong>Desorfanización</strong>: {n["NCambianHU"]} de {n["NComparadasHU"]} columnas '
-      f'cambian como predice el recorte: semilla nula '
+      f'cambian: semilla nula '
       f'{n["PctSinSemillaVcuatro"]} → {n["PctSinSemilla"]} %, recuperación '
       f'{n["PctRecuperadasVcuatro"]} → {n["PctRecuperadas"]} %, r*G '
-      f'{n["RGEstrellaVcuatro"]} → {n["RGEstrella"]}. Los promiscuos filtrados pasan de '
-      f'{n["PromiscuosVcuatro"]} a {n["NPromiscuos"]}, pero en la base actual el filtro saca '
-      f'{n["NDdsRemovidas"]} aristas: por qué baja la semilla nula está por confirmar.</li>')
+      f'{n["RGEstrellaVcuatro"]} → {n["RGEstrella"]}. Casi todo es la corrección de la semilla, '
+      f'no el recorte: v4 corregida da las mismas clases de semilla para los compuestos '
+      f'compartidos. Los promiscuos filtrados pasan de {n["PromiscuosVcuatro"]} a '
+      f'{n["NPromiscuos"]}, y en la base actual el filtro saca {n["NDdsRemovidas"]} aristas.</li>')
     A(f'<li><strong>Descriptivos</strong>: {n["NCambianAN"]} de {n["NComparadasAN"]} cambian, las '
       "que miden componentes químicas.</li></ul>")
     A('<p class="chapo">El port destapó cuatro filtros heredados que comparaban un entero '
       "codificado contra el texto que solía contener; ninguno lanzaba una excepción, y los "
-      "encontraron las pruebas y esta comparación. Detalle en "
-      '<a href="PROVENANCE.md">PROVENANCE.md</a>.</p>')
+      "encontraron las pruebas y esta comparación. Y un error que no era del port, sino "
+      "heredado del código original: la semilla de un compuesto buscaba sus vecinos químicos "
+      "con el id del compuesto en tablas indexadas por cluster, y como las numeraciones se "
+      "solapan devolvía los vecinos de otro cluster. Se encontró en v4 y se corrigió con una "
+      'prueba. Detalle en <a href="PROVENANCE.md">PROVENANCE.md</a>.</p>')
     A("</div>")
     A(figura(fig("verificacion_out", "10_f01_equivalencia.png"),
              "Columnas comparadas contra el oráculo, por análisis. Verde: idéntica; ámbar: "
-             "cambio explicado por el recorte."))
+             "cambio explicado por el recorte (en desorfanización, también por la corrección "
+             "de la semilla)."))
     A("</div>")
 
     # ---------- reproducir ----------

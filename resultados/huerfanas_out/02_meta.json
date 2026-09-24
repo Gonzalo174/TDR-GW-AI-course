@@ -1,7 +1,7 @@
 {
   "notebook": "02_cobertura_semilla.ipynb",
   "nb": "02",
-  "fecha": "2026-09-10 11:04",
+  "fecha": "2026-09-24 16:28",
   "params": {
     "umbral": 0.9,
     "n_muestra": 500

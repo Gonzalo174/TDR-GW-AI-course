@@ -83,7 +83,7 @@ def grupos_por_especie(t, plt):
 
 
 @figura(H, "01_f02_frank_por_grupo",
-        verifica='`test_fuga`: la orfanización quita todas las aristas de la droga. Contra el oráculo v4 cambia en la dirección que predice el recorte.',
+        verifica='`test_fuga`: la orfanización quita todas las aristas de la droga. Contra el oráculo v4 cambia por el recorte y por la corrección de la semilla (PROVENANCE §3.16), que el oráculo no tiene.',
         lee=(PSEUDO, "01_k1_drugs.csv"))
 def frank_por_grupo(t, plt):
     """Distribución de frank por grupo (Fig 2 del paper 2016)."""
@@ -104,7 +104,7 @@ def frank_por_grupo(t, plt):
 
 
 @figura(H, "01_f03_semilla_por_especie",
-        verifica='Consistencia interna: con semilla no informativa el puntaje del blanco es 0 por construcción, y se observa 0 % recuperado. Contra el oráculo v4 cambia como predice el recorte.',
+        verifica='Consistencia interna: con semilla no informativa el puntaje del blanco es 0 por construcción, y se observa 0 % recuperado. Contra el oráculo v4 cambia por el recorte y por la corrección de la semilla (PROVENANCE §3.16), que el oráculo no tiene.',
         lee=PSEUDO)
 def semilla_por_especie(t, plt):
     """Clase de semilla por especie: el techo teórico del método."""
@@ -167,7 +167,7 @@ def techo_teorico(t, plt):
 # --- 03 · desorfanización global -------------------------------------------
 
 @figura(H, "03_f01_distribucion_rg",
-        verifica='Contra el oráculo v4 (`03_ranking_global`): cambia como predice el recorte.',
+        verifica='Contra el oráculo v4 (`03_ranking_global`): cambia por el recorte y por la corrección de la semilla (PROVENANCE §3.16), que el oráculo no tiene.',
         lee="03_ranking_global.csv")
 def distribucion_rg(t, plt):
     """Posición del blanco verdadero en el ranking global."""
@@ -183,7 +183,7 @@ def distribucion_rg(t, plt):
 
 
 @figura(H, "03_f02_recuperacion",
-        verifica='Contra el oráculo v4: r*G cambia como predice el recorte. No hay control independiente del corte.',
+        verifica='Contra el oráculo v4: r*G cambia por el recorte y por la corrección de la semilla (PROVENANCE §3.16), que el oráculo no tiene. No hay control independiente del corte; su sensibilidad a k_σ está en `03_rg_sensibilidad.csv`.',
         lee=("03_curva_recuperacion.csv", "03_rg_estrella.csv"))
 def recuperacion(t, plt):
     """Fig 3A: ρ(rG) y λ(rG), con el umbral 3σ que define r*G."""
@@ -205,7 +205,7 @@ def recuperacion(t, plt):
 
 
 @figura(H, "03_f03_rss",
-        verifica='Contra el oráculo v4 (`03_rss_distribucion`): cambia como predice el recorte.',
+        verifica='Contra el oráculo v4 (`03_rss_distribucion`): cambia por el recorte y por la corrección de la semilla (PROVENANCE §3.16), que el oráculo no tiene.',
         lee="03_rss_distribucion.csv")
 def rss(t, plt):
     """Posición del blanco verdadero dentro de su especie, con el acumulado."""
