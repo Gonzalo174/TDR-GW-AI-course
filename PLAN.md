@@ -67,7 +67,7 @@ que un agente pueda reproducir sin haber hablado con nadie.
 | qué se pensaba hacer | estado | evidencia |
 |---|---|---|
 | Correr los 10 notebooks en orden | ✅ | corridas del 2026-09-08 y 2026-09-10; tablas y `NN_meta.json` en `resultados/` |
-| Notebook de equivalencia contra v4 que clasifique cada diferencia | ✅ | `verificacion/10_equivalencia.ipynb`: 353 columnas, 252 idénticas, 97 explicadas por el recorte, 0 discrepancias |
+| Notebook de equivalencia contra v4 que clasifique cada diferencia | ✅ | `verificacion/10_equivalencia.ipynb`: 353 columnas, 218 idénticas, 135 explicadas por el recorte o la corrección de la semilla, 0 discrepancias |
 | (agregado) Análisis de las pseudohuérfanas con semilla informativa | ✅ | `huerfanas/03`, figura `03_f05` |
 
 ### Fase 4 — Procedencia explícita ✅

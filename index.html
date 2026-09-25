@@ -73,7 +73,7 @@ a{color:var(--acento)}
 <h1>Priorización de blancos terapéuticos sobre una red multicapa</h1>
 <p class="bajada">Propagar la poca evidencia experimental que hay entre organismos para ordenar un genoma completo por cuán prometedoras son sus proteínas como blanco de un fármaco, y usar la misma red para proponer el blanco de compuestos que no tienen ninguno.</p>
 <div class="meta-cabecera">
-<span>corrida: 2026-09-10 10:21</span>
+<span>corrida: 2026-09-24 16:32</span>
 <span>python 3.12.11 · pandas 3.0.5</span>
 <span><a href="https://github.com/Gonzalo174/TDR-GW-AI-course">repositorio</a></span>
 <span><a href="informe/informe.pdf">informe (PDF)</a></span>
@@ -136,7 +136,7 @@ a{color:var(--acento)}
 <h2>3 · Contraste con la versión anterior (v4)</h2>
 <div class="diapo">
 <div class="diapo-texto">
-<p>Este repositorio porta el análisis v4 a la base codificada y recortada. Las mismas tablas calculadas antes de los dos cambios quedaron como oráculo, con un único criterio: <strong>si el análisis toca la capa química, el recorte lo mueve; si no, no</strong>. En desorfanización cambia además por la corrección de un error que el oráculo tiene. Sobre 356 columnas: 
+<p>Este repositorio porta el análisis v4 a la base codificada y recortada. Las mismas tablas calculadas antes de los dos cambios quedaron como oráculo, con un único criterio: <strong>si el análisis toca la capa química, el recorte lo mueve; si no, no</strong>. En desorfanización cambia además por la corrección de un error que el oráculo tiene. Sobre 353 columnas: 
 <span class="marca m-ok">sin discrepancias</span></p><ul>
 <li><strong>Priorización</strong> (sin química): 149 de 149 columnas idénticas; el control independiente coincide en 16 de 16 organismos, Δ AUC01 máx. = 0.</li>
 <li><strong>Desorfanización</strong>: 121 de 181 columnas cambian: semilla nula 83 → 68 %, recuperación 2.6 → 17.5 %, r*G 54 → 76. Casi todo es la corrección de la semilla, no el recorte: v4 corregida da las mismas clases de semilla para los compuestos compartidos. Los promiscuos filtrados pasan de 25 a 5, y en la base actual el filtro saca 0 aristas.</li>

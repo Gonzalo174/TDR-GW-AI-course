@@ -102,7 +102,7 @@ entre especies con distinta proporción de positivos.
 
 Tres niveles, del más barato al más caro.
 
-**Las pruebas** (`comun/tests/`, 53, corren en ~25 s). Integridad de las tablas,
+**Las pruebas** (`comun/tests/`, 63, corren en ~25 s). Integridad de las tablas,
 ausencia de fuga en el leave-one-species-out, métricas contra valores de
 referencia, rutas, y el entorno. Cuatro son específicas del port y cubren lo que
 puede romperse en silencio: que el filtro de positivos no quede vacío, que la

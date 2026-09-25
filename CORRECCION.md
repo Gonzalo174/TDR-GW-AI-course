@@ -28,7 +28,7 @@ Valores que tiene que dar, y que las pruebas o el informe verifican:
 |---|---|---|
 | pruebas | 61 en verde, 2 salteadas | `make pruebas` |
 | óptimos contra el control independiente | 16 de 16 iguales, ΔAUC01 = 0 | `test_resultados.test_los_optimos_reproducen_el_control` |
-| comparación contra el oráculo v4 | 356 columnas, 0 discrepancias | `resultados/verificacion_out/10_equivalencia.csv` |
+| comparación contra el oráculo v4 | 353 columnas comparables (más 3 tablas sin columnas numéricas), 0 discrepancias | `resultados/verificacion_out/10_equivalencia.csv` |
 | figuras | 36 de 36 dibujadas | `make figuras` |
 
 Reproducir las tablas desde la base, en cambio, lleva ~45 minutos con 20

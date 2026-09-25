@@ -137,14 +137,18 @@ def construir() -> dict:
 
     eq = _leer("verificacion_out", "10_equivalencia.csv")
     if eq is not None and len(eq):
-        n["NComparadas"] = str(len(eq))
+        # las filas "sin datos" (tablas sin columnas numéricas comunes) no se comparan
+        n["NComparadas"] = str(int(eq["estado"].isin(
+            ["idéntico", "explicado por el recorte", "DISCREPANCIA"]).sum()))
         n["NIdenticas"] = str(int((eq["estado"] == "idéntico").sum()))
         n["NDiscrepancias"] = str(int((eq["estado"] == "DISCREPANCIA").sum()))
         n["NExplicadas"] = str(int((eq["estado"] == "explicado por el recorte").sum()))
 
-    m = RES / "analiceDB_out" / "01_meta.json"
-    if m.exists():
-        j = json.loads(m.read_text())
+    # las tablas vienen de corridas de distintas fechas: se informa la última
+    metas = [json.loads(m.read_text()) for m in RES.glob("*_out/*_meta.json")]
+    metas = [j for j in metas if j.get("fecha")]
+    if metas:
+        j = max(metas, key=lambda j: j["fecha"])
         n["FechaCorrida"] = j.get("fecha", FALTA)
         n["VersionPython"] = j.get("python", FALTA)
         n["VersionPandas"] = j.get("pandas", FALTA)

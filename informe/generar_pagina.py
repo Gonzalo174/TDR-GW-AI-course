@@ -163,7 +163,6 @@ def construir() -> str:
     n = numeros()
 
     optimos = leer("genome_prioritization_out", "02_optimos_por_especie.csv")
-    m01 = meta("analiceDB_out", "01")
 
     A(f"<style>{CSS}</style>")
     A('<div class="envoltorio">')
@@ -176,8 +175,8 @@ def construir() -> str:
       "de un fármaco, y usar la misma red para proponer el blanco de compuestos que no "
       "tienen ninguno.</p>")
     A('<div class="meta-cabecera">')
-    A(f'<span>corrida: {m01.get("fecha", "—")}</span>')
-    A(f'<span>python {m01.get("python", "—")} · pandas {m01.get("pandas", "—")}</span>')
+    A(f'<span>corrida: {n["FechaCorrida"]}</span>')
+    A(f'<span>python {n["VersionPython"]} · pandas {n["VersionPandas"]}</span>')
     A('<span><a href="https://github.com/Gonzalo174/TDR-GW-AI-course">repositorio</a></span>')
     A('<span><a href="informe/informe.pdf">informe (PDF)</a></span>')
     A('<span><a href="informe/presentacion.pdf">presentación (PDF)</a></span>')
