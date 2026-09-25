@@ -17,7 +17,7 @@ make verificar
 
 1. corre las 63 pruebas de `comun/tests/` (~25 s; 2 se saltean salvo con
    `TDR_TESTS_QUIMICA=1`, porque cargan la capa química entera);
-2. redibuja las 36 figuras desde las tablas versionadas de `resultados/`, sin
+2. redibuja las 38 figuras desde las tablas versionadas de `resultados/`, sin
    cargar la base (~40 s);
 3. vuelve a calcular todas las cifras del informe desde esas tablas y comprueba
    que coincidan con las del informe versionado.
@@ -29,7 +29,7 @@ Valores que tiene que dar, y que las pruebas o el informe verifican:
 | pruebas | 61 en verde, 2 salteadas | `make pruebas` |
 | óptimos contra el control independiente | 16 de 16 iguales, ΔAUC01 = 0 | `test_resultados.test_los_optimos_reproducen_el_control` |
 | comparación contra el oráculo v4 | 353 columnas comparables (más 3 tablas sin columnas numéricas), 0 discrepancias | `resultados/verificacion_out/10_equivalencia.csv` |
-| figuras | 36 de 36 dibujadas | `make figuras` |
+| figuras | 38 de 38 dibujadas | `make figuras` |
 
 Reproducir las tablas desde la base, en cambio, lleva ~45 minutos con 20
 procesos (`make corrida`; detalle en README, «Tiempo de cómputo»). Todos los

@@ -188,7 +188,27 @@ modelo usa: 3 de 16 son únicos en su combinación y quedan identificables. Y lo
 nombres de las anotaciones no se pueden reconstruir.}
 \end{frame}
 
-% ------------------------------------------- 6 · resultados priorizacion
+% ----------------------------------------------- 6 · flujo de informacion
+\begin{frame}{Flujo de información}
+{\small Las \NEspecies\ especies, en el mismo lugar, vistas desde cada capa.
+Nodo: lo que tiene la especie; arista: lo que comparten dos.}
+\begin{columns}[T]
+\column{.49\textwidth}
+\centering
+\includegraphics[height=.56\textheight]{figuras/02_f04_grafo_anotaciones.pdf}\\
+{\scriptsize\color{tinta2}\textbf{\color{azulo}Anotaciones:} todas con todas; el par
+mediano comparte el \PesoRelAnotMediana\,\% de sus categorías. Por acá propaga la
+priorización.}
+\column{.49\textwidth}
+\centering
+\includegraphics[height=.56\textheight]{figuras/02_f05_grafo_drogas.pdf}\\
+{\scriptsize\color{tinta2}\textbf{\color{naranja}Compuestos:} el par mediano comparte el
+\PesoRelDrogMediana\,\%; \textit{H.\,sapiens} está en el \PctCompartidoHumano\,\% de lo
+compartido. De acá arranca la desorfanización.}
+\end{columns}
+\end{frame}
+
+% ------------------------------------------- 7 · resultados priorizacion
 \begin{frame}{Resultados I: priorizar un genoma sin su propia evidencia}
 \begin{columns}[c]
 \column{.52\textwidth}
@@ -218,7 +238,7 @@ $k_i$: anotaciones de la proteína; $\mathrm{RS}_l$: relevancia (Fisher + BH);
 $S$: semilla. $\beta=0$ la apaga: es $G'_r$ contra $G'_{rk}$.}
 \end{frame}
 
-% ------------------------------------------------ 7 · sobre quien actua beta
+% ------------------------------------------------ 8 · sobre quien actua beta
 \begin{frame}{$\beta=0$ contra $\beta=1$: sobre quién actúa la penalización}
 {\small Se fija el mejor $(\alpha,\lambda,\gamma)$ \emph{dentro} de $\beta=1$ y
 se mueve \textbf{sólo} $\beta$ a 0. Grupo de prueba, las quinasas ---categoría
@@ -245,7 +265,7 @@ organismos y el resto no se mueve. $\beta$ no reordena el ranking: saca del
 tope lo que estaba ahí por una anotación que tiene medio genoma.}
 \end{frame}
 
-% ---------------------------------------------- 7 · resultados huerfanas
+% ---------------------------------------------- 9 · resultados huerfanas
 \begin{frame}{Resultados II: proponer el blanco de un compuesto huérfano}
 \begin{columns}[T]
 \column{.36\textwidth}
@@ -320,7 +340,7 @@ cambia es qué aristas sobreviven. Anillo naranja: el huérfano. Verde: su blanc
 \end{columns}
 \end{frame}
 
-% ------------------------------------ 9 · resultados semilla informativa
+% ------------------------------------ 10 · resultados semilla informativa
 \begin{frame}{Resultados III: cuando hay semilla informativa}
 \begin{columns}[c]
 \column{.66\textwidth}
@@ -340,7 +360,7 @@ informativa:
 \end{columns}
 \end{frame}
 
-% ------------------------------------------- 10 · que diluye la senal
+% ------------------------------------------- 11 · que diluye la senal
 \begin{frame}{Resultados III (cont.): qué diluye la señal}
 \begin{columns}[c]
 \column{.62\textwidth}
@@ -359,7 +379,7 @@ informativa:
 \end{columns}
 \end{frame}
 
-% -------------------------------------------------------------- 11 · cierre
+% -------------------------------------------------------------- 12 · cierre
 \begin{frame}{Qué me llevo}
 \begin{columns}[T]
 \column{.48\textwidth}

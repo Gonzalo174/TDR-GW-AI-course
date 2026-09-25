@@ -141,6 +141,85 @@ def conectividad_anotaciones(t, plt):
     return fig
 
 
+# orden alrededor del círculo: las especies de un mismo grupo quedan juntas, y
+# el mismo orden en las dos capas deja comparar un grafo con el otro
+_ORDEN_GRUPOS = ["Bacterias", "Protozoos", "Amebozoos", "Hongos", "Plantas",
+                 "Invertebrados", "Mamiferos"]
+
+
+def _grafo_conectividad(matriz, color, ax, titulo, que, compartidos):
+    """Grafo especie-especie desde una matriz de intersección (análisis de v3).
+
+    La diagonal es el total de cada especie (|A ∩ A| = |A|) y da el área del
+    nodo; fuera de la diagonal, lo compartido, que da el ancho y la opacidad de
+    la arista. Las dos escalas son lineales y relativas al máximo de la capa.
+    Se dibujan todas las aristas con algo en común, en una disposición circular
+    fija por grupo taxonómico. (v3 filtraba las aristas por peso relativo
+    > 0.4 y usaba kamada-kawai; con la disposición fija el filtro no hace falta,
+    y la de v3 cambiaba de un grafo al otro.)
+    """
+    sp = [int(s) for s in matriz.columns]
+    m = matriz.values
+    orden = sorted(sp, key=lambda s: (_ORDEN_GRUPOS.index(tdr.SPECIES[s][1]), s))
+    ang = np.pi / 2 - 2 * np.pi * np.arange(len(orden)) / len(orden)
+    pos = {s: (np.cos(a), np.sin(a)) for s, a in zip(orden, ang)}
+
+    total = {s: m[i, i] for i, s in enumerate(sp)}
+    aristas = [(sp[i], sp[j], m[i, j]) for i in range(len(sp))
+               for j in range(i + 1, len(sp)) if m[i, j] > 0]
+    tot_max = max(total.values())
+    com_max = max(c for _, _, c in aristas)
+    # de la más fina a la más gruesa: las fuertes quedan arriba
+    for u, v, c in sorted(aristas, key=lambda a: a[2]):
+        f = c / com_max
+        ax.plot(*zip(pos[u], pos[v]), color=color, lw=0.3 + 7 * f, alpha=0.08 + 0.72 * f,
+                solid_capstyle="round", zorder=1)
+    for s in sp:
+        x, y = pos[s]
+        ax.scatter(x, y, s=30 + 800 * total[s] / tot_max, color=color,
+                   edgecolors="white", linewidths=1, zorder=2)
+        # la etiqueta, afuera del círculo y anclada hacia afuera
+        ha = "left" if x > 0.3 else "right" if x < -0.3 else "center"
+        va = "bottom" if y > 0.5 else "top" if y < -0.5 else "center"
+        r = 1.3 if abs(x) < 0.3 else 1.19     # arriba y abajo, escalonadas
+        ax.annotate(tdr.NOMBRE_CORTO[s], (r * x, r * y), ha=ha, va=va,
+                    fontsize=10.5, color=tdr.INK, style="italic")
+    mil = lambda v: f"{int(v):,}".replace(",", "\u2009")
+    ax.text(0, -1.55, f"nodo: {que} de la especie (máx. {mil(tot_max)})\n"
+            f"arista: {que} {compartidos} (máx. {mil(com_max)})",
+            ha="center", va="top", fontsize=9, color=tdr.INK2)
+    ax.set_title(titulo)
+    ax.set_xlim(-2.0, 2.0)
+    ax.set_ylim(-1.9, 1.52)
+    ax.set_aspect("equal")
+    ax.set_axis_off()
+
+
+@figura(A, "02_f04_grafo_anotaciones",
+        verifica='La misma tabla que `02_f03`, con su mismo alcance: sin control externo (`sin datos` en `10_equivalencia`). La diagonal de la matriz es el total de cada especie.',
+        lee="02_conectividad_anotaciones.csv")
+def grafo_anotaciones(t, plt):
+    """Grafo de especies unidas por categorías de afiliación compartidas: la
+    capa de anotaciones, por donde se propaga entre organismos."""
+    matriz = t("02_conectividad_anotaciones.csv", index_col=0)
+    fig, ax = plt.subplots(figsize=(4.6, 3.9), tight_layout=True)
+    _grafo_conectividad(matriz, tdr.S1, ax, "Capa de anotaciones", "categorías",
+                        "compartidas")
+    return fig
+
+
+@figura(A, "02_f05_grafo_drogas",
+        verifica='La misma tabla que la matriz de drogas de `02`: sin control externo (`sin datos` en `10_equivalencia`). La diagonal de la matriz es el total de cada especie.',
+        lee="02_conectividad_drogas.csv")
+def grafo_drogas(t, plt):
+    """Grafo de especies unidas por compuestos con bioactividad positiva en las
+    dos: la capa química."""
+    matriz = t("02_conectividad_drogas.csv", index_col=0)
+    fig, ax = plt.subplots(figsize=(4.6, 3.9), tight_layout=True)
+    _grafo_conectividad(matriz, tdr.S2, ax, "Capa química", "compuestos", "compartidos")
+    return fig
+
+
 # --- 03 · calidad de bioactividades ----------------------------------------
 
 @figura(A, "03_f01_bioactividades_por_tag",

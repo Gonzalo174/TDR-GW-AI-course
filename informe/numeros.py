@@ -13,6 +13,7 @@ import json
 import sys
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -23,9 +24,9 @@ import tdr  # noqa: E402
 FALTA = "??"
 
 
-def _leer(sub, nombre):
+def _leer(sub, nombre, **kw):
     p = RES / sub / nombre
-    return pd.read_csv(p) if p.exists() else None
+    return pd.read_csv(p, **kw) if p.exists() else None
 
 
 def _mil(x):
@@ -66,6 +67,8 @@ CLAVES = [
     "FrankCorteRank", "NInfFueraCorte", "NOrgRho", "NOrgRhoPos", "EmbudoActivos", "EmbudoHuerfanos", "EmbudoTratables", "NSugerencias",
     "NSugCompuestos", "NSugBlancos", "RGSensMin", "RGSensMax", "KSigmaMin", "KSigmaMax",
     "PctRecuperadasDirecta",
+    # conectividad entre especies (analiceDB/02)
+    "PesoRelAnotMediana", "PesoRelDrogMediana", "PctCompartidoHumano", "NTopDrogHumano",
     # contraste con v4
     "NComparadasGP", "NIdenticasGP", "NComparadasHU", "NCambianHU", "NComparadasAN",
     "NCambianAN", "PromiscuosVcuatro", "PctAristasVcuatro", "NPromiscuosEnBase", "NDdsRemovidas", "ControlCoinciden", "ControlDeltaMax",
@@ -153,6 +156,7 @@ def construir() -> dict:
         n["VersionPython"] = j.get("python", FALTA)
         n["VersionPandas"] = j.get("pandas", FALTA)
 
+    _conectividad(n)
     _priorizacion(n)
     _huerfanas(n)
     _contraste_v4(n, eq)
@@ -184,6 +188,28 @@ def _acondicionamiento(n):
     n["NDiccionarios"] = str(len(d))
     n["NCodigos"] = _mil(sum(d.values()))
     n["SemillaCod"] = str(m["semilla"])
+
+
+def _conectividad(n):
+    """Las dos capas como grafos de especies (figuras 02_f04 y 02_f05): la
+    diagonal de cada matriz es el total de la especie, el resto lo compartido."""
+    pares = {}
+    for capa in ("anotaciones", "drogas"):
+        m = _leer("analiceDB_out", f"02_conectividad_{capa}.csv", index_col=0)
+        if m is None:
+            return
+        sp, v = [int(c) for c in m.columns], m.values
+        pares[capa] = [(sp[i], sp[j], v[i, j], v[i, j] / (v[i, i] + v[j, j] - v[i, j]))
+                       for i in range(len(sp)) for j in range(i + 1, len(sp))]
+    # compartido sobre la unión, en el par de especies mediano
+    n["PesoRelAnotMediana"] = f"{100 * np.median([p[3] for p in pares['anotaciones']]):.0f}"
+    n["PesoRelDrogMediana"] = f"{100 * np.median([p[3] for p in pares['drogas']]):.1f}"
+    # en la capa química, cuánto de lo compartido pasa por H. sapiens
+    hs = next(c for c, e in tdr.NOMBRE_ESPECIE.items() if e == "Homo sapiens")
+    drg = pares["drogas"]
+    n["PctCompartidoHumano"] = f"{100 * sum(p[2] for p in drg if hs in p[:2]) / sum(p[2] for p in drg):.0f}"
+    top = sorted(drg, key=lambda p: -p[2])[:5]
+    n["NTopDrogHumano"] = str(sum(hs in p[:2] for p in top))
 
 
 def _priorizacion(n):
