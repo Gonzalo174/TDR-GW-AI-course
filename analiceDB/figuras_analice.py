@@ -8,6 +8,7 @@ celda de corrida de cada notebook. Se regeneran con
     python comun/figuras.py analiceDB
 """
 import numpy as np
+from matplotlib import patheffects
 
 import tdr
 from figuras import figura
@@ -141,10 +142,26 @@ def conectividad_anotaciones(t, plt):
     return fig
 
 
-# orden alrededor del círculo: las especies de un mismo grupo quedan juntas, y
-# el mismo orden en las dos capas deja comparar un grafo con el otro
-_ORDEN_GRUPOS = ["Bacterias", "Protozoos", "Amebozoos", "Hongos", "Plantas",
-                 "Invertebrados", "Mamiferos"]
+def _separar_etiquetas(fig, etiquetas, pasos=100):
+    """Corre en vertical las etiquetas que se pisan hasta que ninguna se toque."""
+    k = 72 / fig.dpi                          # píxeles -> puntos (unidad de xytext)
+    for _ in range(pasos):
+        fig.canvas.draw()
+        cajas = [e.get_window_extent().expanded(1.04, 1.1) for e in etiquetas]
+        movio = False
+        for i in range(len(etiquetas)):
+            for j in range(i + 1, len(etiquetas)):
+                a, b = cajas[i], cajas[j]
+                if not a.overlaps(b):
+                    continue
+                d = ((min(a.y1, b.y1) - max(a.y0, b.y0)) / 2 + 1) * k
+                arriba, abajo = (i, j) if a.y0 + a.y1 >= b.y0 + b.y1 else (j, i)
+                for e, signo in ((etiquetas[arriba], 1), (etiquetas[abajo], -1)):
+                    x, y = e.xyann
+                    e.xyann = (x, y + signo * d)
+                movio = True
+        if not movio:
+            return
 
 
 def _grafo_conectividad(matriz, color, ax, titulo, que, compartidos):
@@ -152,47 +169,67 @@ def _grafo_conectividad(matriz, color, ax, titulo, que, compartidos):
 
     La diagonal es el total de cada especie (|A ∩ A| = |A|) y da el área del
     nodo; fuera de la diagonal, lo compartido, que da el ancho y la opacidad de
-    la arista. Las dos escalas son lineales y relativas al máximo de la capa.
-    Se dibujan todas las aristas con algo en común, en una disposición circular
-    fija por grupo taxonómico. (v3 filtraba las aristas por peso relativo
-    > 0.4 y usaba kamada-kawai; con la disposición fija el filtro no hace falta,
-    y la de v3 cambiaba de un grafo al otro.)
+    la arista, las dos en escala lineal relativa al máximo de la capa.
+
+    Disposición kamada-kawai, como en v3, pero pesada: la distancia deseada
+    entre dos especies es 1 + ln(máximo compartido / compartido), así que las
+    que comparten más quedan juntas. Sin peso, como todos los pares comparten
+    algo, el grafo es completo y kamada-kawai lo deja en un círculo. v3 además
+    filtraba las aristas por peso relativo > 0.4; acá se dibujan todas y el
+    ancho marca cuáles pesan.
     """
+    import networkx as nx
     sp = [int(s) for s in matriz.columns]
     m = matriz.values
-    orden = sorted(sp, key=lambda s: (_ORDEN_GRUPOS.index(tdr.SPECIES[s][1]), s))
-    ang = np.pi / 2 - 2 * np.pi * np.arange(len(orden)) / len(orden)
-    pos = {s: (np.cos(a), np.sin(a)) for s, a in zip(orden, ang)}
-
     total = {s: m[i, i] for i, s in enumerate(sp)}
     aristas = [(sp[i], sp[j], m[i, j]) for i in range(len(sp))
                for j in range(i + 1, len(sp)) if m[i, j] > 0]
     tot_max = max(total.values())
     com_max = max(c for _, _, c in aristas)
+
+    g = nx.Graph()
+    g.add_nodes_from(sp)
+    g.add_weighted_edges_from([(u, v, 1 + np.log(com_max / c)) for u, v, c in aristas],
+                              weight="distancia")
+    pos = nx.kamada_kawai_layout(g, weight="distancia")
+
     # de la más fina a la más gruesa: las fuertes quedan arriba
     for u, v, c in sorted(aristas, key=lambda a: a[2]):
         f = c / com_max
         ax.plot(*zip(pos[u], pos[v]), color=color, lw=0.3 + 7 * f, alpha=0.08 + 0.72 * f,
                 solid_capstyle="round", zorder=1)
+    centro = np.mean(list(pos.values()), axis=0)
+    etiquetas = []
+    halo = [patheffects.withStroke(linewidth=2.5, foreground=tdr.SURFACE)]
     for s in sp:
         x, y = pos[s]
-        ax.scatter(x, y, s=30 + 800 * total[s] / tot_max, color=color,
-                   edgecolors="white", linewidths=1, zorder=2)
-        # la etiqueta, afuera del círculo y anclada hacia afuera
-        ha = "left" if x > 0.3 else "right" if x < -0.3 else "center"
-        va = "bottom" if y > 0.5 else "top" if y < -0.5 else "center"
-        r = 1.3 if abs(x) < 0.3 else 1.19     # arriba y abajo, escalonadas
-        ax.annotate(tdr.NOMBRE_CORTO[s], (r * x, r * y), ha=ha, va=va,
-                    fontsize=10.5, color=tdr.INK, style="italic")
+        area = 25 + 550 * total[s] / tot_max
+        ax.scatter(x, y, s=area, color=color, edgecolors="white", linewidths=1, zorder=2)
+        # la etiqueta, del lado del nodo que mira hacia afuera del grafo: en el
+        # centro, donde se amontonan, cada una sale para un lado distinto
+        dx, dy = np.array([x, y]) - centro
+        ang = np.arctan2(dy, dx)
+        r = np.sqrt(area) / 2 + 2
+        ha = "left" if np.cos(ang) > 0.38 else "right" if np.cos(ang) < -0.38 else "center"
+        va = "bottom" if np.sin(ang) > 0.38 else "top" if np.sin(ang) < -0.38 else "center"
+        etiquetas.append(ax.annotate(
+                    tdr.NOMBRE_CORTO[s], (x, y), xytext=(r * np.cos(ang), r * np.sin(ang)),
+                    textcoords="offset points", ha=ha, va=va,
+                    fontsize=9, color=tdr.INK, style="italic", zorder=3,
+                    path_effects=halo))
     mil = lambda v: f"{int(v):,}".replace(",", "\u2009")
-    ax.text(0, -1.55, f"nodo: {que} de la especie (máx. {mil(tot_max)})\n"
+    ax.text(0.5, -0.02, f"nodo: {que} de la especie (máx. {mil(tot_max)})\n"
             f"arista: {que} {compartidos} (máx. {mil(com_max)})",
-            ha="center", va="top", fontsize=9, color=tdr.INK2)
-    ax.set_title(titulo)
-    ax.set_xlim(-2.0, 2.0)
-    ax.set_ylim(-1.9, 1.52)
-    ax.set_aspect("equal")
+            transform=ax.transAxes, ha="center", va="top", fontsize=9, color=tdr.INK2)
+    ax.set_title(titulo, pad=10)
+    # lugar para las etiquetas a los costados, arriba (bajo el título) y abajo
+    xs, ys = np.array(list(pos.values())).T
+    w, h = np.ptp(xs), np.ptp(ys)
+    ax.set_xlim(xs.min() - 0.3 * w, xs.max() + 0.3 * w)
+    ax.set_ylim(ys.min() - 0.14 * h, ys.max() + 0.16 * h)
+    ax.set_aspect("equal", adjustable="box")
     ax.set_axis_off()
+    _separar_etiquetas(ax.figure, etiquetas)
 
 
 @figura(A, "02_f04_grafo_anotaciones",
@@ -202,7 +239,7 @@ def grafo_anotaciones(t, plt):
     """Grafo de especies unidas por categorías de afiliación compartidas: la
     capa de anotaciones, por donde se propaga entre organismos."""
     matriz = t("02_conectividad_anotaciones.csv", index_col=0)
-    fig, ax = plt.subplots(figsize=(4.6, 3.9), tight_layout=True)
+    fig, ax = plt.subplots(figsize=(4.3, 3.7), tight_layout=True)
     _grafo_conectividad(matriz, tdr.S1, ax, "Capa de anotaciones", "categorías",
                         "compartidas")
     return fig
@@ -215,7 +252,7 @@ def grafo_drogas(t, plt):
     """Grafo de especies unidas por compuestos con bioactividad positiva en las
     dos: la capa química."""
     matriz = t("02_conectividad_drogas.csv", index_col=0)
-    fig, ax = plt.subplots(figsize=(4.6, 3.9), tight_layout=True)
+    fig, ax = plt.subplots(figsize=(4.3, 3.7), tight_layout=True)
     _grafo_conectividad(matriz, tdr.S2, ax, "Capa química", "compuestos", "compartidos")
     return fig
 
